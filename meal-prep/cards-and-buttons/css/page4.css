@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#main {
+    width: 90vw;
+    max-width: 800px;
+    margin: 48px auto;
+    display: flex;
+    justify-content: center;
+}
+
+h3 {
+    text-align: center;
+    margin: 24px 0;
+}
+
+.card {
+    width: 350px;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card h2 {
+    font-size: 36px;
+    margin-top: 12px;
+}
+
+.card p {
+    font-size: 18px;
+}
+
+.anchor-button {
+    display: block;
+    background-color: lightcoral;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+/*
+    Let's start by making our anchor more interactive.
+
+    We'll target our anchor elements hover state by 
+    using the :hover psuedo-class. To do this, 
+    we target the element that we're giving a hover 
+    state to (.anchor-btn), and then we attach :hover 
+    to it, without any spaces or dashes between the element 
+    and the :hover.
+
+    Our new CSS Rule using the :hover pseudo-class in
+    its selector will only apply when the user moves their
+    mouse pointer over the element we targeted.
+
+    To test this, let's apply a transparent background-color, 
+    a text color that matches the previous background color, 
+    and a solid border of 3px, all of which should only 
+    appear when we hover over the button.
+*/
+.anchor-button:hover {
+    background-color: transparent;
+    color: lightcoral;
+    border: 3px solid lightcoral;
+}
+/*
+    Now when your cursor hovers over our anchor, it should 
+    change it's appearance. However, two things to note: 
+    
+    1. Notice how our anchor shifts in size a bit when 
+    we hover. This is because we changed the border width 
+    from it's default 0px to 3px on the hover state. 
+
+    2. Notice how the hover effect feels a bit harsh 
+    instead of having a nice smooth transition. This is 
+    because by default, there is not transition applied 
+    to the element.
+
+    Let's fix these in the next steps.
+*/

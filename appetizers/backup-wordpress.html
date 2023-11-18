@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Backing Up and Restoring (WordPress) - Appetizers - The Coding Cookbook</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="../css/cookbook.css" rel="stylesheet">
+        <link href="../css/appetizer.css" rel="stylesheet">
+        <link href="../css/lightbox.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="background"></div>
+        <nav>
+            <header id="topHeader">
+                <h2 id="brand"><a href="../">The Coding Cookbook</a></h2>
+                <div id="quote"></div>
+                <div id="navLinks">
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../ingredients.html">
+                                HTML
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../ingredients.html">Elements</a></h2>
+                            <h2><a href="../ingredients-cheatsheet.html">Cheatsheet</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../seasonings.html">
+                                CSS
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../seasonings.html">Properties</a></h2>
+                            <h2><a href="../seasonings-cheatsheet.html">Cheatsheet</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../recipes.html">
+                                Layouts
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../recipes.html?category=page-layout">Page Layouts</a></h2>
+                            <h2><a href="../recipes.html?category=content-layout">Content Layouts</a></h2>
+                            <h2><a href="../recipes.html?category=navigation-layout">Navigation</a></h2>
+                            <h2><a href="../recipes.html?category=miscellaneous">Miscellaneous</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../more.html">
+                                More
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../demos.html">Class Demos</a></h2>
+                            <h2><a href="../appetizers.html">Tutorials</a></h2>
+                            <h2><a href="../troubleshooting.html">Troubleshooting</a></h2>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <header id="bottomHeader">
+                <div id="cookbookButtons">
+                    <a id="part1Button" href="#part1">Jump to Backing Up WordPress</a>
+                    <a id="part2Button" href="#part2">Jump to Restoring WordPress</a>
+                </div>
+            </header>
+        </nav>
+        
+        <header id="title" class="">
+            <h1>Backing Up and Restoring (WordPress)</h1>
+            <h3>Save Frequently and Often, so You Don't Lose Your Work!</h3>
+        </header>
+        
+        
+        <div class="cookbookPage">
+            <h2 id="part1" class="invisibleAnchorTarget"></h2>
+            <h6></h6>
+            <h2>Backing Up Your WordPress Site</h2>
+            <h4>Creating the save file for your site</h4>
+            <ol>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Saving and backing up your work is important 
+                                no matter what job field you find yourself in.
+                            </p>
+                            <p>
+                                GitHub itself is our backup if we're coding,
+                                but when we're in WordPress, we have to save
+                                our backups more manually.
+                            </p>
+                            <p>
+                                First off, if you haven't already, 
+                                log in to your WordPress site, and navigate
+                                to the Dashboard.
+                            </p>
+                            <p class="indent">
+                                If you're on the live version of your site, 
+                                but the Admin Bar doesn't show up at the top 
+                                of the screen, you might have been logged out 
+                                due to inactivity.
+                                <br><br>
+                                Add /login to the end of the URL, and you'll
+                                be able to login again.
+                            </p>
+                            <p>
+                                Once on the Dashboard, navigate to Tools ->
+                                Export.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/wordpress-backup/01_dashboard.png" 
+                                alt="The Tools -> Export link in the Dashboard"
+                            >
+                            <figcaption>
+                                The Tools -> Export link in the Dashboard
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                The Dashboard will switch to the Export view.
+                            </p>
+                            <p>
+                                From here, select the content that you want to 
+                                backup (probably "All content").
+                            </p>
+                            <p>
+                                Then click the Download Export File button.
+                            </p>
+                            <p class="indent">
+                                This will create something called an XML file.
+                                This is essentially your backup or save file.
+                                Store it somewhere safe!
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/wordpress-backup/02_export.png" 
+                                alt="Exporting the XML file"
+                            >
+                            <figcaption>
+                                Exporting the XML file
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+            <h4>
+                Congrats! You know how to backup (aka Export) 
+                your WordPress site!
+            </h4>
+        </div>
+        <div class="cookbookPage">
+            <h2 id="part2" class="invisibleAnchorTarget"></h2>
+            <h6></h6>
+            <h2>Restoring Your WordPress Site</h2>
+            <h4>Recovering from Catastrophe</h4>
+            <ol>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                If you're in this section, most likely
+                                something went catastrophically wrong with 
+                                your WordPress site, and for whatever reason,
+                                you need to start over from scratch.
+                            </p>
+                            <p>
+                                But as long as you exported a save file from
+                                the previous section, you should be (mostly)
+                                fine!
+                            </p>
+                            <p>
+                                First off, if you haven't already, 
+                                log in to your WordPress site, and navigate
+                                to the Dashboard.
+                            </p>
+                            <p class="indent">
+                                If you're on the live version of your site, 
+                                but the Admin Bar doesn't show up at the top 
+                                of the screen, you might have been logged out 
+                                due to inactivity.
+                                <br><br>
+                                Add /login to the end of the URL, and you'll
+                                be able to login again.
+                            </p>
+                            <p>
+                                Once on the Dashboard, navigate to Tools ->
+                                Import.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/wordpress-backup/03_dashboard2.png" 
+                                alt="The Tools -> Import link in the Dashboard"
+                            >
+                            <figcaption>
+                                The Tools -> Import link in the Dashboard
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <h2 id="p1_step4" class="invisibleInnerAnchorTarget"></h2>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                The Dashboard will switch to the Import view.
+                            </p>
+                            <p>
+                                There are actually many different ways that 
+                                you could potentially import content to a 
+                                WordPress site, but in our case, we're going 
+                                to use the bottom option.
+                            </p>
+                            <p>
+                                In the WordPress section, click the Install 
+                                Now link.  
+                            </p>
+                            <p class="indent"> 
+                                It should only take a moment or 
+                                two to install.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/wordpress-backup/04_import_install.png" 
+                                alt="Installing the WordPress Importer"
+                            >
+                            <figcaption>
+                                Installing the WordPress Importer
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                When the WordPress Importer is successfully 
+                                installed, you'll get a notification banner 
+                                at the top of the screen.
+                            </p>
+                            <p>
+                                Next, click on the Run importer link to 
+                                move on to the next step of the process.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/wordpress-backup/05_importer.png" 
+                                alt="Successfully installing the WordPress Importer"
+                            >
+                            <figcaption>
+                                Successfully installing the WordPress Importer
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                On the next screen, click the button that says 
+                                "Choose File".
+                            </p>
+                            <p>
+                                A dialog will open up, prompting you to select 
+                                the XML file on your computer that you want 
+                                to import to restore the site.
+                            </p>
+                            <p>
+                                Select whichever save file you want to use
+                                for the import process.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/wordpress-backup/06_selectfile.png" 
+                                alt="The Choose File button"
+                            >
+                            <figcaption>
+                                The Choose File button
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After selecting the file, it will show (part of)
+                                the file name on the Import screen.
+                            </p>
+                            <p>
+                                Next, click the blue "Upload file and import"
+                                button.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/wordpress-backup/07_uploadandimport.png" 
+                                alt="The 'Upload file and import' button"
+                            >
+                            <figcaption>
+                                The 'Upload file and import' button
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                On the next screen, you'll be asked how you 
+                                want to decide the author for the content
+                                you're importing.
+                            </p>
+                            <p class="indent">
+                                Remember, a CMS like WordPress often has 
+                                multiple people working on the same blog,
+                                so choosing which one of them should be
+                                the author when importing content is 
+                                important.
+                                <br><br>
+                                However, in your case, you're most likely
+                                the only author, so you don't need to 
+                                worry about this too much.
+                            </p>
+                            <p>
+                                If you used the same username on this new 
+                                site as your previous one (the one you're 
+                                importing content from), you can probably 
+                                leave it set to the default.
+                            </p>
+                            <p>
+                                However, if you did choose a different username, 
+                                then pick your 
+                                current username from the dropdown.
+                            </p>
+                            <p>
+                                After that, also make sure you check the
+                                checkbox under Import Attachments.
+                            </p>
+                            <p>
+                                Lastly, you can click the Submit button to 
+                                finally trigger the Import process.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/wordpress-backup/08_author.png" 
+                                alt="Assigning authors, configuring attachments, and starting the Import process"
+                            >
+                            <figcaption>
+                                Assigning authors, configuring attachments, 
+                                and starting the Import process
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                On the next screen, you'll see the results 
+                                of the import process.
+                            </p>
+                            <p>
+                                The Post and Page content should have copied 
+                                over with no problems; however, you may need 
+                                to reupload the images, depending on how 
+                                messed up your site is/was.
+                            </p>
+                            <p>
+                                Hopefully all went well, and you can click on
+                                the "Have fun!" link to return to the Dashboard.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/wordpress-backup/09_success.png" 
+                                alt="The Import Process results"
+                            >
+                            <figcaption>
+                                The Import Process results
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+            <h4>
+                Congrats! You know how to restore (aka Import) 
+                your WordPress site!
+            </h4>
+        </div>
+        <div id="lightboxContainer">
+            <div id="lightboxBackground" class="closer"></div>
+            <img id="lightbox" src="" alt="">
+            <span id="lightboxCloser" class="closer">×</span>
+          </div>
+        <script src="../js/lightbox.js"></script>
+        <script src="../js/hideNav.js"></script>
+    </body>
+</html>

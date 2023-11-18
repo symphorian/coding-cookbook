@@ -1,0 +1,17 @@
+/* Drill 2 - Write your code solution below */
+
+/*
+    This drill is the opposite of Drill 1:
+    we're converting the display of span elements
+    from their default inline behavior into
+    block elements.
+
+    Span elements are typically only used to contain
+    text or other inline elements, which is why their
+    styling in this drill is "flatter" compared to the
+    block elements in the previous drill.
+*/
+
+.d2-span{
+    display: block;
+}

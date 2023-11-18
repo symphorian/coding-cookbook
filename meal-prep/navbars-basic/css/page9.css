@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#navbar {
+    background: linear-gradient(to bottom, green, #3e6d3e);
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+#navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 24px;
+}
+
+#navbar img {
+    width: 200px;
+}
+
+#navbar #logo {
+    margin-right: auto;
+}
+
+#navbar .cta-button {
+    background-color: white;
+    color: green;
+    border-radius: 36px;
+    padding: 16px 24px;
+    font-size: 20px;
+    font-weight: bold;
+    min-width: 150px;
+    text-align: center;
+    margin-right: 24px;
+}
+
+#layout {
+    width: 800px;
+    margin: 48px auto;
+    font-size: 24px;
+    height: 200vh;
+}
+
+/*
+    As you can see, our second navbar doesn't 
+    stick with the first one, and that makes
+    sense, because we only told the original
+    navbar to be sticky.
+
+    If we want to have both scrollbars be
+    sticky together, then the most appropriate
+    way to do that would be to create a new
+    container that groups both of them together,
+    and then make that container sticky.
+
+    (Go do that in the HTML)
+
+    Then we'll change our CSS rule that made
+    the first navbar sticky, and modify its
+    selector to point to the new #header
+    container element.
+*/
+
+#header {
+    position: sticky;
+    top: 0px;
+}
+
+/*
+    There you go! Now we have a sticky
+    header, that contains both of our navbars.
+*/
+
+#navbar-bottom {
+    background: linear-gradient(to bottom, yellowgreen, olive);
+    display: flex;
+    justify-content: space-between;
+}
+
+#navbar-bottom a {
+    text-decoration: none;
+    color: white;
+    padding: 12px 36px;
+}

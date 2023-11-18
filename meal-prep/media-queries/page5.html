@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Media Queries - Demo</title>
+        <link href="css/page5.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="header">
+            <!--
+                Let's create a hero for our header. We'll
+                add a div with a class of hero-content.
+
+                Inside of that div, we'll add an h1, h3, and
+                an anchor element.
+            -->
+            <div class="hero-content">
+                <h1>Desserts and Drinks</h1>
+                <h3>Your one-stop-shop for all things sweet</h3>
+                <a href="#">View Menu</a>
+            </div>
+        </div>
+
+        <div id="main">
+            <!--
+                Then, we can create two divs here.
+                
+                The first div will have a class of
+                promotion and the second div will have a
+                class of cards.
+
+                This promotion div will have two divs inside of it.
+                One with a class of img-container and another with
+                a class of content.
+
+                Inside of the .content div will be an h2 and anchor element.
+
+                The .img-container div will have an img inside
+                of it.
+            -->
+            <div class="promotion">
+                <div class="img-container">
+                    <img src="images/cookies.jpg" alt="cookies">
+                </div>
+                <div class="content">
+                    <h2>BOGO: Buy A Dozen Cookies, Get A Dozen Free</h2>
+                    <a href="#">See Now!</a>
+                </div>
+            </div>
+
+            <!--
+                .cards will have two divs in it, each with an
+                id of card-1 and card-2 respectively and
+                both will be given a class
+                of card. Both card divs will have an h2 and 
+                ancor element nested inside of them.
+            -->
+            <div class="cards">
+                <div id="card-1" class="card">
+                    <h2>Sweet Treats</h2>
+                    <a href="#">View Selection</a>
+                </div>
+                <div id="card-2" class="card">
+                    <h2>Sweet Drinks</h2>
+                    <a href="#">View Selection</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <!--
+                Finally, let's make a small list of 5 links in
+                our #footer. We'll create an unordered list with
+                a class of links and add 5 list items, each list
+                item with an anchor element inside of it.
+
+                Now we're ready to start adding some styles in our
+                CSS.
+            -->
+            <ul class="links">
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Catering</a></li>
+                <li><a href="#">Delivery</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif; 
+}
+
+/*
+    To get our content side by side into columns,
+    we actually need to define columns in the grid.
+
+    To do that, we use the grid-template-columns
+    property.  Remember that this property accept 
+    any number of width values, as long as they're
+    separated by spaces (not commas).
+
+    If we wanted equally sized columns, we could
+    provide two values of 50%.
+*/
+#grid-layout {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+/*
+    Note that for grids, we set the width values
+    on the Container element, not on the Item 
+    elements like we did for Flexbox.
+
+    That's because CSS Grid is a bit more rigid 
+    than Flexbox; Flexboxes basically just flex
+    whatever is put inside of them in such a way
+    that they fit, while CSS Grid needs a 
+    template defined, and whatever we put inside
+    of the grid has to stick to that template.
+
+    Let's also apply colors to our two columns
+    inside of the grid, so we can better
+    understand the space they're actually
+    taking up.
+*/
+
+#sidebar-content {
+    background-color: lightblue;
+}
+
+#main-content {
+    background-color: lightgreen;
+}
+
+/*
+    As a reminder, encourage students to check out
+    the layout page in the Coding Cookbook for the 
+    evenly sized two column layout, since we won't 
+    be doing any further demos for them in class.
+
+    https://first-gdwd.github.io/cookbook/recipes.html#two-columns-equal-flex?p=2
+*/

@@ -1,0 +1,57 @@
+div {
+    border: 10px dashed red;
+    margin: 24px 0px;
+    padding: 24px 36px;
+    background-color: lightcoral;
+}
+
+/*
+    One last thing to showcase before
+    we end the demo: the border-radius
+    property.
+
+    The property name is not terribly
+    helpful in understanding what it's 
+    for, but it's used to round the 
+    corners of our Box Models.
+
+    Try adding the property to the
+    paragraph CSS Rule below with
+    different values (both px and %)
+    and see how it changes the box.
+*/
+
+p {
+    /* removed the border property here */
+    margin: 60px;
+    padding: 48px 60px;
+    background-color: cornflowerblue;
+    border-radius: 48px;
+}
+
+/*
+    The border-radius property tends 
+    to work best with solid borders,
+    or no borders at all.
+
+    Notice that the rounded corners 
+    are applied to the background-color
+    as well.
+
+    This is also true for images; you
+    can apply border-radius to an 
+    image, and you can round the corners 
+    of that image.
+
+    Using a border-radius value of 50%
+    is particularly fun, as it will 
+    round the corners so much that they
+    meet each other, forming an oval
+    or circle shape.
+
+    You can make your Box Models much 
+    more interesting with border-radius,
+    so we strongly encourage students
+    to take advantage of it when working
+    with colored boxes or borders!
+*/

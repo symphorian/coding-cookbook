@@ -1,0 +1,25 @@
+/* Drill 8 - Write your code solution below */
+
+/*
+    This drill focuses on showcasing the fancy
+    'auto' values that we can use with margin
+    on the left/right sides of an explicitly 
+    sized block element to center it within its
+    container.
+
+    You should have hopefully covered this with
+    them in a previous demo, but if not, then
+    feel free to give them more of a hint.
+*/
+
+#d8-div1 {
+    margin: 12px auto;
+}
+
+/*
+    Emphasize that this trick will only work
+    on a BLOCK element (not inline or inline-
+    block) and only when it's been sized with
+    the width property to be smaller than its
+    container.
+*/

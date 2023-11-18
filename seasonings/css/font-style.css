@@ -1,0 +1,11 @@
+.not-italic {
+    font-style: normal;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.oblique {
+    font-style: oblique;
+}

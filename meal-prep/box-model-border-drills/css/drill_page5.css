@@ -1,0 +1,16 @@
+/* Drill 5 - Write your code solution below */
+
+/* 
+    This time we're just showing how borders
+    can be applied to inline-block elements
+    as well.
+
+    But, they also need to apply border-radius
+    this time, so we're also seeing if they
+    remember how to use that property.
+*/
+
+.d5-div {
+    border: 20px solid teal;
+    border-radius: 10px;
+}

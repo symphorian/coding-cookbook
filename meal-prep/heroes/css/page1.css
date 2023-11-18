@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+/*
+    Now we see the image...but depending on your
+    screen size and the dimension of your image,
+    you probably won't see the whole image, and
+    you may see some tiling.
+
+    To address this, we can add another property
+    called background-size.
+
+    We typically use one of two common values:
+        - contain
+        - cover
+
+    (try out both of them)
+
+    The 'contain' value tells the background
+    to ensure that the entire image is in view,
+    which often means it is scaled down to fit
+    the screen (which also probably means even
+    more tiling of the image).
+
+    The 'cover' value means the opposite of 
+    'contain' in a sense: it tells the background
+    to use the image to fill up (or cover) the 
+    entire background with the image, even if
+    that means cropping it.
+
+    Both values have their uses (as well as their
+    own pros and cons), but oftentimes, we end
+    up using 'cover' since it adapts better to
+    different screen sizes without tiling or 
+    leaving empty space.
+*/
+#hero-1 {
+    background-image: url("../images/lizard.jpg");
+    height: 100vh;
+    background-size: cover; /* new property */
+}
+
+/*
+    However, there's still a large chunk of our 
+    image that is cropped out (especially if
+    you're viewing in the VS Code preview).
+
+    For testing out heroes, you'll definitely
+    want to view them out in the browser for
+    a more accurate test (by using the 
+    "Open with Live Server option in VS Code)
+
+    But even then, your image may not be 
+    cropped the way you want.
+
+    Continue on to the next page to find out
+    how we can address that!
+*/

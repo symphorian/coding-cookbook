@@ -1,0 +1,12 @@
+/* Drill 3 - Write your code solution below */
+
+/*
+    Our CSS selectors are getting more complex.  
+    Now we're only targeting the span elements...
+      when they're inside a paragraph element...
+        when they're inside the 'dashed' class.
+*/
+
+.dashed p span {
+    color: magenta;
+}

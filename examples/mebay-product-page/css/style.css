@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif; 
+}
+
+#grid-layout {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-areas:
+        "header header header"
+        "image  info   sidebar";
+}
+
+#header {
+    grid-area: header;
+    text-align: center;
+    border-bottom: 1px solid #DDDDDD;
+    margin-bottom: 36px;
+}
+
+#header h1 {
+    font-size: 48px;
+    margin: 0px;
+    padding: 12px;
+}
+
+#header .m {
+    color: purple;
+}
+
+#header .e {
+    color: #e43137;
+}
+
+#header .b {
+    color: #0063d1;
+}
+
+#header .a {
+    color: #f4ae01;
+}
+
+#header .y {
+    color: #85b716;
+}
+
+#images-column img {
+    width: 100%;
+    padding: 0px 24px;
+}
+
+#product-info-column h2 {
+    margin: 0px;
+    padding-bottom: 12px;
+}
+
+#product-info-column h2,
+#product-info-column .product-info {
+    border-bottom: 1px solid #DDDDDD;
+}
+
+#product-info-column .product-info:last-child {
+    border-bottom: 0px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.big.bold {
+    font-size: 32px;
+}
+
+.flex-content {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.bulk-option {
+    text-align: center;
+    border: 1px solid #DDDDDD;
+    border-radius: 3px;
+    padding: 12px;
+    margin: 8px;
+}
+
+.bulk-option div {
+    margin: 4px 0px;
+}
+
+.dark-button,
+.light-button,
+.empty-button {
+    border-radius: 24px;
+    padding: 12px;
+    min-width: 200px;
+    text-align: center;
+    margin: 12px 0px;
+}
+
+.dark-button {
+    background-color: #0053a0;
+    color: white;
+}
+
+.light-button {
+    background-color: #3498ca;
+    color: white;
+}
+
+.empty-button {
+    border: 1px solid #3665f3;
+    color: #3665f3;
+}
+
+.big-space {
+    margin: 60px 0px;
+}
+
+.flex-content .label {
+    margin-right: 24px;
+}
+
+.small {
+    color: #666666;
+    font-size: 15px;
+}
+
+.panel {
+    border: 1px solid #BBBBBB;
+    border-radius: 12px;
+    padding: 24px;
+    margin: 0px 24px 18px;
+}
+
+.panel h3 {
+    margin: 0px 0px 8px;
+}
+
+.panel p {
+    margin: 12px 0px;
+}
+
+#seller-links {
+    border-top: 2px dotted #BBBBBB;
+    padding-top: 12px;
+}
+
+#seller-links a {
+    display: block;
+    margin-bottom: 8px;
+}

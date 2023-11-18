@@ -1,0 +1,11 @@
+/* Drill 1 - Write your code solution below */
+
+/*
+    Very basic, just making sure they remember
+    how to create a border in the first place.
+*/
+
+#d1-container1 {
+    border: 3px solid black;
+}
+

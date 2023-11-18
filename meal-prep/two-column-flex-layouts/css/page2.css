@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif; 
+}
+
+#two-columns {
+    display: flex;
+}
+
+/*
+    Next, we're going to add some background color
+    to our two columns, just so we can better 
+    understand the space that they're taking up.
+*/
+#sidebar-content {
+    background-color: lightblue;
+}
+
+#main-content {
+    background-color: lightgreen;
+}
+
+/*
+    Notice that the sidebar column's background
+    color extends all the way down to the bottom
+    of the main column, even though it doesn't
+    have nearly as much content.
+
+    Again, that's how Flexbox Containers work by
+    default: they'll vertically stretch the 
+    contents inside them so that they all fill the
+    same amount of vertical space.
+
+    (This is thanks to the behavior of the 
+    align-items Flexbox Container property, which 
+    is set to 'stretch' by default.)
+
+    Show the class what happens as you shrink and
+    stretch the preview window: at the moment, 
+    the flexbox basically sizes each column to 
+    take up the minimal amount of space necessary
+    to have them both fit inside it.
+
+    We'll change that behavior next.
+*/

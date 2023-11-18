@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif; 
+}
+
+/*
+    Student often only look at the preview panel inside of
+    Visual Studio Code when testing, but that panel is 
+    usually much narrower than an actual browser window.
+
+    So starting today, encourage students to start previewing
+    their code using the "Open with Live Server" option
+    instead of "Show Preview".
+
+    "Open with Live Server" will open up their HTML in
+    a web browser, which will allow them to preview it
+    in a more natural setting, and they can also use
+    the Chrome Developer Tools to inspect it as well.
+
+    This will require a bit of window switching, so it
+    may feel a little annoying or inconvenient,
+    especially for students with only one monitor,
+    but the pros outweigh the cons when it comes to
+    previewing and testing their code.
+
+    This is a also a good time to remind them that we 
+    expect them to use Google Chrome for development in
+    this course; if the "Open with Live Server" option
+    opens their code in Safari, they can still copy the
+    URL from the browser to open it up in Chrome instead.
+*/
+
+.single-column {
+    background-color: lightgreen;
+    width: 50%;
+    min-width: 500px;
+}
+
+/*
+    Anyway, with the code we have now, we have a basic
+    single column layout, aligned to the left.
+
+    Left alignment is the default, so we don't need to
+    do anything else in order to create a left-aligned
+    single column layout!
+*/

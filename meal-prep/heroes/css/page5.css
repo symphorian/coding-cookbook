@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#hero-1 {
+    background-image: url("../images/lizard.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#hero-1 h1 {
+    font-size: 15vw;
+    padding-left: 10vw;
+}
+
+.spacer {
+    height: 50vh;
+}
+
+/*
+    If we want our flexbox content to be stacked in 
+    a column like "normal" HTML content, then we need
+    to change the direction of our flexbox.
+
+    (Remember how to do that?)
+
+    However, changing the flex-direction also means
+    that our main-axis and cross-axis change.
+    Which means that justify-content and align-items
+    no longer align in the same directions either.
+
+    So, we need to make a couple more changes to
+    our flexbox properties.
+*/
+#hero-2 {
+    background-image: url("../images/lonely-ocean.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column; /* new */
+    justify-content: center; /* changed so it's now vertically centered */
+    align-items: flex-end; /* changed so it's now horizontally right */
+}
+
+/*
+    With that out of the way, now we can style
+    our text elements (along with adding in some
+    fake button styling for our CTA).
+
+    These margin and padding value are somewhat
+    arbitrary, so feel free to try out different 
+    ones, but remember that we want to keep the 
+    text away from the focus of the image.
+*/
+
+#hero-2 h2 {
+    font-size: 8vw;
+    margin-bottom: 5vh;
+    margin-right: 5vw;
+}
+
+#hero-2 h4 {
+    font-size: 3vw;
+    margin: 0px 5vw 0px 0px;
+}
+
+#hero-2 a {
+    font-size: 1.5vw;
+    display: inline-block;
+    background-color: #333333;
+    color: white;
+    text-decoration: none;
+    padding: 24px;
+    margin: 5vh 5vw 10vh 0px;
+}

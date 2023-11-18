@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif; 
+}
+
+#two-columns {
+    display: flex;
+}
+
+/*
+    First, let's return the sidebar to the left side
+    by removing the order property from both 
+    Flexbox Items.  
+    
+    Let's also strip the background color from the 
+    main content column, and then change the sidebar
+    background color to something else (students can
+    pick their own colors).
+
+    Then, we'll add some padding, increase the width
+    a bit, and add a border-right to the sidebar 
+    (again, colors can be whatever students want).
+
+*/
+#sidebar-content {
+    background-color: #cfe2d8; /* new color */
+    width: 250px; /* increased to 250px */
+    padding: 24px; /* new */
+    border-right: 2px solid #72a586; /* new */
+}
+
+/*
+    Let's also add a border beneath the h2 in our
+    sidebar, and just a hair of padding, for some
+    more breathing room.
+*/
+#sidebar-content h2 {
+    border-bottom: 2px solid #72a586;
+    padding-bottom: 8px;
+}
+
+/*
+    Looking better, but now our anchor elements 
+    look really out of place...
+
+    Let's fix them up, along with the list around
+    them.
+
+    First, we'll remove the list bullets, and 
+    strip off the default padding that comes along
+    with a list.
+
+    Then we'll add a bit of padding to the list
+    items.
+
+    And finally, we'll change the color of the
+    anchor elements and remove their underlines.
+*/
+
+#sidebar-content ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+#sidebar-content ul a {
+    color: #111111;
+    text-decoration: none;
+}
+
+#sidebar-content ul li {
+    padding: 4px 0px;
+}
+
+/*
+    It's still rather simple looking, but it's
+    a lot cleaner and more organized than before.
+    Remind them that minimalism is a popular
+    design trend; looking simple and clean is
+    often preferred to fancy and messy.
+
+    Now, the only problem is our #main-content is
+    flush up against our sidebar, which doesn't
+    look too good; it needs some breathing room.
+
+    Ask students which property they think we could 
+    apply to add some extra space in there
+    (margin and padding are both acceptable here
+    for this case, but if we ever wanted to add a 
+    background color to the main-content, we'd have
+    to use padding, so that's my preference).
+*/
+
+#main-content {
+    flex: 1;
+    padding: 48px;
+}
+
+/*
+    And that pretty much wraps up the demo!
+
+    Remind students that all the CSS properties we
+    used today have their own pages in the Coding
+    Cookbook, which have more in-depth examples
+    and resources for them (which they should use!)
+*/

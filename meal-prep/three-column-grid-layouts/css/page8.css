@@ -1,0 +1,128 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif; 
+    background-color: #1f1f1f;
+    color: #EEEEEE;
+}
+
+#grid-layout {
+    display: grid;
+    margin-top: 36px;
+    grid-template-columns: 1fr 200px 550px 200px 1fr;
+    grid-template-areas: 
+        ". left-sidebar main-area right-sidebar .";
+}
+
+#sidebar-column-1 h2,
+#sidebar-column-2 h3 {
+    border-bottom: 2px solid #AAAAAA;
+    padding-bottom: 8px;
+}
+
+#sidebar-column-1 ul,
+#sidebar-column-2 ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+#sidebar-column-1 ul li,
+#sidebar-column-2 ul li {
+    list-style-type: none;
+    padding: 4px 0px;
+}
+
+#sidebar-column-1 ul a,
+#sidebar-column-2 ul a {
+    color: #EEEEEE;
+    text-decoration: none;
+}
+
+#sidebar-column-1 {
+    margin-left: 24px;
+    grid-area: left-sidebar; /* new */
+}
+
+#primary-column {
+    padding: 0px 36px;
+    grid-area: main-area; /* new */
+}  
+
+#primary-column .inner-content {
+    /* background-color: #343434;
+    padding: 24px;
+    border-radius: 24px; */
+    max-width: 600px; 
+    margin: 0px auto; 
+}
+
+#sidebar-column-2 {
+    margin-right: 24px;
+    grid-area: right-sidebar; /* new */
+}
+
+/*
+    Our layout works pretty well as it is...
+    as long as we have short content in the
+    central column.
+
+    But go back into the HTML, and add enough
+    lorem ipsum text into the central column
+    to make the page scroll a good amount.
+
+    (caution the class to be careful when
+    copy/pasting, as if they miss a closing
+    or opening tag when they copy/paste,
+    or if they copy/paste into the wrong
+    location, they could destroy their layout!)
+
+    See how our sidebars disappear after we
+    scroll down? Depending on the type of content
+    in the sidebars, it might not be a disaster,
+    but wouldn't it be nice if the sidebars
+    could scroll with us down the page?
+
+    Well, they can!
+
+    To do so, we're going to have to use a bit
+    of an advanced CSS property called "position",
+    which we'll be learning more about later,
+    but we'll give you a sneak peek of how to use
+    it here.
+*/
+
+#sidebar-column-1 .inner-content,
+#sidebar-column-2 .inner-content {
+    background-color: #343434;
+    padding: 24px;
+    border-radius: 4px;
+
+    /*
+        position: sticky; will allow whatever its
+        assigned to to stick to a particular side
+        of the screen when it makes contact.
+
+        Usually this is used for the top of the
+        screen, and so we'll use the top property
+        to tell it how from the top it should stick.
+    */
+    position: sticky;
+    top: 24px;
+}
+
+/*
+    Now scroll up and down the page again; see how
+    our sidebars scroll with us once they're 24px
+    away from the top of the screen?
+
+    Cool, right?
+
+    This addresses our final (significant) flaw with
+    the design; there are still many small improvements
+    we could make stylistically, but in terms of its 
+    functionality, it will work pretty well.
+*/

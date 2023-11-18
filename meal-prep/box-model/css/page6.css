@@ -1,0 +1,35 @@
+/*
+    At this point, we added borders to our
+    div elements, and we also added some
+    "personal space", or margin, to them 
+    as well.
+
+    However, the text inside the box borders
+    is right up against the edges of the box.
+    
+    Not very aesthetically pleasing.
+
+    And that's where padding comes in.
+
+    Let's try adding some padding to our
+    div CSS rule.
+*/
+
+div {
+    border: 10px dashed red;
+    margin: 24px 0px;
+    padding: 24px;
+}
+
+/*
+    Encourage the students to think of padding
+    as "bubble-wrap" or some other kind of 
+    packing element used to pad the inside of 
+    a box to protect the contents inside.
+
+    Before, we had very little padding to 
+    protect our text inside the box, but
+    by adding padding: 24px; to the CSS rule,
+    now we've given the text a bit more 
+    breathing room.
+*/

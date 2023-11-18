@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Containers and Selectors Drills</title>
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/drill_page3.css" rel="stylesheet" data-meal-prep>
+    </head>
+    <body>  
+        <h1>Containers and Selectors Drills</h1>
+        <p>
+            For all of the following drills, you will need to
+            add the appropriate container(s) to the HTML in
+            each drill, along with the specified classes. 
+        </p>
+        <p>
+            Then add CSS code to drill.css to make the content 
+            below look like the image above. You will need 
+            to use combinations of selectors (don't add your
+            own ids/classes, cheaters).  
+        </p>
+        <section id="drill3">
+            <h2>Drill 3</h2>
+            <img src="images/drill3.png" alt="Drill 3">
+            <p>
+                Add two div containers to the HTML below,
+                using the classes "dotted" and "dashed", as in
+                the image above. Then target only the span
+                elements in the p elements in the "dashed" div
+                elements, and make their text color "magenta". 
+            </p>
+            <div class="solution">
+                <!--
+                    This is more similar to Drill 1; we're
+                    basically just wrapping more chunks of 
+                    content, with the appropriate classes
+                    of course.
+                -->
+                <div class="dashed">
+                    <p>
+                        Lorem ipsum dolor sit, <span>amet</span> 
+                        consectetur adipisicing elit. Placeat 
+                        facere <span>nostrum cupiditate</span> 
+                        obcaecati.
+                    </p>
+                    <span>Voluptatem veniam assumenda?</span>
+                    <p> 
+                        Nisi <span>reiciendis illo</span> aperiam 
+                        reprehenderit quidem, ab doloremque 
+                        eveniet deleniti quis accusantium autem 
+                        veniam, <span>totam maiores</span>.
+                    </p>
+                </div>
+                <div class="dotted">
+                    <p>
+                        <span>Lorem ipsum dolor</span> sit, amet 
+                        consectetur adipisicing elit. 
+                        <span>Placeat</span> 
+                        facere nostrum cupiditate obcaecati, 
+                    </p>
+                    <span>Quasi reiciendis sunt harum iusto!</span>
+                    <p>
+                        Reprehenderit <span>quidem</span>, ab 
+                        doloremque eveniet deleniti quis 
+                        <span>accusantium autem</span>
+                        veniam, totam maiores.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

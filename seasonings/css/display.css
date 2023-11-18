@@ -1,0 +1,45 @@
+.block {
+    display: block;
+}
+
+.block-styled {
+    display: block;
+    border: 10px solid crimson;
+    background-color: salmon;
+    padding: 8px;
+    margin: 8px 0px;
+}
+
+.inline {
+    display: inline;
+}
+
+.inline-styled-simple {
+    display: inline;
+    color: goldenrod;
+    font-weight: bold;
+}
+
+.inline-styled-fancy {
+    display: inline;
+    border: 10px solid goldenrod;
+    padding: 8px;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.inline-block-styled {
+    display: inline-block;
+    border: 10px solid orangered;
+    background-color: orange;
+    padding: 8px;
+    margin-top: 8px;
+    margin-right: 8px;
+}
+
+.example {
+    border: 5px solid grey;
+    padding: 24px;
+}

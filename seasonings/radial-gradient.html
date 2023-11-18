@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>radial-gradient Function</title>
+        <link href="css/radial-gradient.css" rel="stylesheet" data-seasoning>
+        <link href="css/shared.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="recipe-example">
+            <h4>Basic Code Snippets</h4>
+            <code>background: radial-gradient(red, blue);</code>
+            <br>
+            <code>
+                background: radial-gradient(at bottom right, 
+                yellow, orange, purple);
+            </code>
+            <br>
+            <code>
+                background: radial-gradient(at 25%, #00000000, #000000FF);
+            </code>
+            <br>
+            <code>
+                background: radial-gradient(red, white 30%, blue 50%);
+            </code>
+        </div>
+        <h4>Additional Examples</h4>
+        <p>
+            Let's be very clear to start: 
+            <strong>radial-gradient is NOT a CSS Property!</strong>
+        </p>
+        <p>
+            radial-gradient is a <strong>function</strong> that can be 
+            passed as a value to the <strong>background</strong> property
+            (well, technically background-image, but we can cheat and use 
+            the shorthand property).
+        </p>
+        <p>
+            If you try to use radial-gradient as its own property, you will
+            get nothing but broken code.
+        </p>
+        <p>
+            Now, with that out of the way, let's look at some examples.
+        </p>
+
+        <h5>Two color stops</h5>
+        <p>
+            Gradients are created with values known as "color stops"; color
+            stops essentially tell the gradient what colors to transition
+            between.
+        </p>
+        <p>
+            One of the simplest color gradients is one between two colors,
+            so let's do that below with the following code:
+        </p>
+        <p>
+            <code>background: radial-gradient(yellow, green);</code>
+        </p>
+        <div id="example-1" class="example"></div>
+
+        <h5>Two color stops with position</h5>
+        <p>
+            Above, we created a radial gradient that goes from yellow to green,
+            from the center of the element's background to the edges. What if 
+            we wanted that gradient to start in a different position?
+        </p>
+        <p>
+            In that case, we can specify the position of the gradient start 
+            by using the special side keywords of "top", "bottom", "left", and 
+            "right", as in the examples below.
+        </p>
+        <p>
+            <code>background: radial-gradient(at top, yellow, green);</code>
+        </p>
+        <div id="example-2" class="example"></div>
+        <p>
+            <code>background: radial-gradient(at right, yellow, green);</code>
+        </p>
+        <div id="example-3" class="example"></div>
+        <p>
+            <code>background: radial-gradient(at bottom left, yellow, green);</code>
+        </p>
+        <div id="example-4" class="example"></div>
+        <p>
+            We can also directly the position along the x and y axes using 
+            percentages, as below.
+        </p>
+        <p>
+            The first example positions the center of the gradient at 25% of the 
+            way from the left in the vertical center.  The second example 
+            positions the center of the gradient at 75% along the way from the 
+            left, and at 100% of the way from the top (i.e. the bottom).
+        </p>
+        <p>
+            <code>background: radial-gradient(at 25%, yellow, green);</code>
+        </p>
+        <div id="example-5" class="example"></div>
+        <p>
+            <code>background: radial-gradient(at 75% 100%, yellow, green);</code>
+        </p>
+        <div id="example-6" class="example"></div>
+
+        <h5>Multiple color stops</h5>
+        <p>
+            Theoretically, there's no limit to the number of color stops you 
+            could give to a gradient (though practically, you'd never need 
+            THAT many color stops).
+        </p>
+        <p>
+            Here's an example with multiple color stops:
+        </p>
+        <p>
+            <code>
+                background: radial-gradient(blue, purple, lightblue, 
+                aquamarine, teal);
+            </code>
+        </p>
+        <div id="example-7" class="example"></div>
+
+        <h5>Color Stops with Length</h5>
+        <p>
+            We already have a lot of flexibility with radial gradient, but
+            what if we wanted even more control? 
+        </p>
+        <p>
+            For instance, what if we wanted to create a 
+            gradient that stopped transitioning midway through?
+        </p>
+        <p>
+            In that case, we could provide a length as a percentage value 
+            after a color stop to tell it, well, where that color should "stop"
+            on the gradient.  Let's see it in action.
+        </p>
+        <p>
+            <code>
+                background: radial-gradient(crimson, gold 50%);
+            </code>
+        </p>
+        <div id="example-8" class="example"></div>
+        <p>
+            See how the gold color transition stops in the middle of the 
+            gradient at 50%? That's because of the color stop percentage 
+            that we added.
+        </p>
+        <p>
+            You do have to be a little thoughtful with color stop lengths, 
+            or else they may not work properly.  As you progress through the 
+            gradient, your color stop percentages should always be increasing, 
+            since they're referring to points on the gradient.
+        </p>
+        <p>
+            For instance, it wouldn't make sense to provide color stop lengths 
+            in this order: 20%, 80%, 50%.
+        </p>
+        <p>
+            By the time you've reached the color stop at 80%, you've already 
+            passed 50%, and you can't go backwards in a gradient.
+        </p>
+        <p>
+            Here's another example of color stops with lengths:
+        </p>
+        <p>
+            <code>
+                background: radial-gradient(red 20%, white, blue 60%);
+            </code>
+        </p>
+        <div id="example-9" class="example"></div>
+        <p>
+            In this case, red only starts transitioning to white at 20%, and 
+            white must transition to blue by 60%, so that limits the transition 
+            from red to white to blue between 20% and 60% of the gradient.
+        </p>
+
+        <div class="resources">
+            <h4>Additional Resources</h4>
+            <a 
+                href="https://www.w3schools.com/css/css3_gradients_radial.asp"
+                target="_blank"
+            >
+                w3schools 
+            </a>
+            <br>
+            <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/radial-gradient"
+                target="_blank"
+            >
+                mdn web docs
+            </a>
+            <br>
+            <a 
+                href="https://css-tricks.com/css3-gradients/#aa-radial-gradients"
+                target="_blank"
+            >
+                CSS Tricks 
+            </a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+/*
+    It's worth pointing out how a previous
+    property we learned about interacts with
+    the Box Model: background-color.
+
+    The background-color property only fills
+    the content inside of the border; that 
+    means the "background" of the element
+    includes the padding, but excludes the
+    margin.
+
+    Let's see this in action by adding 
+    a background-color property to our
+    div CSS Rule.
+*/
+
+div {
+    border: 10px dashed red;
+    margin: 24px 0px;
+    padding: 24px 36px;
+    background-color: lightcoral;
+}

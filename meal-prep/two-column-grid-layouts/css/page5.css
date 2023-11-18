@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif; 
+}
+
+#grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    grid-template-areas: "content sidebar";
+}
+
+/*
+    Suppose we wanted to create a sidebar like
+    in the Domino's two column website we saw
+    in the previous day's powerpoint.
+
+    (show that example from the powerpoint)
+
+    Our version will be a little simpler, of
+    course, but we can still create the same
+    general style, just by targeting the HTML
+    elements we already have in place.
+
+    First off, let's remove the background color
+    from the sidebar content, and give it a bit
+    of padding, so it's not flush up against
+    the main content.
+*/
+
+#sidebar-content {
+    /* remove background color */
+    grid-area: sidebar;
+    padding: 18px; /* new */
+}
+
+/*
+    Next, let's change the content of our
+    h2 to be something like "Table of Contents"
+    instead of "BRAND NAME", since right sidebars
+    tend to be more secondary, and probably 
+    wouldn't include something as important as a
+    logo or brand name.
+
+    Then we want to target the h2 inside the
+    sidebar; this is what we're going to 
+    transform into that block of color at the
+    top of the sidebar.
+
+    We'll add the background-color first.
+    Clearly we have more work to do though.
+
+    Now our h2 block appears to be floating
+    above our ul content. To fix this, we're 
+    going to strip off the existing margin.
+
+    That gets us closer to the ul, but it won't 
+    look that way, since the ul has its own 
+    margin as well; students will just have to
+    trust us for now, and we'll deal with the
+    margin of the ul later
+    
+    Next let's add some "bubblewrap" (aka padding)
+    to the h2 to puff it out a bit.
+
+    Finally, let's adjust the text in there,
+    by changing to a more contrasting color,
+    and also making the font-size slightly
+    smaller.
+
+    That should just about wrap up our changes
+    to the h2.
+*/
+
+#sidebar-content h2 {
+    background-color: darkslategray;
+    margin: 0px;
+    padding: 12px;
+    color: white;
+    font-size: 18px;
+}
+
+#main-content {
+    background-color: lightgreen;
+    grid-area: content;
+}
+

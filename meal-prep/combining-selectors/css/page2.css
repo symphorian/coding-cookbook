@@ -1,0 +1,22 @@
+/*
+    Now, suppose we have a client who wants
+    us to build a simple navbar with a blue 
+    background.
+
+    Let's go ahead and target the navbar id,
+    and center the text, add some padding,
+    and then change the background color
+    to blue.
+*/
+
+#navbar {
+    text-align: center;
+    padding: 24px;
+    background-color: blue;
+}
+
+/*
+    Uh oh.  Now our anchors are invisible,
+    because it's blue text again a blue
+    background.  We'll need to fix that.
+*/

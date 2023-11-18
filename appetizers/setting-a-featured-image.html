@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Setting a Featured Image (WordPress) - Appetizers - The Coding Cookbook</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="../css/cookbook.css" rel="stylesheet">
+        <link href="../css/appetizer.css" rel="stylesheet">
+        <link href="../css/lightbox.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="background"></div>
+        <nav>
+            <header id="topHeader">
+                <h2 id="brand"><a href="../">The Coding Cookbook</a></h2>
+                <div id="quote"></div>
+                <div id="navLinks">
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../ingredients.html">
+                                HTML
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../ingredients.html">Elements</a></h2>
+                            <h2><a href="../ingredients-cheatsheet.html">Cheatsheet</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../seasonings.html">
+                                CSS
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../seasonings.html">Properties</a></h2>
+                            <h2><a href="../seasonings-cheatsheet.html">Cheatsheet</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../recipes.html">
+                                Layouts
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../recipes.html?category=page-layout">Page Layouts</a></h2>
+                            <h2><a href="../recipes.html?category=content-layout">Content Layouts</a></h2>
+                            <h2><a href="../recipes.html?category=navigation-layout">Navigation</a></h2>
+                            <h2><a href="../recipes.html?category=miscellaneous">Miscellaneous</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../more.html">
+                                More
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../demos.html">Class Demos</a></h2>
+                            <h2><a href="../appetizers.html">Tutorials</a></h2>
+                            <h2><a href="../troubleshooting.html">Troubleshooting</a></h2>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </nav>
+        
+        <header id="title" class="">
+            <h1>Setting a Featured Image (WordPress)</h1>
+            <h3>A Picture Says a Thousand Words</h3>
+        </header>
+        
+        
+        <div class="cookbookPage">
+            <ol>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                First off, If you haven't already, 
+                                log in to your WordPress site, and navigate
+                                to the Dashboard.
+                            </p>
+                            <p class="indent">
+                                If you're on the live version of your site, 
+                                but the Admin Bar doesn't show up at the top 
+                                of the screen, you might have been logged out 
+                                due to inactivity.
+                                <br><br>
+                                Add /login to the end of the URL, and you'll
+                                be able to login again.
+                            </p>
+                            <p>
+                                Once in the Dashboard, navigate
+                                to the Block Editor of the Post you want 
+                                to add a featured image to.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/setting-a-featured-image/00_dashboard.png" 
+                                alt="The Posts link in the Dashboard"
+                            >
+                            <figcaption>
+                                The Posts link in the Dashboard
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Once in the Block Editor, make sure the sidebar 
+                                on the right is open.
+                            </p>
+                            <p class="indent">
+                                If it is not, click the little sidebar icon to
+                                the right of the Publish button in the navbar.
+                            </p>
+                            <p>
+                                Then make sure that you are in the <b>Post</b>
+                                tab of the sidebar (not the <b>Block</b> tab).
+                            </p>
+                            <p>
+                                Once you confirm you're in the <b>Post</b> tab,
+                                scroll down until you find the Featured Image
+                                drawer and click on it.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/setting-a-featured-image/01_block-editor.png" 
+                                alt="Getting to the Featured Image drawer in the Block Editor"
+                            >
+                            <figcaption>
+                                Getting to the Featured Image drawer 
+                                in the Block Editor
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After opening the Featured Image drawer,
+                                you should see an empty gray rectangle with
+                                just the words "Set featured image".
+                            </p>
+                            <p>
+                                Click on that rectangle.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/setting-a-featured-image/02_setfeaturedimage.png" 
+                                alt="The Featured Image drawer"
+                            >
+                            <figcaption>
+                                The Featured Image drawer
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <h2 id="p1_step4" class="invisibleInnerAnchorTarget"></h2>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After clicking, a large dialog should appear,
+                                prompting you to select or upload image files.
+                            </p>
+                            <p>
+                                Alternatively, if you've previously uploaded 
+                                the image you want to use for the cover image,
+                                you can skip this step and go straight to the
+                                Media Library tab. 
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/setting-a-featured-image/03_media1.png" 
+                                alt="Uploading a featured image"
+                            >
+                            <figcaption>
+                                Uploading a featured image
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After uploading an image, you will be moved to
+                                the Media Library tab of the dialog.
+                            </p>
+                            <p class="indent">
+                                This tab will show ALL of the images you've 
+                                uploaded to this particular WordPress site.
+                            </p>
+                            <p>
+                                Click on the thumbnail of the image you want
+                                to use as a featured image, and then click
+                                on the blue "Set featured image" button
+                                on the bottom right.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/setting-a-featured-image/03_media2.png" 
+                                alt="Selecting the featured image from the Media Library"
+                            >
+                            <figcaption>
+                                Selecting the featured image from the 
+                                Media Library
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                The dialog will close, and you'll find yourself 
+                                in the Block Editor again.
+                            </p>
+                            <p>
+                                But now, you should see the featured image 
+                                you selected in the Featured Image drawer 
+                                in the sidebar.
+                            </p>
+                            <p class="indent">
+                                Note that a featured image will NOT show up 
+                                in the Block Editor.
+                                <br><br>
+                                You will only see it 
+                                where Posts show up on the live version of the
+                                site, such as the Home page or the actual page 
+                                of the Post itself.
+                            </p>
+                            <p>
+                                Make sure to Publish your changes before you 
+                                leave the Block Editor!
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/setting-a-featured-image/04_set.png" 
+                                alt="The Featured Image is set"
+                            >
+                            <figcaption>
+                                The Featured Image is set
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                If we visit the live version of the site,
+                                we'll now see our featured image above the 
+                                Post that we set it on.
+                            </p>
+                            <p class="indent">
+                                Note that how a featured image renders and 
+                                behaves is completely dependent on the Theme 
+                                used for the site.
+                                <br><br>
+                                Some Themes will put featured images in 
+                                different places, and others will ignore 
+                                them completely.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/setting-a-featured-image/05_home.png" 
+                                alt="The Featured Image is set"
+                            >
+                            <figcaption>
+                                The Featured Image is set
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+            <h4>
+                Congrats! You've successfully set a featured image on a Post!
+            </h4>
+        </div>
+        <div id="lightboxContainer">
+            <div id="lightboxBackground" class="closer"></div>
+            <img id="lightbox" src="" alt="">
+            <span id="lightboxCloser" class="closer">×</span>
+          </div>
+        <script src="../js/lightbox.js"></script>
+        <script src="../js/hideNav.js"></script>
+    </body>
+</html>

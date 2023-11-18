@@ -1,0 +1,75 @@
+#navbar {
+    text-align: center;
+    padding: 24px;
+    background-color: blue;
+}
+
+#navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+p a {
+    color: teal;
+}
+
+p.warning {
+    color: crimson;
+}
+
+p.warning a {
+    color: orange;
+}
+
+ul {
+    color: green;
+}
+
+ul a {
+    color: lime;
+}
+
+/*
+    Now how do we make the other changes
+    (to purple for the paragraph and 
+    lightblue for the div)?
+
+    Same idea as for the lime color, but
+    we just need to string together 
+    extra selectors.
+
+    Might want to consider asking the 
+    students what they think would make 
+    the changes we need.
+*/
+
+ul p a {
+    color: purple;
+}
+
+ul div a {
+    color: lightblue;
+}
+
+/*
+    And that's it for this demo!
+
+    One thing to note: 
+        couldn't we have just added
+        IDs or classes to everything
+        we wanted to target?
+
+    Yes, yes we could have.  But at some
+    point, that's going to become very
+    tedious, attaching IDs to EVERYTHING
+    we want to target.
+
+    Combining selectors may be more complex,
+    but oftentimes it results in more 
+    efficient (and shorter) code, which 
+    is typically what we want to aim for.
+
+    Now students should be somewhat 
+    prepared for the next drill about
+    Containers and Selectors.
+*/

@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    font-family: sans-serif;
+    background-color: teal;
+}
+/*
+    "Coincidentally", the media queries from the first part of the
+    demo are the same ones we'll be using through the rest of the
+    demo, so we'll leave them down below for now.
+
+    Next, we'll add in widths for the header and footer.
+*/
+#header, #footer {
+    width: 100vw;
+}
+
+/*
+    Now, let's target our #header and add a height of 100vh, a
+    background-image, a background-size of cover, and a
+    background-position of center.
+    This should give us the beginnings of a hero.
+*/
+#header {
+    height: 100vh;
+    background-image: url(../images/hero.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/*
+    Here are our breakpoints from before.
+*/
+
+@media screen and (max-width: 725px) and (min-width: 481px) {
+    body {
+        background-color: orange;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        background-color: purple;
+    }
+}
+

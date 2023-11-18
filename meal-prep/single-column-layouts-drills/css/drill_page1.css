@@ -1,0 +1,18 @@
+/* Drill 1 - Write your code solution below */
+
+/*
+    A left aligned single column is the easiest,
+    since you don't need to even change anything
+    related to its position, since block elements
+    are left aligned by default.
+
+    The only thing we need to do here is set
+    the container width.
+
+    Students can choose to use absolute or relative
+    units for the width (either around 300px or 50%).
+*/
+
+#column-d1 {
+    width: 50%;
+}

@@ -1,0 +1,167 @@
+/* COMMON PAGE LAYOUT SETUP CSS - START *****************/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    /* preferred copy font goes here */
+    font-family: sans-serif; 
+}
+/* COMMON PAGE LAYOUT SETUP CSS - END ********************/
+
+/*
+    It's actually rather rare to find a page 
+    layout composed purely of sidebars and a content
+    area; usually, a layout with sidebars is contained
+    inside of a single column layout (or at least,
+    something that resembles it).
+
+    So let's see how we might build something like
+    that using grid...
+    
+    ...and why not make it a little fancier,
+    by making the sidebars scroll with the page too!
+*/
+
+body {
+    background-color: #1f1f1f;
+    color: #EEEEEE;
+}
+
+#three-columns {
+    margin: 48px 0px;
+    display: grid;
+    /*
+        Here, we set up our grid columns again,
+        but this time, notice that we're creating
+        five columns.
+
+        Why? Because there is a way to create a centered
+        layout in a grid without using the margin/auto
+        approach.
+
+        We will use the two '1fr' columns on either side
+        as gutters, which will stretch to fill any empty
+        space on either side of our central content area.
+
+        This is a tad rigid, and probably won't work well
+        on smaller screens; in that case, we'll have to 
+        make it more responsive, using something like a 
+        media query to alter the columns on smaller screens.
+
+        But you most likely haven't learned about that yet,
+        so we'll keep things simple here.
+    */
+    grid-template-columns: 1fr 200px 550px 200px 1fr;
+
+    /*
+        Our grid areas also look similar to before, but
+        now we have dots (.) on either side of our area
+        names. A dot in a grid template area represents
+        an unassigned area, or basically, a blank cell
+        in our template.
+
+        These are perfect for creating gutters, because
+        we never plan to put anything inside of a gutter;
+        they are just there to create empty space on 
+        either side of our central content to center it.
+
+        In other words, they're fulfilling the exact same
+        role as our auto margins when we set up a single 
+        column layout using margin: 0px auto;
+    */
+    grid-template-areas: 
+        ". left-sidebar main-area right-sidebar .";
+}
+
+/*
+    The rest of this is (mostly) adding additional
+    padding and margin, along with modifying borders
+    and background-colors.
+
+    However, we also need to assign our grid areas
+    to the elements we want to fill those slots.
+    IF YOU DON'T DO THIS CORRECTLY, YOUR GRID WILL 
+    PROBABLY LOOK VERY STRANGE!!!
+*/
+
+#column-1 {
+    margin-left: 24px;
+
+    /* setting the grid area to be left-sidebar */
+    grid-area: left-sidebar;
+}
+
+#column-2 {
+    padding: 24px 48px;
+
+    /* setting the grid area to be main-area */
+    grid-area: main-area;
+}
+
+#column-3 {
+    margin-right: 24px;
+
+    /* setting the grid area to be right-sidebar */
+    grid-area: right-sidebar;
+}
+
+#three-columns h1 {
+    margin-top: 0px;
+}
+
+#three-columns h2,
+#three-columns h3 {
+    border-bottom: 2px solid #AAAAAA;
+    padding-bottom: 8px;
+}
+
+#three-columns ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+#three-columns ul li {
+    padding: 4px 0px;
+}
+
+/* 
+    remember that in order to change the style
+    of a hyperlink (anchor), you need to target
+    it very specifically in order to overwrite
+    the default browser styles, which usually 
+    means your selectors need to end in 'a'
+*/
+#three-columns ul a {
+    color: #EEEEEE;
+    text-decoration: none;
+}
+
+/*
+    This is the neat little trick that works great
+    for sidebars that are short, but we want to be
+    visible even as the user scrolls down.
+
+    By adding position: sticky; to the container 
+    inside of #sidebar-content, we can tell it to 
+    "stick" to the top of the screen when scrolling.
+
+    This won't work on #sidebar-content, because it
+    is a grid item (or grid child), which is why we
+    added a new container inside.
+    
+    The 'top' property tells the element how far
+    down from the top of the screen the element 
+    should stick.
+
+    Cool, right?
+*/
+.sticky-sidebar {
+    position: sticky;
+    top: 24px;
+
+    background-color: #343434;
+    border-radius: 4px;
+    padding: 24px;
+}

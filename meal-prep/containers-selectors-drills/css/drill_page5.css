@@ -1,0 +1,16 @@
+/* Drill 5 - Write your code solution below */
+
+/*
+    Here we're mostly just showing off how
+    pre-configured containers can completely 
+    change the layout of the content inside 
+    of them.
+
+    Other than that, just a refresher on
+    how to use border-radius to completely
+    round the corners.
+*/
+
+.dog-days img {
+    border-radius: 50%;
+}

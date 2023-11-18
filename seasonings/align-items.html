@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>align-items Property (Flexbox)</title>
+        <link href="css/align-items.css" rel="stylesheet" data-seasoning>
+        <link href="css/shared.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="recipe-example">
+            <h4>Basic Code Snippets</h4>
+            <code>align-items: stretch;</code>
+            <br>
+            <code>align-items: flex-start;</code>
+            <br>
+            <code>align-items: flex-end;</code>
+            <br>
+            <code>align-items: center;</code>
+            <br>
+            <code>align-items: baseline;</code>
+            <br>
+        </div>
+        <h4>Additional Examples</h4>
+        <p class="warning">
+            NOTE: The align-items property is a 
+            <strong>Flexbox Container Property</strong>.
+            <br>
+            <br>
+            This property will have no effect if applied to
+            an element that is not an activated Flexbox
+            Container (i.e. has 
+            <code><strong>display: flex;</strong></code>
+            applied to it)
+        </p>
+        <p>
+            The align-items property determines how a Flexbox
+            Container both aligns and stretches the content inside of
+            it.
+        </p>
+        <p>
+            It's important to understand that the align-items
+            property works along a flexbox's <strong>cross-axis</strong>.
+        </p>
+        <p>
+            This means that the behavior of this property will 
+            change depending on the flex-direction of the Container.
+        </p>
+        <ul>
+            <li>if flex-direction is set to <i>row</i></li>
+            <ul>
+                <li>
+                    align-items will work along the y-axis
+                    (or vertical direction)
+                </li>
+            </ul>
+            <li>if flex-direction is set to <i>column</i></li>
+            <ul>
+                <li>
+                    align-items will work along the x-axis
+                    (or horizontal direction)
+                </li>
+            </ul>
+        </ul>
+        
+        <p>
+            The following examples will showcase align-items
+            as it affects a flexbox with a <i>row</i> flex-direction.
+        </p>
+        <br>
+
+        <h4>align-items: stretch; (default)</h4>
+        <p>
+            This is the default behavior of align-items.
+        </p>
+        <p>
+            If no explicit heights are set on the Flexbox Items, the 
+            Flexbox Container will stretch them out to fill the 
+            Container (along the <strong>cross-axis</strong>).
+        </p>
+        <p>
+            For this example, we gave a height to the Flexbox 
+            Container and removed the heights from the boxes inside,
+            to illustrate the <i>stretch</i> property value.
+        </p>
+        <div class="flex-container align-stretch">
+            <div class="box">A</div>
+            <div class="box tall">B</div>
+            <div class="box">C</div>
+            <div class="box giant">D</div>
+            <div class="box wide tall">E</div>
+            <div class="box">F</div>
+        </div>
+ 
+        
+        <h4>align-items: flex-start;</h4>
+        <p>
+            For this example, explicit heights have been set for 
+            the boxes in this Flexbox Container.
+        </p>
+        <div class="flex-container align-flex-start">
+            <div class="box">A</div>
+            <div class="box tall">B</div>
+            <div class="box">C</div>
+            <div class="box giant">D</div>
+            <div class="box wide tall">E</div>
+            <div class="box">F</div>
+        </div>
+        
+        <h4>align-items: flex-end;</h4>
+        <p>
+            For this example, explicit heights have been set for 
+            the boxes in this Flexbox Container.
+        </p>
+        <div class="flex-container align-flex-end">
+            <div class="box">A</div>
+            <div class="box tall">B</div>
+            <div class="box">C</div>
+            <div class="box giant">D</div>
+            <div class="box wide tall">E</div>
+            <div class="box">F</div>
+        </div>
+
+        <h4>align-items: center;</h4>
+        <p>
+            For this example, explicit heights have been set for 
+            the boxes in this Flexbox Container.
+        </p>
+        <div class="flex-container align-center">
+            <div class="box">A</div>
+            <div class="box tall">B</div>
+            <div class="box">C</div>
+            <div class="box giant">D</div>
+            <div class="box wide tall">E</div>
+            <div class="box">F</div>
+        </div>
+
+        <h4>align-items: baseline; (tries to fit all text on same line)</h4>
+        <p>
+            For this example, explicit heights have been set for 
+            the boxes in this Flexbox Container.
+        </p>
+        <div class="flex-container align-baseline">
+            <div class="box">A</div>
+            <div class="box tall">B</div>
+            <div class="box">C</div>
+            <div class="box giant">D</div>
+            <div class="box wide tall">E</div>
+            <div class="box">F</div>
+        </div>
+
+        <div class="resources">
+            <h4>Additional Resources</h4>
+            <a 
+                href="https://www.w3schools.com/cssref/css3_pr_align-items.php"
+                target="_blank"
+            >
+                w3schools 
+            </a>
+            <br>
+            <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-items"
+                target="_blank"
+            >
+                mdn web docs
+            </a>
+        </div>
+    </body>
+</html>

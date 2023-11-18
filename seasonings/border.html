@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>border Properties</title>
+        <link href="css/border.css" rel="stylesheet" data-seasoning>
+        <link href="css/shared.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="recipe-example">
+            <h4>Basic Code Snippets</h4>
+            <code>border: 5px solid darkgrey;</code>
+            <br>
+            <code>border: 2px dashed crimson;</code>
+            <br>
+            <code>border: 10px dotted #FF77CC;</code>
+        </div>
+        <h4>Additional Examples</h4>
+        <p>
+            There are many different border properties, mostly
+            focused on allowing you to change the width, style,
+            and color of a border.
+        </p>
+        <p>
+            The border style property is the only one with special
+            keywords, so we'll focus on a couple common border 
+            style values first, before combining all of the border 
+            properties together.
+        </p>
+
+        <h3>Border Style Values</h3>
+        <h5>solid</h5>
+        <div class="border-style-solid"></div>
+        <h5>dashed</h5>
+        <div class="border-style-dashed"></div>
+        <h5>dotted</h5>
+        <div class="border-style-dotted"></div>
+        <h5>inset</h5>
+        <div class="border-style-inset"></div>
+        <h5>outset</h5>
+        <div class="border-style-outset"></div>
+        <h5>groove</h5>
+        <div class="border-style-groove"></div>
+        <h5>ridge</h5>
+        <div class="border-style-ridge"></div>
+        <br>
+
+        <h3>Combining Border Properties</h3>
+
+        <div id="combined-1">
+            <p>
+                This div has a border set on it, with the 
+                border's width, style, and color all set at 
+                once.
+            </p>
+            <p>
+                <code>border: 10px solid coral;</code>
+            </p>
+            <p>
+                It has a rather thick 10px border-width, a 
+                "solid" border-style, and a border-color of 
+                "coral".
+            </p>
+            <p>
+                However, as we'll see below, we can also 
+                target different parts of the border individually,
+                and we can even target individual sides as well.
+            </p>
+        </div>
+
+        <div id="combined-2">
+            <p>
+                This div sets its border properties individually.
+            </p>
+            <p>
+                <code>
+                    border-width: 5px;
+                    <br>
+                    border-style: dashed;
+                    <br>
+                    border-color: #8888FF;
+                    <br>
+                    margin: 24px 0px;
+                    <br>
+                    padding: 24px;
+                </code>
+            </p>
+            <p>
+                It has a thinner 5px border-width, a 
+                "dashed" border-style, and a border-color with a 
+                hexadecimal value of <code>#8888FF</code>.
+            </p>
+            <p>
+                We also gave it a little margin and padding. The 
+                margin gives it space OUTSIDE the border on the 
+                top and bottom, but not on the sides. The padding 
+                give it space equally on all sides INSIDE the 
+                border.
+            </p>
+            <p>
+                The extra space on the inside is beneficial for 
+                giving the inside content room to breathe, and 
+                the extra space on the outside is good for
+                separating the div from the content around it.
+            </p>
+        </div>
+
+        <div id="combined-3">
+            <p>
+                This div looks a little wacky, just because it's
+                showing how we can target individual sides at once,
+                or even individual properties on a specific side.
+            </p>
+            <p>
+                <code>
+                    border-top: 8px dotted green;
+                    <br>
+                    border-right: 8px dashed red;
+                    <br>
+                    border-bottom-color: blue;
+                    <br>
+                    border-bottom-style: solid;
+                    <br>
+                    border-bottom-width: 4px;
+                </code>
+            </p>
+            <p class="pretty-in-pink">
+                Just to be clear, borders can be added to any 
+                HTML element, not only div elements.  But we tend 
+                to use borders more on elements used as containers, 
+                in order to group related content, and separate it 
+                from unrelated content.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing 
+                elit. Voluptate voluptatem excepturi aliquid nostrum 
+                cumque reprehenderit debitis et corrupti labore.
+            </p>
+        </div>
+        <div class="resources">
+            <h4>Additional Resources</h4>
+            <a 
+                href="https://www.w3schools.com/css/css_border.asp"
+                target="_blank"
+            >
+                w3schools 
+            </a>
+            <br>
+            <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/border"
+                target="_blank"
+            >
+                mdn web docs
+            </a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+/*
+    Next, we'll start off with some basic
+    page setup CSS.
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+/*
+    Then we'll style the navbar with a simple
+    background gradient, and also transform
+    it into a flexbox, to make it easier
+    to work with in terms of alignment
+    and spacing.
+*/
+#navbar {
+    background: linear-gradient(to bottom, green, #3e6d3e);
+    display: flex;
+}
+
+/*
+    Finally, we'll target the anchors inside,
+    strip them of their default styling,
+    and give them some padding.
+*/
+#navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 24px;
+}
+
+/*
+    Not a bad start to our navbar!
+*/

@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Exo+2:ital,wght@1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FEFEFE;
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: indigo;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#header {
+    position: sticky;
+    top: 0px;
+    width: 100vw;
+    border-bottom: 1px solid #e1d6ec;
+    background-color: #FEFEFE;
+}
+
+#banner {
+    background-color: #bb2525;
+    color: #FEFEFE;
+    text-align: center;
+    padding: 8px;
+}
+
+#banner a {
+    color: white;
+    text-decoration: underline;
+}
+
+#upper-navbar,
+#lower-navbar,
+#layout,
+#footer {
+    max-width: 1600px;
+    margin: 0px auto;
+    padding: 12px 48px;
+}
+
+#upper-navbar,
+#lower-navbar {
+    display: flex;
+    align-items: center;
+}
+
+#branding {
+    display: flex;
+    align-items: center;
+}
+
+#upper-navbar #branding:hover {
+    background-color: transparent;
+    text-decoration: none;
+}
+
+#logo {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 28px;
+    color: white;
+    background-color: indigo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    padding-bottom: 4px;
+    border-radius: 50%;
+}
+
+#brandname {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    margin: 8px 0px 0px 12px;
+}
+
+#search-bar {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 24px;
+    border: 3px solid indigo;
+    border-radius: 48px;
+    padding: 18px 24px;
+    font-size: 18px;
+}
+
+#search-bar span {
+    color: #888888;
+}
+
+#search-bar i {
+    color: indigo;
+    font-size: 24px;
+}
+
+#upper-navbar a {
+    padding: 12px;
+    border-radius: 48px;
+}
+
+#upper-navbar a:hover {
+    background-color: #e1d6ec;
+    text-decoration: none;
+}
+
+#lower-navbar {
+    justify-content: space-between;
+    padding-bottom: 24px;
+}
+
+#hero {
+    background:
+        radial-gradient(circle at top left, #e43e0c 10%, #f8bf5f 40%, #f8bf5f11),
+        radial-gradient(circle at bottom right, #4a1b95 10%, #e238f2 40%, #ff7c8d11);
+        border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 48px 0px 96px;
+}
+
+#hero-content {
+    width: 50%;
+    text-align: center;
+}
+
+#hero-content h1 {
+    font-size: 60px;
+}
+
+#hero-content h3 {
+    font-weight: normal;
+    font-size: 28px;
+}
+
+#hero-content a {
+    background-color: #FEFEFE;
+    display: inline-block;
+    font-size: 28px;
+    padding: 12px 24px;
+    border-radius: 48px;
+    box-shadow: 0px 4px 8px #00000066;
+}
+
+#hero-content a:hover {
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.section {
+    padding: 48px 0px;
+}
+
+.section h3 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.round-list {
+    display: flex;
+}
+
+.round-list a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 12px;
+}
+
+.round-list a img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 12px;
+}
+
+.halloween-grid {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 3fr;
+    grid-template-areas:
+        "text text img1 img5"
+        "img2 img3 img4 img5";
+}
+
+#halloween-text {
+    grid-area: text;
+    padding: 24px;
+}
+
+#halloween-image-1 {
+    grid-area: img1;
+}
+
+#halloween-image-2 {
+    grid-area: img2;
+}
+
+#halloween-image-3 {
+    grid-area: img3;
+}
+
+#halloween-image-4 {
+    grid-area: img4;
+}
+
+#halloween-image-5 {
+    grid-area: img5;
+}
+
+.halloween-grid div {
+    padding: 12px;
+}
+
+.halloween-grid img {
+    width: 100%;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+#halloween-image-5 img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.masonry {
+    columns: 5 auto;
+    column-gap: 24px;
+}
+
+.section h4 {
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+.section h2 {
+    font-size: 48px;
+    margin-top: 0px;
+}
+
+.masonry div {
+    padding-bottom: 24px;
+}
+
+.masonry img {
+    width: 100%;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+#halloween-image-5 img {
+    height: 100%;
+    object-fit: cover;
+}
+
+#footer {
+    background: linear-gradient(to bottom, indigo, #340158);
+    color: white;
+}
+
+#footer a {
+    text-decoration: none;
+    color: white;
+}
+
+#footer a:hover {
+    text-decoration: underline;
+}
+
+#footer-navbar {
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#footer-navbar span,
+#footer-navbar a {
+    margin-right: 24px;
+    margin-bottom: 12px
+}
+
+#footer-columns-navbar {
+    padding: 48px 0px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#footer-columns-navbar a {
+    display: block;
+    padding: 8px 0px;
+}
+
+@media screen and (max-width: 1050px) {
+    #upper-navbar {
+        flex-wrap: wrap;
+    }
+
+    #logo {
+        font-size: 24px;
+        width: 36px;
+        height: 36px;
+        padding-bottom: 2px;
+    }
+
+    #brandname {
+        font-size: 40px;
+    }
+
+    #search-bar {
+        margin-right: 0px;
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+
+    #upper-navbar #links {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #lower-navbar {
+        display: none;
+    }
+
+    #hero-content {
+        width: 80%;
+    }
+
+    #hero-content h1 {
+        font-size: 48px;
+    }
+
+    #hero-content h3 {
+        font-size: 24px;
+    }
+
+    .round-list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .round-list a {
+        flex: 30%;
+    }
+
+    .section h2 {
+        font-size: 28px;
+    }
+
+    .masonry {
+        columns: 4 auto;
+        column-gap: 24px;
+    }
+
+    .masonry div {
+        padding-bottom: 24px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .halloween-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "text text text"
+            "img1 img2 img5"
+            "img3 img4 img5";
+    }
+
+    #halloween-text {
+        padding: 0px 0px 24px;
+        text-align: center;
+    }
+
+    .masonry {
+        columns: 3 auto;
+        column-gap: 24px;
+    }
+    
+    .masonry div {
+        padding-bottom: 24px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #banner {
+        display: none;
+    }
+    #upper-navbar {
+        max-width: 1600px;
+        margin: 0px auto;
+        padding: 12px 12px;
+        display: flex;
+        align-items: center;
+    }
+    #search-bar {
+        justify-content: flex-end;
+        margin-right: 12px;
+    }
+    #search-bar span {
+        display: none;
+    }
+    #hero-content h1 {
+        font-size: 36px;
+    }
+
+    #hero-content h3 {
+        font-size: 20px;
+    }
+
+    #layout,
+    #footer {
+        padding: 12px 12px;
+    }
+
+    .halloween-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "text text"
+            "img1 img2"
+            "img5 img5"
+            "img3 img4";
+    }
+
+    .masonry {
+        columns: 2 auto;
+        column-gap: 24px;
+        padding: 8px;
+    }
+    
+    .masonry div {
+        padding-bottom: 24px;
+    }
+
+    #footer-columns-navbar {
+        justify-content: flex-start;
+        padding: 36px 8px;
+    }
+
+    #footer-columns-navbar div {
+        flex: 50%;
+        margin-bottom: 24px;
+    }
+
+    #footer-navbar {
+        justify-content: flex-start;
+        padding: 0px 8px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #banner {
+        display: none;
+    }
+    #upper-navbar {
+        padding: 0px 12px;
+    }
+    #search-bar {
+        justify-content: flex-end;
+        margin: 0px 12px 0px 0px;
+        padding: 0px;
+        border: 0px;
+        flex: auto;
+    }
+    #search-bar span {
+        display: none;
+    }
+}

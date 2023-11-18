@@ -1,0 +1,26 @@
+#navbar {
+    text-align: center;
+    padding: 24px;
+    background-color: blue;
+}
+
+/*
+    We could try targeting the
+    anchors on the page and changing
+    their color to white.
+*/
+
+a {
+    color: white;
+}
+
+/*
+    And that will work...for the navbar.
+    But all the other links on the page
+    will turn white as well, which is 
+    definitely not good.
+
+    So how can we fix the navbar links,
+    but leave the other links on the
+    page alone?
+*/

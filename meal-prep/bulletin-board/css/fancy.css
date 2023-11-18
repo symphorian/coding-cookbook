@@ -1,0 +1,104 @@
+/* 
+    This version includes some CSS properties
+    not formally covered in class (some we'll
+    get to later, others not).
+
+    I added a box-shadow to the post-its to
+    give them the illusion of depth, and I 
+    also added pins to the HTML, with an
+    accompanying class defined in here, which
+    uses a combination of properties like
+    border-radius and box-shadow to make
+    a simple div appear like a pushpin.
+
+    Other than that though, it's pretty much
+    the same as before.  
+    
+    This is the challenge version of the
+    assignment for students that finish early 
+    and want to push themselves.
+
+    Feel free to demo as much of this as you
+    feel students need to see.
+*/
+
+/*
+    NOTE TO STUDENTS: 
+
+    This is the file you should be writing your CSS in 
+    for the Bulletin Board assignment.
+
+    Good luck, and have fun!
+*/
+
+.post-it {
+    background-color: white;
+    box-shadow: 4px 4px 4px #00000066;
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    margin: 24px;
+    padding: 24px;
+    font-family: cursive;
+}
+
+.pin {
+    background-color: black;
+    border-radius: 50%;
+    box-shadow: 2px 2px 2px #00000066;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+
+.post-it-image {
+    width: 100%;
+}
+
+.left {
+    text-align: left;
+}
+
+.centered {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.yellow {
+    background-color: rgb(249, 249, 77);
+}
+
+.red {
+    background-color: rgb(198, 11, 11);
+}
+
+.pink {
+    background-color: rgb(255, 195, 214);
+}
+
+.blue {
+    background-color: blue;
+}
+
+.light-blue {
+    background-color: rgb(202, 229, 240);
+}
+
+.purple {
+    background-color: purple;
+}
+
+.green {
+    background-color: green;
+}
+
+.light-green {
+    background-color: rgb(179, 241, 179);
+}
+
+.big {
+    font-size: 36px;
+}

@@ -1,0 +1,65 @@
+/* flex example related code */
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-2 {
+    flex: 2;
+}
+
+.flex-3 {
+    flex: 3;
+}
+
+.flex-5 {
+    flex: 5;
+}
+
+.width-300px {
+    width: 300px;
+}
+
+.width-200px {
+    width: 200px;
+}
+
+/* styling related code */
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    background-color: seagreen;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.box {
+    background-color: lavender;
+    border: 2px solid grey;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 24px;
+    font-weight: bold;
+    height: 50px;
+    margin: 8px;
+    padding: 8px 14px;
+}
+
+.warning {
+    background-color: #6b1dcb;
+    color: white;
+    padding: 8px;
+}
+
+.indent {
+    padding-left: 36px;
+}
+
+h4 {
+    margin-top: 48px;
+}
+
+.box.width-200px {
+    font-size: 20px;
+}

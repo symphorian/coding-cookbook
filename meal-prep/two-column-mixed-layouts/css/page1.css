@@ -1,0 +1,45 @@
+/*
+    We'll start off with our common page layout setup
+    properties, which we'll do for almost all layouts
+    going forward.
+*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif; 
+}
+
+/*
+    Next, we're going to activate the CSS Grid
+    functionality on our #grid-layout container.
+
+    Again, activating a CSS Grid with display is 
+    something that should only go on the Grid
+    Container, not on any Grid Items inside the
+    container (unless we have any grids inside of 
+    grids going on).
+*/
+#grid-layout {
+    display: grid;
+}
+
+/*
+    Let's also temporarily add our background colors
+    to our grid items, so we can get a sense of the
+    the space that they take up.
+*/
+
+#header {
+    background-color: lightskyblue;
+}
+
+#sidebar {
+    background-color: lightcyan;
+}
+
+#main {
+    background-color: lightgoldenrodyellow;
+}

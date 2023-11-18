@@ -1,0 +1,30 @@
+/* Drill 7 - Write your code solution below */
+
+/*
+    This one may look rather complex, but it's 
+    not actually that much different from the
+    previous one.
+
+    The usual first step of transforming the
+    container into a flexbox will help a lot.
+
+    Then, we can apply space-between again.
+
+    After that, we just have a small issue
+    with the vertical alignment; since the
+    flexbox container is a row, to adjust
+    that, we need to use align-items.
+
+    The point of this drill is to show
+    (similar to a previous one), that no 
+    matter how complex the content inside
+    of a flexbox is, it can still adjust
+    things so that they're side-by-side.
+*/
+
+#container-7 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+

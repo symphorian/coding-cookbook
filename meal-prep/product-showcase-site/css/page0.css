@@ -1,0 +1,106 @@
+/* 
+    This is a relatively simple example
+    how of how to build a one-column
+    layout site, using different colored
+    sections for a more interesting
+    design.
+
+    Students are encouraged to use
+    images, color schemes, and copy text 
+    of the product(s) they're trying to 
+    showcase.
+
+    We're not trying to invent the wheel,
+    so they can "steal" the content they
+    need so that they can focus on the 
+    layout and design instead.
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif; 
+    font-size: 22px;
+}
+
+.section {
+    padding: 48px 0px;
+}
+
+.section img {
+    width: 100%;
+}
+
+.pink {
+    background-color: #F752AD;
+    color: #ffdd00;
+}
+
+.teal {
+    background-color: #00e0be;
+    color: #007300;
+}
+
+.blue {
+    background-color: #6027b4;
+    color: #00c9ff;
+}
+
+.orange {
+    background-color: #ff5a47;
+    color: #ffdd00;
+}
+
+.seagreen {
+    background-color: #c3f5d3;
+    color:#6e5be8;
+}
+
+.centered-column {
+    width: 600px;
+    margin: 0px auto;
+    text-align: center;
+}
+
+a {
+    color: #ffdd00;
+}
+
+h1 {
+    font-size: 78px
+}
+
+h2 {
+    font-size: 48px;
+    margin: 12px 0px 0px;
+}
+
+p {
+    padding: 0px 60px;
+}
+
+#variety-pack {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+.fake-button {
+    display: inline-block;
+    background-color: #ffdd00;
+    color: #F752AD;
+    border-radius: 12px;
+    padding: 18px;
+    min-width: 300px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.accent {
+    font-size: 28px;
+    font-weight: bold;
+    font-style: italic;
+}

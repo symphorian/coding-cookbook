@@ -1,0 +1,18 @@
+/*
+    This demo is going to cover a few different
+    ways to create Gallery content layouts using
+    the CSS Layout Modules we've learned (and
+    also one we haven't).
+
+    We'll start off with using CSS Grid.
+    CSS Grid can make a pretty nice looking 
+    gallery... as long as all the images are 
+    the exact same aspect ratio / dimensions.
+
+    We'll start off using the provided images,
+    to make sure everyone is working with the
+    same assets.
+
+    First, setup the HTML with a gallery of
+    landscape images.
+*/

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>&lt;audio&gt; (Audio) Element</title>
+    </head>
+    <body>
+        <h2>Here is an audio example with a <code>src</code> in the opening tag</h2>
+        <audio controls src="audio/TranquilDepths.mp3">
+            Your browser does not support the &lt;audio&gt; element.
+        </audio>
+
+        <h2>Here is an audio example with multiple &lt;source&gt; children</h2>
+        <audio controls>
+            <source src="audio/TranquilDepths.mp3" type="audio/mpeg">
+            <source src="audio/TranquilDepths.ogg" type="audio/ogg">
+            Your browser does not support the &lt;audio&gt; element.
+        </audio>
+
+        <h2>Here is an audio example that loops</h2>
+        <audio controls loop src="audio/TranquilDepths.mp3">
+            Your browser does not support the &lt;audio&gt; element.
+        </audio>
+
+        <!-- 
+
+        <h2>
+            Here is an audio example that enables autoplay 
+        </h2>
+        <h3>
+            (Don't do this! It is very bad practice to play sounds without the user's
+            action or consent.)
+        </h3>
+        <p>[NOTE: doesn't work in all version of Chrome</p>
+        <audio controls autoplay src="audio/TranquilDepths.mp3">
+            Your browser does not support the &lt;audio&gt; element.
+        </audio> 
+        
+        -->
+
+        <h2>
+            If you don't set the <code>controls</code> attribute, the &lt;audio&gt;
+            tag will load, but it won't be visible, and you can't control it without
+            Javascript.
+        </h2>
+        <p>The audio tag is below, but without controls, there's nothing to see.</p>
+        <br>
+        <audio src="audio/TranquilDepths.mp3">
+            Your browser does not support the &lt;audio&gt; element.
+        </audio>
+    </body>
+</html>

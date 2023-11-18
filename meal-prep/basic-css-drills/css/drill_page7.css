@@ -1,0 +1,31 @@
+/* Drill 7 - Write your code solution below */
+
+/*
+    Similar to the previous one, but using
+    font-weight instead.
+*/
+
+#d7-s2,
+#d7-s3 {
+    font-weight: bold;
+}
+
+/*
+    The below code is also acceptable, just
+    not as condensed and more repetitive than
+    the code above.
+
+    Encourage students to consolidate their
+    CSS rules whenever they have duplicated
+    CSS properties (though this may go over
+    their heads at this point).
+*/
+
+#d7-s2 {
+    font-weight: bold;
+}
+
+#d7-s3 {
+    font-weight: bold;
+}
+

@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    font-family: sans-serif;
+    background-color: teal;
+}
+
+#header, #footer {
+    width: 100vw;
+}
+
+#header {
+    background-image: url(../images/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+.hero-content {
+    width: 80vw;
+    max-width: 1000px;
+    margin: 0px auto;
+}
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0px;
+}
+.hero-content h3 {
+    margin: 15px 0px 30px;
+    font-size: 1.5rem;
+}
+.hero-content a {
+    display: inline-block;
+    background-color: #00be06;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 1.25rem;
+}
+
+#main .promotion {
+    width: 80vw;
+    max-width: 1000px;
+    margin: 25px auto;
+    height: 50vh;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.promotion .img-container {
+    height: 100%;
+    flex: 1;
+}
+
+.promotion img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.promotion .content {
+    flex: 1;
+}
+
+#main .cards {
+    display: flex;
+    height: 50vh;
+}
+
+.cards .card {
+    flex: 1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#card-1 {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/pie.jpg);
+    background-position: center;
+    background-size: cover;
+}
+#card-2 {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/three-drinks.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.cards a, .promotion a {
+    display: inline-block;
+    background-color: #00be06;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    text-align: center;
+}
+.promotion a {
+    display: block;
+}
+
+/*
+    Now we can style our footer. We'll target the #footer
+    and give it a background color
+*/
+#footer {
+    background-color: #2f2f2f;
+}
+
+/*
+    Then we'll target the #footer .links and give that a
+    width of 80vw, max-width of 1000px and a margin 0px auto.
+
+    We'll change the list-stype-type to none, have it display as
+    a flex, give it a gap of 25px and padding of 25px 0px. Then
+    we'll apply a justify-content of center.
+*/
+#footer .links {
+    width: 80vw;
+    max-width: 1000px;
+    margin: 0px auto;
+    list-style-type: none;
+    display: flex;
+    gap: 25px;
+    padding: 25px 0px;
+    justify-content: center;
+}
+
+/*
+    Finally, let's target the anchor elements inside of our .links.
+    We'll just change their color and remove their text-decoration.
+*/
+.links a{
+    color: white;
+    text-decoration: none;
+}
+/*
+    Now that we got some content on the page, let's start
+    making that content responsive.
+*/
+
+@media screen and (max-width: 725px) and (min-width: 481px) {
+    body {
+        background-color: orange;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        background-color: purple;
+    }
+}

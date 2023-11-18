@@ -1,0 +1,64 @@
+/*
+    Now that we have some basic hover states set up,
+    we're ready to build out the dropdown menus
+    for our navbar.
+
+    A dropdown is essentially a hidden group of
+    navigation items that only appears when we
+    hover over a "parent" nav item that they're
+    associated with.
+
+    Recall from the previous day's demoes on
+    hiding and showing content, that if we want
+    to hide/show something on hover, we need to
+    place it inside of a visible container that
+    we can hover over.
+
+    Let's suppose we want to turn the Gallery
+    hyperlink into a dropdown. 
+    
+    To do so, we'll need to wrap the hyperlink 
+    in a new container div, and inside of that 
+    div, we'll also include another container 
+    with the dropdown hyperlinks.
+
+    (Go do that in the HTML)
+
+    It's going to look really ugly at first,
+    but it'll look better after we add
+    the dropdown styling.
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#navbar {
+    background: linear-gradient(to bottom, #109cb8, #0e5b96);
+    display: flex;
+    align-items: center;
+}
+
+#navbar a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 24px;
+}
+
+#navbar a:hover {
+    background: linear-gradient(to top, #109cb8, #0e5b96);
+}
+
+#navbar #logo {
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 36px;
+    padding-top: 13px;
+    padding-bottom: 12px;
+}

@@ -1,0 +1,59 @@
+.absolute-heading {
+    font-size: 36px;
+}
+
+.absolute-paragraph {
+    font-size: 18px;
+}
+
+/*
+    Now, we'll add in some relative units.
+    In particular, we're going to use a handy
+    one called vw (view width).
+
+    A value like 50vw translates in English to:
+    "50% of the view width".
+*/
+
+.relative-heading {
+    font-size: 5vw;
+}
+
+.relative-paragraph {
+    font-size: 2.5vw;
+}
+
+/*
+    Stretch and squish the preview again, and
+    show students how the font size changes 
+    along with the preview window.
+
+    This can be pretty effective at making
+    sure the text scales with the page...
+
+    ...but that only works to a certain point.
+
+    If we have a REALLY wide screen, such as
+    with one of those long curved monitors,
+    our text could start to look like it was
+    designed for a billboard, rather than a
+    computer screen.
+
+    On the flip side, if our screen size is
+    really small, even though the layout has
+    the same proportions, the text will get
+    so small that it will be hard to read.
+
+    So both absolute and relative units have
+    their place when it comes to font sizes.
+
+    Large text like headings are usually
+    good candidates for relative units,
+    while smaller text like paragraph copy
+    often work well with absolute units.
+
+    Later on in the course, we'll learn
+    about a way to mix and match absolute
+    and relative units in a more flexible
+    way, to handle edge cases better.
+*/

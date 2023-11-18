@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.card {
+    flex: 300px;
+    border: 3px solid black;
+    margin: 24px;
+    padding: 24px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.card a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    border: 3px solid black;
+    padding: 12px;
+    margin-top: 36px;
+}
+
+#card1:hover {
+    background-color: lightcyan;
+    box-shadow: 4px 4px 4px #00000033;
+    transform: translateY(-4px);
+}
+
+#card1 {
+    transition: 
+        background-color 0.5s,
+        box-shadow 0.5s,
+        transform 0.5s;
+}
+
+/*
+    Now we're going to work with #card2.
+
+    This time, we're going to work with
+    it when it's in its hover state...
+    but we're only going to target something
+    inside of it, not the whole thing.
+
+    In particular, we're going to target
+    the button, and give it a similar
+    treatment that we gave to #card1.
+
+    (we did things a little backwards
+    before by creating the CSS rule for 
+    the hover state, and then creating a 
+    CSS rule for the default state with 
+    the transition property.  We'll do 
+    things in a more logical order this
+    time, starting with the default state.)
+*/
+
+#card2 a {
+    transition: 
+        background-color 0.5s,
+        box-shadow 0.5s,
+        transform 0.5s;
+}
+
+#card2:hover a {
+    background-color: aquamarine;
+    box-shadow: 4px 4px 4px #00000033;
+    transform: translateY(-4px);
+}
+
+/*
+    This is probably gonna throw students
+    for a loop, so take some time to explain
+    the selector above.
+
+    Remind them that whenver a selector is 
+    followed by a space, and then another 
+    selector, we're targeting the selector
+    on the right, when its inside of the
+    selector on the left.
+
+    That means that the code we wrote above
+    will ONLY target the button when the
+    card is in the hover state.
+
+    Could we have targetted the button with
+    the :hover state? Yes.
+
+    But then that state would only apply 
+    when we hover over the button, but
+    not when we hover over the card.
+
+    This is going to be an important
+    concept as we move into building
+    dropdown menus tomorrow, so we'll
+    get some more practice with it 
+    today in this demo.
+*/

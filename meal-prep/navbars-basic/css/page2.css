@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+/*
+    Now, in terms of creating different layouts
+    of navbars, the Flexbox Container property
+    justify-content makes things pretty easy.
+
+    Here are the effects of the different
+    values that we can use, including: 
+    - flex-start (default, aka left for a row)
+    - center
+    - flex-end (aka right for a row)
+    - space-between
+*/
+#navbar {
+    background: linear-gradient(to bottom, green, #3e6d3e);
+    display: flex;
+    
+    /* try the different values mentioned above here */
+    justify-content: space-between; /* new */
+}
+
+#navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 24px;
+}

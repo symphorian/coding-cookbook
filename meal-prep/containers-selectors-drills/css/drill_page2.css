@@ -1,0 +1,16 @@
+/* Drill 2 - Write your code solution below */
+
+/*
+    Again, the CSS itself isn't that complex, 
+    but the logic behind the CSS can be 
+    challenging for students to wrap their 
+    heads around.
+
+    We're only targeting the paragraphs inside
+    of the 'purple' class, so we have a space
+    between .purple and p.
+*/
+
+.purple p {
+    color: orangered;
+}

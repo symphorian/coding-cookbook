@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    font-family: sans-serif;
+    background-color: teal;
+}
+
+
+/*
+    There's a bit of a problem with our first media
+    query now.  It's not a critical one, but it
+    could cause confusion later.
+
+    That problem is that our 725px breakpoint overlaps
+    with our 480px breakpoint: both media queries are
+    valid at, say, 400px, because 400px is less than
+    both 725px AND less than 480px.
+
+    Because of that, which color gets applied depends
+    on the ORDER of the media queries.  Try switching
+    the order of the media queries in your code, and
+    test out the breakpoints again.
+
+    (switch the order of the media queries)
+
+    Now, orange is the only color that appears under
+    725px, even though we probably meant for purple
+    to show up under 480px.
+*/
+@media screen and (max-width: 480px) {
+    body {
+        background-color: purple;
+    }
+}
+
+/*
+    To correct our media queries, we need to add an
+    additional media feature to our 725px breakpoint.
+
+    We really meant to say "use these CSS rules when
+    the screen width is less than 725px AND greater
+    than 480px".
+
+    And luckily, we can do that in a media query,
+    by adding another 'and' and another media
+    feature, called min-width.
+
+    min-length is another common media feature used to
+    make our webpages responsive. Unlike max-length, this
+    sets a condition that will only apply styles if the
+    screen width is greater than or equal to the min-width.
+
+    So we have no overlap with the other media query,
+    we'll set the min-width to 481px.
+
+    Now, this media query will only apply if the page
+    width is less than 725px AND greather than 481px,
+    so we should have no more overlap.
+*/
+@media screen and (max-width: 725px) and (min-width: 481px) {
+    body {
+        background-color: orange;
+    }
+}
+
+/*
+    And voila! Now we have both media queries working,
+    regardless of the order they appear in our CSS.
+
+    (switch them back to prove this)
+
+    We usually have our wider breakpoints first in our
+    CSS code, and go to smaller breakpoints beneath that.
+
+    But this is just a convention; if you write your
+    media queries correctly, like we did above, so that
+    there are no overlaps (unless you intentionally
+    want overlaps), then as long as you're consistent,
+    the ordering of your media queries shouldn't matter.
+
+    However, MEDIA QUERIES SHOULD ALWAYS GO AT THE 
+    BOTTOM OF YOUR CSS FILE!!!
+
+    (try to hammer this into their heads)
+
+    The code above your media queries is your "default"
+    styling for the page; the media queries are how
+    you're modifying that code based on the screen
+    width.
+
+    If you don't put your media queries at the bottom,
+    then they'll become part of the "default" styling,
+    and you'll probably end up confused as to why
+    your media queries "aren't working".
+
+    They are, but you may be overwriting those media
+    queries with the code you write below them!
+*/
+
+/*
+    Now, these examples of media queries may not seem
+    very practical; you'd probably rarely change the 
+    background color of a web page when you change 
+    breakpoints.
+
+    However, there is actually a very practical reason
+    to code things this way from a DEVELOPMENT point of
+    view:
+
+    When you barely have any code or styling on the page,
+    it can be hard to tell when you've changed breakpoints
+    based on the screen width.
+
+    Having the background color change when you've stepped
+    into a new breakpoint is an excellent and simple way
+    to debug your media query code.
+
+    You can look at your page at a glance and say
+    "okay, because the background color is orange,
+    I must be in the 725px breakpoint, so I should expect
+    to see the styles defined in the CSS Rules in that
+    media query".
+
+    This is just a suggestion of course, but students
+    tend to find it helpful to do so when first learning
+    about media queries. Just remember to remove the
+    debugging background colors before you submit!
+
+    Now, let's move on and see media queries in action with some
+    actual content we need to make responsive.
+*/

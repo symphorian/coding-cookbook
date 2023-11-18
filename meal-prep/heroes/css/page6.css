@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#hero-1 {
+    background-image: url("../images/lizard.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#hero-1 h1 {
+    font-size: 15vw;
+    padding-left: 10vw;
+}
+
+.spacer {
+    height: 50vh;
+}
+
+#hero-2 {
+    background-image: url("../images/lonely-ocean.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+#hero-2 h2 {
+    font-size: 8vw;
+    margin-bottom: 5vh;
+    margin-right: 5vw;
+}
+
+#hero-2 h4 {
+    font-size: 3vw;
+    margin: 0px 5vw 0px 0px;
+}
+
+#hero-2 a {
+    font-size: 1.5vw;
+    display: inline-block;
+    background-color: #333333;
+    color: white;
+    text-decoration: none;
+    padding: 24px;
+    margin: 5vh 5vw 10vh 0px;
+}
+
+/*
+    Flexbox started getting a bit complicated to
+    work with last time; let's see how we can use
+    an alternative approach instead.
+
+    Jump over to the HTML and add a new hero
+    with more complex content.
+*/
+
+/*
+    First, we'll style the hero (no flex this time)
+*/
+
+#hero-3 {
+    background-image: url("../images/orange-wildflowers.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    /*
+        We mentioned before that we'd learn a different
+        way to position content; in particular, we're
+        going to use the position property.
+
+        There are several values you can provide to the
+        position property, and they will allow you change
+        the way an element flows on the page and/or
+        it's position on the page.
+
+        The value we're going to use on the .hero-content
+        is 'absolute', which has the double effect of
+        removing an object from the normal Document Flow
+        (kind of turning it into a ghost that is visible,
+        but no longer interacts with the rest of the page),
+        and also lets us position it RELATIVE to the sides
+        of its container.
+
+        However, which container it is positioned relative 
+        to is a little complicated, because it depends on 
+        the nearest RELATIVE-ly positioned element.  
+        
+        This can get a little tricky, so to simplify things
+        just remember that if you want to use 
+            position: absolute; 
+        you also need to set position: relative; on the 
+        container of whatever you want to position.
+
+        So, we're going to set position: relative; here,
+        and that will allow us to ABSOLUTE-ly position
+        the .hero-content.
+    */
+    position: relative;
+}
+
+/*
+    As we said, we're going to set position: absolute;
+
+    Now we can use the different side properties of 
+    the container (left, right, top, bottom) to
+    position the element inside, anchoring it to
+    those sides, not unlike using background-position.
+
+    We might need to play with these values a bit
+    after resizing the content fonts and such,
+    but it's relatively easy to adjust.
+
+    We could use px units here as well, but again,
+    in the interest of having our hero work at
+    as many screen sizes as possible, relative
+    units make things a bit more flexible.
+
+    (try out different values for top and left,
+    and see how they change the content's position)
+*/
+#hero-3 .hero-content {
+    position: absolute;
+    top: 10%;
+    left: 15%;
+}
+
+/*
+    To keep things simple, we'll reuse the same
+    styles of the headings and buttons, just in
+    hero-3 instead.
+*/
+
+#hero-3 h2 {
+    font-size: 8vw;
+    margin-bottom: 5vh;
+    margin-right: 5vw;
+}
+
+#hero-3 h4 {
+    font-size: 3vw;
+    margin: 0px 5vw 0px 0px;
+}
+
+#hero-3 a {
+    font-size: 1.5vw;
+    display: inline-block;
+    background-color: #333333;
+    color: white;
+    text-decoration: none;
+    padding: 24px;
+    margin: 5vh 5vw 10vh 0px;
+}

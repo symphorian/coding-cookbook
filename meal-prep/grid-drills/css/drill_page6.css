@@ -1,0 +1,33 @@
+/* Drill 6 - Write your code solution below */
+
+/*
+    This one is actually a bit easier than the
+    previous one, since there's fewer columns.
+
+    However, the point is to show that whether
+    grid cells have content in them or not,
+    they are arranged and organized the exact
+    same way.
+
+    The content may throw some students off,
+    but the solution is basically the same,
+    just with a different layout.
+*/
+
+#container-d6 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "one   two"
+        "three three";
+}
+
+#d6-cell1 {
+    grid-area: one;
+}
+#d6-cell2 {
+    grid-area: two;
+}
+#d6-cell3 {
+    grid-area: three;
+}

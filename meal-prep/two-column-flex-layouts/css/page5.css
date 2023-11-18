@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif; 
+}
+
+#two-columns {
+    display: flex;
+}
+
+/*
+    Now, if we want to get the sidebar on the
+    right side, we could just change the HTML
+    so that the #sidebar-content comes after
+    the #main-content.
+
+    I'd recommend doing that briefly, just to 
+    show how simple it is, and then change it
+    back the way it was.
+
+    However, we can also use an exclusively CSS
+    solution, by using the order property,
+    which is another Flexbox Item property.
+
+    The order property works by assigning
+    numbers to Flexbox Items, and then they
+    get reordered based on those numbers 
+    we provide.
+
+    We'll give each Flexbox Item below an
+    order property that will swap the default
+    order with each other.
+*/
+#sidebar-content {
+    background-color: lightblue;
+    width: 200px;
+    order: 2; /* new */
+}
+
+#main-content {
+    background-color: lightgreen;
+    flex: 1;
+    order: 1; /* new */
+}
+
+/*
+    Technically, we only need to add the 
+    order property to the #sidebar-content,
+    (as you might have seen when you first 
+    added it) but I always prefer to be 
+    explicit with things like order, so that 
+    if we ever add additional columns in 
+    the future, it won't be unclear which 
+    Items should go where.
+
+    And there you go: we have our Two Column 
+    Layout with the sidebar on the other side.
+
+    ...but this is still very boring looking.
+
+    Let's see what we can do to spruce it up!
+*/

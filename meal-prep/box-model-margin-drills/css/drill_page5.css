@@ -1,0 +1,29 @@
+/* Drill 5 - Write your code solution below */
+
+/*
+    Now we have a slight difficulty spike.
+
+    They'll need to MODIFY, rather than ADD
+    margin on the headings in the drill. In
+    fact, most of the margin modifications
+    will be REMOVING margin from the headings.
+
+    Also, they'll get some practice with 
+    text-align.
+*/
+
+#d5-div1 {
+    text-align: center;
+}
+
+#d5-h5-1 {
+    margin-bottom: 0px;
+}
+
+#d5-h1-1 {
+    margin: 0px;
+}
+
+#d5-h2-1 {
+    margin-top: 8px;
+}

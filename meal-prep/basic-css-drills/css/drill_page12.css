@@ -1,0 +1,17 @@
+/* Drill 12 - Write your code solution below */
+
+/*
+    Now we're practicing with text-align values.
+
+    Since 'left' is the default value, so we only
+    need to set it for two of the divs, the ones
+    we need to change for 'right' and 'center'.
+*/
+
+#d12-div2 {
+    text-align: right;
+}
+
+#d12-div4 {
+    text-align: center;
+}

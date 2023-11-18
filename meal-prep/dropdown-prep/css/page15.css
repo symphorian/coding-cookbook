@@ -1,0 +1,206 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.card {
+    flex: 300px;
+    border: 3px solid black;
+    margin: 24px;
+    padding: 24px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.card a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    border: 3px solid black;
+    padding: 12px;
+    margin-top: 36px;
+}
+
+#card1:hover {
+    background-color: lightcyan;
+    box-shadow: 4px 4px 4px #00000033;
+    transform: translateY(-4px);
+}
+
+#card1 {
+    transition: 
+        background-color 0.5s,
+        box-shadow 0.5s,
+        transform 0.5s;
+}
+
+#card2 a {
+    transition: 
+        background-color 0.5s,
+        box-shadow 0.5s,
+        transform 0.5s;
+}
+
+#card2:hover a {
+    background-color: aquamarine;
+    box-shadow: 4px 4px 4px #00000033;
+    transform: translateY(-4px);
+}
+
+#card3 .card-content {
+    transition:
+        opacity 0.5s,
+        visibility 0.5s;
+}
+
+#card3:hover .card-content {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#card4 .card-content {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px); 
+    transition:
+        opacity 0.5s,
+        visibility 0.5s,
+        transform 0.5s; 
+}
+
+#card4:hover .card-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px); 
+}
+
+#card5 {
+    position: relative;
+}
+
+#card5 .card-content {
+    position: absolute;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 12px;
+    box-shadow: 4px 4px 4px #00000033;
+    left: 0px;
+    margin: 0px 24px;
+    padding: 24px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: 
+        opacity 0.5s,
+        visibility 0.5s,
+        transform 0.5s;
+
+}
+
+#card5:hover .card-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}
+
+#card6 {
+    position: relative;
+    border: 0px;
+    padding: 0px;
+}
+
+#card6 .card-front,
+#card6 .card-back {
+    border: 3px solid black;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+#card6 .card-back {
+    transform: scaleX(0);
+}
+
+#card6 .card-front {
+    background-image: url("../images/perrito.png");
+    background-size: cover;
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+/*
+    The way to address this issue is by changing
+    the transitions depending on the state of the
+    card.
+
+    If we're hovering over it, we want the delay
+    to be on the animation of the back face of 
+    the card.
+
+    If we're moving our mouse off of it, then we
+    want the delay on the animation of the front 
+    face of the case (which is essentially the 
+    new back face).
+
+    Although that's a little confusing, we can 
+    actually make that happen!
+
+    We just need to move our current transition
+    properties to the hover states of the faces,
+    and then reverse them on the default state
+    of the faces.
+*/
+
+#card6 .card-front {
+    /* previous code */
+    /* transition: transform 0.25s; */
+
+    /* new code */
+    transition: transform 0.25s 0.25s; 
+}
+
+#card6 .card-back {
+    /* previous code */
+    /* transition: transform 0.25s 0.25s;  */
+
+    /* new code */
+    transition: transform 0.25s;
+}
+
+#card6:hover .card-front {
+    transform: scaleX(0);
+    transition: transform 0.25s; /* new */
+}
+
+#card6:hover .card-back {
+    transform: scaleX(1);
+    transition: transform 0.25s 0.25s; /* new */
+}
+
+/*
+    Success! And while the logic behind it
+    can be a bit confusing, it didn't take
+    that much code to write, at least not
+    once we had our HTML set up properly.
+
+    This card flipping effect is a FANTASTIC
+    thing to consider using in a portfolio
+    gallery, especially if you want to 
+    include captions or links to your images,
+    but you don't want them to just sit
+    below your image. Put them on the "back" 
+    of the image instead!
+
+    That wraps things up for this demo!
+*/

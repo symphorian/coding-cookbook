@@ -1,0 +1,68 @@
+/*
+    Let's make our About menu item into 
+    a dropdown as well, introducing new
+    links like "Passions", "Hobbies",
+    and "Goals".
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#navbar {
+    background: linear-gradient(to bottom, #109cb8, #0e5b96);
+    display: flex;
+    align-items: center;
+}
+
+#navbar a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 24px;
+}
+
+#navbar a:hover {
+    background: linear-gradient(to top, #109cb8, #0e5b96);
+}
+
+#navbar #logo {
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 36px;
+    padding-top: 13px;
+    padding-bottom: 12px;
+}
+
+.dropdown-container {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: 
+        opacity 0.25s,
+        visibility 0.25s;
+}
+
+.dropdown-container:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-menu a {
+    background-color: darkslateblue;
+    width: 100%;
+    min-width: 200px;
+}
+
+#navbar .dropdown-menu a:hover {
+    background: slateblue;
+}

@@ -1,0 +1,18 @@
+/* Drill 4 - Write your code solution below */
+
+/*
+    Nothing too fancy here, just making sure
+    they're applying the lessons from the
+    previous Drills in different contexts.
+
+    In this case, we're showing them what
+    happens when you use block element 
+    containers to group inline content:
+
+    you can essentially separate them onto
+    different lines in different containers.
+*/
+
+.shadowed p {
+    background-color: skyblue;
+}

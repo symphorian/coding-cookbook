@@ -1,0 +1,117 @@
+/* COMMON PAGE LAYOUT SETUP CSS - START *****************/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    /* preferred copy font goes here */
+    font-family: sans-serif; 
+}
+/* COMMON PAGE LAYOUT SETUP CSS - END ********************/
+
+/*
+    Three column layouts are less common on the web,
+    even less so layouts without sidebars.  But news sites
+    still seem partial to them, so you'll still see a more
+    traditional three (or even four) column layout on those
+    types of sites.
+
+    However, there is one big difference between news web
+    sites and the old fashioned newspapers they resemble:
+    news site make sure that content in columns generally
+    can be read all on one screen.  If they have more 
+    content, they push it down into a new set of columns.
+
+    This is because it is generally a very unpleasant
+    user experience to have to scroll down and up, and then
+    down and up again to read a web site; people are used 
+    to just scrolling down on a website, unlike newspapers
+    and magazines, where our eyes go up and down all the time.
+
+    So, all that said, let's see how to create a simple
+    three column layout for more "traditional" news content.
+
+    As usual, adding some margin and padding does 
+    wonders for our layout to make it look more 
+    aesthetically pleasing.
+*/
+
+body {
+    background-color: #E0E0E0;
+    color: #111111;
+}
+
+#three-columns {
+    /*
+        Here, we set up our grid columns again,
+        but this time, notice that we're creating
+        five columns.
+
+        Why? Because there is a way to create a centered
+        layout in a grid without using the margin/auto
+        approach.
+
+        We will use the two '1fr' columns on either side
+        as gutters, which will stretch to fill any empty
+        space on either side of our central content area.
+
+        This is a tad rigid, and probably won't work well
+        on smaller screens; in that case, we'll have to 
+        make it more responsive, using something like a 
+        media query to alter the columns on smaller screens.
+
+        But you most likely haven't learned about that yet,
+        so we'll keep things simple here.
+    */
+    display: grid;
+    grid-template-columns: 1fr 250px 250px 250px 1fr;
+    /*
+        Our grid areas also look similar to before, but
+        now we have dots (.) on either side of our area
+        names. A dot in a grid template area represents
+        an unassigned area, or basically, a blank cell
+        in our template.
+
+        These are perfect for creating gutters, because
+        we never plan to put anything inside of a gutter;
+        they are just there to create empty space on 
+        either side of our central content to center it.
+
+        In other words, they're fulfilling the exact same
+        role as our auto margins when we set up a single 
+        column layout using margin: 0px auto;
+    */
+    grid-template-areas: 
+        ". column-area-1 column-area-2 column-area-3 .";
+}
+
+#column-1 {
+    background-color: white;
+    padding: 0px 12px;
+    grid-area: column-area-1;
+}
+
+#column-2 {
+    background-color: white;
+    padding: 0px 12px;
+    grid-area: column-area-2;
+}
+
+#column-3 {
+    background-color: white;
+    padding: 0px 12px;
+    grid-area: column-area-3;
+}
+
+#three-columns h2,
+#three-columns h3 {
+    border-bottom: 2px solid #888888;
+    padding-bottom: 4px;
+    margin-bottom: 0px;
+}
+
+#three-columns p {
+    margin-top: 12px;
+}
+

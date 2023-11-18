@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.card {
+    flex: 300px;
+    border: 3px solid black;
+    margin: 24px;
+    padding: 24px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.card a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    border: 3px solid black;
+    padding: 12px;
+    margin-top: 36px;
+}
+
+#card1:hover {
+    background-color: lightcyan;
+    box-shadow: 4px 4px 4px #00000033;
+    transform: translateY(-4px);
+}
+
+#card1 {
+    transition: 
+        background-color 0.5s,
+        box-shadow 0.5s,
+        transform 0.5s;
+}
+
+#card2 a {
+    transition: 
+        background-color 0.5s,
+        box-shadow 0.5s,
+        transform 0.5s;
+}
+
+#card2:hover a {
+    background-color: aquamarine;
+    box-shadow: 4px 4px 4px #00000033;
+    transform: translateY(-4px);
+}
+
+#card3 .card-content {
+    transition:
+        opacity 0.5s,
+        visibility 0.5s;
+}
+
+#card3:hover .card-content {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#card4 .card-content {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px); 
+    transition:
+        opacity 0.5s,
+        visibility 0.5s,
+        transform 0.5s; 
+}
+
+#card4:hover .card-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px); 
+}
+
+#card5 {
+    position: relative;
+}
+
+#card5 .card-content {
+    position: absolute;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 12px;
+    box-shadow: 4px 4px 4px #00000033;
+    left: 0px;
+    margin: 0px 24px;
+    padding: 24px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: 
+        opacity 0.5s,
+        visibility 0.5s,
+        transform 0.5s;
+
+}
+
+#card5:hover .card-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}
+
+/*
+    Card 6 is going to be a bit of a bonus
+    demo; it's a bit advanced, but it's a
+    fun way to apply what we've learned 
+    today in an interesting way.
+
+    Essentially, we're going to be transforming
+    #card6 into a card that flips when we
+    hover over it.
+
+    To make that happen, we're going to need
+    to revise our HTML for #card6 a bit. In 
+    particular, we're going to need to create
+    front and back sides to the card.
+
+    (Go to the HTML and make the changed described)
+*/

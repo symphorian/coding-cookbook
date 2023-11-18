@@ -1,0 +1,25 @@
+/*
+    In this demo, we're going to showcase three different
+    single column layouts that you could potentially use
+    for a web page.
+
+    (I'd bring up though that you are not limited to only 
+    use one single layout on a web page; most web pages
+    actually combine multiple page layouts that we'll be
+    learning about this week.)
+
+    It's important to have your HTML set up properly 
+    (if possible) before writing a single line of CSS
+    when it comes to setting up a page layout.
+
+    Containers are an important part of any page layout.
+    In our case, since we're going to be creating a 
+    single column layout, we're going to need one
+    single container to encapsulate our page content.
+
+    Then we'll add some content: just a couple headings
+    and a few lorem ipsum paragraphs for the sake of the 
+    demo.
+
+    So first, we'll set up our HTML.
+*/

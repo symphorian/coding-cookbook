@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif; 
+}
+
+/*
+    There is one rather significant flaw to our
+    layout design, that actually existed in the
+    two column layout from the previous day's 
+    demo as well.
+
+    Stretch out the preview window (or "Open
+    with Live Server" in a browser tab) and
+    watch what happens when the screen gets
+    really wide.
+
+    Our content gets really spread out, and
+    like we discussed in the Single Column
+    Layouts, that's usually not a good thing.
+
+    Is there a way that we can keep our content
+    more centered, but still keep the same
+    general Two Column Layout?
+
+    Yes! Relatively easily by modifying our 
+    Grid's columns and areas.
+
+    We're actually going to create something
+    like a 4-Column layout, but the outer 
+    columns are just going to be used as
+    gutters, to center our primary two
+    columns in the middle.
+
+    We're going to update grid-template-columns
+    to use: 1fr 450px 250px 1fr
+
+    We don't want our main content column to 
+    stretch out forever, so we're restricting 
+    it to 450px (or whatever you prefer).
+
+    However, we want our outer gutter columns 
+    to be flexible or "fluid", so we set each
+    of the outer columns to 1fr.
+
+    This is going to temporarily break things,
+    but we'll fix them when we also modify
+    grid-template-columns to be: 
+        ". content sidebar ."
+
+    The dots are a special area "name" that
+    represent an unassigned or empty cell,
+    which is perfect for the gutters we want.
+*/
+
+#grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 450px 250px 1fr; /* updated */
+    grid-template-areas: ". content sidebar ."; /* updated */
+    margin: 36px 0px;
+}
+
+/*
+    Now stretch out your preview/browser window
+    again, and watch what happens.
+
+    Our two columns stay centered in the middle,
+    while the outer columns stretch as wide as
+    necessary.
+
+    This is actually the more common approach 
+    to building a Two Column Layout, keeping
+    the primary two columns centered, while
+    our outer "gutter" columns take up the
+    remaining space.
+
+    Realistically, we might have a wider main
+    content column, but most students are working
+    from laptops with relatively low resolution,
+    so most of these demos are built to be
+    rather narrow, to hopefully fit better on
+    their screens.
+*/
+
+#sidebar-content {
+    grid-area: sidebar;
+    padding: 18px;
+}
+
+#sidebar-content h2 {
+    background-color: darkslategray;
+    margin: 0px;
+    padding: 12px;
+    color: white;
+    font-size: 18px;
+}
+
+#sidebar-content ul {
+    background-color: #EFEFEF;
+    border: 1px solid darkslategray;
+    margin: 0px 0px 36px; 
+    list-style-type: none;
+    padding: 0px 12px;
+}
+
+#sidebar-content a {
+    color: darkslategray;
+    text-decoration: none;
+}
+
+#sidebar-content li {
+    border-bottom: 1px solid darkslategrey;
+    padding: 8px 0px;
+}
+
+#sidebar-content li:last-child {
+    border-bottom: 0px;
+}
+
+#main-content {
+    grid-area: content;
+    margin: 0px 36px;
+}
+

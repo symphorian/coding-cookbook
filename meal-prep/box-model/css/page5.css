@@ -1,0 +1,51 @@
+/*
+    We weren't really looking for margin, or
+    "personal space" on all sides; we just 
+    wanted it between the div elements.
+
+    In that case, we can modify our margin
+    property to only set extra space on the 
+    top and bottom of the elements, and set
+    NO extra space on the left and right sides.
+
+    To do that, we can provide two different 
+    values to margin insteadl of one.
+
+    The first value will be applied to the 
+    top and bottom of the element.
+
+    The second value will be applied to the
+    left and right of the element.
+*/
+
+div {
+    border: 10px dashed red;
+    margin: 24px 0px;
+}
+
+/*
+    By setting the second value to 0px,
+    we removed the extra spacing we originally
+    added on the left and right sides, so that
+    now we only have space in between each
+    div element's borders.
+
+    Notice that although each div has a top/bottom
+    margin of 24px, the space between them is only
+    24px, not doubled to 48px.
+
+    Again, that's because margin behaves like 
+    "personal space".  
+    
+    If two people each need 5 feet of space 
+    to feel comfortable talking to each other, 
+    they're not going to stand 10 feet apart; 
+    5 feet between them is fine.
+
+    The margin property of the Box Model works
+    the same way.  It basically renders the
+    minimum space necessary for both elements
+    to be "comfortable", which is usually
+    the greater of the two margin values
+    between them.
+*/

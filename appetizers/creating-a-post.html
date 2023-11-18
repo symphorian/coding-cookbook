@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Creating a Post (WordPress) - Appetizers - The Coding Cookbook</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="../css/cookbook.css" rel="stylesheet">
+        <link href="../css/appetizer.css" rel="stylesheet">
+        <link href="../css/lightbox.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="background"></div>
+        <nav>
+            <header id="topHeader">
+                <h2 id="brand"><a href="../">The Coding Cookbook</a></h2>
+                <div id="quote"></div>
+                <div id="navLinks">
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../ingredients.html">
+                                HTML
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../ingredients.html">Elements</a></h2>
+                            <h2><a href="../ingredients-cheatsheet.html">Cheatsheet</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../seasonings.html">
+                                CSS
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../seasonings.html">Properties</a></h2>
+                            <h2><a href="../seasonings-cheatsheet.html">Cheatsheet</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../recipes.html">
+                                Layouts
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../recipes.html?category=page-layout">Page Layouts</a></h2>
+                            <h2><a href="../recipes.html?category=content-layout">Content Layouts</a></h2>
+                            <h2><a href="../recipes.html?category=navigation-layout">Navigation</a></h2>
+                            <h2><a href="../recipes.html?category=miscellaneous">Miscellaneous</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../more.html">
+                                More
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../demos.html">Class Demos</a></h2>
+                            <h2><a href="../appetizers.html">Tutorials</a></h2>
+                            <h2><a href="../troubleshooting.html">Troubleshooting</a></h2>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </nav>
+        
+        <header id="title" class="">
+            <h1>Creating a Post (WordPress)</h1>
+            <h3>Your First Step in Creating Timely CMS Content</h3>
+        </header>
+        
+        
+        <div class="cookbookPage">
+            <ol>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                First off, If you haven't already, 
+                                log in to your WordPress site, and navigate
+                                to the Dashboard.
+                            </p>
+                            <p class="indent">
+                                If you're on the live version of your site, 
+                                but the Admin Bar doesn't show up at the top 
+                                of the screen, you might have been logged out 
+                                due to inactivity.
+                                <br><br>
+                                Add /login to the end of the URL, and you'll
+                                be able to login again.
+                            </p>
+                            <p>
+                                Once on the Dashboard, click on the Posts 
+                                link in the sidebar.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/creating-a-post/01_dashboard.png" 
+                                alt="The Posts link in the Dashboard"
+                            >
+                            <figcaption>
+                                The Posts link in the Dashboard
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                The Dashboard will switch to the Posts view.
+                            </p>
+                            <p>
+                                Click the "Add New" button at the top.
+                            </p>
+                            <p class="indent">
+                                There are actually multiple ways to create a 
+                                new Post in WordPress; have you noticed any 
+                                of the other ways?
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/creating-a-post/02_posts.png" 
+                                alt="The Add New button in the Posts view"
+                            >
+                            <figcaption>
+                                The Add New button in the Posts view
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                WordPress will create a new empty Post for you,
+                                and navigate you to the Block Editor for that 
+                                Post.
+                            </p>
+                            <p>
+                                Click on the placeholder text "Add title",
+                                and add the title that you want the Post to
+                                have.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/creating-a-post/03_blockeditor.png" 
+                                alt="The WordPress Block Editor for your new Post"
+                            >
+                            <figcaption>
+                                The WordPress Block Editor for your new Post
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <h2 id="p1_step4" class="invisibleInnerAnchorTarget"></h2>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After adding in your title, all that's left 
+                                is to actually add content to your post.
+                            </p>
+                            <p>
+                                To do so, you'll need to add some blocks to 
+                                your Post.  
+                            </p>
+                            <p>
+                                There are many different ways to
+                                add blocks to the Block Editor. You can:
+                                <ul>
+                                    <li>
+                                        click on the blue button with the +
+                                        icon in the top left of the navbar.
+                                    </li>
+                                    <li>
+                                        click on the black button with the +
+                                        icon to the far right of the current
+                                        cursor location.
+                                    </li>
+                                    <li>
+                                        put the cursor in the placeholder text
+                                        and follow the instructions to type 
+                                        a "/", which will bring up a dialog 
+                                        from which you can pick blocks from.
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/creating-a-post/04_addblocks.png" 
+                                alt="Ways to add blocks to your Post"
+                            >
+                            <figcaption>
+                                Ways to add blocks to your Post
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                When you're done and ready to publish your
+                                changes to the site, click on the blue 
+                                "Publish" button in the top right of the navbar.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/creating-a-post/05_publish.png" 
+                                alt="The Publish button"
+                            >
+                            <figcaption>
+                                The Publish button
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Another sidebar will open up, asking you to
+                                confirm that you really want to publish.
+                            </p>
+                            <p>
+                                Click the blue "Publish" button again to 
+                                confirm and publish your changes.
+                            </p>
+                            <p class="indent">
+                                You can also change some settings of the Post
+                                before you publish from this sidebar if you 
+                                wish, such as the altering the the Visibility
+                                of the Post or its Publication Date 
+                                (the default is "Immediately", but you can 
+                                set it to publish for some time in the future).
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/creating-a-post/05_publish2.png" 
+                                alt="The Publish button"
+                            >
+                            <figcaption>
+                                The Publish button
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+            <h4>
+                Congrats! You've successfully created a WordPress Post and
+                published it!
+            </h4>
+        </div>
+        <div id="lightboxContainer">
+            <div id="lightboxBackground" class="closer"></div>
+            <img id="lightbox" src="" alt="">
+            <span id="lightboxCloser" class="closer">×</span>
+          </div>
+        <script src="../js/lightbox.js"></script>
+        <script src="../js/hideNav.js"></script>
+    </body>
+</html>

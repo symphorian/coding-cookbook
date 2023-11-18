@@ -1,0 +1,19 @@
+.not-bold {
+    font-weight: normal;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.bolder {
+    font-weight: bolder;
+}
+
+.bolder-still {
+    font-weight: 900;
+}
+
+.lighter {
+    font-weight: lighter;
+}

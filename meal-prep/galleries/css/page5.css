@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#layout {
+    max-width: 800px;
+    margin: 48px auto;
+    text-align: center;
+}
+
+.basic-grid-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px; /* new */
+
+    padding: 24px;
+    border: 10px solid #333333;
+}
+
+.basic-grid-gallery img {
+    width: 100%;
+}
+
+.cropped-grid-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    grid-auto-rows: 200px; 
+
+    padding: 24px;
+    border: 10px solid #333333;
+}
+
+.cropped-grid-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*
+    Next, we're going to see what flexbox
+    can do for our Galleries.
+
+    In particular, we're going to show a 
+    couple ways how you could build a 
+    masonry gallery with flexbox.
+
+    Go back into the HTML and duplicate 
+    the previous mixed image gallery,
+    but give it a different class called
+    "horizontal-masonry-gallery"
+
+    (Go back to HTML and do that)
+
+    After adding that in the HTML, we'll
+    start configuring our flexbox gallery
+    for horizontal masonry.
+
+    For the container, that's actually
+    very simple: just activate flexbox
+    and enable wrapping.
+*/
+.horizontal-masonry-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    /*
+        We said before that the gap property
+        works for both grid and flexbox. It
+        looked pretty nice for our grid
+        galleries, so let's preemptively 
+        add it in here as well.
+    */
+    gap: 24px;
+}
+
+/*
+    Now we need to address the images.
+    First, since this is a horizontal
+    masonry gallery, we want to restrict
+    the height, so that the widths are free
+    to grow and expand as much as they can.
+
+*/
+.horizontal-masonry-gallery img {
+    height: 250px;
+    /*
+        You can see that by doing that,
+        our gallery is already a bit more 
+        orderly looking, but there are
+        jagged edges on the right side.
+
+        To fix that, let's allow the images
+        to flex to fill the available space.
+    */
+    flex: 1;
+    /*
+        That's better, but now some of our 
+        images are distorted.  So let's rely on 
+        object-fit once again, to force the
+        images to crop rather than stretch/squish.
+    */
+    object-fit: cover;
+}
+
+/*
+    And now we have a pretty nice looking
+    horizontal masonry gallery!
+
+    Masonry galleries tend to be more 
+    eye-catching because their layouts are
+    more dynamic rather than static.
+
+    However, with this implementation, our
+    images inside get cropped, so there are
+    certain tradeoffs.
+*/

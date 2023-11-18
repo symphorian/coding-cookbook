@@ -1,0 +1,76 @@
+/*
+    In this demo, we're going to show how we can 
+    create a card layout, which is simply a way of
+    grouping content together in a small presentable
+    package.
+
+    Typically, a card will have at a bare minimum
+    text content, but oftentimes you'll see an image
+    and a button in there as well.
+
+    We're going to build a set of cards that include
+    images, a title and copy text, and a call-to-action
+    (CTA) button.
+
+    We'll take a brief detour in the middle of the demo
+    to show you how to style an anchor element and
+    transform it into a more traditional button,
+    and then we'll wrap up our card styling.
+*/
+
+/*
+    First, let's jump to our HTML and get our main
+    column setup to hold our card content.
+
+    Come back here when you're done.
+*/
+
+/*
+    Let's start our CSS by using our normal page layout 
+    setup code, first by changing our box-sizing to a 
+    more common method, and then by strippin the margin
+    off the body element and setting a default copy text 
+    font family.
+    
+    As a reminder, the asterisk (*) selector is the 
+    universal selector (also known as the wildcard
+    selector), which will select ALL elements in the html.
+*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+/*
+    Let's target our main element and give it a width of 
+    90vw so that it repsonsively resizes with the viewport,
+    a max-width of 800px so that for larger screens it 
+    doesn't look awkward and finally a margin with 48px 
+    top/bottom and 'auto' left/right to center our 
+    main element.
+
+    We'll also turn it into a flexbox container, so
+    that we can take advantage of justify-content: center;
+    which works well for when we want to center more
+    than just text.
+*/
+#main {
+    width: 90vw;
+    max-width: 800px;
+    margin: 48px auto;
+    display: flex;
+    justify-content: center;
+}
+
+/*
+    Let's also align our h3 in the center and give it some 
+    top and bottom margin for some better spacing.
+*/
+h3 {
+    text-align: center;
+    margin: 24px 0;
+}

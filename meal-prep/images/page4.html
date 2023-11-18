@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Images Demo</title>
+    </head>
+    <body>
+        <!--
+            There is one more attribute we should mention that is 
+            related to images: the alternate (alt) attribute.
+
+            The alt attribute basically lets us specify a textual
+            description of the image, and in the scenario that
+            our image doesn't load, the alt attribute value will
+            be displayed instead.
+
+            The alt attribute contributes to our page's "web 
+            accessibility", which refers to how accessible our 
+            page is to other avenues of viewing a web page.
+
+            Blind people use the internet too, you know, usually
+            via technology like "screen readers", which literally
+            ready out the code and page content on a web page.
+
+            A screen reader can't "read" an image, but it can
+            read out the alt attribute value.
+        -->
+        <img 
+            src="https://i.guim.co.uk/img/media/26392d05302e02f7bf4eb143bb84c8097d09144b/446_167_3683_2210/master/3683.jpg?width=1200&quality=85&auto=format&fit=max&s=a52bbe202f57ac0f5ff7f47166906403"
+            width="500"
+            alt="an adorable, yet concerned looking cat"
+        >
+        <!--
+            You can check out that the alt attribute works
+            by deleting a random character from your src
+            attribute.
+
+            You should see a broken link icon, with your 
+            alt text showing up after it. 
+            
+            After confirming this, undo the code change 
+            you made to your src attribute with Cmd+Z
+            (or Ctrl+Z for PC users).
+        -->
+    </body>
+</html>

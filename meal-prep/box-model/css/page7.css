@@ -1,0 +1,33 @@
+/*
+    As with margin though, we can also supply
+    two values to padding to specify different
+    padding values for top/bottom and left/right.
+
+    Some designers feel that more horizontal 
+    padding is preferable in a text box, because
+    most letters don't reach the full line height,
+    so they need more horizontal padding to make
+    the box feel balanced.
+
+    So let's try that out, and add more padding
+    to the left/right sides.
+*/
+
+div {
+    border: 10px dashed red;
+    margin: 24px 0px;
+    padding: 24px 36px;
+}
+
+/*
+    Does that feel better to you?
+
+    Design can be a bit subjective in certain
+    areas, and this is probably one of them.
+
+    But whether you agree or disagree, it's 
+    important to know how you can change and
+    customize the space between text content
+    and the borders of a box, and that is
+    by modifying the padding.
+*/

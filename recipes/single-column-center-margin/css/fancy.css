@@ -1,0 +1,85 @@
+/* COMMON PAGE LAYOUT SETUP CSS - START *****************/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    /* preferred copy font goes here */
+    font-family: sans-serif; 
+}
+/* COMMON PAGE LAYOUT SETUP CSS - END ********************/
+
+#navbar,
+#footer {
+    background-color: #9f0d0d;
+}
+
+#navbar a,
+#footer a {
+    color: #fbe888;
+    text-decoration: none;
+    display: inline-block;
+    padding: 12px 12px 12px 0px;
+}
+
+/*
+    This is an example of a more interesting 
+    single column layout, still using the
+    exact same column styles, with the 
+    inclusion of a new footer.
+*/
+#navbar-column,
+.center-column,
+#footer-column {
+    width: 500px;
+    margin: 0px auto;
+}
+
+/*
+    However, just because we're using a single 
+    column layout, that doesn't mean it has to 
+    be boring, or that we can't break up the 
+    column across multiple sections.
+
+    The .light-container and .dark-container 
+    elements all contain our .center-column,
+    but wrap it with additional padding on the
+    top and bottom, in addition to giving each
+    section a contrasting color.
+
+    This helps break up the monotony of the 
+    page flow by introducing new colors and
+    adding additional space to separate content.
+*/
+.light-container {
+    background-color: #fbe888;
+    padding: 36px 0px;
+}
+
+.dark-container {
+    background-color: #c4610b;
+    color: #fbe888;
+    padding: 36px 0px;
+}
+
+
+/*
+    To add even more diversity to our layout,
+    we add some text and image content side-by-side
+    to make sure our layout isn't too repetitious,
+    using our old friend, inline-block.
+
+    We'll soon be learning a new way to get content
+    side-by-side, but it is a bit more complex, so
+    we'll stick with what we know for now.
+*/
+.side-by-side {
+    display: inline-block;
+    width: 49%;
+}
+
+.side-by-side img {
+    padding-left: 36px;
+    width: 100%;
+}

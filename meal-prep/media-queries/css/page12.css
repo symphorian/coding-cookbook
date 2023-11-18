@@ -1,0 +1,242 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    font-family: sans-serif;
+    /* you can remove this at the end of the demo */
+    /* background-color: teal; */
+}
+
+#header, #footer {
+    width: 100vw;
+}
+
+#header {
+    background-image: url(../images/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+.hero-content {
+    width: 80vw;
+    max-width: 1000px;
+    margin: 0px auto;
+}
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0px;
+}
+.hero-content h3 {
+    margin: 15px 0px 30px;
+    font-size: 1.5rem;
+}
+.hero-content a {
+    display: inline-block;
+    background-color: #00be06;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 1.25rem;
+}
+
+#main .promotion {
+    width: 80vw;
+    max-width: 1000px;
+    margin: 25px auto;
+    height: 50vh;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.promotion .img-container {
+    height: 100%;
+    flex: 1;
+}
+
+.promotion img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.promotion .content {
+    flex: 1;
+}
+
+#main .cards {
+    display: flex;
+    height: 50vh;
+}
+
+.cards .card {
+    flex: 1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#card-1 {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/pie.jpg);
+    background-position: center;
+    background-size: cover;
+}
+#card-2 {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/three-drinks.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.cards a, .promotion a {
+    display: inline-block;
+    background-color: #00be06;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    text-align: center;
+}
+.promotion a {
+    display: block;
+}
+
+#footer {
+    background-color: #2f2f2f;
+}
+#footer .links {
+    width: 80vw;
+    max-width: 1000px;
+    margin: 0px auto;
+    list-style-type: none;
+    display: flex;
+    gap: 25px;
+    padding: 25px 0px;
+    justify-content: center;
+}
+.links a{
+    color: white;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 725px) {
+    /* you can remove this at the end of the demo */
+    /* body {
+        background-color: orange;
+    } */
+    .hero-content h1 {
+        font-size: 2.75rem;
+    }
+    .hero-content h3 {
+        font-size: 1.125rem;
+    }
+    #main .cards {
+        flex-direction: column;
+        height: 100vh;
+    }
+}
+
+/*
+    Since mobile screens are so compact in both width and height,
+    we'll be changing a lot more content for this breakpoint. 
+
+    The smallest phone screen is 320px, which is the Iphone SE 
+    first generation. A good breakpoint range for mobile screens
+    is 320px to 480px.
+
+    Now, resize your live server/preview to be around that size.
+    Do you see how small the screen is now? We have to adjust
+    most of our styles to fit the screen sizes.
+
+    So, for the styles we want to apply for mobile screens, what
+    breakpoint are we going to need to target?
+
+    We'll have to target an @media screen and (max-width: 480px).
+*/
+@media screen and (max-width: 480px) {
+    /* you can remove this at the end of the demo */
+    /* body {
+        background-color: purple;
+    } */
+
+    /*
+        We're going to want to lower our font-size for our h1 and h3 again.
+        we can set our h1 to 1.625rem and our h3 to 1rem.
+    */
+    .hero-content h1 {
+        font-size: 1.625rem;
+    }
+    .hero-content h3 {
+        font-size: 1rem;
+    }
+    /*
+        We should also make our button more centered and fill up that
+        space in which it's contained in.
+
+        We can do this by simply changing it's display to that of block.
+        Let's also change it's font size to 1.125rem.
+    */
+    .hero-content a {
+        display: block;
+        font-size: 1.125rem;
+    }
+    /*
+        Our cards look fine here but our .promotion could use
+        some adjustments. It no longer works side by side, so,
+        let's go ahead and have them stack.
+
+        Similar to our .cards, we're going to target our .promotion
+        and change it's flex-directon to column. We'll also change
+        the height from 50vh to auto so that our container takes
+        on the height of it's content.
+
+        We'll have to make some more adjustments to the .img-container
+        and the .content.
+    */
+    #main .promotion {
+        flex-direction: column;
+        height: auto;
+    }
+
+    /*
+        We can target our .img-container and change it's height
+        to 200px. Then we'll give it  a width of 100% and change
+        the flex to auto so it doesn't have that awkward spacing.
+    */
+    .promotion .img-container {
+        height: 200px;
+        width: 100%;
+        flex: auto;
+    }
+    /*
+        We'll also come to .content and change it's flex to auto
+        as well.
+    */
+    .promotion .content {
+        flex: auto;
+    }
+
+    /*
+        Our footer is going to need to be adjusted as well. You
+        can see that it no longer works with each link sitting
+        side by side. Instead, we'll need to switch to a stacked
+        layout.
+
+        Easy enough, since we used flexbox for our #footer .links,
+        we just need to add a flex-direction of column and apply
+        an align-items of center to get it horizontally centered.
+    */
+    #footer .links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/*
+    That will conclude the demo on media queries.
+*/

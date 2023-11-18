@@ -1,0 +1,11 @@
+#green-text {
+    color: green;
+}
+
+.red-text {
+    color: #FF0000;
+}
+
+div p {
+    color: rgb(164, 88, 215);
+}

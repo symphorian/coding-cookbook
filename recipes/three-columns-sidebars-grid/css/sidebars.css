@@ -1,0 +1,105 @@
+/* COMMON PAGE LAYOUT SETUP CSS - START *****************/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    /* preferred copy font goes here */
+    font-family: sans-serif; 
+}
+/* COMMON PAGE LAYOUT SETUP CSS - END ********************/
+
+/*
+    Three column layouts are less common on the web,
+    but oftentimes when you find them, the two outer
+    columns are used as sidebars, while the central
+    column holds the main content of the page.
+
+    Facebook (on desktop) is one example of this.
+    We'll look at how to build a very simple layout
+    similar to theirs.
+
+    As usual, adding some margin and padding does 
+    wonders for our layout to make it look more 
+    aesthetically pleasing; we'll also want to
+    adjust the size of our outer columns to make them
+    look more like sidebars.
+
+    Let's also switch things up and use a "dark"
+    themed layout this time.
+*/
+
+body {
+    background-color: #1f1f1f;
+    color: #EEEEEE;
+}
+
+#three-columns {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+}
+
+#three-columns h2,
+#three-columns h3 {
+    border-bottom: 2px solid #AAAAAA;
+    padding-bottom: 8px;
+}
+
+#three-columns ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+#three-columns ul li {
+    padding: 4px 0px;
+}
+
+/* 
+    Remember that in order to change the style
+    of a hyperlink (anchor), you need to target
+    it very specifically in order to overwrite
+    the default browser styles, which usually 
+    means your selectors need to end in 'a'
+*/
+#three-columns ul a {
+    color: #EEEEEE;
+    text-decoration: none;
+}
+
+#column-1 {
+    margin-left: 24px;
+}
+
+#column-2 {
+    padding: 0px 36px;
+}
+
+#main-content {
+    background-color: #343434;
+    border-radius: 24px;
+    padding: 24px;
+
+    /*
+        Since the central area is a 1fr column
+        width, it has the potential to grow pretty
+        wide.
+
+        So like we did with the single centered 
+        column layout, we're going to center the
+        main content using the auto margin 
+        technique as before; we're just doing it
+        INSIDE of the center column this time.
+
+        So it's a little like column-ception: we
+        have a centered column inside of the center
+        column...weird, but effective!
+    */
+    width: 100%;
+    max-width: 600px;
+    margin: 0px auto;
+}
+
+#column-3 {
+    margin-right: 24px;
+}

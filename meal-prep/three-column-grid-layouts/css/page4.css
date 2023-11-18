@@ -1,0 +1,107 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif; 
+    background-color: #1f1f1f;
+    color: #EEEEEE;
+}
+
+#grid-layout {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+}
+
+#sidebar-column-1 h2,
+#sidebar-column-2 h3 {
+    border-bottom: 2px solid #AAAAAA;
+    padding-bottom: 8px;
+}
+
+#sidebar-column-1 ul,
+#sidebar-column-2 ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+#sidebar-column-1 ul li,
+#sidebar-column-2 ul li {
+    list-style-type: none;
+    padding: 4px 0px;
+}
+
+#sidebar-column-1 ul a,
+#sidebar-column-2 ul a {
+    color: #EEEEEE;
+    text-decoration: none;
+}
+
+
+#sidebar-column-1 {
+    margin-left: 24px;
+}
+
+/*
+    Lastly, we're going to address the primary
+    column; to start, we're going to push it
+    away from the outer columns with a bit of
+    bubble-wrap (i.e. padding), but just on
+    the sides.
+*/
+#primary-column {
+    padding: 0px 36px; /* new */
+}  
+
+/*
+    And that's technically enough; we now have 
+    enough space to separate the the columns
+    from each other.
+
+        (Also, as a sidenote, do you see how the 
+        columns now see more defined after we 
+        added the borders beneath the headings?
+
+        They're defining the boundaries of the 
+        columns without explicitly adding 
+        borders around the whole thing; this is
+        a clever type of design!)
+
+    However, we can still do better; it would
+    be nice to add some style to differentiate
+    the central content from the sidebar content,
+    and we can do that with just a few more
+    properties targeting that .inner-content
+    inside the primary column.
+*/
+#primary-column .inner-content {
+    background-color: #343434;
+    padding: 24px;
+    border-radius: 24px;
+}
+
+/*
+    Now we have a clearly defined section of
+    color surrounding the central content,
+    which acts as a nice contrast to the 
+    subtly defined boundaries of the sidebars.
+
+    ...but there is still one problem with this
+    design, which we mentioned before.
+
+    The central column will expand to fill the
+    available space, and when the screen gets
+    too wide, the content will get pretty 
+    spread out as well.
+
+    To address this, we can actually bring in
+    one of the layout implementations that 
+    you learned about earlier in the week:
+    the centered Single Column layout!
+*/
+
+#sidebar-column-2 {
+    margin-right: 24px;
+}

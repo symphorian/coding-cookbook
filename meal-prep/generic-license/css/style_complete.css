@@ -1,0 +1,153 @@
+/*
+    Here is the completed code to create the license
+    represented in the assingment screenshot.  
+    
+    Students don't need to recreate it perfectly, but 
+    should try to get it as close as possible.
+
+    They are supposed to do this one on their own, and
+    it will probably be challenging, but with the HTML 
+    provided for them, hopefully not too challenging.
+
+    However, if students ask how to accomplish something,
+    you can reference the code below and share the 
+    relevant tips with them.
+*/
+
+/*
+    NOTE TO STUDENTS: 
+
+    This is the file you should be writing your CSS in 
+    for the Generic License assignment.
+
+    Good luck, and have fun!
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap');
+
+#license {
+    background: linear-gradient(
+        to bottom right,
+        rgb(253, 204, 115),
+        rgb(237, 140, 79)
+    );
+    border: 2px solid black;
+    border-radius: 24px;
+    box-shadow: 8px 8px 4px #00000066;
+    padding: 24px;
+    width: 700px;
+}
+
+h1 {
+    color: navy;
+    font-size: 60px;
+    margin: 0px;
+}
+
+h4 {
+    background-color: navy;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    margin: 0px;
+    padding: 8px;
+}
+
+#content {
+    vertical-align: top;
+}
+
+#left-side,
+#right-side {
+    display: inline-block;
+}
+
+#left-side {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 65%;
+}
+
+#right-side {
+    width: 34%;
+}
+
+#id-and-expiration div {
+    color: navy;
+    display: inline-block;
+    margin: 8px;
+}
+
+#id-and-expiration span {
+    color: red;
+    font-weight: bold;
+}
+
+#address {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 9px;
+}
+
+#small-pic,
+#data-fields {
+    display: inline-block;
+}
+
+#small-pic img {
+    opacity: 0.5;
+    width: 90px;
+}
+
+#data-left,
+#data-right {
+    display: inline-block;
+    color: navy;
+    margin: 8px;
+}
+
+#data-left span,
+#data-right span {
+    color: red;
+    font-weight: bold;
+}
+
+#signature {
+    font-size: 28px;
+    font-family: 'Ms Madi', cursive;
+    font-weight: bold;
+    text-align: center;
+}
+
+#right-side img {
+    width: 100%;
+}
+
+#donor-and-real-id {
+    padding-top: 4px;
+    text-align: center;
+}
+
+#donor-and-real-id div {
+    display: inline-block;
+    text-align: right;
+}
+
+#donor {
+    color: red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    padding-right: 24px;
+}
+
+#real-id {
+    display: inline-block;
+    background-color: gold;
+    border-radius: 50%;
+    font-size: 24px;
+    text-align: center;
+    padding: 4px;
+}
+
+#real-id i {
+    color: white;
+}

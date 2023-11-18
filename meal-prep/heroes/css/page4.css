@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#hero-1 {
+    background-image: url("../images/lizard.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#hero-1 h1 {
+    font-size: 15vw;
+    padding-left: 10vw;
+}
+
+/*
+    Now let's move on to our second hero example.
+
+    Hop over to the HTML again, and come back here
+    when you're done.
+*/
+
+/*
+    First, we'll style our spacer, basically just
+    giving it a height and nothing else.
+
+    This class's only purpose is to add empty space
+    between our two heroes, just so we can keep
+    them visually separate in the demo.
+*/
+.spacer {
+    height: 50vh;
+}
+
+/*
+    After that, we'll create another hero, 
+    starting with the background properties.
+
+    We'll use an image with the focus on the
+    other side this time.
+
+    Coincidentally, the same properties work
+    pretty well.
+*/
+#hero-2 {
+    background-image: url("../images/lonely-ocean.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+
+    /*
+        But what happens if we try to apply the 
+        same flexbox properties (but aligned to
+        the right)?
+    */
+    display: flex;
+    justify-content: flex-end; /* i.e. alignment right for rows */
+    align-items: center;
+}
+
+/*
+    ...not so great. We still have yet to style
+    our text content, but already there's a
+    problem: all of our content is lined up 
+    in a row.
+
+    Which is not all that surprising, because
+    that's exactly what flexboxes do (by default).
+*/

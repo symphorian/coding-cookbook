@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>border-radius Properties</title>
+        <link href="css/border-radius.css" rel="stylesheet" data-seasoning>
+        <link href="css/shared.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="recipe-example">
+            <h4>Basic Code Snippets</h4>
+            <code>border-radius: 8px;</code>
+            <br>
+            <code>border-radius: 50%;</code>
+            <br>
+            <code>border-radius: 48px 0px;</code>
+        </div>
+        <h4>Additional Examples</h4>
+        <p>
+            The border-radius properties allow us to 
+            round the corners of an element.
+        </p>
+        <p>
+            Despite what the name may imply, you don't 
+            technically need to have a border set to
+            use border-radius, as we'll see in some 
+            later examples.
+        </p>
+
+        <div class="radius-one-value">
+            <p>
+                <span>Documentation for one value</span>
+                <br>
+                <code>border-radius: all-sides;</code> 
+            </p>
+            <p>
+                <span>Example</span>
+                <br>
+                <code>border-radius: 24px;</code> 
+            </p>
+            <p>
+                This div has its border-radius set to 
+                24px on all corners.
+            </p>
+            <p>
+                When we provide one value to the 
+                border-radius property, that value gets 
+                applied to all corners of the element's 
+                Box Model.
+            </p>
+        </div>
+
+        <div class="radius-round">
+            <p>
+                <span>Round Example</span>
+                <br>
+                <code>border-radius: 50%;</code> 
+                <br>
+                <code>text-align: center;</code> 
+            </p>
+            <p>
+                When we set all corners to have a
+                border-radius of 50%, we can actually get
+                each corner to meet each other in the middle
+                of each edge.
+            </p>
+            <p>
+                However, the div is still technically a box, 
+                and the text will still extend past the rounded
+                borders to the corners of that box if we let it.
+            </p>
+            <p>
+                We're centering it here just to make it<br>appear
+                like it's bound by the <br>rounded corners.
+            </p>
+        </div>
+
+        <div class="radius-two-values">
+            <p>
+                <span>Documentation for two values</span>
+                <br>
+                <code>
+                    border-radius: top-left/bottom-right 
+                    top-right/bottom-left;
+                </code> 
+            </p>
+            <p>
+                <span>Example</span>
+                <br>
+                <code>border-radius: 24px 60px;</code> 
+            </p>
+            <p>
+                This div has border-radius applied to all 
+                corners, but with different 
+                top-left/bottom-right and 
+                top-right/bottom-left values.
+            </p>
+            <p>
+                When we provide two values to the margin 
+                property, the first value gets applied to 
+                the top-right and bottom-left corners of 
+                the Box Model, while the second value is 
+                applied to the top-right and bottom-left 
+                corners.
+            </p>
+        </div>
+
+        <div class="radius-three-values">
+            <p>
+                <span>Documentation for three values</span>
+                <br>
+                <code>
+                    border-radius: top-left 
+                    top-right/bottom-left bottom-right;
+                </code>
+            </p>
+            <p>
+                <span>Example</span>
+                <br>
+                <code>border-radius: 24px 60px 0px;</code> 
+            </p>
+            <p>
+                This div has border-radius added on all 
+                corners, but with different top-left, 
+                top-right/bottom-left, and bottom-right 
+                values.
+            </p>
+            <p>
+                When we provide three values to the margin 
+                property, the first value gets applied to 
+                the top-left corner of the Box Model, the 
+                second value is applied to the top-right 
+                and bottom-left corners, and the third value 
+                is applied to the bottom-right corner.
+            </p>
+        </div>
+
+        <div class="radius-four-values">
+            <p>
+                <span>Documentation for four values</span>
+                <br>
+                <code>
+                    border-radius: top-left top-right 
+                    bottom-right bottom-left;
+                </code>
+            </p>
+            <p>
+                <span>Example</span>
+                <br>
+                <code>border-radius: 60px 8px 24px 100px;</code> 
+            </p>
+            <p>
+                This div has border-radius added on all corners,
+                but with different values for each corner.
+            </p>
+            <p>
+                When we provide four values to the border-radius 
+                property, the values get applied in a clockwise
+                rotation, starting with the top-left corner.
+            </p>
+        </div>
+
+        <p>
+            The border-radius property can be added to ANY 
+            element, even an image. 
+        </p>
+
+        <img 
+            src="images/dog.jpg"
+            alt="a cute puppy"
+            class="framed-image"
+        >
+
+        <p>
+            It can even be added when an element doesn't have 
+            any border properties set. 
+        </p>
+
+        <img 
+            src="images/dog2.avif"
+            alt="a dog in the park"
+            class="unframed-image"
+        >
+        <div class="resources">
+            <h4>Additional Resources</h4>
+            <a 
+                href="https://www.w3schools.com/cssref/css3_pr_border-radius.php"
+                target="_blank"
+            >
+                w3schools 
+            </a>
+            <br>
+            <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius"
+                target="_blank"
+            >
+                mdn web docs
+            </a>
+        </div>
+    </body>
+</html>

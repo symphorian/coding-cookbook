@@ -1,0 +1,153 @@
+/*
+    This should be a relatively quick assignment,
+    as you probably won't have a lot of time left
+    over at the end of class.
+
+    I recommend demoing how to create the first
+    block (tetris block, not "display: block;",
+    to be clear), and then how to set up different
+    classes for customization, such as background
+    and border colors.
+
+    Normally when we use border, we use the
+    shorthand property, where we specify the width,
+    style, and color all at once.  However, in this
+    case, since we want to customize the border
+    color separately, it makes sense to have the width
+    and style set in the .tetris-block class, and
+    set the border-color in the other classes.
+
+    Encourage the students to play around with
+    different border-styles.  There are quite a 
+    few!  You can list them out, or send them to
+    W3schools or MDN for the documentation.
+
+    Some valid values are: none, dotted, dashed,
+    solid, double, groove, ridge, inset, and outset
+    (outset is used for the screenshot blocks)
+*/
+
+/*
+    NOTE TO STUDENTS: 
+
+    This is the file you should be writing your CSS in 
+    for the Upside-down Tetris assignment.
+
+    Good luck, and have fun!
+*/
+
+/*
+    This set of CSS properties will create the blocks
+    in the size they are in the exercise screenshot.
+    
+    However, students don't need to stick to these
+    values; in fact, I'd encourage them to try and 
+    discover the appropriate padding and border
+    widths before you reveal these values to them,
+    if you have the time.
+
+    But again, students do not need to stick to these
+    values.  The only requirement is that they have
+    three rows of "blocks" of any size (which they 
+    may turn into different shapes by the time 
+    they submit the exercise).
+*/
+.tetris-block {
+    padding: 20px;
+    border-width: 12px;
+    border-style: outset;
+    display: inline-block;
+}
+
+
+/*
+    Finding colors that work well together can be a 
+    bit challenging; oftentimes the basic HTML Color
+    Names won't be quite the color you want.
+
+    Encourage the students to take advantage of the 
+    color picker found in Visual Studio Code.
+
+    PRO TIP: clicking on the color representation
+    at the top of the color picker will change the
+    CSS representation, cycling between RGB, hex,
+    HSL, and HWB.
+*/
+.red {
+    background-color: red;
+    border-color: crimson;
+}
+
+.orange {
+    background-color: #ffaa00;
+    border-color: #ff6f00;
+}
+
+.yellow {
+    background-color: yellow;
+    border-color: gold;
+}
+
+.green {
+    background-color: #05c705;
+    border-color: #0ea40e;
+}
+
+.blue {
+    background-color: #4c6aff;
+    border-color: #1a1ae7;
+}
+
+.teal {
+    background-color: #1ec7ab;
+    border-color: #088e8e;
+}
+
+.purple {
+    background-color: #df67df;
+    border-color: #d30dd3
+}
+
+/*
+    To add empty spaces in the grid of blocks,
+    we add "invisible" blocks, with background
+    and border colors set to be completely
+    transparent.  How?
+
+    Well, hexadecimal colors usually only include
+    6 characters, for the red, green, and blue
+    channels: #RRGGBB
+
+    However, we can also include the alpha channel
+    in the hexadecimal, by adding 2 additional 
+    characters: #RRGGBBAA
+
+    If we set those last 2 of 8 characters to 00,
+    then the color will be completely transparent,
+    and appear to be empty space.
+*/
+.hidden {
+    background-color: #00000000;
+    border-color: #00000000;
+}
+
+/*
+    This class could be a fun one to show them, and it
+    will also get them thinking about how inline-blocks
+    and padding work.
+
+    We essentially double the width of the block here,
+    setting the vertical padding to 20px and the 
+    horizontal padding to 52px.
+
+    But if we're doubling the width, why is the horizontal
+    padding not 40px, since the vertical is 20px?
+
+    That's because the total width of the block includes
+    the border width, and since we have no border in the
+    middle of the block, we have to account for that in
+    the padding we set.
+*/
+.long {
+    padding: 20px 52px;
+}

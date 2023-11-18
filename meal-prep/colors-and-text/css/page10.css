@@ -1,0 +1,68 @@
+/*
+    That about wraps up this demo!
+
+    You should only need to go through this 
+    one once, since it's fairly simple.
+
+    After this, students will have a chance to
+    apply what they learned in the drill set
+    called "Basic CSS Drills".
+
+    However, before that, introduce students 
+    to the CSS Properties page of The Coding
+    Cookbook (some may have found it already). 
+
+    https://first-gdwd.github.io/cookbook/seasonings.html
+
+    This page contains more information and 
+    examples about the CSS Properties they
+    learned about in the demo, along with 
+    many other properties (a good number of which 
+    we'll be covering later in the course).
+
+    This should be an incredibly useful resource
+    for them, so encourage them to bookmark the
+    site and revisit it whenever they need a 
+    refresher on what a specific CSS Property is
+    or how to use it.
+
+    Or, if they just want to learn something new!
+*/
+
+#first-paragraph {
+    color: blue;
+    background-color: goldenrod;
+    font-style: italic;
+    text-align: right;
+}
+
+#second-paragraph {
+    color: #FF0000;
+    background-color: lightpink;
+    font-size: 24px;
+    text-decoration: underline;
+}
+
+#bold-paragraph {
+    font-weight: bold;
+    background-color: #228b22;
+}
+
+#span1 {
+    color: crimson;
+    font-weight: bold;
+    font-size: 48px;
+}
+
+#span2 {
+    font-style: italic;
+    text-decoration: line-through;
+}
+
+#span3 {
+    background-color: yellow;
+}
+
+#span4 {
+    text-align: right;
+}

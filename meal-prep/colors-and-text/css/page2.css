@@ -1,0 +1,53 @@
+/*
+    Now that we successfully have our CSS and HTML
+    connected (or at least, we hopefully do),
+    let's test out the connection with our first
+    CSS Rule!
+
+    You should have already covered the CSS
+    PowerPoint, going over the different 
+    parts of a CSS rule, so now students
+    actually get to see them implemented.
+
+    Since CSS is always interconnected with HTML,
+    you need pieces set up in both files for
+    any visual change to occur.
+
+    These demos show the CSS code first, but
+    you can technically write the code in any
+    order you choose: HTML first, and then the
+    CSS rules, or the CSS rules first and then
+    the HTML.
+
+    My preference is to write the HTML part
+    first, and then write the CSS rule that
+    targets the HTML, but it's up to you how
+    you'd like to demo.
+
+    Now, back to the CSS Rules: for today's
+    demo, we're only going to use ID Selectors,
+    since they tend to be the simplest to 
+    understand.  We'll use the other selectors
+    in other demos throughout the week.
+
+    We're going to write an ID Selector to 
+    target the paragraph element on the page.
+    We'll use the id value 'first-paragraph', 
+    and set the color property with the value 
+    blue in our new CSS Rule.
+*/
+
+#first-paragraph {
+    color: blue;
+}
+
+/*
+    Assuming there is an id on the paragraph 
+    called "first-paragraph", we should see
+    that particular paragraph turn blue.
+
+    ...although, if you wrote the CSS first,
+    then nothing will happen, because you
+    need to go back to the HTML and add that
+    id attribute!
+*/

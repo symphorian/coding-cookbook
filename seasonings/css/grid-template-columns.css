@@ -1,0 +1,40 @@
+/* grid-template-columns example related code */
+
+.columns-example-1 {
+    grid-template-columns: 150px 350px;
+}
+
+.columns-example-2 {
+    grid-template-columns: 20% 60% 20%;
+}
+
+.columns-example-3 {
+    grid-template-columns: 1fr 250px;
+}
+
+/* styling related code */
+
+.grid-container {
+    display: grid;
+    background-color: darkgoldenrod;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.box {
+    background-color: lavender;
+    border: 2px solid grey;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 24px;
+    font-weight: bold;
+    height: 50px;
+    margin: 8px;
+    padding: 8px 14px;
+}
+
+.warning {
+    background-color: crimson;
+    color: white;
+    padding: 8px;
+}

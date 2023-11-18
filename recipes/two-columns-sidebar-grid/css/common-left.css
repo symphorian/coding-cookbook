@@ -1,0 +1,82 @@
+/* COMMON PAGE LAYOUT SETUP CSS - START *****************/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    /* preferred copy font goes here */
+    font-family: sans-serif; 
+}
+/* COMMON PAGE LAYOUT SETUP CSS - END ********************/
+
+/*
+    Normally, we'd want to add some padding and/or
+    margin to our layout, potentially with borders
+    as well.  Also, while the background colors are 
+    helpful for distinguishing the two columns, 
+    they aren't too aesthetically pleasing.
+
+    So we've made a few stylistic adjustments to the 
+    sidebar to represent a more common layout design
+    (although it is still relatively boring), along
+    with a couple tweaks to the main content as well.
+
+    Note that most of the code is identical to the
+    example of a sidebar with two columns using flex.
+
+    For many layouts, either grid or flex implementations
+    can be used; it usually depends on what you're
+    more comfortable with, and how you need the layout
+    to behave at different screen widths.
+
+    Flexbox tends to be more flexible (as you might guess),
+    while grids are more rigid; however, you tend to 
+    have more control over grid layouts than you do
+    with flexbox, so there are always pros and cons.
+*/
+
+#two-columns {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+}
+
+#sidebar-content {
+    background-color: #EFEFEF;
+    width: 250px;
+    min-width: 200px;
+    padding: 24px;
+    border-right: 2px solid #AAAAAA;
+}
+
+#sidebar-content h2 {
+    border-bottom: 2px solid #AAAAAA;
+    padding-bottom: 8px;
+}
+
+#sidebar-content ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+#sidebar-content ul li {
+    padding: 4px 0px;
+}
+
+/* 
+    remember that in order to change the style
+    of a hyperlink (anchor), you need to target
+    it very specifically in order to overwrite
+    the default browser styles, which usually 
+    means your selectors need to end in 'a'
+*/
+#sidebar-content ul a {
+    color: #111111;
+    text-decoration: none;
+}
+
+#main-content {
+    flex: 1;
+    margin: 48px;
+    max-width: 600px;
+}

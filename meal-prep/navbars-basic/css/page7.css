@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#navbar {
+    background: linear-gradient(to bottom, green, #3e6d3e);
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+#navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 24px;
+}
+
+#navbar img {
+    width: 200px;
+}
+
+#navbar #logo {
+    margin-right: auto;
+}
+
+#navbar .cta-button {
+    background-color: white;
+    color: green;
+    border-radius: 36px;
+    padding: 16px 24px;
+    font-size: 20px;
+    font-weight: bold;
+    min-width: 150px;
+    text-align: center;
+    margin-right: 24px;
+}
+
+
+#layout {
+    width: 800px;
+    margin: 48px auto;
+    font-size: 24px;
+    height: 200vh;
+}
+
+/*
+    There are two main ways to get a navbar to
+    "stick" to the top of the page, and both
+    of them use the position property.
+
+    Depending on how adventurous you were in 
+    some previous assignments, some of you may have 
+    already encountered the position property.
+
+    The first way to have a navbar stick to the
+    top of the page is to use the value 'fixed'.
+    This is the older, more traditional way to
+    build a navbar, but it comes with some
+    gotchas that can trip you up, so we're not
+    going to demo it here.  Check out the Cookbook
+    if you're curious about this approach.
+
+    Instead, we're going to demo the second,
+    newer approach, which uses a value called
+    'sticky'.
+
+    (and yes, we're deliberately creating a new
+    CSS rule here; normally we'd want to keep
+    our CSS properties together in the same
+    CSS rules, but just trust that this will
+    simplify things later on in the demo)
+*/
+
+#navbar {
+    position: sticky;
+
+    /*
+        ...seems like nothing changed, and that's
+        an accurate assessment.
+
+        That's because the sticky value works
+        together with the side properties
+        (left, right, top, and bottom).
+
+        We specify the side of the page that we
+        want the element to stick to, and the
+        distance from that side we want it to
+        stick.
+
+        Normally for a navbar, we'd specify the
+        top side, and a value of 0px, since we
+        want it stuck to the very top, with no
+        space between it and the top of the page.
+    */
+    top: 0px;
+}
+
+/*
+    And there you have it! We now have a sticky
+    navbar header that sticks to the top of the page.
+*/

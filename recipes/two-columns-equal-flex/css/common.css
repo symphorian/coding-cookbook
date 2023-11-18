@@ -1,0 +1,88 @@
+/* COMMON PAGE LAYOUT SETUP CSS - START *****************/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    /* preferred copy font goes here */
+    font-family: sans-serif; 
+}
+/* COMMON PAGE LAYOUT SETUP CSS - END ********************/
+
+/*
+    Here we have a more common example of how an
+    equally sized two-column layout could be used
+    in practice.
+
+    As stated before, you generally want to create
+    your layout in such a way that the viewer doesn't
+    have to scroll down and up the page in order to
+    read it.
+
+    In order to do that, think about keeping your
+    content organized in rows within the two column
+    layout.  This is an example of how you could
+    set up something like that with flexboxes.
+*/
+
+.two-columns {
+    display: flex;
+}
+
+.big-text-column,
+.small-text-column {
+    /*
+        Notice that at smaller screen widths, flex: 1;
+        causes our columns to have slightly different
+        sizes than 1/2 of the total width.
+
+        This is because the flex property TRIES to keep
+        the width at 1/2, but if the content gets too
+        large or cramped, it will adjust the width.
+
+        For this reaston, the flex property is best 
+        thought of more like a guideline than a hard rule.
+    
+        To be clear, 
+        the flex property below is a flex ITEM property; 
+        it goes on elements INSIDE of flexboxes.
+    */
+    flex: 1;
+
+    /*
+        on the other hand, the properties found
+        below are flexbox CONTAINER properties;
+        they go on CONTAINERS turned into flexboxes.
+        
+        We're using them below in order to  
+        - activate flexbox on the columns
+        - center the content both horizontally and 
+            vertically in the center of the columns
+    */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.big-text-column {
+    background-color: #8e1a1a;
+    color: white;
+    font-size: 28px;
+}
+
+.small-text-column {
+    background-color: rgb(255, 183, 49);
+}
+
+/*
+    This additional container we added is to ensure
+    all the content in the columns are grouped
+    (and centered) together as one single flex item,
+    as opposed to several independent flex items.
+    (It keeps the code simpler and cleaner)
+*/
+.column-content {
+    margin: 48px;
+    text-align: center;
+}

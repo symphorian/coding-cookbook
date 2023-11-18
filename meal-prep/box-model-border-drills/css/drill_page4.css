@@ -1,0 +1,17 @@
+/* Drill 4 - Write your code solution below */
+
+/*
+    This one is also relatively simple, similar
+    to the previous one, just adding a 
+    background color as well.
+
+    But it's meant to show how we can transform
+    something boring and bland into a much more
+    visually striking design with just a 
+    couple lines of CSS.
+*/
+
+#d4-navbar {
+    background-color: orange;
+    border-bottom: 5px solid black;
+}

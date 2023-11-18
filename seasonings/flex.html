@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>flex Property (Flexbox)</title>
+        <link href="css/flex.css" rel="stylesheet" data-seasoning>
+        <link href="css/shared.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="recipe-example">
+            <h4>Basic Code Snippets</h4>
+            <code>flex: 1;</code>
+            <br>
+            <code>flex: 5;</code>
+            <br>
+            <code>flex: 9;</code>
+        </div>
+        <h4>Additional Examples</h4>
+        <p class="warning">
+            NOTE: The flex property is a 
+            <strong>Flexbox Item Property</strong>.
+            <br>
+            <br>
+            This property will have no effect if applied to
+            an element that is not <strong>INSIDE</strong> 
+            an activated Flexbox Container (i.e. has 
+            <code><strong>display: flex;</strong></code>
+            applied to it)
+        </p>
+        <p>
+            The flex property can be used to specify the 
+            size that a Flexbox Item can grow to, relative
+            to <i>other</i> Flexbox Items that also have
+            the flex property set.
+        </p>
+        <p class="indent">
+            Actually, the flex property is a shorthand property,
+            meaning it allows you to set and configure multiple
+            flexbox-related properties at once; however, we're
+            going to keep our examples here relatively simple.
+            <br>
+            <br>
+            Check out the Additional Resources section at the
+            end if you want to dive deeper!
+        </p>
+        <p class="warning">
+            NOTE 2: Despite the similarity in name and value, 
+            this property is NOT used to activate a Flexbox 
+            Container.
+            <br><br>
+            Only <code>display: flex;</code> can do that.
+            Don't get them confused!
+        </p>
+        <p>
+            It can be helpful to think of the flex property 
+            as transforming Flexbox Items into a fluid, rather 
+            than a solid.
+        </p>
+        <p>
+            Once you set the flex property on a Flexbox Item,
+            it will grow to fill its container, just like if 
+            you poured water into a piece of tupperware.
+        </p>
+
+        <h4>No <code>flex</code> Property Sizing</h4>
+        <p>
+            We'll start by showing you a basic Flexbox Container,
+            with no flex properties set on the Flexbox Items
+            inside.
+        </p>
+
+        <div class="flex-container nowrap">
+            <div class="box">A</div>
+            <div class="box">B</div>
+            <div class="box">C</div>
+            <div class="box">D</div>
+        </div>
+
+        <p>
+            Pretty basic. No growing behavior is present.
+        </p>
+
+        <h4>Equal <code>flex</code> Sizing</h4>
+        <p>
+            Now, we'll give each Flexbox Item the same flex value.
+        </p>
+
+        <div class="flex-container">
+            <div class="box flex-1">1</div>
+            <div class="box flex-1">1</div>
+            <div class="box flex-1">1</div>
+            <div class="box flex-1">1</div>
+        </div>
+        <br>
+
+        <p>
+            Each of the boxes above have been given a flex value of
+            1, and as you can see, they are all equally sized, and 
+            they stretched to fill the container.
+        </p>
+        <p>
+            Rememeber that the flex property will size Flexbox Items 
+            relative to <i>other</i> Flexbox Items, so if all 
+            Flexbox Items have the same value, they'll all be the
+            same size.
+        </p>
+        <p>
+            Watch what happens if we give all the Flexbox Items a 
+            value of 5...
+        </p>
+
+        <div class="flex-container">
+            <div class="box flex-5">5</div>
+            <div class="box flex-5">5</div>
+            <div class="box flex-5">5</div>
+            <div class="box flex-5">5</div>
+        </div>
+        <br>
+
+        <p>
+            They look exactly the same size as before, and that 
+            makes sense: if each Flexbox Item has an equal flex 
+            value, they're all going to have the same size, regardless 
+            of how big or small the numbers are.
+        </p>
+
+        <h4>Different <code>flex</code> Sizing</h4>
+        <p>
+            Now, let's see what happens when we give one Flexbox 
+            Item a different flex value from the others.
+        </p>
+
+        <div class="flex-container">
+            <div class="box flex-1">1</div>
+            <div class="box flex-1">1</div>
+            <div class="box flex-2">2</div>
+            <div class="box flex-1">1</div>
+        </div>
+        <br>
+
+        <p>
+            The box with the flex value of 2 is roughly twice the 
+            width of the boxes with the value of 1, because the 
+            flex property will cause Grid Items to be sized 
+            <i>relative</i> to other Items with the flex property
+            set.
+        </p>
+
+        <p>
+            Let's try a few more examples.
+        </p>
+        
+        <div class="flex-container">
+            <div class="box flex-1">1</div>
+            <div class="box flex-1">1</div>
+            <div class="box flex-5">5</div>
+            <div class="box flex-1">1</div>
+        </div>
+        <br>
+
+        <div class="flex-container">
+            <div class="box flex-2">2</div>
+            <div class="box flex-1">1</div>
+            <div class="box flex-1">1</div>
+            <div class="box flex-3">3</div>
+        </div>
+        <br>
+
+        <div class="flex-container">
+            <div class="box flex-3">3</div>
+            <div class="box flex-3">3</div>
+            <div class="box flex-1">1</div>
+            <div class="box flex-3">3</div>
+        </div>
+        <br>
+
+        <p>
+            The sizes of the boxes are relative to the size of the 
+            flex values we assigned them; in general, boxes with 
+            larger numbers are going to be sized proportionally 
+            larger than boxes with smaller numbers.
+        </p>
+
+        <h4>Mixing <code>flex</code> with <code>width</code></h4>
+        <p>
+            The flex property gets even more interesting if you 
+            mix Flexbox Items with flex with Flexbox Items with 
+            a width.
+        </p>
+        <p>
+            Rememeber, the flex property will size Flexbox Items 
+            relative to <i>other</i> Flexbox Items that also have 
+            flex properties set.
+        </p>
+        <p>
+            However, the width property doesn't work like that; it 
+            just sizes an element based on the value we provide. 
+        </p>
+        <p>
+            How does that affect things when we mix the two types of
+            Flexbox Items together? Well, let's see. 
+        </p>
+
+        <div class="flex-container">
+            <div class="box width-300px">width: 300px;</div>
+            <div class="box flex-1">1</div>
+            <div class="box flex-1">1</div>
+            <div class="box flex-1">1</div>
+        </div>
+        <br>
+        
+        <p>
+            In the example above, the size of the first box is fixed
+            at 300px (with a caveat); the other boxes with the flex 
+            property, however, don't size themselves relative to it.
+        </p>
+        <p>
+            The other boxes basically figure out what remaining space 
+            is left after the box with the width is sized, and then 
+            resize themselves using up the remaining space (again, 
+            relative to each other).
+        </p>
+        <p class="indent">
+            The caveat mentioned earlier is that if the Flexbox 
+            Container is too small, it will start compressing the 
+            items inside of it, even if that means shrinking an 
+            item smaller than the explicit width set on it.
+        </p>
+        <p>
+            Let's look at one other example to wrap up this section.
+        </p>
+
+        <div class="flex-container">
+            <div class="box width-200px">width: 200px;</div>
+            <div class="box flex-1">1</div>
+        </div>
+
+        <p>
+            This is a good example showing the "fluid" nature
+            of the flex property. 
+        </p>
+        <p>
+            The first box has an explicit width of 200px, while
+            the second just has a flex value of 1. But as a result,
+            that second box grows even larger to fill the remaining 
+            space.
+        </p>
+        <p>
+            To use a more realistic analogy, think of the container 
+            as a piece of tupperware, and the box with the width 
+            of 200px like an ice cube.  
+        </p>
+        <p>
+            Then think of the box with 
+            <code>flex: 1;</code> on it like water; as we pour it
+            into the tupperware, it fills all the remaining space
+            inside around the ice cube.
+        </p>
+        
+        <p>
+            That's a pretty good example of how the flex property 
+            works when elements with widths are present.
+        </p>
+
+        <div class="resources">
+            <h4>Additional Resources</h4>
+            <a 
+                href="https://www.w3schools.com/cssref/css3_pr_flex.php"
+                target="_blank"
+            >
+                w3schools 
+            </a>
+            <br>
+            <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex"
+                target="_blank"
+            >
+                mdn web docs
+            </a>
+        </div>
+    </body>
+</html>

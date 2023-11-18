@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Linking HTML and CSS - Appetizers - The Coding Cookbook</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="../css/cookbook.css" rel="stylesheet">
+        <link href="../css/appetizer.css" rel="stylesheet">
+        <link href="../css/lightbox.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="background"></div>
+        <nav>
+            <header id="topHeader">
+                <h2 id="brand"><a href="../">The Coding Cookbook</a></h2>
+                <div id="quote"></div>
+                <div id="navLinks">
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../ingredients.html">
+                                HTML
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../ingredients.html">Elements</a></h2>
+                            <h2><a href="../ingredients-cheatsheet.html">Cheatsheet</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../seasonings.html">
+                                CSS
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../seasonings.html">Properties</a></h2>
+                            <h2><a href="../seasonings-cheatsheet.html">Cheatsheet</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../recipes.html">
+                                Layouts
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../recipes.html?category=page-layout">Page Layouts</a></h2>
+                            <h2><a href="../recipes.html?category=content-layout">Content Layouts</a></h2>
+                            <h2><a href="../recipes.html?category=navigation-layout">Navigation</a></h2>
+                            <h2><a href="../recipes.html?category=miscellaneous">Miscellaneous</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../more.html">
+                                More
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../demos.html">Class Demos</a></h2>
+                            <h2><a href="../appetizers.html">Tutorials</a></h2>
+                            <h2><a href="../troubleshooting.html">Troubleshooting</a></h2>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </nav>
+        
+        <header id="title" class="">
+            <h1>Linking HTML and CSS</h1>
+            <h3>
+                A tutorial showing how to connect your CSS to an HTML file
+            </h3>
+        </header>
+        
+        <div class="cookbookPage">
+            <p>
+                It is possible to view HTML on its own, but it is not possible
+                to view CSS on its own.  CSS has no effect unless 
+                it is linked to an HTML file; only then will the styles in the 
+                CSS be applied to the HTML web page.
+            </p>
+            <p>
+                This tutorial will help you update your code-skeleton project
+                template so that you don't need to manually link your HTML and
+                CSS every time you have a new assignment or project that
+                requires you to duplicate your code-skeleton folder.
+            </p>
+            <p>
+                However, the steps here can be applied to any HTML and CSS files,
+                so feel free to come back if you forget how to link HTML 
+                and CSS, or you just want a refresher!
+            </p>
+        </div>
+        
+        <div class="cookbookPage">
+            <h2 id="part1" class="invisibleAnchorTarget"></h2>
+            <h6></h6>
+            <h2>Linking your stylesheets to your HTML</h2>
+            <h4>An essential part of styling web pages</h4>
+            <ol>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                As stated before, we're going to be modifying
+                                your code-skeleton to include a starting CSS 
+                                file, that you can use in the future every time 
+                                you duplicate your code-skeleton.
+                            </p>
+                            <p>
+                                So, to start, identify where you code-skeleton 
+                                folder is in your repository, and expand it
+                                in the Explorer Panel.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/linking-html-and-css/01_VSCode.png" 
+                                alt="Identifying and opening the code-skeleton folder" 
+                            />
+                            <figcaption>
+                                Identifying and expanding the code-skeleton folder
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After expanding the folder, open the index.html
+                                file, and right-click anywhere in the HTML code 
+                                for the file.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/linking-html-and-css/02_openIndex.png" 
+                                alt="Opening index.html" 
+                            />
+                            <figcaption>
+                                Opening index.html
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After right-clicking, select the option that 
+                                says "Show Preview".
+                            </p>
+                            <p>
+                                <strong>
+                                    If you don't see that option, first make sure
+                                    that you right-clicked inside the HTML code. 
+                                    <br><br>
+                                    You can only preview an HTML file, with HTML
+                                    code; nothing else. So if you click in the 
+                                    wrong file or wrong area, you won't get that
+                                    preview option.
+                                    <br><br>
+                                    If you're sure you're right-clicking in the 
+                                    right place, you may not 
+                                    have installed the required Extensions in 
+                                    Visual Studio Code.
+                                    <br><br>
+                                    Jump back to the 
+                                    <a href="web-dev-startup.html#p1_step4">
+                                        Setup Tutorial Part 1
+                                    </a>,
+                                    and go through the last step again, so that 
+                                    you'll be able to preview your code.
+                                </strong>
+                            </p>
+                            <p>
+                                If you previewed the page successfully, you'll
+                                see a new panel open with a blank page on it.
+                            </p>
+                            <p>
+                                Success!
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/linking-html-and-css/03_preview.png" 
+                                alt="Previewing index.html for the Basic HTML Drills" 
+                            />
+                            <figcaption>
+                                Previewing index.html for the Basic HTML Drills
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Next, we're going to create a new CSS file.
+                            </p>
+                            <p>
+                                Back in the Explorer Panel, navigate to the 
+                                "css" folder inside of code-skeleton.
+                            </p>
+                            <p>
+                                Right-click on the "css" folder and select
+                                "New File..."
+                            </p>
+                            <p>
+                                Name the new file "style.css".
+                            </p>
+                            <p class="indent">
+                                The name doesn't actually matter much, 
+                                so you can pick a different name if you like,
+                                but "style.css" is a convention we'll use often
+                                when we only have one CSS file.
+                                <br><br>
+                                However, you MUST include the file type of 
+                                ".css" when naming the file.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/linking-html-and-css/04_createCss.png" 
+                                alt="Creating style.css and preparing to move it in the workspace" 
+                            />
+                            <figcaption>
+                                Creating style.css and preparing to move it in the workspace
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After creating the file, it will probably pop 
+                                open in a new tab next to the Preview Panel.
+                            </p>
+                            <p>
+                                You can configure your layout however you want,
+                                but in my case, I'm going to move the tab for 
+                                style.css underneath my HTML file. 
+                                
+                            </p>
+                            <p>
+                                (Not sure how to do that? 
+                                <a href="rearranging-your-workspace.html">
+                                    Check out this tutorial
+                                </a>.)
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/linking-html-and-css/05_movedCSS.png" 
+                                alt="style.css after moving it in the workspace" 
+                            />
+                            <figcaption>
+                                style.css after moving it in the workspace
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After successfully creating style.css, and
+                                moving it in our workspace to where we want it
+                                to be, we can now link it to our HTML.
+                            </p>
+                            <p>
+                                Go back to index.html, and underneath the 
+                                &lt;title&gt; tags, add a new &lt;link&gt;
+                                element.
+                            </p>
+                            <p>
+                                The &lt;link&gt; element has two important (and
+                                required) attributes if we want to connect a
+                                CSS file to this HTML file:
+                                <ul>
+                                    <li>
+                                        href - should be given a path to the CSS 
+                                        file that we want to link. In our case,
+                                        that would be style.css in the css folder;
+                                        in other words, <strong>"css/style.css"</strong>
+                                    </li>
+                                    <li>
+                                        rel - short for 'relationship', this is
+                                        where we specify how we intend to link 
+                                        the file to the HTML. We want to use 
+                                        the CSS as a stylesheet, so we provide
+                                        the value <strong>"stylesheet"</strong>.
+                                    </li>
+                                </ul>
+                            </p>
+                            <p>
+                                So the finalized code snippet to add should be
+                                <br><br>
+                                <code>
+                                    &lt;link href="css/style.css" rel="stylesheet"&gt;
+                                </code>
+                                <br><br>
+                                as in the screenshot.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/linking-html-and-css/06_addinglink.png" 
+                                alt="Adding the link element to connect the HTML and CSS" 
+                            />
+                            <figcaption>
+                                Adding the &lt;link&gt; element to connect the HTML and CSS
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After adding the &lt;link&gt; element, your CSS
+                                file should now be connected to your HTML. So 
+                                let's some CSS to test out the link!
+                            </p>
+                            <p>
+                                In style.css, add the following code snippet:
+                            </p>
+                            <p>
+                                <code>
+                                    body {
+                                    <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;background-color: red;
+                                    <br>
+                                    }
+                                </code>
+                            </p>
+                            <p>
+                                After adding that, the preview window should 
+                                turn bright red (or whatever other color you chose).
+                            </p>
+                            <p>
+                                If it didn't, double-check that you have the 
+                                correct &lt;link&gt; attributes, and that you 
+                                have no typos compared to the code snippets 
+                                above.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/linking-html-and-css/07_testing.png" 
+                                alt="Testing the link between HTML and CSS" 
+                            />
+                            <figcaption>
+                                Testing the link between HTML and CSS
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                If the color change successfully occurred, then 
+                                you've confirmed that the link between your 
+                                CSS and HTML is successfully connected.
+                            </p>
+                            <p>
+                                ...now get rid of the CSS code you wrote. :-)
+                            </p>
+                            <p>
+                                We only needed it for testing, and now that we're
+                                done testing, we don't need it anymore.
+                            </p>
+                            <p>
+                                After removing the code (not the style.css file,
+                                mind you), you may notice little white circles
+                                next to the file names in the tabs in your 
+                                workspace.
+                            </p>
+                            <p>
+                                These white circles indicate that your code
+                                changes have not been saved.  You can save 
+                                through the File menu, but I strongly recommend
+                                using the shortcut Cmd+S (or Ctrl+S for PC users)
+                                to save time.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/linking-html-and-css/08_saving.png" 
+                                alt="Saving your code changes" 
+                            />
+                            <figcaption>
+                                Saving your code changes
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After saving, the white circle should change
+                                back to a white X.
+                            </p>
+                            <p>
+                                (If it didn't make sure you click in the file's
+                                code before you try to save.)
+                            </p>
+                            <p>
+                                With that, you should be good to go for future 
+                                assignments that require you to duplicate the 
+                                code-skeleton!
+                            </p>
+                            <p>
+                                Just be sure to commit and push your code 
+                                changes in GitHub Desktop, to ensure you truly
+                                have them saved and backed up.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/linking-html-and-css/09_done.png" 
+                                alt="Saving your code changes" 
+                            />
+                            <figcaption>
+                                All done!
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+            <h4>
+                Now you know how to create and connect a CSS file to your HTML 
+                web page! Good luck in your future assignments!
+            </h4>
+        </div>
+
+        <div id="lightboxContainer">
+            <div id="lightboxBackground" class="closer"></div>
+            <img id="lightbox" src="" alt="">
+            <span id="lightboxCloser" class="closer">×</span>
+          </div>
+        <script src="../js/lightbox.js"></script>
+        <script src="../js/hideNav.js"></script>
+    </body>
+</html>

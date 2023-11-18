@@ -1,0 +1,153 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.cookbookPage {
+    position: relative;
+}
+
+.cookbookPage h2,
+.cookbookPage h4,
+.cookbookPage h6 {
+    text-align: center;
+}
+
+.cookbookPage h2 {
+    font-size: 36px;
+    margin-bottom: 12px;
+    margin-top: 0px;
+}
+
+.cookbookPage.troubleshooting h2 {
+    margin-top: 60px;
+    margin-bottom: 36px;
+}
+
+.cookbookPage h4 {
+    margin-bottom: 36px;
+    margin-top: 0px;
+}
+
+.cookbookPage h6 {
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 0px;
+}
+
+.cookbookPage > p,
+.cookbookPage > ul {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.invisibleAnchorTarget {
+    position: absolute;
+    top: -150px;
+}
+
+.invisibleInnerAnchorTarget {
+    position: relative;
+    top: -180px;
+}
+
+.cookbookPage img {
+    border: 3px solid #ff7050;
+    border-radius: 12px;
+    box-shadow: 4px 4px 4px #00000033;
+    cursor: pointer;
+    margin: 16px 16px 4px;
+    max-height: 50vh;
+    max-width: 80%;
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+
+.cookbookPage img:hover {
+    box-shadow: 8px 8px 8px #00000033;
+    transform: translateY(-8px);
+}
+
+.cookbookPage video {
+    width: 100%;
+    max-width: 1200px;
+    padding: 24px;
+    margin: 0px auto;
+    display: block;
+}
+
+.cookbookPage ol > li {
+    border-bottom: 3px solid #ff7050;
+    margin-bottom: 36px;
+    padding-bottom: 36px;
+    margin-right: 40px;
+}
+
+.sideBySide {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 36px;
+}
+
+.sideBySide .textContainer {
+    flex: 1;
+    max-width: 50%;
+}
+
+.sideBySide .imageContainer {
+    width: 60%;
+    text-align: center;
+}
+
+.sideBySide .imageContainer figcaption {
+    font-size: 11px;
+}
+
+p strong,
+p.indent {
+    display: block;
+    padding-left: 36px;
+}
+
+@media screen and (max-width: 1000px) {
+    .cookbookPage > p,
+    .cookbookPage > ul {
+        max-width: none;
+    }
+
+    .sideBySide {
+        flex-direction: column;
+        padding-bottom: 0px;
+        margin-bottom: 12px;
+    }
+
+    .sideBySide .textContainer {
+        max-width: none;
+        order: 2;
+    }
+
+    .sideBySide .imageContainer {
+        order: 1;
+        width: 100%;
+    }
+
+    .cookbookPage ol {
+        padding-left: 12px;
+    }
+
+    .cookbookPage ol > li {
+        list-style-type: none;
+        padding-bottom: 12px;
+        margin-bottom: 12px;
+        margin-right: 12px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #bottomHeader {
+        padding: 6px;
+    }
+    #cookbookButtons a {
+        margin: 6px;
+    }
+}

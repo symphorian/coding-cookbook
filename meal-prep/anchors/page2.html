@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Anchors (Links) Demo</title>
+    </head>
+    <body>
+        <!--
+            That put some text on the page...but that's it.
+            There's nothing indicating that it's a hyperlink, and
+            it doesn't go anywhere when you click on it.
+
+            That's because we haven't given it a destination.
+            We provide one by using the 'hyperlink reference'
+            attribute (href).
+
+            If you're hyperlinking to another page, you generally
+            have to put the fully qualified URL in the href
+            (meaning you have to include the whole https://...)
+        -->
+        <a href="https://www.google.com">
+            Click me to go to Google's homepage
+        </a>
+        <!--
+            Now we should have a functioning link!
+            (Although, for security reasons, the VS Code preview 
+            window won't allow you to navigate off your site, 
+            so you'll need to right-click in the code and select 
+            "Open with Live Server" to test in the browser)
+            
+            Adding the href in there, even if it's empty,
+            transforms the appearance of the anchor element
+            to have the default blue color with an underline.
+            
+            We'll learn how to overwrite that behavior when
+            we get to CSS, but for now, we're stuck with the 
+            default browser styling for links.
+            
+            Adding the href attribute in there could start to 
+            make the anchor element a little longer than ideal,
+            so we split it across multiple lines, like we've
+            done in the past, to make the code a bit cleaner.
+        -->
+    </body>
+</html>

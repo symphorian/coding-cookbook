@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif; 
+}
+
+/*
+    We've got a right aligned single column layout now...
+
+    ...but as far as I can tell, this type of layout is
+    never used.  It's just awkward on its own, and you 
+    have the weirdness of a jagged edge against a straight
+    edge of the screen on the right...just overall not good.
+
+    So, we're showing this more as an example of how you
+    could potentially get a block element right aligned
+    INSIDE of another layout.
+
+    As for our last single column layout, the centered one,
+    it's pretty straightforward, and not too different
+    from the right aligned layout.
+
+    Basically, we just need to add a margin-right: auto;
+    in addition to the margin-left: auto;
+
+    This will tell the element to redistribute all the 
+    available space evenly on both sides, which has the
+    effect of centering the element.
+*/
+
+.single-column {
+    background-color: lightgreen;
+    width: 50%;
+    min-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*
+    And there you go! We have a single column layout,
+    centered in the middle of the screen!
+
+    Not too difficult, right?
+*/

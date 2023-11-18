@@ -1,0 +1,30 @@
+.absolute-heading {
+    font-size: 36px;
+}
+
+.absolute-paragraph {
+    font-size: 18px;
+}
+
+.relative-heading {
+    font-size: 5vw;
+}
+
+.relative-paragraph {
+    font-size: 2.5vw;
+}
+
+.absolute-image {
+    width: 350px;
+}
+
+.relative-image {
+    width: 100%;
+}
+
+/*
+    Now we're going to see how relative units
+    can change depending on their containers.
+
+    Go into the HTML and add the code described.
+*/

@@ -1,0 +1,127 @@
+/*
+    Here is the completed CSS for all drills.
+*/
+
+/* Drill 1 - Write your code solution below */
+
+#d1-p1 {
+    color: green;
+}
+
+/* Drill 2 - Write your code solution below */
+
+#d2-s1,
+#d2-s3 {
+    color: #F711F7;
+}
+
+/* Drill 3 - Write your code solution below */
+
+#d3-s1 {
+    color: red;
+}
+#d3-s4 {
+    color: goldenrod;
+}
+#d3-s6 {
+    color: blue;
+}
+
+/* Drill 4 - Write your code solution below */
+
+#d4-p1 {
+    background-color: skyblue;
+}
+
+/* Drill 5 - Write your code solution below */
+
+#d5-div1 {
+    background-color: peachpuff;
+}
+
+#d5-p1 {
+    background-color: pink;
+}
+
+#d5-p2 {
+    background-color: lightcoral;
+}
+
+/* Drill 6 - Write your code solution below */
+
+#d6-s2 {
+    background-color: rgb(255, 255, 0);
+}
+
+/* Drill 7 - Write your code solution below */
+
+#d7-s2,
+#d7-s3 {
+    font-weight: bold;
+}
+
+/* Drill 8 - Write your code solution below */
+
+#d8-s1,
+#d8-s3 {
+    font-style: italic;
+}
+
+#d8-s2 {
+    font-weight: bold;
+}
+
+/* Drill 9 - Write your code solution below */
+
+#d9-s1,
+#d9-s3 {
+    text-decoration: underline;
+}
+
+/* Drill 10 - Write your code solution below */
+#d10-a1,
+#d10-a3 {
+    text-decoration: none;
+}
+
+#d10-s1,
+#d10-s3 {
+    text-decoration: underline;
+}
+
+/* Drill 11 - Write your code solution below */
+
+#d11-p1 {
+    font-size: 36px;
+}
+
+/* Drill 12 - Write your code solution below */
+
+
+#d12-div2 {
+    text-align: right;
+}
+
+#d12-div4 {
+    text-align: center;
+}
+
+/* Drill 13 - Write your code solution below */
+
+#d13-div1 {
+    text-align: center;
+}
+
+#d13-div2 {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#d13-div3 {
+    font-size: 48px;
+}
+
+#d13-div4 {
+    font-size: 24px;
+    font-style: italic;
+}

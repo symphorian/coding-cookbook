@@ -1,0 +1,32 @@
+/*
+    Page layout setup
+*/
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#layout {
+    max-width: 800px;
+    margin: 48px auto;
+    text-align: center;
+}
+
+/* 
+    Gallery setup 
+*/
+.vertical-masonry-gallery {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 24px;
+    max-height: 1100px;
+}
+
+.vertical-masonry-gallery img {
+    width: 33.33%;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Anchors (Links) Demo</title>
+    </head>
+    <body>
+        <a href="https://www.google.com" target="_blank">
+            Click me to go to Google's homepage
+        </a>
+        <a href="https://www.w3schools.com/" target="_blank">
+            Learn more at w3schools!
+        </a>
+        <p>
+            If you want to dig REALLY deep into web dev,
+            <a 
+                href="https://developer.mozilla.org/en-US/" 
+                target="_blank"
+            >
+                visit developer.mozilla.org!
+            </a>
+        </p>
+        <!--
+            At this point, we have three examples of the 
+            first type of anchor, that navigates us off
+            of the page to another site.
+
+            Now let's find out how to navigate somewhere
+            else on the same page.
+
+            This approach is a little more complicated,
+            because there are multiple pieces involved.
+            For this approach, we must have the following:
+                1. elements on the page we want to navigate to
+                2. id attributes on those elements
+                3. anchor elements with href attributes that
+                   follow this template:
+                    - href="#id-value" where id-value is
+                      the attribute value of one of the 
+                      elements we wanted to jump to.
+
+            To illustrate this type of anchor, we're going 
+            to build a rather practical "table of contents".
+            Of the three parts or pieces we need for them
+            to succesfully navigate within the page, we'll
+            start with the third part first: the anchors.
+        -->
+        <h6>TABLE OF CONTENTS</h6>
+        <ul>
+            <li>
+                <a href="#">Jump to Section 1</a>
+            </li>
+            <li>
+                <a href="#">Jump to Section 2</a>
+            </li>
+            <li>
+                <a href="#">Jump to Section 2</a>
+            </li>
+        </ul>
+        <!--
+            We now have anchor elements set up inside a list.
+            However, by only adding a "#" in the href,
+            we've created what I like to call "dummy links"
+            or "placeholder links".
+
+            They are functional in the sense that they're 
+            properly created and they visually look like
+            hyperlinks, but when you click on them, they
+            only jump you back to the top of the page.
+
+            Without adding the id attribute values after 
+            the #, they don't really do anything else.
+        -->
+    </body>
+</html>

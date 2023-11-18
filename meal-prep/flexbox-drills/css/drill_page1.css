@@ -1,0 +1,23 @@
+/* Drill 1 - Write your code solution below */
+
+/* 
+    This drill is VERY straightforward; they
+    just need to be able to identify which
+    element is the container, target it,
+    and then activate flexbox on it.
+
+    NOTE: it may seem to work if you target
+    the container class (.container), but 
+    then you're targeting the containers
+    for EVERY drill, which will inevitably
+    break things in the long run.
+
+    So, make sure to target the container
+    unique to this drill, rather than the 
+    generic container class, which is applied
+    to EVERY drill.
+*/
+
+#container-1 {
+    display: flex;
+}

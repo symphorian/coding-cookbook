@@ -1,0 +1,64 @@
+#navbar {
+    text-align: center;
+    padding: 24px;
+    background-color: blue;
+}
+
+#navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+p a {
+    color: teal;
+}
+
+/*
+    Now suppose our client wanted a
+    "warning" style just for
+    paragraphs, that affects the color
+    of both regular text and links.
+
+    Well, we COULD just use a normal
+    Class Selector for that.
+
+    But, note that the client wanted that
+    warning style JUST for paragraphs;
+    we might have different warning styles
+    if that class was applied to other
+    elements.
+
+    So, to be more specific we're going 
+    to have to use the other way of
+    combining selectors: no spaces between
+    them.
+*/
+
+p.warning {
+    color: crimson;
+}
+
+/*
+    This method of making selectors more
+    specific has a different meaning
+    compared to using spaces.
+
+    To translate what the above selectors
+    mean into English: 
+
+    "ONLY target a paragraph when it ALSO
+        has a 'warning' class on it"
+
+    On the flip side, paragraphs without
+    the "warning" class will not be 
+    targeted.
+
+    This approach (of more or less smashing
+    two selectors together without spaces)
+    is generally used only when combining
+    Class Selectors with something else;
+    in this cases, we combined an HTML
+    Element Selector, but you can use this
+    approach with ID Selectors and even
+    other Class Selectors.
+*/

@@ -1,0 +1,63 @@
+#first-paragraph {
+    color: blue;
+    background-color: goldenrod;
+    font-style: italic;
+    text-align: right;
+}
+
+#second-paragraph {
+    color: #FF0000;
+    background-color: lightpink;
+    font-size: 24px;
+    text-decoration: underline;
+}
+
+#bold-paragraph {
+    font-weight: bold;
+    background-color: #228b22;
+}
+
+/*
+    Now we're going to target those spans we
+    just added in the HTML, using their ids,
+    just like any other HTML element.
+
+    Feel free to mix it up with any of the 
+    properties we learned today; just be sure
+    to include each property once in at least
+    one of the spans, so that students can see
+    how applying the same properties to an
+    inline element change things in some
+    cases.
+*/
+
+#span1 {
+    color: crimson;
+    font-weight: bold;
+    font-size: 48px;
+}
+
+#span2 {
+    font-style: italic;
+    text-decoration: line-through;
+}
+
+#span3 {
+    background-color: yellow;
+}
+
+#span4 {
+    text-align: right;
+}
+
+/*
+    The only property that won't have any effect
+    is the text-align property, because that 
+    property only affects containers with empty 
+    space inside of them.  
+
+    Span elements (and inline elements in general)
+    have no extra space inside of them; they only 
+    take up as much space as they need, so there's 
+    no room to align the content in a different way.
+*/

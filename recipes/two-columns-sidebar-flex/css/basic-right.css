@@ -1,0 +1,68 @@
+/* COMMON PAGE LAYOUT SETUP CSS - START *****************/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    /* preferred copy font goes here */
+    font-family: sans-serif; 
+}
+/* COMMON PAGE LAYOUT SETUP CSS - END ********************/
+
+/*
+    To create a two column layout
+    with a right sidebar:
+    
+    Approach 1 
+        Basically just use the same steps as in the
+        previous page for a left sidebar, but change 
+        the order of the sidebar and the main content.
+
+        (in other words, in the HTML, add the main 
+        content container first, and then add the 
+        sidebar container second)
+
+        This approach requires the exact same CSS as before.
+    
+    Approach 2
+        However, you can actually use the same HTML as
+        we used in the previous example, and change the
+        CSS to make the sidebar swap sides.
+
+        It's a bit convoluted, but there's a special
+        flexbox property called 'order', that can
+        change the order in which flexbox children render.
+
+        In this case, since we want the main content
+        container to render first, and the sidebar content
+        container to render second, we'd them order: 1;
+        and order: 2; respectively.
+
+        This is the approach we used below, since the first
+        approach didn't require any CSS changes.
+
+        Note that the 'order' property only works in 
+        flexbox containers; it won't work anywhere else.
+
+*/
+
+#two-columns {
+    display: flex;
+}
+
+#sidebar-content {
+    background-color: lightgreen;
+    width: 250px;
+    
+    /* APPROACH 2 */
+    order: 2;
+}
+
+#main-content {
+    background-color: #37d37b;
+    flex: 1;
+
+    /* APPROACH 2 */
+    order: 1;
+}

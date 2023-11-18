@@ -1,0 +1,15 @@
+.italics {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+.colored {
+    color: red;
+}

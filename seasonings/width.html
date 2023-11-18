@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>width Properties</title>
+        <link href="css/width.css" rel="stylesheet" data-seasoning>
+        <link href="css/shared.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="recipe-example">
+            <h4>Basic Code Snippets</h4>
+            <code>width: 500px;</code>
+            <br>
+            <code>width: 100%;</code>
+            <br>
+            <code>width: 50%;</code>
+        </div>
+        <h4>Additional Examples</h4>
+        <p>
+            The width property, as you might be able to guess,
+            allows you to specify a width for a particular
+            element.
+        </p>
+        <p>
+            However, there are actually a couple different types 
+            of units that can be used with the width property,
+            along with a related property that you should 
+            know about.
+        </p>
+        <p>
+            So let's take a look at how we can use the width 
+            property, as well as some of the caveats 
+            associated with it.
+        </p>
+        <h2>Width and Document Flow</h2>
+        <p>
+            The width property might behave differently than
+            you expect depending on the type of element you 
+            use it with.  Let's take a look at some examples.
+        </p>
+
+        <h3>Width and Block Elements</h3>
+        <p>
+            The width property is pretty straightforward 
+            with block elements.  Let's apply set it with some 
+            pixel values to a few div elements along with a 
+            border and background.
+        </p>
+        <div class="example">
+            <div class="block block-width-1">width: 150px;</div>
+            <div class="block block-width-2">width: 400px;</div>
+            <div class="block block-width-3">width: 250px;</div>
+            <div class="block block-width-4">width: 30px;</div>
+        </div>
+        <p>
+            Pretty much as expected, each block element is set
+            to the pixel widths we set for them.
+        </p>
+        <p>
+            But notice a couple of things: 
+            <ul>
+                <li>
+                    Block elements always stay on their line;
+                    they never go side-by-side, even when there 
+                    is room to do so.
+                </li>
+                <li>
+                    When block elements' width gets too short, 
+                    the content in them may overflow the width 
+                    we specified.
+                </li>
+                <li>
+                    When block elements' width gets longer than
+                    their container, the block element will
+                    overflow past the edge of the container.
+                </li>
+            </ul>
+        <p>
+        <p>
+            Now let's take a look at some examples using 
+            relative units, such as percentages. It's important
+            to remember that when using relative units, they 
+            are usually relative to their containers.
+        </p>
+        <div class="example">
+            <div class="block block-width-5">width: 100%;</div>
+            <div class="block block-width-6">width: 50%;</div>
+        </div>
+        <p>
+            This also looks pretty straightforward at first
+            glance: one block fills 100% of the width of the 
+            container, while the other fills 50% of it.
+        </p>
+        <p>
+            ...but if that's the case, why are there gaps on
+            the sides of the 100% block?
+        </p>
+        <p>
+            Part of the answer is because the container 
+            has padding set on it, so there should be space 
+            INSIDE the container before the content begins.
+        </p>
+        <p>
+            But if that was it, then why are the gaps 
+            not equal on each side?
+        </p> 
+        <p>
+            Well, that has to do with a rather annoying 
+            default behavior of HTML Elements...
+        </p>
+
+        <h3>Box-sizing and content-box vs border-box</h3>
+        <p>
+            There is a CSS Property called box-sizing
+            which has a default value of 'content-box'.
+        </p>
+        <p>
+            And 'content-box' means that when we set a 
+            width property, we are setting the width of
+            the CONTENT area of the element.
+        </p>
+        <p>
+            That means that the padding and border widths
+            get added on IN ADDITION to the width that we 
+            specified. Which why there's less space on
+            the right side.
+        </p>
+        <p>
+            Almost no one thinks that way or expects that 
+            when we set a width on an element, so we
+            usually change the box-sizing property to a 
+            value of 'border-box'.
+        </p>
+        <p>
+            Let's try that with our previous example, 
+            and see what happens.
+        </p>
+        <div class="example">
+            <div class="block block-width-5 border-box">
+                width: 100%; (with box-sizing: border-box;)
+            </div>
+        </div>
+        <p>
+            Now the space on either side is equal, and
+            that's because the width we set includes
+            the border and padding on our box, thanks
+            to the 'border-box' value.
+        </p>
+        <p>
+            So, moral of the story: set the box-sizing 
+            property to 'border-box' if you plan on 
+            using relative width values like percentages.
+        </p>
+        <p>
+            You'll save yourself a lot of headaches.
+        </p>
+
+        <h3>Width and Inline Elements</h3>
+        <p>
+            The width property...is basically ignored by
+            inline elements.  Check out the examples below
+            for proof.
+        </p>
+        <div class="example">
+            <span class="inline inline-width-1">
+                width: 150px;
+            </span>
+            <span class="inline inline-width-2">
+                width: 400px;
+            </span>
+            <span class="inline inline-width-3">
+                width: 250px;
+            </span>
+        </div>
+        <p>
+            Since inline element ignore width, we don't
+            need to linger. Let's see how inline-block
+            elements compare... 
+        </p>
+
+        <h3>Width and Inline-Block Elements</h3>
+        <p>
+            Unlike inline elements, inline-block elements
+            behave nicely with the width property.
+        </p>
+        <div class="example">
+            <div class="inline-block inline-block-width-1">
+                width: 150px;
+            </div>
+            <div class="inline-block inline-block-width-2">
+                width: 400px;
+            </div>
+            <div class="inline-block inline-block-width-3">
+                width: 250px;
+            </div>
+            
+            <div class="inline-block inline-block-width-4">
+                width: 30px;
+            </div>
+        </div>
+        <p>
+            They actually behave very similar to the
+            block elements, but unlike the block elements,
+            if multiple inline-blocks can fit on the same line,
+            they'll slide up next to each other, side-by-side.
+        </p>
+        <p>
+            Aside from that, inline-blocks are nearly identical
+            to block elements in terms of how they respect the 
+            width property.
+        </p>
+        <div class="example">
+            <div class="inline-block inline-block-width-5">
+                width: 100%;
+            </div>
+            <div class="inline-block inline-block-width-6">
+                width: 50%;
+            </div>
+        </div>
+        <p>
+            ...which includes the same box-sizing issue.
+            Thankfully, we can resolve it the same way,
+            just by adding box-sizing: border-box; to our
+            elements with width set.
+        </p>
+        <div class="example">
+            <div class="inline-block inline-block-width-5 border-box ">
+                width: 100%;
+            </div>
+        </div>
+        
+        <div class="resources">
+            <h4>Additional Resources</h4>
+            <a 
+                href="https://www.w3schools.com/cssref/pr_dim_width.php"
+                target="_blank"
+            >
+                w3schools 
+            </a>
+            <br>
+            <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/width"
+                target="_blank"
+            >
+                mdn web docs
+            </a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+/* Drill 4 - Write your code solution below */
+
+/*
+    This drill actually has the exact same 
+    solution as the previous drill.
+
+    The point is that regardless of whether
+    a container has a border or background
+    or not, this approach can be used to center
+    content in a column.
+
+    Sometimes students get tripped up by 
+    different content or styling, so hopefully
+    this example helps shed some light that the
+    exact same code works regardless (as long 
+    as you apply it to the right container).
+*/
+
+#container-d4 {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}

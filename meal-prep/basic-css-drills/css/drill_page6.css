@@ -1,0 +1,12 @@
+/* Drill 6 - Write your code solution below */
+
+/*
+    Similar to previous drills again, just 
+    showcasing the "highlighter" effect of 
+    background-color when used on inline
+    elements.
+*/
+
+#d6-s2 {
+    background-color: rgb(255, 255, 0);
+}

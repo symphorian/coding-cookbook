@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Anchors (Links) Demo</title>
+    </head>
+    <body>
+        <a href="https://www.google.com" target="_blank">
+            Click me to go to Google's homepage
+        </a>
+        <a href="https://www.w3schools.com/" target="_blank">
+            Learn more at w3schools!
+        </a>
+        <p>
+            If you want to dig REALLY deep into web dev,
+            <a 
+                href="https://developer.mozilla.org/en-US/" 
+                target="_blank"
+            >
+                visit developer.mozilla.org!
+            </a>
+        </p>
+        <h6>TABLE OF CONTENTS</h6>
+        <ul>
+            <li>
+                <a href="#">Jump to Section 1</a>
+            </li>
+            <li>
+                <a href="#">Jump to Section 2</a>
+            </li>
+            <li>
+                <a href="#">Jump to Section 2</a>
+            </li>
+        </ul>
+        <!--
+            We have our anchor elements ready to accept the
+            id attribute values that we need, so let's get those
+            elements with their ids set up next.
+
+            We're going to use headings for this purpose,
+            h2 elements in particular.
+
+            (As an aside, it is good practice to only have one 
+            single h1 element on the page; since we're going to
+            need several headings for our table of contents, 
+            that's why we're not using h1 elements.)
+        -->
+        <h2 id="section1">Welcome to Section 1!</h2>
+        <!--
+            We have our heading with an id attribute up above.
+            However, if all our sections are visible on the page,
+            our links won't actually do anything, since the page
+            won't be able to scroll.
+
+            So...we're going to do something very dirty code-wise...
+
+            We're going to add line break elements <br> to 
+            artificially lengthen the page.  
+
+            Tell the students to NEVER EVER do this in real code.  
+            The only reason we're doing it here is because we 
+            don't know CSS yet, and it would overcomplicate the demo 
+            to add hundreds of lines of lorem ipsum to fill the page.
+        -->
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </body>
+</html>

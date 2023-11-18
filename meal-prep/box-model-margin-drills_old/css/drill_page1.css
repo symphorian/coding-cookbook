@@ -1,0 +1,24 @@
+/* Drill 1 - Write your code solution below */
+
+/*
+    We start out by simply modifying the bottom
+    margin of the top div to push away the div
+    below it.
+
+    Remind the students to think of margin as
+    "personal space" between elements.
+*/
+
+#d1-div1 {
+    margin-bottom: 24px;
+}
+
+/*
+    We could have also done the opposite, adding
+    more top margin to the bottom div.
+
+    #d1-div2 {
+        margin-top: 24px;
+    }
+
+*/

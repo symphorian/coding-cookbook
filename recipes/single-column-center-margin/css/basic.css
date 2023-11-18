@@ -1,0 +1,51 @@
+/* COMMON PAGE LAYOUT SETUP CSS - START *****************/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    /* preferred copy font goes here */
+    font-family: sans-serif; 
+}
+/* COMMON PAGE LAYOUT SETUP CSS - END ********************/
+
+/*
+    To create a single column layout
+    with a center column:
+    
+    Step 1 
+        Start by setting an explicit width.
+        Either absolute or relative units are fine
+        (although you'll probably also want to set
+        a min-width if using relative units,
+        as we do below).
+    
+    Step 2
+        Next, set the auto value on the left/right 
+        margin of the column.
+
+        You can use the margin shorthand
+        (margin: top/bottom left/right),
+
+        or the individual margin side properties
+        (
+            margin-left: auto; 
+            margin-right: auto;
+        )
+
+    That's it! We also added a background
+    color below so you can see the boundaries
+    of the column.
+*/
+
+.center-column {
+    background-color: lightblue;
+
+    /* Step 1 */
+    width: 50%; 
+    min-width: 500px;
+
+    /* Step 2 */
+    margin: 0px auto; 
+}

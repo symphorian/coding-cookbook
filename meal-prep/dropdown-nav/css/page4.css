@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#navbar {
+    background: linear-gradient(to bottom, #109cb8, #0e5b96);
+    display: flex;
+    align-items: center;
+}
+
+#navbar a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 24px;
+}
+
+#navbar a:hover {
+    background: linear-gradient(to top, #109cb8, #0e5b96);
+}
+
+#navbar #logo {
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 36px;
+    padding-top: 13px;
+    padding-bottom: 12px;
+}
+
+/*
+    Remember that our preferred approach for
+    building content that is meant to be hidden
+    is to build it in its visible state first.
+
+    So, we need to think about how we want this
+    content to be positioned and styled before
+    we make it invisible.
+
+    First off, we definitely don't want the
+    dropdown menu content in the navbar itself.
+
+    So, we can use position: absolute; to remove
+    it from the normal flow.  But remember, there's
+    something we always need to do before we can
+    use position: absolute (correctly).
+
+    Anyone remember? (pause for students to answer)
+
+    We need to use position: relative; on the 
+    container of whatever we want to position
+    absolutely.
+
+    In our case, that would be the dropdown-container.
+*/
+
+.dropdown-container {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+}
+
+/*
+    Looking better already! ...well, actually
+    the dropdown menu seems to have disappeared
+    entirely, at least until you hover over it
+    underneath the gallery section.
+
+    See, we never actually gave a background to
+    the hyperlinks in the dropdown menu, so 
+    they're just white text against a white
+    background.
+
+    But they're still there! Let's make them
+    more visible in our next step.
+*/

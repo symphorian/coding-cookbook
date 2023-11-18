@@ -1,0 +1,74 @@
+/* Drill 1 - Write your code solution below */
+
+/*
+    This is a simple drill just showcasing the 
+    display property, and how it can be used 
+    to change the default flow of block elements
+    into inline.
+
+    As block elements, each div takes up an
+    entire line on their own, but after being
+    transformed into inline elements, they
+    only take up as much space as they need,
+    and can sit side-by-side.
+
+    (Their vertical margin and padding would also
+    be ignored by surrounding text, if there was
+    any, even though visually the boxes seem the 
+    same as before aside from their length.
+
+    This drill was designed to hide that fact,
+    so that students can just focus on the 
+    basic difference between block and inline.)
+*/
+
+/* this solution uses a Class Selector */
+.d1-div {
+    display: inline;
+}
+
+/*
+    Some students may try to target each div
+    element individually with ID Selectors,
+    (as below) and that's not wrong.
+    
+    However, we like to say that 
+
+    "good coders are lazy coders", 
+
+    not in the sense that they don't do their
+    work or that they procrastinate, but in 
+    that they try to accomplish their goals
+    using as little code as possible.
+
+    The code above uses a Class Selector,
+    which ends up being much shorter and 
+    simpler, while accomplishing the same
+    thing.
+*/
+
+
+/* this version is very verbose */
+#d1-div1 {
+    display: inline;
+}
+
+#d1-div2 {
+    display: inline;
+}
+
+#d1-div3 {
+    display: inline;
+}
+
+/* 
+    this version is slightly more condensed,
+    but still more verbose than using a 
+    Class Selector.
+*/
+
+#d1-div1,
+#d1-div2,
+#d1-div3 {
+    display: inline;
+}

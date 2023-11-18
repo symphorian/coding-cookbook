@@ -1,0 +1,22 @@
+/*
+    This demo is going to be a bit more dynamic
+    than usual; we're going to be modifying 
+    things quite a bit, showcasing different
+    designs that could be applied to a navbar,
+    as opposed to building multiple navbars.
+
+    This maybe be a bit confusing to folks
+    following the live demo, but be aware that
+    the different navbars we'll be 
+    building are also covered in the Layouts
+    section of the Coding Cookbook.
+
+    To start out, we'll use a pretty basic
+    HTML structure of a div with anchors 
+    inside.
+
+    (There's a big debate about whether it's 
+    better to include navigation items in 
+    lists or not, but in the interest of 
+    simplicity, we're not going to use lists)
+*/

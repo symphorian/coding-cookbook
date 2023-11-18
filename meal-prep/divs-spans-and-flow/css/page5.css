@@ -1,0 +1,49 @@
+/*
+    Now, we're going to making some changes to
+    the way that last div "flows" or behaves
+    with the content around it on the page.
+
+    But before that, we're going to introduce
+    a new property called "width", that will
+    make the flow changes a bit more 
+    noticeable, and it's a very useful property
+    when it comes to customizing your site.
+
+    We're also going to use a different way
+    of targeting our HTML.  Before, we were
+    using id attributes and id selectors;
+    this time, we're going to use class
+    attributes and class selectors.
+
+    Classes are actually very similar to
+    ids, except that id values are supposed
+    to be used only once on a page; class
+    values are the opposite: they can (and
+    should be) reused as many times as you
+    want.
+
+    The term "class" in this context is not
+    referring to a class as in our school class, 
+    or a classroom.  Instead, think more like
+    a classification or category.
+    
+    For example, when it comes to classifying 
+    animals, each animal has a different "class", 
+    order, genus, etc.
+
+    Another example might be different classes
+    of cars: sedan, station wagon, minivan, etc.
+
+    To use a class selector, we must have a 
+    class attribute on the HTML element(s)
+    we want to target, and in the CSS, we must
+    have a dot (.) in front of the class value.
+
+    Let's give our div a class called 'narrow',
+    and target it below, using the new width
+    property.
+*/
+
+.narrow {
+    width: 200px;
+}

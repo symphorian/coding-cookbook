@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif; 
+}
+
+/*
+    So now that we've seen how to size our grid
+    with equally sized columns, now let's resize 
+    them in order to create a sidebar.
+
+    To do that, we're going to use a mix of 
+    absolute and relative sizes: 
+
+    we'll used 250px for the sidebar column,
+    and we'll use 1fr ("one fractional unit")
+    for the main content column.
+
+    1fr in column widths is actually very similar
+    to when we used flex: 1; in the demos from the
+    previous day's class.
+
+    It makes the column become "fluid", filling
+    the available space and/or sizing relative to
+    other columns using fractional units.
+*/
+#grid-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr; /* updated */
+}
+
+/*
+    Now you can see that we have a smaller sidebar
+    column, and a wider, flexible main content 
+    column.
+
+    Stretch and squish the preview window to show
+    students how the right column is flexible and 
+    "fluid", resizing to fill the available space.
+
+    However, UNLIKE a flexbox, the sidebar column
+    will not compress when the window gets too 
+    small; the grid will just start to overflow,
+    which is one of the ways that CSS Grids are
+    more rigid than Flexboxes.
+
+    Sometimes that's what we want, and other times
+    that's not what we want.
+
+    And with that, we have a simple (and boring)
+    Two Column Layout with a sidebar on the left 
+    using CSS Grid.
+*/
+
+#sidebar-content {
+    background-color: lightblue;
+}
+
+#main-content {
+    background-color: lightgreen;
+}

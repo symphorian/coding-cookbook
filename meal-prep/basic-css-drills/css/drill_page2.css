@@ -1,0 +1,32 @@
+/* Drill 2 - Write your code solution below */
+
+/*
+    Similar challenge as the first drill, just
+    now there's more options to choose from.
+    They could write two separate CSS rules,
+    and that would be fine, but this is a 
+    good chance to show them how they can
+    combine selectors to "share" a CSS rule
+    across multiple elements.
+*/
+
+#d2-s1,
+#d2-s3 {
+    color: #F711F7;
+}
+
+/* 
+    The above code is exactly the same as the
+    code below, just more compact and less
+    repetitious (which is something to avoid
+    whevever possible in coding)
+*/
+
+#d2-s1 {
+    color: #F711F7;
+}
+
+#d2-s3 {
+    color: #F711F7;
+}
+

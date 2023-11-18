@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>order Property (Flexbox)</title>
+        <link href="css/order.css" rel="stylesheet" data-seasoning>
+        <link href="css/shared.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="recipe-example">
+            <h4>Basic Code Snippets</h4>
+            <code>order: 0;</code>
+            <br>
+            <code>order: 6;</code>
+            <br>
+            <code>order: 2;</code>
+        </div>
+        <h4>Additional Examples</h4>
+        <p class="warning">
+            NOTE: The order property is a 
+            <strong>Flexbox Item Property</strong>.
+            <br>
+            <br>
+            This property will have no effect if applied to
+            an element that is not <strong>INSIDE</strong> 
+            an activated Flexbox Container (i.e. has 
+            <code><strong>display: flex;</strong></code>
+            applied to it)
+        </p>
+        <p>
+            The order property can be used to reorder the 
+            position of elements inside of a Flexbox Container.
+        </p>
+        <p>
+            The default order value of all Flexbox Items is 0,
+            and it can be set to any whole number value, whether
+            positive or negative.
+        </p>
+        <p>
+            Flexbox Items with the order property will arrange
+            themselves relative to the order values of other 
+            Items.
+        </p>
+
+        <h4>No <code>order</code> Properties</h4>
+        <p>
+            We'll start by showing you a basic Flexbox Container,
+            with no order properties set on the Flexbox Items
+            inside.
+        </p>
+
+        <div class="flex-container">
+            <div class="box">A</div>
+            <div class="box">B</div>
+            <div class="box">C</div>
+            <div class="box">D</div>
+        </div>
+
+        <p>
+            Pretty basic. No reordering occurring.
+        </p>
+
+        <h4>One <code>order</code> Property</h4>
+        <p>
+            Now, we'll give one Item an order property.
+        </p>
+
+        <div class="flex-container">
+            <div class="box">A</div>
+            <div class="box order-2">B (order: 2;)</div>
+            <div class="box">C</div>
+            <div class="box">D</div>
+        </div>
+        <br>
+
+        <p>
+            Remember, each Item has a default order property of 0,
+            so by giving an order value of 2 to Item B, it moves to 
+            the end, since it has a greater order value than all the
+            other items (2 > 0).
+        </p>
+        <p>
+            Let's try another, but a negative value this time.
+        </p>
+        
+        <div class="flex-container">
+            <div class="box">A</div>
+            <div class="box">B</div>
+            <div class="box">C</div>
+            <div class="box order-minus1">D (order: -1;)</div>
+        </div>
+        <br>
+
+        <p>
+            Again, since the default order value is 0, and since
+            we gave Item D an order value of -1, that will move it
+            in front of all the other items (since -1 < 0).
+        </p>
+
+        <h4>Multiple <code>order</code> Properties</h4>
+        <p>
+            Now, we'll assign multiple order properties.
+        </p>
+
+        <div class="flex-container">
+            <div class="box order-2">A (order: 2;)</div>
+            <div class="box order-5">B (order: 5;)</div>
+            <div class="box order-1">C (order: 1;)</div>
+        </div>
+        <br>
+
+        <p>
+            In this case, the order of the boxes in the 
+            HTML are A, B, C; but as you can see, they
+            have been reordered to be C, A, B.
+        </p>
+
+        <p>
+            That's expected, since the order property values 
+            for C, A, and B are 1, 2, and 5, respectively.
+        </p>
+
+        <div class="resources">
+            <h4>Additional Resources</h4>
+            <a 
+                href="https://www.w3schools.com/cssref/css3_pr_order.php"
+                target="_blank"
+            >
+                w3schools 
+            </a>
+            <br>
+            <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/order"
+                target="_blank"
+            >
+                mdn web docs
+            </a>
+        </div>
+    </body>
+</html>

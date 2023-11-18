@@ -1,0 +1,17 @@
+/* Drill 3 - Write your code solution below */
+
+/*
+    Growing more complex by tiny steps.
+
+    First (after targeting the correct container),
+    they need to activate flexbox.
+
+    Then, they need to use flex-direction to 
+    change the default direction (row) to
+    column instead.
+*/
+
+#container-3 {
+    display: flex;
+    flex-direction: column;
+}

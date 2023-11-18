@@ -1,0 +1,51 @@
+/* Drill 4 - Write your code solution below */
+
+/*
+    NOTE: Students should not be reorganizing
+    or modifying the HTML for this one; that
+    would be consider cheating :-P
+
+    If students set up grid-template-areas
+    correctly in the last drill, then this one
+    should be a piece of cake.
+
+    They just need to apply the same styles to
+    the different selectors, and swap the 
+    ordering of the area names in 
+    grid-template-areas.
+
+    If not, they'll need to make sure they have
+    the area names mapped out correctly in 
+    grid-template-areas, and then assigned
+    correctly in the grid items using grid-area.
+
+    A reminder: the area names don't matter at 
+    all, as long as they're consistent.
+
+    We could have named our grid areas
+        "mickey donald goofy"
+    and as long as we use those consistently
+    in the grid-area properties of our cells,
+    the layout will still work.
+
+    ...but it definitely helps human readability
+    to give the areas names that make sense for
+    what they represent.  So encourage students
+    to use meaningful area names.
+*/
+
+#container-d4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "two three one";
+}
+
+#d4-cell1 {
+    grid-area: one;
+}
+#d4-cell2  {
+    grid-area: two;
+}
+#d4-cell3  {
+    grid-area: three;
+}

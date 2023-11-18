@@ -1,0 +1,231 @@
+/*
+    Here's an example of how you can modify the code
+    from the "Two Column Layouts - Mixed" Demo to
+    customize it and do something more interesting
+    with it.
+
+    The fanciness of the video "leaves" and their
+    hover animation is more than I'd expect except 
+    for the most advanced students (and I mean
+    really advanced, like they already knew how to
+    code coming in).
+
+    However, everything else, like the color changes,
+    the icons, border radii, and the font changes
+    should be very doable at this point.
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif; 
+    background-color: #dffcc1;
+}
+
+/* GRID SETUP ***********************************/
+
+#grid-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-areas: 
+        "header header"
+        "sidebar main";
+}
+
+#header {
+    grid-area: header;
+    padding: 0px 36px;
+}
+
+#sidebar {
+    grid-area: sidebar;
+    padding: 0px 24px;
+}
+
+#main {
+    grid-area: main;
+    display: flex; 
+    flex-wrap: wrap; 
+}
+
+/* HEADER STYLES *******************************/
+
+#header a {
+    text-decoration: none;
+}
+
+#header #me {
+    color: #013701;
+}
+
+#header #tube {
+    color: white;
+    background-color: green;
+    padding: 4px;
+    border-radius: 12px;
+}
+
+/* SIDEBAR STYLES *****************************/
+
+#sidebar ul {
+    padding: 12px 0px;
+    margin: 0px;
+    list-style-type: none;
+    border-bottom: 1px solid green;
+}
+
+#sidebar ul:last-child {
+    padding: 12px 0px;
+    margin: 0px;
+    list-style-type: none;
+    border-bottom: 0px;
+}
+
+#sidebar ul a {
+    text-decoration: none;
+    color: #013701;
+    display: block;
+    padding: 12px;
+    font-size: 18px;
+}
+
+#sidebar ul a:hover {
+    background-color: green;
+    color: #dffcc1;
+    border-radius: 12px;
+}
+
+#sidebar ul .user-thumbnail {
+    vertical-align: middle;
+    margin-right: 12px
+}
+
+#sidebar ul a:hover .user-thumbnail {
+    border-color: #dffcc1;
+}
+
+#sidebar i {
+    display: inline-block;
+    font-size: 24px;
+    margin-right: 8px;
+}
+
+#sub-label {
+    margin-top: 24px;
+    margin-left: 12px;
+    font-size: 22px;
+    color: #013701;
+}
+
+/* Video Item Elements (metube-items) ******/
+
+.metube-item {
+    flex: 250px;
+    min-width: 25%;
+    max-width: 350px;
+    margin-right: 24px;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.metube-item:hover {
+    cursor: pointer;
+}
+
+.metube-item:hover a {
+    text-decoration: underline;
+}
+
+.metube-item .leaf,
+.metube-item .thumbnail {
+    width: 100%;
+    border-radius: 55% 0px;
+    border: 5px solid green;
+    background-color: green;
+}
+
+/*
+    These fancy little leaves basically
+    have the same shape as the video,
+    but we use absolute positioning to
+    push them behind the video, and 
+    rotate them to get the effect of a
+    bud.
+
+    We also use a bit of CSS Transitions
+    to add a bit of animation on hover,
+    rotating them more and increasing
+    their opacity.
+*/
+
+.metube-item .leaf {
+    aspect-ratio: 16 / 9;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.5;
+    transform-origin: bottom left;
+    transition: 
+        transform 0.5s,
+        opacity 0.5s;
+}
+
+.metube-item .leaf {
+    transform: rotate(-4deg) scale(0.95);
+}
+
+.metube-item .leaf:first-child {
+    transform: rotate(4deg);
+}
+
+.metube-item:hover .leaf {
+    transform: rotate(-5deg) scale(0.95);
+    opacity: 0.35;
+}
+
+.metube-item:hover .leaf:first-child {
+    transform: rotate(5deg);
+    opacity: 0.35;
+}
+
+.metube-item-details {
+    display: flex;
+    border-left: 8px solid green;
+    padding-top: 24px;
+    position: relative;
+    top: -8px;
+}
+
+.user-thumbnail {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 0px 45%;
+    border: 3px solid green;
+    background-color: green;
+}
+
+.metube-item h4 {
+    margin: 8px;
+}
+
+.metube-item h4 a {
+    text-decoration: none;
+    color: #013701;
+    display: block;
+}
+
+.metube-item h4 a:hover {
+    text-decoration: underline;
+}
+
+.metube-item .video-details {
+    margin: 8px;
+    font-size: 14px;
+}
+
+.metube-item .video-channel {
+    margin-bottom: 4px;
+}

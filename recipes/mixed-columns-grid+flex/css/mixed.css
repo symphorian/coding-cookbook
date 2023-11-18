@@ -1,0 +1,126 @@
+/* COMMON PAGE LAYOUT SETUP CSS - START *****************/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    /* preferred copy font goes here */
+    font-family: sans-serif; 
+}
+/* COMMON PAGE LAYOUT SETUP CSS - END ********************/
+
+/*
+    If you've looked at previous examples using grid,
+    you've hopefully seen how grid gives you a LOT of
+    control, but can be a bit overly rigid.
+
+    But what if we used BOTH grid and flex together?
+
+    Not on the same element of course, but we can set
+    up an "outer" grid layout, and inside of that,
+    set up an "inner" flex layout.
+
+    You'll see that this gives us the rigidity and 
+    control of a grid, while also giving us the 
+    flexibility of flexbox!
+*/
+
+body {
+    background-color: #E0E0E0;
+    color: #111111;
+}
+
+#outer-layout {
+    /*
+        This time, we'll be using only three columns;
+        the two on the ends will be gutters again, but
+        the inner column will be our content column,
+        which we'll also turn into a flexbox.
+    */
+    display: grid;
+    grid-template-columns: 1fr 800px 1fr;
+    grid-template-areas: 
+        ". content-area .";
+}
+
+#inner-layout {
+    /*
+        First, we'll hook up this element to the 
+        grid area called content-area in our
+        grid-template-areas
+    */
+    grid-area: content-area;
+
+    /*
+        Then, we'll activate flexbox functionality on
+        it; this is possible because this element
+        is NOT the grid; it is a grid item (or child).
+
+        An element cannot be both a grid and flexbox,
+        but a grid's children can be flexboxes 
+        (and vice versa).
+    */
+    display: flex;
+}
+
+/*
+    Our columns (#column-1, #column-2, and #column-3)
+    are now flexbox children, so we can size them
+    using the flex property.
+
+    If we give one column a flex value of 2,
+    and the other two flex values of 1,
+    that first column will be twice as wide as
+    the other two, as we do below.
+*/
+
+#column-1 {
+    background-color: white;
+    padding: 0px 12px;
+    
+    /*
+        This will cause this flex item to be 
+        twice as wide as items given flex: 1;
+    */
+    flex: 2;
+}
+
+#column-2 {
+    background-color: white;
+    padding: 0px 12px;
+    
+    /*
+        This will cause this flex item to be 
+        half as wide as items given flex: 2;
+    */
+    flex: 1;
+}
+
+#column-3 {
+    background-color: white;
+    padding: 0px 12px;
+    
+    /*
+        This will cause this flex item to be 
+        half as wide as items given flex: 2;
+    */
+    flex: 1;
+}
+
+#inner-layout img {
+    margin-top: 24px;
+    width: 100%;
+}
+
+#inner-layout h2,
+#inner-layout h3 {
+    border-bottom: 2px solid #888888;
+    padding-bottom: 4px;
+    margin-bottom: 0px;
+}
+
+#inner-layout p {
+    margin-top: 12px;
+}
+

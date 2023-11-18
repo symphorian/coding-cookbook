@@ -1,0 +1,42 @@
+/*
+    Now let's try out a font-style and 
+    font-size.
+
+    The font-style property is used to 
+    make text italicized or not.
+
+    The font-size property, as you may
+    be able to guess, allows us to change
+    the size of our font.  Typically, we'll
+    use either pixel units or 'em' units.
+
+    (The default font-size in pixels is
+    usually somewhere around 16px)
+    
+    ('em' is relative to the size of the 
+    letter M of the font, so 2em is twice 
+    the size of the letter M)
+
+    Add a font-style property to the 
+    first paragraph, and font-size to the
+    second.  Feel free to try out different
+    font-sizes (and encourage students to 
+    do the same)
+*/
+
+#first-paragraph {
+    color: blue;
+    background-color: goldenrod;
+    font-style: italic;
+}
+
+#second-paragraph {
+    color: #FF0000;
+    background-color: lightpink;
+    font-size: 24px;
+}
+
+#bold-paragraph {
+    font-weight: bold;
+    background-color: #228b22;
+}

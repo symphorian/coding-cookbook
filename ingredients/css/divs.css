@@ -1,0 +1,5 @@
+#colorful {
+    background: linear-gradient(to top right, teal, aquamarine);
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}

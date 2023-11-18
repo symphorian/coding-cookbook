@@ -1,0 +1,13 @@
+/* Drill 1 - Write your code solution below */
+
+/*
+    Starting things out simply: the two divs
+    are already set up with borders and
+    background-colors, they just need to add
+    padding to the OUTER div to add more
+    cushion for the INNER div.
+*/
+
+#d1-container-1 {
+    padding: 36px;
+}

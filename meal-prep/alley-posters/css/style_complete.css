@@ -1,0 +1,92 @@
+/*
+    This is a completed example of what could be done for the assignment.
+*/
+
+/*
+    NOTE TO STUDENTS: 
+
+    This is the file you should be writing your CSS in 
+    for the assignment.
+
+    Good luck, and have fun!
+*/
+
+.poster-1 {
+    margin: 80px 12px 0px;
+    transform: rotate(-7deg)
+}
+
+.poster-2 {
+    background-color: #8c4d1a88;
+    margin: 50px 12px 0px;
+    box-shadow: inset 0px 0px 4px 4px #000000AA;
+    padding: 12px;
+    border-radius: 2px
+}
+
+.poster-3 {
+    margin: 20px 12px 0px 0px;
+    transform: rotate(5deg);
+    display: inline-block;
+}
+
+.poster-4 {
+    margin: 20px 12px 0px 24px;
+    width: 120px;
+    transform: rotate(-4deg);
+    display: inline-block;
+}
+
+.poster-3 div {
+    padding: 4px;
+    background-color: #faebd7cc;
+}
+
+.poster-1 img {
+    width: 80px;
+}
+
+.poster-2 img {
+    width: 120px;
+}
+
+.poster-3 img {
+    width: 50px;
+    margin-top: 4px;
+    transform: rotate(3deg)
+}
+
+.poster-4 div {
+    padding: 8px;
+    background-color: rgb(247, 241, 205);
+}
+
+.poster-4 div div {
+    border: 2px solid black;
+    padding: 0px;
+    text-align: center;
+}
+
+.poster-4 h2 {
+    font-size: 12px;
+    margin-bottom: 0px;
+}
+
+.poster-4 h6 {
+    font-size: 8px;
+    margin: 0px;
+}
+
+.poster-4 i {
+    font-size: 36px;
+    margin: 12px 0px;
+}
+
+.poster-4 p {
+    font-size: 7px;
+}
+
+.poster-4 p i {
+    font-size: 8px;
+    margin: 4px 2px;
+}

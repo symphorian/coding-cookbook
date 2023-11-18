@@ -1,0 +1,127 @@
+/* standard page layout setup */
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.single-column {
+    min-width: 600px;
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+#main-section {
+    background: 
+        radial-gradient(at top left, #d86fee, #8122ed);
+    padding: 48px;
+}
+
+/* General comparison setup */
+.comparisons-container {
+    text-align: center;
+    margin: 60px 0px;
+}
+
+.comparisons-container h3 {
+    font-size: 36px;
+}
+
+
+/* Comparison Layout 1 ************************************/
+
+/*
+    This implementation uses flexbox to build columns
+    within the flexbox container.
+*/
+.comparisons-layout-1 {
+    display: flex;
+    justify-content: center;
+}
+
+.comparisons-layout-1 .comparison-column {
+    background-color: #bfefff;
+    border: 3px solid #d86fee;
+    padding: 24px;
+}
+
+.comparisons-layout-1 .comparison-column h4,
+.comparisons-layout-1 .comparison-column p {
+    padding: 24px 48px;
+}
+
+.comparisons-layout-1 .comparison-column h4 {
+    background-color: #8122ed;
+    color: #bfefff;
+    font-size: 24px;
+    margin: 0px
+}
+
+.comparisons-layout-1 .comparison-column p {
+    font-size: 18px;
+    margin: 0px;
+    border-top: 3px solid #8122ed;
+}
+
+.comparisons-layout-1 .comparison-column .label {
+    display: block;
+    font-weight: bold;
+    padding-bottom: 12px;
+}
+
+/* Comparison Layout 2 ************************************/
+
+/*
+    This implementation uses flexbox again, but this time
+    we use many flexbox containers to build rows.
+
+    This requires a different HTML structure to support it.
+*/
+.comparisons-layout-2 {
+    background-color: #3f0791;
+    padding: 36px;
+}
+
+.comparison-row {
+    display: flex;
+    border-bottom: 3px solid #bfefff;
+    color: #bfefff;
+}
+
+.comparison-row.comparison-header {
+    font-weight: bold;
+}
+
+.comparison-row div {
+    flex: 1;
+    padding: 24px;
+    font-size: 24px;
+}
+
+/* Comparison Layout 3 ************************************/
+
+/*
+    This implementation uses CSS Grid.
+
+    This requires yet another different HTML structure 
+    to support it, but it is generally the simplest 
+    of the three implementations here.
+*/
+
+.comparisons-layout-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.comparisons-layout-3 div {
+    padding: 24px;
+    font-size: 24px;
+    border-bottom: 3px solid #3f0791;
+}
+
+.comparisons-layout-3 .label {
+    font-weight: bold;
+}

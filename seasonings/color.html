@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>color Property</title>
+        <link href="css/color.css" rel="stylesheet" data-seasoning>
+        <link href="css/shared.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="recipe-example">
+            <h4>Basic Code Snippets</h4>
+            <code>color: crimson;</code>
+            <br>
+            <code>color: #4D66CF;</code>
+            <br>
+            <code>color: rgb(158, 6, 213);</code>
+        </div>
+        <h4>Additional Examples</h4>
+        <p id="green-text">
+            This text is colored green by using one of the 
+            standardized HTML Color Names; in this case, 
+            we simply used the color name "green".
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, 
+            <span class="red-text">
+                This text is color red by using a hexadecimal color,
+                such as <code>#FF0000</code>.
+            </span> 
+            Quaerat consequatur ipsa fugiat quibusdam vitae eum 
+            ipsum ipsam totam, nisi voluptatibus quae debitis non 
+            magnam quis cumque perferendis porro neque corporis.
+        </p>
+        <div>
+            <p>
+                The text in these paragraphs inside of the div 
+                element are colored a light purple by using the 
+                special "functional notation" syntax for a function 
+                called <code>rgb()</code>.
+            </p>
+            <p>
+                "r" stands for red, "g" stands for green, and "b" 
+                stands for blue.  Each color channel accepts a value 
+                between 0 and 255.  In this case, we used
+                <code>rgb(164, 88, 215)</code>.
+            </p>
+            <p class="red-text">
+                Notice that a more specific CSS selector will 
+                have a higher priority than a less specific 
+                CSS selector in having their CSS rule applied.
+                That's why this text is red: Class Selectors
+                are more specific than HTML Element Selectors.
+            </p>
+        </div>
+        <div class="resources">
+            <h4>Additional Resources</h4>
+            <a 
+                href="https://www.w3schools.com/cssref/pr_text_color.php"
+                target="_blank"
+            >
+                w3schools 
+            </a>
+            <br>
+            <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/color"
+                target="_blank"
+            >
+                mdn web docs
+            </a>
+        </div>
+    </body>
+</html>

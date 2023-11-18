@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+/*
+    A navbar with just hyperlink is all well
+    and good, but most navbars also include
+    a logo or brand name.  So let's hop
+    back to the HTML, and add a logo into
+    our navbar.
+
+    (Go do that in the HTML, then come back here)
+
+    Depending on the logo you used, you may
+    find that it's a little big...and our
+    links are not aligned vertically.
+
+    We'll fix both of those issues next.
+
+    The alignment is an easy fix, thanks to
+    flexbox. We just need to use align-items
+    and give it the value 'center', in order
+    to vertically center its content.
+
+    However, depending on the design (and 
+    the logo), you may want to align the
+    items to the bottom of the container;
+    if so, you could use the 'baseline'
+    or 'flex-end' values instead.
+*/
+#navbar {
+    background: linear-gradient(to bottom, green, #3e6d3e);
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* new */
+}
+
+#navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 24px;
+}
+
+/*
+    And in terms of the image sizing, that's
+    pretty simple as well.  Just target the
+    image, and give it the width (or height)
+    that we think looks good.
+*/
+#navbar img {
+    width: 200px;
+}

@@ -1,0 +1,20 @@
+/* Drill 3 - Write your code solution below */
+
+/*
+    The goal of this drill is to get the block
+    elements side-by-side; the hint for this 
+    drill directly tells them which display
+    value to use, so it should be easy for them.
+
+    However, I recommend showing them what happens
+    if you use the value inline instead of
+    inline-block; then they'll see the peculiar
+    behavior of inline elements, where they 
+    ignore the vertical spacing given to them
+    and act as they were purely text with no
+    styling or decoration on them.
+*/
+
+.d3-div {
+    display: inline-block;
+}

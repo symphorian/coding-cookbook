@@ -1,0 +1,16 @@
+.left-align {
+    text-align: left;
+}
+
+.center-align {
+    text-align: center;
+}
+
+.right-align {
+    text-align: right;
+}
+
+.example {
+    border: 5px solid grey;
+    padding: 8px;
+}

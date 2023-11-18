@@ -1,0 +1,44 @@
+/*
+    Page layout setup
+*/
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#layout {
+    max-width: 800px;
+    margin: 48px auto;
+    text-align: center;
+}
+
+/* 
+    Gallery setup 
+*/
+.horizontal-masonry-gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*
+    We need to restrict the image dimensions
+    in some way, so that they don't remain at
+    their natural sizes.
+
+    In this approach, we'll restrict the height,
+    and allow them to grow horizontally as needed
+    via the flex property.
+
+    This will cause some distortion though, so 
+    we'll need to apply the object-fit property
+    again, to crop the images.
+*/
+.horizontal-masonry-gallery img {
+    height: 250px;
+    flex: 1;
+    object-fit: cover;
+}

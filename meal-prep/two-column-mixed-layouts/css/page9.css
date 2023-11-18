@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif; 
+}
+
+#grid-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-areas: 
+        "header header"
+        "sidebar main";
+}
+
+#header {
+    grid-area: header;
+    padding: 0px 36px;
+}
+
+#sidebar {
+    grid-area: sidebar;
+    padding: 0px 24px;
+}
+
+#main {
+    grid-area: main;
+    display: flex; 
+    flex-wrap: wrap; 
+}
+
+#header a {
+    text-decoration: none;
+}
+
+#header #me {
+    color: #111111;
+}
+
+#header #tube {
+    color: white;
+    background-color: red;
+    padding: 4px;
+    border-radius: 12px;
+}
+
+#sidebar ul {
+    padding: 12px 0px;
+    margin: 0px;
+    list-style-type: none;
+    border-bottom: 1px solid #AAAAAA
+}
+
+
+#sidebar ul a {
+    text-decoration: none;
+    color: #111111;
+    display: block;
+    padding: 12px;
+}
+
+#sidebar ul a:hover {
+    background-color: #EEEEEE;
+    border-radius: 12px;
+}
+
+.metube-item {
+    flex: 250px;
+    margin-right: 12px;
+    margin-bottom: 24px;
+}
+
+.metube-item .thumbnail-placeholder {
+    aspect-ratio: 16 / 9;
+    background: radial-gradient(at top left, crimson, orange);
+    border-radius: 8px;
+}
+
+/*
+    We'll start by modifying the margin of
+    the h4.
+
+    Remember that all headings have default 
+    margin applied to them; we're going to
+    change it, and add margin to all sides.
+
+    (this will result in a slight offset
+    compared to the edge of the thumbnail.
+    Personally, due to the rounded edges of
+    the thumbnail, I feel like having it
+    perfectly aligned to the edge feels 
+    weirder, but feel free to change it
+    up if you disagree)
+*/
+
+.metube-item h4 {
+    margin: 8px;
+}
+
+/*
+    Then we strip the link inside of the h4
+    of its default styling, and give it our
+    own.
+
+    And let's turn it into a block too, so
+    you can hover over the whole line to
+    click on it.
+*/
+
+.metube-item h4 a {
+    text-decoration: none;
+    color: #111111;
+    display: block;
+}
+
+/*
+    And speaking of hover, let's bring back
+    that underline when you hover over the 
+    link.
+
+    Having some kind of visual change when
+    you hover over something interactable
+    or clickable is good web design, 
+    generally speaking.
+*/
+
+.metube-item h4 a:hover {
+    text-decoration: underline;
+}
+
+/*
+    We'll add the same margin to the
+    video-details container, which contains
+    the channel name, view count, and post time.
+
+    We'll also shrink the font size down a bit.
+*/
+
+.metube-item .video-details {
+    margin: 8px;
+    font-size: 14px;
+}
+
+/*
+    And finally, we'll add the slightest bit
+    of margin between the channel name and the
+    other data point beneath it, just to make 
+    it look closer to the YouTube site.
+*/
+
+.metube-item .video-channel {
+    margin-bottom: 4px;
+}
+
+/*
+    And that's it!  That is one way you can potentially
+    use a grid as a primary layout, and then put
+    additional CSS Layout modules inside, to 
+    create more complex and interesting pages layouts.
+
+    This should provide a pretty decent start to the 
+    MeTube project; we got it looking pretty close to
+    a simplified version of the YouTube site...
+
+    ...but the students aren't supposed to be building
+    YouTube; they're building MeTube, their own custom
+    version of YouTube!
+
+    So in addition to adding actual content to the page,
+    they should also customize the page to reflect
+    themselves, not only in its content, but also in 
+    its style and appearance.
+
+    It doesn't need to be mostly white, the color scheme
+    doesn't need to be red, they can adjust the fonts,
+    font sizes, paddings, margins, sizes, border radius...
+
+    There's so much to customize! Encourage students to
+    experiment: if what they tried didn't work, change it
+    back, and then try something else.  That's how they'll
+    learn.
+
+    If they're very paranoid about breaking something,
+    tell them they can either commit and push (basically
+    creating a "save-point" in their code), or duplicate
+    this demo's project folder, so they have a "clean" 
+    version and another version for experimenting.
+*/

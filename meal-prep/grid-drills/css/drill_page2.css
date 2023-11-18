@@ -1,0 +1,19 @@
+/* Drill 2 - Write your code solution below */
+
+/*
+    This drill is similar to the previous one,
+    but this time we have three columns, and the
+    middle one is roughly twice as large as
+    the outer ones.
+
+    Again, students CAN use absolute or 
+    relative units, but it's a lot more work
+    to do the math or trial-and-error to figure
+    out the exact values, as opposed to just
+    using fractional units.
+*/
+
+#container-d2 {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}

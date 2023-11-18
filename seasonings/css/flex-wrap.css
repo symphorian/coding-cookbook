@@ -1,0 +1,57 @@
+/* flex-wrap example related code */
+
+.nowrap {
+    flex-wrap: nowrap;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+/* fancy example related code */
+
+.box.fancy {
+    flex: 1;
+    height: 100px;
+    min-width: 200px;
+}
+
+/* styling related code */
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    background-color: pink;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.box {
+    background-color: lavender;
+    border: 2px solid grey;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 24px;
+    font-weight: bold;
+    height: 50px;
+    margin: 8px;
+    padding: 8px 14px;
+}
+
+.wide {
+    width: 200px;
+}
+
+.very-wide {
+    width: 400px;
+}
+
+.warning {
+    background-color: crimson;
+    color: white;
+    padding: 8px;
+}
+
+.indent {
+    padding-left: 36px;
+}

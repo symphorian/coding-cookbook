@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Images Demo</title>
+    </head>
+    <body>
+        <img 
+            src="https://i.guim.co.uk/img/media/26392d05302e02f7bf4eb143bb84c8097d09144b/446_167_3683_2210/master/3683.jpg?width=1200&quality=85&auto=format&fit=max&s=a52bbe202f57ac0f5ff7f47166906403"
+            width="500"
+            alt="an adorable, yet concerned looking cat"
+        >
+        <!--
+            Alright, so that's it for our "dirty and fragile" way
+            of adding an image to our page.  The dirtiness aspect
+            we've already discussed.
+
+            But why is it fragile? 
+
+            Well, because your link to that image can break at any
+            time.  You don't have any control over that image, 
+            some other site does.  If they decide to take it down
+            or replace it with another, you will no longer have 
+            the image you want up on your site.
+
+            So, let's show how to add an image to your site via a
+            method that will require a little extra effort, but
+            will also be a lot cleaner and more stable.
+
+            Let's start by adding a line break (because images
+            are also inline elements, so if we don't want them
+            side-by-side we need to force them to another line),
+            along with another image element to our page.
+        -->
+        <br>
+        <img>
+    </body>
+</html>

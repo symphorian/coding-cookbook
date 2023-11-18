@@ -1,0 +1,58 @@
+.absolute-heading {
+    font-size: 36px;
+}
+
+.absolute-paragraph {
+    font-size: 18px;
+}
+
+.relative-heading {
+    font-size: 5vw;
+}
+
+.relative-paragraph {
+    font-size: 2.5vw;
+}
+
+.absolute-image {
+    width: 350px;
+}
+
+.relative-image {
+    width: 100%;
+}
+
+/*
+    What do you (and the students) thing would
+    happen if we applied ANOTHER width, to the
+    outer container?
+
+    Let's find out!
+*/
+
+.outer-container {
+    border: 3px solid red;
+    width: 66%;
+}
+
+/*
+    Now in the inner container is only 50% of 66%,
+    and the paragraph andimage are only half of that.
+
+    Hopefully this is a good illustration of how
+    when using relative units, you have to keep in
+    mind what you're setting them relative to.
+
+    This wraps up this demo!
+*/
+
+.inner-container {
+    border: 3px solid blue;
+    width: 50%;
+}
+
+.inner-container p,
+.inner-container img {
+    display: inline-block;
+    width: 48%;
+}

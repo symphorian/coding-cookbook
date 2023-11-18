@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Making a Form Functional (getform.io) - Appetizers - The Coding Cookbook</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="../css/cookbook.css" rel="stylesheet">
+        <link href="../css/appetizer.css" rel="stylesheet">
+        <link href="../css/lightbox.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="background"></div>
+        <nav>
+            <header id="topHeader">
+                <h2 id="brand"><a href="../">The Coding Cookbook</a></h2>
+                <div id="quote"></div>
+                <div id="navLinks">
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../ingredients.html">
+                                HTML
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../ingredients.html">Elements</a></h2>
+                            <h2><a href="../ingredients-cheatsheet.html">Cheatsheet</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../seasonings.html">
+                                CSS
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../seasonings.html">Properties</a></h2>
+                            <h2><a href="../seasonings-cheatsheet.html">Cheatsheet</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../recipes.html">
+                                Layouts
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../recipes.html?category=page-layout">Page Layouts</a></h2>
+                            <h2><a href="../recipes.html?category=content-layout">Content Layouts</a></h2>
+                            <h2><a href="../recipes.html?category=navigation-layout">Navigation</a></h2>
+                            <h2><a href="../recipes.html?category=miscellaneous">Miscellaneous</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../more.html">
+                                More
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../demos.html">Class Demos</a></h2>
+                            <h2><a href="../appetizers.html">Tutorials</a></h2>
+                            <h2><a href="../troubleshooting.html">Troubleshooting</a></h2>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </nav>
+        
+        <header id="title" class="">
+            <h1>Making a Form Functional (getform.io)</h1>
+            <h3>So you want a form that does more than look good?</h3>
+        </header>
+        
+        
+        <div class="cookbookPage">
+            <ol>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                This tutorial assumes you already have a 
+                                completed form on your website.
+                            </p>
+                            <p class="indent">
+                                If you don't, check out 
+                                <a 
+                                    href="https://first-gdwd.github.io/cookbook/recipes.html#contact-form?category=miscellaneous"
+                                    target="_blank"
+                                >this sample code from the Coding Cookbook!</a>
+                            </p>
+                            <p>
+                                To make a form functional, we're going to use 
+                                a service from a site called 
+                                <a href="https://getform.io/" target="_blank">getform.io</a>.
+                            </p>
+                            <p>
+                                Go to <a href="https://getform.io/" target="_blank">getform.io</a>
+                                and click the green "Generate endpoint for free"
+                                button to start.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/getform-io/01_homepage.png" 
+                                alt="The getform.io Home page"
+                            >
+                            <figcaption>
+                                The getform.io Home page
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Create an account with them by filling out 
+                                the required information.
+                            </p>
+                            <p class="indent">
+                                NOTE: Don't use your school email address! Our 
+                                school email server is a tad overprotective,
+                                and may not let the verification email through.
+                            </p>
+                            <p>
+                                Or, continue with your Google account.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/getform-io/02_register.png" 
+                                alt="Creating an account"
+                            >
+                            <figcaption>
+                                Creating an account
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After successfully creating an account, 
+                                getform.io will send an email to the email
+                                address you supplied when you created your
+                                account.
+                            </p>
+                            <p>
+                                Check your email inbox for the verification email.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/getform-io/03_verify.png" 
+                                alt="Waiting for verification"
+                            >
+                            <figcaption>
+                                Waiting for verification
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <h2 id="p1_step4" class="invisibleInnerAnchorTarget"></h2>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                The verification email should look something 
+                                like this.
+                            </p>
+                            <p>
+                                Click the Verify Email button in the email.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/getform-io/04_email.png" 
+                                alt="Verification email"
+                            >
+                            <figcaption>
+                                Verification email
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After verifying your email, you'll be 
+                                redirected back to getform.io, and the 
+                                verification message should be gone.
+                            </p>
+                            <p>
+                                Click the [+ Create] button to create a 
+                                new endpoint to use in your form.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/getform-io/05_post-verification.png" 
+                                alt="Post-verification"
+                            >
+                            <figcaption>
+                                Post-verification
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                A "Create..." dialog will pop up.
+                            </p>
+                            <p>
+                                Make sure the "Form" tab is selected, and 
+                                then provide a name for the endpoint.
+                            </p>
+                            <p class="indent">
+                                Something like "contact-form" is fine.
+                            </p>
+                            <p>
+                                Also select your timezone (although this 
+                                field doesn't really matter).
+                            </p>
+                            <p>
+                                Then click the blue Create button.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/getform-io/06_create.png" 
+                                alt="The Create... Dialog"
+                            >
+                            <figcaption>
+                                The Create... Dialog
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After the dialog closes, you will see the 
+                                new endpoint you need, along with some 
+                                instructions.
+                            </p>
+                            <p>
+                                Copy that form endpoint.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/getform-io/07_getendpoint.png" 
+                                alt="Getting the form endpoint"
+                            >
+                            <figcaption>
+                                Getting the form endpoint
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Go to your HTML code, where your form.
+                            </p>
+                            <p>
+                                Add an attribute to the form called 'method',
+                                and give it the value "POST".
+                            </p>
+                            <p>
+                                Then add another attribute called 'action',
+                                and give it the form endpoint you copied from 
+                                getform.io.
+                            </p>
+                            <p>
+                                Assuming your form is correctly built, 
+                                that's all you need to get it working!
+                                Though you'll need to commit and push 
+                                your changes for it to work for everyone else.
+                            </p>
+                            <p>
+                                Let's test it out by opening the page in the 
+                                browser (using the "Open with Live Server"
+                                option).
+                            </p>
+                            <p class="indent">
+                                NOTE: The form will not work in the preview 
+                                window inside Visual Studio Code; there are 
+                                protections in there that will prevent you from
+                                visiting pages outside of your site.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/getform-io/08_form-action.png" 
+                                alt="Getting the form endpoint"
+                            >
+                            <figcaption>
+                                Getting the form endpoint
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After opening the form in the browser,
+                                try filling it out and clicking the "Send" 
+                                button.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/getform-io/09_form_submit.png" 
+                                alt="Submitting the form"
+                            >
+                            <figcaption>
+                                Submitting the form
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                If everything went well, you should be
+                                redirected to a "Thank You!" screen.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/getform-io/10_thankyou.png" 
+                                alt="Thank You screen from getform.io"
+                            >
+                            <figcaption>
+                                Thank You screen from getform.io
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Now, if you jump back to getform.io,
+                                instead of the form endpoint, you should 
+                                see the form data that you just submitted!
+                            </p>
+                            <p>
+                                Congrats! You can now access the submissions 
+                                that people make on your Contact Form!
+                            </p>
+                            <p>
+                                What's more, you should also get an email
+                                whenever anyone submits a form. Very handy
+                                for responding quickly to potential clients!
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/getform-io/11_backongetform.png" 
+                                alt="The form data in getform.io"
+                            >
+                            <figcaption>
+                                The form data in getform.io
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+            <h4>
+                Congrats! You've successfully created a functioning form!
+            </h4>
+        </div>
+        <div id="lightboxContainer">
+            <div id="lightboxBackground" class="closer"></div>
+            <img id="lightbox" src="" alt="">
+            <span id="lightboxCloser" class="closer">×</span>
+          </div>
+        <script src="../js/lightbox.js"></script>
+        <script src="../js/hideNav.js"></script>
+    </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>font-family Property</title>
+        <link href="css/font-family.css" rel="stylesheet" data-seasoning>
+        <link href="css/shared.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="recipe-example">
+            <h4>Basic Code Snippets</h4>
+            <code>font-family: sans-serif;</code>
+            <br>
+            <code>font-family: Arial, Helvetica, sans-serif;</code>
+            <br>
+            <code>font-family: 'Times New Roman', Times, serif;</code>
+        </div>
+        <h4>Additional Examples</h4>
+        <p>
+            The font-family property allows us to change the 
+            font of text targeted via CSS.
+            There are five generic font family names available
+            in CSS: serif, sans-serif, monospace, cursive, and 
+            fantasy.
+        </p>
+        <h5>serif</h5>
+        <p class="serif-family">
+            The generic serif font family looks like this. (The 
+            generic serif font is usually the default font 
+            family in most browsers.)
+        </p>
+        <h5>sans-serif</h5>
+        <p class="sans-serif-family">
+            The generic sans-serif font family looks like this.
+        </p>
+        <h5>monospace</h5>
+        <p class="monospace-family">
+            The generic monospace font family looks like this.
+        </p>
+        <h5>cursive</h5>
+        <p class="cursive-family">
+            The generic cursive font family looks like this.
+        </p>
+        <h5>fantasy</h5>
+        <p class="fantasy-family">
+            The generic fantasy font family looks like this.
+        </p>
+        <br>
+        <br>
+        <h4>Fallback Font Families</h4>
+        <p>
+            However, most of the time, we'd rather use a 
+            specific font family we like over the generic 
+            ones offered to us from the browser. But we have 
+            to remember that the font we want to use may not
+            be installed on everyone's computer.
+        </p>
+        <p class="verdana-with-fallback">
+            So rather than specifying a single font-family,
+            which may or may not be available to use, we
+            specify a comma-separated list of font families.
+            That way, if the first family isn't available, 
+            we'll try the next one, and the next one, until 
+            we reach the final family, which should be one 
+            of the generic families.
+        </p>
+        <p class="helvetica-with-fallback">
+            For example, Helvetica, while popular, is 
+            generally only availabe on Macs. So to account 
+            for any Windows users, we add a fallback to a 
+            similar font called Arial.  And if that one 
+            can't be found, then our last resort is the 
+            default sans-serif family.
+        </p>
+        
+        <div class="resources">
+            <h4>Additional Resources</h4>
+            <a 
+                href="https://www.w3schools.com/cssref/pr_font_font-family.php"
+                target="_blank"
+            >
+                w3schools 
+            </a>
+            <br>
+            <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-family"
+                target="_blank"
+            >
+                mdn web docs
+            </a>
+        </div>
+    </body>
+</html>

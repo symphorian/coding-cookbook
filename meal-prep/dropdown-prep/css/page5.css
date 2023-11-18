@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.card {
+    flex: 300px;
+    border: 3px solid black;
+    margin: 24px;
+    padding: 24px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.card a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    border: 3px solid black;
+    padding: 12px;
+    margin-top: 36px;
+}
+
+#card1:hover {
+    background-color: lightcyan;
+    box-shadow: 4px 4px 4px #00000033;
+    transform: translateY(-4px);
+}
+
+#card1 {
+    transition: 
+        background-color 0.5s,
+        box-shadow 0.5s,
+        transform 0.5s;
+}
+
+#card2 a {
+    transition: 
+        background-color 0.5s,
+        box-shadow 0.5s,
+        transform 0.5s;
+}
+
+#card2:hover a {
+    background-color: aquamarine;
+    box-shadow: 4px 4px 4px #00000033;
+    transform: translateY(-4px);
+}
+
+/*
+    To address this issue, we're going to
+    need to introduce a new CSS Property
+    called 'visibility'; this is a relatively
+    obscure one that is only really used
+    in cases like the one we're experiencing.
+
+    If we set visibility to 'hidden', it
+    will literally hide our content from
+    the page, preventing it from being
+    interacted with.
+
+    The good thing about visibility is: 
+    it's a transition-able property!
+    
+    Not all CSS Properties work with
+    transition, but visibility does.
+
+    So, we're going to add visibility
+    into both of our selectors below,
+    to make them truly hidden.
+*/
+#card3 .card-content {
+    transition:
+        opacity 0.5s,
+        visibility 0.5s; /* new */
+}
+
+#card3:hover .card-content {
+    opacity: 0;
+    visibility: hidden; /* new */
+}
+
+/*
+    Now when we hover over the button
+    (or rather, the space where the button
+    was), the cursor doesn't turn into a 
+    pointer, so now it's truly as if the 
+    button doesn't exist when we hover over
+    the card.
+
+    As a side note, a simpler way to hide
+    the card content would be to use
+    display: none;
+
+    However, the display property is not
+    transitionable, so the card content
+    would just blink in and out of existence
+    as we hover over the card.
+
+    If that's all we need, then that's fine,
+    but as we said when we first learned about
+    the transition property, smoothly animating
+    hover states usually feels a lot better to
+    the viewer, and makes the page feel more
+    professional.
+
+    ...but functionally, hiding content on hover
+    is not all that useful.  Usually, we'd rather 
+    do the opposite, where content starts out 
+    hidden, but reveals itself after we hover over
+    a trigger.
+
+    So we're going to flip things around for
+    our next card, and do just that.
+*/

@@ -1,0 +1,63 @@
+/*
+    We said before that the two narrow divs
+    would not go side-by-side, because they 
+    are block elements.
+
+    But what if we wanted to change that?
+
+    Well, we can.  We can use the 'display'
+    property to change the way the element
+    "flows" on the page.
+
+    On the display property, we can set an
+    element to be either 'block' or 'inline',
+    so let's add that change to our .narrow
+    CSS rule to make it 'inline'.
+
+    Let's also add a background-color too,
+    just to make them stand out more from
+    the other content on the page.
+*/
+
+.narrow {
+    width: 200px;
+    background-color: lightsalmon;
+    display: inline;
+}
+
+/*
+    Uh-oh, what happened here?  
+    
+    Our divs are no longer in columns, and
+    instead, it seems like the content of
+    our divs got lumped together in one 
+    massive paragraph (the grammmar concept, 
+    not the HTML element).
+
+    Well, that's what inline elements do.
+
+    Even if they look like they cover multiple
+    lines on a page, if you stretch out the
+    page width long enough, those inline
+    elements will fit on a single line,
+    side-by-side.
+
+    Like we said before, spans (and inline
+    elements) only take up as much space as 
+    they need...the part we left out was that
+    space is only considered as if it were 
+    on a single line.
+
+    So our two narrow divs have had their content
+    compacted together so that they can fit on
+    one single line, if you stretch the page width
+    out far enough.
+
+    Practically, this means that inline elements
+    ignore sizing properties like width, and they
+    also ignore the vertical aspect of special
+    spacing properties like the margin of the 
+    paragraph from early.
+
+    Bummer, huh?
+*/

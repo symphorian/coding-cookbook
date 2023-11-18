@@ -1,0 +1,67 @@
+#example-1 .paragraph-1,
+#example-2 .paragraph-1,
+#example-3 .paragraph-1,
+#example-4 .paragraph-1 {
+    opacity: 1;
+}
+
+#example-1 .paragraph-2,
+#example-2 .paragraph-2,
+#example-3 .paragraph-2,
+#example-4 .paragraph-2 {
+    opacity: 0.4;
+}
+
+.example {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.example p {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 250px;
+    max-width: 100%;
+    margin: 24px;
+    vertical-align: top;
+}
+
+#example-2 {
+    border: 3px solid black;
+    border-radius: 8px;
+    background-color: lightpink;
+    margin: 24px 0px;
+}
+
+#example-3 {
+    border: 3px solid black;
+    border-radius: 8px;
+    background-color: lightblue;
+    margin: 24px 0px;
+}
+
+#example-3 p {
+    background-color: yellow;
+    border: 10px solid green;
+    padding: 24px;
+}
+
+#example-4 {
+    border: 3px solid black;
+    border-radius: 8px;
+    background-color: lightgreen;
+    margin: 24px 0px;
+}
+
+#example-4 p {
+    color: white;
+    background-color: darkgreen;
+    border: 10px solid navy;
+    padding: 24px;
+}
+
+#example-4 img {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 24px;
+}

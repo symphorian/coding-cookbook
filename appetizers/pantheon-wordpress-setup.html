@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pantheon/WordPress Setup - Appetizers - The Coding Cookbook</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="../css/cookbook.css" rel="stylesheet">
+        <link href="../css/appetizer.css" rel="stylesheet">
+        <link href="../css/lightbox.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="background"></div>
+        <nav>
+            <header id="topHeader">
+                <h2 id="brand"><a href="../">The Coding Cookbook</a></h2>
+                <div id="quote"></div>
+                <div id="navLinks">
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../ingredients.html">
+                                HTML
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../ingredients.html">Elements</a></h2>
+                            <h2><a href="../ingredients-cheatsheet.html">Cheatsheet</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../seasonings.html">
+                                CSS
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../seasonings.html">Properties</a></h2>
+                            <h2><a href="../seasonings-cheatsheet.html">Cheatsheet</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../recipes.html">
+                                Layouts
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../recipes.html?category=page-layout">Page Layouts</a></h2>
+                            <h2><a href="../recipes.html?category=content-layout">Content Layouts</a></h2>
+                            <h2><a href="../recipes.html?category=navigation-layout">Navigation</a></h2>
+                            <h2><a href="../recipes.html?category=miscellaneous">Miscellaneous</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../more.html">
+                                More
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../demos.html">Class Demos</a></h2>
+                            <h2><a href="../appetizers.html">Tutorials</a></h2>
+                            <h2><a href="../troubleshooting.html">Troubleshooting</a></h2>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <header id="bottomHeader">
+                <div id="cookbookButtons">
+                    <a id="part1Button" href="#part1">Jump to Pantheon Setup</a>
+                    <a id="part2Button" href="#part2">Jump to Pantheon Site Setup</a>
+                    <a id="part3Button" href="#part3">Jump to WordPress Setup</a>
+                </div>
+            </header>
+        </nav>
+        
+        <header id="title" class="">
+            <h1>Pantheon/WordPress Setup Tutorial</h1>
+            <h3>The Appetizer to CMS Week</h3>
+        </header>
+        
+        
+        <div class="cookbookPage">
+            <h2 id="part1" class="invisibleAnchorTarget"></h2>
+            <h6>PART 1</h6>
+            <h2>Pantheon Account</h2>
+            <h4>Your Hosting Provider for the Course</h4>
+            <ol>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                In order to create a web site on the Internet,
+                                you first need to find someone/something to host it 
+                                for you.
+                            </p>
+                            <p>
+                                For most of the course, GitHub Pages has been 
+                                our hosting provider, creating a web site for us
+                                from all the HTML and CSS we've written.
+                            </p>
+                            <p>
+                                However, GitHub Pages cannot host something as 
+                                dynamic and complex as a CMS, so we need to use 
+                                an altenate hosting provider.
+                            </p>
+                            <p>
+                                The hosting provider we're going to be using is 
+                                called <b>Pantheon</b>.
+                            </p>
+                            <p>
+                                Visit the following link and click the big 
+                                yellow "Start Free" button on that page:
+                            </p>
+                            <p>
+                                <a
+                                    href="https://pantheon.io/"
+                                    target="_blank"
+                                    rel="noopener"
+                                >
+                                https://pantheon.io/
+                                </a> 
+
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/pantheon-wordpress-setup/01_pantheon_homepage.png" 
+                                alt="Click the Start Free button on the Pantheon Home page"
+                            >
+                            <figcaption>
+                                Click the Start Free button on the Pantheon 
+                                Home page
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                On the next page, we'll be filling out some 
+                                information to create your Pantheon account.
+                            </p>
+                            <p>
+                                You have two different options for how to sign 
+                                up:
+                                <ul>
+                                    <li>
+                                        Method #1 - Filling out the data fields 
+                                        manually 
+                                        <ul>
+                                            <li>
+                                                If choosing this approach, just 
+                                                enter "FIRST" for the 
+                                                <b>Company Name</b> field
+                                                (it doesn't really matter)
+                                            </li>
+                                            <li>
+                                                And use your personal email 
+                                                address for the <b>Work Email</b>
+                                                field
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Method #2 - Using your Google account 
+                                        to auto-populate the data.
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/pantheon-wordpress-setup/02_pantheon_signup.png" 
+                                alt="Fill out the required data fields to create your account, or use Google to sign up"
+                            >
+                            <figcaption>
+                                Fill out the required data fields to create 
+                                your account, or use Google to sign up
+                            </figcaption>
+                        </div>
+                    </div>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Sometimes Pantheon glitches out if you choose 
+                                Method #1 to sign up.  (It's not because of 
+                                anything you did wrong.)
+                            </p>
+                            <p>
+                                If this happens, you'll be brought to a
+                                different page to fill out an alternate 
+                                "backup" form.
+                            </p>
+                            <p>
+                                If you go with Method #1 again, fill out 
+                                the data fields once more, and click the 
+                                yellow "Create Account" button, it should 
+                                work this time.
+                            </p>
+                            <p>
+                                Alternatively, you could also change your mind 
+                                and use your Google account to sign up as well.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/pantheon-wordpress-setup/02_pantheon_signup_2ndattempt.png" 
+                                alt="This is the 'backup' form for if something goes wrong on the first sign up page"
+                            >
+                            <figcaption>
+                                This is the 'backup' form for if something 
+                                goes wrong on the first sign up page
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Once you've successfully created your account,
+                                you'll be asked to log in using the credentials
+                                you just entered.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/pantheon-wordpress-setup/03_pantheon_login.png" 
+                                alt="Log in page for your newly created Pantheon account"
+                            >
+                            <figcaption>
+                                Log in page for your newly created 
+                                Pantheon account
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <h2 id="p1_step4" class="invisibleInnerAnchorTarget"></h2>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After logging in, you'll be brought to your 
+                                Pantheon Home page, which should resemble the 
+                                screenshot to the right.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/pantheon-wordpress-setup/04_pantheon_createbutton.png" 
+                                alt="Your Pantheon Home page"
+                            >
+                            <figcaption>
+                                Your Pantheon Home page
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+            <h4>
+                Congrats! You've successfully created your Pantheon account!
+                Now we can begin creating your first site on Pantheon.
+            </h4>
+        </div>
+        <div class="cookbookPage">
+            <h2 id="part2" class="invisibleAnchorTarget"></h2>
+            <h6>PART 2</h6>
+            <h2>Creating a Pantheon Site</h2>
+            <h4>Where your WordPress will be built</h4>
+            <ol>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Now that you have your Pantheon account setup, 
+                                we can create a Pantheon site.
+                            </p>
+                            <p>
+                                This is similar to how we setup GitHub Pages,
+                                but whereas GitHub only lets us have one
+                                website, Pantheon allows us to set up two 
+                                websites for free.
+                            </p>
+                            <p>
+                                Creating a Pantheon site is kind of like 
+                                securing the land to build a house; once we 
+                                create our Pantheon site, we can begin building
+                                (installing) our house (WordPress).
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/pantheon-wordpress-setup/04_pantheon_createbutton.png" 
+                                alt="Clicking the Create New Site button on your Pantheon Home page" 
+                            >
+                            <figcaption>Clicking the Create New Site button on your Pantheon Home page</figcaption>
+                        </div>
+                    </div>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Alternatively, you can also create a new 
+                                Pantheon site by clicking the "Sites" tab in 
+                                the navigation on the left.
+                            </p>
+                            <p>
+                                There, you will find a similar yellow button 
+                                that says "Create a Free Site".
+                            </p>
+                            <p>
+                                This will take you into the same workflow as 
+                                the yellow button on the Home Page.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/pantheon-wordpress-setup/04_pantheon_createbutton_alt.png" 
+                                alt="Alternate way of creating a new site via the Sites page" 
+                            >
+                            <figcaption>Alternate way of creating a new site via the Sites page</figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Once you're on the 'Create a Site' page,
+                                under the section that asks 'What Kind of Site?',
+                                click the WordPress option.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/pantheon-wordpress-setup/05_pantheon_createsite.png" 
+                                alt="Selecting the WordPress option on the 'Create a Site' page" 
+                            >
+                            <figcaption>
+                                Selecting the WordPress option on the 'Create a Site' page
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                On the next page, you'll be asked to name your 
+                                Pantheon site.
+                            </p>
+                            <p class="indent">
+                                <b>
+                                    Once you create your site, you cannot change 
+                                    the name! If you want to change your site name,
+                                    your only option is to delete your site and 
+                                    go through this flow again.
+                                </b>
+                            </p>
+                            <p>
+                                Follow the instructions provided in your 
+                                assignment and name the site as required.
+                            </p>
+                            <p class="indent">
+                                Typically this will follow the format of<br> 
+                                <i>firstname-lastname-[sitetype]</i><br>
+                            </p>
+                            <p>
+                                Leave the Site Region as "United States".
+                            </p>
+                            <p>
+                                Then click the yellow "Continue" button.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/pantheon-wordpress-setup/06_pantheon_createsite_name.png" 
+                                alt="The 'Create Your Pantheon Site' form" 
+                            >
+                            <figcaption>
+                                The 'Create Your Pantheon Site' form
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Now you'll have to wait a bit for Pantheon 
+                                to build your site. 
+                            </p>
+                            <p>
+                                It should only take around 5 minutes.
+                            </p>
+                            <p class="indent">
+                                (Don't trust the progress bar; it will 
+                                fill up and then go back down again several 
+                                times as Pantheon builds your site.)
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/pantheon-wordpress-setup/07_pantheon_createsite_inprogress.png" 
+                                alt="Waiting for Pantheon to build your site" 
+                            >
+                            <figcaption>
+                                Waiting for Pantheon to build your site
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Eventually, the bar will fill up completely 
+                                and turn green when the process is complete.
+                            </p>
+                            <p>
+                                Click the yellow "Visit your Pantheon 
+                                Site Dashboard" button.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/pantheon-wordpress-setup/08_pantheon_createsite_complete.png" 
+                                alt="Pantheon finished creating your site" 
+                            >
+                            <figcaption>
+                                Pantheon finished creating your site
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                You should now be on your successfully 
+                                created <b>Pantheon Site</b> Dashboard.
+                            </p>
+                            <p class="indent">
+                                This is going to get confusing later if you
+                                don't pay attention, because we're also
+                                going to have a <b>WordPress</b> Dashboard.
+                            </p>
+                            <p>
+                                The <b>Pantheon Site</b> Dashboard is how you 
+                                manage and monitor the hosting status of your 
+                                site.  It is also how you access your 
+                                WordPress site.
+                            </p>
+                            <p>
+                                ...however, there's really only two buttons 
+                                you need to worry about in this course 
+                                (found right beneath the 'Dev' tab, which is 
+                                right beneath your site name):
+                                <ul>
+                                    <li>Visit Development Site</li>
+                                    <li>Site Admin</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img
+                                src="images/pantheon-wordpress-setup/09_pantheon_site_dashboard.png"
+                                alt="The Dashboard of your Pantheon Site"
+                            />
+                            <figcaption>
+                                The Dashboard of your Pantheon Site
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+            <h4>
+                Congrats! You have now created a Pantheon site and are ready
+                to install WordPress on that site!
+            </h4>
+        </div>
+        <div class="cookbookPage">
+            <h2 id="part3" class="invisibleAnchorTarget"></h2>
+            <h6>PART 3</h6>
+            <h2>Installing WordPress</h2>
+            <h4>Your CMS on your Pantheon site</h4>
+            <ol>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                If you haven't already, navigate to your 
+                                <b>Pantheon Site</b> Dashboard.
+                            </p>
+                            <p class="indent">
+                                This can be found by clicking on the Sites tab 
+                                in the far left navigation bar, and then 
+                                clicking on the site name you want to access 
+                                the dashboard for.
+                            </p>
+                            <p>
+                                Once on the <b>Pantheon Site</b> Dashboard for 
+                                the site you want to work with, click on the 
+                                "Site Admin" button underneath the Dev tab,
+                                underneath the name of your site.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img
+                                src="images/pantheon-wordpress-setup/09_pantheon_site_dashboard.png"
+                                alt="Clicking on the Site Admin button"
+                            />
+                            <figcaption>
+                                Clicking on the Site Admin button
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <h2 id="p3_step2" class="invisibleInnerAnchorTarget"></h2>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                You should be taken to the WordPress Install 
+                                Flow.
+                            </p>
+                            <p class="indent">
+                                You may instead be brought to a 404 page, 
+                                with a little cartoon Zeus character.  If this 
+                                happens, just wait a minute or two and refresh
+                                the page.
+                                <br><br>
+                                This just means you were a little too quick,
+                                and there was a little more setup 
+                                that needed to be done behind the scenes before 
+                                you can start installing WordPress.
+                            </p>
+                            <p>
+                                Leave the language as "English (United States)",
+                                and click the blue "Continue" button.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/pantheon-wordpress-setup/10_wordpress_setup_lang.png" 
+                                alt="WordPress Install Flow - Language Selection" 
+                            >
+                            <figcaption>
+                                WordPress Install Flow - Language Selection
+                            </figcaption>
+                        </div>
+                    </div>
+                    
+                </li>
+                <li>
+                    <h2 id="p3_step3" class="invisibleInnerAnchorTarget"></h2>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Next, you'll be brought to a form to fill out 
+                                some information for the WordPress.  Most of it
+                                is unimportant and can be changed later... 
+                                <b>EXCEPT FOR THE USERNAME AND PASSWORD</b>.
+                            </p>
+                            <p class="indent">
+                                If you forget your username and password, the 
+                                usual "Reset my password" link will NOT work 
+                                with Pantheon's version of WordPress.
+                                <br><br>
+                                There is a way to reset it, but it involves
+                                diving deep into the database and modifying 
+                                the data inside, which is a complex and 
+                                somewhat risky process.
+                                <br><br>
+                                So do yourself a favor and 
+                                <b>WRITE DOWN YOUR USERNAME AND PASSWORD!</b>
+                                <br><br>
+                                We also recommend using the same username and 
+                                password when you set up a second WordPress site.
+                            </p>   
+                            <p>
+                                Aside from the <b>Username</b> and <b>Password</b>, 
+                                fill out the <b>Site Title</b> based on the 
+                                instructions in your assignment.
+                            </p>
+                            <p>
+                                <b>Your Email</b> is not actually used for 
+                                anything, so it doesn't matter what you put
+                                there.
+                            </p>
+                            <p>
+                                Leave the <b>Search Engine Visibility</b> 
+                                checkbox unchecked.
+                            </p>
+                            <p>
+                                Finally, click the "Install Wordpress" button
+                                when you're done.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img
+                                src="images/pantheon-wordpress-setup/11_wordpress_setup_site_user.png"
+                                alt="WordPress Install Flow - Site Data"
+                            />
+                            <figcaption>
+                                WordPress Install Flow - Site Data
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Next, you should be brought to a "Success!"
+                                page, which basically just confirms your 
+                                chosen Username.
+                            </p>
+                            <p>
+                                Click the "Log In" to log into WordPress 
+                                with the credentials you just specified.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img
+                                src="images/pantheon-wordpress-setup/12_wordpress_setup_success.png"
+                                alt="Logging into WordPress"
+                            >
+                            <figcaption>
+                                Logging into WordPress
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <h2 id="p3_step5" class="invisibleInnerAnchorTarget"></h2>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After logging in, you'll find yourself on
+                                your <b>WordPress</b> Dashboard.
+                            </p>
+                            <p class="indent">
+                                This dashboard is different from your 
+                                <b>Pantheon Site</b> Dashboard. Don't get 
+                                them confused!
+                            </p>
+                            <p>
+                                This is the Dashboard you'll be working in 
+                                for most of the CMS portion of the course. From 
+                                here, you can modify the site settings, add 
+                                content, and change the site's appearance.
+                            </p>
+                            <p class="indent">
+                                The WordPress Dashboard may feel a bit 
+                                overwhelming at first, but you'll get more 
+                                comfortable with it over the course of the week.
+                            </p>
+                            <p>
+                                However, this is only the "backend" of your 
+                                WordPress site, where things take place
+                                behind-the-scenes.
+                            </p> 
+                            <p class="indent">
+                                Only you can access this 
+                                dashboard; if you try to share links to this
+                                page, people won't be able to get in.
+                            </p>
+                            <p>
+                                To access the "frontend" of the WordPress site
+                                (the live version that other people can see),
+                                click on the little home icon at the top left
+                                of the Dashboard, next to the name of your site.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/pantheon-wordpress-setup/13_wordpress_dashboard.png" 
+                                alt="Your WordPress Dashboard"
+                            >
+                            <figcaption>
+                                Your WordPress Dashboard
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After clicking the home icon, you'll be 
+                                brought to the Home page of your WordPress 
+                                site.
+                            </p>
+                            <p>
+                                This is actually your WordPress site, but
+                                at the moment, there's still a lot of placeholder
+                                content, such as "Mindblown: a blog about 
+                                philosophy".
+                            </p>
+                            <p class="indent">
+                                Don't worry, we're not going to be writing 
+                                anything related to philosophy in this class 
+                                (unless you choose to!).
+                                We'll change the placeholder content later.
+                            </p>
+                            <p>
+                                Notice how the home icon in the top left 
+                                changed into a little speedometer icon instead.
+                                Clicking on this icon will bring you back to 
+                                the Dashboard.
+                            </p>
+                            <p>
+                                That icon can be helpful in letting 
+                                you know whether you can share a page with
+                                someone else.
+                                <ul>
+                                    <li>
+                                        If it's a speedometer icon (indicating
+                                        you're NOT in the Dashboard), then 
+                                        you can share that URL with other
+                                        people.
+                                    </li>
+                                    <li>
+                                        If it's a home icon (indicating you 
+                                        ARE on the Dashboard), then you can't 
+                                        share that URL with other people, 
+                                        since they won't be able to access it.
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/pantheon-wordpress-setup/14_wordpress_livesite.png" 
+                                alt="The live version of your WordPress site"
+                            >
+                            <figcaption>
+                                The live version of your WordPress site
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+            <h4>
+                Congrats! You have now created a WordPress site! Go into 
+                the Dashboard and start customizing your site!
+            </h4>
+        </div>
+        <div id="lightboxContainer">
+            <div id="lightboxBackground" class="closer"></div>
+            <img id="lightbox" src="" alt="">
+            <span id="lightboxCloser" class="closer">×</span>
+          </div>
+        <script src="../js/lightbox.js"></script>
+        <script src="../js/hideNav.js"></script>
+    </body>
+</html>

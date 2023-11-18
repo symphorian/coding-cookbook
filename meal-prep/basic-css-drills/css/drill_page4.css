@@ -1,0 +1,18 @@
+/* Drill 4 - Write your code solution below */
+
+/*
+    Not much more challenging than previous
+    drills, but this time we're using
+    background-color, not color.
+
+    There's a big difference between the two
+    when applied to text.
+
+    With background-color, you get a kind of
+    highlighter type of effect with the color
+    you choose.
+*/
+
+#d4-p1 {
+    background-color: skyblue;
+}

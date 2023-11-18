@@ -1,0 +1,35 @@
+/* Drill 2 - Write your code solution below */
+
+/* 
+    Similar solution to Drill 1, but we want to
+    apply margin in two places.
+
+    There are multiple solutions to accomplish this,
+    but the simplest is probably the code below.
+
+    Remember that two values provided to margin
+    will set the top/bottom and left/right
+    margin sides at the same time.
+
+    If we target the middle div, we can add
+    top/bottom margin at the same time.
+*/
+
+#d2-div2 {
+    margin: 24px 0px;
+}
+
+/*
+
+    Alternatively, we could have also done the
+    following, setting margin on the outer divs
+    instead of the middle one:
+
+    #d2-div1 {
+        margin-bottom: 24px;
+    }
+
+    #d2-div3 {
+        margin-top: 24px;
+    }
+*/

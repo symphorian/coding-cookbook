@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    font-family: sans-serif;
+    background-color: teal;
+}
+
+/*  
+    Now, let's introduce media queries.
+    In web development, we commonly use media queries
+    to conditionally apply, edit, and/or remove styles
+    in our html at different screen sizes.
+
+    In other words, we can change the way the page
+    looks or behaves depending on the screen size.
+
+    There are three main parts to media queries:
+    - the @media keyword
+    - the media type
+    - one or more media features
+
+    The @media keyword is what starts the media query;
+    it is required whenever you create a media query.
+
+    Next, you include the media type.  In our case,
+    it is always going to be the type of 'screen',
+    but another media type is 'print'.
+
+    Lastly, we'll add the media features we want to 
+    target in the media query.
+    
+    There are many different media features but in our case,
+    the two main ones we'll be using are max-width and 
+    min-width; these two media features allow us to restyle
+    our web pages at different widths.
+
+    To include a media feature in a media query, we'll 
+    want to write out a set of parenthesis and inside write
+    the particular media feature we want to include.
+    
+    In our case, we'll write "max-width: 725px;". 
+    
+    After including all of the media features we want to
+    target, we'll follow the parentheses with a declaration 
+    block, similar to a CSS Rule, which is where we'll target
+    our selectors to add or change some styles based off of
+    the media feature we added which serves as a condition.
+
+    Now, we have our first media query which is basically
+    just one big css rule that will hold other css rules
+    inside of it. However, the rules inside of it will
+    only be applied if the conditions of the media feature(s)
+    are met. 
+    
+    In our case, this means that the CSS Rules added inside
+    the media query will only be applied if the screen width 
+    is 725px or less.
+
+    That boundary (the 725px in our case) between which
+    media query styles are switched are often refered to
+    as "breakpoints".
+
+    In our case, we might refer to this as the 
+    725px breakpoint.
+
+    Now, let's get a style in here.
+*/
+@media screen and (max-width: 725px) {
+
+}

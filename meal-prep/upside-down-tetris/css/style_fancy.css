@@ -1,0 +1,106 @@
+/*
+    This variant of the assignment adds border-radius
+    into the mix, to transform the blocks into
+    different shapes (some of which resemble fruits).
+
+    Remember that the border-radius property can accept
+    up to 4 different values.  The way they get applied 
+    to the corners is:
+
+    1 value:    all 4 corners
+    2 values:   TL/BR, TR/BL
+    3 values:   TL, TR/BL, BR
+    4 values:   TL, TR, BR, BL
+
+    It also uses the transform property for one of
+    them, in order to shrink and rotate it.  If 
+    students ask how to do that, feel free to 
+    demo it to them.
+
+    The transform property accepts different types
+    of "functions" in order to transform the element.
+    The two used here are the rotate() and scale()
+    functions.
+
+    rotate accepts a value in degrees (180deg)
+    scale accepts a percentage value (50% or 0.5)
+
+    The order that you provide these functions to
+    transform is important; providing them in a 
+    different order can get you different results,
+    depending on the functions you're using.
+*/
+
+/*
+    NOTE TO STUDENTS: 
+
+    This is the file you should be writing your CSS in 
+    for the Upside-down Tetris assignment.
+
+    Good luck, and have fun!
+*/
+
+.tetris-block {
+    padding: 20px;
+    border-width: 10px;
+    border-style: groove;
+    display: inline-block;
+    margin: 2px;
+}
+
+.red {
+    background-color: red;
+    border-color: crimson;
+    border-radius: 18px 50% 50%;
+}
+
+.orange {
+    background-color: #ffaa00;
+    border-color: #ff6f00;
+    border-radius: 50%;
+}
+
+.yellow {
+    background-color: yellow;
+    border-color: gold;
+    border-radius: 50% 16px;
+}
+
+.green {
+    background-color: #05c705;
+    border-color: #0ea40e;
+    border-radius: 16px 50%;
+}
+
+.blue {
+    background-color: #4c6aff;
+    border-color: #1a1ae7;
+    border-radius: 12px;
+    /*
+        This is the one that we rotate and 
+        then scale down to fit in the same
+        dimensions as the other shapes.
+    */
+    transform: rotate(45deg) scale(75%)
+}
+
+.teal {
+    background-color: #1ec7ab;
+    border-color: #088e8e;
+    border-radius: 50% 50% 18px 18px;
+}
+
+.purple {
+    background-color: #df67df;
+    border-color: #d30dd3;
+    border-radius: 18px 18px 50% 50%;
+}
+
+.hidden {
+    background-color: #00000000;
+    border-color: #00000000;
+}
+
+.long {
+    padding: 20px 52px;
+}

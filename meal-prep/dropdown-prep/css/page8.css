@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.card {
+    flex: 300px;
+    border: 3px solid black;
+    margin: 24px;
+    padding: 24px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.card a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    border: 3px solid black;
+    padding: 12px;
+    margin-top: 36px;
+}
+
+#card1:hover {
+    background-color: lightcyan;
+    box-shadow: 4px 4px 4px #00000033;
+    transform: translateY(-4px);
+}
+
+#card1 {
+    transition: 
+        background-color 0.5s,
+        box-shadow 0.5s,
+        transform 0.5s;
+}
+
+#card2 a {
+    transition: 
+        background-color 0.5s,
+        box-shadow 0.5s,
+        transform 0.5s;
+}
+
+#card2:hover a {
+    background-color: aquamarine;
+    box-shadow: 4px 4px 4px #00000033;
+    transform: translateY(-4px);
+}
+
+#card3 .card-content {
+    transition:
+        opacity 0.5s,
+        visibility 0.5s;
+}
+
+#card3:hover .card-content {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#card4 .card-content {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px); 
+    transition:
+        opacity 0.5s,
+        visibility 0.5s,
+        transform 0.5s; 
+}
+
+#card4:hover .card-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px); 
+}
+
+/*
+    With #card5, we're actually going to remove
+    it from the normal Document Flow of the card
+    by using position: absolute.
+
+    Recall from previous demos that when we use
+    position: absolute, the element will become
+    like a ghost: it can go anywhere it wants,
+    but the content around it acts like its 
+    not there.
+
+    However, also remember that when we use
+    absolute positioning, we also need to activate
+    RELATIVE positioning on the container of
+    whatever we're trying to absolutely position.
+
+    That means we need to set position: relative;
+    on the card itself, before we can absolutely
+    position the content inside of it.
+*/
+
+#card5 {
+    position: relative;
+}
+
+#card5 .card-content {
+    position: absolute;
+}
+
+/*
+    See how the card itself shrunk as if the
+    .card-content wasn't there, and the 
+    .card-content is now sort of floating above
+    the card?
+
+    That's the effect of absolute positioning.
+
+    It usually is pretty ugly on its own, which
+    is why we'll need to add some additional
+    styling to make it look better
+*/

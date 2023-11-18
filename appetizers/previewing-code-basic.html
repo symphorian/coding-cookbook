@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Previewing Code (Basic) - Appetizers - The Coding Cookbook</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="../css/cookbook.css" rel="stylesheet">
+        <link href="../css/appetizer.css" rel="stylesheet">
+        <link href="../css/lightbox.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="background"></div>
+        <nav>
+            <header id="topHeader">
+                <h2 id="brand"><a href="../">The Coding Cookbook</a></h2>
+                <div id="quote"></div>
+                <div id="navLinks">
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../ingredients.html">
+                                HTML
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../ingredients.html">Elements</a></h2>
+                            <h2><a href="../ingredients-cheatsheet.html">Cheatsheet</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../seasonings.html">
+                                CSS
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../seasonings.html">Properties</a></h2>
+                            <h2><a href="../seasonings-cheatsheet.html">Cheatsheet</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../recipes.html">
+                                Layouts
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../recipes.html?category=page-layout">Page Layouts</a></h2>
+                            <h2><a href="../recipes.html?category=content-layout">Content Layouts</a></h2>
+                            <h2><a href="../recipes.html?category=navigation-layout">Navigation</a></h2>
+                            <h2><a href="../recipes.html?category=miscellaneous">Miscellaneous</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../more.html">
+                                More
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../demos.html">Class Demos</a></h2>
+                            <h2><a href="../appetizers.html">Tutorials</a></h2>
+                            <h2><a href="../troubleshooting.html">Troubleshooting</a></h2>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </nav>
+        
+        <header id="title" class="">
+            <h1>Previewing Code (Basic)</h1>
+            <h3>
+                A tutorial showing how to see the effects of the code 
+                you're writing, as you write it!
+            </h3>
+        </header>
+        
+        <div class="cookbookPage">
+            <p>
+                It is technically possible to just write code and never look at
+                it until you push it up to github.com...but not even the most 
+                experienced coders would do that.
+            </p>
+            <p>
+                Testing is a big part of coding, and in web design, the big test 
+                is usually whether what you coded actually looks the way you 
+                intended.
+            </p>
+            <p>
+                There are multiple ways this can be accomplished, but this
+                tutorial is for one of the simplest.
+            </p>
+        </div>
+        
+        <div class="cookbookPage">
+            <h2 id="part1" class="invisibleAnchorTarget"></h2>
+            <h6></h6>
+            <h2>Previewing your Code</h2>
+            <h4>Seeing is believing</h4>
+            <ol>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Previewing HTML code in Visual Studio Code is 
+                                actually pretty simple, as long as you have
+                                things set up properly.
+                            </p>
+                            <p>
+                                First, we'll assume you have the HTML file you 
+                                want to preview open in Visual Studio Code.
+                            </p>
+                            <p>
+                                Then, to start, just right-click 
+                                anywhere inside the HTML file's code.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/previewing-code-basic/01_openingIndex.png" 
+                                alt="The HTML file to preview" 
+                            />
+                            <figcaption>
+                                The HTML file to preview
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After right-clicking, select the option that 
+                                says "Show Preview".
+                            </p>
+                            <p>
+                                <strong>
+                                    If you don't see that option, first make sure
+                                    that you right-clicked inside the HTML code. 
+                                    <br><br>
+                                    You can only preview an HTML file, with HTML
+                                    code; nothing else. So if you click in the 
+                                    wrong file or wrong area, you won't get that
+                                    preview option.
+                                    <br><br>
+                                    If you're sure you're right-clicking in the 
+                                    right place, you may not 
+                                    have installed the required Extensions in 
+                                    Visual Studio Code.
+                                    <br><br>
+                                    Jump back to the 
+                                    <a href="web-dev-startup.html#p1_step4">
+                                        Setup Tutorial Part 1
+                                    </a>,
+                                    and go through the last step again, so that 
+                                    you'll be able to preview your code.
+                                </strong>
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/previewing-code-basic/02_howToPreview.png" 
+                                alt="The 'Show Preview' option" 
+                            />
+                            <figcaption>
+                                The "Show Preview" option
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                If all is well, in a new 
+                                panel that popped open to the right,
+                                you should see the preview of 
+                                whatever file you right-clicked on.
+                            </p>
+                            <p>
+                                Looks like you're set to go; well done!
+                            </p>
+                            <p>
+                                However, depending on the size of your monitor 
+                                or laptop screen, you may wish that you could 
+                                view more files at once, or at least change 
+                                the layout of the different code panels.
+                            </p>
+                            <p>
+                                If that resonates with you, check out this 
+                                other tutorial on how to 
+                                <a href="#">Reorganize your Workspace</a>!
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/previewing-code-basic/03_previewingIndex.png" 
+                                alt="Previewing index.html for the Basic HTML Drills" 
+                            />
+                            <figcaption>
+                                Previewing index.html for the Basic HTML Drills
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+            <h4>
+                Now you know how to import a code template into your repository,
+                and even how to preview it! Good luck in your assignment!
+            </h4>
+        </div>
+
+        <div id="lightboxContainer">
+            <div id="lightboxBackground" class="closer"></div>
+            <img id="lightbox" src="" alt="">
+            <span id="lightboxCloser" class="closer">×</span>
+          </div>
+        <script src="../js/lightbox.js"></script>
+        <script src="../js/hideNav.js"></script>
+    </body>
+</html>

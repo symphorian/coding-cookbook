@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>flex-direction Property (Flexbox)</title>
+        <link href="css/flex-direction.css" rel="stylesheet" data-seasoning>
+        <link href="css/shared.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="recipe-example">
+            <h4>Basic Code Snippets</h4>
+            <code>flex-direction: row;</code>
+            <br>
+            <code>flex-direction: column;</code>
+        </div>
+        <h4>Additional Examples</h4>
+        <p class="warning">
+            NOTE: The flex-direction property is a 
+            <strong>Flexbox Container Property</strong>.
+            <br>
+            <br>
+            This property will have no effect if applied to
+            an element that is not an activated Flexbox
+            Container (i.e. has 
+            <code><strong>display: flex;</strong></code>
+            applied to it)
+        </p>
+        <p>
+            All flexboxes have a flex-direction set; by default, their
+            flex-direction is a row, which is why when you activate 
+            flexbox on a container, its contents immediately rearrange
+            into a row, even if you wrote no other flexbox code.
+        </p>
+
+        <p>
+            The two most common values provided to flex-direction are 
+            <i>row</i> and <i>column</i>.
+        </p>
+
+        <h4>Example of <code>flex-direction: row;</code></h4>
+        <p>
+            Again, <i>row</i> is the default flex-direction
+            property value. If you don't set flex-direction 
+            yourself, it will automatically be set to <i>row</i>.
+        </p>
+        <p>
+            The <i>row</i> value will arrange items horizontally,
+            similar to how inline items behave by default.
+        </p>
+
+        <div class="flex-container row">
+            <div class="box">A</div>
+            <span class="box">B</span>
+            <span class="box">C</span>
+            <div class="box">D</div>
+        </div>
+        <br>
+
+        <h4>Example of <code>flex-direction: column;</code></h4>
+        <p>
+            The other most common value for flex-direction is 
+            <i>column</i>.
+        </p>
+        <p>
+            The <i>column</i> value will arrange items vertically,
+            stacking them similarly to how block element behave by
+            default.
+        </p>
+
+        <div class="flex-container column">
+            <div class="box">A</div>
+            <span class="box">B</span>
+            <span class="box">C</span>
+            <div class="box">D</div>
+        </div>
+        <br>
+
+        <h4>Main-axis and Cross-axis</h4>
+        <p>
+            Using the flex-direction property is fairly straightforward,
+            but you must be aware that doing so has certain side-effects.
+        </p>
+        <p>
+            Each Flexbox Container has the concept of a
+            <strong>main-axis</strong> and a <strong>cross-axis</strong>,
+            and it is the flex-direction property that determines
+            what these axes are.
+        </p>
+        <p>
+            The <strong>main-axis</strong> specifies the direction that
+            content in the flexbox flows.  
+        </p>
+        <p class="indent">
+            When you set flex-direction to <i>row</i>, you set the 
+            <strong>main-axis</strong> to be the x-axis.
+        </p>
+        <p class="indent">
+            When you set flex-direction to <i>column</i>, you set the 
+            <strong>main-axis</strong> to be the y-axis.
+        </p>
+        <p>
+            The <strong>cross-axis</strong>, on the other hand, is 
+            simply the opposite of the <strong>main-axis</strong>.
+        </p>
+        <p class="indent">
+            So when you set flex-direction to <i>row</i>, you set the 
+            <strong>cross-axis</strong> to be the y-axis.
+        </p>
+        <p class="indent">
+            And when you set flex-direction to <i>column</i>, you set the 
+            <strong>cross-axis</strong> to be the x-axis.
+        </p>
+        <p>
+            Why is this important? Because certain flexbox properties 
+            (justify-content and align-items in particular) change their
+            behavior depending on which axis the <strong>main-axis</strong>
+            and <strong>cross-axis</strong> are set to.
+        </p>
+        <p>
+            So, try to remember the following:
+        </p>
+        <ul>
+            <li>flex-direction: row;</li>
+            <ul>
+                <li>main-axis: x (horizontal)</li>
+                <li>cross-axis: y (vertical)</li>
+            </ul>
+        </ul>
+        <ul>
+            <li>flex-direction: column;</li>
+            <ul>
+                <li>main-axis: y (vertical)</li>
+                <li>cross-axis: x (horizontal)</li>
+            </ul>
+        </ul>
+        <p>
+            Or just come back here if you need a reminder!
+        </p>
+
+        <div class="resources">
+            <h4>Additional Resources</h4>
+            <a 
+                href="https://www.w3schools.com/cssref/css3_pr_flex-direction.php"
+                target="_blank"
+            >
+                w3schools 
+            </a>
+            <br>
+            <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction"
+                target="_blank"
+            >
+                mdn web docs
+            </a>
+        </div>
+    </body>
+</html>

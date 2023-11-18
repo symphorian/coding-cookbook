@@ -1,0 +1,101 @@
+/* COMMON PAGE LAYOUT SETUP CSS - START *****************/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    /* preferred copy font goes here */
+    font-family: sans-serif; 
+}
+/* COMMON PAGE LAYOUT SETUP CSS - END ********************/
+
+/*
+    You might think there's not much difference between the
+    previous example and the other Three Column - Traditional
+    example, and you'd be right- on the surface at least.
+
+    However, what if we wanted to make our page a bit more
+    responsive?  We said before that grids tend to be a bit
+    rigid, but with a flex-able interior, now we can modify
+    our central column to be dependent on the width of the
+    page.
+
+    Check out the difference!
+*/
+
+body {
+    background-color: #E0E0E0;
+    color: #111111;
+}
+
+#outer-layout {
+    display: grid;
+    /*
+        Let's change our central column to 80% 
+        instead of 800px, then resize the page.
+
+        Now, our layout is responsive! Meaning 
+        that it adapts to the page width, and
+        the content inside readjusts because 
+        of the flexbox inside of it!
+
+        Of course, at really small and wide 
+        widths, the content looks less and less
+        aesthetically appealing.
+
+        That's (eventually) where media queries
+        will come in, which you'll learn about
+        later.
+
+        In short, they let you write CSS that
+        can change depending on the screen width,
+        which is incredibly handy!
+
+        But for now, we'll leave you with this
+        example mixing grid and flexbox.
+    */
+    grid-template-columns: 1fr 80% 1fr;
+    grid-template-areas: 
+        ". content-area .";
+}
+
+#inner-layout {
+    grid-area: content-area;
+    display: flex;
+}
+
+#column-1 {
+    background-color: white;
+    padding: 0px 12px;
+    flex: 2;
+}
+
+#column-2 {
+    background-color: white;
+    padding: 0px 12px;
+    flex: 1;
+}
+
+#column-3 {
+    background-color: white;
+    padding: 0px 12px;
+    flex: 1;
+}
+
+#inner-layout img {
+    margin-top: 24px;
+    width: 100%;
+}
+
+#inner-layout h2,
+#inner-layout h3 {
+    border-bottom: 2px solid #888888;
+    padding-bottom: 4px;
+    margin-bottom: 0px;
+}
+
+#inner-layout p {
+    margin-top: 12px;
+}
+

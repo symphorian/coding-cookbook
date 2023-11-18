@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#navbar {
+    background: linear-gradient(to bottom, #109cb8, #0e5b96);
+    display: flex;
+    align-items: center;
+}
+
+#navbar a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 24px;
+}
+
+/*
+    Next, let's do a bit more with our
+    nav items' hover states.
+
+    (it'll come in handy later on to know
+    exactly which part of the nav items
+    are hover-able)
+
+    We'll flip the gradient background we
+    used in the navbar, to make it seem like
+    the background is inverted when we hover
+    over the nav items, even though 
+    technically its a new background on top.
+*/
+#navbar a:hover {
+    background: linear-gradient(to top, #109cb8, #0e5b96);
+}
+
+
+/*
+    Hmm...we can see that for our nav items
+    on the right, the background doesn't fill
+    the entire navbar when we hover over them.
+
+    That's less than ideal, and not quite the
+    effect we were looking for (and will 
+    complicate things once we build the
+    dropdowns).
+
+    This happens because the logo is actually 
+    taller than the nav items, and stretches 
+    out the navbar vertically because it has 
+    the same padding as the other nav items.
+
+    So, we'll need to adjust the padding on 
+    the logo, but just on the top and bottom.
+*/
+#navbar #logo {
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 36px;
+    /*
+        We have to be a little nitpicky about
+        the exact values here.
+    */
+    padding-top: 13px; /* new */
+    padding-bottom: 12px; /* new */
+}
+
+/*
+    There we go! Now when we hover over our
+    nav items, including the logo, the background
+    appears to invert.
+
+    To be clear, we don't HAVE to use an effect 
+    like this in a navbar; it's just one of many 
+    options for hover effects that we chose to 
+    use for the demo today (and one that will be 
+    handy when building out dropdowns).
+*/

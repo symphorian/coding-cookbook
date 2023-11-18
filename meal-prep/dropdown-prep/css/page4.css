@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.card {
+    flex: 300px;
+    border: 3px solid black;
+    margin: 24px;
+    padding: 24px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.card a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    border: 3px solid black;
+    padding: 12px;
+    margin-top: 36px;
+}
+
+#card1:hover {
+    background-color: lightcyan;
+    box-shadow: 4px 4px 4px #00000033;
+    transform: translateY(-4px);
+}
+
+#card1 {
+    transition: 
+        background-color 0.5s,
+        box-shadow 0.5s,
+        transform 0.5s;
+}
+
+#card2 a {
+    transition: 
+        background-color 0.5s,
+        box-shadow 0.5s,
+        transform 0.5s;
+}
+
+#card2:hover a {
+    background-color: aquamarine;
+    box-shadow: 4px 4px 4px #00000033;
+    transform: translateY(-4px);
+}
+
+/*
+    Now we're going to work with #card3,
+    and this time, we're going to hide
+    the paragraph text and the button
+    when we hover over the card.
+
+    We're going to (start out) by using
+    the opacity property to hide the
+    content, but we're going to find
+    out that this approach isn't quite
+    ideal.
+*/
+#card3 .card-content {
+    transition:
+        opacity 0.5s;
+}
+
+#card3:hover .card-content {
+    opacity: 0;
+}
+
+/*
+    By setting the opacity to zero on the
+    .card-content inside of the 
+    card's hover state, we make them
+    fade away.
+
+    However, notice what happens when you
+    hover over the space where the button
+    was...the mouse still turns into the
+    pointer cursor.
+
+    This means that although the button
+    is invisible, it's still there and
+    is actually interactable.
+
+    That's definitely less than ideal!
+    You don't want users to be able to
+    click on invisible buttons (unless
+    it's a website of some exploratory
+    game or art piece).
+*/

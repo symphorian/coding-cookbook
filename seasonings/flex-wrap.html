@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>flex-wrap Property (Flexbox)</title>
+        <link href="css/flex-wrap.css" rel="stylesheet" data-seasoning>
+        <link href="css/shared.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="recipe-example">
+            <h4>Basic Code Snippets</h4>
+            <code>flex-wrap: nowrap;</code>
+            <br>
+            <code>flex-wrap: wrap;</code>
+        </div>
+        <h4>Additional Examples</h4>
+        <p class="warning">
+            NOTE: The flex-wrap property is a 
+            <strong>Flexbox Container Property</strong>.
+            <br>
+            <br>
+            This property will have no effect if applied to
+            an element that is not an activated Flexbox
+            Container (i.e. has 
+            <code><strong>display: flex;</strong></code>
+            applied to it)
+        </p>
+        <p>
+            The flex-wrap property specifies whether content in 
+            a flexbox should wrap to a new line if the content 
+            inside of it reaches the end of the container.
+        </p>
+        <p>
+            All flexboxes have a flex-wrap set; by default, they
+            are set to <i>nowrap</i>, but that can be changed to
+            <i>wrap</i> if its what you need.
+        </p>
+
+        <h4>Example of <code>flex-wrap: nowrap;</code></h4>
+        <p>
+            Again, <i>nowrap</i> is the default flex-wrap
+            property value. If you don't set flex-wrap yourself, it will 
+            automatically be set to <i>nowrap</i>.
+        </p>
+        <p>
+            In normal HTML containers, if they are not set to wrap, 
+            their content will overflow.
+        </p>
+        <p>
+            However, flexbox containers are different.  They will 
+            overflow eventually if they have absolutely no space 
+            left inside of them, but before they get to that point,
+            they will instead try to compress the size of the 
+            items inside.
+        </p>
+        <p>
+            It is only when they have squeezed all the remaining 
+            space from the items inside them that flexbox containers
+            will start to overflow.
+        </p>
+        <p>
+            To see an example of this, look at the boxes below,
+            and compare the widths assigned to the boxes in the 
+            code.
+        </p>
+
+        <div class="flex-container nowrap">
+            <div class="box">A</div>
+            <div class="box wide">B</div>
+            <div class="box">C</div>
+            <div class="box very-wide">D</div>
+            <div class="box">E</div>
+            <div class="box wide">F</div>
+            <div class="box wide">G</div>
+            <div class="box">H</div>
+        </div>
+        <br>
+
+        <p>
+            We have regular boxes with no explicit width, 
+            some "wide" boxes with widths of 200px, and one
+            "very-wide" box with a width of 400px.
+        </p>
+        <p>
+            But depending on the size of your screen, these 
+            wider boxes may not have their full widths.
+        </p>
+        <p>
+            Unless you have a very wide screen, the boxes are 
+            most likely compressed so that they all can fit on
+            one line, since the flexbox container is set to
+            <i>nowrap</i>.
+        </p>
+
+        <h4>Example of <code>flex-wrap: wrap;</code></h4>
+        <p>
+            If you set the flex-wrap property of a flexbox 
+            container to <i>wrap</i>, then it will behave 
+            similar to a normal HTML container.
+        </p>
+        <p>
+            When its contents get too wide, it will simply 
+            start a new line inside itself and shift its 
+            content onto that line.
+        </p>
+
+        <div class="flex-container wrap">
+            <div class="box">A</div>
+            <div class="box wide">B</div>
+            <div class="box">C</div>
+            <div class="box very-wide">D</div>
+            <div class="box">E</div>
+            <div class="box wide">F</div>
+            <div class="box wide">G</div>
+            <div class="box">H</div>
+        </div>
+        <br>
+
+        <h4>Fancy Example using <code>flex-wrap: wrap;</code></h4>
+        <p>
+            There's not much else to know about the flex-wrap
+            property itself.
+        </p>
+        <p>
+            But if you combine it with a couple other properties, 
+            you can create an interesting layout that resembles a
+            grid, but is much more flexible.
+            
+        </p>
+        <p>
+            (which might look rather familiar if you use the 
+            Cards View of the Coding Cookbook regularly!)
+        </p>
+
+        <div class="flex-container wrap">
+            <div class="box fancy">A</div>
+            <div class="box fancy">B</div>
+            <div class="box fancy">C</div>
+            <div class="box fancy">D</div>
+            <div class="box fancy">E</div>
+            <div class="box fancy">F</div>
+            <div class="box fancy">G</div>
+            <div class="box fancy">H</div>
+        </div>
+
+        <div class="resources">
+            <h4>Additional Resources</h4>
+            <a 
+                href="https://www.w3schools.com/cssref/css3_pr_flex-wrap.php"
+                target="_blank"
+            >
+                w3schools 
+            </a>
+            <br>
+            <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap"
+                target="_blank"
+            >
+                mdn web docs
+            </a>
+        </div>
+    </body>
+</html>

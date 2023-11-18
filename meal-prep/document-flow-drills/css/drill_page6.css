@@ -1,0 +1,42 @@
+/* Drill 6 - Write your code solution below */
+
+/*
+    This is another similar drill to the 
+    previous one, and also rather practical;
+    however, unlike the previous one, we're
+    not turning ALL the blocks to inline-block,
+    only the bottom two.
+
+    And like the previous one, we'll need to 
+    set explicit widths to get them side-by-side.
+
+    I recommend that they use percentages because
+    it's probably easier than guessing the exact
+    pixel widths they need to be equally spaced.
+
+    However, after providing the solution, some
+    students may wonder why 50% doesn't work;
+    after all, 50% + 50% should equal 100%, right?
+
+    The answer is actually somewhat complicated,
+    and requires knowledge of other aspects of
+    CSS that they don't know yet (the Box Model).
+
+    The simple answer is that that 50% value doesn't
+    include the spacing between the blocks, so
+    the actual "width" of the block is more like
+    the width they specify (50%) plus extra space,
+    so 50+?% plus 50+?% is going to equal 100+?%,
+    or in other words, more than 100%, so it won't
+    fit on the same line.
+*/
+
+#d6-div2 {
+    display: inline-block;
+    width: 48%;
+}
+
+#d6-div3 {
+    display: inline-block;
+    width: 48%;
+}

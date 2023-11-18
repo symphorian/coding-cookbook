@@ -1,0 +1,86 @@
+
+* {
+    box-sizing: border-box;
+}
+
+
+/*
+    Now that we've confirmed how the columns
+    sized, let's start working toward our first
+    layout design.
+
+    We're going to aim for something similar to 
+    the Facebook three column layout.
+
+    (bring that up for reference from the powerpoint)
+
+    To start, let's change things up and go for a
+    dark themed layout this time.
+
+    To do so, we'll set a dark background color,
+    and change the default font color to something
+    lighter (this won't change the anchor colors
+    though; we'll change those later).
+*/
+body {
+    margin: 0px;
+    font-family: sans-serif; 
+    background-color: #1f1f1f;
+    color: #EEEEEE;
+}
+
+/*
+    Notice how our column background colors didn't
+    change? That's because they're separate containers.
+
+    We only changed the body background, and the body
+    is the largest container which is sort of "behind" 
+    everything else.
+
+    We'll need to remove the column background colors
+    to see the black color behind them.  Before we do
+    though, just remember that the columns all share
+    the height of the tallest content column.
+
+    (go ahead and remove the column backgrounds now).
+
+    The boxes for those columns are still there, even 
+    if you can't see them.
+*/
+
+/*
+    Now, let's update our sidebar columns so that they
+    have a fixed width, rather than a flexible one.
+*/
+#grid-layout {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px; /* updated */
+}
+
+/*
+    Now when we stretch and shrink the preview,
+    we can see that the sidebars stay on the sides,
+    but the primary column expands to fill the space
+    inside.
+
+    This is actually a bit of an uncommon layout;
+    rarely do we have sidebars anchored to the edges
+    of the screen, because they can get pretty spread
+    out when the page gets wide.
+*/
+
+#sidebar-column-1 {
+    /* removed background-color */
+}
+
+#primary-column {
+    /* removed background-color */
+}
+
+#sidebar-column-2 {
+    /* removed background-color */
+}
+
+/*
+
+*/

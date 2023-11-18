@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    font-family: sans-serif;
+    background-color: teal;
+}
+
+@media screen and (max-width: 725px) {
+    body {
+        background-color: orange;
+    }
+}
+
+/*
+    Let's create another media query. This time we'll
+    set its media feature to be a max-width of 480px.
+*/
+@media screen and (max-width: 480px) {
+    /*
+        Now, let's target our body and give it a
+        background-color of purple.
+
+        If you shrink your screen width really small,
+        (less than 480px), the background should turn
+        purple.
+
+        You'll also notice that the styles from our previous
+        media query aren't being applied to our body. Can
+        anyone remember why?
+
+        It's because CSS is applied from the top of our CSS
+        file to the bottom, CASCADING down our HTML like a
+        waterfall.
+
+        This means that first, the teal background color is 
+        applied to the body (because it's first in the 
+        stylesheet), but then if the screen width
+        meets the conditions of a media query later in the 
+        stylesheet, then that background color will be 
+        overwritten by the color in the media query.
+
+        Whenever an element has conflicting CSS Property
+        values assigned to it (like the body in our case), 
+        the browser will first evaluate which CSS Rules are 
+        more specific, and use those Rules to assign the values.
+
+        If two rules have the same level of specificity,
+        then whichever CSS rule comes last in the stylesheet
+        will be the one that gets its value applied.
+        
+        This is what happens in our case: all three CSS rules
+        use the body selector to target the body element,
+        meaning they have the same level of specificity.
+        
+        As a result, because the 480px media query's body
+        CSS Rule comes last, it's the color that is applied
+        (assuming the screen width matches the media query).
+    */
+    body {
+        background-color: purple;
+    }
+}

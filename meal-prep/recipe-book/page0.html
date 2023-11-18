@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Recipe Book (Project)</title>
+        <!-- 
+            The &lt;link&gt; below is responsive for loading the 
+            Font Awesome icon library.  Remember that only
+            "free" icons can be loaded in this way; "pro"
+            icons won't show up at all, so if students have
+            trouble with icons loading, make sure that the 
+            icon itself (and its style) are not "pro".
+        -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <!--
+            This is only a partially completed example of
+            what could be the "recipe book" option for
+            the Week 1 project, since the completed project
+            would basically just be "rinse and repeat" with 
+            different content for each recipe.
+        -->
+        <h1>The Starving Artist Cookbook</h1>
+        <br>
+        <h2>Honey Muffins</h2>
+        <hr>
+        <!--
+            For the recipe info section, we take advantage
+            of inline elements like <b>, <span>, and <i> to
+            keep content on the same line.
+
+            To add extra horizontal space between elements in the
+            same line, we can be a little hacky (since we haven't
+            learned CSS yet) and use the HTML entity for a 
+            space (&nbsp;) to add some extra horizontal margin.
+
+            Then to separate content vertically, we use block 
+            elements (like <h5>, <p>, or <hr>) or we use line 
+            break elements (<br>) .
+        -->
+        <i class="fa-regular fa-clock"></i>
+        <b>Total Time</b>&nbsp;
+        <span>30 min</span>
+        &nbsp;&nbsp;&nbsp;
+        <!--
+                Below (and above) are examples of how to load 
+                up icons from the Font Awesome icon library.
+                
+                Again, remember that you can only use "free"
+                icons in this way; "pro" icons (or icon 
+                styles) will not load at all.
+
+                And yes, they are choosing to use the <i>
+                element as if "i" stood for "icon" instead
+                of "italics".  Not the best practice, but
+                a very common one across the internet.
+
+                As long as no one puts any content inside 
+                of the element, it shouldn't really hurt
+                anything, despite not being used as intended.
+            -->
+        <i class="fa-solid fa-utensils"></i>
+        <b>Makes</b>&nbsp;
+        <span>1 dozen</span>
+        &nbsp;&nbsp;&nbsp;
+        <i class="fa-solid fa-feather"></i>
+        <b>Author</b>&nbsp;
+        <span>Grammy Liz</span>
+        <hr>
+        <!--
+            Remember, <img> elements are inline elements,
+            so unless you put a block element (like <h5>)
+            or line break between them, they'll line up 
+            side-by-side with other content.
+        -->
+        <img 
+            src="images/honey_muffins.jpeg" 
+            alt="honey muffins"
+            width="400"
+        >
+        <h5>INGREDIENTS</h5>
+        <ul>
+            <li>2 cups all-purpose flour</li>
+            <li>1/2 cup sugar</li>
+            <li>3 teaspoons baking powder</li>
+            <li>1/2 teaspoon salt</li>
+            <li>1 large egg, room temperature</li>
+            <li>1 cup 2% milk</li>
+            <li>1/4 cup butter, melted</li>
+            <li>1/4 cup honey</li>
+        </ul>
+        <h5>DIRECTIONS</h5>
+        <ol>
+            <li>
+                Preheat oven to 400°. In a large bowl, 
+                combine flour, sugar, baking powder 
+                and salt. In a small bowl, combine egg, 
+                milk, butter and honey. Stir into dry 
+                ingredients just until moistened.
+            </li>
+            <li>
+                Fill greased or paper-lined muffin cups 
+                three-fourths full. Bake until a 
+                toothpick inserted in center comes out 
+                clean, 15-18 minutes. Cool 5 minutes 
+                before removing from pan to a wire rack. 
+                Serve warm.
+            </li>
+        </ol>
+    </body>
+</html>

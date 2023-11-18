@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    font-family: sans-serif;
+    background-color: teal;
+}
+
+@media screen and (max-width: 725px) {
+    /*
+        Let's target our body and give
+        it a background-color of orange. We'll want
+        to make sure that when we write this CSS rule,
+        we write it in between the curly braces of our
+        recently added media query.
+
+        Also, our indentation rules come back into play
+        here: CSS Rules added inside of media queries
+        should be indented one level to the right.
+
+        Now, grow and shrink your preview to see
+        how our background color changes on depending
+        on if our screen's width meets the condition
+        we applied.
+
+        As long as our screen is at a width of 725px and
+        below, our #main and #footer background will be
+        orange but whenever it's 726px and above, our
+        body element will be teal based on the
+        style we applied to them outside of the media query.
+    */
+    body {
+        background-color: orange;
+    }
+}

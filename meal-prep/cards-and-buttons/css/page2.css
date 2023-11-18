@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#main {
+    width: 90vw;
+    max-width: 800px;
+    margin: 48px auto;
+    display: flex;
+    justify-content: center;
+}
+
+h3 {
+    text-align: center;
+    margin: 24px 0;
+}
+
+.card {
+    width: 350px;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+/*
+    Now we're going to add a bit more content
+    into our card in the HTML.  Jump over there
+    and then come back here when you're done.
+
+    Let's style our h2 and p element.
+    For the h2, let's give it a font-size of 36px
+    to stand out more, and adjust margin-top to 
+    get our h2 a little closer to the image.
+
+    Let's also set the font-size of the paragraph 
+    to 18px just to make it a bit larger.
+*/
+.card h2 {
+    font-size: 36px;
+    margin-top: 12px;
+}
+
+.card p {
+    font-size: 18px;
+}

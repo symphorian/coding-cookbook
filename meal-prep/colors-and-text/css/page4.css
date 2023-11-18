@@ -1,0 +1,28 @@
+#first-paragraph {
+    color: blue;
+}
+
+#second-paragraph {
+    color: #FF0000;
+}
+
+/*
+    Now, we're going to introduce a new property
+    called 'font-weight'. This property is used
+    to make text look bold (or thinner).
+    
+    This property is a little peculiar in that 
+    it can receive keyword values like 
+    "normal" and "bold",
+    but it can also accept numeric values in 
+    intervals of 100 between 100 - 900
+    (where 600 is the same as "bold").
+
+    We're going to create ANOTHER new paragraph,
+    this time with the id value of 'bold-paragraph',
+    and set the font-weight property on it.
+*/
+
+#bold-paragraph {
+    font-weight: bold;
+}

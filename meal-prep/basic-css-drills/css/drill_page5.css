@@ -1,0 +1,32 @@
+/* Drill 5 - Write your code solution below */
+
+/*
+    This one is more challenging, to show them
+    how background-color works in parent/child
+    relationships.
+
+    The div is the parent here, and we apply the
+    "peachpuff" color first.  That covers the
+    background of both paragraphs.
+
+    But once we apply the background color to 
+    each individual paragraph, that paragraph
+    background-color is "drawn over" the div's
+    background-color.
+
+    Which is how we get the final version in 
+    the screenshot, with that thin bar of 
+    "peachpuff" in the center.
+*/
+
+#d5-div1 {
+    background-color: peachpuff;
+}
+
+#d5-p1 {
+    background-color: pink;
+}
+
+#d5-p2 {
+    background-color: lightcoral;
+}

@@ -1,0 +1,37 @@
+/* Drill 3 - Write your code solution below */
+
+/*
+    We start the same as the last drill,
+    setting both a width and margin-left.
+
+    But this time, we want the content 
+    centered, so we need to set the 'auto'
+    value on both the left AND right sides
+    of the margin.
+
+    By doing so, instead of shoving all the
+    available space to the left of the 
+    element, we distribute it evenly between
+    the two sides, effectively centering
+    the element.
+
+    This is one of the most common layout
+    implementations, so try to reinforce
+    how important it is, but also how
+    simple it is.
+
+    The main variation students will see
+    out in the wild is the width: some
+    sites have very wide widths, and some
+    have smaller, more flexible widths.
+
+    Regardless, using 'auto' on both sides
+    of an element is a very common way 
+    to center a container in CSS.
+*/ 
+
+#column-d3 {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}

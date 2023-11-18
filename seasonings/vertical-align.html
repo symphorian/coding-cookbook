@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>vertical-align Property</title>
+        <link href="css/vertical-align.css" rel="stylesheet" data-seasoning>
+        <link href="css/shared.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="recipe-example">
+            <h4>Basic Code Snippets</h4>
+            <code>vertical-align: baseline;</code>
+            <br>
+            <code>vertical-align: top;</code>
+            <br>
+            <code>vertical-align: middle;</code>
+            <br>
+            <code>vertical-align: bottom;</code>
+        </div>
+        <h4>Additional Examples</h4>
+        <p>
+            The vertical-align property is an easily misused property.  As its 
+            name implies, it is used to vertically align content...but it only 
+            applies to VERY SPECIFIC content.  You can't use it on just
+            anything.
+        </p>
+
+        <h5>Restrictions</h5>
+        <p>
+            Let's be very clear to begin: the vertical-align property can ONLY 
+            be used on <strong>inline</strong> and <strong>inline-block</strong>
+            elements.
+        </p>
+        <p>
+            If you try to use it on a block element or anything else, it will 
+            do nothing at all.
+        </p>
+        <p>
+            What's more, unlike the similarly named "text-align" property, the 
+            vertical-align property does NOT go on the container of the content 
+            you want align vertically.
+        </p>
+        <p>
+            The vertical-align property is a "self-aligning" property; in
+            other words, you place it on the element whose alignment you 
+            want to change.
+        </p>
+
+        <h5>Examples</h5>
+        <p>
+            Alright, now with the restrictions out of the way, let's see how 
+            we can use the vertical align property to modify our inline or 
+            inline-block content.
+        </p>
+
+        <h6>image/inline-block -> baseline</h6>
+        <p>
+            Take a look at the example below.  That is the natural behavior 
+            of inline text, an image, and an inline-block inside a container.
+            As you can see, it is the baselines of all the elements that are
+            aligned.  And that makes sense, considering the default value for 
+            vertical-align is "baseline". 
+        </p>
+
+        <div id="example-1" class="example">
+            <span class="span-1">Inline text</span>
+            <img src="images/dog.jpg" alt="small doge">
+            <span class="span-2">Inline text</span>
+            <div class="inline-block">Inline-block</div>
+        </div>
+
+        <h6>image -> top</h6>
+        <p>
+            Now, let's see what happens when we apply the following code to the 
+            image element:
+        </p>
+        <p>
+            <code>vertical-align: top;</code>
+        </p>
+        <div id="example-2" class="example">
+            <span class="span-1">Inline text</span>
+            <img src="images/dog.jpg" alt="small doge">
+            <span class="span-2">Inline text</span>
+            <div class="inline-block">Inline-block</div>
+        </div>
+        <p>
+            It seems like the image moved...down?
+        </p>
+        <p>
+            Sort of.  It aligned itself to the top of the line of content,
+            which involved moving itself down.  Now, the top of the image 
+            is aligned with the top of the line content, which happens to
+            be the top of the inline-block.
+        </p>
+
+        <h6>image -> bottom</h6>
+        <p>
+            Now, let's see what happens when we apply the following code to the 
+            image element:
+        </p>
+        <p>
+            <code>vertical-align: bottom;</code>
+        </p>
+        <div id="example-3" class="example">
+            <span class="span-1">Inline text</span>
+            <img src="images/dog.jpg" alt="small doge">
+            <span class="span-2">Inline text</span>
+            <div class="inline-block">Inline-block</div>
+        </div>
+        <p>
+            This time, it aligned itself to the bottom of the line of content,
+            which happens to be the bottom of the inline-block.
+        </p>
+
+        <h6>image -> middle</h6>
+        <p>
+            Now, let's see what happens when we apply the following code to the 
+            image element:
+        </p>
+        <p>
+            <code>vertical-align: middle;</code>
+        </p>
+        <div id="example-4" class="example">
+            <span class="span-1">Inline text</span>
+            <img src="images/dog.jpg" alt="small doge">
+            <span class="span-2">Inline text</span>
+            <div class="inline-block">Inline-block</div>
+        </div>
+        <p>
+            This time, as we might have expected, the image is now vertically 
+            aligned in the middle/center of the line.
+        </p>
+        <p>
+            NOTE: the value to align content in the center of the line 
+            vertically is "<strong>middle</strong>", not "center".  If you 
+            try to write <code>vertical-align: center;</code>, nothing
+            will happen.
+        </p>
+
+        <h6>inline-block -> top</h6>
+        <p>
+            This time, let's play with the inline-block; let's see what 
+            happens when we apply the following code to the 
+            inline-block element:
+        </p>
+        <p>
+            <code>vertical-align: top;</code>
+        </p>
+        <div id="example-5" class="example">
+            <span class="span-1">Inline text</span>
+            <img src="images/dog.jpg" alt="small doge">
+            <span class="span-2">Inline text</span>
+            <div class="inline-block">Inline-block</div>
+        </div>
+        <p>
+            As expected, the inline-block moved to the top of the line of 
+            content, and since the top is defined by the image, the 
+            inline-block moves itself up there.
+        </p>
+
+        <h6>inline-block -> bottom</h6>
+        <p>
+            Now let's see what happens when we apply the following code to the 
+            inline-block element:
+        </p>
+        <p>
+            <code>vertical-align: bottom;</code>
+        </p>
+        <div id="example-6" class="example">
+            <span class="span-1">Inline text</span>
+            <img src="images/dog.jpg" alt="small doge">
+            <span class="span-2">Inline text</span>
+            <div class="inline-block">Inline-block</div>
+        </div>
+        <p>
+            This time, the inline-block moved to the bottom of the line of 
+            content, which is defined by both the text and image.
+        </p>
+
+        <h6>inline-block -> middle</h6>
+        <p>
+            Now let's see what happens when we apply the following code to the 
+            inline-block element:
+        </p>
+        <p>
+            <code>vertical-align: middle;</code>
+        </p>
+        <div id="example-7" class="example">
+            <span class="span-1">Inline text</span>
+            <img src="images/dog.jpg" alt="small doge">
+            <span class="span-2">Inline text</span>
+            <div class="inline-block">Inline-block</div>
+        </div>
+        <p>
+            The "middle" result might be a little surprising, since the 
+            inline-block seems to have aligned with the baseline again.
+        </p>
+        <p>
+            But interestingly enough, the "middle" alignment behavior (according 
+            to MDN):
+        </p>
+        <p>
+            <em>
+                "Aligns the middle of the element with the baseline plus half 
+                the x-height of the parent."
+            </em>
+        </p>
+        <p>
+            In other words, it basically aligns the middle of the element, 
+            with the middle of the baseline.  So with that in mind, the 
+            alignment of the inline-block is actually expected.
+        </p>
+
+        <h6>all -> top</h6>
+        <p>
+            Finally, let's see what happens when we apply the following code to 
+            ALL the elements in the line:
+        </p>
+        <p>
+            <code>vertical-align: top;</code>
+        </p>
+        <div id="example-8" class="example">
+            <span class="span-1">Inline text</span>
+            <img src="images/dog.jpg" alt="small doge">
+            <span class="span-2">Inline text</span>
+            <div class="inline-block">Inline-block</div>
+        </div>
+        <p>
+            This is probably the most expected result.  If we set all elements 
+            in a line to have vertical-align set to "top", then they're all
+            going to move to the top of the line.
+        </p>
+        <p>
+            The vertical-align property is probably the most predictable when 
+            EVERYTHING in a line is given the same vertical-align value,
+            so we'll leave the rest of the example to you to try out.
+        </p>
+
+        
+        <div class="resources">
+            <h4>Additional Resources</h4>
+            <a 
+                href="https://www.w3schools.com/cssref/pr_pos_vertical-align.php"
+                target="_blank"
+            >
+                w3schools 
+            </a>
+            <br>
+            <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align"
+                target="_blank"
+            >
+                mdn web docs
+            </a>
+            <br>
+            <a
+                href="https://css-tricks.com/almanac/properties/v/vertical-align/"
+                target="_blank"
+            >
+                CSS Tricks
+            </a>
+        </div>
+    </body>
+</html>

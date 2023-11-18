@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    font-family: sans-serif;
+    background-color: teal;
+}
+
+#header, #footer {
+    width: 100vw;
+}
+
+#header {
+    background-image: url(../images/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+.hero-content {
+    width: 80vw;
+    max-width: 1000px;
+    margin: 0px auto;
+}
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0px;
+}
+.hero-content h3 {
+    margin: 15px 0px 30px;
+    font-size: 1.5rem;
+}
+.hero-content a {
+    display: inline-block;
+    background-color: #00be06;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 1.25rem;
+}
+
+/*
+    Let's target our #main .promotion and give it a width of 80vw.
+    We'll also give it a max-width of 1000px and a margin of 25px auto.
+    We'll add a height of 50vh, display of flex, gap of 25px and a
+    align-items of center.
+*/
+#main .promotion {
+    width: 80vw;
+    max-width: 1000px;
+    margin: 25px auto;
+    height: 50vh;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+/*
+    Let's fix our overflowing large image as well.
+    We'll target the .img-container and give it a
+    height of 100% and a flex of 1.
+*/
+.promotion .img-container {
+    height: 100%;
+    flex: 1;
+}
+/*
+    Then we'll come done here and target the image
+    itself, giving it a width and height of 100% and
+    an object-fit of cover.
+*/
+.promotion img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*
+    We can give our .content a flex of 1 as well.
+
+    Let's move on to our two cards.
+*/
+.promotion .content {
+    flex: 1;
+}
+
+@media screen and (max-width: 725px) and (min-width: 481px) {
+    body {
+        background-color: orange;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        background-color: purple;
+    }
+}
+

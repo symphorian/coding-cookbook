@@ -1,0 +1,446 @@
+/***********************************************************************
+ * variables for dynamic content
+ **********************************************************************/
+const recipeNames = [];
+const mealPrepRecipes = [
+    {
+        recipeName: "headings",
+        categories: "demo, week1",
+        pageCount: 4,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "text-styling",
+        categories: "demo, week1",
+        pageCount: 8,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "basic-html-drills",
+        categories: "drills, week1",
+        pageCount: 8,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "lists",
+        categories: "demo, week1",
+        pageCount: 10,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "images",
+        categories: "demo, week1",
+        pageCount: 8,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "anchors",
+        categories: "demo, week1",
+        pageCount: 10,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "wiki-page-1",
+        categories: "exercise, week1",
+        pageCount: 1,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "wiki-page-2",
+        categories: "exercise, week1",
+        pageCount: 1,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "recipe-book",
+        categories: "project, week1",
+        pageCount: 1,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "playlist",
+        categories: "project, week1",
+        pageCount: 1,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "movie-showcase",
+        categories: "project, week1",
+        pageCount: 1,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "colors-and-text",
+        categories: "demo, week2",
+        pageCount: 11,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "basic-css-drills",
+        categories: "drills, week2",
+        pageCount: 15,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "color-palettes",
+        categories: "exercise, week2",
+        pageCount: 1,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "divs-spans-and-flow",
+        categories: "demo, week2",
+        pageCount: 9,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "document-flow-drills",
+        categories: "drills, week2",
+        pageCount: 8,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "bulletin-board",
+        categories: "exercise, week2",
+        pageCount: 3,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "box-model",
+        categories: "demo, week2",
+        pageCount: 11,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "box-model-margin-drills",
+        categories: "drills, week2",
+        pageCount: 9,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "box-model-padding-drills",
+        categories: "drills, week2",
+        pageCount: 7,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "box-model-border-drills",
+        categories: "drills, week2",
+        pageCount: 9,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "upside-down-tetris",
+        categories: "exercise, week2",
+        pageCount: 3,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "combining-selectors",
+        categories: "demo, week2",
+        pageCount: 11,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "containers-selectors-drills",
+        categories: "drills, week2",
+        pageCount: 7,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "studio-gallery",
+        categories: "exercise, week2",
+        pageCount: 2,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "alley-posters",
+        categories: "exercise, week2",
+        pageCount: 2,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "absolute-vs-relative-units",
+        categories: "demo, week2",
+        pageCount: 10,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "generic-license",
+        categories: "project, week2",
+        pageCount: 2,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "one-column-layouts",
+        categories: "demo, week3",
+        pageCount: 8,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "single-column-layouts-drills",
+        categories: "drills, week3",
+        pageCount: 7,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "product-showcase-site",
+        categories: "exercise, week3",
+        pageCount: 1,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "two-column-flex-layouts",
+        categories: "demo, week3",
+        pageCount: 7,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "flexbox-drills",
+        categories: "drills, week3",
+        pageCount: 12,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "wiki-with-sidebar",
+        categories: "exercise, week3",
+        pageCount: 1,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "two-column-grid-layouts",
+        categories: "demo, week3",
+        pageCount: 9,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "grid-drills",
+        categories: "drills, week3",
+        pageCount: 8,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "blog-with-sidebar",
+        categories: "exercise, week3",
+        pageCount: 1,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "three-column-grid-layouts",
+        categories: "demo, week3",
+        pageCount: 9,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "mebay-product-page",
+        categories: "exercise, week3",
+        pageCount: 1,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "two-column-mixed-layouts",
+        categories: "demo, week3",
+        pageCount: 10,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "metube",
+        categories: "project, week3",
+        pageCount: 1,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "cards-and-buttons",
+        categories: "demo, week4",
+        pageCount: 11,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "trek-cards",
+        categories: "exercise, week4",
+        pageCount: 1,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "animagram-cards",
+        categories: "exercise, week4",
+        pageCount: 1,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "pokemon-cards",
+        categories: "exercise, week4",
+        pageCount: 1,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "product-comparison-site",
+        categories: "exercise, week4",
+        pageCount: 1,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "heroes",
+        categories: "demo, week4",
+        pageCount: 9,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "three-heroes",
+        categories: "exercise, week4",
+        pageCount: 3,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "galleries",
+        categories: "demo, week4",
+        pageCount: 8,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "navbars-basic",
+        categories: "demo, week5",
+        pageCount: 12,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "dropdown-prep",
+        categories: "demo, week5",
+        pageCount: 16,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "hover-galleries",
+        categories: "exercise, week5",
+        pageCount: 1,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "dropdown-nav",
+        categories: "demo, week5",
+        pageCount: 10,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "adopt-me-plz",
+        categories: "exercise, week5",
+        pageCount: 1,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "media-queries",
+        categories: "demo, week5",
+        pageCount: 13,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "media-queries-exercise",
+        categories: "exercise, week5",
+        pageCount: 1,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "grrm",
+        categories: "project, week5",
+        pageCount: 1,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "indigo-sphere",
+        categories: "exercise, week6",
+        pageCount: 1,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "foxtail-farms-market",
+        categories: "exercise, week6",
+        pageCount: 1,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "foxtail-farms-science",
+        categories: "exercise, week6",
+        pageCount: 1,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "foxtail-farms-about",
+        categories: "exercise, week6",
+        pageCount: 1,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "restaurant-home",
+        categories: "project, week6",
+        pageCount: 1,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "restaurant-menu",
+        categories: "project, week6",
+        pageCount: 1,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "superbowl-fe",
+        categories: "project, week8",
+        pageCount: 1,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "function-game",
+        categories: "exercise, week8",
+        pageCount: 2,
+        hasLocalProject: true,
+    },
+];
+const categories = [
+    {
+        label: "Week 1",
+        value: "week1",
+    },
+    {
+        label: "Week 2",
+        value: "week2",
+    },
+    {
+        label: "Week 3",
+        value: "week3",
+    },
+    {
+        label: "Week 4",
+        value: "week4",
+    },
+    {
+        label: "Week 5",
+        value: "week5",
+    },
+    {
+        label: "Week 6",
+        value: "week6",
+    },
+    {
+        label: "Week 8",
+        value: "week8",
+    },
+    {
+        label: "Demos",
+        value: "demo",
+    },
+    {
+        label: "Drills",
+        value: "drills",
+    },
+    {
+        label: "Exercises",
+        value: "exercise",
+    },
+    {
+        label: "Projects",
+        value: "project",
+    },
+];
+const ROOT_RECIPE_FOLDER = "meal-prep";
+const IS_DYNAMIC_LOAD = true;
+
+// load cookbook.js immediately after this file

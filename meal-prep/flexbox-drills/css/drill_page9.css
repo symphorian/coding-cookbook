@@ -1,0 +1,18 @@
+/* Drill 9 - Write your code solution below */
+
+/*
+    This drill is similar to the previous one,
+    but we only want to have one box stretch
+    to fill the remaining space in the container.
+
+    The flex property can help us here as well,
+    we just want to target ONE box, instead
+    of all of them.
+*/
+
+#container-9 {
+    display: flex;
+}
+#c9-box2 {
+    flex: 1;
+}

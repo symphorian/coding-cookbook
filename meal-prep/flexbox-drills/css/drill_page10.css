@@ -1,0 +1,14 @@
+/* Drill 10 - Write your code solution below */
+
+/*
+    This time, almost exactly the same as the 
+    previous drill; we just need to target a
+    different element in the container this time.
+*/
+
+#container-10 {
+    display: flex;
+}
+#c10-box1 {
+    flex: 1;
+}

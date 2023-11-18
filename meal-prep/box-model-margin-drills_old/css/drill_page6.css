@@ -1,0 +1,10 @@
+/* Drill 6 - Write your code solution below */
+
+/*
+    Now we're back to boxes, focusing on how
+    margin can affect inline elements.
+*/
+
+.d6-div {
+    margin-right: 48px;
+}

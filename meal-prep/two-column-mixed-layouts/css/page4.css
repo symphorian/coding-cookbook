@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif; 
+}
+
+#grid-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-areas: 
+        "header header"
+        "sidebar main";
+}
+
+#header {
+    grid-area: header;
+    padding: 0px 36px;
+}
+
+/*
+    Next, let's tackle our sidebar.
+
+    Once again, we'll remove the background
+    color, and add some padding, which ideally
+    should match or be similar to our header.
+
+    However, for certain styles and layouts,
+    sometimes we have to set that padding at
+    lower levels, and that's what we're going
+    to end up doing later, so for now, the
+    padding we set on the sidebar is going to
+    be a little less than the header padding.
+
+    The padding will look too much at first,
+    but remember, ul elements have their own
+    padding, so once we strip that off, the
+    spacing should look a lot more uniform.
+*/
+
+#sidebar {
+    /* removed background-color */
+    grid-area: sidebar;
+    padding: 0px 24px;
+}
+
+#main {
+    background-color: lightgoldenrodyellow;
+    grid-area: main;
+}
+
+#header a {
+    text-decoration: none;
+}
+
+#header #me {
+    color: #111111;
+}
+
+#header #tube {
+    color: white;
+    background-color: red;
+    padding: 4px;
+    border-radius: 12px;
+}
+
+/*
+    Now we'll strip off the default left/right
+    ul padding, margin, and bullet list style, and
+    add a bottom border and custom top/bottom
+    padding to separate each ul list of 
+    hyperlinks from each other.
+*/
+
+#sidebar ul {
+    padding: 12px 0px;
+    margin: 0px;
+    list-style-type: none;
+    border-bottom: 1px solid #AAAAAA
+}
+
+/*
+    Things will still look a bit cramped at first,
+    but they'll look better once we add some
+    "bubble-wrap" (i.e. padding) to our anchors.
+
+    First, we'll strip the hyperlink style of their 
+    underlines, and change the text color.
+
+    Then we'll do something that may seem a
+    little unusual: we're going to transform
+    each anchor into a block element.
+
+    Why? Well, check out the YouTube home page.
+
+    Notice when you hover over the sidebar hyperlinks,
+    you can click on the whole line, not just the
+    text.
+
+    Remember, anchor elements are inline elements by
+    default, so they only take up as much space as 
+    they need in a line.
+
+    By changing them into block elements, they now
+    take up the entire line, which also means that
+    people can click on that entire line, instead
+    of just the text of the link, which is a nice
+    user experience.
+
+    It also means that we can add padding to the 
+    anchors/hyperlinks, to give each anchor more
+    breathing room, as well as give users even more 
+    space to click.
+*/
+
+#sidebar ul a {
+    text-decoration: none;
+    color: #111111;
+    display: block;
+    padding: 12px;
+}
+
+/*
+    You might be wondering, "why do we even bother
+    using ul and li elements around anchors 
+    if all we ever do is strip off their default 
+    padding, margin, and list-style-types?"
+
+    That's a good question, and there is actually
+    a lot of debate about that across the web.
+
+    For the longest time, it was thought that
+    including anchors in lists was considered
+    good web accessibility practice, particularly
+    for screen readers.
+
+    ...but it turns out that recently some folks
+    that used screen readers have spoken out that
+    this isn't really the case; sometimes it makes
+    things harder for screen readers.
+
+    So, the debate is still raging on, but since
+    most of the internet is still using lists for
+    navigation anchors, we're going to teach you
+    the standard practice, despite it being a
+    bit more tedious.
+*/

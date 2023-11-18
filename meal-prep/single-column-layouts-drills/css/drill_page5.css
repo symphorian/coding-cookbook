@@ -1,0 +1,24 @@
+/* Drill 5 - Write your code solution below */
+
+/*
+    Now we're just applying all three approaches
+    in one drill to different containers.
+
+    Assuming students understand the solutions
+    to the previous drills, the only tricky 
+    part is making sure you're selecting and
+    applying code to the right elements.
+*/
+
+#container-d5-1 {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#container-d5-2 {
+    width: 50%;
+    margin-left: auto;
+}
+#container-d5-3 {
+    width: 50%;
+}

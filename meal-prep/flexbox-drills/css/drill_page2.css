@@ -1,0 +1,17 @@
+/* Drill 2 - Write your code solution below */
+
+/*
+    Exact same solution for this one as the 
+    previous drill, just targeting a
+    different id.
+
+    The point of this drill is to show that
+    regardless of how much content is inside
+    a container, it all can still be moved
+    side by side rather easily thanks 
+    to Flexbox.
+*/ 
+
+#container-2 {
+    display: flex;
+}

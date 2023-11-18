@@ -1,0 +1,27 @@
+.serif-family {
+    font-family: serif;
+}
+
+.sans-serif-family {
+    font-family: sans-serif;
+}
+
+.monospace-family {
+    font-family: monospace;
+}
+
+.cursive-family {
+    font-family: cursive;
+}
+
+.fantasy-family {
+    font-family: fantasy;
+}
+
+.verdana-with-fallback {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.helvetica-with-fallback {
+    font-family: Helvetica, Arial, sans-serif;
+}

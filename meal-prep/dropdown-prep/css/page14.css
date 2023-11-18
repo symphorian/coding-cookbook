@@ -1,0 +1,193 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.card {
+    flex: 300px;
+    border: 3px solid black;
+    margin: 24px;
+    padding: 24px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.card a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    border: 3px solid black;
+    padding: 12px;
+    margin-top: 36px;
+}
+
+#card1:hover {
+    background-color: lightcyan;
+    box-shadow: 4px 4px 4px #00000033;
+    transform: translateY(-4px);
+}
+
+#card1 {
+    transition: 
+        background-color 0.5s,
+        box-shadow 0.5s,
+        transform 0.5s;
+}
+
+#card2 a {
+    transition: 
+        background-color 0.5s,
+        box-shadow 0.5s,
+        transform 0.5s;
+}
+
+#card2:hover a {
+    background-color: aquamarine;
+    box-shadow: 4px 4px 4px #00000033;
+    transform: translateY(-4px);
+}
+
+#card3 .card-content {
+    transition:
+        opacity 0.5s,
+        visibility 0.5s;
+}
+
+#card3:hover .card-content {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#card4 .card-content {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px); 
+    transition:
+        opacity 0.5s,
+        visibility 0.5s,
+        transform 0.5s; 
+}
+
+#card4:hover .card-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px); 
+}
+
+#card5 {
+    position: relative;
+}
+
+#card5 .card-content {
+    position: absolute;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 12px;
+    box-shadow: 4px 4px 4px #00000033;
+    left: 0px;
+    margin: 0px 24px;
+    padding: 24px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: 
+        opacity 0.5s,
+        visibility 0.5s,
+        transform 0.5s;
+
+}
+
+#card5:hover .card-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}
+
+#card6 {
+    position: relative;
+    border: 0px;
+    padding: 0px;
+}
+
+#card6 .card-front,
+#card6 .card-back {
+    border: 3px solid black;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+#card6 .card-back {
+    transform: scaleX(0);
+}
+
+#card6 .card-front {
+    background-image: url("../images/perrito.png");
+    background-size: cover;
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+/*
+    Think about what normally happens if you
+    flip a playing card around: we should see
+    the front face shrinking first, and then
+    once the front face is gone and we're looking
+    at the paper-thin edge of the card, only then
+    do we see the back face growing.
+
+    That's the behavior we need to mimick if we
+    want to simulate a card flip.
+
+    To make that happen, we need to introduce
+    a delay to the animation of the back face.
+*/
+
+#card6 .card-front {
+    transition: transform 0.25s;
+}
+
+#card6 .card-back {
+    /*
+        We can add a delay to a transition
+        by adding another time value after
+        the first; the first time value is 
+        the duration of the animation, and
+        the second is the delay
+    */
+    transition: transform 0.25s 0.25s; /* updated */
+}
+
+#card6:hover .card-front {
+    transform: scaleX(0);
+}
+
+#card6:hover .card-back {
+    transform: scaleX(1);
+}
+
+/*
+    Much better! Although we're using
+    scaling to approximate the behavior of
+    a rotating card, it's actually not a
+    bad simulation.
+
+    ...at least, until you move the mouse
+    off of the card.
+
+    The reverse transformation unfortunately
+    doesn't work the way we want, because
+    the delay isn't inverted when we go
+    back to the default state.
+*/

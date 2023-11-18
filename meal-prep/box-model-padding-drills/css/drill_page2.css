@@ -1,0 +1,15 @@
+/* Drill 2 - Write your code solution below */
+
+/*
+    Now, the exact same idea as the previous 
+    drill, but there's no border or background
+    color on the inner container, just text.
+
+    Also, we're not giving equal padding on all
+    sides: we're giving different values between
+    the top/bottom and left/right sides.
+*/
+
+#d2-container-1 {
+    padding: 48px 24px;
+}

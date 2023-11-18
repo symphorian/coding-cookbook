@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif; 
+}
+
+.single-column {
+    width: 50%;
+    min-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.light-container {
+    background-color: lightgreen;
+    padding: 48px 0px;
+}
+
+/*
+    Now, in the HTML, let's duplicate our
+    light-container element (and everything
+    inside of it) twice, so that we now have
+    three sections (still all the same color).
+
+    Next, in addition to our light-container,
+    let's add a dark-container, with a background
+    color dark enough to require us to change the
+    font color. (Don't forget the padding too!)
+
+    Then apply that new dark-container class 
+    to the middle section in the HTML, instead 
+    of the light-container class.
+*/
+
+.dark-container {
+    background-color: #013d01;
+    color: white;
+    padding: 48px 0px;
+}
+
+/*
+    Already, with just a few more lines of CSS,
+    and a few changes to our HTML structure,
+    we have a MUCH more interesting layout than
+    before.
+
+    This goes to show that you don't need to know
+    a lot of fancy code to make good looking pages;
+    knowing the basics is enough, as long as you
+    know how to use them.
+
+    And that's what we'll be teaching this week,
+    with more drills and examples for you of 
+    different page layouts and how to build them.
+*/

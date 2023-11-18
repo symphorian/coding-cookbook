@@ -1,0 +1,40 @@
+/* flex-direction example related code */
+
+.row {
+    flex-direction: row;
+}
+
+.column {
+    flex-direction: column;
+}
+
+/* styling related code */
+
+.flex-container {
+    display: flex;
+    background-color: pink;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.box {
+    background-color: lavender;
+    border: 2px solid grey;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 24px;
+    font-weight: bold;
+    height: 50px;
+    margin: 8px;
+    padding: 8px 14px;
+}
+
+.warning {
+    background-color: crimson;
+    color: white;
+    padding: 8px;
+}
+
+.indent {
+    padding-left: 36px;
+}

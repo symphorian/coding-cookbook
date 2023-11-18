@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif; 
+}
+
+/*
+    Now suppose we want our sidebar on the right.
+    With flexbox, we had two options: 
+    - we could just reorganize the HTML
+    - we could use the order property to reorder
+        the Flexbox Items inside the Flexbox Container
+
+    We have similar options available to us with
+    CSS Grid, but they're a little more complicated
+    (another way that Grids are more rigid than Flexboxes).
+
+    We COULD reorder our HTML, but watch what happens
+    (demonstrate for the class).
+
+    We swapped the content of the columns...but our
+    sidebar is now in our flexible column, and our
+    main content is now in our 250px column. 
+    
+    That's not exactly what we wanted, we need the 
+    column sizes to change too. And since that is 
+    done on the Grid Container, we need to update the
+    CSS either way.
+
+    (Switch the HTML back).
+
+    Since we need to change the CSS anyway, let's 
+    go with the pure CSS change to reorganize the 
+    columns.
+
+    First, we'll have to swap the width values in
+    grid-template columns.
+
+    But then, we're also going to use a new
+    property called grid-template-areas.
+
+    This is a very cool property, because it lets
+    us visually map out our CSS Grid with text names,
+    and then we can assign those names to Grid Items,
+    and they'll just slide themselves in where we 
+    told them to go.
+*/
+#grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 250px; /* updated again */
+    grid-template-areas: "content sidebar";
+}
+
+/*
+    The way grid-template-areas works is you specify
+    names for cells in your grid, through rows that
+    are expected to match the columns you defined in
+    grid-template-columns.
+
+    The rows are defined by double quotes, and every
+    name that we put in the double quotes represents
+    a column in that row.
+
+    Since we're only trying to create a Two Column
+    Layout, we can keep things pretty simple with
+    just one row with two area names, one for each
+    column in the template: "content sidebar"
+
+    That says that the first cell in our template 
+    row is going to be called 'content', and the
+    second cell is going to be called 'sidebar'.
+
+    However, setting grid-template-areas on its own
+    isn't going to change anything; this Grid
+    Container property works together with a
+    Grid Item property called grid-area.
+
+    We'll use grid-area to set the specific areas
+    in grid-template-areas we want Grid Items to
+    slot themselves into.
+*/
+
+#sidebar-content {
+    background-color: lightblue;
+    grid-area: sidebar;
+}
+
+#main-content {
+    background-color: lightgreen;
+    grid-area: content;
+}
+
+/* 
+    See how the columns have switched sides?
+    That's because grid-template-areas is more
+    or less the textual, visual representation
+    of our grid template.
+
+    Show the class how you can easily swap the
+    columns back just by flipping the values 
+    in grid-template-areas: "sidebar content".
+
+    In this way, grids are more rigid, but
+    once you have them set up correctly, it
+    is VERY easy to reorganize your layouts.
+
+    (make sure to switch the columns back so
+    that the sidebar is on the right again)
+
+    So, with that, we have seen how to create
+    a Two Column Layout with a sidebar on the
+    right!
+
+    ...but it's still pretty boring.  
+    Let's fix that!
+*/

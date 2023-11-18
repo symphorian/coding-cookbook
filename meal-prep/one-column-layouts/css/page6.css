@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif; 
+}
+
+/*
+    However...I wouldn't say we have a very interesting
+    looking layout.  It's pretty boring actually.
+
+    But centered single column layouts are used all over 
+    the place, so how can we make ours look more 
+    interesting?
+
+    Well, for one thing, we could add more interesting 
+    content, like more headings or some images...but 
+    that's still just content; we want to make our layout
+    itself more interesting.
+
+    So here's another option, but it's going to require
+    reworking our HTML structure a bit: 
+
+    we can create separate page sections with different
+    background colors!
+
+    To make this happen we're going to need to do a couple 
+    things.
+
+    In the HTML, we'll need to wrap our .single-column 
+    element in another container, which is the one we'll
+    set the background-color on.
+
+    In the CSS, we'll need to remove the background-color
+    from the .single-column, and create new class(es) to
+    attach to the container to give it background-color.
+
+    Let's make those changes just for one section first.
+*/
+
+.single-column {
+    /* removed background-color */
+    width: 50%;
+    min-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 
+    the name of this class can be whatever we want,
+    but I'm planning to have two contrasting colors
+    for a light section and a dark section.
+
+    To add some additional spacing in the section,
+    I recommend adding some vertical padding as well.
+*/
+.light-container {
+    background-color: lightgreen;
+    padding: 48px 0px;
+}
+
+/*
+    Now we should have a single color section that spans
+    the width of the page, while we have a single
+    column centered in the middle of it.
+*/

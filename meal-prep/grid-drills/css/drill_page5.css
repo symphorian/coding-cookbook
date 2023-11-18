@@ -1,0 +1,80 @@
+/* Drill 5 - Write your code solution below */
+
+/*
+    This one takes the grid-template-areas
+    property one step further: now we have to
+    define multiple rows in the property.
+
+    Remember that each set of double quotes ("")
+    represents a row in the template. So if you 
+    want two rows (as we do for this drill),
+    you need to have two sets of double quotes.
+
+    Another thing to remember is that you can
+    make an area span multiple cells in the grid
+    if you repeat the area name across multiple
+    cells.
+
+    In this example, we want the first Grid Item
+    to span across the entire first row, so 
+    we repeat 'one' three times, one for each
+    column in our template.
+
+    Then we do the same thing for area 'two',
+    which we want to take up the last two
+    cells in the second row.
+
+    One thing to remember when repeating grid
+    areas is that the "shape" that you span
+    with that area must be a rectangle of
+    some kind.
+
+    You can't have an area in the shape of an 'L',
+    and you can't have an area snaking in a
+    zigzag pattern. That will break the grid.
+
+    Examples of bad grid-template-areas:
+        "bad   bad   bad"
+        "cell1 cell2 bad";    
+    or
+        "cell1 bad  bad"
+        "bad   bad  cell2";
+
+    Don't forget the semi-colon after the last
+    row! It's easy to forget, but if you do,
+    you could mess up any CSS your write after
+    that.
+*/
+
+#container-d5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "one   one one"
+        "three two two";
+}
+
+#d5-cell1  {
+    grid-area: one;
+}
+#d5-cell2 {
+    grid-area: two;
+}
+#d5-cell3 {
+    grid-area: three;
+}
+
+/*
+    By the way, you may notice that we 
+    included extra spaces in the first row
+    of grid-template-area after the first 'one'.  
+    
+    That's just to improve the formatting, to 
+    make the area names better aligned, but 
+    it doesn't affect the resulting grid at all; 
+    it's just a human readability improvement.
+
+    This would also work just fine: 
+        "one one one"
+        "three two two";
+*/

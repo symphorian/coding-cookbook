@@ -1,0 +1,32 @@
+.normal-container {
+    background-color: #EFEFEF;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.grid-container {
+    display: grid;
+    background-color: darkseagreen;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.grid-container-3-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;;
+    background-color: darkseagreen;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.box {
+    background-color: lavender;
+    border: 2px solid grey;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 24px;
+    font-weight: bold;
+    height: 50px;
+    margin: 8px;
+    padding: 8px 14px;
+}

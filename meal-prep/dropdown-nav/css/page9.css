@@ -1,0 +1,86 @@
+/*
+    Generally speaking, it's good practice to
+    have some sort of visual indicator when
+    something can be interacted with on a site.
+
+    That's why we added hover states to our links;
+    users may be trained to realize that when the 
+    cursor turning into a pointer, you can click on
+    something, but not everyone is internet-proficient
+    so any little visual cues you add can help.
+
+    The same goes for parts of the navbar that behave
+    differently from the rest (i.e. our dropdown items).
+
+    We're going to find some chevron icons from the
+    Font Awesome Icon library (referenced in the HTML
+    part of the Coding Cookbook if you need a refresher),
+    and add them at the end of our hyperlinks that
+    have a dropdown menu.
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#navbar {
+    background: linear-gradient(to bottom, #109cb8, #0e5b96);
+    display: flex;
+    align-items: center;
+}
+
+#navbar a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 24px;
+}
+
+#navbar a:hover {
+    background: linear-gradient(to top, #109cb8, #0e5b96);
+}
+
+#navbar #logo {
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 36px;
+    padding-top: 13px;
+    padding-bottom: 12px;
+}
+
+.dropdown-container {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: 
+        opacity 0.25s,
+        visibility 0.25s;
+}
+
+.dropdown-container:last-child .dropdown-menu {
+    right: 0px;
+}
+
+.dropdown-container:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-menu a {
+    background-color: darkslateblue;
+    width: 100%;
+    min-width: 200px;
+}
+
+#navbar .dropdown-menu a:hover {
+    background: slateblue;
+}

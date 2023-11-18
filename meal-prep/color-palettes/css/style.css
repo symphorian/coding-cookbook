@@ -1,0 +1,131 @@
+/*
+    This CSS is INCREDIBLY repetitive.
+
+    Using commas to share common properties 
+    across multiple sets of selectors would
+    greatly simplify this code.
+
+    However, since this is only their first 
+    day with CSS, we're only focusing on ID 
+    selectors at the moment, so we don't 
+    overwhelm them with new syntax variations.
+    
+    You probably only really need to demo one 
+    color palette; after that, they should be 
+    able to "rinse and repeat" from there.
+
+    That said, be sure to call out adding
+    padding: 24px;
+
+    We haven't taught them about padding yet,
+    but it's necessary to get the color blocks
+    to meet without gaps between them.
+
+    You can tell students that, and if they ask
+    why, ask them to wait until the next day of 
+    class, because we'll be going over padding 
+    (and other related properties) in depth.
+*/
+
+#style-1-heading {
+    font-family: cursive;
+    text-align: center;
+}
+
+#style-1-block-1 {
+    background-color: #4B7F52 ;
+    color: white;
+    font-family: cursive;
+    text-align: center;
+    padding: 24px; /* not taught yet, but required */
+}
+
+#style-1-block-2 {
+    background-color: #7DD181 ;
+    color: black;
+    font-family: cursive;
+    text-align: center;
+    padding: 24px; /* not taught yet, but required */
+}
+
+#style-1-block-3 {
+    background-color: #B6F9C9 ;
+    color: black;
+    font-family: cursive;
+    text-align: center;
+    padding: 24px; /* not taught yet, but required */
+}
+
+#style-2-heading {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+#style-2-block-1 {
+    background-color: #820263 ;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 24px; /* not taught yet, but required */
+}
+
+#style-2-block-2 {
+    background-color: #D90368 ;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 24px; /* not taught yet, but required */
+}
+
+#style-2-block-3 {
+    background-color: #EADEDA ;
+    color: black;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 24px; /* not taught yet, but required */
+}
+
+#style-2-block-4 {
+    background-color: #2E294E ;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 24px; /* not taught yet, but required */
+}
+
+#style-2-block-5 {
+    background-color: #FFD400 ;
+    color: black;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 24px; /* not taught yet, but required */
+}
+
+#style-3-heading {
+    font-family: serif;
+    text-align: center;
+}
+
+#style-3-block-1 {
+    background-color: #B5D6B2 ;
+    color: black;
+    font-family: serif;
+    text-align: center;
+    padding: 24px; /* not taught yet, but required */
+}
+
+#style-3-block-2 {
+    background-color: #53131E ;
+    color: white;
+    font-family: serif;
+    text-align: center;
+    padding: 24px; /* not taught yet, but required */
+}
+
+#style-3-block-3 {
+    background-color: #5A464C ;
+    color: white;
+    font-family: serif;
+    text-align: center;
+    padding: 24px; /* not taught yet, but required */
+}

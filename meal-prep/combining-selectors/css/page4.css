@@ -1,0 +1,58 @@
+#navbar {
+    text-align: center;
+    padding: 24px;
+    background-color: blue;
+}
+
+/*
+    We will need to write a more
+    specific set of selectors, which
+    will entail combining multiple
+    selectors together.
+
+    As a reminder, there are three most
+    common types of selectors:
+        - ID Selectors
+        - Class Selectors
+        - HTML Element Selectors
+
+    There are generally two ways to
+    combine selectors: 
+        - by having space between them
+        - and by having no space
+            between them.
+    
+    When there is space between selectors,
+    that tells the computer to only target
+    the selector on the right when it is
+    inside (or put another way, a child)
+    of the selector on the left.
+
+    We'll use that approach below to make 
+    our selector more specific.
+*/
+
+#navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+/*
+    As you can see, now only the anchors
+    inside the navbar are white.
+
+    That is because our set of selectors
+    has a space between them, which in
+    English, basically translates to: 
+
+    "target anchors that are inside of
+        an element with the 'navbar' id"
+
+    because "a" (for anchor) was on the 
+    right of the space, and the #navbar 
+    selector was on the left of the space.
+
+    Just to make it a little prettier,
+    let's also use the text-decoration
+    property to remove the underlines too.
+*/

@@ -1,0 +1,85 @@
+.card-style-3 {
+    background-color: #EDEDED;
+    border: 16px solid gold;
+    border-radius: 12px;
+    padding: 16px;
+    width: 350px;
+    margin: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-style-3 .pokemon-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+
+.card-style-3 h2 {
+    margin: 0px;
+}
+
+.card-style-3 img {
+    border: 5px solid goldenrod;
+    width: 100%;
+}
+
+.card-style-3 .details {
+    font-size: 12px;
+    text-align: center;
+    background: 
+        linear-gradient(to right, goldenrod, gold, goldenrod);
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 4px;
+}
+
+.card-style-3 .attack {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0px;
+    padding: 8px 0px 16px;
+    border-bottom: 2px solid black;
+}
+
+.card-style-3 .attack .description {
+    margin: 0px 4px;
+    font-size: 14px;
+}
+
+.card-style-3 .bold {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.card-style-3 .power {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card-style-3 .data {
+    font-size: 11px;
+    font-weight: bold;
+    border: 2px solid goldenrod;
+    padding: 2px 8px;
+}
+
+#pokemon-card-0 {
+    background: linear-gradient(-25deg, yellow, gold, yellow);
+}
+
+#pokemon-card-1,
+#pokemon-card-2 {
+    background: linear-gradient(-25deg, lightgreen, forestgreen, lightgreen);
+}
+
+#pokemon-card-3 {
+    background: linear-gradient(-25deg, orange, orangered, orange);
+}
+
+#pokemon-card-4 {
+    background: linear-gradient(-25deg, aqua, skyblue, aqua);
+}

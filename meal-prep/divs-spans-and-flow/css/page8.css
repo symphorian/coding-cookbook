@@ -1,0 +1,37 @@
+/*
+    Is there no way to get our column divs
+    side-by-side then?
+
+    Actually, there is!
+
+    There is a third display property value,
+    that more or less combines the best of 
+    both worlds called 'inline-block'.
+
+    An inline-block element behaves like an
+    inline element, in that it can sit 
+    side-by-side with other content.
+
+    But, it also behaves like a block element
+    where it can define its own spacing and
+    container size.
+
+    Watch what happens when we change our
+    .narrow CSS rule to include a display
+    value of inline-block...
+*/
+
+.narrow {
+    width: 200px;
+    background-color: lightsalmon;
+    display: inline-block;
+}
+
+/*
+    Look at that! Our divs are now side-by-side,
+    at the width that we specified!
+
+    For simple layouts, inline-block is usually
+    the way to go if you have any content that
+    you want to have side-by-side.
+*/

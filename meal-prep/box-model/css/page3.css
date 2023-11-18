@@ -1,0 +1,33 @@
+/*
+    Notice how the CSS Rule below targeted
+    ALL div elements on the page.
+
+    That's how the HTML Element Selector 
+    works: it's the most general or broad
+    targeting that we have access to in
+    CSS.
+
+    Sometimes that's what we want; sometimes
+    it's not.  When it's not, we may need to
+    start combining selectors, to target only
+    the elements we actually want to target.
+
+    We'll leave that for another day though.
+
+    For now, this border is rather boring.
+    Show the class how we can use different
+    widths, styles (like dashed or dotted),
+    and different colors.
+*/
+
+div {
+    border: 10px dashed red;
+}
+
+/*
+    Now these borders probably look rather 
+    ugly, because each div's border is 
+    rammed right up against each other.
+
+    Let's see what we can do about that.
+*/

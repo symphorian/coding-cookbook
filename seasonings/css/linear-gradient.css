@@ -1,0 +1,56 @@
+#example-1 {
+    background: linear-gradient(yellow, green);
+}
+
+#example-2 {
+    background: linear-gradient(to top, yellow, green);
+}
+
+#example-3 {
+    background: linear-gradient(to right, yellow, green);
+}
+
+#example-4 {
+    background: linear-gradient(to bottom left, yellow, green);
+}
+
+#example-5 {
+    background: linear-gradient(45deg, yellow, green);
+}
+
+#example-6 {
+    background: linear-gradient(-90deg, yellow, green);
+}
+
+/* 
+    if our CSS functions get too long, 
+    they can be broken up as we did below,
+    to make them easier for humans to read.
+*/
+#example-7 {
+    background: linear-gradient(
+        90deg, 
+        blue, 
+        purple, 
+        lightblue, 
+        aquamarine, 
+        teal
+    );
+}
+
+#example-8 {
+    background: linear-gradient(90deg, crimson, gold 50%);
+}
+
+#example-9 {
+    background: linear-gradient(90deg, red 20%, white, blue 60%);
+}
+
+.example {
+    height: 100px;
+    margin-bottom: 28px;
+}
+
+p code {
+    font-weight: bold;
+}

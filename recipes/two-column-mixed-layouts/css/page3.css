@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif; 
+}
+
+#grid-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-areas: 
+        "header header"
+        "sidebar main";
+}
+
+/*
+    Now that we have our general layout setup,
+    let's start transforming this page a bit
+    more to look something like YouTube
+    (except it'll be MeTube).
+
+    Let's start by modifying our HTML a bit,
+    so that we can customize our brand link
+    in the header a bit.
+
+    We'll change the content to "MeTube",
+    and wrap "Me" and "Tube" in separate
+    span elements, so that we can style
+    them separately.
+
+    Then, we'll remove the background color
+    (or change it, if students still want 
+    a background color).
+    
+    We'll also add some padding inside the 
+    header, but only on the left and right
+    sides, since the h1 inside the header
+    adds its own margin, providing the top
+    and bottom spacing we want to balance it.
+*/
+
+#header {
+    /* removed background-color */
+    grid-area: header;
+    padding: 0px 36px; /* new */
+}
+
+#sidebar {
+    background-color: lightcyan;
+    grid-area: sidebar;
+}
+
+#main {
+    background-color: lightgoldenrodyellow;
+    grid-area: main;
+}
+
+/*
+    Then we'll strip off the default link 
+    style of the underline, and customize
+    the spans inside of it, using their ids.
+*/
+
+#header a {
+    text-decoration: none;
+}
+
+#header #me {
+    color: #111111;
+}
+
+#header #tube {
+    color: white;
+    background-color: red;
+    padding: 4px;
+    border-radius: 12px;
+}
+
+/*
+    Look at that, just a few lines of code,
+    and we already have something that looks
+    like the old YouTube logo; not a bad start!
+*/

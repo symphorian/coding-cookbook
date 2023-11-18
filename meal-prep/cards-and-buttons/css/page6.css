@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#main {
+    width: 90vw;
+    max-width: 800px;
+    margin: 48px auto;
+    display: flex;
+    justify-content: center;
+}
+
+h3 {
+    text-align: center;
+    margin: 24px 0;
+}
+
+.card {
+    width: 350px;
+    /*
+        Let's give our card a 2px solid off-white 
+        pinkish border with a radius of 5px. 
+        We're aiming for a soft elegant effect here.
+
+        Let's also give it some padding to add more
+        breathing room between the content and the 
+        borders of the box.
+    */
+    border: 2px solid #ffe4da;
+    border-radius: 5px;
+    padding: 10px;
+    /*
+        Now, let's make our card look like it has some 
+        depth to it by using another fun property called
+        box-shadow.  Some of you may have used this on
+        some previous assignments already; if so, 
+        consider this a refresher.
+
+        Box-shadow applies shadows to elements by using 
+        up to 5 values in this order: offset-x, offset-y, 
+        blur-radius, spread-radius, and color.
+
+        The offsets essentially move the shadow around 
+        the box, as if we were moving the light source.
+
+        blur- and spread-radius affect how distinct/blurry
+        and how large the shadow is.
+
+        And color, well, affects the color of the shadow.
+        
+        We'll apply a box-shadow property with only 4 values: 
+            x-offset: -4px
+            y-offset: 4px
+            blur-radius: 12px
+            color: a light grey color
+
+        We're not going to use this in this demo, but real
+        quick, watch what happens if we can add a value of 
+        'inset' at the start: our shadows will be inverted
+        to show on the INSIDE of the box, rather than the 
+        outside, which gives the effect that we're looking
+        down into a hole in the shape of a box.
+        (a darker color shadow may make this effect more
+        apparent)
+
+        Neat, huh? But again, we're not going to keep this
+        in the demo, so we'll revert it back.
+    */
+    box-shadow: -4px 4px 12px #ddd;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card h2 {
+    font-size: 36px;
+    margin-top: 12px;
+}
+
+.card p {
+    font-size: 18px;
+}
+
+.anchor-button {
+    display: block;
+    background-color: lightcoral;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    border: 3px solid lightcoral;
+    transition:
+        background-color .5s,
+        color .5s;
+}
+
+.anchor-button:hover {
+    background-color: transparent;
+    color: lightcoral;
+}

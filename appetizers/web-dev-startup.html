@@ -1,0 +1,1876 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Web Dev Startup - Appetizers - The Coding Cookbook</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="../css/cookbook.css" rel="stylesheet">
+        <link href="../css/appetizer.css" rel="stylesheet">
+        <link href="../css/lightbox.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="background"></div>
+        <nav>
+            <header id="topHeader">
+                <h2 id="brand"><a href="../">The Coding Cookbook</a></h2>
+                <div id="quote"></div>
+                <div id="navLinks">
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../ingredients.html">
+                                HTML
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../ingredients.html">Elements</a></h2>
+                            <h2><a href="../ingredients-cheatsheet.html">Cheatsheet</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../seasonings.html">
+                                CSS
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../seasonings.html">Properties</a></h2>
+                            <h2><a href="../seasonings-cheatsheet.html">Cheatsheet</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../recipes.html">
+                                Layouts
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../recipes.html?category=page-layout">Page Layouts</a></h2>
+                            <h2><a href="../recipes.html?category=content-layout">Content Layouts</a></h2>
+                            <h2><a href="../recipes.html?category=navigation-layout">Navigation</a></h2>
+                            <h2><a href="../recipes.html?category=miscellaneous">Miscellaneous</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../more.html">
+                                More
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../demos.html">Class Demos</a></h2>
+                            <h2><a href="../appetizers.html">Tutorials</a></h2>
+                            <h2><a href="../troubleshooting.html">Troubleshooting</a></h2>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <header id="bottomHeader">
+                <div id="cookbookButtons">
+                    <a id="part1Button" href="#part1">Jump to Part 1</a>
+                    <a id="part2Button" href="#part2">Jump to Part 2</a>
+                    <a id="part3Button" href="#part3">Jump to Part 3</a>
+                    <a id="part4Button" href="#part4">Jump to Part 4</a>
+                    <a id="part5Button" href="#part5">Jump to Part 5</a>
+                </div>
+            </header>
+        </nav>
+        
+        <header id="title" class="">
+            <h1>Web Dev Startup Tutorial</h1>
+            <h3>The Appetizer to the Main Course</h3>
+        </header>
+        
+        
+        <div class="cookbookPage">
+            <h2 id="part1" class="invisibleAnchorTarget"></h2>
+            <h6>PART 1</h6>
+            <h2>Visual Studio Code</h2>
+            <h4>Your Code Editor for the Course</h4>
+            <ol>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                In order to write code in our class, 
+                                we are going to download and
+                                install a widely used editor called 
+                                Visual Studio Code Editor.
+                            </p>
+                            <p>
+                                <strong>
+                                    NOTE: If you are an on-campus student,
+                                    Visual Studio Code is probably already 
+                                    downloaded, installed, and configured.
+                                    <br><br>
+                                    If so, just double check that the extensions 
+                                    further down in the directions are installed,
+                                    and then 
+                                    <a href="#part2">move on to Part 2</a>.
+                                    <br><br>
+                                    If not, or if you are an IDL student,
+                                    continue with Part 1.
+                                </strong>
+                            </p>
+                            <p>
+                                Visit the following link and click the big blue 
+                                "Download" button on the following page:
+                            </p>
+                            <p>
+                                <a
+                                    href="https://code.visualstudio.com/"
+                                    target="_blank"
+                                    rel="noopener"
+                                >
+                                    https://code.visualstudio.com/
+                                </a> 
+
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/DownloadVSCode.png" 
+                                alt="Click the Download button on the Visual Code download site"
+                            >
+                            <figcaption>
+                                Click the Download button on the Visual Code 
+                                download site
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Once your software downloads, 
+                                unzip and drag it to your
+                                Applications folder, making it 
+                                easier to find in your launchpad.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/vscodeapp.png" 
+                                alt="Move Visual Studio Code from Downloads to Applications"
+                            >
+                            <figcaption>
+                                Move Visual Studio Code from Downloads 
+                                to Applications
+                            </figcaption>
+                        </div>
+                        
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Go ahead and open up Visual Studio Code 
+                                once you have it installed.
+                                It should resemble the screenshot on the right.
+                            </p>
+                            <p class="indent">
+                                It may not look EXACTLY the same, and that's
+                                okay.  Visual Studio Code is always updating 
+                                itself.
+                            </p>
+                            <p class="indent">
+                                You'll also probably see a Welcome tab when 
+                                you first open Visual Studio Code. You can 
+                                safely close that tab, or skip the 
+                                Personalization options it has you select.
+                            </p>
+                            <p class="indent">
+                                ALSO, you'll probably see a little popup in 
+                                the lower right whenever you start up Visual 
+                                Studio Code, asking you to download and 
+                                configure Git.  You can safely close and
+                                ignore that popup.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/vsinterface.png" 
+                                alt="Screenshot of what Visual Studio Code looks like when opened"
+                            >
+                            <figcaption>
+                                Screenshot of what Visual Studio Code looks 
+                                like when opened
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <h2 id="p1_step4" class="invisibleInnerAnchorTarget"></h2>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Now that we have installed the main 
+                                code editor we will be utilizing
+                                throughout class, now we're going to 
+                                install a few extensions that we
+                                will need for viewing the live renders 
+                                of our code.
+                            </p>
+                            <p>
+                                First, navigate to the left side panel 
+                                in Visual Studio Code and click
+                                the icon with the four boxes.
+                            </p>
+                            <p>
+                                Then, in the Extensions tab, 
+                                click in the search bar at the top.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/extensionsblocks2.png" 
+                                alt="Navigating to the Extensions tab and the search bar inside"
+                            >
+                            <figcaption>
+                                Navigating to the Extensions tab 
+                                and the search bar inside
+                            </figcaption>
+                        </div>
+                    </div>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                In the search bar, type "live preview". 
+                            </p>
+                            <p>
+                                The extension "Live Preview" by 
+                                Microsoft should be one of the first 
+                                in the list. Click the Install button 
+                                to install the extension
+                            </p>
+                            <p>
+                                This extension will allow you 
+                                to preview your HTML/CSS/Javascript
+                                code within Visual Studio.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/livepreview.png" 
+                                alt="A screenshot of the Live Preview extension" 
+                            >
+                            <figcaption>
+                                A screenshot of the Live Preview extension
+                            </figcaption>
+                        </div>
+                    </div>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                In the Extensions tab, click in the 
+                                search bar at the top. Then in the
+                                search bar, type "live server". 
+                            </p>
+                            <p>
+                                The extension Live Server by Ritwick
+                                Dey should be one of the first in 
+                                the list. Click the Install button
+                                to install the extension
+                            </p>
+                            <p>
+                                This extension will allow you to 
+                                preview your HTML/CSS/Javascript
+                                code live in a web browser like Google Chrome.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/liveserver.png" 
+                                alt="A screenshot of the Live Server extension" 
+                            />
+                            <figcaption>
+                                A screenshot of the Live Server extension
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+            <h4>
+                Congrats! You are now set up to start coding 
+                in your very first Code Editor!
+            </h4>
+        </div>
+        <div class="cookbookPage">
+            <h2 id="part2" class="invisibleAnchorTarget"></h2>
+            <h6>PART 2</h6>
+            <h2>Your GitHub Repository</h2>
+            <h4>Where your code will live in the Course</h4>
+            <ol>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Our next goal is to create a (free) GitHub 
+                                account.
+                            </p>
+                            <p>
+                                Go to
+                                <a 
+                                    href="https://github.com/" 
+                                    target="_blank" 
+                                    rel="noopener"
+                                >
+                                    https://github.com/
+                                </a>
+                                and click the Sign up button in the top right.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/githubhomepage_withCircle.png" 
+                                alt="The home page of GitHub" 
+                            >
+                            <figcaption>The home page of GitHub</figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                On the next page, enter the email address you 
+                                want to associate with your GitHub account.
+                            </p>
+                            <p class="indent">
+                                You can change your associated email later if 
+                                you want.
+                            </p>
+                            <p>
+                                Then click the Continue button.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/02_email.png"
+                                alt="Entering email during GitHub account setup" 
+                            >
+                            <figcaption>
+                                Entering email during GitHub account setup
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                The page will update and prompt you to submit
+                                a password for your account; go ahead and do so.
+                            </p>
+                            <p>
+                                Then click the Continue button.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/03_password.png"
+                                alt="Entering password during GitHub account setup" 
+                            >
+                            <figcaption>
+                                Entering password during GitHub account setup
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                The page will update again and prompt you to 
+                                submit a username for your account; go ahead 
+                                and do so.
+                            </p>
+                            <p>
+                                <strong>
+                                    NOTE: Your username will be publicly 
+                                    viewable, and will also be
+                                    included in the URL for your website, 
+                                    so make sure to pick something
+                                    you're comfortable sharing with the world!
+                                </strong>
+                            </p>
+                            <p>
+                                Then click the Continue button.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/04_username.png"
+                                alt="Entering username during GitHub account setup" 
+                            >
+                            <figcaption>
+                                Entering username during GitHub account setup
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                The page will update again and ask if you want 
+                                to receive product updates related to GitHub.
+                            </p>
+                            <p>
+                                We recommend typing "n" to decline, but if you 
+                                are interested in getting emails from GitHub,
+                                feel free to type "y".
+                            </p>
+                            <p>
+                                Then click the Continue button.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/05_productupdates.png"
+                                alt="Entering your product update response during GitHub account setup" 
+                            >
+                            <figcaption>
+                                Entering your product update response 
+                                during GitHub account setup
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                The page will update AGAIN and prompt you to 
+                                prove that you're a human and not a robot, by 
+                                having you complete a little puzzle.
+                            </p>
+                            <p class="indent">
+                                You have a choice of completing a visual puzzle,
+                                or an audio puzzle.
+                            </p>
+                            <p>
+                                Complete the puzzle to continue.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/06_verify.png"
+                                alt="Proving your a human to GitHub" 
+                            >
+                            <figcaption>
+                                Proving your a human to GitHub
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After completing the puzzle, a button will 
+                                appear at the bottom, which will allow you to
+                                finally create your account.
+                            </p>
+                            <p>
+                                Click the "Create account" button to continue.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/07_create.png"
+                                alt="Clicking the Create Account button" 
+                            >
+                            <figcaption>
+                                Clicking the Create Account button
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After clicking the Create Account button, 
+                                GitHub will send an email to the address you 
+                                specified with a "launch code". You'll need 
+                                to go into your email to retrieve it.
+                            </p>
+                            <p>
+                                Copy that code, and paste it into the page
+                                you left in GitHub.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/08_launch_email.png"
+                                alt="Clicking the Create Account button" 
+                            >
+                            <figcaption>
+                                The email from GitHub with your "launch code"
+                            </figcaption>
+                            <img 
+                                src="images/web-dev-startup/08_launch.png"
+                                alt="Clicking the Create Account button" 
+                            >
+                            <figcaption>
+                                Where to input the "launch code" on GitHub
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Then you'll be brought to a page to 
+                                personalize your GitHub account.
+                            </p>
+                            <p>
+                                This can be skipped entirely by clicking 
+                                the Skip Personalization link at the bottom
+                                (which we encourage you to do).
+                            </p>
+                            <p>
+                                Then you'll get a fun "launch" animation, 
+                                before being brought to your Dashboard.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/09_personalization.png" 
+                                alt="The Personalization page, which can be skipped" 
+                            >
+                            <figcaption>
+                                The Personalization page, which can be skipped
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Now, you finally finished creating your GitHub 
+                                account!  You should be on the Dashboard of your 
+                                account.
+                            </p>
+                            <p class="indent">
+                                Most likely your GitHub theme is set to "Light" 
+                                mode, but depending on your computer settings,
+                                it may default to "Dark" mode.
+                            </p>
+                            <p>
+                                Next, we're going to be creating our code 
+                                repository, which is basically a special folder 
+                                that we'll use to store our code (both 
+                                "remotely" on GitHub.com, and also "locally"
+                                on your computer).
+                            </p>
+                            <p>
+                                Click the green "Create repository" to get
+                                started.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/10_dashboard.png" 
+                                alt="'Create repository' on the Dashboard ('Light' Theme)" 
+                            >
+                            <figcaption>
+                                'Create repository' on the Dashboard ('Light' Theme)
+                            </figcaption>
+                            <img 
+                                src="images/web-dev-startup/10_dashboard_dark.png" 
+                                alt="'Create repository' on the Dashboard ('Dark' Theme)" 
+                            >
+                            <figcaption>
+                                'Create repository' on the Dashboard ('Dark' Theme)
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Name your new repository:
+                                <br><br>
+                                <em>your_username</em>.github.io
+                                <br><br>
+                                replacing <em>your_username</em> 
+                                with the same username you specified when 
+                                you created your account.
+                            </p>
+                            <p>
+                                <strong>
+                                    WARNING: This is VERY important to get right!
+                                    <br><br>
+                                    If you don't type your username in 
+                                    exactly the same,
+                                    followed by <em>.github.io</em>,
+                                    you are going to have a weird and 
+                                    complex website URL 
+                                    for the rest of the course!
+                                </strong>
+                            </p>
+                            <p>
+                                Make sure the "Public" radio button is checked.
+                            </p>
+                            <p>
+                                Check the box to create a README file.
+                            </p>
+                            <p>
+                                Finally, click the green "Create 
+                                repository" button.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/createrepowithreadme.png" 
+                                alt="The repository creation dialog form" 
+                            >
+                            <figcaption>
+                                The repository creation dialog form
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Now that you've created the repository, 
+                                we're going to confirm that
+                                Github Pages is working correctly. 
+                            </p>
+                            <p>
+                                You should be on the
+                                repository page after creating it, 
+                                so click on the "Settings" tab in
+                                the navigation near the top.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/settings.png" 
+                                alt="The repository dashboard" 
+                            >
+                            <figcaption>The repository dashboard</figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                From there, click the "Pages" link 
+                                in the left sidenav.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/pages.png" 
+                                alt="The repository settings page" 
+                            >
+                            <figcaption>
+                                The repository settings page
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                You should see the link to your 
+                                brand new website in the box 
+                                under GitHub Pages, with a 
+                                [Visit site] button next to it.
+                            </p>
+                            <p>
+                                If you don't, make sure that the dropdowns under 
+                                "Build and deployment" are configured to 
+                                say "main" and "/ (root)".
+                            </p>
+                            <p>
+                                If they are, and you still don't 
+                                see [Visit site] button, 
+                                GitHub may just be being a 
+                                bit slow to publish; give it 
+                                another couple minutes and 
+                                refresh the page later.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img
+                                src="images/web-dev-startup/pagesactive.png"
+                                alt="The repository settings 'Pages' view"
+                            />
+                            <figcaption>
+                                The repository settings "Pages" view
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                If you click on the [Visit site] button, 
+                                you will find that your brand 
+                                new web site is pretty empty.
+                            </p>
+                            <p>
+                                Only the name of your repository 
+                                (which is actually the 
+                                contents of the .readme file)
+                                will be found there.
+                            </p>
+                            <p>
+                                That's okay! We'll be adding content later!
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img
+                                src="images/web-dev-startup/readme.png"
+                                alt="Your very first website! ...containing just a README file, at the moment"
+                            />
+                            <figcaption>
+                                Your very first website! 
+                                ...containing just a README file, at the moment
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+            <h4>
+                Congrats! You have now created your code repository and 
+                published your very own website!
+            </h4>
+        </div>
+        <div class="cookbookPage">
+            <h2 id="part3" class="invisibleAnchorTarget"></h2>
+            <h6>PART 3</h6>
+            <h2>GitHub Desktop</h2>
+            <h4>The connection between your computer and the web</h4>
+            <ol>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                <strong>
+                                    NOTE: This step is for IDL students only, or 
+                                    those setting up GitHub Desktop for the 
+                                    first time.
+                                    <br><br>
+                                    If GitHub Desktop is already installed on 
+                                    your computer, 
+                                    <a href="#p3_step2">jump down to Step 2</a>.
+                                </strong>
+                            </p>
+                            <p>
+                                Now that we have created our 
+                                Github account and repository, 
+                                download and install the GitHub
+                                Desktop application from the following site:<br>
+                                <a 
+                                    href="https://desktop.github.com/" 
+                                    target="_blank" 
+                                    rel="noopener"
+                                >
+                                    https://desktop.github.com/
+                                </a>
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/githubdesktop.png" 
+                                alt="GitHub Desktop download site" 
+                            >
+                            <figcaption>
+                                GitHub Desktop download site
+                            </figcaption>
+                        </div>
+                    </div>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After installation, sign in using 
+                                your new GitHub account. 
+                            </p>
+                            <p>
+                                It will take you briefly back 
+                                to the browser to confirm 
+                                your identify; click "Allow" 
+                                when prompted. You should see 
+                                some pages in the app like the following:
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img
+                                src="images/web-dev-startup/githubdesktopsignin.png"
+                                alt="The GitHub Desktop app startup screen after installing"
+                            />
+                            <figcaption>
+                                The GitHub Desktop app startup 
+                                screen after installing
+                            </figcaption>
+                        </div>
+                    </div>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Here's the page you will see 
+                                when it redirects you to Github to
+                                authenticate yourself. 
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/authorization.png" 
+                                alt="Authenticating your GitHub account in the browser" 
+                            >
+                            <figcaption>
+                                Authenticating your GitHub account 
+                                in the browser
+                            </figcaption>
+                        </div>
+                    </div>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                On the Configure Git, select the 
+                                "Use my Github account
+                                name and email address"; 
+                                you'll probably need to change 
+                                your email address to the one you entered before.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img
+                                src="images/web-dev-startup/configuregit2.png"
+                                alt="After authenticating, you will configure your Git settings"
+                            />
+                            <figcaption>
+                                After authenticating, you will 
+                                configure your Git settings
+                            </figcaption>
+                        </div>
+                    </div>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After you've successfully logged in 
+                                to GitHub Desktop, we are going to
+                                "clone" your remote repository 
+                                to your local machine.
+                            </p>
+                            <p>
+                                <strong>
+                                    "Cloning" in GitHub is the process 
+                                    of pulling down that repository
+                                    we created earlier from Github.com 
+                                    (the remote location) 
+                                    and creating a copy of it on your 
+                                    computer (the local location).
+                                </strong>
+                            </p>
+                            <p>
+                                In GitHub Desktop, click the 
+                                "Clone a Repository from the Internet"
+                                button.
+                            </p>
+                            <p>
+                                Now <a href="#p3_step3">jump down to Step 3</a>.
+                                (Step 2 is only for on-campus students, or 
+                                students working from a shared computer)
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/clonerepo.png" 
+                                alt="After signing in, you will get started by cloning your remote repository" 
+                            >
+                            <figcaption>
+                                After signing in, you will get started 
+                                by cloning your remote repository
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <h2 id="p3_step2" class="invisibleInnerAnchorTarget"></h2>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                <strong>
+                                    NOTE: This step is for on-campus students 
+                                    only, or those reconfiguring GitHub Desktop
+                                    after someone else has used it.
+                                    <br><br>
+                                    If you just installed GitHub Desktop 
+                                    on your computer in Step 1, you can skip 
+                                    this step, so just 
+                                    <a href="#p3_step3">jump down to Step 3</a>.
+                                </strong>
+                            </p>
+                            <p>
+                                Now that we have created our 
+                                Github account and repository, 
+                                we'll need to connect it to your campus 
+                                computer (repeat this process any time you 
+                                need to move to a different computer).
+                            </p>
+                            <p>
+                                Open GitHub Desktop.  You'll probably see 
+                                someone else's repository loaded up in the 
+                                top left.
+                            </p>
+                            <p>
+                                To change that, we'll first need to make sure 
+                                you're signed in to GitHub Desktop instead of
+                                them.
+                            </p>
+                            <p>
+                                Go to the GitHub Desktop menu at very top of the 
+                                screen, and select Preferences.
+                            </p>
+                            <p>
+                                Then in the dialog that pops up, under Accounts,
+                                click the "Sign out" button as in the screenshot.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/GitHubDesktop_signout.png" 
+                                alt="GitHub Desktop -> Preferences/Options -> Accounts -> Sign out" 
+                            >
+                            <figcaption>
+                                GitHub Desktop -> Preferences/Options -> 
+                                Accounts -> Sign out
+                            </figcaption>
+                        </div>
+                    </div>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After signing out, the button will change back
+                                to "Sign in".
+                            </p>
+                            <p>
+                                But before clicking on it, navigate to 
+                                <a href="https://www.github.com">github.com</a>
+                                and make sure that you're logged in there, since 
+                                GitHub Desktop is going to connect to that site 
+                                to log you in.
+                            </p>
+                            <p>
+                                After you've signed in to github.com, click on 
+                                the "Sign in" button in GitHub Desktop.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img
+                                src="images/web-dev-startup/GitHubDesktop_signin.png"
+                                alt="GitHub Desktop -> Preferences/Options -> Accounts -> Sign in" 
+                            />
+                            <figcaption>
+                                GitHub Desktop -> Preferences/Options -> 
+                                Accounts -> Sign in
+                            </figcaption>
+                        </div>
+                    </div>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                You may get redirected to the following page in
+                                the browser as Github tries to authenticate you. 
+                            </p>
+                            <p>
+                                If so, click the "Authorize desktop" button.
+                            </p>
+                            <p>
+                                If not, you'll just be signed in to GitHub 
+                                Desktop after a second or two.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/authorization.png" 
+                                alt="Authenticating your GitHub account in the browser" 
+                            >
+                            <figcaption>
+                                Authenticating your GitHub account 
+                                in the browser
+                            </figcaption>
+                        </div>
+                    </div>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Next, you'll need to reconfigure Git to tell it
+                                you're the one writing the code, since multiple 
+                                people could be connected to a GitHub account.
+                            </p>
+                            <p>
+                                Once again, go to the GitHub Desktop menu at very top of the 
+                                screen, and select Preferences.
+                            </p>
+                            <p>
+                                Then in the dialog that pops up, navigate to Git,
+                                enter your Name, and select the Email Address 
+                                you signed up with.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img
+                                src="images/web-dev-startup/GitHub_git_email.png"
+                                alt="After authenticating, reconfigure your Git settings"
+                            />
+                            <figcaption>
+                                After authenticating, reconfigure your Git settings
+                            </figcaption>
+                        </div>
+                    </div>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Next, you'll need to change the current
+                                repository to your own.  To do that, start by 
+                                clicking the "Current repository" at the top 
+                                left of GitHub Desktop.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img
+                                src="images/web-dev-startup/GitHub_currentRepository.png"
+                                alt="Click the Current Repository"
+                            />
+                            <figcaption>
+                                Click the Current Repository
+                            </figcaption>
+                        </div>
+                    </div>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                You wil probably see at least one other
+                                repository in the sidebar that pops out.
+                            </p>
+                            <p>
+                                If you've used this computer before, and you 
+                                see your repository, you can just select it,
+                                and <a href="#p3_step5">move on to Step 5</a>.
+                            </p>
+                            <p>
+                                If not, click the Add dropdown, and select 
+                                "Clone repository...".
+                            </p>
+                            <p>
+                                <strong>
+                                    "Cloning" in GitHub is the process 
+                                    of pulling down that repository
+                                    we created earlier from Github.com 
+                                    (the remote location) 
+                                    and creating a copy of it on your 
+                                    computer (the local location).
+                                </strong>
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/GitHub_currentrepo_clone.png" 
+                                alt="Initiating a clone from the Current Repository sidebar" 
+                            >
+                            <figcaption>
+                                Initiating a clone from the Current Repository sidebary
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <h2 id="p3_step3" class="invisibleInnerAnchorTarget"></h2>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Select the Repository we just 
+                                created earlier on Github.com, and
+                                the Local path should default to a 
+                                new Github folder inside your Documents folder.
+                            </p>
+                            <p>
+                                (you may need to add 
+                                <em>your_username</em>.github.io 
+                                to the file path afterwards if it
+                                doesn't auto-populate it; 
+                                see the screenshot for reference).
+                            </p>
+                            <p>
+                                Then go ahead and click the blue Clone button.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img
+                                src="images/web-dev-startup/clonetodocuments.png"
+                                alt="The 'Clone a repository' dialog"
+                            />
+                            <figcaption>
+                                The "Clone a repository" dialog
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After a few seconds (or sometimes 
+                                minutes, depending on your 
+                                internet connection), Github Desktop 
+                                will download your repository
+                                from the web to the folder you 
+                                specified in the previous dialog.
+                            </p>
+                            <p>
+                                After the download, open up a 
+                                Finder window (or Explorer window on PC)
+                                and navigate to your Documents 
+                                folder, and then to the Github folder 
+                                inside that.
+                            </p>
+                            <p>
+                                You should see a new folder 
+                                named after your repository, 
+                                with a README.md file inside it. 
+                            </p>
+                            <p>
+                                This means you successfully 
+                                cloned your repository!
+                            </p>
+                            <p>
+                                <strong>
+                                    You're going to be returning 
+                                    here often during the course,
+                                    so make sure you remember how 
+                                    to get back here!
+                                </strong>
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img
+                                src="images/web-dev-startup/documents_github_repo.png"
+                                alt="Locating your cloned repository on your computer"
+                            >
+                            <figcaption>
+                                Locating your cloned repository on your computer
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <h2 id="p3_step5" class="invisibleInnerAnchorTarget"></h2>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Now, return to Github Desktop.
+                            </p>
+                            <p>
+                                Your recently cloned repository 
+                                should be selected and displayed
+                                in the top left.
+                            </p>
+                            <p>
+                                Click "Open in Visual Studio" in 
+                                the middle section to do exactly 
+                                what the button says: open up your 
+                                repository in Visual Studio Code
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/openinvscode.png" 
+                                alt="A shortcut to open your repository in Visual Studio Code"
+                            >
+                            <figcaption>
+                                A shortcut to open your repository 
+                                in Visual Studio Code
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                An instance of Visual Studio 
+                                Code should have popped up,
+                                with your GitHub repository 
+                                loaded up in the EXPLORER
+                                sidepanel
+                            </p>
+                            <p>
+                                (If that sidepanel isn't open, 
+                                click the icon resembling 
+                                two documents at the top left 
+                                of the application)
+                            </p>
+                            <p>
+                                Occasionally, the shortcut button 
+                                in Github Desktop doesn't 
+                                work (usually due to personal 
+                                computer configurations).
+                            </p>
+                            <p>
+                                If that occurs, don't panic; 
+                                you'll just have to open up 
+                                your repository manually by 
+                                going to the top menu and 
+                                selecting <br> File -> Open Folder.
+                            </p>
+                            <p>
+                                Then navigate to 
+                                <br>
+                                Documents -> Github -> 
+                                your repository folder
+                                <br>
+                                and select that folder to open.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/repoinVScode.png" 
+                                alt="Your repository loaded in Visual Studio Code"
+                            >
+                            <figcaption>
+                                Your repository loaded in Visual Studio Code
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+            <h4>
+                Congrats! You have now cloned your 
+                code repository to your computer 
+                and are ready to start coding in it!
+            </h4>
+        </div>
+        <div class="cookbookPage">
+            <h2 id="part4" class="invisibleAnchorTarget"></h2>
+            <h6>PART 4</h6>
+            <h2>Code Skeleton</h2>
+            <h4>
+                The template for all your future code projects in the course
+            </h4>
+            <ol>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                First, we're going to 
+                                create the necessary folders
+                                in the Code Skeleton.
+                            </p>
+                            <p>
+                                In Visual Studio Code, 
+                                right-click your code repository
+                                and select "New folder..."
+                            </p>
+                            <p>
+                                Then name the new folder "code-skeleton"
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/codeSkeleton_1.png" 
+                                alt="After creating the code-skeleton folder" 
+                            >
+                            <figcaption>
+                                After creating the code-skeleton folder
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Next, you're going to 
+                                create two new folders called 
+                                "css" and "images".
+                            </p>
+                            <p>
+                                To do so, right-click your 
+                                new "code-skeleton" folder
+                                and select "New folder..." again
+                            </p>
+                            <p>
+                                Name the new folder "css"
+                            </p>
+                            <p>
+                                It's going to look a 
+                                little weird at first. Visual
+                                Studio Code condenses folders 
+                                to one line if there 
+                                is only one folder inside of another.
+                            </p>
+                            <p>
+                                Don't worry, it'll look 
+                                better after we add another
+                                folder in the next step.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/codeSkeleton_2.png" 
+                                alt="Code Skeleton with the css folder" 
+                            >
+                            <figcaption>
+                                Code Skeleton with the css folder
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                We've created the "css" folder; now let's create 
+                                the "images" folder.
+                            </p>
+                            <p>
+                                To do so, right-click your 
+                                new "code-skeleton" folder
+                                and select "New folder..." again
+                            </p>
+                            <p>
+                                <strong>
+                                    Make sure you right-click 
+                                    the "code-skeleton" folder
+                                    and not the "css" folder! 
+                                    <br><br>
+                                    If you don't, you may
+                                    accidentally create the 
+                                    "images" folder inside of the 
+                                    "css" folder instead, 
+                                    which is not what we want.
+                                </strong>
+                            </p>
+                            <p>
+                                Name the new folder "images"
+                            </p>
+                            <p>
+                                Your Code Skeleton should 
+                                resemble the image on the right.
+                                Now we just need to create the HTML file!
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/codeSkeleton_3.png" 
+                                alt="Code Skeleton with the images folder" 
+                            >
+                            <figcaption>
+                                Code Skeleton with the images folder
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Finally, you're going to 
+                                create your first HTML file!
+                            </p>
+                            <p>
+                                Right-click your new "code-skeleton" 
+                                folder one last time
+                                and select "New file..." this time
+                            </p>
+                            <p>
+                                Name the new file "index.html"
+                            </p>
+                            <p>
+                                After creating the file, 
+                                your Code Skeleton should 
+                                resemble the image on the right.
+                            </p>
+                            <p>
+                                However, we're not going to stop 
+                                there; we're also going 
+                                to have you "write" some code 
+                                in there before we wrap up!
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/codeSkeleton_4.png" 
+                                alt="Code Skeleton with folders and an HTML file" 
+                            >
+                            <figcaption>
+                                Code Skeleton with folders and an HTML file
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                In truth, we're just going to 
+                                have you autogenerate an
+                                HTML template, so you won't 
+                                truly be "writing" any code.
+                            </p>
+                            <p>
+                                In your new index.html file, 
+                                click in the text editor for 
+                                the file, and start typing the letters "html". 
+                            </p>
+                            <p>
+                                A little dropdown should pop up; 
+                                go ahead and select the 
+                                second option for "html:5".
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/htmltemplateshortcut.png" 
+                                alt="How to autogenerate an HTML5 code template" 
+                            >
+                            <figcaption>
+                                How to autogenerate an HTML5 code template 
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                This will generate an almost 
+                                perfect empty template for 
+                                writing HTML code; however, 
+                                the indentation is less than ideal.
+                            </p>
+                            <p>
+                                We'll be talking more about 
+                                clean code later. For now, just 
+                                trust that the changes we're 
+                                making now will help you out 
+                                later down the line.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/htmltemplate_1.png" 
+                                alt="The autogenerated HTML5 code template" 
+                            >
+                            <figcaption>
+                                The autogenerated HTML5 code template 
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                To get started, click and 
+                                drag to select all the code from
+                                line 3 to line 11.
+                            </p>
+                            <p>
+                                After selecting the appropriate 
+                                lines, go ahead and hit 
+                                the TAB key on your keyboard.
+                            </p>
+                            <p>
+                                This will cause all those lines 
+                                we selected to be indented 
+                                one level to the right.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/htmltemplate_2.png" 
+                                alt="Fixing the autogenerated HTML5 code template" 
+                            >
+                            <figcaption>
+                                Fixing the autogenerated HTML5 code template 
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                We're almost done. Notice the 
+                                little circle to the right 
+                                of the file name in the 
+                                top tab of the screenshot? 
+                                That means the file is not saved.
+                            </p>
+                            <p>
+                                To save your file, you can do 
+                                it the long way by going to 
+                                the File menu, and then clicking on Save. 
+                            </p>
+                            <p>
+                                Or, you can do it 
+                                the faster way by using keyboard shortcuts 
+                                (Cmd+S for Mac, or Ctrl+S for PC).
+                            </p>
+                            <p>
+                                This will ensure that the changes 
+                                you made to the file are 
+                                saved.  It is important to save 
+                                frequently when you code!
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/htmltemplate_3.png" 
+                                alt="The corrected autogenerated HTML5 code template, unsaved" 
+                            >
+                            <figcaption>
+                                The corrected autogenerated HTML5 
+                                code template, unsaved
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+            <h4>
+                Congrats! You have "written" your 
+                first bit of HTML code and successfully 
+                created a project template for the rest of the course!
+            </h4>
+        </div>
+        <div class="cookbookPage">
+            <h2 id="part5" class="invisibleAnchorTarget"></h2>
+            <h6>PART 5</h6>
+            <h2>Committing and Pushing</h2>
+            <h4>The final steps required to get your code to your website</h4>
+            <ol>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Now, jump back to Github Desktop. 
+                                In the app, you should see the 
+                                changes to your code-skeleton folder; 
+                                in this case, only the 
+                                index.html file.
+                            </p>
+                            <p>
+                                (You might wonder why the 'images' and 
+                                'css' folders aren't in there. 
+                                Well, GitHub desktop only tracks 
+                                changes to files; folders are more 
+                                or less invisible to it, until a 
+                                file is put inside of them.)
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/indexhtml.png" 
+                                alt="GitHub Desktop when changes are ready for commit" 
+                            >
+                            <figcaption>
+                                GitHub Desktop when changes are ready for commit
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                We're going to save a copy of your 
+                                changes in something called a 
+                                "commit". 
+                            </p>
+                            <p>
+                                <strong>
+                                    A commit is basically a 
+                                    snapshot of the changes you made, 
+                                    which gets added to the 
+                                    repository's version control.
+                                </strong> 
+                            </p>
+                            <p>
+                                Add a commit Summary (required) 
+                                and Description (optional) in the 
+                                textboxes in the bottom left of the app. 
+                            </p>
+                            <p>
+                                Then click the [Commit to 
+                                <b>main</b>] button to create 
+                                a commit of your changes.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/commit.png" 
+                                alt="GitHub Desktop's commit section"
+                            >
+                            <figcaption>
+                                GitHub Desktop's commit section
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Next, we are going to do 
+                                something called a "push". 
+                            </p>
+                            <p>
+                                <strong>
+                                    A push is an action that, 
+                                    well, <em>pushes</em> 
+                                    your local commits to the 
+                                    remote server on github.com.
+                                </strong>
+                            </p>
+                            <p>
+                                There are two places you 
+                                start a push in Github Desktop, 
+                                both circled in the screenshot 
+                                below. Choose either option 
+                                and click it.
+                            </p>
+                            <p>
+                                <strong>
+                                    PUSH WARNING 1: Make sure all 
+                                    image files you commit are
+                                    less than 1MB in file size; 
+                                    otherwise, you could 
+                                    cause GitHub to choke 
+                                    when you push your commits.
+                                </strong>
+                            </p>
+                            <p>
+                                <strong>
+                                    PUSH WARNING 2: If you have 
+                                    weak or unstable Wifi, 
+                                    it is strongly recommended 
+                                    that you create separate commits 
+                                    for each image you need to 
+                                    push, rather than including all 
+                                    images in a single commit.  
+                                    <br><br>
+                                    Github Desktop will sometimes 
+                                    stall if you commit and push 
+                                    all your images at once with 
+                                    weak internet, so save yourself 
+                                    the stress, and commit/push 
+                                    images one at a time.
+                                </strong>
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/pushoptions.png" 
+                                alt="Push options in GitHub Desktop" 
+                            >
+                            <figcaption>
+                                Push options in GitHub Desktop
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                               Clicking either option will push 
+                               your changes to your website
+                            </p>
+                            <p>
+                                If the push was successful, the 
+                                top option should change to "Fetch origin".
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/fetchorigin2.png" 
+                                alt="After a successful push" 
+                            >
+                            <figcaption>
+                                After a successful push
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Now return to the Github website, 
+                                and go into the repository 
+                                you made earlier with github.io at 
+                                the end of it. Once you navigate 
+                                to the main repository code screen, 
+                                you should see your code-skeleton 
+                                folder that you created in the middle section.
+                            </p>
+                            <p>
+                                <strong>
+                                    NOTE: Github pages often times 
+                                    takes 5-10 minutes to actually render 
+                                    out your commit, so you may have 
+                                    to wait and then check to see if 
+                                    your site is live.
+                                </strong>
+                            </p>
+                            <br>
+                            <p>
+                                Scroll down to the bottom of the 
+                                right sidebar and click on 
+                                "github-pages" under "Environments".
+                            </p>
+                            <p>
+                                <strong>
+                                    NOTE: Github recently updated their UI,
+                                    and you may see "Deployments" instead of
+                                    "Environments"; if so, click "Deployments"
+                                    instead for this step.
+                                </strong>
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/environments.png" 
+                                alt="The Environments section in github.com" 
+                            >
+                            <figcaption>
+                                The Environments section in github.com
+                            </figcaption>
+                            <img 
+                                src="images/web-dev-startup/deployments.png" 
+                                alt="The Deployments section in github.com" 
+                            >
+                            <figcaption>
+                                The Deployments section in github.com
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                From there you will find the 
+                                deployment page. Click on the 
+                                "View deployment" button, and 
+                                it will open your homepage
+                                (which still just displays 
+                                the name of your repository, 
+                                from your README.md file). 
+                            </p>
+                            <p>
+                                <strong>
+                                    NOTE: Again, Github recently updated their UI,
+                                    so you may see a different view than the 
+                                    first screenshot.
+                                    <br><br>
+                                    If so, refer to the second
+                                    screenshot, and click the "pop-out"
+                                    icon at the far right of the most recent 
+                                    deployment.
+                                </strong>
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/deploymentpage2.png" 
+                                alt="The Deployments page in github.com, where you can access your homepage" 
+                            >
+                            <figcaption>
+                                The Deployments page in github.com, 
+                                where you can access your homepage<br>via the 
+                                "View Deployment" button
+                            </figcaption>
+                            <img 
+                                src="images/web-dev-startup/deploymentpage_new.png" 
+                                alt="The (new) Deployments page in github.com, where you can access your homepage" 
+                            >
+                            <figcaption>
+                                The (new) Deployments page in github.com, 
+                                where you can access your homepage<br>via the 
+                                "popout" icon at the far right of the most 
+                                recent deployment 
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                In order to find your code-skeleton 
+                                site (a project nested in your 
+                                main repository) for submission, 
+                                you must add the project folder 
+                                name to the end of the URL of your homepage.
+                            </p>
+                            <p>
+                                <strong>
+                                    And it must match EXACTLY! 
+                                    No differences in case or 
+                                    spacing or spelling.
+                                </strong>
+                            </p>
+                            <p>
+                                Your code-skeleton project folder 
+                                will only display an empty page, 
+                                with the name of "Document" on the tab.
+                                That is expected, since there's no content 
+                                on the page yet.
+                            </p>
+                            <p>
+                                It can sometimes take a couple 
+                                minutes after pushing your code
+                                for it to actually be published 
+                                on the site, so if you get a 
+                                404 error when you first try 
+                                to access the URL, give it another 
+                                minute or two and then try again.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <p>
+                                For example:<br><br>
+                                https://username.github.io<b>/code-skeleton/</b>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <h4>
+                    Congratulations! You just pushed your first 
+                    code project to your GitHub Pages site!
+                </h4>
+            </ol>
+        </div>
+        <div id="lightboxContainer">
+            <div id="lightboxBackground" class="closer"></div>
+            <img id="lightbox" src="" alt="">
+            <span id="lightboxCloser" class="closer">×</span>
+          </div>
+        <script src="../js/lightbox.js"></script>
+        <script src="../js/hideNav.js"></script>
+    </body>
+</html>

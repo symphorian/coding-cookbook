@@ -1,0 +1,61 @@
+/* standard page layout setup */
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.single-column {
+    min-width: 600px;
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+#card-section {
+    background-color: #5b00ed;
+    color: #bfefff;
+    padding: 48px;
+}
+
+/*
+    Here we make our .card-container into a flexbox
+    and tell it to space out the flex items using
+    justify content with space-between.
+
+    If you'd rather the card be centered, you could
+    always change justify-content to center.
+*/
+.card-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*
+    The flex: 1; below makes each card equally
+    sized within the flexbox (unless the container
+    gets too small, then they may get squished).
+
+    However, if you don't want them to grow too
+    wide, you may want to consider adding a 
+    max-width property.
+*/
+.card {
+    flex: 1;
+    border: 3px solid #bfefff;
+    padding: 36px;
+    text-align: center;
+    margin: 36px;
+}
+
+.card h3 {
+    font-size: 36px;
+    margin: 0px;
+}
+
+.card p {
+    font-size: 24px;
+    margin: 24px 0px 0px;
+}

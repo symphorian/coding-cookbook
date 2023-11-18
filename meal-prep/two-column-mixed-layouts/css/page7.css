@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif; 
+}
+
+#grid-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-areas: 
+        "header header"
+        "sidebar main";
+}
+
+#header {
+    grid-area: header;
+    padding: 0px 36px;
+}
+
+#sidebar {
+    grid-area: sidebar;
+    padding: 0px 24px;
+}
+
+/*
+    Now we're going to finally start the "mixed"
+    layout portion of this demo: we're going
+    to transform our "main" Grid Item into
+    a Flexbox!
+
+    It is totally acceptable to have flexboxes
+    inside of grids, or vice verse, or even
+    flexboxes inside of flexboxes.
+
+    Grids and flexboxes are simply layout
+    modules, and if you want a different
+    inner layout compared to your main layout,
+    then that's perfectly fine!
+
+    We'll activate Flexbox on our Grid Item,
+    the exact same way as normal: using
+    display: flex;
+
+    As soon as we do that, you'll see all our
+    metube items line up in a row (as expected),
+    within the grid item.
+
+    However, they're very squished, and they're 
+    going to look even worse once we add images
+    in there, so we're definitely going to want
+    to modify our flexbox.
+
+    (Ask students which Flexbox Container property
+    they think might help)
+
+    The answer is: flex-wrap!
+
+    And lets remove that background color while
+    we're in here as well.
+*/
+
+#main {
+    /* removed background-color */
+    grid-area: main;
+    display: flex; /* new */
+    flex-wrap: wrap; /* new */
+}
+
+/* 
+
+    After making that modification, that'll all
+    we really need to change on our Grid Item
+    Flexbox Container.  The rest will rely on
+    how we style the Flexbox Items inside.
+*/
+
+#header a {
+    text-decoration: none;
+}
+
+#header #me {
+    color: #111111;
+}
+
+#header #tube {
+    color: white;
+    background-color: red;
+    padding: 4px;
+    border-radius: 12px;
+}
+
+#sidebar ul {
+    padding: 12px 0px;
+    margin: 0px;
+    list-style-type: none;
+    border-bottom: 1px solid #AAAAAA
+}
+
+
+#sidebar ul a {
+    text-decoration: none;
+    color: #111111;
+    display: block;
+    padding: 12px;
+}
+
+#sidebar ul a:hover {
+    background-color: #EEEEEE;
+    border-radius: 12px;
+}
+

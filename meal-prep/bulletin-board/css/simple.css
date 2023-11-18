@@ -1,0 +1,132 @@
+/*
+    This is an example of what a bare minimum
+    type of submission might look like.
+
+    I recommend demoing  how to put at least
+    two post-its on the board, with an 
+    emphasis on how classes can be used to
+    customize the HTML and simplify the 
+    CSS rules.
+
+    (For example, rather than having IDs for
+    every unique post-it, you can have color
+    classes to swap out different colors)
+
+    However, it will be up to the students to
+    use what they've learned to figure out
+    how to put the post-its into two separate
+    rows.
+    
+    (which may not look like two rows if 
+    their preview windows are too narrow,
+    so encourage them to preview in the browser,
+    by right-clicking the HTML and selecting
+    "Open with Live Server")
+
+    The only properties used that we haven't 
+    formally demoed before are height, margin, 
+    and padding.
+
+    The height property should be fairly 
+    straightforward, while margin and padding
+    will be covered in depth in the next day
+    of class. 
+
+    You can explain that margin adds space outside
+    of the post-it, and padding adds space inside 
+    of the post-it, but if students struggle with
+    that, just tell them to use the suggested values:
+
+    margin: 24px;
+    padding: 24p;
+
+    By the way, if you're curious why the post-its 
+    seem unaligned in each row, it's because inline
+    and inline-block content is aligned via the 
+    baseline of the content.  So the bottom line
+    of content of each post-it is what's aligned, 
+    shifting each post-it accordingly vertically.
+*/
+
+/*
+    NOTE TO STUDENTS: 
+
+    This is the file you should be writing your CSS in 
+    for the Bulletin Board assignment.
+
+    Good luck, and have fun!
+*/
+
+.post-it {
+    background-color: white;
+    display: inline-block;
+    width: 300px; /* students can pick different values here */
+    height: 300px; /* students can pick different values here */
+    margin: 24px; /* suggested value, since not taught yet */
+    padding: 24px; /* suggested value, since not taught yet */
+    font-family: cursive;
+}
+
+/*
+    If students try to use images in post-its,
+    they'll probably find that the image doesn't
+    fit inside the post-it.
+
+    They'll have to set a width on the image to 
+    fix that; they can use pixels (an absolute unit),
+    but you can also tease relative units (which we
+    won't get to formally until Day 5) and suggest
+    that they use width: 100%, which will stretch the
+    image to fill 100% of the width of its container.
+*/
+.post-it-image {
+    width: 100%;
+}
+
+.left {
+    text-align: left;
+}
+
+.centered {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.yellow {
+    background-color: rgb(249, 249, 77);
+}
+
+.red {
+    background-color: rgb(198, 11, 11);
+}
+
+.pink {
+    background-color: rgb(255, 195, 214);
+}
+
+.blue {
+    background-color: blue;
+}
+
+.light-blue {
+    background-color: rgb(202, 229, 240);
+}
+
+.purple {
+    background-color: purple;
+}
+
+.green {
+    background-color: green;
+}
+
+.light-green {
+    background-color: rgb(179, 241, 179);
+}
+
+.big {
+    font-size: 36px;
+}

@@ -1,0 +1,27 @@
+/* Drill 1 - Write your code solution below */
+
+/*
+    This drill focuses on the basics:
+    activating the grid functionality, and
+    then setting up two columns.
+
+    Students could also have used absolute
+    or relative units to solve this one
+    (something like 235px or 47%), but
+    fractional units make things MUCH 
+    easier and more flexible if you just
+    want equally sized columns that fill
+    the available space.
+
+    Remember, columns with fractional units 
+    divide the remaining available space
+    between themselves and other columns
+    that also use fractional units, so 
+    they're ideal for layouts that want
+    to utilize all available space.
+*/
+
+#container-d1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

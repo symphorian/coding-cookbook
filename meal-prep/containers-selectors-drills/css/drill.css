@@ -1,0 +1,39 @@
+/*
+    Here are the complete CSS solutions to the
+    Drills related to Containers and Selectors.
+
+    However, remember that these are only half
+    of the puzzle; the HTML must be updated 
+    for these drills as well.
+*/
+
+/* Drill 1 - Write your code solution below */
+
+.orange p {
+    color: limegreen;
+}
+
+/* Drill 2 - Write your code solution below */
+
+.purple p {
+    color: orangered;
+}
+
+/* Drill 3 - Write your code solution below */
+
+.dashed p span {
+    color: magenta;
+}
+
+
+/* Drill 4 - Write your code solution below */
+
+.shadowed p {
+    background-color: skyblue;
+}
+
+/* Drill 5 - Write your code solution below */
+
+.dog-days img {
+    border-radius: 50%;
+}

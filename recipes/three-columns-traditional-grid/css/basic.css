@@ -1,0 +1,99 @@
+/* COMMON PAGE LAYOUT SETUP CSS - START *****************/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    /* preferred copy font goes here */
+    font-family: sans-serif; 
+}
+/* COMMON PAGE LAYOUT SETUP CSS - END ********************/
+
+/*
+    To create a three column layout:
+    
+    Step 1 
+        Start in the HTML by creating a container 
+        element, and inside of it, put two other 
+        container elements, one for the sidebar 
+        content and one for the main page content.
+    
+    Step 2
+        Next, target the outer container element and
+        give it the following property and value: 
+        
+        display: grid;
+
+        This transforms it into a grid container,
+        which by default displays content in a 
+        single column.
+
+    Step 3
+        We want our content to be side-by-side, 
+        and to do that in a grid, we need to do
+        two things: 
+            - specify the number of columns we want
+            - specify the width of those columns
+
+        We can accomplish both of those together
+        by using the grid-template-columns property.
+
+        Each value provided to this property
+        (separated by spaces, not commas)
+        will define a new column with the specified
+        width.
+
+    That's it! There is actually quite a bit more we
+    could configure in our grid, but if all we want is
+    three columns of content, that's all we need!
+    
+    We also added background colors below 
+    so you can see the boundaries of the column boxes.
+*/
+
+#three-columns {
+    /* STEP 2 */
+    display: grid;
+
+    /* STEP 3 */
+    /*
+        The grid-template-columns property values
+        can use any of the existing absolute or 
+        relative units we've used before.
+
+        However, a particularly handy unit for grids
+        is a new one called a "fractional unit".
+
+        Fractional units use the suffix 'fr', and 
+        function similarly to the flex property in
+        flexbox containers:
+
+        All the fractional units get added up, and 
+        that sum is added to the bottom of those
+        values to create fractions.
+
+        That means, if we have three equal
+        fractional units below, then they will all
+        have the same size of a third of the container.
+
+        Why? Because 1 + 1 + 1 = 3, and we apply that
+        sum (3) as the denominator to each fractional unit.
+
+        So we get 1/3, 1/3, and 1/3 for each column.
+    */
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#column-1 {
+    background-color: lightblue;
+}
+
+#column-2 {
+    background-color: darkblue;
+    color: white;
+}
+
+#column-3 {
+    background-color: aquamarine;
+}

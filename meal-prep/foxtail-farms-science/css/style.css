@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;700&display=swap');
+
+/*************************************************************
+    Page setup styles
+*************************************************************/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*************************************************************
+    Navbar styles
+*************************************************************/
+#header-1,
+#footer {
+    background-color: #000;
+    color: #FFF;
+}
+
+#header-1 .navbar,
+.layout,
+#footer .navbar {
+    max-width: 1000px;
+    margin: 0px auto;
+}
+
+#header-1 .navbar,
+#footer .navbar {
+    display: flex;
+    align-items: center;
+}
+
+#header-1 .navbar img {
+    height: 200px;
+    margin-right: auto;
+}
+
+#header-1 .navbar a,
+#footer .navbar a {
+    text-decoration: none;
+    background-color: #000;
+    color: #FFF;
+    padding: 20px;
+    margin: 0px 8px;
+    transition: 
+        border 0.25s,
+        background-color 0.25s;
+}
+
+#footer span {
+    padding: 20px;
+    margin: 0px 8px;
+}
+
+#header-1 .navbar a:hover,
+#footer .navbar a:hover {
+    background-color: #e1a177;
+}
+
+#header-1 .navbar #logo:hover {
+    background-color: #000;
+}
+
+#footer .navbar {
+    justify-content: center;
+}
+
+#footer-topper img {
+    width: 200px;
+    transform: scaleX(-1) rotate(-5deg) translateY(36px);
+}
+
+/*************************************************************
+    Main Content styles
+*************************************************************/
+
+.section {
+    margin: 48px 36px;
+}
+
+.side-by-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.side-by-side .text-container,
+.side-by-side .image-container {
+    flex: 1;
+}
+
+.side-by-side.two-thirds .text-container {
+    flex: 2;
+}
+
+.side-by-side.one-third .image-container {
+    flex: 2;
+}
+
+.side-by-side.two-thirds .text-container:first-child,
+.side-by-side.one-third .text-container:first-child {
+    margin-right: 48px;
+}
+
+.side-by-side.two-thirds .image-container:first-child,
+.side-by-side.one-third .image-container:first-child {
+    margin-right: 48px;
+}
+
+.side-by-side .image-container img {
+    width: 100%;
+}
+
+h2 {
+    font-size: 60px;
+    font-weight: normal;
+    font-family: 'Lobster', cursive;
+    margin: 0px;
+}
+
+.side-by-side.fox-logo h2 {
+    font-size: 100px;
+}
+
+.center {
+    text-align: center;
+}
+
+.cta {
+    background-color: #e1a177;
+    border: 3px solid #FFF;
+    border-radius: 36px;
+    color: #FFF;
+    display: inline-block;
+    padding: 16px 24px;
+    margin: 16px 0px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 
+        background-color 0.25s,
+        border 0.25s,
+        color 0.25s;
+}
+
+.cta:hover {
+    background-color: #FFF;
+    border: 3px solid #e1a177;
+    color: #e1a177;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 36px;
+}
+
+.three-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 60px;
+    margin-top: 48px;
+}
+
+.product-card {
+    background-color: #FFF;
+    border: 3px solid #e1a177;
+    box-shadow: 8px 8px #e1a177;
+    padding: 24px;
+}
+
+.card {
+    background-color: #FFF;
+    border: 3px solid #CCCCCC;
+    box-shadow: 4px 4px 4px #00000033;
+    padding: 24px;
+    text-align: center;
+}
+
+.product-card img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    width: 100%;
+}
+
+.card img {
+    border: 3px solid #e1a177;
+    object-fit: cover;
+    width: 90%;
+    height: 150px;
+    margin: 0px auto;
+}
+
+.product-label {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 8px;
+}
+
+.product-price-buy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-price {
+    font-size: 24px;
+}
+
+.product-button,
+.card a {
+    background-color: #e1a177;
+    border: 3px solid #FFF;
+    border-radius: 24px;
+    color: #FFF;
+    display: inline-block;
+    padding: 8px 24px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 
+        background-color 0.25s,
+        border 0.25s,
+        color 0.25s;
+}
+
+.product-button:hover,
+.card a:hover {
+    background-color: #FFF;
+    border: 3px solid #e1a177;
+    color: #e1a177;
+}
+
+.fox-divider {
+    text-align: center;
+    border-bottom: 3px solid #e1a177;
+    position: relative;
+    margin: 100px 0px;
+}
+
+.fox-divider img {
+    width: 100px;
+    position: absolute;
+    left: 45%;
+    top: -52px;
+    transform: scaleX(-1) rotate(-10deg);
+}
+
+.fox-divider.left img {
+    left: 15%;
+}
+
+.fox-divider.right img {
+    left: 75%;
+    
+    transform: rotate(-5deg);
+}
+
+.hero-divider.grapes {
+    background-image: url("../images/peter-keller-UdUEcCoDRsI-unsplash.jpg");
+    background-size: cover;
+    background-position: center 80%;
+    height: 50vh;
+    max-height: 500px;
+    margin: 100px 0px;
+}
+
+.overlap-divider {
+    position: absolute;
+    height: 250px;
+    width: 100%;
+    background-color: #e1a177;
+    transform: translateY(-250px);
+    z-index: -10;
+}
+
+.overlap-divider + .layout .section {
+    margin-top: 150px;
+}
+
+/*************************************************************
+    Breakpoint styles
+*************************************************************/
+
+@media screen and (max-width: 1000px) {
+    .product-price,
+    .product-button {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #header-1 .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    #header-1 #logo {
+        width: 100%;
+        text-align: center;
+        margin: 0px 0px -12px;
+        padding: 0px;
+    }
+
+    #header-1 #logo img {
+        height: 150px;
+    }
+
+    .section {
+        position: relative;
+    }
+
+    .side-by-side {
+        flex-direction: column;
+    }
+
+    .side-by-side .image-container {
+        text-align: right;
+        padding: 48px 0px;
+    }
+
+    .side-by-side.fox-logo .image-container img {
+        width: 300px;
+        position: absolute;
+        bottom: -100px;
+        right: -40px;
+    }
+
+    .side-by-side.two-thirds .text-container:first-child,
+    .side-by-side.one-third .text-container:first-child {
+        margin-right: 0px;
+    }
+
+    .side-by-side.two-thirds .image-container:first-child,
+    .side-by-side.one-third .image-container:first-child {
+        margin-right: 0px;
+    }
+
+    .product-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 36px;
+    }
+
+    .product-price,
+    .product-button {
+        font-size: 18px;
+    }
+
+    .three-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        width: 100%;
+        height: 200px;
+    }
+    .overlap-divider {
+        display: none;
+    }
+
+    #footer .navbar {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .product-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+}

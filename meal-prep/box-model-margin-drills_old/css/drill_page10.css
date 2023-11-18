@@ -1,0 +1,36 @@
+/* Drill 10 - Write your code solution below */
+
+/*
+    Now we're bringing it all together, showing
+    them what they can do with the little bit
+    of CSS that they've learned.
+
+    You may need to remind them how to get 
+    content side-by-side, as they tend to 
+    forget that (i.e. display: inline-block).
+
+    Aside from that, it's just applying the
+    solutions from the previous drills.
+
+    And in the end, they should have something
+    that somewhat resembles a very simple
+    web page with a navbar.
+*/
+
+#d10-navbar-1 {
+    text-align: center;
+}
+
+.d10-navitem {
+    display: inline-block;
+    margin: 0px 16px;
+}
+
+#d10-div1 {
+    width: 250px;
+    margin: 0px auto;
+}
+
+#d10-h3-1 {
+    text-align: center;
+}

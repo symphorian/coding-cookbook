@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML Ingredients - The Coding Cookbook</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="css/cookbook.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <style>
+            #css {
+                margin-top: 24px;
+                padding: 24px;
+            }
+    
+            section {
+                padding-bottom: 24px;
+            }
+    
+            h3 {
+                margin-bottom: 8px;
+            }
+            h5 {
+                margin-top: 8px;
+            }
+    
+            .contentContainer {
+                display: flex;
+            }
+    
+            .content {
+                flex: 2;
+            }
+    
+            .legend {
+                flex: 1;
+            }
+    
+            .legend div:first-child {
+                padding-top: 20px;
+            }
+    
+            .code {
+                font-family: Courier New, monospace;
+                font-size: 18px;
+                line-height: 24px;
+            }
+
+            div.code {
+                background-color: white;
+                box-shadow: inset 0px 0px 8px 4px #00000033;
+                margin-bottom: 24px;
+                margin-right: 36px;
+                margin-top: 12px;
+                padding: 12px;
+                overflow: hidden;
+            }
+    
+            .indent1 {
+                padding-left: 2em;
+            }
+    
+            .indent2 {
+                padding-left: 4em;
+            }
+    
+            .openingTag,
+            .closingTag,
+            .attrName,
+            .assnOperator,
+            .attrValue,
+            .htmlParent,
+            .htmlChild,
+            .cssPropName,
+            .cssAssnOperator,
+            .cssPropValue,
+            .cssAssnTerminator,
+            .cssSelHtml,
+            .cssSelId,
+            .cssSelClass,
+            .cssDecStart,
+            .cssDecEnd
+            {
+                cursor: crosshair;
+            }
+    
+            .openingTagHighlight {
+                background-color: yellow;
+            }
+    
+            .closingTagHighlight {
+                background-color: gold;
+            }
+    
+            .attrNameHighlight {
+                color: blue;
+                font-weight: bold;
+            }
+    
+            .assnOperatorHighlight {
+                color: limegreen;
+                font-weight: bold;
+            }
+    
+            .attrValueHighlight {
+                color: red;
+                font-weight: bold;
+            }
+    
+            .htmlParentHighlight {
+                text-shadow: 1px 1px 2px purple;
+            }
+    
+            .htmlChildHighlight {
+                text-decoration: underline;
+            }
+    
+            .cssPropNameHighlight {
+                background-color: yellowgreen;
+            }
+    
+            .cssAssnOperatorHighlight {
+                background-color: skyblue;
+            }
+    
+            .cssPropValueHighlight {
+                background-color: lightgreen;
+            }
+    
+            .cssAssnTerminatorHighlight {
+                background-color: aquamarine;
+            }
+    
+            .cssSelHtmlHighlight {
+                background-color: pink;
+            }
+    
+            .cssSelIdHighlight {
+                background-color: deeppink;
+            }
+    
+            .cssSelClassHighlight {
+                background-color: lightcoral;
+            }
+    
+            .cssDecStartHighlight {
+                background-color: cyan;
+            }
+    
+            .cssDecEndHighlight {
+                background-color: darkturquoise;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="background"></div>
+        <nav>
+            <header id="topHeader">
+                <h2 id="brand"><a href="./">The Coding Cookbook</a></h2>
+                <div id="quote"></div>
+                <div id="navLinks">
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="ingredients.html">
+                                HTML
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="ingredients.html">Elements</a></h2>
+                            <h2><a href="ingredients-cheatsheet.html">Cheatsheet</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="seasonings.html">
+                                CSS
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="seasonings.html">Properties</a></h2>
+                            <h2><a href="seasonings-cheatsheet.html">Cheatsheet</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="recipes.html">
+                                Layouts
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="recipes.html?category=page-layout">Page Layouts</a></h2>
+                            <h2><a href="recipes.html?category=content-layout">Content Layouts</a></h2>
+                            <h2><a href="recipes.html?category=navigation-layout">Navigation</a></h2>
+                            <h2><a href="recipes.html?category=miscellaneous">Miscellaneous</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="more.html">
+                                More
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="demos.html">Class Demos</a></h2>
+                            <h2><a href="appetizers.html">Tutorials</a></h2>
+                            <h2><a href="troubleshooting.html">Troubleshooting</a></h2>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </nav>
+        
+        <header id="title" class="">
+            <h1>CSS Cheatsheet</h1>
+            <h3>An Interactive Refresher of CSS Concepts</h3>
+        </header>
+        
+        <div class="cookbookPage">
+            <section id="css">
+                <div class="contentContainer">
+                    <div class="content">
+                        <h3 id="css1">CSS Rules (Selectors and Declaration Blocks)</h3>
+                        <div class="code">
+                            <div><span class="cssSelHtml">div</span> <span class=cssDecStart>{</span></div>
+                            <div class="indent1">
+                                <span class="cssPropName">font-style</span><span class="cssAssnOperator">:</span>
+                                <span class="cssPropValue">italic</span><span class="cssAssnTerminator">;</span>
+                            </div>
+                            <div class="indent1">
+                                <span class="cssPropName">line-height</span><span class="cssAssnOperator">:</span>
+                                <span class="cssPropValue">24px</span><span class="cssAssnTerminator">;</span>
+                            </div>
+                            <div><span class="cssDecEnd">}</span></div>
+                            <br />
+                            <div>
+                                <span class="cssSelHtml">section</span><span class="cssSelClass">.large</span>
+                                <span class="cssSelId">#explanation</span>
+                                <span class=cssDecStart>{</span>
+                            </div>
+                            <div class="indent1">
+                                <span class="cssPropName">linear-gradient</span><span class="cssAssnOperator">:</span>
+                                <span class="cssPropValue">to top left, green 10%, red 90%</span><span class="cssAssnTerminator">;</span>
+                            </div>
+                            <div class="indent1">
+                                <span class="cssPropName">border</span><span class="cssAssnOperator">:</span>
+                                <span class="cssPropValue">5px dashed darkgreen</span><span class="cssAssnTerminator">;</span>
+                            </div>
+                            <div><span class="cssDecEnd">}</span></div>
+                        </div>
+                    </div>
+                    <aside class="legend">
+                        <h3>Interactive Legend</h3>
+                        <h5>(hover over to highlight matching code)</h5>
+                        <div class="cssSelHtml">HTML Element Selector</div>
+                        <div class="cssSelId">ID Selector</div>
+                        <div class="cssSelClass">Class Selector</div>
+                        <div class="cssDecStart">CSS Declaration Block Start</div>
+                        <div class="cssDecEnd">CSS Declaration Block End</div>
+                    </aside>
+                </div>
+                <div class="contentContainer">
+                    <div class="content">
+                        <h3 id="css2">CSS Properties and Comments</h3>
+                        <div class="code">
+                            <div>&#47;* This is a CSS comment *&#47;</div>
+                            <br />
+                            <div><span class="cssSelHtml">body</span> <span class=cssDecStart>{</span></div>
+                            <div class="indent1">
+                                <span class="cssPropName">background-color</span><span class="cssAssnOperator">:</span>
+                                <span class="cssPropValue">pink</span><span class="cssAssnTerminator">;</span>
+                            </div>
+                            <div class="indent1">
+                                <span class="cssPropName">font-family</span><span class="cssAssnOperator">:</span>
+                                <span class="cssPropValue">Courier New</span><span class="cssAssnTerminator">;</span>
+                            </div>
+                            <div><span class="cssDecEnd">}</span></div>
+                        </div>
+                    </div>
+                    <aside class="legend">
+                        <br>
+                        <br>
+                        <br>
+                        <div class="cssPropName">CSS Property Name</div>
+                        <div class="cssAssnOperator">CSS Property Assignment Operator</div>
+                        <div class="cssPropValue">CSS Property Value</div>
+                        <div class="cssAssnTerminator">CSS Property Assignment Terminator</div>
+                    </aside>
+                </div>
+            </section>
+        </div>
+        <script>
+            $(".cssPropName").hover(
+                function() {
+                    $(".cssPropName").addClass("cssPropNameHighlight");
+                },
+                function() {
+                    $(".cssPropName").removeClass("cssPropNameHighlight");
+                }
+            );
+
+            $(".cssAssnOperator").hover(
+                function() {
+                    $(".cssAssnOperator").addClass("cssAssnOperatorHighlight");
+                },
+                function() {
+                    $(".cssAssnOperator").removeClass("cssAssnOperatorHighlight");
+                }
+            );
+
+            $(".cssPropValue").hover(
+                function() {
+                    $(".cssPropValue").addClass("cssPropValueHighlight");
+                },
+                function() {
+                    $(".cssPropValue").removeClass("cssPropValueHighlight");
+                }
+            );
+
+            $(".cssAssnTerminator").hover(
+                function() {
+                    $(".cssAssnTerminator").addClass("cssAssnTerminatorHighlight");
+                },
+                function() {
+                    $(".cssAssnTerminator").removeClass("cssAssnTerminatorHighlight");
+                }
+            );
+
+            $(".cssSelHtml").hover(
+                function() {
+                    $(".cssSelHtml").addClass("cssSelHtmlHighlight");
+                },
+                function() {
+                    $(".cssSelHtml").removeClass("cssSelHtmlHighlight");
+                }
+            );
+
+            $(".cssSelId").hover(
+                function() {
+                    $(".cssSelId").addClass("cssSelIdHighlight");
+                },
+                function() {
+                    $(".cssSelId").removeClass("cssSelIdHighlight");
+                }
+            );
+
+            $(".cssSelClass").hover(
+                function() {
+                    $(".cssSelClass").addClass("cssSelClassHighlight");
+                },
+                function() {
+                    $(".cssSelClass").removeClass("cssSelClassHighlight");
+                }
+            );
+
+            $(".cssDecStart").hover(
+                function() {
+                    $(".cssDecStart").addClass("cssDecStartHighlight");
+                },
+                function() {
+                    $(".cssDecStart").removeClass("cssDecStartHighlight");
+                }
+            );
+
+            $(".cssDecEnd").hover(
+                function() {
+                    $(".cssDecEnd").addClass("cssDecEndHighlight");
+                },
+                function() {
+                    $(".cssDecEnd").removeClass("cssDecEndHighlight");
+                }
+            );
+        </script>
+    </body>
+</html>

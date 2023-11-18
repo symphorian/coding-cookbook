@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Anchors (Links) Demo</title>
+    </head>
+    <body>
+        <a href="https://www.google.com" target="_blank">
+            Click me to go to Google's homepage
+        </a>
+        <a href="https://www.w3schools.com/" target="_blank">
+            Learn more at w3schools!
+        </a>
+        <p>
+            If you want to dig REALLY deep into web dev,
+            <a 
+                href="https://developer.mozilla.org/en-US/" 
+                target="_blank"
+            >
+                visit developer.mozilla.org!
+            </a>
+        </p>
+        <!--
+            Now we're going to hop back up to our anchors
+            in our table of contents.  The last piece of the 
+            puzzle is connecting the anchor href attributes
+            to the id attributes of the headings down below.
+
+            To do this, just add the attribute values after
+            the # in the href.
+        -->
+        <h6>TABLE OF CONTENTS</h6>
+        <ul>
+            <li>
+                <!-- href="#section1" -->
+                <a href="#section1">Jump to Section 1</a>
+            </li>
+            <li>
+                <!-- href="#section2" -->
+                <a href="#section2">Jump to Section 2</a>
+            </li>
+            <li>
+                <!-- href="#section3" -->
+                <a href="#section3">Jump to Section 2</a>
+            </li>
+        </ul>
+        <!--
+            Note that the hrefs need to match up EXACTLY
+            with the ids (not the heading content).
+
+            The anchors won't work if you do something like 
+            href="#section 1" or href="#Welcome to Section 1",
+
+            They also won't work if you don't have the # symbol
+            in the front.  So href="section2" won't work either;
+            that tells the browser to navigate to a page on your
+            site called "section2".  We'll talk about same-site
+            navigate later on in the course.
+
+            If you have everything hooked up correctly,
+            you should be able to click on the hyperlinks in our
+            table of contents and jump down to the different 
+            sections of our page.
+        -->
+        <h2 id="section1">Welcome to Section 1!</h2>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <h2 id="section2">Welcome to Section 2!</h2>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <h2 id="section3">Welcome to Section 3!</h2>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </body>
+</html>

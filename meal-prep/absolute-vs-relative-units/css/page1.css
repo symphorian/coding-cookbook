@@ -1,0 +1,21 @@
+/*
+    First, we'll use absolute units, which
+    students should hopefully be familiar
+    with at this point.
+*/
+
+.absolute-heading {
+    font-size: 36px;
+}
+
+.absolute-paragraph {
+    font-size: 18px;
+}
+
+/*
+    Stretch and squish the preview panel, and
+    show students how the font size stays the
+    same no matter how the screen size changes.
+
+    That's a feature of "absolute" units.
+*/

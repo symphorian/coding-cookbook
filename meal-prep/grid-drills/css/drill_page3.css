@@ -1,0 +1,35 @@
+/* Drill 3 - Write your code solution below */
+
+/*
+    This drill is a set up for the next one.
+
+    Students can technically solve this one
+    by just activating the grid and setting
+    up the three columns.
+
+    Setting up grid-template-areas properly
+    will look exactly the same if they do
+    it correctly.
+
+    However, encourage them to try to use
+    the grid-template-areas property for 
+    practice (again, in preparation for 
+    the next drill).
+*/
+
+#container-d3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "one two three";
+}
+
+#d3-cell1 {
+    grid-area: one;
+}
+#d3-cell2 {
+    grid-area: two;
+}
+#d3-cell3 {
+    grid-area: three;
+}
+

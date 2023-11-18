@@ -1,0 +1,59 @@
+/*
+    As usual, we'll start with our basic page
+    layout CSS.
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*
+    Then we'll style the cards container,
+    using flexbox and flex-wrap, as well
+    as align-items for something later on.
+*/
+#cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+/*
+    Then we'll style the cards.  We'll keep
+    them relatively simple, so we can focus
+    on the hover and transition effects later.
+*/
+.card {
+    flex: 300px;
+    border: 3px solid black;
+    margin: 24px;
+    padding: 24px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+/*
+    We'll also style the anchor into a simple
+    button, for use later in certain cards.
+*/
+.card a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    border: 3px solid black;
+    padding: 12px;
+    margin-top: 36px;
+}
+
+/*
+    That's it for our basic setup for the
+    demo.  Should give them a little more
+    practice with creating cards too.
+
+    Now we can focus on :hover and transitions.
+*/

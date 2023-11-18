@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>display Property (Basic)</title>
+        <link href="css/display.css" rel="stylesheet" data-seasoning>
+        <link href="css/shared.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="recipe-example">
+            <h4>Basic Code Snippets</h4>
+            <code>display: block;</code>
+            <br>
+            <code>display: inline;</code>
+            <br>
+            <code>display: inline-block;</code>
+        </div>
+        <h4>Additional Examples</h4>
+        <p>
+            There are many values that can be used with 
+            the display property, and some of them are 
+            quite complex. 
+        </p>
+        <p>
+            We'll stick to the basics in the following 
+            examples.
+        </p>
+
+        <h4>Examples of <code>display: block;</code></h4>
+        <p>
+            Setting <code>display: block;</code> transforms an 
+            element into a block element, like a &lt;p&gt;, 
+            &lt;h1&gt;, or &lt;div&gt; element.
+        </p>
+        <p>
+            Block elements are pretty straightforward.  They
+            take up an entire line in their container, and 
+            they stack with other block elements.
+        </p>
+        <p>
+            They take up an entire line even if the content 
+            inside them doesn't need that much space, and 
+            even if they don't have any borders or
+            background-color set.
+        </p>
+
+        <div class="example">
+            <div class="block-styled">BLOCK (STYLED)</div>
+            <div class="block">BLOCK</div>
+            <div class="block">BLOCK</div>
+            <div class="block-styled">BLOCK (STYLED)</div>
+            <div class="block-styled">BLOCK (STYLED)</div>
+            <div class="block">BLOCK</div>
+            <div class="block-styled">BLOCK (STYLED)</div>
+        </div>
+        
+        <h4>Examples of <code>display: inline;</code></h4>
+        <p>
+            Setting <code>display: inline;</code> transforms 
+            an element into an inline element, like a 
+            &lt;span&gt; or &lt;a&gt;.
+        </p>
+        <p>
+            Inline elements sit next to other inline elements 
+            until they reach the end of their container; then
+            they wrap around to the next line.
+        </p>
+        <p>
+            Simple CSS properties such as font or color can 
+            be used to style inline elements with no problems.
+        </p>
+
+        <div class="example">
+            <div class="inline">INLINE</div>
+            <div class="inline-styled-simple">INLINE</div>
+            <div class="inline-styled-simple">INLINE</div>
+            <div class="inline">INLINE</div>
+            <div class="inline">INLINE</div>
+            <div class="inline">INLINE</div>
+            <div class="inline-styled-simple">INLINE</div>
+            <div class="inline">INLINE</div>
+            <div class="inline">INLINE</div>
+        </div>
+
+        <p>
+            However, when it comes to using properties
+            related to the Box Model, some unusual
+            behavior starts to come out...
+        </p>
+        <p>
+            Watch what happens when we try to apply some 
+            borders and padding to them.
+        </p>
+
+        <div class="example">
+            <div class="inline-styled-fancy">INLINE</div>
+            <div class="inline-styled-fancy">INLINE</div>
+            <div class="inline-styled-fancy">INLINE</div>
+            <div class="inline-styled-fancy">INLINE</div>
+            <div class="inline-styled-fancy">INLINE</div>
+            <div class="inline-styled-fancy">INLINE</div>
+            <div class="inline-styled-fancy">INLINE</div>
+            <div class="inline-styled-fancy">INLINE</div>
+            <div class="inline-styled-fancy">INLINE</div>
+        </div>
+
+        <p>
+            That's because inline elements ignore vertical
+            padding, vertical margin, vertical borders...
+            really any vertical part of the Box Model
+            related to spacing.
+        </p>
+        <p>
+            As a result, if we want to do any sort of
+            styling to an inline element other than simple 
+            font or color property changes, we probably
+            want to use the next display value: inline-block.
+        </p>
+
+        <h4>Examples of <code>display: inline-block;</code></h4>
+        <p>
+            Setting <code>display: inline-block;</code> gives 
+            us the best of both worlds: we can give an element 
+            the side-by-side behavior of an inline element, but 
+            also have it respect the Box Model like a block 
+            element.
+        </p>
+
+        <p>
+            Here are some basic inline-block elements with 
+            no styling.
+        </p>
+
+        <div class="example">
+            <div class="inline-block">INLINE-BLOCK</div>
+            <div class="inline-block">INLINE-BLOCK</div>
+            <div class="inline-block">INLINE-BLOCK</div>
+            <div class="inline-block">INLINE-BLOCK</div>
+            <div class="inline-block">INLINE-BLOCK</div>
+            <div class="inline-block">INLINE-BLOCK</div>
+            <div class="inline-block">INLINE-BLOCK</div>
+        </div>
+
+        <p>
+            Here are some inline-block elements with 
+            some Box Model and other properties set 
+            on them.
+        </p>
+
+        <div class="example">
+            <div class="inline-block-styled">INLINE-BLOCK</div>
+            <div class="inline-block-styled">INLINE-BLOCK</div>
+            <div class="inline-block-styled">INLINE-BLOCK</div>
+            <div class="inline-block-styled">INLINE-BLOCK</div>
+            <div class="inline-block-styled">INLINE-BLOCK</div>
+            <div class="inline-block-styled">INLINE-BLOCK</div>
+            <div class="inline-block-styled">INLINE-BLOCK</div>
+        </div>
+
+        <p>
+            See how they behave much better than the normal
+            inline elements?
+        </p>
+        <p>
+            As a result, if you want to make an element sit 
+            side-by-side with other elements on the page,
+            and you also want to do set some border or 
+            background-color properties on it, you'll 
+            probably want to go with inline-block.
+        </p>
+
+        <h4>Mixed Examples</h4>
+
+        <div class="example">
+            <div class="block-styled">BLOCK (STYLED)</div>
+            <div class="block-styled">BLOCK (STYLED)</div>
+            <div class="inline-block-styled">INLINE-BLOCK</div>
+            <div class="inline-block-styled">INLINE-BLOCK</div>
+            <div class="block-styled">BLOCK (STYLED)</div>
+            <div class="inline-block-styled">INLINE-BLOCK</div>
+        </div>
+
+        <div class="resources">
+            <h4>Additional Resources</h4>
+            <a 
+                href="https://www.w3schools.com/cssref/pr_class_display.php"
+                target="_blank"
+            >
+                w3schools 
+            </a>
+            <br>
+            <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/display"
+                target="_blank"
+            >
+                mdn web docs
+            </a>
+        </div>
+    </body>
+</html>

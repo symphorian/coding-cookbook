@@ -1,0 +1,67 @@
+/* standard page layout setup */
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.single-column {
+    min-width: 600px;
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+#main-section {
+    background: 
+        radial-gradient(at top left, #d86fee, #8122ed);
+    padding: 48px;
+}
+
+
+/*
+    Media and text side-by-side implementation **************
+*/
+.side-by-side {
+    display: flex;
+    align-items: center;
+    margin: 48px 0px;
+}
+
+/*
+    In this case, we have the image and text containers
+    with equal sizes (flex: 1), but if you want the 
+    image to be larger, or conversely if you want the 
+    text area to be larger, you can adjust the flex 
+    values assigned to each container.
+*/
+.side-by-side .image-container {
+    flex: 1;
+}
+
+.side-by-side .text-container {
+    flex: 1;
+    padding: 36px;
+}
+
+.side-by-side .image-container img {
+    width: 100%;
+}
+
+.side-by-side .text-container h3 {
+    font-size: 48px;
+}
+
+/* fake button */
+.side-by-side .text-container a {
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    background-color: #3f0791;
+    color: white;
+    padding: 24px 48px;
+    border-radius: 48px;
+}

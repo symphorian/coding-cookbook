@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    font-family: sans-serif;
+    background-color: teal;
+}
+
+#header, #footer {
+    width: 100vw;
+}
+
+#header {
+    background-image: url(../images/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    /*
+        Let's center our hero content by adding a
+        display of flex here and using a justify-content
+        of center.
+
+        Then we can add a padding-top of 25px for some spacing.
+    */
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+/*
+    We can target our .hero-content and contain it within
+    our screen by applying a width of 80vw, a max-width
+    of 1000px and a margin of 0px auto.
+*/
+.hero-content {
+    width: 80vw;
+    max-width: 1000px;
+    margin: 0px auto;
+}
+/*
+    Let's target our h1 as well. We'll give it a
+    font-size of 4rem. Remember, rem is a relative unit
+    that is sized based on the root font size of an element.
+
+    We'll also add a font-weight of bold and give a margin
+    of 0px.
+*/
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0px;
+}
+
+/*
+    We'll also give the h3 a margin of 15px on the top,
+    0px on the left and right, and 30px on the bottom.
+    Then change it's font-size to 1.5rem
+*/
+.hero-content h3 {
+    margin: 15px 0px 30px;
+    font-size: 1.5rem;
+}
+/*
+    We can then target our anchor element and make it
+    look more like a button by giving it a display of
+    inline-block, a background color, text-decoration of none,
+    a color of white, a text-align of center, 10px of padding
+    on the top and bottom with 20px of padding on the left and right.
+    We'll finish it off with a font-size of 1.25rem.
+*/
+.hero-content a {
+    display: inline-block;
+    background-color: #00be06;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 1.25rem;
+}
+
+/*
+    Our hero is done, let's move on to styling our
+    gallery.
+*/
+@media screen and (max-width: 725px) and (min-width: 481px) {
+    body {
+        background-color: orange;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        background-color: purple;
+    }
+}
+

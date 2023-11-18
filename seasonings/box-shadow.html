@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>box-shadow Property</title>
+        <link href="css/box-shadow.css" rel="stylesheet" data-seasoning>
+        <link href="css/shared.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="recipe-example">
+            <h4>Basic Code Snippets</h4>
+            <code>box-shadow: 8px 8px navy;</code>
+            <br>
+            <code>box-shadow: 16px 16px 8px darkgreen;</code>
+            <br>
+            <code>box-shadow: inset 0px 0px 16px 4px purple;</code>
+        </div>
+        <h4>Additional Examples</h4>
+        <p>
+            The box-shadow property allows you to add shadows to the Box Model 
+            of an element, as you might be able to guess.
+        </p>
+        <p>
+            Box shadow is a somewhat complex property, but it can have a 
+            huge visual impact on your web designs, so we definitely 
+            encourage you to try it out!
+        </p>
+
+        <div id="example-1" class="example">
+            <h5>Offset and Color</h5>
+            <p>
+                The most basic use of a box shadow involves two things:
+                a shadow color, and an offset.
+            </p>
+            <p>
+                <code>box-shadow: x-offset y-offset shadow-color;</code>
+            </p>
+            <p>
+                The shadow color is pretty self-explanatory; it lets you change 
+                the color of the shadow cast by the box.  This means that if 
+                you pick a vibrant color, rather than black or grey, you could 
+                create more of a "glow" effect, rather than a shadow.
+            </p>
+            <p>
+                The offset is further split into two separate values: the 
+                x-offset and the y-offset.  
+                <ul>
+                    <li>
+                        The x-offset shifts the shadow to the right with a 
+                        positive value, and to the left with a negative value.
+                    </li>
+                    <li>
+                        The y-offset shifts the shadow down with a positive
+                        value, and up with a negative value.
+                    </li>
+                </ul>
+            </p>
+            <p>
+                As an example, check out the code below, and see the effect 
+                on the bordered box around this text.
+            </p>
+            <p>
+                <code>box-shadow: 8px 8px navy;</code>
+            </p>
+        </div>
+
+        <div id="example-2" class="example">
+            <h5>Offset, Blur, and Color</h5>
+            <p>
+                A more advanced version of box-shadow incorporates a blur 
+                into the shadow, specifically referred to as a blur radius.
+            </p>
+            <p>
+                <code>
+                    box-shadow: x-offset y-offset blur-radius shadow-color;
+                </code>
+            </p>
+            <p>
+                The blur radius specifies how far you want the blur to extend.
+                Smaller values means there is very little blur around the edges
+                of the shadow, whereas larger value cause a LOT of blur (just 
+                don't go too big, or you may blur your shadow out of existence!)
+            </p>
+            <p>
+                As an example, check out the code below, and see the effect 
+                on the bordered box around this text.
+            </p>
+            <p>
+                <code>box-shadow: 16px 16px 8px darkgreen;</code>
+            </p>
+        </div>
+
+        <div id="example-3" class="example">
+            <h5>Offset, Blur, Spread, and Color</h5>
+            <p>
+                A even more advanced version of box-shadow incorporates what is 
+                called a spread radius into the shadow after the blur radius.
+            </p>
+            <p>
+                <code>
+                    box-shadow: x-offset y-offset blur-radius 
+                    spread-radius shadow-color;
+                </code>
+            </p>
+            <p>
+                The spread radius more or less scales the shadow, causing it to 
+                grow for positive values and shrink for negative values.
+            </p>
+            <p>
+                As an example, check out the code below, and see the effect 
+                on the bordered box around this text.
+            </p>
+            <p>
+                <code>box-shadow: 16px 16px 8px 24px pink;</code>
+            </p>
+        </div>
+
+        <br>
+        <div id="example-4" class="example">
+            <h5>"Realistic" Shadows</h5>
+            <p>
+                The box-shadow property is often used as an accent, to make 
+                something pop off the page a bit, but usually not to draw 
+                too much attention to the shadow itself.
+            </p>
+            <p>
+                To make this occur and feel more natural, think about how "far"
+                off the page you want the element you're adding a box-shadow to 
+                to feel.
+            </p>
+            <p>
+                For it to feel really high, you'll probably want a large x and
+                y offset, with a relatively large blur radius as well.  When 
+                objects are far away from what they're casting a shadow on,
+                the shadow usually becomes blurry, unless the light source is 
+                really intense.
+            </p>
+            <p>
+                However, usually we want the opposite on a web page.  We can't 
+                literally make our content higher off the page (unless we start
+                dabbling in 3D transforms and perspective), so we usually aim 
+                for subtler shadows, only slightly offset and with only a slight 
+                blur.
+            </p>
+            <p>
+                To add a cherry on top, we could use a color that is slightly
+                transparent; that would simulate a natural shadow even better.
+            </p>
+            <p>
+                As an example, check out the code below, and see the effect 
+                on the bordered box around this text.
+            </p>
+            <p>
+                <code>box-shadow: -4px -4px 4px #00000033;</code>
+            </p>
+        </div>
+
+        <div id="example-5" class="example">
+            <h5>Inset Shadows</h5>
+            <p>
+                An alternate version of box-shadow involves using a special 
+                keyword called "inset", which switches the shadow from being
+                outside of the box to being inside.
+            </p>
+            <p>
+                <code>
+                    box-shadow: inset x-offset y-offset blur-radius 
+                    spread-radius shadow-color;
+                </code>
+            </p>
+            <p>
+                The inset keyword is optional, and can be used alongside any of 
+                the other values.
+            </p>
+            <p>
+                An inset shadow has the opposite effect of a normal box shadow.
+                Rather than making content appear to pop off the page, it makes 
+                content seem sunk into the page, like you have to look down 
+                inside of something to see it.
+            </p>
+            <p>
+                As an example, check out the code below, and see the effect 
+                on the box (no border this time) around this text.
+            </p>
+            <p>
+                <code>box-shadow: inset 0px 0px 16px 4px purple;</code>
+            </p>
+        </div>
+        
+        <div class="resources">
+            <h4>Additional Resources</h4>
+            <a 
+                href="https://www.w3schools.com/cssref/css3_pr_box-shadow.php"
+                target="_blank"
+            >
+                w3schools 
+            </a>
+            <br>
+            <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow"
+                target="_blank"
+            >
+                mdn web docs
+            </a>
+            <br>
+            <a
+                href="https://css-tricks.com/almanac/properties/b/box-shadow/"
+                target="_blank"
+            >
+                CSS Tricks
+            </a>
+        </div>
+    </body>
+</html>

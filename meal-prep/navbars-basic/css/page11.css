@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#navbar {
+    background: linear-gradient(to bottom, green, #3e6d3e);
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+#navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 24px;
+}
+
+#navbar img {
+    width: 200px;
+}
+
+#navbar #logo {
+    margin-right: auto;
+}
+
+#navbar .cta-button {
+    background-color: white;
+    color: green;
+    border-radius: 36px;
+    padding: 16px 24px;
+    font-size: 20px;
+    font-weight: bold;
+    min-width: 150px;
+    text-align: center;
+    margin-right: 24px;
+}
+
+#layout {
+    width: 800px;
+    margin: 48px auto;
+    font-size: 24px;
+    height: 200vh;
+}
+
+#header {
+    position: sticky;
+    top: 0px;
+}
+
+#navbar-bottom {
+    background: linear-gradient(to bottom, yellowgreen, olive);
+    display: flex;
+    justify-content: space-between;
+}
+
+#navbar-bottom a {
+    text-decoration: none;
+    color: white;
+    padding: 12px 36px;
+}
+
+#footer {
+    background: linear-gradient(to bottom, teal, #01482e);
+    color: white;
+    padding: 12px;
+}
+
+#footer a {
+    text-decoration: none;
+    color: white;
+}
+
+#footer-navbar {
+    width: 800px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*
+    The last thing we'll do in this demo is show
+    how to build navbars with columns of links 
+    in them, like we've seen in some of the 
+    PowerPoint examples.
+
+    The setup is pretty straightforward; in our
+    HTML, we're going to add a new navbar inside
+    the footer, above our existing navbar.
+
+    Inside of that, we'll have a div for each
+    column, with a bunch of links inside.
+
+    (Go to the HTML and do that)
+
+    Now, this looks like a mess at first,
+    it will look much better once we add
+    styling to our new footer navbar.
+
+    In fact, it's not going to require anything
+    new.  How do we get content side by side?
+
+    (ask class)
+
+    Flexbox! Which is what we've been using
+    in all our navbars already.  It doesn't matter
+    if the content of a navbar are anchors or
+    entire divs; flexbox will put all of them
+    side by side.
+
+    And while we're at it, we'll use the same
+    centered Single Column layout as we used
+    in the first footer navbar too, along with
+    some padding to give more separation
+    between the two navbars.
+*/
+
+#footer-columns-navbar {
+    width: 800px;
+    margin: 0px auto;
+    padding: 48px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*
+    However, we do have a small problem with
+    the anchors; since anchors are inline
+    elements, they all run together in each
+    column.
+
+    So we have to do a little extra work to
+    fix that for each column.
+
+    There are two ways that we could address
+    this: either by changing the links into
+    block elements, or by changing the columns
+    into flexboxes with a column direction.
+
+    We'll opt for the second, just to show
+    you can have flexboxes in flexboxes.
+*/
+
+#footer-columns-navbar div {
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+    Lastly, our links are a tad too compact;
+    we're going to space them out a bit.
+*/
+#footer-columns-navbar a {
+    padding: 8px 0px;
+}
+
+/*
+    There we go: a fairly basic footer navbar
+    with columns inside.
+
+    Honestly, there's still a lot we could do
+    stylistically to clean things up a bit,
+    like balancing out the spacing more, and
+    adding clearer distinctions between the 
+    two navbars, perhaps with a border.
+
+    But we've covered enough for today, so
+    we'll leave our navbar demo here.
+
+    There are other examples in the Layouts 
+    section of the Coding Cookbook if you're
+    curious or want a refresher on what
+    we covered today.
+*/

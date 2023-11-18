@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#navbar {
+    background: linear-gradient(to bottom, green, #3e6d3e);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 24px;
+}
+
+#navbar img {
+    width: 200px;
+}
+
+/*
+    That doesn't look too bad now, but some
+    designs call for having the logo on the 
+    far left, and the navigation links on 
+    the far right.
+
+    How can we make that happen?
+
+    There are a couple of different ways, 
+    but probably the simplest involves 
+    some margin auto magic again.
+
+    Previously, we told you that the auto
+    margin value can only be used with
+    block elements that have been given
+    an explicit width, and that's still true.
+
+    However, flexbox items are a little special.
+    Technically, they have been given an explicit
+    width; it's just that it was the flexbox that
+    set the width rather than you.
+
+    So, we can now do this neat trick where we
+    set margin-right: auto; on the logo, and 
+    it takes all the available space and shoves
+    it between the logo and the other links.
+*/
+
+#navbar #logo {
+    margin-right: auto;
+}
+
+/*
+    Pretty nifty, right?  And also a very common
+    navbar style as well.
+
+    However, note that we applied margin-right to
+    the #logo anchor element, NOT the image.
+
+    If you apply margin-right: auto; to the image
+    nothing will happen.
+
+    That's because it is the anchor that is the 
+    flexbox item that is being resized by the 
+    flexbox.  The image is a child of the 
+    anchor, so it is just your regular old 
+    inline element, and thus is not eligible
+    for the margin auto magic.
+
+    One other thing: note that space-between
+    no longer seems to space out our navbar
+    links. 
+
+    That's because there is literally no 
+    space left to distribute; all the available
+    empty space was given to margin-right.
+    
+    So at the moment, justify-content really
+    isn't doing anything anymore.
+*/

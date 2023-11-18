@@ -1,0 +1,65 @@
+/* Drill 4 - Write your code solution below */
+
+/*
+    Now we're moving on to alignment, which is
+    probably the trickiest part of flexbox for
+    students (after identifying container/items).
+
+    The instructions say that the container is 
+    already a flexbox with a direction of column,
+    so we don't need to set those properties here.
+
+    Instead, we need to both center the items in
+    the flexbox container AND center align the 
+    content: two different tasks that are easily 
+    mixed up.
+
+    In terms of aligning the items in the flexbox,
+    we have two properties that can affect that: 
+    justify-content and align-items.
+
+    Each property affects the alignment of a 
+    different flexbox axis: 
+    - justify-content -> affects main axis
+    - align-items -> affects cross axis
+
+    Remember that the main axis is set by the 
+    flex-direction, and that the cross axis
+    is the opposite of the main axis.
+
+    So if flex-direction is... 
+    - a row, then 
+        - justify-content affects horizontal alignment
+        - align-items affects vertical alignment
+    - a column, then
+        - justify-content affects vertical alignment
+        - align-items affects horizontal alignment
+
+    It might be helpful to bring up the powerpoint
+    graphic displaying how the different axes
+    change based on flex direction.
+
+    So, getting back to our goal: we need to center
+    the items horizontally inside of the flexbox.
+
+    Since the flexbox is a column...
+        ...then the horizontal axis is the cross-axis...
+            ...meaning the property to use is
+                align-items, which affects the
+                cross-axis!
+
+    (Honestly, this is a bit of a hard one for their
+    first day with flexbox; but hopefully it makes
+    them realize this stuff is important to learn)
+
+    And then to align the content inside those items,
+    that's easy (although perhaps hard to remember, 
+    since it's been a while): we just need to 
+    use text-align and set it to center.
+
+*/
+
+#container-4 {
+    align-items: center;
+    text-align: center;
+}

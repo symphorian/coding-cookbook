@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Containers and Selectors Drills</title>
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/drill_page5.css" rel="stylesheet" data-meal-prep>
+    </head>
+    <body>  
+        <h1>Containers and Selectors Drills</h1>
+        <p>
+            For all of the following drills, you will need to
+            add the appropriate container(s) to the HTML in
+            each drill, along with the specified classes. 
+        </p>
+        <p>
+            Then add CSS code to drill.css to make the content 
+            below look like the image above. You will need 
+            to use combinations of selectors (don't add your
+            own ids/classes, cheaters).  
+        </p>
+        <section id="drill5">
+            <h2>Drill 5</h2>
+            <img src="images/drill5.png" alt="Drill 5">
+            <p>
+                Add two div containers to the HTML below,
+                using the classes "dog-days" and "cat-tales", 
+                as in the image above. Then target only the img 
+                element in the "dog-days" div and make the
+                image round. <br>(HINT: adjust the radius of the
+                border)
+            </p>
+            <div class="solution">
+                <!--
+                    Again, not too different from before, but
+                    notice how containers can be used to completely
+                    change the layout of the content inside of them
+                -->
+                <div class="dog-days">
+                    <img 
+                        src="images/dog.jpg"
+                        alt="happy pupper"
+                    >
+                    <p id="d7-p-1" class="d7-p">
+                        Lorem ipsum dolor sit, amet 
+                        consectetur adipisicing elit. Placeat 
+                        facere nostrum cupiditate obcaecati, 
+                        nisi reiciendis.
+                    </p>
+                </div>
+                <div class="cat-tales">
+                    <p id="d7-p-2" class="d7-p">
+                        Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit. Dolores numquam 
+                        facilis unde provident veritatis 
+                        iure consectetur.
+                    </p>
+                    <img 
+                        src="images/egypt-kitty.webp"
+                        alt="regal kitteh"
+                    >
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+/*
+    This demo is going to feel a bit like dejavu, as
+    it's very similar to the demo from the previous
+    day of class, but this time we're using CSS Grid
+    to do the same things rather than Flexbox.
+    
+    Once again, we're going to showcase three different
+    two column layouts that you could potentially use 
+    for a web page, just using CSS Grid this time,
+    although we're also going to through in a twist
+    at the end with a differently styled sidebar.
+
+    The HTML setup is also exactly the same as yesterday
+    just with a different container class name: 
+    "grid-layout" instead of "two-columns"
+    
+    We'll be modifying things towards the end of the 
+    demo, so the name change will make more sense then.
+*/

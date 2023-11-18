@@ -1,0 +1,31 @@
+.absolute-heading {
+    font-size: 36px;
+}
+
+.absolute-paragraph {
+    font-size: 18px;
+}
+
+.relative-heading {
+    font-size: 5vw;
+}
+
+.relative-paragraph {
+    font-size: 2.5vw;
+}
+
+/*
+    First we'll add a width to the first img
+    using absolute units.
+*/
+
+.absolute-image {
+    width: 350px;
+}
+
+/*
+    Again, show students that the image size
+    doesn't change when we use absolute units 
+    for width (nor does the image resize if
+    we haven't given it any width/height).
+*/

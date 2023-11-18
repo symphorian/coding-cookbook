@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.card {
+    flex: 300px;
+    border: 3px solid black;
+    margin: 24px;
+    padding: 24px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.card a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    border: 3px solid black;
+    padding: 12px;
+    margin-top: 36px;
+}
+
+#card1:hover {
+    background-color: lightcyan;
+    box-shadow: 4px 4px 4px #00000033;
+    transform: translateY(-4px);
+}
+
+#card1 {
+    transition: 
+        background-color 0.5s,
+        box-shadow 0.5s,
+        transform 0.5s;
+}
+
+#card2 a {
+    transition: 
+        background-color 0.5s,
+        box-shadow 0.5s,
+        transform 0.5s;
+}
+
+#card2:hover a {
+    background-color: aquamarine;
+    box-shadow: 4px 4px 4px #00000033;
+    transform: translateY(-4px);
+}
+
+#card3 .card-content {
+    transition:
+        opacity 0.5s,
+        visibility 0.5s;
+}
+
+#card3:hover .card-content {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/*
+    A popular trend at the moment when revealing 
+    content on a page is to add a slight bit of 
+    movement, to make it appear that the content 
+    is not just appearing, but also sliding into view.
+
+    We can make that happen by adding in a translateY 
+    transform, similar to the one we used earlier.
+*/
+
+#card4 .card-content {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px); /* new */
+    transition:
+        opacity 0.5s,
+        visibility 0.5s,
+        transform 0.5s; /* new */
+}
+
+#card4:hover .card-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px); /* new */
+}
+
+/*
+    There we go! Now we have a pretty classy 
+    looking fade in effect for our card content.
+
+    But there's a new problem now: 
+
+    We have a big gaping hole of negative space 
+    in the middle of that card.
+
+    Ideally, we wouldn't want that space to exist 
+    unless the content is actually visible in there.
+
+    That's actually a relatively challenging 
+    thing to do with pure CSS; the ideal
+    way to handle it would be to adjust the 
+    height of the card based on whether the
+    content is there or not, but setting an 
+    explicit height on the card's hover state 
+    is generally a bad idea, unless we know 
+    for sure that height will always accomodate 
+    the content inside it at all screen widths.
+
+    The "proper" way to handle it would be
+    to dynamically change the page content
+    with something like JavaScript, but we
+    won't be covering that in this course.
+
+    However, we can implement a second-best
+    alternative, which we'll be looking at
+    next with #card5.
+*/

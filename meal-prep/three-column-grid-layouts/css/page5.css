@@ -1,0 +1,77 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif; 
+    background-color: #1f1f1f;
+    color: #EEEEEE;
+}
+
+#grid-layout {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+}
+
+#sidebar-column-1 h2,
+#sidebar-column-2 h3 {
+    border-bottom: 2px solid #AAAAAA;
+    padding-bottom: 8px;
+}
+
+#sidebar-column-1 ul,
+#sidebar-column-2 ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+#sidebar-column-1 ul li,
+#sidebar-column-2 ul li {
+    list-style-type: none;
+    padding: 4px 0px;
+}
+
+#sidebar-column-1 ul a,
+#sidebar-column-2 ul a {
+    color: #EEEEEE;
+    text-decoration: none;
+}
+
+
+#sidebar-column-1 {
+    margin-left: 24px;
+}
+
+#primary-column {
+    padding: 0px 36px;
+}  
+
+/*
+    To address the issue of the central column
+    content growing too wide, we are going to
+    limit it with a max-width property.
+
+    Then, to allow us to center it, we're 
+    going to use the margin/auto trick
+    to center it when it reaches that max width.
+*/
+#primary-column .inner-content {
+    background-color: #343434;
+    padding: 24px;
+    border-radius: 24px;
+    max-width: 600px; /* new */
+    margin: 0px auto; /* new */
+}
+
+/* 
+    And with that, we have a pretty well 
+    designed layout, with a relatively 
+    simple style, but that can be easily 
+    expanded.
+*/
+
+#sidebar-column-2 {
+    margin-right: 24px;
+}

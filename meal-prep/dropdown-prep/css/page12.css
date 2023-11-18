@@ -1,0 +1,206 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.card {
+    flex: 300px;
+    border: 3px solid black;
+    margin: 24px;
+    padding: 24px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.card a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    border: 3px solid black;
+    padding: 12px;
+    margin-top: 36px;
+}
+
+#card1:hover {
+    background-color: lightcyan;
+    box-shadow: 4px 4px 4px #00000033;
+    transform: translateY(-4px);
+}
+
+#card1 {
+    transition: 
+        background-color 0.5s,
+        box-shadow 0.5s,
+        transform 0.5s;
+}
+
+#card2 a {
+    transition: 
+        background-color 0.5s,
+        box-shadow 0.5s,
+        transform 0.5s;
+}
+
+#card2:hover a {
+    background-color: aquamarine;
+    box-shadow: 4px 4px 4px #00000033;
+    transform: translateY(-4px);
+}
+
+#card3 .card-content {
+    transition:
+        opacity 0.5s,
+        visibility 0.5s;
+}
+
+#card3:hover .card-content {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#card4 .card-content {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px); 
+    transition:
+        opacity 0.5s,
+        visibility 0.5s,
+        transform 0.5s; 
+}
+
+#card4:hover .card-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px); 
+}
+
+#card5 {
+    position: relative;
+}
+
+#card5 .card-content {
+    position: absolute;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 12px;
+    box-shadow: 4px 4px 4px #00000033;
+    left: 0px;
+    margin: 0px 24px;
+    padding: 24px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: 
+        opacity 0.5s,
+        visibility 0.5s,
+        transform 0.5s;
+
+}
+
+#card5:hover .card-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}
+
+/*
+    Now that we have a better structure for
+    a flipping card in our HTML, we can move
+    on to the CSS.
+
+    We're going to be relying on absolute
+    positioning again, so we need to set
+    position: relative on #card6.
+
+    However, we're also going to changing
+    the card container a bit, to support
+    the card flipping.
+
+    In particular, we need to move the 
+    border and padding to the front and
+    back faces of the card, so we're 
+    going to strip the border and padding
+    from the card container.
+*/
+
+#card6 {
+    position: relative;
+    border: 0px;
+    padding: 0px;
+}
+
+/*
+    Now we're going to add those properties
+    we just stripped from the container onto
+    the card faces.
+*/
+#card6 .card-front,
+#card6 .card-back {
+    border: 3px solid black;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+/*
+    Things should look almost the same as before,
+    except for an empty card border above our 
+    main content; that's where we're going to
+    put a background image for the front face.
+
+    We're going to simulate our card flip by 
+    using the transform property, and using
+    scaleX to shrink one card face horizontally
+    until it's not even a pixel wide, and then
+    we'll grow the other one.
+
+    Now that our back card is basically ready
+    to go, we'll shrink it down to its "back"
+    state with scaleX(0)
+*/
+
+#card6 .card-back {
+    transform: scaleX(0);
+}
+
+/*
+    Now we just have that empty card for our front
+    face left behind; we're going to use an image
+    to fill that, so take a bit of time to grab an 
+    image you like, and then we'll come back here and
+    add some properties to front face of the card.
+
+    (five minutes or so later)
+
+    Now that we all have an image, we want this 
+    image to fill up all the space of the card
+    container (same as the back face), while
+    also getting that ghost behavior of position:
+    absolute.
+
+    We'll do that with the properties below.
+*/
+#card6 .card-front {
+    background-image: url("../images/perrito.png");
+    background-size: cover;
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+/* 
+    Now we pretty much have things set up, ready
+    to go for the animation.
+    
+    And this is where things get a little weird...
+*/

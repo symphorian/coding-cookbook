@@ -1,0 +1,63 @@
+/*
+    First off, demo some important properties that
+    students will likely want to set up for EVERY
+    page layout going forward.
+*/
+
+/*
+    The asterisk (*) here is referred to as the
+    "wildcard" selector; it quite literally targets
+    EVERY element on the page.
+
+    The box-sizing: border-box; statement changes the
+    way that elements determine their sizes on the page.
+    We've touched on this property before in previous 
+    drills/demos, but a refresher won't hurt anyone.
+
+    The default is set to 'content-box', which means when
+    we set a width of 500px on something, only the content
+    is sized to be 500px; the padding and border are not
+    included in that 500px, meaning the actual width of the
+    element will be more like 500px + padding + border.
+
+    Nobody thinks that way about elements.  So instead,
+    we're setting the box-sizing to be 'border-box',
+    meaning that the border, padding, and content are
+    all included in that 500px we mentioned earlier.
+
+    This way is generally much more intuitive, so we
+    want to set this up for every element on the page.
+*/
+* {
+    box-sizing: border-box;
+}
+
+/*
+    Here we set a couple more properties that we usually
+    want on every page.
+
+    First, we set the body's margin to zero.  By default,
+    the body element has around 12px of margin added by
+    the browser.
+
+    This means that if we add a background-color to the 
+    body (or anything inside of the body), there will be 
+    empty whitespace surrounding it.
+
+    Normally when we set a background color, we expect it 
+    to cover the ENTIRE background, and stripping off the 
+    margin will make that possible.
+
+    Second, we rarely want to stick with the default
+    serif font, since sans-serif fonts are usually preferable 
+    for screens; even the basic sans-serif is better than
+    serif.
+
+    Changing the font-family on the body will affect almost 
+    all text content inside of the body, so this is a good
+    place to set a default font-family for generic copy text.
+*/
+body {
+    margin: 0px;
+    font-family: sans-serif; 
+}

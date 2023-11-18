@@ -1,0 +1,47 @@
+.example {
+    border: 3px solid black;
+    margin: 24px;
+}
+
+.example img {
+    width: 120px;
+}
+
+.example .inline-block {
+    display: inline-block;
+    background-color: rgb(183, 249, 185);
+    border: 5px outset lightgreen;
+    border-radius: 3px;
+    padding: 24px;
+}
+
+#example-2 img {
+    vertical-align: top;
+}
+
+#example-3 img {
+    vertical-align: bottom;
+}
+
+#example-4 img {
+    vertical-align: middle;
+}
+
+#example-5 .inline-block {
+    vertical-align: top;
+}
+
+#example-6 .inline-block {
+    vertical-align: bottom;
+}
+
+#example-7 .inline-block {
+    vertical-align: middle;
+}
+
+#example-8 .span-1,
+#example-8 img,
+#example-8 .span-2,
+#example-8 .inline-block {
+    vertical-align: top;
+}

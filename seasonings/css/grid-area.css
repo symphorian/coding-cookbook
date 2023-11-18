@@ -1,0 +1,70 @@
+/* grid-area example related code */
+
+.four-columns {
+    grid-template-columns: 1fr 2fr 4fr 1fr;
+}
+
+.header-sidebar-layout {
+    grid-template-areas: 
+        ". header header ."
+        ". sidebar content-1 ."
+        ". sidebar content-2 .";
+}
+
+.header-sidebar-layout .box-a {
+    grid-area: header;
+}
+
+.header-sidebar-layout .box-b {
+    grid-area: sidebar;
+}
+
+.header-sidebar-layout .box-c {
+    grid-area: content-1;
+}
+
+.header-sidebar-layout .box-d {
+    grid-area: content-2;
+}
+
+/* styling related code */
+
+.grid-container {
+    display: grid;
+    background-color: #941894;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.box {
+    background-color: lavender;
+    border: 2px solid grey;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 8px;
+    padding: 8px 14px;
+}
+
+.header-color {
+    background-color: lightgreen;
+}
+
+.sidebar-color {
+    background-color: yellow;
+}
+
+.content-1-color {
+    background-color: lightblue;
+}
+
+.content-2-color {
+    background-color: lightsalmon;
+}
+
+.warning {
+    background-color: #6b1dcb;
+    color: white;
+    padding: 8px;
+}

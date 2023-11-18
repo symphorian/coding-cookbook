@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>opacity Property</title>
+        <link href="css/opacity.css" rel="stylesheet" data-seasoning>
+        <link href="css/shared.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="recipe-example">
+            <h4>Basic Code Snippets</h4>
+            <code>opacity: 1;</code>
+            <br>
+            <code>opacity: 50%;</code>
+            <br>
+            <code>opacity: 0.25;</code>
+        </div>
+        <h4>Additional Examples</h4>
+        <p>
+            The opacity property is a fun one that affects the 
+            transparency of the ENTIRE element that it is applied to.
+        </p>
+        <p>
+            The opacity property will accept values between 0 and 1.
+        </p>
+        <p>
+            A value of 1 (or 100%) given to the opacity property will 
+            make an element completely opaque, meaning not transparent
+            at all.
+        </p>
+        <p>
+            A value of 0 (or 0%) given to the opacity property will 
+            make an element not opaque at all, completely transparent.
+        </p>
+        <p>
+            Let's check out how these values can affect content 
+            on a page.
+        </p>
+        <div id="example-1" class="example">
+            <p class="paragraph-1">
+                This paragraph has black text and is 100% opaque with
+                <code>opacity: 1;</code>
+            </p>
+            <p class="paragraph-2">
+                This paragraph may look light grey, but it's actually black.
+                <br>
+                Because it has <code>opacity: 0.4;</code>, it is 
+                40% opaque (or 60% transparent), so it is actually 
+                black mixed with white, which is why it looks light grey.
+            </p>
+        </div>
+        <div id="example-2" class="example">
+            <p class="paragraph-1">
+                This paragraph has black text and is 100% opaque with
+                <code>opacity: 1;</code>
+            </p>
+            <p class="paragraph-2">
+                This time, the black text is blending in with the 
+                pink behind it, since it has <code>opacity: 0.4;</code>.
+            </p>
+        </div>
+        
+        <div id="example-3" class="example">
+            <p class="paragraph-1">
+                This paragraph has black text, a yellow background,
+                and a green border, and is 100% opaque with
+                <code>opacity: 1;</code>
+            </p>
+            <p class="paragraph-2">
+                This time, the paragraph still has <code>opacity: 0.4;</code>
+                but notice that not only is the text partially transparent,
+                but the background and the border are as well. 
+                <br>
+                In other words, the ENTIRE element is partly transparent.
+            </p>
+        </div>
+        
+        <div id="example-4" class="example">
+            <p class="paragraph-1">
+                This paragraph has an image inside it, with the same 
+                100% opacity with <code>opacity: 1;</code>
+                <br>
+                <img
+                    src="images/egypt-kitty.webp"
+                    alt="cleopawtra"
+                >
+            </p>
+            <p class="paragraph-2">
+                The paragraph also has an image, still with 
+                <code>opacity: 0.4;</code>.
+                <br>
+                <img
+                    src="images/egypt-kitty.webp"
+                    alt="cleopawtra"
+                >
+                <br>
+                Notice that the image is also partly transparent.
+            </p>
+        </div>
+
+        <p>
+            In summary, the opacity property will make an ENTIRE element 
+            partially opaque (or partially transparent, depending on how 
+            you look at it). 
+        </p>
+        <p>
+            If you apply the opacity property to something
+            and you don't get the result you expect, most likely you're 
+            applying opacity to the wrong element.
+        </p>
+
+        <div class="resources">
+            <h4>Additional Resources</h4>
+            <a 
+                href="https://www.w3schools.com/cssref/css3_pr_opacity.php"
+                target="_blank"
+            >
+                w3schools 
+            </a>
+            <br>
+            <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/opacity"
+                target="_blank"
+            >
+                mdn web docs
+            </a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,76 @@
+.absolute-heading {
+    font-size: 36px;
+}
+
+.absolute-paragraph {
+    font-size: 18px;
+}
+
+.relative-heading {
+    font-size: 5vw;
+}
+
+.relative-paragraph {
+    font-size: 2.5vw;
+}
+
+.absolute-image {
+    width: 350px;
+}
+
+.relative-image {
+    width: 100%;
+}
+
+.outer-container {
+    border: 3px solid red;
+}
+
+/*
+    The relative units of the paragraph and image
+    are sized relative to their container (the
+    inner container).
+    
+    The inner container is a div (a block
+    element), so it naturally stretches to fill
+    its own container (the outer container).
+
+    The outer container is ALSO a block element, 
+    so it stretches to fill ITS container, which 
+    is the HTML page itself.
+
+    That's why the paragraph and image's 48%
+    width more or less equate to 48% of the width
+    of the page.
+
+    However, what happens if we apply a width to the
+    inner container, so that it doesn't stretch to
+    fill the page anymore?
+*/
+
+.inner-container {
+    border: 3px solid blue;
+    width: 50%;
+}
+
+.inner-container p,
+.inner-container img {
+    display: inline-block;
+    width: 48%;
+}
+
+/*
+    Notice that because we made the container smaller, 
+    the items inside of them also got smaller.
+
+    The container is now 50% of its container,
+    and the paragraph and image are (roughly) half of
+    that.
+
+    So the image and paragraph now each take up about
+    1/4 of the page width.
+
+    Understanding this when you set a width on something
+    is very important, particularly as we start getting
+    our feet wet in learning different layouts.
+*/

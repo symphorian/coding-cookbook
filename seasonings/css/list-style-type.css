@@ -1,0 +1,15 @@
+.disc-bullet {
+    list-style-type: disc;
+}
+
+.no-bullet {
+    list-style-type: none;
+}
+
+.circle-bullet {
+    list-style-type: circle;
+}
+
+.square-bullet {
+    list-style-type: square;
+}

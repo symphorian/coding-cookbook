@@ -1,0 +1,86 @@
+/* transform related code */
+
+#rotate-2 {
+    transform: rotate(5deg);
+}
+
+#rotate-3 {
+    transform: rotate(45deg);
+}
+
+#rotate-4 {
+    transform: rotate(-90deg);
+}
+
+#scale-2 {
+    transform: scale(1.5);
+}
+
+#scale-3 {
+    transform: scale(0.75);
+}
+
+#scale-4 {
+    transform: scale(-0.75);
+}
+
+#scale-5 {
+    transform: scaleX(2);
+    margin-left: 60px;
+}
+
+#scale-6 {
+    transform: scaleY(0.6);
+}
+
+#translate-2 {
+    transform: translateX(100px);
+}
+
+#translate-3 {
+    transform: translateY(100px);
+}
+
+#translate-4 {
+    transform: translateX(-50px) translateY(-50px);
+}
+
+/* styling related code */
+
+.examples {
+    padding: 48px 0px;
+}
+
+.examples code,
+p code {
+    font-weight: bold;
+}
+
+.square {
+    box-sizing: border-box;
+    height: 130px;
+    width: 130px;
+    display: inline-block;
+    border: 3px solid black;
+    text-align: center;
+    padding-top: 50px;
+    margin: 24px;
+}
+
+.big {
+    height: 150px;
+    width: 150px;
+    padding-top: 60px;
+}
+
+.blue {
+    background-color: skyblue;
+}
+
+.green {
+    background-color: lightgreen;
+}
+
+.red {
+    background-color: #ffc0cbdd;
+}

@@ -1,0 +1,28 @@
+/*
+    Now let's try out a couple other new
+    properties, but apply them to the existing
+    CSS rules we already have!
+
+    First, let's try background-color.
+    Add a different background-color to each of
+    the CSS rules below (preferably picking 
+    colors with good contrast to the text color)
+
+    Again, feel free to get colors from the class,
+    and to use hexadecimal colors for more variety.
+*/
+
+#first-paragraph {
+    color: blue;
+    background-color: goldenrod;
+}
+
+#second-paragraph {
+    color: #FF0000;
+    background-color: lightpink;
+}
+
+#bold-paragraph {
+    font-weight: bold;
+    background-color: #228b22;
+}

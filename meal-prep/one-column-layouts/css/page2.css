@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif; 
+}
+
+/*
+    Next, we're going to target that .single-column container,
+    and alter it to create multiple layouts with a single 
+    column.
+*/
+
+.single-column {
+    /*
+        First, to make it more apparent visually what space 
+        our column is taking up, we're going to give it a 
+        background color. Ask the students for a color to use.
+    */
+    background-color: lightgreen;
+
+    /*
+        Then we're going to resize it.  Very rarely do we want a
+        content column that takes up the ENTIRE screen; that's 
+        too much back and forth for the average person's eyes,
+        and you'll find that users will get tired of reading.
+
+        However, an absolute width (like 500px) that doesn't 
+        change will not be able to adapt to different screen 
+        widths, and that's less than ideal too.
+
+        So we can give width something like 50%, to restrict
+        how wide it will stretch.
+    */
+    width: 50%;
+
+    /*
+        However, one problem with a relative width is that it
+        can get TOO small or TOO wide, depending on the screen
+        size.
+
+        So, we're going to use the max-width along with the
+        width property to get the best of both worlds.
+
+        An absolute unit provided to min-width will guarantee 
+        that the column won't get smaller than we tell it to.
+    */
+    min-width: 500px;
+}
+
+/*
+    By using width and min-width together, we get the best of
+    both worlds: a flexible column container, and a limit
+    to how small it can grow.
+
+    Depending on our layout, we may also want to consider
+    adding a max-width, so that the column doesn't grow
+    too wide as well.
+*/

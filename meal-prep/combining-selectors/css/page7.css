@@ -1,0 +1,69 @@
+#navbar {
+    text-align: center;
+    padding: 24px;
+    background-color: blue;
+}
+
+#navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+p a {
+    color: teal;
+}
+
+p.warning {
+    color: crimson;
+}
+
+/*
+    We have our text color modified
+    in the warning paragraph, but 
+    notice how the hyperlinks are
+    still the teal color.
+
+    Typically, whenever you overwrite
+    a CSS Property on an element, you
+    need to be just as specific (or
+    more) as the CSS Rule that gave it
+    the property you're trying to 
+    overwrite.
+
+    In our case here, that means we need
+    to write a new CSS rule involving
+    the warning class, that also targets
+    the anchor elements inside directly.
+*/
+
+p.warning a {
+    color: orange;
+}
+
+/*
+    To do this, we combine BOTH approaches
+    of combining selectors: using no spaces
+    and spaces.
+
+    To translate the above selector into 
+    English: 
+    
+    "target anchor elements that are INSIDE
+        of paragraphs that ALSO have the
+        'warning' class on them" 
+    
+    So to recap: 
+        - selectors that are side-by-side
+            with no spaces MUST refer to 
+            the same element in order to
+            be targeted
+        - selectors that are separated by
+            a space will target the
+            selector on the right ONLY IF
+            it is found in the selector
+            on the left
+
+    For some additional practice, let's
+    add a little more HTML content to 
+    our page.
+*/

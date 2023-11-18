@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>grid-template-areas Property (Grid)</title>
+        <link href="css/grid-template-areas.css" rel="stylesheet" data-seasoning>
+        <link href="css/shared.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="recipe-example">
+            <h4>Basic Code Snippets</h4>
+            <code>
+                grid-template-areas: 
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;"area-1 area-2 area-3";
+            </code>
+            <br><br>
+            <code>
+                grid-template-areas: 
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;"header header header"
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;". content ."
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;"footer footer footer";
+            </code>
+            <br>
+        </div>
+        <h4>Additional Examples</h4>
+        <p class="warning">
+            NOTE: The grid-template-area property is a 
+            <strong>Grid Container Property</strong>.
+            <br>
+            <br>
+            This property will have no effect if applied to
+            an element that is not an activated Grid
+            Container (i.e. has 
+            <code><strong>display: grid;</strong></code>
+            applied to it)
+        </p>
+        <p>
+            The grid-template-area property defines areas 
+            in a grid template, based on the columns defined
+            by grid-template-columns.
+        </p>
+        <p>
+            These areas must then be assigned to Grid Items,
+            and those Grid Items will be slotted into those 
+            areas in the Grid Container.
+        </p>
+
+        <h4>An Analogy: Rooms of a House</h4>
+        <p>
+            It may help to think of this property as allowing 
+            you to map out the rooms of a house.  
+        </p>
+        <p> 
+            When the 
+            house is empty, you can think "alright, this 
+            room is going to be the living room, this room 
+            is going to be a bedroom, this room is going to 
+            be a dining room..." and so on.
+        </p>
+        <p>
+            Then, based on those room designations, you start 
+            filling the rooms with furniture that fits the 
+            room type you decided on.
+        </p>
+        <p>
+            The grid-template-areas property is similar, but 
+            instead of rooms, you have grid cells. And instead 
+            of furniture, you have HTML elements (technically
+            Grid Items).
+        </p>
+
+        <h4>Syntax</h4>
+        <p>
+            The grid-template-areas property has a very strange
+            syntax, probably the weirdest you'll see in this 
+            entire course.
+        </p>
+        <p>
+            You'll specify grid areas by rows, and the rows of 
+            areas MUST be contained in double quotes.  
+        </p>
+        <p>
+            The areas themselves must be separated by spaces 
+            within the row (the double quotes).
+        </p>
+        <p>
+            This is easiest to see in practice, so we'll dive
+            right into our first exampel
+        </p>
+
+        <h4>Simple Example: Three Areas</h4>
+        <p>
+            We'll start with something basic: a grid with only 
+            three columns set, and three Grid Items inside of 
+            the Grid Container.
+        </p>
+
+        <div class="grid-container three-columns">
+            <div class="box box-a">A</div>
+            <div class="box box-b">B</div>
+            <div class="box box-c">C</div>
+        </div>
+        <br>
+
+        <p>
+            By default, Items A, B, and C are slotted into the
+            columns one at a time; each Item takes up one cell 
+            (or room, to use the house analogy) in the Grid.
+        </p>
+        <p>
+            This is kind of like a moving company moving 
+            furniture into the house while you're not there:
+            The movers have no idea what you're plans are, 
+            they just dump the furniture where there's room 
+            as they unload it.
+        </p>
+        <p>
+            Now, let's be a bit more explicit about where we 
+            want our Grid Items (i.e. furniture) to go.
+        </p>
+
+        <h4>
+            <code>
+                grid-template-areas: 
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;"area-c area-a area-b";
+            </code>
+        </h4>
+
+        <div class="grid-container three-columns areas-CAB-unassigned">
+            <div class="box box-a">A</div>
+            <div class="box box-b">B</div>
+            <div class="box box-c">C</div>
+        </div>
+        <br>
+
+        <p>
+            However, just adding the code above won't change anything,
+            as you can see.
+        </p>
+
+        <p>
+            There's a second step to using grid-template-areas: you 
+            also need to assign the grid areas to the Grid Items.
+        </p>
+
+        <p>
+            This can be done with code similar to the snippet below,
+            repeated for each Item in the Grid. 
+        </p>
+
+        <p class="warning-2">
+            (NOTE: grid-area 
+            is a <strong>Grid Item property</strong>; it will have 
+            no effect if used on elements without a parent that has 
+            <code>display: grid;</code> applied to it.)
+        </p>
+
+        <h4>
+            <code>
+                grid-area: area-c;
+            </code>
+        </h4>
+
+
+        <p>
+            In that code snippet, we're assigning a Grid Item the 
+            grid-area of <i>area-c</i> from grid-template-areas. 
+            We probably want to assign that to Grid Item C.
+        </p>
+        <p class="indent">
+            If you want a closer look at how the grid-area property 
+            works, check out that page in the Coding Cookbook next!
+        </p>
+
+        <p>
+            After repeating this for all Grid Items, our new
+            grid will look like this:
+        </p>
+
+        <div class="grid-container three-columns areas-CAB-assigned">
+            <div class="box box-a">A</div>
+            <div class="box box-b">B</div>
+            <div class="box box-c">C</div>
+        </div>
+        <br>
+
+        <p>
+            As you can see, our Grid Items are now in different 
+            positions. (If you've looked into the order property 
+            with Flexbox Items, this is similar!)
+        </p>
+
+        <p>
+            That is the power of grid-template-areas: we didn't 
+            change our HTML at all, but with CSS, we can completely
+            reorganize and reorder the Grid Items any way we want!
+        </p>
+
+        <h4>Complex Example: Dots and Spanning Multiple Cells</h4>
+        <p>
+            Now we'll introduce a more complex (and more practical)
+            example.
+        </p>
+        <p>
+            Suppose we want a grid layout with empty gutters on the 
+            sides, along with a header, a sidebar, and two content 
+            areas.
+        </p>
+
+        <p>
+            That might look something like this, using 
+            grid-template-areas:
+        </p>
+
+        <h4>
+            <code>
+                grid-template-areas: 
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;". header header ."
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;". sidebar content-1 ."
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;". sidebar content-2 .";
+            </code>
+        </h4>
+
+        <p>
+            Let's analyze what we have in there:
+        </p>
+        <p>
+            First off, we have three sets of double quotes, which
+            means we have three rows we're defining in the template.
+            (Note that only the last has the semi-colon at the end!)
+        </p>
+        <p>
+            Inside the double quotes of each of those rows, we have 
+            four areas values defined (some are dots (.) and some are
+            repeated; we'll get to those later).  That means that 
+            we expect the grid template to have four columns in each 
+            row (which should have been defined in grid-template-columns).
+        </p>
+        <p>
+            Now, as for the area values themselves: the first thing 
+            that stands out are those dots.  A dot is a special value 
+            in grid-template-areas: it means that the cell it occupies 
+            is meant to be unassigned or empty.  This is exactly what 
+            we need for our gutters, which should be empty spaces on
+            either side of the main page content.
+        </p>
+        <p>
+            As for the repeated area values (<i>header</i> and 
+            <i>sidebar</i>), this introduces a new concept in 
+            grid-template-areas: the idea that we can assign an 
+            area ACROSS cells.
+        </p>
+        <p>
+            In the case of <i>header</i>, it is repeated twice in 
+            two adjacent cells of the same row. That means that 
+            the <i>header</i> area will take up the space of those
+            two center columns in the top row.
+        </p>
+        <p>
+            In the case of <i>sidebar</i>, it is repeated twice in 
+            two adjacent cells of the same column. That means that 
+            the <i>sidebar</i> area will take up the space of those
+            two cells in the second column, across two rows.
+        </p>
+
+        <p>
+            Let's take a look at how a grid like this would look 
+            before and after we define grid-template-areas and
+            assign them to the Grid Items (A, B, C, and D).
+        </p>
+
+        <h4>Before</h4>
+        <div class="grid-container four-columns">
+            <div class="box box-a">A</div>
+            <div class="box box-b">B</div>
+            <div class="box box-c">C</div>
+            <div class="box box-d">D</div>
+        </div>
+        <br>
+
+        <h4>After</h4>
+        <div class="grid-container four-columns header-sidebar-layout">
+            <div class="box box-a">A</div>
+            <div class="box box-b">B</div>
+            <div class="box box-c">C</div>
+            <div class="box box-d">D</div>
+        </div>
+        <br>
+
+        <p>
+            As you can see, we've completely reorganized the Grid
+            Items using grid-template-areas! Let's look at those 
+            areas we defined again to see how they match up with 
+            the result above (we added a little extra formatting 
+            to the code so they line up more nicely):
+        </p>
+
+        <h4>
+            <code>
+                grid-template-areas: 
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;". header &nbsp;header &nbsp;&nbsp;&nbsp;."
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;". sidebar content-1 ."
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;". sidebar content-2 .";
+            </code>
+        </h4>
+
+        <p>
+            See how our grid-template-areas property is basically 
+            the textual, visual representation of how our Grid 
+            Items look once they're plugged in?
+        </p>
+        <p>
+            A is the header, B is the sidebar, C is content-1, 
+            D is content-2, and the dots represent the empty gutters
+            on the left and right sides of the Grid Items.
+        </p>
+        <p>
+            Now just imagine how powerful this becomes when we put 
+            actual content inside the grid, and not just empty 
+            boxes!
+        </p>
+
+        
+
+        <div class="resources">
+            <h4>Additional Resources</h4>
+            <a 
+                href="https://www.w3schools.com/cssref/pr_grid-template-areas.php"
+                target="_blank"
+            >
+                w3schools 
+            </a>
+            <br>
+            <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas"
+                target="_blank"
+            >
+                mdn web docs
+            </a>
+            <br>
+            <a
+                href="https://css-tricks.com/almanac/properties/g/grid-template-areas/"
+                target="_blank"
+            >
+                CSS Tricks
+            </a>
+        </div>
+    </body>
+</html>

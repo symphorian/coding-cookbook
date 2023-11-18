@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif; 
+}
+
+#grid-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-areas: 
+        "header header"
+        "sidebar main";
+}
+
+#header {
+    grid-area: header;
+    padding: 0px 36px;
+}
+
+#sidebar {
+    grid-area: sidebar;
+    padding: 0px 24px;
+}
+
+#main {
+    grid-area: main;
+    display: flex; 
+    flex-wrap: wrap; 
+}
+
+#header a {
+    text-decoration: none;
+}
+
+#header #me {
+    color: #111111;
+}
+
+#header #tube {
+    color: white;
+    background-color: red;
+    padding: 4px;
+    border-radius: 12px;
+}
+
+#sidebar ul {
+    padding: 12px 0px;
+    margin: 0px;
+    list-style-type: none;
+    border-bottom: 1px solid #AAAAAA
+}
+
+
+#sidebar ul a {
+    text-decoration: none;
+    color: #111111;
+    display: block;
+    padding: 12px;
+}
+
+#sidebar ul a:hover {
+    background-color: #EEEEEE;
+    border-radius: 12px;
+}
+
+/*
+    First off, let's figure out how we're going
+    to arrange the metube-items inside the flexbox.
+
+    We're using flex-wrap, but we can still size
+    the items to determine how many can fit on a
+    line.
+
+    We could do this explicitly by providing a 
+    width for the metube-items...or we can use
+    the flex property!
+
+    However, we're going to use it in a different
+    way that we did before.  Previously, we just
+    included a unit-less number to it; this time
+    we're going to provide a length unit, which
+    will cause the flexbox to try and give each 
+    item the width we specified, but also give
+    priority to filling the available empty space.
+
+    This approach is more flexible (pun intended),
+    and is more visually similar YouTube.
+    (YouTube actually cheats: they use JavaScript
+    to rearrange and resize their columns)
+
+    We'll also want to give some margin along the 
+    right and bottom sides of the items, so that
+    they have some breathing room from the items
+    beside and below them (that doesn't seem 
+    important now, but it will in the next step).
+*/
+.metube-item {
+    flex: 250px;
+    margin-right: 12px;
+    margin-bottom: 24px;
+}
+
+/*
+    We'll start things off by adding in
+    thumbnail placeholders with just a
+    background color set, rather than an
+    actual image yet.
+
+    ...but that doesn't mean it has to be
+    boring! Let's use a radial-gradient
+    to create the placeholder!
+
+    But before that, since there's no 
+    actual content in the placeholder,
+    we'd normally need to define a
+    height and width, or else we'd get
+    a 0x0 placeholder.
+
+    And we can...but we're going to 
+    showcase one last new CSS property:
+    a pretty nifty one called aspect-ratio,
+    which as you might expect, let's you
+    define the aspect ratio of an item.
+
+    What's more, since aspect-ratio is
+    a type of percentage (or, well, ratio),
+    it will actually scale with the container,
+    which will let us create pretty nice 
+    looking placeholders in our MeTube page!
+
+    And let's round off the corners too,
+    since that's how YouTube does it.
+*/
+
+.metube-item .thumbnail-placeholder {
+    aspect-ratio: 16 / 9;
+    background: radial-gradient(at top left, crimson, orange);
+    border-radius: 8px;
+}
+
+/*
+    Adding the placeholder mades it look
+    a lot more like an actual YouTube page!
+
+    Let's just clean up the remaining info
+    items beneath it, and we'll have a 
+    pretty solid looking layout!
+*/

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dropdown Navbars (Demo)</title>
+        <link href="css/page7.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="navbar">
+            <a id="logo" href="#">BRAND NAME</a>
+            <div class="dropdown-container">
+                <a href="#">Gallery</a>
+                <div class="dropdown-menu">
+                    <a href="#">Drawings</a>
+                    <a href="#">Photography</a>
+                    <a href="#">Photoshop</a>
+                    <a href="#">Illustrator</a>
+                </div>
+            </div>
+            <!--
+                To transform this About link into a dropdown,
+                we simply need to apply the same changes
+                we made to the Gallery link:
+
+                adding a dropdown-container div around the
+                hyperlink, and inside of that, adding a 
+                dropdown-menu div
+            -->
+            <div class="dropdown-container">
+                <a href="#">About</a>
+                <div class="dropdown-menu">
+                    <a href="#">Passions</a>
+                    <a href="#">Hobbies</a>
+                    <a href="#">Goals</a>
+                </div>
+            </div>
+            <!--
+                And with that, we have a brand new
+                dropdown menu, with no additional
+                CSS required!
+
+                Let's see what happens when we add
+                one more: this time a brand new one
+                to the end of the navbar.
+            -->
+            <a href="#">Contact</a>
+            <!--
+                We'll add a generic "More" dropdown
+                to the end of the navbar, with some
+                other hyperlinks like "Collaborations",
+                "Commissions", and "Pricing".
+
+                Because we're just reusing the same
+                classes, you can actually copy/paste
+                one of the existing dropdown-containers
+                from above; just be sure to change
+                the appropriate content after pasting!
+            -->
+            <div class="dropdown-container">
+                <a href="#">More</a>
+                <div class="dropdown-menu">
+                    <a href="#">Collaborations</a>
+                    <a href="#">Commissions</a>
+                    <a href="#">Pricing</a>
+                </div>
+            </div>
+            <!--
+                Uh oh...it worked, but with our current
+                styling, the dropdown overflows off the
+                edge of the page...
+
+                We'll need to tweak our styles a bit, to 
+                support dropdowns on the far right.
+            -->
+        </div>
+    </body>
+</html>

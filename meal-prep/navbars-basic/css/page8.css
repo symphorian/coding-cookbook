@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#navbar {
+    background: linear-gradient(to bottom, green, #3e6d3e);
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+#navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 24px;
+}
+
+#navbar img {
+    width: 200px;
+}
+
+#navbar #logo {
+    margin-right: auto;
+}
+
+#navbar .cta-button {
+    background-color: white;
+    color: green;
+    border-radius: 36px;
+    padding: 16px 24px;
+    font-size: 20px;
+    font-weight: bold;
+    min-width: 150px;
+    text-align: center;
+    margin-right: 24px;
+}
+
+
+#layout {
+    width: 800px;
+    margin: 48px auto;
+    font-size: 24px;
+    height: 200vh;
+}
+
+#navbar {
+    position: sticky;
+    top: 0px;
+}
+
+/*
+    Now, what if we wanted to create a multi-level
+    navbar? That's actually not that difficult:
+    it really just comes down to adding another
+    navbar immediately beneath our existing one.
+
+    (Go into HTML and do that)
+
+    Now, let's style our new navbar.  Usually,
+    we want to style secondary (or even tertiary)
+    navbar with a different color scheme that
+    is either complementary or contrasting
+    with the original.
+*/
+
+#navbar-bottom {
+    background: linear-gradient(to bottom, yellowgreen, olive);
+    display: flex;
+    justify-content: space-between;
+}
+
+/*
+    We'll use a slightly different link style
+    for our second navbar, to make them a little
+    shorter compared to the first navbar.
+*/
+#navbar-bottom a {
+    text-decoration: none;
+    color: white;
+    padding: 12px 36px;
+}
+
+/*
+    Not bad! ...until you scroll.  If you haven't 
+    tried already, go ahead and see what happens
+    when you scroll.
+*/

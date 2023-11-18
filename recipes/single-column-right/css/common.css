@@ -1,0 +1,79 @@
+/* COMMON PAGE LAYOUT SETUP CSS - START *****************/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    /* preferred copy font goes here */
+    font-family: sans-serif; 
+}
+/* COMMON PAGE LAYOUT SETUP CSS - END ********************/
+
+body {
+    background-color: #e4f8ff;
+}
+
+#navbar {
+    background-color: #13135d;
+}
+
+#navbar a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 12px 12px 12px 0px;
+}
+
+/*
+    This is an example of how a single column
+    layout aligned to the right might be used.
+
+    Although, that said, you probably shouldn't
+    use this kind of layout.
+
+    This type of layout is very rare; in fact,
+    I can't think of one site that actually
+    uses it.
+    
+    It shares the same weakness of the single
+    left column layout, where it doesn't make 
+    good use of the negative space of wider
+    screens, but it also has the peculiarity
+    of having left aligned content over on the
+    right side, which often feels weird because
+    of the hard edge against the open space,
+    and the jagged edge on the right against
+    the straight edge of the page.
+
+    Now, with the negative stuff out of the way,
+    note that we share the same column styles
+    across multiple containers, both in the 
+    navbar and in the main content.
+
+    This is a very common way to prevent page
+    content (including navigation) from getting 
+    too wide on wider screens and monitors.  
+    
+    This is generally a good practice, as it
+    keeps your viewers' eyes and mouse focused
+    on the same part of the screen.
+
+    Also, note that the #navbar-column is found
+    inside of the #navbar. It is the #navbar 
+    container that's responsible for the dark
+    blue background color, but it is the 
+    #navbar-column responsible for creating 
+    the column in the navbar.
+*/
+
+#navbar-column,
+.center-column {
+    width: 500px;
+    margin-left: auto;
+    padding: 0px 24px;
+}
+
+#navbar-column {
+    text-align: right;
+}

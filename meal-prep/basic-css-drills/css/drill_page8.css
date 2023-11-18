@@ -1,0 +1,14 @@
+/* Drill 8 - Write your code solution below */
+
+/*
+    Now we're adding font-style into the mix.
+*/
+
+#d8-s1,
+#d8-s3 {
+    font-style: italic;
+}
+
+#d8-s2 {
+    font-weight: bold;
+}

@@ -1,0 +1,30 @@
+/* Drill 10 - Write your code solution below */
+
+/*
+    More practice with different kinds of 
+    text-decoration values.
+
+    However, notice that for two of them,
+    we're targeting anchors and stripping
+    them of their default underline styling.
+
+    This is a common practice, as generally,
+    the default link styling doesn't fit
+    into more custom website designs.
+
+    Tell them that in order to change anchor
+    styles, they need to be very specific 
+    with their CSS selectors, making sure
+    to target the anchors directly, like
+    we're doing below with id selectors.
+*/
+
+#d10-a1,
+#d10-a3 {
+    text-decoration: none;
+}
+
+#d10-s1,
+#d10-s3 {
+    text-decoration: underline;
+}

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>padding Properties</title>
+        <link href="css/padding.css" rel="stylesheet" data-seasoning>
+        <link href="css/shared.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="recipe-example">
+            <h4>Basic Code Snippets</h4>
+            <code>padding: 12px;</code>
+            <br>
+            <code>padding: 48px 24px;</code>
+            <br>
+            <code>padding-left: 24px;</code>
+        </div>
+        <h4>Additional Examples</h4>
+        <p>
+            There are several padding related properties
+            and values that we can take advantage of. 
+        </p>
+        <p>
+            The key thing to remember is that padding is 
+            applied INSIDE an element's border, whether 
+            that border is visible or not.
+        </p>
+        <div class="padding-one-value">
+            <div>
+                <p>
+                    <span>Documentation for one value</span>
+                    <br>
+                    <code>padding: all-sides;</code> 
+                </p>
+                <p>
+                    <span>Example</span>
+                    <br>
+                    <code>padding: 24px;</code> 
+                </p>
+                <p>
+                    This outer div has padding added on all sides,
+                    with a border applied to make it easier to
+                    see how padding is applied.
+                </p>
+                <p>
+                    When we provide one value to the padding 
+                    property, that value gets applied to all 
+                    sides of the element's Box Model.
+                </p>
+            </div>
+        </div>
+        <div class="padding-zero">
+            <div>
+                <p>
+                    <span>Example</span>
+                    <br>
+                    <code>padding: 0px;</code> 
+                </p>
+                <p>
+                    This outer div has no padding on all sides.
+                </p>
+                <p>
+                    As a result, there is no space between its 
+                    border and this inner div.
+                </p>
+            </div>
+        </div>
+        <div class="padding-two-values">
+            <div>
+                <p>
+                    <span>Documentation for two values</span>
+                    <br>
+                    <code>padding: top/bottom left/right;</code>
+                </p>
+                <p>
+                    <span>Example</span>
+                    <br>
+                    <code>padding: 24px 48px;</code> 
+                </p>
+                <p>
+                    This outer div has padding added on all sides,
+                    but with different top/bottom and left/right 
+                    values, as well as another border.
+                </p>
+                <p>
+                    When we provide two values to the padding 
+                    property, the first value gets applied to 
+                    the top and bottom of the Box Model, while 
+                    the second value is applied to the left and
+                    right sides.
+                </p>
+            </div>
+        </div>
+        <div class="padding-three-values">
+            <div>
+                <p>
+                    <span>Documentation for three values</span>
+                    <br>
+                    <code>padding: top left/right bottom;</code>
+                </p>
+                <p>
+                    <span>Example</span>
+                    <br>
+                    <code>padding: 24px 8px 60px;</code> 
+                </p>
+                <p>
+                    This outer div has padding added on all sides,
+                    but with different top, left/right, and bottom 
+                    values, as well as another border.
+                </p>
+                <p>
+                    When we provide three values to the padding 
+                    property, the first value gets applied to 
+                    the top of the Box Model, the second value 
+                    is applied to the left and right sides, and 
+                    the third value is applied to the bottom.
+                </p>
+            </div>
+        </div>
+        <div class="padding-four-values">
+            <div>
+                <p>
+                    <span>Documentation for four values</span>
+                    <br>
+                    <code>padding: top right bottom left;</code>
+                </p>
+                <p>
+                    <span>Example</span>
+                    <br>
+                    <code>padding: 60px 8px 24px 100px;</code> 
+                </p>
+                <p>
+                    This outer div has padding added on all sides,
+                    but with different top, right, bottom, and left 
+                    padding values, as well as another border.
+                </p>
+                <p>
+                    When we provide four values to the padding 
+                    property, the values get applied in a clockwise
+                    rotation, starting with the top.
+                </p>
+            </div>
+        </div>
+        <div class="no-border padding-four-values">
+            <div>
+                <p>
+                    Remember that padding is still applied, even 
+                    if you can't see the border.
+                </p>
+                <p>
+                    This outer div has the same four padding values as 
+                    the div above it, even though we removed 
+                    the border.
+                </p>
+            </div>
+        </div>
+        <div class="padding-individual">
+            <div>
+                <p>
+                    <span>Examples of individual padding properties</span>
+                    <br>
+                    <code>padding-top: 48px;</code>
+                    <br>
+                    <code>padding-right: 24px;</code>
+                    <br>
+                    <code>padding-left: 24px;</code>
+                    <br>
+                    <code>padding-bottom: 100px;</code>
+                </p>
+                <p>
+                    This outer div has its padding set by the
+                    properties for the individual sides. 
+                </p>
+                <p>
+                    These individual properties have a higher 
+                    priority compared to the generic "padding" 
+                    property, so if both are used, the individual 
+                    properties are most likely the values that 
+                    will be set.
+                </p>
+                <p>
+                    Typically we only use the individual padding 
+                    properties to tweak one or two sides at a time.
+                    If we need to set more, it's usually simpler 
+                    to use the generic "padding" property from 
+                    earlier.
+                </p>
+            </div>
+        </div>
+        
+        <div class="resources">
+            <h4>Additional Resources</h4>
+            <a 
+                href="https://www.w3schools.com/css/css_padding.asp"
+                target="_blank"
+            >
+                w3schools 
+            </a>
+            <br>
+            <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding"
+                target="_blank"
+            >
+                mdn web docs
+            </a>
+        </div>
+    </body>
+</html>

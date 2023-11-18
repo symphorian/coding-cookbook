@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif; 
+}
+
+#two-columns {
+    display: flex;
+}
+
+/*
+    Now let's see how we can create a sidebar.
+
+    It's actually pretty straightforward.
+
+    The flex property transforms a Flexbox
+    Item into something resembling a fluid:
+    it will expand to fill its containar.
+
+    If we use a regular old width instead 
+    of the flex property, that Flexbox Item
+    will become rigid instead.
+
+    Inside of a flexbox, it's not GUARANTEED
+    to always have that width, but the 
+    Flexbox Container will do its best to
+    keep that Flexbox Item at the width 
+    it specifies.
+
+    So let's set our #sidebar-content to have
+    a width of 200px or so.
+*/
+#sidebar-content {
+    background-color: lightblue;
+    width: 200px; /* replace flex with width */
+}
+
+#main-content {
+    background-color: lightgreen;
+    flex: 1;
+}
+
+/*
+    Stretch and squish the preview window again,
+    and show the class that the sidebar width 
+    doesn't change now, and instead it's the 
+    #main-content column that remains fluid and
+    resizes to fill the available space.
+
+    But also show that when the preview panel
+    gets REALLY small, eventually the sidebar
+    will start collapsing.
+
+    That's just how Flexbox Containers work:
+    they do everything they can to both keep
+    their Flexbox Items on the same line and
+    to prevent overflow.
+
+    And this is basically how you can build
+    a Two Column Layout with a sidebar on the
+    left side.
+
+    It's still quite basic and boring, but
+    we'll change that in a bit.
+*/

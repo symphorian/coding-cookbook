@@ -1,0 +1,87 @@
+/* COMMON PAGE LAYOUT SETUP CSS - START *****************/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    /* preferred copy font goes here */
+    font-family: sans-serif; 
+}
+/* COMMON PAGE LAYOUT SETUP CSS - END ********************/
+
+/*
+    Here's a more impactful design layout, utilizing
+    full screen-height column blocks, along with images 
+    instead of text.
+
+    However, notice that you have to be careful about
+    the images that you pick for a layout like this:
+
+    Certain aspect ratios won't work as well at certain
+    screen sizes, and also the content of images can
+    get cut off at certain widths.
+*/
+
+.two-columns {
+    display: flex;
+    /* 
+        vh is a special relative unit short for
+        "view height".
+
+        100vh = 100% of the view height
+        50vh = 50% of the view height
+
+        We're using this unit to stretch our columns
+        out to be the full height of the screen.
+
+        100vh on the width property is different from 100%.
+        width: 100%; would only set the element to be the 
+        height of its container, not the screen.
+    */
+    height: 100vh;
+}
+
+.big-text-column,
+.img-column {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.big-text-column {
+    background-color: #8e1a1a;
+    color: white;
+    font-size: 28px;
+}
+
+.column-content {
+    margin: 48px;
+    text-align: center;
+}
+
+/*
+    Normally, we don't set both the height and width
+    of an image, because it will get stretched or squished.
+
+    However, we want the image to fill the ENTIRE
+    column block, so we have to set both to 100%.
+
+    How do we prevent the image from getting distorted?
+    We use the special object-fit property, and give it
+    the value of cover.
+
+    This tells the image to stretch to fill whatever
+    dimensions it is given, but to crop the image while
+    maintaining its native aspect ratio.
+
+    This still doesn't guarantee our image will look good,
+    but it is often the best we can do, as long as we
+    select our images wisely.
+*/
+.img-column img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}

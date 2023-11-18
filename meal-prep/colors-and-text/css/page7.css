@@ -1,0 +1,46 @@
+/*
+    Now let's try out a text-align and
+    text-decoration.
+
+    The text-align property is used to change
+    the alignment of text and other inline
+    content within an element to either left, 
+    center, or right aligned (left is the default).
+
+    The text-decoration property is responsible
+    for adding lines to your text.  You can
+    underline the text, "overline" the text,
+    or even add a strikethrough.  The values
+    you'd use for each of those would be 
+    'underline', 'overline', and 'line-through'
+    respectively.  You can also remove existing
+    text-decorations with the value 'none'.
+
+    Add a text-align property to the first 
+    paragraph, and a text-decoration to the
+    second. 
+
+    (and yes, it is annoying that some text/font
+    related properties start with "font-",
+    while other start with "text-".  Unfortunately,
+    we just have to remember which is which.)
+*/
+
+#first-paragraph {
+    color: blue;
+    background-color: goldenrod;
+    font-style: italic;
+    text-align: right;
+}
+
+#second-paragraph {
+    color: #FF0000;
+    background-color: lightpink;
+    font-size: 24px;
+    text-decoration: underline;
+}
+
+#bold-paragraph {
+    font-weight: bold;
+    background-color: #228b22;
+}

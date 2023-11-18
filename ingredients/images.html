@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>&lt;img&gt; (Image) Element</title>
+        <link href="css/images.css" rel="stylesheet">
+    </head>
+    <body>
+        <p>
+            An image element requires the source (src) attribute in order to display anything.
+            Including the alternate (alt) attribute, which provides an alternate textual description
+            of the image, is also good practice.
+        </p>
+        <p>
+            Image elements are inline elements, 
+
+            <img src="images/cookbook.jpg" alt="ugly stained cookbook page">
+            
+            meaning they will appear "in line" with any text before and after it, 
+            unless you alter their display properties or use line breaks.
+        </p>
+        <p>
+            Images will also display at whatever their natural size is, so unless you've
+            edited an image to be the exact size you want, you'll probably need to apply
+            some CSS to resize your images.
+        </p>
+        <p>
+            The image above is a "local" image, meaning its source comes from the same site 
+            as the web page its loaded on, while the image below is a "web" image, meaning 
+            its source comes from somewhere else on the internet.  Using "web" images is 
+            little less work, but since you have no control over the image, it is not 
+            recommended to use this approach; the example below is just there to show you 
+            that you can.
+        </p>
+        
+        <img
+            src="https://www.bhg.com/thmb/c6LftxodTnftZ6NSeyT0DJDmkYg=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Vintage-Red-Plaid-BHG-Cookbook1-172a15c3b79643cca80a0cb26e90c1cf.jpg"
+            alt="old Better Homes and Gardens cookbook"
+        >
+
+        <p>
+            Note that image element code can be written on one line, but if it gets so long 
+            that it goes offscreen in your text editor, it is better practice to separate 
+            the element's attributes on separate lines.
+        </p>
+    </body>
+</html>

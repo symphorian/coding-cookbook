@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Github Desktop - Endless Push</title>
+        <link href="../css/appetizer.css" rel="stylesheet">
+        <link href="../css/lightbox.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="cookbookPage troubleshooting">
+            <h2>My push never seems to finish!</h2>
+            <br>
+            <p>
+                For some students, GitHub Desktop seems to choke when 
+                you push your commits, meaning that the "Push to origin" 
+                arrows seem to just spin forever.
+            </p>
+            <p>
+                This seems to occur most frequently with students who 
+                have low upload speeds 
+                when they try to upload large images or a lot of images 
+                in their commit (although this isn't always the case).
+                Regardless of the reason, there is a tried and true method 
+                to get your changes through.
+            </p>
+            <p>
+                Follow the instructions below if your push never seems to 
+                be taking forever (and consider ALWAYS using the steps 
+                below when pushing in the future, to save yourself time 
+                and stress).
+            </p>
+        </div>
+        <div class="cookbookPage troubleshooting">
+            <h2>Undoing your commit</h2>
+            <ol>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                First, quit GitHub Desktop.
+                            </p>
+                            <p class="indent">
+                                Don't just close or minimize it; 
+                                make sure you've actually completely 
+                                shut down the app. 
+                            </p>
+                            <p class="indent">
+                                You may need to Force-quit the app if 
+                                it isn't behaving.
+                            </p>
+                            <p>
+                                Then, open GitHub Desktop again; it shouldn't be pushing anymore.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                GitHub Desktop is probably in the Changes tab by default;
+                                click on the History tab to switch over to that view.
+                            </p>
+                            <p>
+                                In the History view, you'll see a list of all the commits 
+                                you've ever made, with the most recent at the top.
+                            </p>
+                            <p>
+                                The commit you were unable to push should have a little 
+                                arrow next to it; this means that this commit hasn't been 
+                                pushed yet.
+                            </p>
+                            <p>
+                                Right-click on that commit.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/githubdesktop_history_commit2.png" 
+                                alt="Switch to the History tab, identify the commit to undo, and right-click it"
+                            >
+                            <figcaption>
+                                Switch to the History tab, identify the commit 
+                                to undo, and right-click it
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                This should open up a context menu.
+                            </p>
+                            <p>
+                                Click the option that says "Undo commit"
+                            </p>
+                            <p>
+                                <strong>
+                                    WARNING: Be very cautious in this view.
+                                    <br>
+                                    <br>
+                                    NEVER EVER click the option that says "Revert commit"!
+                                    <br>
+                                    <br>
+                                    This can potentially erase large chunks of your work 
+                                    from version control; it is possible to recover from this,
+                                    but it will take a lot of time and effort to fix.
+                                </strong>
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/githubdesktop_history_commit_undo.png" 
+                                alt="Click the 'Undo commit...' option" >
+                            <figcaption>
+                                Click the 'Undo commit...' option
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        </div>
+        <div class="cookbookPage troubleshooting">
+            <h2>Redoing your commit, one image at a time</h2>
+            <ol>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Return to the Changes tab.
+                            </p>
+                            <p>
+                                All the file changes that went into that commit you just undid 
+                                should be visible again in this view.
+                            </p>
+                            <p>
+                                First, select ONLY the code files (files that end in .html or .css),
+                                or conversely, uncheck all the non-code files.
+                            </p>
+                            <p>
+                                Then do a complete commit and push JUST for the code files.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/commit_onlycode.png" 
+                                alt="Select only code files (.html, .css) to commit and push"
+                            >
+                            <figcaption>
+                                Select only code files (.html, .css) to commit and push
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+
+                            <p>
+                                Next, select ONE SINGLE image file (files that end in 
+                                .jpg, .jpeg, .png, .webp).
+                            </p>
+                            <p>
+                                Then do a complete commit and push JUST for that single image file.
+                            </p>
+                            <p>
+                                <strong>
+                                    DON'T COMMIT ANOTHER IMAGE UNTIL YOU PUSH THE FIRST.
+                                    <br>
+                                    <br>
+                                    It was committing multiple images that got you into this
+                                    mess in the first place, so don't do it again!
+                                </strong>
+                            </p>
+                            <p>
+                                The push for the single image should go fairly quickly.
+                            </p>
+                            <p>
+                                Now repeat for each remaining image: commit and push ONE IMAGE 
+                                AT A TIME, until you have pushed all the remaining images.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/commit_onlyoneimage.png" 
+                                alt="Select only ONE files (.jpg, .jpeg, .png, .webp) at a time to commit and push"
+                            >
+                            <figcaption>
+                                Select only ONE files (.jpg, .jpeg, .png, .webp) at a time to commit and push
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+            <h4>Congrats! You should have been able to push all the files in your commit!</h4>
+            <h4>Consider always committing/pushing images one at a time in the future.</h4>
+        </div>
+        
+        <div id="lightboxContainer">
+            <div id="lightboxBackground" class="closer"></div>
+            <img id="lightbox" src="" alt="">
+            <span id="lightboxCloser" class="closer">×</span>
+          </div>
+        <script src="../js/lightbox.js"></script>
+    </body>
+</html>

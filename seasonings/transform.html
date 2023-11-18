@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>transform Property</title>
+        <link href="css/transform.css" rel="stylesheet" data-seasoning>
+        <link href="css/shared.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="recipe-example">
+            <h4>Basic Code Snippets</h4>
+            <code>transform: rotate(45deg);</code>
+            <br>
+            <code>transform: scale(1.5);</code>
+            <br>
+            <code>transform: translateX(150px) rotate(-90deg);</code>
+        </div>
+        <h4>Additional Examples</h4>
+        <p>
+            The transform CSS Property is MASSIVE.  There is so much that 
+            you can do with it: you can make elements bigger, spin them, and
+            move them...and do all of that together!
+        </p>
+        <p>
+            An interesting thing about the transform property though is that 
+            it doesn't affect document flow at all.  It's almost like the 
+            transforms we apply are an illusion; they will not change how the 
+            rest of the page renders at all (aside from possibly blocking other
+            elements from view).
+        </p>
+
+        <h5>CSS Function Values</h5>
+        <p>
+            The first thing you need to understand in order to use the transform 
+            property is that its acceptable values are called "functions",
+            and we say that the values are expressed in "functional notation".
+        </p>
+        <p>
+            What does that mean? Well, let's take a look.  The following
+            are different examples of function values that can be given to the 
+            transform property.
+        </p>
+        <p>
+            <code>rotate(45deg)</code> 
+            <br>
+            <code>translateY(200px)</code>
+            <br>
+            <code>scale(1.75)</code>
+        </p>
+        <p>
+            There are some similarities across the code snippets above:
+            they all have a function name (rotate, translateY, and scale),
+            followed by parentheses, and inside those parentheses are a value 
+            that makes sense for the particular function.  That is essentially
+            the syntax for any CSS function:
+        </p>
+        <p>
+            <code>functionName(value)</code>
+        </p>
+        <p>
+            What functions can be used with the transform property? A LOT!
+        </p>
+        <p>
+            Next, let's take a look at some of the more common functions 
+            used with the transform property, but this is not an exhaustive 
+            listing of everything you can do with the transform property.
+        </p>
+
+        <h5>The rotate() function</h5>
+        <p>
+            As you can probably guess, the rotate() function is used to rotate 
+            an element by a specified number of degrees.  Let's look at some 
+            examples below:
+        </p>
+        <div class="examples">
+            <div id="rotate-1" class="square blue">
+                No Rotation
+            </div>
+            <div id="rotate-2" class="square blue">
+                <code>rotate(5deg)</code>
+            </div>
+            <div id="rotate-3" class="square blue">
+                <code>rotate(45deg)</code>
+            </div>
+            <div id="rotate-4" class="square blue">
+                <code>rotate(-90deg)</code>
+            </div>
+        </div>
+        <p>
+            As you can see, you can use both positive and negative degree values,
+            as long as you specify the units as "deg".
+        </p>
+
+        <h5>The scale() function</h5>
+        <p>
+            The rotate() function is used to increase or decrease the size of 
+            an element by a specified ratio.  Let's look at some 
+            examples below:
+        </p>
+        <div class="examples">
+            <div class="square green">
+                No Scaling
+            </div>
+            <div id="scale-2" class="square green">
+                <code>scale(1.5)</code>
+            </div>
+            <div id="scale-3" class="square green">
+                <code>scale(0.75)</code>
+            </div>
+            <div id="scale-4" class="square green">
+                <code>scale(-0.75)</code>
+            </div>
+        </div>
+        <p>
+            That last one might be a little hard to read, but it's 
+            <code>scale(-0.75)</code>.
+        </p>
+        <p>
+            The way scale values work is this: values greater than 1 will
+            increase the size of the element, while values less than 1 will 
+            decrease the size of the element.
+        </p>
+        <p>
+            To use the examples above, a value of 1.5 will scale the element to
+            150% of its normal size, while a value of 0.75 will scale the
+            element to 75% of its normal size.
+        </p>
+        <p>
+            Once again, you can see that we can use both positive and negative 
+            values, but negative values have an interesting side effect with 
+            the scale function: it will flip the element!
+        </p>
+        <p>
+            That last example of -0.75 will shrink the element by 75% of its 
+            normal size, but also flip it along both the X and Y axes 
+            so that it appears upside down.
+        </p>
+        <p>
+            You can also use functions to only scale along a specific axis 
+            (scaleX and scaleY), which will have the effect of stretching 
+            or squishing an element, as seen below:
+        </p>
+        <div class="examples">
+            <div id="scale-6" class="square green">
+                <code>scaleY(0.6)</code>
+            </div>
+            <div class="square green">
+                No Scaling
+            </div>
+            <div id="scale-5" class="square green">
+                <code>scaleX(2)</code>
+            </div>
+        </div>
+
+        <h5>The translate() function</h5>
+        <p>
+            The translate() function is used to move an element along a specific 
+            axis (or axes).  Let's look at some examples below:
+        </p>
+        <div class="examples">
+            <div class="square big red">
+                No Translate<br><br>
+            </div>
+            <div id="translate-2" class="square big red">
+                <code>translateX(100px)</code><br><br>
+            </div>
+            <div id="translate-3" class="square big red">
+                <code>translateY(100px)</code><br><br>
+            </div>
+            <div id="translate-4" class="square big red">
+                <code>translateX(-50px)</code>
+                <br>
+                <code>translateY(-50px)</code>
+            </div>
+        </div>
+        <p>
+            Looks a bit messy, right? Let's see what's happening</code>.
+        </p>
+        <p>
+            The second box gave translateX() a value of 100px, so it moved the 
+            box along the x-axis, 100px to the right of its natural position.
+        </p>
+        <p>
+            The third box gave translateY() a value of 100px, so it moved the 
+            box along the y-axis, 100px down from its natural position.
+        </p>
+        <p>
+            The fourth box used both translateX() and translateY(), providing 
+            a value of -50px to both.  That means we first moved it along the 
+            x-axis in the negative direction (to the left) by 50px from its
+            natural position. Then we moved it along the y-axis in the 
+            negative direction (up) by 50px from its natural position. 
+        </p>
+        <p>
+            As you can see, translating elements can result in them covering
+            or overlapping other elements.  They are slightly transparent in
+            the example, so you can see any overlapping elements behind them.
+        </p>
+
+        <h5>Combining functions</h5>
+        <p>
+            You can actually use the different functions together in a single 
+            transform property, and you can get some really crazy effects done 
+            that way, particularly once you add animation into the mix.
+        </p>
+        <p>
+            To use transform functions together, you simply add a space between 
+            them when you set the values for the property, as in the examples
+            below:
+        </p>
+        <p>
+            <code>transform: translateX(50px) rotate(45deg);</code>
+            <br>
+            <code>transform: scale(0.5) translateY(-50px) rotate(45deg);</code>
+        </p>
+        <p>
+            However, one important thing to remember is this: the order that 
+            you specify the transform functions matters.  
+        </p>
+        <p>
+            Rotating something and then moving it is different from moving 
+            something and then rotating it.  The reason why gets fairly complex, 
+            as it has to do with mathematical concepts like transformation
+            matrices and vector multiplication.  Feel free to dig deeper into
+            that if you're a math person!
+        </p>
+        <div class="resources">
+            <h4>Additional Resources</h4>
+            <a 
+                href="https://www.w3schools.com/cssref/css3_pr_transform.php"
+                target="_blank"
+            >
+                w3schools 
+            </a>
+            <br>
+            <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform"
+                target="_blank"
+            >
+                mdn web docs
+            </a>
+        </div>
+    </body>
+</html>

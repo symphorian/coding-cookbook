@@ -1,0 +1,57 @@
+/* justify-content example related code */
+
+.justify-flex-start {
+    justify-content: flex-start;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-flex-end {
+    justify-content: flex-end;
+}
+
+.justify-space-between {
+    justify-content: space-between;
+}
+
+.justify-space-around {
+    justify-content: space-around;
+}
+
+.justify-space-evenly {
+    justify-content: space-evenly;
+}
+
+/* styling related code */
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    background-color: slateblue;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.box {
+    background-color: lavender;
+    border: 2px solid grey;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 24px;
+    font-weight: bold;
+    height: 50px;
+    margin: 8px;
+    padding: 8px 14px;
+}
+
+.wide {
+    width: 200px;
+}
+
+.warning {
+    background-color: crimson;
+    color: white;
+    padding: 8px;
+}

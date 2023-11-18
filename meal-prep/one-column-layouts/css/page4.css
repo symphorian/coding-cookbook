@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif; 
+}
+
+/*
+    Now that we've seen a basic single column layout
+    aligned to the left, let's see how to create a 
+    right aligned single column layout.
+
+    Students might be tempted to just try and use
+    text-align: right; but that will only align
+    the content inside of our column, while we want
+    to move the entire column to the right.
+    (I recommend showing this to the students anyway)
+
+    Instead, we're going to take advantage of a little 
+    trick we can use with block elements that have been
+    resized to be smaller than their container.
+
+    If we give our .single-column a margin-left value 
+    of 'auto', that will tell the element to put ALL
+    of the remaining space around it into its left
+    margin (which essentially will push it to the right).
+*/
+
+.single-column {
+    background-color: lightgreen;
+    width: 50%;
+    min-width: 500px;
+
+    /* doesn't work, and doesn't look good! */
+    /* text-align: right; */
+
+    margin-left: auto;
+}
+
+/*
+    However, students should be aware that this 'auto'-magic
+    will NOT work on inline or inline-block elements.
+
+    In that case, they can use text-align on the container to
+    move the inline or inline-block elements around.
+
+    But for block elements that have been resized, we can 
+    take advantage of the 'auto' value.
+*/

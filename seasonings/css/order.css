@@ -1,0 +1,61 @@
+/* order example related code */
+
+.order-1 {
+    order: 1;
+}
+
+.order-2 {
+    order: 2;
+}
+
+.order-3 {
+    order: 3;
+}
+
+.order-5 {
+    order: 5;
+}
+
+.order-minus1 {
+    order: -1;
+}
+
+/* styling related code */
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    background-color: steelblue;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.box {
+    background-color: lavender;
+    border: 2px solid grey;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-weight: bold;
+    height: 40px;
+    margin: 8px;
+    padding: 8px 14px;
+}
+
+.warning {
+    background-color: #6b1dcb;
+    color: white;
+    padding: 8px;
+}
+
+.indent {
+    padding-left: 36px;
+}
+
+h4 {
+    margin-top: 48px;
+}
+
+.box.width-200px {
+    font-size: 20px;
+}

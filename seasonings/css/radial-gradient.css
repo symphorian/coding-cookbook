@@ -1,0 +1,56 @@
+#example-1 {
+    background: radial-gradient(yellow, green);
+}
+
+#example-2 {
+    background: radial-gradient(at top, yellow, green);
+}
+
+#example-3 {
+    background: radial-gradient(at right, yellow, green);
+}
+
+#example-4 {
+    background: radial-gradient(at bottom left, yellow, green);
+}
+
+#example-5 {
+    background: radial-gradient(at 25%, yellow, green);
+}
+
+#example-6 {
+    background: radial-gradient(at 75% 100%, yellow, green);
+}
+
+/* 
+    if our CSS functions get too long, 
+    they can be broken up as we did below,
+    to make them easier for humans to read.
+*/
+#example-7 {
+    background: radial-gradient( 
+        blue, 
+        purple, 
+        lightblue, 
+        aquamarine, 
+        teal
+    );
+}
+
+#example-8 {
+    background: radial-gradient(crimson, gold 50%);
+}
+
+#example-9 {
+    background: radial-gradient(red 20%, white, blue 60%);
+}
+
+.example {
+    height: 200px;
+    width: 200px;
+    margin-bottom: 28px;
+}
+
+p code {
+    font-weight: bold;
+}

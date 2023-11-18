@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>font-size Property</title>
+        <link href="css/font-size.css" rel="stylesheet" data-seasoning>
+        <link href="css/shared.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="recipe-example">
+            <h4>Basic Code Snippets</h4>
+            <code>font-size: 24px;</code>
+            <br>
+            <code>font-size: 2em;</code>
+            <br>
+            <code>font-size: 50%;</code>
+        </div>
+        <h4>Additional Examples</h4>
+        <p>
+            The font-size property allows us to change the 
+            size of our text on the page. We can use both 
+            absolute units (like pixels) and relative units 
+            (like percentages and em's).
+        </p>
+        <p class="sixty-pixels">
+            This text has a font-size of 60px.
+        </p>
+        <p class="ten-pixels">
+            This text has a font-size of 10px.
+        </p>
+        <div class="sixty-pixels">
+            <p class="thirty-three-percent">
+                This text has a font-size of 33%, which is 
+                relative to its container.  Since the div 
+                containing this paragraph has a font-size 
+                of 60px, that means that this paragraph 
+                has a computed font-size of roughly 20px 
+                (33% of 60px).
+            </p>
+        </div>
+        <div class="ten-pixels">
+            <p class="thirty-three-percent">
+                Meanwhile, this paragraph has a computed 
+                font-size of around 3px, since its container
+                has a font-size of 10px, and 33% of 10px is 
+                about 3px.
+            </p>
+        </div>
+        <p class="two-m">
+            Another unit we can use is the "em" unit, which 
+            is based off of the default size of the letter "M"
+            in our font family in the container our text is in. 
+            2em means the font-size is twice the default 
+            font-size.
+        </p>
+        <p class="four-point-five-m">
+            This text has a font-size of 4.5em.
+        </p>
+        
+        <div class="resources">
+            <h4>Additional Resources</h4>
+            <a 
+                href="https://www.w3schools.com/css/css_font_size.asp"
+                target="_blank"
+            >
+                w3schools 
+            </a>
+            <br>
+            <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size"
+                target="_blank"
+            >
+                mdn web docs
+            </a>
+        </div>
+    </body>
+</html>

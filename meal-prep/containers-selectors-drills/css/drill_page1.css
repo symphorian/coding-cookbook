@@ -1,0 +1,20 @@
+/* Drill 1 - Write your code solution below */
+
+/*
+    The CSS is pretty straightforward once you
+    have the containers set up correctly.
+
+    However, students often have trouble
+    understanding the concept of putting two
+    selectors together.
+
+    Try to emphasize as much as possible that
+    when you have two selectors separated
+    by a space, your telling the CSS to 
+    target what's on the right ONLY when it
+    is found inside of what's on the left.
+*/
+
+.orange p {
+    color: limegreen;
+}

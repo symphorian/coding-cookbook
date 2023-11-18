@@ -1,0 +1,73 @@
+/* align-items example related code */
+
+
+.align-stretch {
+    align-items: stretch;
+    height: 220px;
+}
+
+/*
+    resetting the height of boxes
+    just for the stretch example
+*/
+.align-stretch .box {
+    height: auto;
+}
+
+.align-flex-start {
+    align-items: flex-start;
+}
+
+.align-flex-end {
+    align-items: flex-end;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-baseline {
+    align-items: baseline;
+}
+
+/* styling related code */
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    background-color: mediumpurple;
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 48px;
+}
+
+.box {
+    background-color: lavender;
+    border: 2px solid grey;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 8px;
+    padding: 8px 14px;
+}
+
+.wide {
+    width: 200px;
+}
+
+.tall {
+    height: 100px;
+    padding-top: 50px;
+}
+
+.giant {
+    height: 200px;
+    padding-top: 100px;
+}
+
+.warning {
+    background-color: crimson;
+    color: white;
+    padding: 8px;
+}

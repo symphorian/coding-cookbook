@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#navbar {
+    background: linear-gradient(to bottom, #109cb8, #0e5b96);
+    display: flex;
+    align-items: center;
+}
+
+#navbar a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 24px;
+}
+
+#navbar a:hover {
+    background: linear-gradient(to top, #109cb8, #0e5b96);
+}
+
+#navbar #logo {
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 36px;
+    padding-top: 13px;
+    padding-bottom: 12px;
+}
+
+.dropdown-container {
+    position: relative;
+}
+
+/*
+    (might be worth asking students which
+    element/class it is that we want to hide)
+
+    The element that we need to hide is the 
+    div with the .dropdown-menu class.
+
+    We covered a couple different ways in the
+    showing/hiding content demo.
+
+    (ask if they remember the properties/values
+    we can use to hide something)
+
+    display: none; is an option, but the 
+    problem with that one is that it's not
+    transition-able or animate-able, and in
+    general, our web page will feel a lot
+    more professional if we can implement
+    transitions.
+
+    So instead, we will use the opacity and
+    visibility properties to hide it, in 
+    addition to registering those properties
+    for transitioning.
+*/
+
+.dropdown-menu {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: 
+        opacity 0.25s,
+        visibility 0.25s;
+}
+
+/*
+    Now our menu is gone! But we need to
+    get it back! How?
+
+    We need to target the menu ONLY
+    when the dropdown-container is in its
+    hover state.
+*/
+.dropdown-container:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+/*
+    There we go! That basically does it:
+    we now have a dropdown menu!
+
+    But why stop at one dropdown menu?
+
+    With the way we coded the HTML/CSS,
+    we should be able to add additional
+    dropdowns as long as we use the 
+    proper HTML structure and CSS classes.
+*/
+
+.dropdown-menu a {
+    background-color: darkslateblue;
+    width: 100%;
+    min-width: 200px;
+}
+
+#navbar .dropdown-menu a:hover {
+    background: slateblue;
+}

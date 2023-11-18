@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#main {
+    width: 90vw;
+    max-width: 800px;
+    margin: 48px auto;
+    display: flex;
+    justify-content: center;
+}
+
+h3 {
+    text-align: center;
+    margin: 24px 0;
+}
+
+.card {
+    width: 350px;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card h2 {
+    font-size: 36px;
+    margin-top: 12px;
+}
+
+.card p {
+    font-size: 18px;
+}
+
+.anchor-button {
+    display: block;
+    background-color: lightcoral;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    /*
+        To fix the first issue, let's add the border 
+        property and value to our default anchor-button's 
+        state. This will allow the 3px of border width 
+        to have already been present, thus removing the 
+        shift in height.
+    */
+    border: 3px solid lightcoral;
+    /*
+        For the second issue, let's introduce a fun feature
+        of CSS called CSS Transitions, which uses a new
+        property called 'transition'. This property allows 
+        us to create smooth, animated transitions between the 
+        different states of elements.
+
+        To use the transition property, you must "register"
+        the CSS properties that you want to animate, along
+        with a value in seconds that represents the amount
+        of time you want the transition to take.
+
+        (there are other ways to configure CSS Transitions,
+        but we're going to keep things simple in here)
+
+        The syntax to use this property is the name of the
+        property that you want to register to transition,
+        followed by a space, and then the value in seconds
+        with the suffix 's', which represents the 'seconds'
+        unit.
+
+        In our case, we're going to add background-color as 
+        the first property we want to register to transition, 
+        followed by 0.5s (a half a second). 
+        
+        However, we're not limited to only registering one
+        CSS Property, we can actually register as many as we
+        want.
+        
+        So, we'll add a comma after 0.5s to indicate that we
+        want to register another property, and then add the
+        color property, followed by 0.5s as well, so that our
+        two transitions are synced.
+
+        Notice that we went to the next line after the comma,
+        this isn't required by the computer, but it tends to
+        make our code easier for humans to read (so do it!).
+
+        If done properly, this will create a smooth, animated
+        transition properties that we registered.  We should
+        see the effect once we try to hover over them again.
+    */
+    transition:
+        background-color .5s,
+        color .5s;
+}
+
+.anchor-button:hover {
+    background-color: transparent;
+    color: lightcoral;
+    /*
+        We'll remove the border properties from this selector 
+        since we moved it to the main selector for this 
+        element above. 
+    */
+}
+/*
+    Now that our button is all fleshed out, let's add some 
+    additional styling to the card.
+*/

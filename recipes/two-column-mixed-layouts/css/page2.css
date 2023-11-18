@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif; 
+}
+
+/*
+    Now we'll add our columns.  We just need two
+    of them to create a YouTube like layout.
+
+    And we'll also add our grid areas. This is 
+    where things get interesting.  The YouTube
+    layout has a header at the top, with the
+    sidebar and main content beneath it.
+
+    We're going to do the same with our grid
+    layout areas.
+*/
+#grid-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-areas: 
+        "header header"
+        "sidebar main";
+}
+
+/*
+    Next, we'll hook up the grid areas in our
+    grid items below.
+*/
+
+#header {
+    background-color: lightskyblue;
+    grid-area: header;
+}
+
+#sidebar {
+    background-color: lightcyan;
+    grid-area: sidebar;
+}
+
+#main {
+    background-color: lightgoldenrodyellow;
+    grid-area: main;
+}
+
+/*
+    Remember that the grid-area names
+    don't have to match up with the id/class
+    selector names, but it definitely makes
+    it easier to understand if we plan things
+    that way.
+*/

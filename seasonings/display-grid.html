@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>display Property (Grid)</title>
+        <link href="css/display-grid.css" rel="stylesheet" data-seasoning>
+        <link href="css/shared.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="recipe-example">
+            <h4>Basic Code Snippets</h4>
+            <code>display: grid;</code>
+        </div>
+        <h4>Additional Examples</h4>
+        <p>
+            Grid is one of the CSS Layout Modules,
+            and the first step to using a CSS Grid is 
+            activating a grid container.
+        </p>
+        <p>
+            To do so is pretty simple: you just assign
+            the display property the value of <i>grid</i>.
+        </p>
+
+        <h4>Examples of <code>display: grid;</code></h4>
+        <p>
+            By default, containers are not grid containers,
+            so they use normal Document Flow to position items 
+            inside of them.
+        </p>
+        <p>
+            Block elements have their whole lines and are stacked, 
+            and inline elements are arranged in line, same as usual.
+        </p>
+
+        <h4>display: flex;</h4>
+
+        <div class="normal-container">
+            <div class="box">A</div>
+            <span class="box">B</span>
+            <span class="box">C</span>
+            <div class="box">D</div>
+        </div>
+        <br>
+
+        <p>
+            However, if we take the same code and activate flexbox
+            on the container, we'll see the elements inside change.
+        </p>
+
+        <h4>display: grid;</h4>
+
+        <div class="grid-container">
+            <div class="box">A</div>
+            <span class="box">B</span>
+            <span class="box">C</span>
+            <div class="box">D</div>
+        </div>
+        <br>
+
+        <p>
+            CSS Grid containers change the normal Document Flow of
+            items inside them, though without additional grid
+            properties set, it can be hard to tell exactly how 
+            it changes the Document Flow.
+        </p>
+        <p>
+            CSS Grids essentially force all elements inside of them
+            into grid cells, so there is no longer any distinction 
+            between block and inline items inside of a CSS Grid.
+        </p>
+
+        <p>
+            By default, there is only one column in a CSS Grid,
+            which takes up the width of the whole container, and 
+            each row grows as large as it needs to be for the 
+            content inside of it.
+        </p>
+        <p>
+            This results in each Grid Item appearing to act as a 
+            block element, but this is not actually the case.
+        </p>
+        <p>
+            Watch what happens when we introduce a new grid property 
+            (grid-template-columns) to define additional columns.
+        </p>
+
+        <h4>grid-template-columns: 1fr 1fr 1fr;</h4>
+
+        <div class="grid-container-3-columns">
+            <div class="box">A</div>
+            <span class="box">B</span>
+            <span class="box">C</span>
+            <div class="box">D</div>
+        </div>
+        <br>
+
+        <p>
+            Now our four Grid Items are slotted into three columns,
+            and when they fill up a row, they start a new row
+            beneath it, and start filling up the columns in 
+            <i>that</i> row.
+        </p>
+        <p>
+            This is just a brief illustration that CSS Grid containers
+            and items are their own unique beast in CSS. There are 
+            lots of ways to change the positions and layouts of
+            Grid items.
+        </p>
+        <p>
+            To learn more about them, check out the Grid pages in
+            the CSS part of the Coding Cookbook!
+        </p>
+
+        <div class="resources">
+            <h4>Additional Resources</h4>
+            <a 
+                href="https://www.w3schools.com/css/css_grid.asp"
+                target="_blank"
+            >
+                w3schools 
+            </a>
+            <br>
+            <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout"
+                target="_blank"
+            >
+                mdn web docs
+            </a>
+            <br>
+            <a
+                href="https://css-tricks.com/snippets/css/complete-guide-grid/"
+                target="_blank"
+            >
+                CSS Tricks
+            </a>
+        </div>
+    </body>
+</html>

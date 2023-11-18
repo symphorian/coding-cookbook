@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#navbar {
+    background: linear-gradient(to bottom, #109cb8, #0e5b96);
+    display: flex;
+    align-items: center;
+}
+
+#navbar a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 24px;
+}
+
+#navbar a:hover {
+    background: linear-gradient(to top, #109cb8, #0e5b96);
+}
+
+#navbar #logo {
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 36px;
+    padding-top: 13px;
+    padding-bottom: 12px;
+}
+
+.dropdown-container {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+}
+
+/*
+    Let's give the links in the dropdown menu
+    a background to start with.  
+
+    The linear gradient won't work as well, since
+    the dropdown links are vertical rather than
+    horizontal, so we'll just give them a solid
+    background color that complements the navbar.
+
+    Notice that we're only targeting hyperlinks
+    in the dropdown MENU, not the CONTAINER.
+
+    The original Gallery link is in the container,
+    and we don't want to change the style of that
+    link; only the ones in the menu itself.
+*/
+
+.dropdown-menu a {
+    background-color: darkslateblue;
+    /*
+        You'll also notice that now we have a jagged
+        edge, as all the links have different widths.
+
+        We can fix that by applying width: 100%;
+    */
+    width: 100%;
+    /*
+        But even that looks a tad awkward with our
+        current design, because its so narrow.
+        We can force it to stretch out a bit more
+        by applying a min-width to it.
+    */
+    min-width: 200px;
+}
+
+/*
+    Finally, let's change the hover state; the 
+    gradient background doesn't fit very well
+    in the dropdown menu, so we'll give it
+    another complementary solid color instead.
+
+    However, note that simply using the selectors:
+
+    .dropdown-menu a:hover { }
+
+    won't work. (write the code to show this)  
+    
+    Why doesn't it work?
+
+    Because higher up in our code, we also specified
+    the selectors:
+
+    #navbar a:hover { }
+
+    Both apply and target the anchor tags in the
+    dropdown menu; however, ID Selectors are 
+    more specific than Class Selectors, and 
+    are given higher priority in CSS.
+    
+    So when selectors "collide" as it were,
+    like they do here, the more specific selectors
+    (the ones with higher priority) are the ones
+    that get their styles applied.
+
+    (you can open this up in the Chrome Developer
+    Tools and show them by selecting the dropdown
+    anchor and toggling on its :hover state)
+
+    So, we need to make our selectors even MORE
+    specific in order to override the general
+    style we specified earlier.
+
+    We can do that by sort of combining the
+    two selectors together.
+*/
+#navbar .dropdown-menu a:hover {
+    /*
+        Also note that we can't just use
+        background-color here, because we used
+        background with linear-gradient for the
+        other hover state.
+
+        So we have to use the same property
+        (the background shorthand) in order to
+        override the other hover style.
+    */
+    background: slateblue;
+}
+
+/*
+    With that, we pretty much have our dropdown
+    menu appearing as we'd like it to when it
+    actually is visible.
+
+    Now we need to add the code to conceal it 
+    until we hover over the trigger item.
+*/

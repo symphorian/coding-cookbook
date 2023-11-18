@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Utilizing Google Fonts - Appetizers - The Coding Cookbook</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="../css/cookbook.css" rel="stylesheet">
+        <link href="../css/appetizer.css" rel="stylesheet">
+        <link href="../css/lightbox.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="background"></div>
+        <nav>
+            <header id="topHeader">
+                <h2 id="brand"><a href="../">The Coding Cookbook</a></h2>
+                <div id="quote"></div>
+                <div id="navLinks">
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../ingredients.html">
+                                HTML
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../ingredients.html">Elements</a></h2>
+                            <h2><a href="../ingredients-cheatsheet.html">Cheatsheet</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../seasonings.html">
+                                CSS
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../seasonings.html">Properties</a></h2>
+                            <h2><a href="../seasonings-cheatsheet.html">Cheatsheet</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../recipes.html">
+                                Layouts
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../recipes.html?category=page-layout">Page Layouts</a></h2>
+                            <h2><a href="../recipes.html?category=content-layout">Content Layouts</a></h2>
+                            <h2><a href="../recipes.html?category=navigation-layout">Navigation</a></h2>
+                            <h2><a href="../recipes.html?category=miscellaneous">Miscellaneous</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../more.html">
+                                More
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../demos.html">Class Demos</a></h2>
+                            <h2><a href="../appetizers.html">Tutorials</a></h2>
+                            <h2><a href="../troubleshooting.html">Troubleshooting</a></h2>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </nav>
+        
+        <header id="title" class="">
+            <h1>Utilizing Google Fonts</h1>
+            <h3>
+                A tutorial showing how to include pre-baked fonts 
+                in your web page
+            </h3>
+        </header>
+        
+        <div class="cookbookPage">
+            <p>
+                Ensuring fonts render the same for every viewer is a 
+                surprisingly tricky business.  Some operating systems have fonts
+                that others don't, and you have to take that into account when 
+                sharing your designs, even in an offline format like a PDF.
+            </p>
+            <p>
+                There is a feature of CSS called "web fonts" that allow 
+                developers to upload their own custom fonts to servers and 
+                create new font families for use on their web sites.
+            </p>
+            <p>
+                However, this process can get a little complex.  You still need
+                to worry about licensing, and depending on the font file type,
+                it still may not load correctly in certain browsers.
+            </p>
+            <p>
+                Thankfully, there are services out there that handle most of
+                this work for us, like Google Fonts.  This tutorial is going 
+                to show how you can take advantage of Google Fonts to pull
+                fonts from their library into your web page.
+            </p>
+        </div>
+        
+        <div class="cookbookPage">
+            <h2 id="part1" class="invisibleAnchorTarget"></h2>
+            <h6></h6>
+            <h2>Google Fonts</h2>
+            <h4>Home to over 1500 web fonts and counting</h4>
+            <ol>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                First off, let's navigate to the Google Fonts
+                                home page by clicking on the link below:
+                            </p>
+                            <p>
+                                <a 
+                                    href="https://fonts.google.com/" 
+                                    target="_blank"
+                                >
+                                    fonts.google.com
+                                </a>
+                            </p>
+                            <p>
+                                Once you arrive, you'll find a page similar to 
+                                the screenshot on the right (I have it set to
+                                Dark Mode; it may show as Light Mode for you).
+                            </p>
+                            <p>
+                                As you can see, there's a lot more than just 
+                                English fonts available to use!
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/google-fonts/01_home.png" 
+                                alt="The home page for Google Fonts (Dark Mode)"
+                            >
+                            <figcaption>
+                                The home page for Google Fonts (Dark Mode)
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                While you can browse all 1550 fonts available 
+                                as they choose to display them, it's more likely
+                                you have a specific type of font in mind that
+                                you want to find.
+                            </p>
+                            <p>
+                                In that case, you'll probably want to take 
+                                advantage of filters like "Decorative Stroke" or
+                                "Classification".
+                            </p>
+                            <p>
+                                For instance, clicking on "Handwriting" under 
+                                "Decorative Stroke" will apply a filter to 
+                                the search results only showing fonts tagged as 
+                                handwriting fonts.
+                            </p>
+                            <p>
+                                You can select whichever filters you want to
+                                search for, and once you do, the search results
+                                will update themselves accordingly.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/google-fonts/02_filter.png" 
+                                alt="Filtering via Categories (Handwriting in this case)">
+                            <figcaption>
+                                Filtering via Categories (Handwriting in this case)
+                            </figcaption>
+                        </div>
+                        
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After scrolling through the search results and 
+                                finding a font that interests you, go ahead and
+                                click on the card containing that font.
+                            </p>
+                            <p>
+                                In this case, I'm selecting the "Ms Madi" font,
+                                as that has the nice, elegant cursive style that 
+                                I'm looking for.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/google-fonts/03_select.png" 
+                                alt="Selecting a font (Ms Madi)" 
+                            >
+                            <figcaption>
+                                Selecting a font (Ms Madi)
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After selecting a font, you'll be brought to
+                                that font's specific page in Google Fonts.
+                            </p>
+                            <p>
+                                From here, you'll be able to see a preview of
+                                the font, the different Styles available for 
+                                that font, as well as some previews for how
+                                specific styles render at different sizes.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/google-fonts/04_selectedfont.png" 
+                                alt="The font page for the Ms Madi font"
+                            >
+                            <figcaption>
+                                The font page for the Ms Madi font
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                If we scroll down to the Styles section of the 
+                                page, we'll see the different styles that are 
+                                available for us to include on our web page.
+                            </p>
+                            <p>
+                                In the case of Ms Madi, there is only one style 
+                                available: Regular 400
+                            </p>
+                            <p>
+                                Elsewhere on the page, you will find the option 
+                                to download the font family.  
+                                <br><br>
+                                <strong>BUT DON'T DOWNLOAD THE FONT!</strong>
+                            </p>
+                            <p>
+                                We would only download the font if we were 
+                                going to be creating our own web fonts, or using 
+                                it in some other context.  Which we're not. 
+                            </p>
+                            <p>
+                                Instead, click the Select option to the right of
+                                the Style we want to use; in this case, "Select
+                                Regular 400".
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/google-fonts/05_selectstyle.png" 
+                                alt="Light blue boxes representing additional content" 
+                            />
+                            <figcaption>
+                                Clicking the "Select Regular 400" option to the 
+                                right of the style
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After doing so, you'll see that the option has 
+                                changed to "Remove Regular 400" instead of 
+                                "Select".
+                            </p>
+                            <p>
+                                In addition, there's a little circle that
+                                appeared on top of the icon of the shopping bag
+                                at the top right of the page. This is where 
+                                all the fonts we select are collected.
+                            </p>
+                            <p>
+                                Go ahead and click on the shopping bag icon
+                                to show your selected font(s).
+                            </p>
+                            <p class="indent">
+                                NOTE: You may find that the "shopping bag" opens
+                                up on its own the first time you select a font.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/google-fonts/05_selectstyle2.png" 
+                                alt="Opening the 'shopping bag' of fonts" 
+                            />
+                            <figcaption>
+                                Opening the "shopping bag" of fonts
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After the "shopping bag" is clicked, a side 
+                                panel will slide open from the right. At the top 
+                                of it, you should see the font family that
+                                we've selected.
+                            </p>
+                            <p>
+                                In our case, this would be the Ms Madi font family,
+                                and particularly the "Regular 400" font style
+                                from it.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/google-fonts/05_selectstyle3.png" 
+                                alt="Finding our selected font styles in the 'shopping cart'" 
+                            />
+                            <figcaption>
+                                Finding our selected font styles in the "shopping cart"
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Okay, so we've selected the font that we want.
+                                How do we actually use it on our web page?
+                            </p>
+                            <p>
+                                Well, we're getting to that.
+                            </p>
+                            <p>
+                                See how beneath that section with our selected
+                                font family style, there's another section called 
+                                "Use on the web"?
+                            </p>
+                            <p>
+                                That's where we're heading next.
+                            </p>
+                            <p>
+                                There are two radio buttons under there: one for 
+                                &lt;link&gt; and one for @import.
+                            </p>
+                            <p>
+                                Go ahead and select the @import one.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/google-fonts/06_touse.png" 
+                                alt="Selecting @import under 'Use on the web'" 
+                            />
+                            <figcaption>
+                                Selecting @import under "Use on the web"
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After selecting @import, the code sample 
+                                beneath it will change.
+                            </p>
+                            <p>
+                                Now we have access to a CSS code snippet to
+                                include in our CSS...sort of.
+                            </p>
+                            <p class="indent">
+                                See those &lt;style&gt; tags in there?  That's 
+                                HTML code, and we don't want that. However, the
+                                HTML &lt;style&gt; element is unique in that 
+                                whatever code is put inside of it is 
+                                processed as CSS.
+                            </p>
+                            <p class="indent">
+                                It's the code <i>in between</i> the 
+                                &lt;style&gt; tags that is the CSS we want.
+                            </p>
+                            <p>
+                                Select and copy the code in between the 
+                                &lt;style&gt; tags, and paste that at the top 
+                                of our CSS file.
+                            </p>
+                            <p>
+                                That @import code snippet will download the font 
+                                we selected to our web page whenever anyone 
+                                views it!
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/google-fonts/07_touse2.png" 
+                                alt="Selecting the correct lines of code" 
+                            />
+                            <figcaption>
+                                Selecting the correct lines of code between the
+                                &lt;style&gt; tags.
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                However, we're not done yet.
+                            </p>
+                            <p>
+                                We've made the font available for us to use, but
+                                we haven't actually used it anywhere on the 
+                                page yet.
+                            </p>
+                            <p>
+                                To do so, look at the code field beneath the 
+                                @import one; in there, you'll find the
+                                font-family property value that you'll want to 
+                                use to apply that font to whatever element you 
+                                want to set it to.
+                            </p>
+                            <p>
+                                For instance, if you wanted to apply the "Ms Madi"
+                                font to all paragraphs on your page, you could 
+                                write something like this:
+                            </p>
+                            <code>
+                                p {
+                                <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;font-family: 'Ms Madi', cursive;
+                                <br>
+                                }
+                            </code>
+                            <p>
+                                And that's basically it! You just need to include 
+                                the @import at the top of your CSS file, and then
+                                set the font-family wherever you want to use it.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/google-fonts/08_touse3.png" 
+                                alt="The font-family property value to use" 
+                            />
+                            <figcaption>
+                                The font-family property value to use
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                But wait! There's more!
+                            </p>
+                            <p>
+                                What if you want to use more than one font from 
+                                Google Fonts?
+                            </p>
+                            <p>
+                                Well, you can do that too!
+                            </p>
+                            <p>
+                                Let's check out another font from Google Fonts
+                                called Tektur.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/google-fonts/09_newfont.png" 
+                                alt="The Tektur font" 
+                            />
+                            <figcaption>
+                                The Tektur font
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Notice that Tektur has a LOT more Styles available 
+                                for us to use, and each style has its own
+                                "Select" link to the far right.
+                            </p>
+                            <p>
+                                Let's go ahead and select the top three to see
+                                what happens.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/google-fonts/10_newfont2.png" 
+                                alt="The many Styles of Tektur" 
+                            />
+                            <figcaption>
+                                The many Styles of Tektur
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                If we jump back to our "shopping bag", we'll
+                                see that those new Styles we selected are now 
+                                in there too.
+                            </p>
+                            <p>
+                                Ms Madi is also still in there, just collapsed,
+                                so that we can focus on one font family at a time.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/google-fonts/11_newfont3.png" 
+                                alt="Our selected Tektur styles in the 'shopping bag'" 
+                            />
+                            <figcaption>
+                                Our selected Tektur styles in the "shopping bag"
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                To use these newly selected fonts, we're going 
+                                to move once again to the "Use on the web" section.
+                            </p>
+                            <p>
+                                And once again, we're going to select the @import 
+                                option, and pick the code from in between the 
+                                &lt;style&gt; tags.
+                            </p>
+                            <p>
+                                Note that the code includes references to both 
+                                Ms Madi AND the Tektur font styles we selected.
+                            </p>
+                            <p>
+                                So if you want to use multiple Google Font font 
+                                families on a web page, you don't need to have 
+                                multiple @import lines of code; as long as you
+                                have them all grouped in the same "shopping bag",
+                                you should only need one single @import line to 
+                                make them all available.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/google-fonts/12_touseagain.png" 
+                                alt="The @import code for both Ms Madi and Tektur" 
+                            />
+                            <figcaption>
+                                The @import code for both Ms Madi and Tektur
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Then, in the code beneath that, notice that we 
+                                now have two separate font-family code snippets:
+                                one for Ms Madi and one for Tektur.
+                            </p>
+                            <p>
+                                To be clear, you're never going to use them
+                                together like that.  They're only showing you
+                                examples side-by-side of how you'd use them.
+                            </p>
+                            <p>
+                                If you want to use Ms Madi in an element, then 
+                                you'd pick the <code>font-family: 'Ms Madi', cursive;</code>
+                                code snippet.
+                            </p>
+                            <p>
+                                And if you want to use Tektur in an element, then 
+                                you'd pick the <code>font-family: 'Tektur', cursive;</code>
+                                code snippet.
+                            </p>
+                            <p>
+                                And that's basically it! Just remember that none 
+                                of the font-family code above or to the right 
+                                will work unless the @import is at the top of 
+                                your code.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/google-fonts/13_touseagain2.png" 
+                                alt="The font-family code for both Ms Madi and Tektur" 
+                            />
+                            <figcaption>
+                                The font-family code for both Ms Madi and Tektur
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+            <h4>
+                Now you know how to include Google Fonts in your code!  Have fun!
+            </h4>
+        </div>
+
+        <div id="lightboxContainer">
+            <div id="lightboxBackground" class="closer"></div>
+            <img id="lightbox" src="" alt="">
+            <span id="lightboxCloser" class="closer">×</span>
+          </div>
+        <script src="../js/lightbox.js"></script>
+        <script src="../js/hideNav.js"></script>
+    </body>
+</html>

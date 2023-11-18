@@ -1,0 +1,25 @@
+/* Drill 5 - Write your code solution below */
+
+/*
+    For this one, we need to activate flexbox
+    once again, in addition to centering the
+    single flexbox item in the center (both
+    horizontally and vertically) of its 
+    container.
+
+    The nice thing about this one is, since
+    you're centering in both directions,
+    you don't actually need to remember
+    which axis justify-content and align-items
+    affect (although it would be good to).
+
+    You can just set both to center, and
+    then you'll have your flexbox content
+    centered in the middle of its container.
+*/
+
+#container-5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#navbar {
+    background: linear-gradient(to bottom, #109cb8, #0e5b96);
+    display: flex;
+    align-items: center;
+}
+
+#navbar a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 24px;
+}
+
+#navbar a:hover {
+    background: linear-gradient(to top, #109cb8, #0e5b96);
+}
+
+#navbar #logo {
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 36px;
+    padding-top: 13px;
+    padding-bottom: 12px;
+}
+
+.dropdown-container {
+    position: relative;
+}
+
+/*
+    Our issue with our "More" dropdown 
+    has to do with the positioning of the
+    .dropdown-menu element.
+
+    But we don't want to change the styles
+    for all of our dropdowns, since it's 
+    only the one on the far right that is
+    the problem.
+*/
+.dropdown-menu {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: 
+        opacity 0.25s,
+        visibility 0.25s;
+}
+
+/*
+    So instead, we're going to create a
+    new CSS rule for the .dropdown-menu,
+    that uses a new pseudo-class called
+    :last-child.
+
+    Essentially, we're going to write a
+    selector that says: "if the dropdown
+    menu is in the last dropdown container
+    (in the navbar), change the positioning
+    of the dropdown menu"
+*/
+.dropdown-container:last-child .dropdown-menu {
+    /*
+        Since all dropdown menus are positioned
+        absolutely (due to our code above),
+        we can reposition this dropdown-menu
+        using one of the side properties.
+
+        In this case, we're going to anchor the
+        dropdown menu to the right of the 
+        dropdown container, so that it's always
+        completely in view, and won't overflow.
+    */
+    right: 0px;
+}
+
+/*
+    And there we go! We should now have dropdown
+    menus that work in almost any context.
+
+    ...ALMOST any context.  
+
+    Because as some of you may have already 
+    discovered, our dropdown menus (and the 
+    navbar itself) doesn't look too great
+    if we shrink the screen down.
+
+    We need a way to code our navbars so that
+    they work on wider screens, but also
+    on narrow screens, like on phones...
+
+    ...but that's a topic for tomorrow! We're 
+    just bringing it up here so you can think
+    a bit about the issue.
+
+    We just have one last bit to add to our
+    dropdown menus for this demo today: icons!
+*/
+
+.dropdown-container:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-menu a {
+    background-color: darkslateblue;
+    width: 100%;
+    min-width: 200px;
+}
+
+#navbar .dropdown-menu a:hover {
+    background: slateblue;
+}

@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.card {
+    flex: 300px;
+    border: 3px solid black;
+    margin: 24px;
+    padding: 24px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.card a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    border: 3px solid black;
+    padding: 12px;
+    margin-top: 36px;
+}
+
+#card1:hover {
+    background-color: lightcyan;
+    box-shadow: 4px 4px 4px #00000033;
+    transform: translateY(-4px);
+}
+
+#card1 {
+    transition: 
+        background-color 0.5s,
+        box-shadow 0.5s,
+        transform 0.5s;
+}
+
+#card2 a {
+    transition: 
+        background-color 0.5s,
+        box-shadow 0.5s,
+        transform 0.5s;
+}
+
+#card2:hover a {
+    background-color: aquamarine;
+    box-shadow: 4px 4px 4px #00000033;
+    transform: translateY(-4px);
+}
+
+#card3 .card-content {
+    transition:
+        opacity 0.5s,
+        visibility 0.5s;
+}
+
+#card3:hover .card-content {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#card4 .card-content {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px); 
+    transition:
+        opacity 0.5s,
+        visibility 0.5s,
+        transform 0.5s; 
+}
+
+#card4:hover .card-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px); 
+}
+
+#card5 {
+    position: relative;
+}
+
+/*
+    Side note: I highly recommend building
+    hidden content the way we did here: 
+        - styling it in its visible state first, 
+        - then once you get it the way you want, 
+            only then writing the code to hide it
+    
+    It'll be much simpler to test compared to
+    hiding it first, and then having to keep hovering
+    over it to check your styling changes.
+
+    Anyway, now that we have things in a passable
+    state, next we'll hide the card with opacity
+    and visibility like before, in addition
+    to registering the properties we want
+    to animate.
+*/
+#card5 .card-content {
+    position: absolute;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 12px;
+    box-shadow: 4px 4px 4px #00000033;
+    left: 0px;
+    margin: 0px 24px;
+    padding: 24px;
+    
+    /* new properties */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: 
+        opacity 0.5s,
+        visibility 0.5s,
+        transform 0.5s;
+
+}
+
+/*
+    Now we add in the hover state styling, 
+    to make it appear again when we hover over it.
+*/
+#card5:hover .card-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}
+
+/*
+    At this point, our card is less of a card
+    and more of a popup trigger.
+
+    Which is a perfect segue to what we'll be
+    working on tomorrow: building dropdown 
+    menus.
+
+    Imagine having something like #card5 
+    inside one of the navbars from yesterday;
+    that's essentially how we're going to be
+    building dropdown menus.
+*/

@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif; 
+}
+
+#grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    grid-template-areas: "content sidebar";
+}
+
+#sidebar-content {
+    grid-area: sidebar;
+    padding: 18px;
+}
+
+#sidebar-content h2 {
+    background-color: darkslategray;
+    margin: 0px;
+    padding: 12px;
+    color: white;
+    font-size: 18px;
+}
+
+/*
+    Now, we need to make some changes to the 
+    unordered list (ul), as well as the stuff
+    inside of it, but let's just work one
+    element at a time.
+
+    First, let's add a background color that
+    is slightly off-white, just to add a bit
+    of contrast from the page background.
+
+    Then we'll also add a border. That gives us
+    a good idea of the space occupied by the ul.
+
+    Next let's strip off the margin of the ul as
+    well (but we're going to add our own margin
+    on the bottom for later).
+
+    Now our h2 and ul finally meet up and touch.
+
+    After that, we're going to remove the bullets, 
+    by setting list-style-type to none.
+
+    And last, we'll add a bit of padding, but
+    only on the left/right sides; it'll make
+    more sense for the children of the ul to
+    set their own top/bottom spacing later
+    (they'll just need to trust us again).
+*/
+
+#sidebar-content ul {
+    background-color: #EFEFEF;
+    border: 1px solid darkslategray;
+    margin: 0px 0px 36px; 
+    list-style-type: none;
+    padding: 0px 12px;
+}
+
+/*
+    Now our anchor text should be lined up with
+    the h2 text, so next we're going to 
+    customize them a bit, by changing their text
+    color, along with removing the underline.
+*/
+
+#sidebar-content a {
+    color: darkslategray;
+    text-decoration: none;
+}
+
+/*
+    Finally, we're going to space out the ul
+    list items a bit, and add a bit of extra 
+    flair with bottom borders to separate
+    each list item.
+*/
+
+#sidebar-content li {
+    border-bottom: 1px solid darkslategrey;
+    padding: 8px 0px;
+}
+
+/*
+    But there's a bit of a problem with that:
+    the last list item has a border-bottom,
+    but we actually don't want that on the 
+    last one; we'll end up with a double border,
+    with the li border and the ul border.
+
+    To address that, we can use an advanced 
+    little CSS selector known as a 
+    "pseudo-class".
+
+    Pseudo-classes are special selectors that
+    target elements under special conditions
+    or specific states.
+
+    The pseudo-class we're going to use is
+    called last-child, and as its name implies,
+    it will only target something if it the 
+    last child of its parent.
+
+    Pseudo-classes have their own symbol that
+    they use, just like class and id selectors.
+
+    While classes have the dot (.) and ids have
+    the hashtag (#), pseudo-classes have the
+    colon (:).
+
+    We're going to use the :last-child 
+    psuedo-class to target only the last list
+    item in the ul, and strip away its bottom
+    border, so that we don't get that double
+    bottom border.
+*/
+
+#sidebar-content li:last-child {
+    border-bottom: 0px;
+}
+
+/*
+    It's looking pretty clean! And much
+    more interesting than we had before.
+
+    Btw, try adding another h2/ul combination
+    beneath our existing one in the HTML.
+
+    Due to how we styled them, we can 
+    continue to add additional chunks of
+    content inside the sidebar, just like
+    in the Domino's example! Neat!
+
+    Now, let's just clean up the rest of
+    the page.
+*/
+
+#main-content {
+    background-color: lightgreen;
+    grid-area: content;
+}
+

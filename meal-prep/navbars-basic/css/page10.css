@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#navbar {
+    background: linear-gradient(to bottom, green, #3e6d3e);
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+#navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 24px;
+}
+
+#navbar img {
+    width: 200px;
+}
+
+#navbar #logo {
+    margin-right: auto;
+}
+
+#navbar .cta-button {
+    background-color: white;
+    color: green;
+    border-radius: 36px;
+    padding: 16px 24px;
+    font-size: 20px;
+    font-weight: bold;
+    min-width: 150px;
+    text-align: center;
+    margin-right: 24px;
+}
+
+#layout {
+    width: 800px;
+    margin: 48px auto;
+    font-size: 24px;
+    height: 200vh;
+}
+
+#header {
+    position: sticky;
+    top: 0px;
+}
+
+#navbar-bottom {
+    background: linear-gradient(to bottom, yellowgreen, olive);
+    display: flex;
+    justify-content: space-between;
+}
+
+#navbar-bottom a {
+    text-decoration: none;
+    color: white;
+    padding: 12px 36px;
+}
+
+/*
+    What if we want to add a footer? Well,
+    footer navbars are really not much different
+    from header navbars, aside from the face that
+    they're at the bottom of the page.
+
+    Let's go into our HTML and add a footer 
+    underneath our #layout div.
+
+    (Go into the HTML and do that)
+
+    Now we have some footer content. We're going
+    to style our footer navbar a bit differently
+    compared to the header navbars.
+
+    Notice how the header navbar content continues
+    to stretch and expand as the screen grows?
+
+    For some designs that may work, but generally,
+    for really wide screens, that's going to be 
+    a pain for a viewer to navigate. It's usually
+    better to have our content closer together.
+
+    So, for our footer navbars, we're going to 
+    show you how to do that.  Which actually
+    isn't anything new: we're just going to use
+    the same centered Single Column Layout
+    we used before, just inside of the footer.
+*/
+
+#footer {
+    background: linear-gradient(to bottom, teal, #01482e);
+    color: white;
+    padding: 12px;
+}
+
+#footer a {
+    text-decoration: none;
+    color: white;
+}
+
+#footer-navbar {
+    width: 800px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*
+    See, not too different from a header navbar!
+*/

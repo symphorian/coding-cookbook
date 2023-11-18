@@ -1,0 +1,26 @@
+/*
+    Remember that margin adds spacing OUTSIDE
+    of the border.
+
+    Well, now that we have some borders, let's 
+    try out the margin property to add some 
+    space between our divs.
+*/
+
+div {
+    border: 10px dashed red;
+    margin: 24px;
+}
+
+/*
+    Encourage the students to think of margin
+    as "personal space" between HTML elements.
+
+    When we set margin: 24px, we set 24px of
+    "personal space" around the elements,
+    not only between the divs, but actually
+    on all sides.
+
+    Each div is now spaced further away from
+    each other and from the edges of the page.
+*/

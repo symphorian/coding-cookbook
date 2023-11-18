@@ -1,0 +1,17 @@
+/* Drill 3 - Write your code solution below */
+
+/*
+    Now we apply the same concepts from the 
+    box drills, just with text content.
+
+    The boxes are still there, just invisible
+    without the borders.
+
+    Think of glass/plastic tupperware that is 
+    transparent; the tupperware container is 
+    still there even if it's see-through.
+*/
+
+#d3-div1 {
+    margin-bottom: 24px;
+}

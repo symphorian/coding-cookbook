@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Identifying Layout Boxes - Appetizers - The Coding Cookbook</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="../css/cookbook.css" rel="stylesheet">
+        <link href="../css/appetizer.css" rel="stylesheet">
+        <link href="../css/lightbox.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="background"></div>
+        <nav>
+            <header id="topHeader">
+                <h2 id="brand"><a href="../">The Coding Cookbook</a></h2>
+                <div id="quote"></div>
+                <div id="navLinks">
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../ingredients.html">
+                                HTML
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../ingredients.html">Elements</a></h2>
+                            <h2><a href="../ingredients-cheatsheet.html">Cheatsheet</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../seasonings.html">
+                                CSS
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../seasonings.html">Properties</a></h2>
+                            <h2><a href="../seasonings-cheatsheet.html">Cheatsheet</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../recipes.html">
+                                Layouts
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../recipes.html?category=page-layout">Page Layouts</a></h2>
+                            <h2><a href="../recipes.html?category=content-layout">Content Layouts</a></h2>
+                            <h2><a href="../recipes.html?category=navigation-layout">Navigation</a></h2>
+                            <h2><a href="../recipes.html?category=miscellaneous">Miscellaneous</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../more.html">
+                                More
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../demos.html">Class Demos</a></h2>
+                            <h2><a href="../appetizers.html">Tutorials</a></h2>
+                            <h2><a href="../troubleshooting.html">Troubleshooting</a></h2>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </nav>
+        
+        <header id="title" class="">
+            <h1>Identifying Layout Boxes</h1>
+            <h3>An example of how to break down a layout into bite-size chunks</h3>
+        </header>
+        
+        <div class="cookbookPage">
+            <p>
+                It's one thing to know how to code a web page for yourself, 
+                but quite another to know how to build out a design mockup 
+                given to you by a client.
+            </p>
+            <p>
+                Your first instinct may be to hop right into coding and try to
+                build it from top to bottom, but rarely does that work out well
+                for new developers.
+            </p>
+            <p>
+                Instead of diving into HTML and CSS, we want to encourage you to 
+                pause and analyze the layout of whatever you plan to build
+                first; understanding the layout and planning how to group 
+                content together BEFORE starting to code can save you a lot of
+                time and frustration.
+            </p>
+            <p>
+                Let's take a look at one of the projects you'll be completing
+                in this course, and see how we can identify the different 
+                groupings of content and think about the HTML element boxes 
+                they could belong to.
+            </p>
+        </div>
+        
+        <div class="cookbookPage">
+            <h2 id="part1" class="invisibleAnchorTarget"></h2>
+            <h6>Project 2</h6>
+            <h2>The Generic License</h2>
+            <h4>Your First CSS Project</h4>
+            <ol>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                For whatever reason, license layouts always seem
+                                to look awful; not sure if it's a deliberate 
+                                choice in order to make it harder to create 
+                                fakes, or they just didn't want to spend the 
+                                money to hire a good designer.
+                            </p>
+                            <p>
+                                But on the flip side, that means we're not going 
+                                to be grading too harshly on your first CSS 
+                                project, since our starting point is a pretty 
+                                low bar!
+                            </p>
+                            <p>
+                                To the right, you'll see the generic license 
+                                layout that we're aiming for.  This might look a 
+                                tad complex, but let's see how we can break this 
+                                design down into smaller pieces that will be
+                                easier to digest (mentally).
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/identifying-boxes/complete_cropped.png" 
+                                alt="A completed version of the project"
+                            >
+                            <figcaption>A completed version of the project</figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Our approach to breaking this design down is 
+                                going to be starting with the largest chunks of
+                                content, and then seeing how we can break them 
+                                down into smaller chunks.
+                            </p>
+                            <p>
+                                Our largest chunk is the entire license itself,
+                                represented by the large red box surrounding
+                                the whole license.
+                            </p>
+                            <p>
+                                Remember, every HTML Element is ultimately just 
+                                a box, which can be further broken down into the
+                                CSS Box Model components of margin, border,
+                                padding, and content.
+                            </p>
+                            <p>
+                                As a result, each box that we draw in this walkthrough will
+                                represent an HTML element.  
+                            </p>
+                            <p> 
+                                Most of the time, 
+                                the large boxes grouping big chunks of
+                                content will be &lt;div&gt; elements.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img src="images/identifying-boxes/help_01.png" alt="vscodeapp.png">
+                            <figcaption>
+                                The largest (red) box, representing the largest grouping
+                                of content
+                            </figcaption>
+                        </div>
+                        
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Next, we identify the smaller 
+                                groupings of content
+                                inside of the large red box.
+                            </p>
+                            <p>
+                                There are different ways of 
+                                breaking up the content
+                                inside, but I recommend going one line at a time
+                                down the design and applying this rule:
+                            </p>
+                            <p>
+                                <em>
+                                    If it's on its own line, 
+                                    it can get its own box.
+                                    <br>
+                                    However, if it's side-by-side 
+                                    with something else,
+                                    then that content and 
+                                    whatever it's side-by-side
+                                    with should have their own boxes (sometimes
+                                    within a larger box for the whole line).
+                                </em>
+                            </p>
+                            <p>
+                                You can see that logic applied by looking
+                                at the smaller red boxes to the right:
+                                <ul>
+                                    <li>The FLORIDA heading on the top is one box</li>
+                                    <li>And beneath that are two side-by-side boxes</li>
+                                    <ul>
+                                        <li>The larger left box with all the driver info</li>
+                                        <li>
+                                            And the smaller right box with the larger image 
+                                            and REAL-ID and donor info 
+                                        </li>
+                                    </ul>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/identifying-boxes/help_02.png" 
+                                alt="Three additional red boxes inside of the big red box" 
+                            >
+                            <figcaption>
+                                Three additional red boxes inside of the big red box,
+                                <br>
+                                showing how content can be grouped up in the HTML 
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                The top red box with FLORIDA inside can't be
+                                broken down into smaller chunks, so we'll leave
+                                that and move on to the other boxes.
+                            </p>
+                            <p>
+                                Let's tackle the left box first.
+                                <ul>
+                                    <li>
+                                        The DRIVER LICENSE text is all on its
+                                        own line, so it gets its own box.
+                                    </li>
+                                    <li>
+                                        The License No. and Expiration date are
+                                        side-by-side, but are similarly styled,
+                                        so we'll give them a single container box 
+                                        and box them separately later.
+                                    </li>
+                                    <li>
+                                        The address is not side-by-side anything,
+                                        so it can get its own box.
+                                    </li>
+                                    <li>
+                                        The final chunk has lots of side-by-side 
+                                        content, so we'll put that all in one 
+                                        container box as well, and split them 
+                                        up later.
+                                    </li>
+                                </ul>
+                            </p>
+                            <p>
+                                Now let's rinse and repeat for all the side-by-side 
+                                content in THOSE boxes!
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img src="images/identifying-boxes/help_03.png" alt="extensionssearch.png">
+                            <figcaption>
+                                Green boxes representating additional HTML Elements 
+                                inside of the left red box
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                First, we have the license number and expiration
+                                date.  Since those are side-by-side, they get their
+                                own boxes. 
+                            </p>
+                            <p>
+                                The next box with side-by-side content is the bottom
+                                green one.  This one has quite a lot going on inside
+                                of it, but again, we're only going to focus on the 
+                                groupings of content inside, and split them up one 
+                                chunk at a time.
+                            </p>
+                            <p>
+                                The image is the first chunk; that's pretty straightforward.
+                            </p>
+                            <p>
+                                You might be tempted to break up the remaining content into
+                                even smaller chunks at this point, but look closely: ALL of
+                                it is side-by-side with the image.  
+                            </p>
+                            <p>
+                                That means that ALL of
+                                it should be put into a container box next to that image.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/identifying-boxes/help_04.png" 
+                                alt="Light blue boxes representing additional content" 
+                            />
+                            <figcaption>
+                                Light blue boxes representing additional content 
+                                boxes inside of the green boxes
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Now we keep going, looking at how to break down 
+                                the content inside of the light blue box. 
+                            </p>
+                            <p>
+                                At this juncture, there's another couple ways that
+                                we could split things up.  We could give each 
+                                line of side-by-side content its own box. Or, we
+                                could group each side of the side-by-side content
+                                into its own box.  
+                            </p>
+                            <p>
+                                We're going to opt for the latter,
+                                although there's no significant difference from
+                                the former.
+                            </p>
+                            <p>
+                                Then, we finally have that signature at the bottom,
+                                and since it takes up its own line, it gets its
+                                own box.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/identifying-boxes/help_05.png" 
+                                alt="Dark blue boxes representing additional content" 
+                            />
+                            <figcaption>
+                                Dark blue boxes representing additional content 
+                                boxes inside of the light blue boxes
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Finally, we have to break up the left and right 
+                                sides of the side-by-side boxes into their own boxes.
+                            </p>
+                            <p>
+                                Again, everything that has its own line inside of
+                                the box gets its own box, so basically every field
+                                of data gets its own box.
+                            </p>
+                            <p>
+                                Technically, we should go even further, since each 
+                                field name and value have different styles. But
+                                we've pretty much ran out of space to draw more 
+                                boxes, so we'll
+                                leave that to you when you work on this!
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/identifying-boxes/help_06.png" 
+                                alt="Purple boxes representing additional content" 
+                            />
+                            <figcaption>
+                                Purple boxes representing additional content 
+                                boxes inside of the dark blue boxes
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                However, we're not done yet! Everything we've been 
+                                doing for the last few steps has only been for 
+                                the left red box; we still have the right red box
+                                to break up!
+                            </p>
+                            <p>
+                                Thankfully, there's less content in the right 
+                                side, so it will be simpler to break up.
+                            </p>
+                            <p>
+                                The image has its own line, so it gets its own 
+                                box.
+                            </p>
+                            <p>
+                                Then we have the line of side-by-side content 
+                                for the donor and REAL-ID, so they get their own
+                                box too.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/identifying-boxes/help_07.png" 
+                                alt="Green boxes representing additional content" 
+                            />
+                            <figcaption>
+                                Green boxes representing additional content 
+                                boxes inside of the right red box
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Then, we can give the donor and REAL-ID their
+                                own boxes as well, since they're side-by-side.
+                            </p>
+                            <p>
+                                And with that, we're finally done breaking up 
+                                the content into those smaller chunks.
+                            </p>
+                            <p>
+                                It may look a lot messier now, but that's 
+                                actually how the HTML is going to be structured.  
+                                Remember, every box we've drawn represents an 
+                                HTML Element container.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/identifying-boxes/help_08.png" 
+                                alt="Light blue boxes representing additional content" 
+                            />
+                            <figcaption>
+                                Light blue boxes representing additional content 
+                                boxes inside of the bottom right green box
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Now, for this project, the HTML code is already written for you.
+                            </p>
+                            <p>
+                                But that doesn't mean we went through this exercise in vain!
+                            </p>
+                            <p>
+                                If you can still "see" these boxes when you look at the design,
+                                it'll be that much easier for you to "see" their matching 
+                                HTML elements in the code.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/identifying-boxes/complete_cropped.png" 
+                                alt="Light blue boxes representing additional content" 
+                            />
+                            <figcaption>
+                                The finished license, without boxes
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                What's more, the template you'll get for the project has NO CSS 
+                                styling written for the license.  The image to the 
+                                right is what you're going to see when previewing 
+                                the template. Yikes!
+                            </p>
+                            <p>
+                                This may look pretty intimidating, but we've already 
+                                taught you the approach that will allow you to
+                                succeed:
+                            </p>
+                            <p>
+                                Style the license in the same way we broke down 
+                                the content boxes, starting with the outermost 
+                                boxes and working your way inward, 
+                                one level at a time.
+                            </p>
+                            <p>
+                                Most of the time, this will be a much easier and more 
+                                straightforward approach than doing it some other
+                                way.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/identifying-boxes/unstyled.png" 
+                                alt="Light blue boxes representing additional content" 
+                            />
+                            <figcaption>
+                                The license with no styling whatsoever
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                To begin, start by 
+                                defining the styles for the whole 
+                                license container.  
+                            </p>
+                            <p>
+                                Then set up the containers for the inner 
+                                red boxes: the FLORIDA one is a pretty basic 
+                                block container, but the ones representing the 
+                                left and right red boxes need to be placed 
+                                side-by-side, so those will probably need to be 
+                                inline-blocks.
+                            </p>
+                            <p>
+                                This will still look pretty messy at first; 
+                                just look at the image on the right for proof.
+                                But it's a small step closer. 
+                            </p>
+                            <p>
+                                Then rinse and repeat for the remaining boxes: if they get an
+                                entire line on their own, use a block element; otherwise, use 
+                                an element that you configure to be an inline-block to get them
+                                side-by-side.
+                            </p>
+                            <p> 
+                                And as you apply the styling to the boxes based 
+                                on the groupings and layout we identified earlier, 
+                                slowly but surely, you'll see that design from
+                                the mockups coming to life.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/identifying-boxes/partiallystyled.png" 
+                                alt="The license with only the outermost containers styled" 
+                            />
+                            <figcaption>
+                                The license with only the outermost box styled,
+                                <br>
+                                along with the side-by-side inner content boxes
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+            <h4>
+                Be patient with both the code and yourself, and you'll see that license
+                appear before you.
+                <br>
+                Best of luck to you!
+            </h4>
+        </div>
+
+        <div id="lightboxContainer">
+            <div id="lightboxBackground" class="closer"></div>
+            <img id="lightbox" src="" alt="">
+            <span id="lightboxCloser" class="closer">×</span>
+          </div>
+        <script src="../js/lightbox.js"></script>
+        <script src="../js/hideNav.js"></script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+#example-1 {
+    box-shadow: 8px 8px navy;
+}
+
+#example-2 {
+    box-shadow: 16px 16px 8px darkgreen;
+}
+
+#example-3 {
+    box-shadow: 16px 16px 8px 24px pink;
+}
+
+#example-4 {
+    box-shadow: -4px -4px 4px #00000033;
+}
+
+#example-5 {
+    box-shadow: inset 0px 0px 16px 4px purple;
+}
+
+.example {
+    border: 1px solid black;
+    padding: 0px 24px 8px;
+    margin: 48px;
+}
+
+#example-5.example {
+    border: 0px;
+    padding-top: 12px;
+}
+
+.example h5 {
+    margin-top: 24px;
+}
+
+.example code {
+    font-size: 14px;
+}

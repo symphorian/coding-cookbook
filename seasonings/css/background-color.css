@@ -1,0 +1,23 @@
+body {
+    background-color: lavender;
+}
+
+#pink-background {
+    background-color: #FFCCCC;
+}
+
+.highlighter {
+    background-color: yellow;
+}
+
+div p {
+    background-color: lightgreen;
+}
+
+#extra-padding {
+    padding: 24px;
+}
+
+#extra-margin {
+    margin: 24px;
+}

@@ -1,0 +1,80 @@
+/* COMMON PAGE LAYOUT SETUP CSS - START *****************/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    /* preferred copy font goes here */
+    font-family: sans-serif; 
+}
+/* COMMON PAGE LAYOUT SETUP CSS - END ********************/
+
+/*
+    To create a two column layout
+    with a left sidebar:
+    
+    Step 1 
+        Start in the HTML by creating a container 
+        element, and inside of it, put two other 
+        container elements, one for the sidebar 
+        content and one for the main page content.
+    
+    Step 2
+        Next, target the outer container element and
+        give it the following property and value: 
+        
+        display: flex;
+
+        This transforms it into a flexbox container,
+        which by default displays content in a row,
+        or in other words, side-by-side.
+
+    Step 3
+        By default, each element in a flexbox will
+        only take up the necessary space they need in 
+        a row, so we'll need to resize the sidebar
+
+        Set an explicit width on the sidebar; either
+        absolute or relative units will work, but
+        we usually want our sidebar content width
+        to be constant, so I'd recommend absolute units.
+
+    Step 4
+        Now that we have a width on the sidebar,
+        we need to resize the main content container
+        to take up the remaining space.
+
+        Flexbox makes this very simple by applying
+        the following property to that container:
+        
+        flex: 1;
+
+        That flex property is a shorthand property,
+        and by providing a number, we'll tell it to
+        take up all the remaining space.
+
+        (This gets a litte more complicated if there 
+        are other elements using the flex property,
+        but since this is the only one, we're good)
+
+    That's it! We also added background colors below 
+    so you can see the boundaries of the column boxes.
+*/
+
+#two-columns {
+    /* STEP 2 */
+    display: flex;
+}
+
+#sidebar-content {
+    background-color: lightgreen;
+    /* STEP 3 */
+    width: 250px;
+}
+
+#main-content {
+    background-color: #37d37b;
+    /* STEP 4 */
+    flex: 1;
+}

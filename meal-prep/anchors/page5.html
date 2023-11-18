@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Anchors (Links) Demo</title>
+    </head>
+    <body>
+        <a href="https://www.google.com" target="_blank">
+            Click me to go to Google's homepage
+        </a>
+        <a href="https://www.w3schools.com/" target="_blank">
+            Learn more at w3schools!
+        </a>
+        <!--
+            To separate the anchor elements, we'd either
+            have to add a line break element (<br>) between
+            them, or put them inside of a "block" element.
+
+            The latter approach is probably the more natural
+            solution, as we rarely have anchor elements just
+            floating around a web page (unless they're part
+            of some kind of navigation).
+
+            So let's create another anchor inside of a paragraph
+            element, inline with some text.
+        -->
+        <p>
+            If you want to dig REALLY deep into web dev,
+            <a 
+                href="https://developer.mozilla.org/en-US/" 
+                target="_blank"
+            >
+                visit developer.mozilla.org!
+            </a>
+        </p>
+        <!--
+            Note that because the developer.mozilla.org href
+            is rather long, we split the anchor opening tag
+            across multiple lines to keep the code clean.
+
+            This is one of the first times we've done this
+            inside of another element, but it doesn't matter;
+            the indentation rules we follow are the same.
+        -->
+    </body>
+</html>

@@ -1,0 +1,25 @@
+/*
+    In this demo, we're going to showcase two different
+    three column layouts using CSS grid; these two
+    layouts are actually really similar, but they'll
+    show that really it's just the CSS styling we use
+    that makes them feel different.
+
+    Since we're going with a three column layout, we
+    need a bit more HTML set up before we get into 
+    the CSS, mainly: 
+    
+    - a grid layout container
+        - a sidebar column
+        - a primary column
+        - another sidebar column
+
+    Note that each column has a div with an 
+    "inner-content" class inside of it, and then we
+    have the columns actual content inside of that
+    (headings and links for sidebars, copy text
+    for the primary column).
+
+    That "inner-content" class will come in handy
+    later for some interesting styling.
+*/

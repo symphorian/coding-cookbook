@@ -1,0 +1,30 @@
+/*
+    In this demo, we're going to showcase three different
+    two column layouts using flexbox, that you could 
+    potentially use for a web page.
+
+    The first will be a two column layout with equally
+    sized columns, and the latter two are layouts with 
+    sidebars, one on the left, and one on the right.
+
+    It's (still) important to have your HTML set up 
+    properly before writing a single line of CSS
+    when it comes to setting up a page layout.
+
+    Containers are an important part of any page layout,
+    but the container for this particular demo is 
+    going to be particularly important, since we're
+    going to turn it into a flexbox.
+
+    So first, we'll set up our HTML, with a single 
+    large container that'll become the flexbox, 
+    and inside of that, two smaller containers:
+    one for our sidebar content, and one for our
+    main content.
+
+    In the sidebar content, we'll add a heading
+    and a list with some links in it.
+
+    In the main content, we'll add a couple
+    headings and some paragraphs as well.
+*/

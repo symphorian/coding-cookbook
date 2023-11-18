@@ -1,0 +1,69 @@
+.absolute-heading {
+    font-size: 36px;
+}
+
+.absolute-paragraph {
+    font-size: 18px;
+}
+
+.relative-heading {
+    font-size: 5vw;
+}
+
+.relative-paragraph {
+    font-size: 2.5vw;
+}
+
+.absolute-image {
+    width: 350px;
+}
+
+.relative-image {
+    width: 100%;
+}
+
+/*
+    First, we're going to add borders to our
+    two containers to make it very clear where
+    they are and which is which.
+    
+    Then we're going to get the paragraph and
+    image side-by-side using inline-block and
+    relative units.
+
+    We're going to combine class selectors and 
+    HTML element selectors, so that we don't need
+    to add extra ids or classes to the paragraph
+    and image elements.
+
+    We're also going to use a comma to list out
+    two separate sets of selectors that share
+    the same CSS rule properties.
+*/
+
+.outer-container {
+    border: 3px solid red;
+}
+
+.inner-container {
+    border: 3px solid blue;
+}
+
+.inner-container p,
+.inner-container img {
+    display: inline-block;
+    width: 48%;
+}
+
+/*
+    If any students ask why width: 50%; doesn't work,
+    it's because that 50% currently doesnt' include
+    any margin or padding, which together would add
+    up to more than 100%, so the paragraph and image
+    would be forced to different lines.
+
+    Now, as before, stretch and squish the preview 
+    window, and notices how the paragraph and image
+    (and the containers themselves) flex to fill the
+    window, since we gave them a relative width.
+*/

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML Ingredients - The Coding Cookbook</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="css/cookbook.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <style>
+            #html {
+                margin-top: 24px;
+                padding: 24px;
+            }
+    
+            section {
+                padding-bottom: 24px;
+            }
+    
+            h3 {
+                margin-bottom: 8px;
+            }
+            h5 {
+                margin-top: 8px;
+            }
+    
+            .contentContainer {
+                display: flex;
+            }
+    
+            .content {
+                flex: 2;
+            }
+    
+            .legend {
+                flex: 1;
+            }
+    
+            .legend div:first-child {
+                padding-top: 20px;
+            }
+    
+            .code {
+                font-family: Courier New, monospace;
+                font-size: 18px;
+                line-height: 24px;
+            }
+
+            div.code {
+                background-color: white;
+                box-shadow: inset 0px 0px 8px 4px #00000033;
+                margin-bottom: 24px;
+                margin-right: 36px;
+                margin-top: 12px;
+                padding: 12px;
+                overflow: hidden;
+            }
+    
+            .indent1 {
+                padding-left: 2em;
+            }
+    
+            .indent2 {
+                padding-left: 4em;
+            }
+    
+            .openingTag,
+            .closingTag,
+            .attrName,
+            .assnOperator,
+            .attrValue,
+            .htmlParent,
+            .htmlChild,
+            .cssPropName,
+            .cssAssnOperator,
+            .cssPropValue,
+            .cssAssnTerminator,
+            .cssSelHtml,
+            .cssSelId,
+            .cssSelClass,
+            .cssDecStart,
+            .cssDecEnd
+            {
+                cursor: crosshair;
+            }
+    
+            .openingTagHighlight {
+                background-color: yellow;
+            }
+    
+            .closingTagHighlight {
+                background-color: gold;
+            }
+    
+            .attrNameHighlight {
+                color: blue;
+                font-weight: bold;
+            }
+    
+            .assnOperatorHighlight {
+                color: limegreen;
+                font-weight: bold;
+            }
+    
+            .attrValueHighlight {
+                color: red;
+                font-weight: bold;
+            }
+    
+            .htmlParentHighlight {
+                text-shadow: 1px 1px 2px purple;
+            }
+    
+            .htmlChildHighlight {
+                text-decoration: underline;
+            }
+    
+            .cssPropNameHighlight {
+                background-color: yellowgreen;
+            }
+    
+            .cssAssnOperatorHighlight {
+                background-color: skyblue;
+            }
+    
+            .cssPropValueHighlight {
+                background-color: lightgreen;
+            }
+    
+            .cssAssnTerminatorHighlight {
+                background-color: aquamarine;
+            }
+    
+            .cssSelHtmlHighlight {
+                background-color: pink;
+            }
+    
+            .cssSelIdHighlight {
+                background-color: deeppink;
+            }
+    
+            .cssSelClassHighlight {
+                background-color: lightcoral;
+            }
+    
+            .cssDecStartHighlight {
+                background-color: cyan;
+            }
+    
+            .cssDecEndHighlight {
+                background-color: darkturquoise;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="background"></div>
+        <nav>
+            <header id="topHeader">
+                <h2 id="brand"><a href="./">The Coding Cookbook</a></h2>
+                <div id="quote"></div>
+                <div id="navLinks">
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="ingredients.html">
+                                HTML
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="ingredients.html">Elements</a></h2>
+                            <h2><a href="ingredients-cheatsheet.html">Cheatsheet</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="seasonings.html">
+                                CSS
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="seasonings.html">Properties</a></h2>
+                            <h2><a href="seasonings-cheatsheet.html">Cheatsheet</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="recipes.html">
+                                Layouts
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="recipes.html?category=page-layout">Page Layouts</a></h2>
+                            <h2><a href="recipes.html?category=content-layout">Content Layouts</a></h2>
+                            <h2><a href="recipes.html?category=navigation-layout">Navigation</a></h2>
+                            <h2><a href="recipes.html?category=miscellaneous">Miscellaneous</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="more.html">
+                                More
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="demos.html">Class Demos</a></h2>
+                            <h2><a href="appetizers.html">Tutorials</a></h2>
+                            <h2><a href="troubleshooting.html">Troubleshooting</a></h2>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </nav>
+        
+        <header id="title" class="">
+            <h1>HTML Cheatsheet</h1>
+            <h3>An Interactive Refresher of HTML Concepts</h3>
+        </header>
+        
+        <div class="cookbookPage">
+            <section id="html">
+                <div class="contentContainer">
+                    <div class="content">
+                        <h3 id="html1">HTML Tags and Comments</h3>
+                        <div class="code">
+                            <div>
+                                <span>&lt;--</span> This is an HTML comment <span>--&gt;</span>
+                            </div>
+                            <br />
+                            <div>
+                                <span class="openingTag htmlParent">&lt;div&gt;</span>
+                                <span class="htmlChild">
+                                    Same line div content
+                                </span>
+                                <span class="closingTag htmlParent">&lt;&#47;div&gt;</span>
+                            </div>
+                            <br />
+                            <div><span class="openingTag htmlParent">&lt;div&gt;</span></div>
+                            <div class="indent1">
+                                <span class="htmlChild">This div has opening and closing tags</span>
+                            </div>
+                            <div class="indent1"><span class="htmlChild">on different lines.</span></div>
+                            <div><span class="closingTag htmlParent">&lt;&#47;div&gt;</span></div>
+                        </div>
+                    </div>
+                    <aside class="legend">
+                        <h3>Interactive Legend</h3>
+                        <h5>(hover over to highlight matching code)</h5>
+                        <div class="openingTag">HTML Opening Tag</div>
+                        <div class="closingTag">HTML Closing Tag</div>
+                    </aside>
+                </div>
+                <div class="contentContainer">
+                    <div class="content">
+                        <h3 id="html2">HTML Attributes and Children</h3>
+                        <div class="code">
+                            <div>
+                                <span class="openingTag htmlParent">
+                                    &lt;div
+                                    <span class="attrName">id</span><span class="assnOperator">=</span>&quot;<span class="attrValue">my-id-value</span>&quot;
+                                    <span class="attrName">class</span><span class="assnOperator">=</span>&quot;<span class="attrValue">my-class-value</span>&quot;&gt;
+                                </span>
+                            </div>
+                            <div class="indent1">
+                                <span class="htmlChild">This div has three different children
+                            </div>
+                            <div class="indent1">
+                                <span class="openingTag htmlChild">
+                                    &lt;img
+                                    <span class="attrName">src</span><span class="assnOperator">=</span>&quot;<span class="attrValue">img-src.jpeg</span>&quot;
+                                    <span class="attrName">alt</span><span class="assnOperator">=</span>&quot;<span class="attrValue">alt description</span>&quot;<span>&gt;</span>
+                                </span>
+                            </div>
+                            <div class="indent1">
+                                <span class="openingTag htmlParent htmlChild">
+                                    &lt;div
+                                    <span class="attrName">id</span><span class="assnOperator">=</span>&quot;<span class="attrValue">my-other-id-value</span>&quot;
+                                    <span class="attrName">class</span><span class="assnOperator">=</span>&quot;<span class="attrValue">my-class-value</span>&quot;&gt;
+                                </span>
+                            </div>
+                            <div class="indent2">
+                                <span class="htmlChild">This div is both a child and a parent
+                            </div>
+                            <div class="indent1"><span class="closingTag htmlParent">&lt;&#47;div&gt;</span></div>
+                            <div><span class="closingTag htmlParent">&lt;&#47;div&gt;</span></div>
+                        </div>
+                    </div>
+                    <aside class="legend">
+                        <div class="attrName">HTML Attribute Name</div>
+                        <div class="assnOperator">HTML Attribute Assignment Operator</div>
+                        <div class="attrValue">HTML Attribute Value</div>
+                        <div class="htmlParent">HTML Element Parent</div>
+                        <div class="htmlChild">HTML Element Child</div>
+                    </aside>
+                </div>
+                <div class="contentContainer">
+                    <div class="content">
+                        <h3 id="html3">Void Elements</h3>
+                        <p>Remember that void elements are HTML elements that should <em>NOT</em> have a closing tag. Every other HTML tag <em>SHOULD</em> have a closing tag.</p>
+                        <p>Here are some common void elements you will encounter in our class.</p>
+                        <div>
+                            <h4><span class="code">&lt;head&gt;</span> Elements</h4>
+                            <div class="indent1"><span class="code">&lt;link&gt;</span> - Link (to external resources)</div>
+                            <h4><span class="code">&lt;body&gt;</span> Elements</h4>
+                            <div class="indent1"><span class="code">&lt;br&gt;</span> - Line Break</div>
+                            <div class="indent1"><span class="code">&lt;hr&gt;</span> - Horizontal Rule</div>
+                            <div class="indent1"><span class="code">&lt;img&gt;</span> - Image</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script>
+            $(".openingTag").hover(
+                function() {
+                    $(".openingTag").addClass("openingTagHighlight");
+                },
+                function() {
+                    $(".openingTag").removeClass("openingTagHighlight");
+                }
+            );
+    
+            $(".closingTag").hover(
+                function() {
+                    $(".closingTag").addClass("closingTagHighlight");
+                },
+                function() {
+                    $(".closingTag").removeClass("closingTagHighlight");
+                }
+            );
+    
+            $(".attrName").hover(
+                function() {
+                    $(".attrName").addClass("attrNameHighlight");
+                },
+                function() {
+                    $(".attrName").removeClass("attrNameHighlight");
+                }
+            );
+    
+            $(".assnOperator").hover(
+                function() {
+                    $(".assnOperator").addClass("assnOperatorHighlight");
+                },
+                function() {
+                    $(".assnOperator").removeClass("assnOperatorHighlight");
+                }
+            );
+    
+            $(".attrValue").hover(
+                function() {
+                    $(".attrValue").addClass("attrValueHighlight");
+                },
+                function() {
+                    $(".attrValue").removeClass("attrValueHighlight");
+                }
+            );
+    
+            $(".htmlParent").hover(
+                function() {
+                    $(".htmlParent").addClass("htmlParentHighlight");
+                },
+                function() {
+                    $(".htmlParent").removeClass("htmlParentHighlight");
+                }
+            );
+    
+            $(".htmlChild").hover(
+                function() {
+                    $(".htmlChild").addClass("htmlChildHighlight");
+                },
+                function() {
+                    $(".htmlChild").removeClass("htmlChildHighlight");
+                }
+            );
+        </script>
+    </body>
+</html>

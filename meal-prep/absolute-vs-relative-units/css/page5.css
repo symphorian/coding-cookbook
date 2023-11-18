@@ -1,0 +1,57 @@
+.absolute-heading {
+    font-size: 36px;
+}
+
+.absolute-paragraph {
+    font-size: 18px;
+}
+
+.relative-heading {
+    font-size: 5vw;
+}
+
+.relative-paragraph {
+    font-size: 2.5vw;
+}
+
+.absolute-image {
+    width: 350px;
+}
+
+/*
+    Now we'll use a relative width for the
+    second image.
+*/
+
+.relative-image {
+    width: 100%;
+}
+
+/*
+    Resize the preview window again to show
+    how the two images behave at wide/narrow
+    widths.
+
+    The absolute image stays at the same size,
+    but notice that if its width is greater
+    than the window width, it'll overflow
+    over the edge, and you need to scroll
+    horizontally to see the rest of it 
+    (generally not good).
+
+    The relative image ALWAYS stays completely
+    visible and resizes according to the 
+    window width.  However, this may not 
+    always be best either; if the image has a
+    portrait orientation, it could end up
+    becoming VERY tall, and you won't be able 
+    to see the entire image without scrolling
+    down the page (also not good).
+
+    So, you need to be very conscious and deliberate
+    about how you want images to be displayed on 
+    your site.  Believe it or not, getting images to
+    look right on your web page at any size, whether
+    a wide desktop view or a narrow mobile view, is
+    one of the more challenging aspects of web design!
+*/

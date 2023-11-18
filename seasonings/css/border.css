@@ -1,0 +1,58 @@
+.border-style-solid {
+    border: 10px solid darkcyan;
+    height: 50px;
+}
+
+.border-style-dashed {
+    border: 10px dashed darkcyan;
+    height: 50px;
+}
+
+.border-style-dotted {
+    border: 10px dotted darkcyan;
+    height: 50px;
+}
+
+.border-style-inset {
+    border: 10px inset darkcyan;
+    height: 50px;
+}
+
+.border-style-outset {
+    border: 10px outset darkcyan;
+    height: 50px;
+}
+
+.border-style-groove {
+    border: 10px groove darkcyan;
+    height: 50px;
+}
+
+.border-style-ridge {
+    border: 10px ridge darkcyan;
+    height: 50px;
+}
+
+#combined-1 {
+    border: 10px solid coral;
+}
+
+#combined-2 {
+    border-width: 5px;
+    border-style: dashed;
+    border-color: #8888FF;
+    margin: 24px 0px;
+    padding: 24px;
+}
+
+#combined-3 {
+    border-top: 8px dotted green;
+    border-right: 8px dashed red;
+    border-bottom-color: blue;
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+}
+
+.pretty-in-pink {
+    border: 3px pink solid;
+}

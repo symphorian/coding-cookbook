@@ -1,0 +1,17 @@
+/* Drill 9 - Write your code solution below */
+
+/*
+    Now we're using that 'auto' trick again, 
+    but with actual text content in the
+    container.
+
+    The students will need to remember the
+    requirements for making this functionality
+    work: they'll need to set up the explicit
+    width for the block this time.
+*/
+
+#d9-div1 {
+    width: 250px;
+    margin: 0px auto;
+}

@@ -1,0 +1,37 @@
+.radius-one-value {
+    border-radius: 24px;
+}
+
+.radius-round {
+    border-radius: 50%;
+    text-align: center;
+}
+
+.radius-two-values {
+    border-radius: 24px 60px;
+}
+
+.radius-three-values {
+    border-radius: 24px 0px 60px;
+}
+
+.radius-four-values {
+    border-radius: 60px 0px 24px 100px;
+}
+
+.framed-image {
+    border-radius: 50%;
+    border: 16px solid #6E260E;
+    width: 250px;
+}
+
+.unframed-image {
+    border-radius: 50%;
+    width: 250px;
+}
+
+div {
+    margin-bottom: 24px;
+    border: 10px solid salmon;
+    padding: 24px;
+}

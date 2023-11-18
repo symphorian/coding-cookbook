@@ -1,0 +1,26 @@
+/* Drill 5 - Write your code solution below */
+
+/*
+    This last drill is a little challenging.
+
+    The goal is to show them how padding
+    on child elements can be used to "puff up"
+    the container element.
+
+    However, the trick here is that inline
+    elements don't respect vertical spacing
+    (padding in this case).
+
+    So they'll need to convert the spans into
+    inline-block elements before their padding
+    will behave the way they need it to.
+*/
+
+#d5-container-1 {
+    text-align: center;
+}
+
+.d5-s {
+    display: inline-block;
+    padding: 24px;
+}

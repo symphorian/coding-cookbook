@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#hero-5 {
+    background-image: url("../images/desert-tumbleweed.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#hero-5 .hero-content {
+    text-align: right;
+    color: rgb(2, 2, 2);
+    padding: 5vh 8vw;
+}
+
+#hero-5 h2 {
+    font-size: 6vw;
+    margin-bottom: 3vh;
+}
+
+#hero-5 h4 {
+    font-size: 3vw;
+}
+
+.spacer {
+    height: 100vh;
+}

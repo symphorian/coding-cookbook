@@ -1,0 +1,37 @@
+#navbar {
+    text-align: center;
+    padding: 24px;
+    background-color: blue;
+}
+
+#navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+/*
+    Now, let's suppose our client also
+    wants the hyperlinks in the "normal"
+    text to be teal instead of blue.
+
+    How would we target ONLY the anchors
+    inside of the paragraph elements?
+
+    Same approach as before (using a space), 
+    just with different selectors.
+*/
+
+p a {
+    color: teal;
+}
+
+/*
+    In this case, we're just using two HTML
+    Element Selectors: p for paragraph, and
+    a for anchor.
+
+    Because the two are separated by a space,
+    and p is on the left and a is on the right,
+    we're looking for anchors (a) that are inside
+    (aka children of) paragraphs (p).
+*/

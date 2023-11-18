@@ -1,0 +1,16 @@
+/* Drill 3 - Write your code solution below */
+
+/*
+    Similar ideas as the previous drills, only
+    we're giving different sets of padding
+    values to different containers.
+*/
+
+#d3-div-1,
+#d3-div-3 {
+    padding: 12px;
+}
+
+#d3-div-2 {
+    padding: 12px 48px;
+}

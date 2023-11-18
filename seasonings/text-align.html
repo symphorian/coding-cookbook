@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>text-align Property</title>
+        <link href="css/text-align.css" rel="stylesheet" data-seasoning>
+        <link href="css/shared.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="recipe-example">
+            <h4>Basic Code Snippets</h4>
+            <code>text-align: left;</code>
+            <br>
+            <code>text-align: center;</code>
+            <br>
+            <code>text-align: right;</code>
+        </div>
+        <h4>Additional Examples</h4>
+        <p>
+            The text-align property allows us to align content 
+            within an element. (Contrary to what the name 
+            implies, this property will allow you to align 
+            any inline content inside of a container, including
+            elements like images)
+        </p>
+
+        <h4>Example of <code>text-align: left;</code></h4>
+        <p class="left-align example">
+            This text is left-aligned (the default alignment).
+        </p>
+
+        <h4>Example of <code>text-align: center;</code></h4>
+        <p class="center-align example">
+            This text is center-aligned.
+        </p>
+
+        <h4>Example of <code>text-align: right;</code></h4>
+        <p class="right-align example">
+            This text is right-aligned.
+        </p>
+
+        <p>
+            It's very important to remember that if you want 
+            to use text-align, it must be set on the CONTAINER 
+            of the content you want shifted left, center, or 
+            right, not on the content itself.
+        </p>
+        <p>
+            That easy enough to remember with paragraph
+            elements, but what if we have a div element 
+            with an img element inside?
+        </p>
+        <p>
+            On which element do we set text-align on?
+        </p>
+        <p>
+            Let's try both, and see what happens.
+        </p>
+
+        <h4>text-align set on the img element</h4>
+        <div class="example">
+            <img 
+                src="images/egypt-kitty.webp"
+                alt="cleopawtra"
+                width="100"
+                class="center-align"
+            >
+        </div>
+
+        <h4>text-align set on the div element</h4>
+        <div class="center-align example">
+            <img 
+                src="images/egypt-kitty.webp"
+                alt="cleopawtra"
+                width="100"
+            >
+        </div>
+        <p>
+            And the winner is...the div element!
+        </p>
+        <p>
+            And that makes sense, because the 
+            text-align property only aligns content 
+            WITHIN the element it is set on.  It doesn't 
+            tell an element how to align itself.
+        </p>
+        
+        <div class="resources">
+            <h4>Additional Resources</h4>
+            <a 
+                href="https://www.w3schools.com/cssref/pr_text_text-align.php"
+                target="_blank"
+            >
+                w3schools 
+            </a>
+            <br>
+            <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align"
+                target="_blank"
+            >
+                mdn web docs
+            </a>
+        </div>
+    </body>
+</html>

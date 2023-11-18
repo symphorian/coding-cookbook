@@ -1,0 +1,44 @@
+/* COMMON PAGE LAYOUT SETUP CSS - START *****************/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    /* preferred copy font goes here */
+    font-family: sans-serif; 
+}
+/* COMMON PAGE LAYOUT SETUP CSS - END ********************/
+
+/*
+    To create a single column layout
+    with a right-aligned column:
+    
+    Step 1 
+        Start by setting an explicit width.
+        Either absolute or relative units are fine
+        (although you'll probably also want to set
+        a min-width if using relative units,
+        as we do below).
+
+    Step 2
+        Next, set a margin-left value of auto.
+        This will tell the element to shift all
+        of the available empty space to the 
+        left margin, effectively pushing the 
+        content to the right.
+
+    That's it! We also added a background color 
+    below so you can see the boundaries of the column.
+*/
+
+.center-column {
+    background-color: lightblue;
+
+    /* Step 1 */
+    width: 50%; 
+    min-width: 500px;
+
+    /* Step 2 */
+    margin-left: auto;
+}

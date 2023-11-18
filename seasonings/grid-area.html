@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>grid-area Property (Grid)</title>
+        <link href="css/grid-area.css" rel="stylesheet" data-seasoning>
+        <link href="css/shared.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="recipe-example">
+            <h4>Basic Code Snippets</h4>
+            <code>
+                grid-area: area-1;
+            </code>
+            <br>
+            <code>
+                grid-area: header;
+            </code>
+            <br>
+            <code>
+                grid-area: name-of-area;
+            </code>
+        </div>
+        <h4>Additional Examples</h4>
+        <p class="warning">
+            NOTE: The grid-area property is a 
+            <strong>Grid Item Property</strong>.
+            <br>
+            <br>
+            This property will have no effect if applied to
+            an element that is not <strong>INSIDE</strong> 
+            an activated Grid Container (i.e. has 
+            <code><strong>display: grid;</strong></code>
+            applied to it)
+        </p>
+        <p>
+            The grid-area property assigns a grid area to
+            a Grid Item inside of a Grid Container.
+        </p>
+        <p>
+            The grid-area property will only
+            have an effect if used on Grid Items inside of a
+            Grid Container with grid-template-areas set on it.
+        </p>
+        <p>
+            And even then, if the area name given to grid-area 
+            doesn't match up EXACTLY to a corresponding area 
+            in its Grid Container's grid-template-areas property,
+            grid-area will have no effect.
+        </p>
+        <p>
+            If you do not know how the grid-template-areas 
+            property works, it is strongly recommended you 
+            read up on it next if you intend to use
+            grid-area!
+        </p>
+
+        <h4>An Analogy: Rooms of a House</h4>
+        <p>
+            As the grid-area property works in tandem with the 
+            grid-template-areas property, we will the same 
+            analogy we used to describe that property as well.
+            
+        </p>
+        <p>
+            It may help to think of this property as enabling
+            you to map out the rooms of a house.  
+        </p>
+        <p> 
+            When the 
+            house is empty, you can think "alright, this 
+            room is going to be the living room, this room 
+            is going to be a bedroom, this room is going to 
+            be a dining room..." and so on.
+        </p>
+        <p>
+            Then, based on those room designations, you start 
+            filling the rooms with furniture that fits the 
+            room type you decided on.
+        </p>
+        <p>
+            When you decide that "this room is going to be the 
+            bedroom", that is more or less the equivalent of 
+            setting the grid-area property on a Grid Item 
+            inside of a Grid Container.
+        </p>
+        <p>
+            Then whatever is inside of that Grid Item becomes 
+            the "furniture" in that area of the Grid Container's 
+            grid-template-areas property.
+        </p>
+
+        <h4>Example</h4>
+        <p>
+            We'll use the same example that we used in the 
+            grid-template-areas property entry in the Coding 
+            Cookbook, just focusing more on the grid-area side.
+        </p>
+        <p>
+            Suppose we want a grid layout with empty gutters on the 
+            sides, along with a header, a sidebar, and two content 
+            areas.
+        </p>
+
+        <p>
+            That might look something like this, using 
+            grid-template-areas:
+        </p>
+
+        <h4>
+            <code>
+                grid-template-areas: 
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;". <span class="header-color">header</span> <span class="header-color">header</span> ."
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;". <span class="sidebar-color">sidebar</span> <span class="content-1-color">content-1</span> ."
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;". <span class="sidebar-color">sidebar</span> <span class="content-2-color">content-2</span> .";
+            </code>
+        </h4>
+
+        <p>
+            The code to assign these areas to the Grid Items 
+            inside of the Grid Container with that 
+            grid-template-areas code would look something like this
+            (with highlights matching areas above with those below):
+        </p>
+
+        <h4>
+            <code>
+                .header-sidebar-layout .box-a {
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;grid-area: <span class="header-color">header</span>;
+                <br>
+                }
+                <br><br>
+                .header-sidebar-layout .box-b {
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;grid-area: <span class="sidebar-color">sidebar</span>;
+                <br>
+                }
+                <br><br>
+                .header-sidebar-layout .box-c {
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;grid-area: <span class="content-1-color">content-1</span>;
+                <br>
+                }
+                <br><br>
+                .header-sidebar-layout .box-d {
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;grid-area: <span class="content-2-color">content-2</span>;
+                <br>
+                }
+                <br>
+            </code>
+        </h4>
+
+        <p>
+            Remember that the area names given to grid-area 
+            must match EXACTLY with the names used in 
+            grid-template-area; even one small case difference 
+            like <i>Area</i> vs. <i>area</i> will break the
+            connection between them.
+        </p>
+
+        <p>
+            Let's take a look at how a grid like this would look 
+            before and after we define grid-template-areas and
+            assign them to the Grid Items (A, B, C, and D).
+        </p>
+
+        <h4>Before</h4>
+        <div class="grid-container four-columns">
+            <div class="box box-a">A</div>
+            <div class="box box-b">B</div>
+            <div class="box box-c">C</div>
+            <div class="box box-d">D</div>
+        </div>
+        <br>
+
+        <h4>After</h4>
+        <div class="grid-container four-columns header-sidebar-layout">
+            <div class="box box-a">A</div>
+            <div class="box box-b">B</div>
+            <div class="box box-c">C</div>
+            <div class="box box-d">D</div>
+        </div>
+        <br>
+
+        <p>
+            As you can see, we've completely reorganized the Grid
+            Items using grid-template-areas! Let's look at those 
+            areas we defined again to see how they match up with 
+            the result above (we added a little extra formatting 
+            to the code so they line up more nicely):
+        </p>
+
+        <h4>
+            <code>
+                grid-template-areas: 
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;". <span class="header-color">header</span> <span class="header-color">header</span> ."
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;". <span class="sidebar-color">sidebar</span> <span class="content-1-color">content-1</span> ."
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;". <span class="sidebar-color">sidebar</span> <span class="content-2-color">content-2</span> .";
+            </code>
+        </h4>
+
+        <p>
+            See how our grid-template-areas property is basically 
+            the textual, visual representation of how our Grid 
+            Items look once they're plugged in?
+        </p>
+        <p>
+            A is the header, B is the sidebar, C is content-1, 
+            D is content-2, and the dots represent the empty gutters
+            on the left and right sides of the Grid Items.
+        </p>
+        <p>
+            And that is due to the code we looked at above, assigning 
+            those areas into the Grid Items (again, with matching highlights):
+        </p>
+        <h4>
+            <code>
+                .header-sidebar-layout .box-a {
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;grid-area: <span class="header-color">header</span>;
+                <br>
+                }
+                <br><br>
+                .header-sidebar-layout .box-b {
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;grid-area: <span class="sidebar-color">sidebar</span>;
+                <br>
+                }
+                <br><br>
+                .header-sidebar-layout .box-c {
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;grid-area: <span class="content-1-color">content-1</span>;
+                <br>
+                }
+                <br><br>
+                .header-sidebar-layout .box-d {
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;grid-area: <span class="content-2-color">content-2</span>;
+                <br>
+                }
+                <br>
+            </code>
+        </h4>
+        <p>
+            Now just imagine how powerful this becomes when we put 
+            actual content inside the grid, and not just empty 
+            boxes!
+        </p>
+
+        
+
+        <div class="resources">
+            <h4>Additional Resources</h4>
+            <a 
+                href="https://www.w3schools.com/cssref/pr_grid-area.php"
+                target="_blank"
+            >
+                w3schools 
+            </a>
+            <br>
+            <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-area"
+                target="_blank"
+            >
+                mdn web docs
+            </a>
+        </div>
+    </body>
+</html>

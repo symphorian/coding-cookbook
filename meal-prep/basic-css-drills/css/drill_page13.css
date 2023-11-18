@@ -1,0 +1,36 @@
+/* Drill 13 - Write your code solution below */
+
+/*
+    Now we're combining together many of the
+    properties we just practiced.
+
+    The goal here is to recreate a frequently
+    used combination of heading elements,
+    without actually using heading elements.
+
+    This is a good thing to point out, that
+    if you want to make something look like a 
+    heading, you can change its appearance.
+
+    On the flip side, if you don't like how
+    a heading looks, you can change that too
+    with CSS.
+*/
+
+#d13-div1 {
+    text-align: center;
+}
+
+#d13-div2 {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#d13-div3 {
+    font-size: 48px;
+}
+
+#d13-div4 {
+    font-size: 24px;
+    font-style: italic;
+}

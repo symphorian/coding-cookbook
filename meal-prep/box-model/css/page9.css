@@ -1,0 +1,49 @@
+div {
+    border: 10px dashed red;
+    margin: 24px 0px;
+    padding: 24px 36px;
+    background-color: lightcoral;
+}
+
+/*
+    Another point we want to reinforce is that
+    this Box Model applies to EVERY HTML element,
+    not just div elements.
+
+    Add a paragraph below your three divs, and
+    give it its own lorem ipsum.
+
+    Then add a paragraph selector below, and
+    give it a different set of border, margin,
+    and padding properties.
+*/
+
+p {
+    border: 20px dotted blue;
+    margin: 60px;
+    padding: 48px 60px;
+    background-color: cornflowerblue;
+}
+
+/*
+    See? They all still work and apply just like 
+    on the div elements.
+
+    The only difference is: some elements,
+    like the paragraph element, may have some 
+    Box Model properties assigned by default.
+
+    For example, the paragraph element has top
+    and bottom margin included already when you
+    add it to the page, without having to write
+    any CSS.
+
+    So what we did up above was actually 
+    overwrite those margin settings and 
+    customized them to how we wanted them.
+
+    Most of web design is doing exactly that:
+    reconfiguring the default styling of 
+    HTML elements so that they look the way
+    that we (or our clients) want them to look.
+*/

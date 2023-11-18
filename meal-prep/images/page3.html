@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Images Demo</title>
+    </head>
+    <body>
+        <!--
+            The second issue, depending on the resolution of the 
+            image you chose, is you might have an ENORMOUS image 
+            on your page. As in, so large that it overflows off 
+            the edge of the page.
+
+            We can address that by adding a width attribute to 
+            the image, which accepts a number that it interprets
+            in pixels. (Note that this is a temporary fix;
+            once we learn CSS, that will be the preferred
+            way to set the image width and height.)
+
+            But if we add a width attribute to the same line,
+            it's going to be way off the edge of the code
+            editor window, which is also pretty dirty code,
+            since anyone else reading the code wouldn't
+            know we added that to the end.
+
+            We can't fix the image src dirty code issue, but 
+            thankfully we can address this issue by splitting 
+            the image tag and attributes across multiple lines.
+
+            We do this in a similar way as we split up 
+            elements across multiple lines, as seen below.
+            (Feel free to pick whatever width value works for you.)
+        -->
+        <img 
+            src="https://i.guim.co.uk/img/media/26392d05302e02f7bf4eb143bb84c8097d09144b/446_167_3683_2210/master/3683.jpg?width=1200&quality=85&auto=format&fit=max&s=a52bbe202f57ac0f5ff7f47166906403"
+            width="500"
+        >
+        <!--
+            Notice how each attribute has its own line now,
+            in addition the combination of the opening
+            triangle bracket and element name (<img)
+            and the closing triangle bracket (>).
+
+            Also notice how the attributes are indented one
+            level to the right of the beginning and ending
+            parts of the opening tag.
+
+            That keeps our code nice and clean, while
+            also being clear that each attribute with its
+            own line "belongs" to the tag it's inside of,
+            thanks to the indentation.
+
+            And of course, now that we've added the width
+            attribute, our image is resized to a much more
+            manageable size. 
+        -->
+    </body>
+</html>

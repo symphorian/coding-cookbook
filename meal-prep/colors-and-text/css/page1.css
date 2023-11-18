@@ -1,0 +1,22 @@
+/*
+    Next we're going to write some CSS...
+    or at least, we'd like to, but first
+    we need to create a separate file
+    (called a stylesheet) to hold our
+    CSS code.
+
+    This approach is referred to as using
+    "External CSS"; other approaches include
+    "Internal CSS" and "Inline CSS", which
+    have their place in web development, but
+    the most commonly used approach is 
+    definitely External CSS, so it is the
+    approach we're teaching in this course.
+
+    In the /css folder of your duplicated
+    code skeleton project folder, 
+    create a new file called 'style.css'; 
+    the name can really be whatever you want, 
+    as long as it matches the code we're 
+    about to write next in the HTML.
+*/

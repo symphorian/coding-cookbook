@@ -1,0 +1,20 @@
+/* Drill 3 - Write your code solution below */
+
+/*
+    Similar challenge as Drill 2, but this
+    time they have to use separate colors.
+
+    Because of this, they also can't share
+    the CSS properties with multiple elements
+    in a single rule.
+*/
+
+#d3-s1 {
+    color: red;
+}
+#d3-s4 {
+    color: goldenrod;
+}
+#d3-s6 {
+    color: blue;
+}

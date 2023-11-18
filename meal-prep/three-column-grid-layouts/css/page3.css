@@ -1,0 +1,96 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif; 
+    background-color: #1f1f1f;
+    color: #EEEEEE;
+}
+
+#grid-layout {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+}
+
+/*
+    Now that we have our layout settled,
+    let's start sprucing things up a bit.
+
+    First we'll target the headings, and give
+    them a bottom border to separate them from
+    the content below them, along with a hint
+    of extra bottom padding.
+
+    BUT! We'll only target the ones in the 
+    sidebars; after all, we may not want that
+    style for headings elsewhere on the page.
+*/
+#sidebar-column-1 h2,
+#sidebar-column-2 h3 {
+    border-bottom: 2px solid #AAAAAA;
+    padding-bottom: 8px;
+}
+
+/*
+    Looking better already!
+
+    Now let's remove the bullets from the ul,
+    strip its default padding away, and 
+    slightly modify the padding of the list
+    items inside them (again, only from the
+    ul and li inside the sidebars).
+*/
+#sidebar-column-1 ul,
+#sidebar-column-2 ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+#sidebar-column-1 ul li,
+#sidebar-column-2 ul li {
+    list-style-type: none;
+    padding: 4px 0px;
+}
+
+/*
+    Next, we'll tackle that garish blue color
+    in the anchor text; we'll make it the
+    same light color as our text, and also
+    strip off the underline via text-decoration.
+*/
+#sidebar-column-1 ul a,
+#sidebar-column-2 ul a {
+    color: #EEEEEE;
+    text-decoration: none;
+}
+
+/*
+    Much cleaner looking!  Now we just need to 
+    add some extra space around the sidebars,
+    because they're flush up against the 
+    primary column and the edges of the page.
+
+    We'll address that by adding margin to the 
+    sidebars: left for the left, and right for
+    the right.
+*/
+
+#sidebar-column-1 {
+    margin-left: 24px; /* new */
+}
+
+#primary-column {
+    
+}
+
+#sidebar-column-2 {
+    margin-right: 24px; /* new */
+}
+
+/*
+    We still have the primary column to deal
+    with, and we'll tackle that next.
+*/

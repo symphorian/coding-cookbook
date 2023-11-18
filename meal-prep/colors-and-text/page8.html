@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Colors and Text Styling Demo</title>
+        <link href="css/page8.css" rel="stylesheet" data-meal-prep>
+    </head>
+    <body>
+        <p id="first-paragraph">
+            Lorem ipsum dolor, sit amet consectetur 
+            adipisicing elit. Id quasi quia ullam 
+            magnam quo sit accusantium itaque mollitia 
+            ad laboriosam iusto incidunt omnis quos 
+            earum ipsa sint, nobis tenetur eum.
+        </p>
+        <p id="second-paragraph">
+            Lorem ipsum dolor sit amet consectetur 
+            adipisicing elit. Illum ut ratione in 
+            optio assumenda? Eligendi, esse. Labore 
+            deleniti debitis, dolorem ea velit, 
+            dignissimos numquam laudantium consequatur 
+            dolorum dicta non delectus.
+        </p>
+        <p id="bold-paragraph">
+            Lorem ipsum dolor sit amet consectetur 
+            adipisicing elit. Quos soluta numquam 
+            cupiditate praesentium eum, ullam 
+            consequatur corporis minima! Expedita 
+            dicta aut ea asperiores doloremque 
+            dolorum molestiae cumque accusamus? 
+            Laboriosam, enim.
+        </p>
+        <!--
+            There's nothing "wrong" with the way we used
+            our CSS to target the paragraphs above, but
+            many of the CSS properties we've been learning
+            are usually only applied to small parts of 
+            text that we want to emphasize or draw attention
+            to (like bold, italics, and underlines).
+
+            So, let's introduce a new element that will
+            allow us to target individual chunks of text
+            WITHIN a paragraph.
+
+            Create a new paragraph element (no id) and
+            add the usual lorem ipsum inside.
+
+            Then "wrap" some of that text in a new element
+            (meaning, put the text within the opening and
+            closing tags of the new element) called a span 
+            (<span>), and give each span a unique id.
+        -->
+        <p>
+            <span id="span1">Lorem ipsum dolor</span>
+            sit amet consectetur adipisicing elit. 
+            <span id="span2">Repellat ex perspiciatis</span> 
+            deleniti! Illum impedit laudantium quaerat 
+            <span id="span3">nisi veritatis deleniti,</span>
+            optio sint fuga inventore nemo tenetur amet, 
+            <span id="span4">
+                corrupti quos dolorum reiciendis!
+            </span>
+        </p>
+        <!--
+            Span elements follow the same rules of indentation
+            as everything else in HTML.
+
+            But notice how, despite the fact that we added all
+            these new elements in the paragraph, nothing seems
+            to have changed visually.
+
+            That's because span elements are "inline" elements,
+            something we'll be learning more about later. To 
+            simplify it, inline elements live side-by-side with
+            text and other inline content.
+
+            These spans we added won't have any visual difference
+            until we target them with CSS.
+        -->
+    </body>
+</html>

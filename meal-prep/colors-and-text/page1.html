@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Colors and Text Styling Demo</title>
+        <!--
+            After creating the new CSS file, we need to 
+            link it to this HTML file; to do so, we 
+            use a new element called a link <link>
+            (distinct from the anchor <a> element, 
+            which is often referred to as a link.)
+
+            The <link> element is one of those special 
+            "Void Elements" that should not have a 
+            closing tag.
+
+            There are two attributes we MUST include
+            in the link element: href and rel
+
+            The href attribute should be somewhat familiar
+            at this point, since we used it in anchor 
+            elements (aka hyperlinks); similar to how we
+            used it with anchors, we provide a file path
+            that points to where the file that we want to 
+            load is at.
+
+            In this case, we specify "css/style.css",
+            telling the document to look in the
+            "css" folder for the file called "style.css".
+
+            The rel attribute (short for relationship)
+            defines the relationship between the linked
+            resource and the current document.  In this
+            case, we want to provide the value "stylesheet",
+            since the file we're linking to is a
+            CSS stylesheet.
+
+            You MUST include the rel attribute with the
+            value "stylesheet", or else your CSS will
+            not be applied to your HTML document.
+        -->
+        <link href="css/page1.css" rel="stylesheet" data-meal-prep>
+        <!--
+            (Ignore the file name in these demo files,
+            just use style.css in your demo for the students.
+            These Meal Prep demos use separate files to
+            break up the different parts of the demos for you,
+            so we need different file names for each.)
+
+            (Also ignore the 'data-meal-prep' attribute in
+            your demo for the students; this is just a
+            custom attribute to configure how the code
+            loads in the "Meal Prep" demo site)
+        -->
+    </head>
+    <body>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur 
+            adipisicing elit. Id quasi quia ullam 
+            magnam quo sit accusantium itaque mollitia 
+            ad laboriosam iusto incidunt omnis quos 
+            earum ipsa sint, nobis tenetur eum.
+        </p>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+/* Drill 3 - Write your code solution below */
+
+/*
+    Now we're getting a little creative, 
+    showing how we can use borders on a single
+    side in order to replicate something like
+    a horizontal rule (<hr>) element.
+
+    This should hopefully make them think back
+    to the Wiki Page assignments, where they had
+    to use <hr> elements under the headings,
+    which didn't look quite the same as the
+    actual page.
+
+    Now, with this appropach we have control
+    over the width, line type, and color 
+    (the padding as well, but this drill set
+    isn't about padding).
+*/
+
+#d3-h2-1 {
+    border-bottom: 2px solid black;
+}

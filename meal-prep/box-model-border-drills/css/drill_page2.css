@@ -1,0 +1,14 @@
+/* Drill 2 - Write your code solution below */
+
+/*
+    Now we're checking to see if they remember
+    how to use the different border styles.
+*/
+
+#d2-p1 {
+    border: 10px dotted red;
+}
+
+#d2-p2 {
+    border: 5px dashed green;
+}

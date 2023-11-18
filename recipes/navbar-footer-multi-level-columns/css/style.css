@@ -1,0 +1,54 @@
+/*
+    basic page layout setup
+*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+/*
+    Footer setup and configuration
+*/
+#footer {
+    background: linear-gradient(to bottom, teal, #01482e);
+    color: white;
+    padding: 12px;
+}
+
+#footer a {
+    text-decoration: none;
+    color: white;
+}
+
+#footer-navbar {
+    width: 800px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer-columns-navbar {
+    width: 800px;
+    margin: 0px auto;
+    padding: 48px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer-columns-navbar a {
+    display: block;
+    padding: 8px 0px;
+}
+
+/*
+    Layout setup and configuration
+*/
+#layout {
+    width: 800px;
+    margin: 48px auto;
+    font-size: 24px;
+}

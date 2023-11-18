@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif; 
+}
+
+#grid-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-areas: 
+        "header header"
+        "sidebar main";
+}
+
+#header {
+    grid-area: header;
+    padding: 0px 36px;
+}
+
+#sidebar {
+    grid-area: sidebar;
+    padding: 0px 24px;
+}
+
+#main {
+    background-color: lightgoldenrodyellow;
+    grid-area: main;
+}
+
+#header a {
+    text-decoration: none;
+}
+
+#header #me {
+    color: #111111;
+}
+
+#header #tube {
+    color: white;
+    background-color: red;
+    padding: 4px;
+    border-radius: 12px;
+}
+
+#sidebar ul {
+    padding: 12px 0px;
+    margin: 0px;
+    list-style-type: none;
+    border-bottom: 1px solid #AAAAAA
+}
+
+
+#sidebar ul a {
+    text-decoration: none;
+    color: #111111;
+    display: block;
+    padding: 12px;
+}
+
+/*
+    Now, because of the changes we made to our
+    anchors, when you hover over the lines of each 
+    hyperlink you should see the cursor change
+    into the pointer icon, indicating the
+    whole line is clickable.
+
+    But, one difference between our MeTube page
+    and the YouTube page is that their navigation
+    elements have hover states; we haven't taught
+    you how to do that yet.
+
+    So, let's show you how to style hover states!
+
+    Remember the other day when we introduced
+    pseudo-class selectors (:last-child)?
+
+    Well, there's another one we can use for this
+    purpose, called :hover 
+
+    When you target an element and tack that on to
+    the end, you can customize how the element
+    looks when you hover over it!
+*/
+
+#sidebar ul a:hover {
+    background-color: #EEEEEE;
+    border-radius: 12px;
+}
+
+/*
+    This hover state is actually the reason why we 
+    didn't have our sidebar padding match the header
+    padding.
+
+    Notice how when we hover over them, the hover
+    state background includes the padding?
+
+    If we didn't include side padding on those anchors,
+    they would look kinda weird when we hovered over them.
+    (briefly change the padding on the anchors to
+        padding: 12px 0px;
+    see how they look kinda strange?)
+
+    But if we had the same padding on the sidebar as
+    the header, then those anchors would be shifted 
+    off to the side and wouldn't look aligned with
+    the header.
+
+    Styling issues like these are rarely apparent when
+    you start designing a page layout; oftentimes they
+    only come up as you're building it, and that's okay!
+*/

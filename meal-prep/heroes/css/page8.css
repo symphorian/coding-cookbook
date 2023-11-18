@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#hero-1 {
+    background-image: url("../images/lizard.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#hero-1 h1 {
+    font-size: 15vw;
+    padding-left: 10vw;
+}
+
+/*
+    We have one last little trick regarding
+    backgrounds to show you.
+
+    Remember these little spacers, that had
+    no real point but to add space?
+
+    We'll they're still going to do that,
+    but we're gonna make them a bit fancier.
+
+    We're going to give them a background-image,
+    but we're also going to use a neat property
+    called background-attachment, and give it 
+    a value of fixed.
+
+    Watch what happens when we scroll up and 
+    down the page now...
+*/
+
+.spacer {
+    height: 50vh;
+    
+    /* these are the new properties we're adding */
+    background-image: url("../images/emerald-seas.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*
+    The background for all our spacers becomes
+    "fixed", as in stuck and unmovable. This
+    has the effect of making it appear our heroes
+    are floating over the background image used
+    in the spacers.
+
+    This is commonly known as a "parallax" effect
+    in web design, and is a popular style to 
+    incorporate into heroes as well as other forms
+    of content.
+
+    That wraps up this demo!
+*/
+
+#hero-2 {
+    background-image: url("../images/lonely-ocean.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: flex-end;
+}
+
+
+#hero-2 h2 {
+    font-size: 8vw;
+    margin-bottom: 5vh;
+    margin-right: 5vw;
+}
+
+#hero-2 h4 {
+    font-size: 3vw;
+    margin: 0px 5vw 0px 0px;
+}
+
+#hero-2 a {
+    font-size: 1.5vw;
+    display: inline-block;
+    background-color: #333333;
+    color: white;
+    text-decoration: none;
+    padding: 24px;
+    margin: 5vh 5vw 10vh 0px;
+}
+
+#hero-3 {
+    background-image: url("../images/orange-wildflowers.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+
+#hero-3 .hero-content {
+    position: absolute;
+    top: 10%;
+    left: 15%;
+}
+
+#hero-3 h2 {
+    font-size: 8vw;
+    margin-bottom: 5vh;
+    margin-right: 5vw;
+}
+
+#hero-3 h4 {
+    font-size: 3vw;
+    margin: 0px 5vw 0px 0px;
+}
+
+#hero-3 a {
+    font-size: 1.5vw;
+    display: inline-block;
+    background-color: #333333;
+    color: white;
+    text-decoration: none;
+    padding: 24px;
+    margin: 5vh 5vw 10vh 0px;
+}
+
+#hero-4 {
+    background-image: url("../images/stars-on-velvet.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#hero-4 .hero-content {
+    text-align: center;
+    color: white;
+    padding-top: 20vh;
+}
+
+
+#hero-4 h2 {
+    font-size: 8vw;
+    margin-bottom: 5vh;
+    margin-right: 5vw;
+}
+
+#hero-4 h4 {
+    font-size: 3vw;
+    margin: 0px 5vw 0px 0px;
+}
+
+#hero-4 a {
+    font-size: 1.5vw;
+    display: inline-block;
+    background-color: white;
+    color: #333333;
+    text-decoration: none;
+    padding: 24px;
+    margin: 5vh 5vw 10vh 0px;
+}

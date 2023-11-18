@@ -1,0 +1,40 @@
+.padding-one-value {
+    padding: 24px;
+}
+
+.padding-zero {
+    padding: 0px;
+}
+
+.padding-two-values {
+    padding: 24px 48px;
+}
+
+.padding-three-values {
+    padding: 24px 8px 60px;
+}
+
+.padding-four-values {
+    padding: 60px 8px 24px 100px;
+}
+
+.padding-individual {
+    padding-top: 48px;
+    padding-right: 24px;
+    padding-left: 24px;
+    padding-bottom: 100px;
+}
+
+div {
+    border: 5px solid lightslategray;
+}
+
+div.no-border {
+    border: 0px;
+}
+
+div div {
+    background-color: rgb(224, 237, 249);
+    border: 0px;
+    padding: 12px;
+}

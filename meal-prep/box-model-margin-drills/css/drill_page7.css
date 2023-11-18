@@ -1,0 +1,22 @@
+/* Drill 7 - Write your code solution below */
+
+/*
+    Now we're getting a little more practical.
+
+    They have to align the content in the center,
+    and also add different margins to the top/bottom
+    and left/right sides.
+
+    Looking a little similar to a navbar yet? No?
+
+    Well, we're getting there.
+*/
+
+
+#d7-container {
+    text-align: center;
+}
+
+.d7-div {
+    margin: 12px 24px;
+}

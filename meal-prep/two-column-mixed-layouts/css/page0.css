@@ -1,0 +1,22 @@
+/*
+    The goal of this demo is to show how we use
+    both CSS Grid and Flexbox together in a page layout.
+
+    As we said at the beginning of each of the powerpoints,
+    our "Page Layouts" are not necessarily the only layout
+    on the page, and we're going to combine a couple 
+    different layouts in this demo.
+
+    We're also going to use a layout that's a bit of a
+    sneak peek into our 3rd Layout Week, where we
+    cover Navigation.
+
+    Encourage the students to really pay attention for
+    this one, as it will be a good starting point for
+    their "MeTube" project due later today, which is
+    going to be their own personal take on YouTube.
+
+    We'll start out as always with our HTML layout first,
+    using three containers inside of the grid-layout
+    element: a header, a sidebar, and a main element.
+*/

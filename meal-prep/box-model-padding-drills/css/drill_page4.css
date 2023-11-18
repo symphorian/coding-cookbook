@@ -1,0 +1,23 @@
+/* Drill 4 - Write your code solution below */
+
+/*
+    The trick with this one is to remember that
+    padding is additive.  There are multiple
+    solutions to this one, but if they try
+    to add padding to multiple containers
+    and their padded sides meet, there's 
+    likely going to be too much space in between
+    them.
+
+    The solution below adds padding on the 
+    outer container, and then just on one side
+    of one of the inner containers.
+*/
+
+#d4-container-1 {
+    padding: 24px;
+}
+
+#d4-div-2 {
+    padding-top: 24px;
+}

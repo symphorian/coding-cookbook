@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Adding a Custom Navbar (WordPress) - Appetizers - The Coding Cookbook</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="../css/cookbook.css" rel="stylesheet">
+        <link href="../css/appetizer.css" rel="stylesheet">
+        <link href="../css/lightbox.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="background"></div>
+        <nav>
+            <header id="topHeader">
+                <h2 id="brand"><a href="../">The Coding Cookbook</a></h2>
+                <div id="quote"></div>
+                <div id="navLinks">
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../ingredients.html">
+                                HTML
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../ingredients.html">Elements</a></h2>
+                            <h2><a href="../ingredients-cheatsheet.html">Cheatsheet</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../seasonings.html">
+                                CSS
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../seasonings.html">Properties</a></h2>
+                            <h2><a href="../seasonings-cheatsheet.html">Cheatsheet</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../recipes.html">
+                                Layouts
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../recipes.html?category=page-layout">Page Layouts</a></h2>
+                            <h2><a href="../recipes.html?category=content-layout">Content Layouts</a></h2>
+                            <h2><a href="../recipes.html?category=navigation-layout">Navigation</a></h2>
+                            <h2><a href="../recipes.html?category=miscellaneous">Miscellaneous</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../more.html">
+                                More
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../demos.html">Class Demos</a></h2>
+                            <h2><a href="../appetizers.html">Tutorials</a></h2>
+                            <h2><a href="../troubleshooting.html">Troubleshooting</a></h2>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </nav>
+        
+        <header id="title" class="">
+            <h1>Adding a Custom Navbar (WordPress)</h1>
+            <h3>
+                A video tutorial showing how you can add a custom navbar to your
+                WordPress site
+            </h3>
+        </header>
+        
+        <div class="cookbookPage">
+            <p>
+                By default, most WordPress Themes will configure the navbar 
+                (or menu, using WordPress terminology) to automatically
+                add new Pages to it as you create them.
+            </p>
+            <p>
+                But what if we want to create a custom menu? Well, we 
+                can do that too!
+            </p>
+            <p>
+                The following video covers:
+            </p>
+            <ul>
+                <li>
+                    Opening the Customize Menu
+                </li>
+                <li>
+                    Opening the Menus Menu in the Customize Menu
+                </li>
+                <li>
+                    Creating a new Menu
+                </li>
+                <li>
+                    Adding your Home Page (or existing Pages)
+                    to the new Menu
+                </li>
+                <li>
+                    Creating and adding new Pages to add to
+                    the new Menu
+                </li>
+                <li>
+                    Adding custom links (that go outside of WordPress)
+                    to the new Menu
+                </li>
+                <li>
+                    Previewing and saving your changes
+                </li>
+                <li>
+                    Editing one of the new Pages we created when 
+                    we built the new Menu
+                </li>
+            </ul>
+            <p>
+                However, note that this demo only applies to "traditional"
+                WordPress Themes that utilize the Customize Menu.
+            </p>
+            <p>
+                If you 
+                don't see "Customize" under "Appearance", you're probably 
+                using one of the "modern" WordPress themes, which we don't
+                recommend.
+            </p>
+        </div>
+        
+        <div class="cookbookPage">
+            <h2 id="part1" class="invisibleAnchorTarget"></h2>
+            <video controls>
+                <source src="video/adding-a-menu-wordpress.mp4" type="video/mp4">
+                Sorry, your browser doesn't support the &lt;video&gt; tag
+            </video>
+            <h4>
+                Now you know how to add and customize a Menu on your WordPress 
+                site!
+            </h4>
+        </div>
+
+        <div id="lightboxContainer">
+            <div id="lightboxBackground" class="closer"></div>
+            <img id="lightbox" src="" alt="">
+            <span id="lightboxCloser" class="closer">×</span>
+          </div>
+        <script src="../js/lightbox.js"></script>
+        <script src="../js/hideNav.js"></script>
+    </body>
+</html>

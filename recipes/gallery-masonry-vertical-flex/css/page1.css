@@ -1,0 +1,57 @@
+/*
+    Page layout setup
+*/
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#layout {
+    max-width: 800px;
+    margin: 48px auto;
+    text-align: center;
+}
+
+/* 
+    Gallery setup 
+*/
+.vertical-masonry-gallery {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /*
+        Flexbox columns naturally expand as 
+        much as necessary, so by default,
+        our flexbox won't wrap in a column
+        orientation, even with flex-wrap
+        set to 'wrap'.
+
+        For that reason, we need to give a 
+        "bottom" to the Flexbox by specifying
+        a height.
+
+        By doing that, when our images reach 
+        the "bottom", that is when they'll 
+        wrap back up to the top to start a 
+        new column.
+
+        This is what makes this implementation
+        rather fragile, as this height will
+        probably only work for a specfic
+        screen width, but not all of them.
+    */
+    max-height: 1100px;
+}
+
+/*
+    The width that we provide to the images
+    will determine how many columns will be
+    in the masonry.
+*/
+.vertical-masonry-gallery img {
+    width: 33.33%;
+}

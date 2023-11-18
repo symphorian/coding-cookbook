@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Importing a Code Template - Appetizers - The Coding Cookbook</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="../css/cookbook.css" rel="stylesheet">
+        <link href="../css/appetizer.css" rel="stylesheet">
+        <link href="../css/lightbox.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="background"></div>
+        <nav>
+            <header id="topHeader">
+                <h2 id="brand"><a href="../">The Coding Cookbook</a></h2>
+                <div id="quote"></div>
+                <div id="navLinks">
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../ingredients.html">
+                                HTML
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../ingredients.html">Elements</a></h2>
+                            <h2><a href="../ingredients-cheatsheet.html">Cheatsheet</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../seasonings.html">
+                                CSS
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../seasonings.html">Properties</a></h2>
+                            <h2><a href="../seasonings-cheatsheet.html">Cheatsheet</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../recipes.html">
+                                Layouts
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../recipes.html?category=page-layout">Page Layouts</a></h2>
+                            <h2><a href="../recipes.html?category=content-layout">Content Layouts</a></h2>
+                            <h2><a href="../recipes.html?category=navigation-layout">Navigation</a></h2>
+                            <h2><a href="../recipes.html?category=miscellaneous">Miscellaneous</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../more.html">
+                                More
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../demos.html">Class Demos</a></h2>
+                            <h2><a href="../appetizers.html">Tutorials</a></h2>
+                            <h2><a href="../troubleshooting.html">Troubleshooting</a></h2>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </nav>
+        
+        <header id="title" class="">
+            <h1>Importing a Code Template</h1>
+            <h3>
+                A tutorial showing how to get new code into your repository
+            </h3>
+        </header>
+        
+        <div class="cookbookPage">
+            <p>
+                Many Exercises and Projects in this course require you to use 
+                code templates provided for you.  
+            </p>
+            <p>
+                Usually these templates are 
+                either to ensure everyone's working on the same code, or to 
+                give you a more inspiring starting point by using code you 
+                haven't learned yet.
+            </p>
+            <p>
+                However, it can be a little tricky to figure out how to get these 
+                code templates into your code repository if you haven't done it 
+                before (or maybe you did, but forgot!).
+            </p>
+            <p>
+                Either way, read on!  It's not too bad once you do it a few times.
+            </p>
+        </div>
+        
+        <div class="cookbookPage">
+            <h2 id="part1" class="invisibleAnchorTarget"></h2>
+            <h6></h6>
+            <h2>Importing Code</h2>
+            <h4>Moving things from one folder to another</h4>
+            <ol>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                First, you'll need to download whatever code 
+                                template you need for your Exercise or Project.
+                            </p>
+                            <p>
+                                We'll use the very first set of Drills as our
+                                example in this tutorial (basic-html-drills.zip).
+                            </p>
+                            <p>
+                                Most likely, your downloaded code template
+                                ended up in the Downloads folder.  It'll be a
+                                .zip file, which is just a compact file format
+                                typically used for sending over multiple files.
+                            </p>
+                            <p class="indent">
+                                (Depending on your computer settings, there's a 
+                                chance you might not see the .zip after the 
+                                file name.  
+                                <br><br>
+                                If so, don't worry; it's still the 
+                                right file.  In that case, you'll just have to
+                                identify the .zip file by its icon or the label 
+                                in the "Kind" column, which would say "ZIP 
+                                archive")
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/template-to-repository/01_downloadTemplate.png" 
+                                alt="Downloaded code template in the Downloads folder"
+                            >
+                            <figcaption>
+                                Downloaded code template in the Downloads folder
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Right-click on that file, and select "Open With",
+                                and then "Archive Utility (default)".
+                            </p>
+                            <p>
+                                (If you're on Windows, after right-clicking,
+                                you'll have to pick "Extract All" instead)
+                            </p>
+                            <p>
+                                This is a process typically referred to as 
+                                "unzipping" the .zip file.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/template-to-repository/02_unzipTemplate.png" 
+                                alt="Unzipping the code template">
+                            <figcaption>
+                                Filtering via Categories (Handwriting in this case)
+                            </figcaption>
+                        </div>
+                        
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After unzipping the template's zip file, you 
+                                should see a new folder with the same name as 
+                                the zip file.
+                            </p>
+                            <p>
+                                Inside this folder is a set of folders and files,
+                                all of which we need inside of your code 
+                                repository.
+                            </p>
+                            <p>
+                                However, before we move the folder, we first 
+                                need to figure out where we're moving it to.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/template-to-repository/03_unzipped.png" 
+                                alt="The unzipped template code folder" 
+                            >
+                            <figcaption>
+                                The unzipped template code folder
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                If you know where your repository is on your 
+                                computer, you can just navigate there yourself
+                                in a separate Finder window.
+                            </p>
+                            <p>
+                                However, if you don't know where it is or how 
+                                to get there manually, then keep reading for a
+                                shortcut!
+                            </p>
+                            <p>
+                                If you don't have it open already, open up 
+                                Visual Studio Code and jump over there for a 
+                                moment.
+                            </p>
+                            <p>
+                                Look inside the Explorer panel: you should see 
+                                the folders and files that already exist in 
+                                your repository.
+                            </p>
+                            <p>
+                                Go ahead and right-click any one of them.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/template-to-repository/04_gettingToRepository.png" 
+                                alt="Code repository in Visual Studio Code"
+                            >
+                            <figcaption>
+                                Code repository in Visual Studio Code
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After right-clicking, a context menu opens up.
+                            </p>
+                            <p>
+                                Select the option called "Reveal in Finder".
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/template-to-repository/05_openInFinder.png" 
+                                alt="Selecting the 'Reveal in Finder' option" 
+                            />
+                            <figcaption>
+                                Selecting the "Reveal in Finder" option
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Clicking that option should open up a NEW 
+                                Finder window, with all the files and folders 
+                                we were just looking at in Visual Studio Code 
+                                inside it.
+                            </p>
+                            <p>
+                                It's important to remember that Visual Studio 
+                                Code is just reflecting the state of that
+                                repository folder on your computer.
+                            </p>
+                            <p>
+                                If it helps, think of Visual Studio Code like 
+                                a special Finder window with a different 
+                                visual style, that also allows you to modify 
+                                the code of code files.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/template-to-repository/06_repoInFinder.png" 
+                                alt="The repository in a Finder window" 
+                            />
+                            <figcaption>
+                                The repository in a Finder window
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                By this point, you should now have TWO Finder 
+                                windows open at once: one looking at your Downloads 
+                                folder, and the other looking at your repository.
+                            </p>
+                            <p>
+                                Select your unzipped code template folder (not 
+                                the .zip file), and drag it from the Finder with 
+                                your Downloads folder into the Finder with your 
+                                code repository.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/template-to-repository/07_moveTemplateToRepo.png" 
+                                alt="Moving the unzipped code template folder to your repository" 
+                            />
+                            <figcaption>
+                                Moving the unzipped code template folder 
+                                to our repository
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After doing that, you should see the unzipped 
+                                code template folder in the Finder with your
+                                repository, alongside the other folders and 
+                                files that were in there before.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/template-to-repository/08_templateInRepo.png" 
+                                alt="Successfully moved the unzipped template to your repository" 
+                            />
+                            <figcaption>
+                                Successfully moved the unzipped template to 
+                                your repository
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                What about Visual Studio Code? Well, let's pop
+                                back over there and take a look.
+                            </p>
+                            <p>
+                                After moving the unzipped code template into
+                                your Finder window with your repository, you 
+                                should now also see that unzipped folder in 
+                                Visual Studio Code.
+                            </p>
+                            <p>
+                                And that makes sense, because Visual Studio 
+                                Code is just reflecting the state of that
+                                repository folder.
+                            </p>
+                            <p>
+                                We moved something new into that folder, so 
+                                we can see it in Visual Studio Code as well.
+                            </p>
+                            <p>
+                                Let's open that new folder and see what's 
+                                inside.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/template-to-repository/09_templateInVSCode.png" 
+                                alt="The unzipped template folder is also in Visual Studio Code" 
+                            />
+                            <figcaption>
+                                The unzipped template folder is also in Visual Studio Code
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Yup, that's the stuff we'd expect to have in 
+                                there for basic-html-drills: a css folder, an 
+                                images folder, and an index.html file.
+                            </p>
+                            <p>
+                                Most of your code templates will probably have 
+                                a similar structure as this one, just with 
+                                different contents.
+                            </p>
+                            <p>
+                                Let's open up index.html, just to double-check 
+                                everything is working correctly.
+                            </p>
+                            <p>
+                                <strong>
+                                    PRO-TIP: Clicking on a file once will open 
+                                    a file in a "temporary" state; a file opened 
+                                    in a "temporary" state will have its name 
+                                    in italics in the tab that opens up.
+                                    <br><br>
+                                    A file in the "temporary" state will close
+                                    itself once you click on another file just 
+                                    once.
+                                    <br><br>
+                                    To open up a file in a more "permanent" 
+                                    state, double-click it when you open it!
+                                    <br><br>
+                                    Then the file will remain open until you 
+                                    yourself close it.
+                                </strong>
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/template-to-repository/10_templateExpanded.png" 
+                                alt="Expanding the unzipped code template folder" 
+                            />
+                            <figcaption>
+                                Expanding the unzipped code template folder
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                That looks like the code we'd expect: the title 
+                                of the document says "Basic HTML Drills".
+                            </p>
+                            <p>
+                                Assuming we're going to be working on this drill 
+                                next, let's preview it!
+                            </p>
+                            <p>
+                                The simplest way to do that is to right-click 
+                                anywhere inside the HTML file's code.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/template-to-repository/11_openingIndex.png" 
+                                alt="The index.html file is opened" 
+                            />
+                            <figcaption>
+                                The index.html file is opened
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After right-clicking, select the option that 
+                                says "Show Preview".
+                            </p>
+                            <p>
+                                <strong>
+                                    If you don't see that option, first make sure
+                                    that you right-clicked inside the HTML code. 
+                                    <br><br>
+                                    You can only preview an HTML file, with HTML
+                                    code; nothing else. So if you click in the 
+                                    wrong file or wrong area, you won't get that
+                                    preview option.
+                                    <br><br>
+                                    If you're sure you're right-clicking in the 
+                                    right place, you may not 
+                                    have installed the required Extensions in 
+                                    Visual Studio Code.
+                                    <br><br>
+                                    Jump back to the 
+                                    <a href="web-dev-startup.html#p1_step4">
+                                        Setup Tutorial Part 1
+                                    </a>,
+                                    and go through the last step again, so that 
+                                    you'll be able to preview your code.
+                                </strong>
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/template-to-repository/12_howToPreview.png" 
+                                alt="The 'Show Preview' option" 
+                            />
+                            <figcaption>
+                                The "Show Preview" option
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                If all is well, you should see the Basic HTML 
+                                Drills preview (or whatever code template you
+                                moved into your repository) in a new panel that
+                                popped open to the right.
+                            </p>
+                            <p>
+                                Looks like you're set to go; well done!
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/template-to-repository/13_previewingIndex.png" 
+                                alt="Previewing index.html for the Basic HTML Drills" 
+                            />
+                            <figcaption>
+                                Previewing index.html for the Basic HTML Drills
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+            <h4>
+                Now you know how to import a code template into your repository,
+                and even how to preview it! Good luck in your assignment!
+            </h4>
+        </div>
+
+        <div id="lightboxContainer">
+            <div id="lightboxBackground" class="closer"></div>
+            <img id="lightbox" src="" alt="">
+            <span id="lightboxCloser" class="closer">×</span>
+          </div>
+        <script src="../js/lightbox.js"></script>
+        <script src="../js/hideNav.js"></script>
+    </body>
+</html>

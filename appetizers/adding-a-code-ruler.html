@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Adding a Code Ruler - Appetizers - The Coding Cookbook</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="../css/cookbook.css" rel="stylesheet">
+        <link href="../css/appetizer.css" rel="stylesheet">
+        <link href="../css/lightbox.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="background"></div>
+        <nav>
+            <header id="topHeader">
+                <h2 id="brand"><a href="../">The Coding Cookbook</a></h2>
+                <div id="quote"></div>
+                <div id="navLinks">
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../ingredients.html">
+                                HTML
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../ingredients.html">Elements</a></h2>
+                            <h2><a href="../ingredients-cheatsheet.html">Cheatsheet</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../seasonings.html">
+                                CSS
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../seasonings.html">Properties</a></h2>
+                            <h2><a href="../seasonings-cheatsheet.html">Cheatsheet</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../recipes.html">
+                                Layouts
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../recipes.html?category=page-layout">Page Layouts</a></h2>
+                            <h2><a href="../recipes.html?category=content-layout">Content Layouts</a></h2>
+                            <h2><a href="../recipes.html?category=navigation-layout">Navigation</a></h2>
+                            <h2><a href="../recipes.html?category=miscellaneous">Miscellaneous</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../more.html">
+                                More
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../demos.html">Class Demos</a></h2>
+                            <h2><a href="../appetizers.html">Tutorials</a></h2>
+                            <h2><a href="../troubleshooting.html">Troubleshooting</a></h2>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </nav>
+        
+        <header id="title" class="">
+            <h1>Adding a Code Ruler</h1>
+            <h3>
+                A tutorial showing how to measure character counts easily
+            </h3>
+        </header>
+        
+        <div class="cookbookPage">
+            <p>
+                One of our recommendations to keep code looking clean is to
+                limit the character counts of your lines of code to around 
+                80 characters.
+            </p>
+            <p>
+                ...but that is an exceptionally tedious task, counting 
+                out every line of code to make sure it hasn't gone past 
+                80 characters.
+            </p>
+            <p>
+                However, Visual Studio Code lets you set "rulers" in your 
+                code editor, much like how you could set guides and rulers 
+                in Photoshop and Illustrator.  It's just a bit of a more
+                manual process than in those applications.
+            </p>
+            <p>
+                Let's find out how we can set up that ruler, so you can 
+                make your code cleaner without having to think about it!
+            </p>
+        </div>
+        
+        <div class="cookbookPage">
+            <h2 id="part1" class="invisibleAnchorTarget"></h2>
+            <h6></h6>
+            <h2>Configuring your Code Editor</h2>
+            <h4>75, 76, 77...shoot, lost count...1, 2, 3....</h4>
+            <ol>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                It's a bit of a trek to find your way to 
+                                the Settings page that allows you to configure
+                                a code ruler in Visual Studio Code (and its 
+                                also a slightly different path depending on 
+                                whether you're using a PC or a Mac).
+                            </p>
+                            <p>
+                                For PC Users:
+                                <ul>
+                                    <li>
+                                        Click on the File menu at the top left.
+                                    </li>
+                                    <li>
+                                        Hover over Preferences.
+                                    </li>
+                                    <li>
+                                        Click on Settings to open up the 
+                                        Settings page.
+                                    </li>
+                                </ul>
+                            </p>
+                            <p>
+                                For Mac Users:
+                                <ul>
+                                    <li>
+                                        Click on the Code menu at the top left.
+                                    </li>
+                                    <li>
+                                        Hover over Preferences.
+                                    </li>
+                                    <li>
+                                        Click on Settings to open up the 
+                                        Settings page.
+                                    </li>
+                                </ul>
+                            </p>
+                            <p>
+                                In the search bar at the top of the Settings 
+                                page, type "ruler".
+                            </p>
+                            <p>
+                                Then go down to the section called 
+                                "Editor: Rulers" and click the "Edit in
+                                settings.json" link.
+                            </p>
+                            <p>
+                                This will open up a JSON code file.
+                            </p>
+                            <p class="indent">
+                                DON'T PANIC! The code will look quite foreign 
+                                to you, and that's okay.  We'll show you 
+                                exactly what you need to modify.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/adding-a-code-ruler/01_settings.png" 
+                                alt="Getting to the Settings page on a PC"
+                            >
+                            <figcaption>
+                                Getting to the Settings page on PC
+                            </figcaption>
+                            <img 
+                                src="images/adding-a-code-ruler/01_settings_mac.png" 
+                                alt="Getting to the Settings page on a Mac"
+                            >
+                            <figcaption>
+                                Getting to the Settings page on a Mac
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                In the settings.json file, you will want to 
+                                find the setting called "editor.rulers".
+                            </p>
+                            <p class="indent">
+                                There may be more or less other settings in your 
+                                own settings.json file compared to the
+                                screenshot.  That's okay, and will not change
+                                anything!
+                            </p>
+                            <p>
+                                There will be square brackets [ ] after that.
+                            </p>
+                            <p>
+                                Inside the square brackets, just type the
+                                number 80.
+                            </p>
+                            <p class="indent">
+                                No quotes, no periods, nothing else: just the
+                                number 80, exactly like in the screenshot.
+                            </p>
+                            <p>
+                                Finally, save the file.
+                            </p>
+                            <p class="indent">
+                                If you properly saved it, there should NOT be 
+                                a circle to the right of the settings.json tab.
+                                Instead, there should be an 'x'.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/adding-a-code-ruler/02_setruler.png" 
+                                alt="Setting the ruler configuration">
+                            <figcaption>
+                                Setting the ruler configuration
+                            </figcaption>
+                        </div>
+                        
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Now when you go back to any of your code files,
+                                you should see a thin line at the 80 character 
+                                mark in your code!
+                            </p>
+                            <p>
+                                This line doesn't prevent you from typing 
+                                past it; it's literally just a guide line,
+                                so you're aware of when your code is longer 
+                                than 80 characters.
+                            </p>
+                            <p>
+                                That's it! Well done!
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/adding-a-code-ruler/03_characterruler.png" 
+                                alt="An example of the 80 character ruler (or guide line)" 
+                            >
+                            <figcaption>
+                                An example of the 80 character ruler (or guide line)
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+            <h4>
+                Now you have a ruler showing when you've reached 80 characters
+                in your code!
+            </h4>
+        </div>
+
+        <div id="lightboxContainer">
+            <div id="lightboxBackground" class="closer"></div>
+            <img id="lightbox" src="" alt="">
+            <span id="lightboxCloser" class="closer">×</span>
+          </div>
+        <script src="../js/lightbox.js"></script>
+        <script src="../js/hideNav.js"></script>
+    </body>
+</html>

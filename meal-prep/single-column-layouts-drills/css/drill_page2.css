@@ -1,0 +1,32 @@
+/* Drill 2 - Write your code solution below */
+
+/*
+    The first half of this solution is the same
+    as the previous drill.
+
+    The second half is the somewhat tricky part
+    if you don't know what you're doing.
+
+    The 'auto' value can only be applied to
+    left and right margins of block elements
+    (if you expect it to do anything, at least).
+
+    Applying it to one side will shove all the
+    remaining space into the margin side you 
+    specified.
+
+    In this case, we apply it to margin-left,
+    which forces the element all the way to
+    the right.
+
+    That might seem a little backwards (setting
+    margin-left in order to move the element
+    to the right), but remember, we're applying
+    the 'auto' value to the margin property,
+    which has to do with spacing, not position.
+*/
+
+#column-d2 {
+    width: 50%;
+    margin-left: auto;
+}

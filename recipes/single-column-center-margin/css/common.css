@@ -1,0 +1,60 @@
+/* COMMON PAGE LAYOUT SETUP CSS - START *****************/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    /* preferred copy font goes here */
+    font-family: sans-serif; 
+}
+/* COMMON PAGE LAYOUT SETUP CSS - END ********************/
+
+body {
+    background-color: #e4f8ff;
+}
+
+#navbar {
+    background-color: #13135d;
+}
+
+#navbar a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 12px 12px 12px 0px;
+}
+
+/*
+    This is an example of how a single column
+    layout in the center might be used.
+
+    This type of layout is common for blogs 
+    and articles, and really anything with
+    heavy text content.
+
+    Note that we share the same column styles
+    across multiple containers, both in the 
+    navbar and in the main content.
+
+    This is a very common way to prevent page
+    content (including navigation) from getting 
+    too wide on wider screens and monitors.  
+    
+    This is generally a good practice, as it
+    keeps your viewers' eyes and mouse focused
+    on the same part of the screen.
+
+    Also, note that the #navbar-column is found
+    inside of the #navbar. It is the #navbar 
+    container that's responsible for the dark
+    blue background color, but it is the 
+    #navbar-column responsible for creating 
+    the column in the navbar.
+*/
+
+#navbar-column,
+.center-column {
+    width: 500px;
+    margin: 0px auto;
+}

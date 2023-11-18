@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>background-color Property</title>
+        <link href="css/background-color.css" rel="stylesheet" data-seasoning>
+        <link href="css/shared.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="recipe-example">
+            <h4>Basic Code Snippets</h4>
+            <code>background-color: aquamarine;</code>
+            <br>
+            <code>background-color: #FFBBCC;</code>
+            <br>
+            <code>background-color: rgb(47, 79, 255);</code>
+        </div>
+        <h4>Additional Examples</h4>
+        <p id="pink-background">
+            This paragraph has its background-color set to
+            light pink via the hexadecimal value 
+            <code>#FFCCCC</code>,
+            <span class="highlighter">
+                but this text inside has its own background-color 
+                set using the color name "yellow" via the CSS Rule
+                with the Class Selector targeting the span element.
+            </span>
+            However, the background-color of the web page's body 
+            element is set to the color name "lavender" via an 
+            HTML Element Selector.
+        </p>
+        <div>
+            <p>
+                All paragraphs inside of a div have their 
+                background-color property set to the color 
+                "green".
+            </p>
+            <p>
+                Notice that the background-color only fills
+                up to where the border of the element is
+                (remember the different parts of the Box Model!).
+            </p>
+            <p id="extra-padding">
+                To make elements look more aesthetically pleasing,
+                we usually want to add padding to an element with
+                a background-color, in order to give the content 
+                inside some breathing room, 
+                <span class="highlighter">
+                    unless we're going for a "highlighter" 
+                    type of effect like on this text.
+                </span>
+            </p>
+            <p id="extra-margin">
+                Also notice that adding margin does not 
+                increase the area of the background-color
+                around the text; only padding does that.
+            </p>
+        </div>
+        <div class="resources">
+            <h4>Additional Resources</h4>
+            <a 
+                href="https://www.w3schools.com/cssref/pr_background-color.php"
+                target="_blank"
+            >
+                w3schools 
+            </a>
+            <br>
+            <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color"
+                target="_blank"
+            >
+                mdn web docs
+            </a>
+        </div>
+    </body>
+</html>

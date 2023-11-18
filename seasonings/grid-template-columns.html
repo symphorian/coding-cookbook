@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>grid-template-columns Property (Grid)</title>
+        <link href="css/grid-template-columns.css" rel="stylesheet" data-seasoning>
+        <link href="css/shared.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="recipe-example">
+            <h4>Basic Code Snippets</h4>
+            <code>grid-template-columns: 200px 400px;</code>
+            <br>
+            <code>grid-template-columns: 1fr 600px 1fr;</code>
+            <br>
+            <code>grid-template-columns: 20% 30% 30% 20%;</code>
+            <br>
+        </div>
+        <h4>Additional Examples</h4>
+        <p class="warning">
+            NOTE: The grid-template-columns property is a 
+            <strong>Grid Container Property</strong>.
+            <br>
+            <br>
+            This property will have no effect if applied to
+            an element that is not an activated Grid
+            Container (i.e. has 
+            <code><strong>display: grid;</strong></code>
+            applied to it)
+        </p>
+        <p>
+            The grid-template-columns property defines columns 
+            to populate a Grid Container.
+        </p>
+        <p>
+            Grid column widths can be any length value, 
+            whether absolute (e.g. pixels) or relative (e.g.
+            percentages); they only need to be separated by 
+            spaces in order to set them on the
+            grid-template-columns property.
+        </p>
+
+        <h4>Examples with absolute widths</h4>
+        <p>
+            Absolute width values are probably the most
+            straightforward to use with a grid, so we'll start 
+            an example with those (though they're not
+            the most ideal, as we'll see later.)
+        </p>
+        <p>
+            Here's an example with only two columns defined.
+        </p>
+
+        <h4>grid-template-columns: 150px 350px;</h4>
+
+        <div class="grid-container columns-example-1">
+            <div class="box">A</div>
+            <div class="box">B</div>
+            <div class="box">C</div>
+            <div class="box">D</div>
+            <div class="box">E</div>
+            <div class="box">F</div>
+        </div>
+        <br>
+
+        <p>
+            Above, you can see the two columns of different widths,
+            and the Items (A, B, C, D, E, and F) populate the rows 
+            and columns one by one from left to right, and top to bottom.
+        </p>
+
+        <p>
+            This is the normal behavior for all grids, unless some 
+            other type of layout property is used (such as 
+            grid-template-areas).
+        </p>
+
+        <h4>Examples with relative widths</h4>
+        <p>
+            Relative width values get a little more tricky, because
+            you have to make sure those values don't surpass 100% 
+            of the Container width, but the nice thing about them
+            is they're much more flexible.
+        </p>
+
+        <h4>grid-template-columns: 20% 60% 20%;</h4>
+
+        <div class="grid-container columns-example-2">
+            <div class="box">A</div>
+            <div class="box">B</div>
+            <div class="box">C</div>
+            <div class="box">D</div>
+            <div class="box">E</div>
+            <div class="box">F</div>
+        </div>
+        <br>
+
+        <p>
+            In this example, we have three columns, since we provided 
+            three values to grid-template-columns, and this time they
+            are relative values: percentages.
+        </p>
+        <p>
+            Since we used all percentage values for the columns, that 
+            means that the Grid Container and grow or shrink, and the
+            columns will grow and shrink with it.
+        </p>
+
+        <p>
+            That would not occur with absolute units.  If the Container 
+            was too big, there would be empty space left; if the 
+            container was too small, then the contents would overflow.
+        </p>
+
+        <h4>Examples with fractional units</h4>
+        <p>
+            Relative width values are great for making sure columns 
+            grow and shrink with a container, but sometimes we need
+            a mix of both rigidity and flexibility.
+        </p>
+        <p>
+            Enter, the <strong>fractional unit</strong>!
+        </p>
+        <p>
+            Fractional units are still relative units, but they have
+            a very interesting behavior (if you've learned about 
+            the flex property for Flexbox Items, you'll find they're
+            actually very similar!).
+        </p>
+        <p>
+            Fractional units are best described as "fluid"; they 
+            resize themselves to fill the remaining space left over 
+            in a Grid Container, and also relative to any other 
+            fractional units used.
+        </p>
+        <p>
+            Let's look at a example, using fractional units
+            to create flexible left column in a grid layout.
+            This might be a layout where you have your main 
+            content on the left, and a static-sized sidebar
+            on the right.
+        </p>    
+
+        <h4>grid-template-columns: 1fr 250px;</h4>
+
+        <div class="grid-container columns-example-3">
+            <div class="box">A</div>
+            <div class="box">B</div>
+            <div class="box">C</div>
+            <div class="box">D</div>
+            <div class="box">E</div>
+            <div class="box">F</div>
+            <div class="box">G</div>
+        </div>
+        <br>
+
+        <p>
+            If you have the luxury of being able to stretch and shrink 
+            your browser window size, you'll see that the right column 
+            of 250px has a fixed with, but the column on the left
+            (with the 1fr value) stretches and squishes based on the 
+            space left over.
+        </p>
+        <p>
+            When combined with the grid-template-areas property, 
+            fractional units can let us create very useful grid 
+            layouts with empty gutters on the outside that center 
+            our main content and keep our focus on the center of 
+            the page.
+        </p>
+  
+
+        <div class="resources">
+            <h4>Additional Resources</h4>
+            <a 
+                href="https://www.w3schools.com/cssref/pr_grid-template-columns.php"
+                target="_blank"
+            >
+                w3schools 
+            </a>
+            <br>
+            <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns"
+                target="_blank"
+            >
+                mdn web docs
+            </a>
+            <br>
+            <a
+                href="https://css-tricks.com/almanac/properties/g/grid-template-columns/"
+                target="_blank"
+            >
+                CSS Tricks
+            </a>
+        </div>
+    </body>
+</html>

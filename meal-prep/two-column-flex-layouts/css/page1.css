@@ -1,0 +1,44 @@
+/*
+    We'll start off with our common page layout setup
+    properties, same as before.
+*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif; 
+}
+
+/*
+    Next, we're going to activate the Flexbox
+    functionality on our #two-columns container.
+
+    You should have gone through the Flexbox 
+    powerpoint by now, but still call out the 
+    important differences between Flexbox 
+    Container and Flexbox Item properties
+    as much as you can (they will CONSTANTLY
+    be mixing these properties up, most likely).
+
+    Activating a Flexbox with display is 
+    something that should only go on the 
+    Container, not on any Items inside the
+    container (unless we have any flexboxes
+    inside of flexboxes going on).
+*/
+#two-columns {
+    display: flex;
+}
+
+/*
+    After activating Flexbox, we should see our
+    two columns suddenly jump side by side.
+
+    That is what Flexbox Containers do by default:
+    they arrange their content in a row.
+
+    But our #sidebar-content column is looking 
+    pretty squished. We'll deal with that in a bit.
+*/

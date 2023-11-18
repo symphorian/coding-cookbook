@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gallery - Vertical Masonry (flex)</title>
+        <link href="css/page1.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="layout">
+            <h1>Gallery - Vertical Masonry (flex)</h1>
+            <p>
+                We're going to use Flexbox to create the 
+                masonry layout, taking advantage of its 
+                ability to orient its content in columns,
+                and also to wrap the content in those 
+                columns.
+            </p>
+            <p>
+                This approach doesn't result in a loss of
+                image detail due to cropping like some of
+                our other gallery implementations, so in 
+                that way it is superior to those types of
+                galleries.
+            </p>
+            <p>
+                However, it is also a bit more "fragile" than
+                our other galleries, since we need to specify
+                an explicit height.  
+                
+            <p>
+                That means that we can design it to look good 
+                for the current set of images at a particular
+                screen size, but if we change the number of
+                images or decrease the screen size too much, 
+                our gallery layout could start looking a bit 
+                wonky, or even break entirely.
+            </p>
+            <h3>Mixed Gallery</h3>
+            <div class="vertical-masonry-gallery">
+                <img src="images/coffee_P2.jpg" alt="coffee">
+                <img src="images/coffee_L1.jpg" alt="coffee">
+                <img src="images/coffee_P1.jpg" alt="coffee">
+                <img src="images/coffee_L3.jpg" alt="coffee">
+                <img src="images/coffee_P4.jpg" alt="coffee">
+                <img src="images/coffee_S1.jpg" alt="coffee">
+                <img src="images/coffee_P3.jpg" alt="coffee">
+                <img src="images/coffee_S2.jpg" alt="coffee">
+                <img src="images/coffee_L2.jpg" alt="coffee">
+            </div>
+        </div>
+    </body>
+</html>

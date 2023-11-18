@@ -1,0 +1,37 @@
+/*
+    Page layout setup
+*/
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#layout {
+    max-width: 800px;
+    margin: 48px auto;
+    text-align: center;
+}
+
+/* 
+    Gallery setup 
+*/
+.basic-grid-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+
+    /*
+        optional extra properties,
+        customize as necessary
+    */
+    padding: 24px;
+    border: 10px solid #333333;
+}
+
+.basic-grid-gallery img {
+    width: 100%;
+}

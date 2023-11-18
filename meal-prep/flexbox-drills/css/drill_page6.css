@@ -1,0 +1,23 @@
+/* Drill 6 - Write your code solution below */
+
+/*
+    Now we're moving on from alignment drills,
+    and focusing more on justification, or 
+    how we manage space in a flexbox.
+
+    The justify-content property is our friend 
+    here, we just need to remember the right
+    value to give to it.
+
+    The spacing options are:
+        - space-between
+        - space-around
+        - space-evenly
+
+    space-between is the one we want.
+*/
+
+#container-6 {
+    display: flex;
+    justify-content: space-between;
+}

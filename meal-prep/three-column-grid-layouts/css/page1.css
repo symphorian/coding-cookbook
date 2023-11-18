@@ -1,0 +1,64 @@
+/*
+    We'll start off with our usual page layout setup
+*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif; 
+}
+
+/*
+    Next, we're going to set up our grid again, 
+    this time with three columns, using the 
+    grid-template-columns property once again.
+
+    (Since we have our three columns in the order
+    we want them in the HTML, we technically
+    don't need to worry about using the
+    grid-template-areas property, at least not 
+    for this layout).
+
+    Start by showing the class what three equal 
+    columns with  1 fractional unit each look like.
+*/
+#grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/*
+    Once again, they may not necessarily look
+    like equal widths here, so let's quickly
+    add some background colors to the columns
+    so that we can see the space they occupy
+    is actually equal, it's just the content
+    inside that doesn't look equally sized.
+*/
+
+#sidebar-column-1 {
+    background-color: lightpink;
+}
+
+#primary-column {
+    background-color: lightgreen;
+}
+
+#sidebar-column-2 {
+    background-color: lightblue;
+}
+
+/*
+    See? The columns are equally sized, but
+    that doesn't mean that the content (or
+    lack of content in the case of the 
+    sidebars) is equally sized or spaced.
+
+    That's why spacing and containers are
+    so important; they can make a design
+    feel more cohesive, as opposed to just
+    dumping content on a page, or even just
+    in a column.
+*/

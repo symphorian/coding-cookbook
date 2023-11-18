@@ -1,0 +1,1153 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #faf8ec;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    min-height: 101vh;
+}
+
+#background {
+    background-image: 
+        repeating-linear-gradient(135deg,transparent,transparent 200px, #ff705099 200px, #ff705099 400px),
+        repeating-linear-gradient(45deg,transparent,transparent 200px, #ff705077 200px, #ff705077 400px);
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    z-index: -10;
+}
+
+#meal-prep #background {
+    background-image: 
+        repeating-linear-gradient(135deg,transparent,transparent 200px, #1a315999 200px, #1a315999 400px),
+        repeating-linear-gradient(45deg,transparent,transparent 200px, #1a315977 200px, #1a315977 400px);
+}
+
+nav {
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+}
+
+#mealPrepFooter {
+    background-color: #1a3159;
+    color: white;
+    align-items: center;
+    position: fixed;
+    bottom: 0px;
+    width: 100vw;
+    padding: 12px 0px;
+}
+
+/*****************************************************
+  TOP HEADER
+*****************************************************/
+#topHeader {
+    background-color: #1a3159;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+#topHeader #brand {
+    margin-left: 36px;
+}
+
+#topHeader h2 {
+    margin: 0px;
+}
+
+#topHeader #navLinks .dropdown-menu:last-child,
+#topHeader #navLinks > h2:last-child {
+    margin-right: 36px;
+}
+
+#topHeader a {
+    background-color: #1a3159;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 14px;
+}
+
+#topHeader #quote {
+    flex: 1;
+    text-align: center;
+}
+
+#topHeader #navLinks {
+    display: flex;
+}
+
+.dropdown-menu {
+    position: relative;
+}
+
+#navLinks > h2,
+.dropdown-menu .dropdown-trigger {
+    position: relative;
+    z-index: 100;
+}
+
+.dropdown-menu .dropdown-items {
+    position: absolute;
+    text-align: left;
+    left: 0px;
+    top: 75%;
+    visibility: hidden;
+    min-width: 100%;
+    opacity: 0;
+    transition: 
+        top 0.25s,
+        visibility 0.25s,
+        opacity 0.25s;
+    z-index: 10;
+}
+
+.dropdown-menu:last-child .dropdown-items {
+    text-align: right;
+    left: auto;
+    right: 0px;
+}
+
+.dropdown-menu:hover .dropdown-items {
+    top: 100%;
+    visibility: visible;
+    opacity: 1;
+}
+
+#topHeader #navLinks .dropdown-items h2 {
+    margin: 0px;
+}
+
+#topHeader #navLinks .dropdown-items h2 a {
+    background-color: #1a3159;
+    color: white;
+    display: inline-block;
+    padding: 18px 14px;
+    width: 100%;
+}
+
+#topHeader a:hover,
+#topHeader .dropdown-menu:hover .dropdown-trigger a,
+#topHeader #navLinks .dropdown-items h2 a:hover {
+    background-color: white;
+    color: #1a3159;
+}
+
+/*****************************************************
+  BOTTOM HEADERS AND BUTTONS
+*****************************************************/
+
+#bottomHeader {
+    background-color: #faf8ec;
+    border-bottom: 3px solid #1a3159;
+    min-height: 64px;
+    padding: 12px;
+}
+
+#filtersAndSortingHeader {
+    background-color: #ecf1fa;
+    border-bottom: 3px solid #1a3159;
+    min-height: 64px;
+    padding: 12px;
+    position: absolute;
+    transform: translateY(0%);
+    transition: transform 0.25s;
+    width: 100%;
+    z-index: -50;
+}
+
+#filtersAndSortingHeader.hide {
+    display: block;
+    transform: translateY(-100%);
+}
+
+#sortFilterButton #sortFilterClose i {
+    transform: rotate(135deg);
+    transition: 
+        transform 0.25s;
+}
+
+#sortFilterButton:hover #sortFilterClose i {
+    transform: rotate(-45deg);
+}
+
+#sortFilterButton.open #sortFilterClose i {
+    transform: rotate(0deg);
+}
+
+#sortFilterButton.open:hover #sortFilterClose i {
+    transform: rotate(90deg);
+}
+
+#filtersAndSortingHeader h4,
+#filtersAndSortingHeader #sortingOptions,
+#filtersAndSortingHeader #confirmationOptions,
+#cookbookButtons,
+.cookbookButtons {
+    text-align: center;
+}
+
+#filterOptions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    width: 80%;
+    max-width: 1000px;
+    margin: 0px auto;
+}
+
+#confirmationOptions {
+    padding-bottom: 24px;
+}
+
+#mealPrepFooter .cookbookButtons {
+    width: calc(100% - 16px);
+}
+
+#cookbookButtons a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+#cookbookButtons button,
+.cookbookButtons button,
+#cookbookButtons a,
+#filtersAndSortingHeader button,
+#filtersAndSortingHeader #applyChangesButton {
+    background-color: white;
+    border: 3px solid #ff7050;
+    border-radius: 16px;
+    color: #ff7050;
+    cursor: pointer;
+    font-size: 16px;
+    min-width: 150px;
+    padding: 6px 12px;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+#mealPrepFooter .cookbookButtons button {
+    min-width: 100px;
+}
+
+#mealPrepFooter .cookbookButtons button.disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+#cookbookButtons button.selected,
+#cookbookButtons button:hover,
+.cookbookButtons button.selected,
+.cookbookButtons button:hover,
+#cookbookButtons a.selected,
+#cookbookButtons a:hover,
+#mealPrepFooter .cookbookButtons button.disabled {
+    background-color: #ff7050;
+    color: white;
+}
+
+/* #filtersAndSortingHeader #applyChangesButton {
+    background-color: #fca38f;
+    color: white;
+}
+
+#filtersAndSortingHeader #applyChangesButton:hover {
+    background-color: #ff7050;
+} */
+
+#filtersAndSortingHeader #applyChangesButton {
+    color: white;
+    background-color: #ff7050;
+}
+
+#cookbookButtons #commentsButton,
+.cookbookButtons #commentsButton {
+    background-color: #1a3159;
+    color: white;
+    border-color: #1a3159;
+}
+
+#cookbookButtons #commentsButton:hover,
+.cookbookButtons #commentsButton:hover {
+    background-color: white;
+    color: #1a3159;
+}
+
+#cookbookButtons #commentsButton #showCommentsLabel,
+.cookbookButtons #commentsButton #showCommentsLabel {
+    display: none;
+}
+
+body.noComments #cookbookButtons #commentsButton,
+body.noComments .cookbookButtons #commentsButton {
+    background-color: white;
+    color: #1a3159;
+    border-color: #1a3159;
+}
+
+body.noComments #cookbookButtons #commentsButton:hover,
+body.noComments .cookbookButtons #commentsButton:hover {
+    background-color: #1a3159;
+    color: white;
+}
+
+body.noComments #cookbookButtons #commentsButton #showCommentsLabel,
+body.noComments .cookbookButtons #commentsButton #showCommentsLabel {
+    display: inline;
+}
+
+body.noComments #cookbookButtons #commentsButton #hideCommentsLabel,
+body.noComments .cookbookButtons #commentsButton #hideCommentsLabel {
+    display: none;
+}
+
+#cookbookButtons #sortFilterButton,
+#filtersAndSortingHeader button {
+    background-color: white;
+    border-color: #1a3159;
+    color: #1a3159;
+}
+
+#cookbookButtons #sortFilterButton.selected,
+#filtersAndSortingHeader button:hover,
+#filtersAndSortingHeader button.selected {
+    background-color: #1a3159;
+    color: white;
+}
+
+#title h1 {
+    font-size: 60px;
+    margin-bottom: 0px;
+}
+
+#mealPrepFooter #currentPage {
+    padding: 0px 24px;
+}
+
+#title h1,
+#title h3 {
+    color: #1a3159;
+    text-align: center;
+}
+
+#meal-prep #title {
+    background-color: #FFFFFFDD;
+    border-radius: 45px;
+    margin: 36px;
+    padding: 24px;
+}
+
+#meal-prep #title h1 {
+    margin-top: 0px;
+} 
+
+#title.recipe h3 {
+    display: none;
+}
+
+#cookbookPage.recipeNone {
+    opacity: 0;
+}
+
+.recipeNone #cookbookPageColumnOne {
+    display: none;
+}
+
+/*****************************************************
+  RECIPE CARDS
+*****************************************************/
+.cookbookPage,
+#cookbookPage.recipeCards {
+    display: block;
+    background-color: #FFFFFFDD;
+    border-radius: 45px;
+    margin: 36px;
+    padding: 24px;
+}
+
+.recipeCards #cookbookPageColumnOne {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.recipeCards #htmlPreview,
+.recipeCards #cssPreview,
+.recipeCards #jsPreview,
+.recipeCards #recipeListHeading,
+.recipeCards #recipeDetailsHeadingHTML,
+.recipeCards #recipeDetailsHeadingCSS,
+.recipeCards #recipeDetailsHeadingJS {
+    display: none;
+}
+
+.recipeCards .recipeLink {
+    flex: 280px;
+    display: flex;
+}
+
+.recipeCards .cookbookRecipe {
+    background-color: white;
+    border: 3px solid #ff7050;
+    border-radius: 12px;
+    box-shadow: 4px 4px 4px #00000033;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 12px;
+    min-width: 300px;
+    position: relative;
+    padding: 12px;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.recipeCards .cookbookRecipe:hover {
+    box-shadow: 8px 8px 8px #00000033;
+    transform: translateY(-8px);
+}
+
+.recipeCards .recipeHeading {
+    border-bottom: 3px solid #ff7050;
+}
+
+.recipeCards .recipeHeading {
+    font-size: 24px;
+    margin: 0px;
+    padding: 6px 12px;
+}
+
+.recipeLink {
+    text-decoration: none;
+    color: #e56144;
+}
+
+.recipeCards .recipePreview {
+    flex: 300px;
+    position: relative;
+    width: 100%;
+}
+
+.recipeCards .recipePreview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top left;
+}
+
+.recipeCards iframe {
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+}
+
+.recipeCards iframe {
+    border: none;
+}
+
+.recipeCards .recipeOverlay {
+    background: linear-gradient(to top, white 5%, transparent 20%, transparent);
+    height: 101%;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+.recipeCards #cookbookPageColumnTwo h4 {
+    display: none;
+}
+
+.recipeCards #previewContainer {
+    display: none;
+}
+
+.recipeCards #recipeListPreview {
+    display: none;
+}
+
+/*****************************************************
+  RECIPE LIST
+*****************************************************/
+
+#cookbookPage.recipeList {
+    background-color: #FFFFFFDD;
+    border-radius: 45px;
+    display: flex;
+    min-height: 500px;
+    margin: 36px;
+    padding: 48px 0px;
+}
+
+.recipeList #cookbookPageColumnOne,
+.recipeList #cookbookPageColumnTwo {
+    flex: 1;
+}
+
+.recipeList #cookbookPageColumnOne {
+    display: flex;
+    flex-direction: column;
+}
+
+.recipeList #cookbookPageColumnOne h2 {
+    margin-bottom: 0px;
+}
+
+.recipeList #htmlPreview,
+.recipeList #cssPreview,
+.recipeList #jsPreview,
+.recipeList #recipeDetailsHeadingHTML,
+.recipeList #recipeDetailsHeadingCSS,
+.recipeList #recipeDetailsHeadingJS {
+    display: none;
+}
+
+.recipeList #recipeListHeading {
+    margin-top: 0px;
+    margin-left: 36px;
+}
+
+.recipeList .recipeHeading {
+    display: flex;
+}
+
+.recipeList .recipeHeading a {
+    opacity: 0.5;
+}
+
+.recipeList .recipeHeading a.previewing {
+    text-decoration: underline;
+}
+
+.recipeList .recipeHeading a.previewing,
+.recipeList .recipeHeading a.previewing .recipeDots,
+.recipeList .recipeHeading a:hover,
+.recipeList .recipeHeading:hover .recipeDots {
+    opacity: 1;
+}
+
+.recipeList .recipeHeading .recipeDots,
+.recipeList .recipeHeading:hover .recipeDots:hover {
+    opacity: 0.5;
+}
+
+.recipeList .recipeDots {
+    border-bottom: 3px dotted #e56144;
+    flex: 1;
+}
+
+.recipeList .cookbookRecipe {
+    padding: 0px 36px;
+}
+
+.recipeList .cookbookRecipe .recipePreview {
+    display: none;
+}
+
+
+/**********************************************************
+    RECIPE DETAILS
+**********************************************************/
+
+#cookbookPage.recipeDetails {
+    background-color: #FFFFFFDD;
+    border-radius: 45px;
+    display: flex;
+    min-height: 500px;
+    margin: 36px;
+    padding: 48px 0px;
+}
+
+.recipeDetails #cookbookPageColumnOne {
+    max-width: 51%;
+}
+
+#cookbookPage.recipeDetails.noCodePreview #cookbookPageColumnOne {
+    display: none;
+}
+
+#cookbookPage.recipeDetails.noCodePreview #cookbookPageColumnTwo {
+    margin-left: 36px;
+}
+
+#cookbookPage.recipeDetails.noCodePreview #cookbookPageColumnTwo h4 {
+    display: none;
+}
+
+.recipeDetails #cookbookPageColumnOne,
+.recipeDetails #cookbookPageColumnTwo {
+    flex: 1;
+}
+
+.recipeDetails #recipeDetailsHeadingHTML {
+    margin-top: 0px;
+}
+
+.recipeDetails #recipeDetailsHeadingHTML,
+.recipeDetails #recipeDetailsHeadingCSS,
+.recipeDetails #recipeDetailsHeadingJS
+{
+    margin-left: 36px;
+}
+
+.recipeDetails #recipeListHeading {
+    display: none;
+}
+
+.recipeDetails .cookbookRecipe {
+    display: none;
+}
+
+.recipeDetails #htmlPreview,
+.recipeDetails #cssPreview,
+.recipeDetails #jsPreview {
+    font-family: monospace;
+    margin: 0px 36px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.recipeDetails #htmlPreview,
+.recipeDetails #cssPreview,
+.recipeDetails #jsPreview,
+.recipeList #recipeListPreview {
+    background-color: white;
+    box-shadow: inset 0px 0px 8px 4px #00000033;
+    padding: 12px;
+}
+
+#htmlPreview .comment,
+#cssPreview .comment,
+#jsPreview .comment {
+    background-color:#e5624420;
+}
+
+/* No Comments special styling */
+
+body.noComments .comment {
+    display: none;
+}
+
+body.noComments #htmlPreview .comment br + br,
+body.noComments #cssPreview .comment + br + br,
+body.noComments #jsPreview .comment + br + br {
+    display: none;
+}
+
+body.noComments #cssPreview .cssBlock br ~ br {
+    display: none;
+}
+
+body.noComments #cssPreview .cssBlock br + .space,
+body.noComments #cssPreview .cssBlock .space + .space,
+body.noComments #cssPreview .cssBlock .comment + .space,
+body.noComments #cssPreview .cssBlock .terminator + .space {
+    display: none;
+}
+
+body.noComments #cssPreview .cssBlock .newProperty::before {
+    content: "    ";
+    white-space: pre;
+}
+
+body.noComments #cssPreview .cssBlock .terminator::after {
+    content: "\a";
+    white-space: pre;
+}
+
+/* Seasonings/Meal-Prep Page special styling */
+
+.seasonings .recipeDetails #cookbookPageColumnOne,
+#meal-prep .recipeDetails #cookbookPageColumnOne,
+#recipes .recipeDetails #cookbookPageColumnOne {
+    display: flex;
+    flex-direction: column;
+}
+
+.seasonings .recipeDetails #recipeDetailsHeadingHTML,
+#meal-prep .recipeDetails #recipeDetailsHeadingHTML,
+#recipes .recipeDetails #recipeDetailsHeadingHTML {
+    margin-top: 16px;
+}
+
+.seasonings .recipeDetails #recipeDetailsHeadingCSS,
+#meal-prep .recipeDetails #recipeDetailsHeadingCSS,
+#recipes .recipeDetails #recipeDetailsHeadingCSS,
+.seasonings .recipeDetails #recipeDetailsHeadingJS,
+#meal-prep .recipeDetails #recipeDetailsHeadingJS,
+#recipes .recipeDetails #recipeDetailsHeadingJS {
+    margin-top: 0px;
+}
+
+.seasonings .recipeDetails #recipeDetailsHeadingJS,
+#meal-prep .recipeDetails #recipeDetailsHeadingJS,
+#recipes .recipeDetails #recipeDetailsHeadingJS {
+    order: 1;
+}
+
+.seasonings .recipeDetails #jsPreview,
+#meal-prep .recipeDetails #jsPreview,
+#recipes .recipeDetails #jsPreview {
+    order: 2;
+    margin-bottom: 16px;
+}
+
+.seasonings .recipeDetails #recipeDetailsHeadingCSS,
+#meal-prep .recipeDetails #recipeDetailsHeadingCSS,
+#recipes .recipeDetails #recipeDetailsHeadingCSS {
+    order: 3
+}
+
+.seasonings .recipeDetails #cssPreview,
+#meal-prep .recipeDetails #cssPreview,
+#recipes .recipeDetails #cssPreview {
+    order: 4;
+}
+
+.seasonings .recipeDetails #recipeDetailsHeadingHTML,
+#meal-prep .recipeDetails #recipeDetailsHeadingHTML,
+#recipes .recipeDetails #recipeDetailsHeadingHTML {
+    order: 5;
+}
+
+.seasonings .recipeDetails #htmlPreview,
+#meal-prep .recipeDetails #htmlPreview,
+#recipes .recipeDetails #htmlPreview {
+    order: 6;
+}
+
+/**********************************************************
+    RECIPE PREVIEW
+**********************************************************/
+#previewContainer {
+    min-height: 500px;
+    position: sticky;
+    top: 156px;
+}
+
+#cookbookPageColumnTwo h4 {
+    margin-top: 0px;
+}
+
+#recipeListPreview {
+    background-color: white;
+    box-shadow: inset 0px 0px 8px 4px #00000033;
+    height: calc(100vh - 410px);
+    margin-right: 36px;
+    min-height: 70vh;
+    padding: 12px;
+    overflow: hidden;
+}
+
+#recipeListPreview iframe {
+    border: none;
+    height: 100%;
+    opacity: 1;
+    width: calc(100% + 34px);
+}
+
+#meal-prep .recipeCards .recipePreview,
+#recipes .recipeCards .recipePreview,
+#appetizers .recipeCards .recipePreview,
+#troubleshooting .recipeCards .recipePreview   {
+    overflow: hidden;
+}
+
+#meal-prep .recipeCards .recipePreview iframe,
+#recipes .recipeCards .recipePreview iframe,
+#appetizers .recipeCards .recipePreview iframe {
+    width: 400%;
+    height: 400%;
+    transform: scale(0.25);
+    transform-origin: top left;
+}
+
+#troubleshooting .recipeCards .recipePreview iframe {
+    width: 200%;
+    height: 200%;
+    transform: scale(0.5);
+    transform-origin: top left;
+}
+
+
+/**********************************************************
+    ANIMATIONS
+**********************************************************/
+
+.recipeList #recipeListPreview.fadeOut,
+#cookbookPage.fadeOut,
+#viewButtons.fadeOut,
+#detailsButtons.fadeOut,
+#title.fadeOut {
+    animation: fadeOut 0.3s;
+    animation-fill-mode: forwards;
+}
+
+.recipeList #recipeListPreview.fadeIn,
+#cookbookPage.fadeIn,
+#viewButtons.fadeIn,
+#detailsButtons.fadeIn,
+#title.fadeIn {
+    animation: fadeIn 0.3s;
+    animation-fill-mode: forwards;
+}
+
+#mealPrepFooter.fadeOut {
+    animation: footerSlideDown 0.3s;
+    animation-fill-mode: forwards;
+}
+
+#mealPrepFooter.fadeIn {
+    animation: footerSlideUp 0.3s;
+    animation-fill-mode: forwards;
+}
+
+.hide {
+    display: none;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes footerSlideUp {
+    0% {
+        bottom: -60px;
+    }
+    100% {
+        bottom: 0px;
+    }
+}
+
+@keyframes footerSlideDown {
+    0% {
+        bottom: 0px;
+    }
+    100% {
+        bottom: -60px;
+    }
+}
+
+/**********************************************************
+    BREAKPOINTS
+**********************************************************/
+
+@media screen and (min-width: 1100px) and (max-width: 1400px) {
+    #title {
+        padding: 12px 36px 4px;
+    }
+
+    #title h1 {
+        font-size: 36px;
+    }
+
+    #title h3 {
+        font-size: 16px;
+        margin-bottom: 0px;
+    }
+
+    h2,
+    .recipeCards h2.recipeHeading {
+        font-size: 18px;
+    }
+
+    h4 {
+        font-size: 12px;
+    }
+
+    #quote {
+        font-size: 12px;
+        padding: 0px 0px;
+    }
+
+    #bottomHeader {
+        min-height: 57px;
+    }
+
+    #cookbookButtons button,
+    #cookbookButtons a {
+        font-size: 12px;
+    }
+
+    .recipeCards .recipePreview {
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    #background {
+        background-image: 
+            repeating-linear-gradient(135deg,transparent,transparent 100px, #ff705099 100px, #ff705099 200px),
+            repeating-linear-gradient(45deg,transparent,transparent 100px, #ff705077 100px, #ff705077 200px);
+    }
+
+    #title {
+        padding: 12px 24px 4px;
+    }
+
+    #title h1 {
+        font-size: 18px;
+    }
+
+    #title h3 {
+        font-size: 12px;
+        margin-bottom: 0px;
+    }
+
+    h2,
+    .recipeCards h2.recipeHeading {
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 12px;
+    }
+
+    #quote {
+        font-size: 12px;
+        padding: 0px 24px;
+    }
+
+    #bottomHeader {
+        min-height: 57px;
+    }
+
+    #cookbookButtons button,
+    #cookbookButtons a,
+    #filtersAndSortingHeader button,
+    #filtersAndSortingHeader #applyChangesButton {
+        font-size: 12px;
+        min-width: 100px;
+    }
+
+    #cookbookPage.recipeCards,
+    #cookbookPage.recipeList,
+    #cookbookPage.recipeDetails {
+        border-radius: 24px;
+        margin: 18px;
+        padding: 24px 0px;
+    }
+
+    #meal-prep #title {
+        border-radius: 24px;
+        margin: 18px;
+        padding: 24px 0px;
+    }
+
+    #cookbookPage.recipeCards {
+        padding: 24px;
+    }
+
+    .recipeCards #cookbookPageColumnOne {
+        gap: 24px;
+    }
+
+    .recipeCards .cookbookRecipe {
+        margin: 0px;
+        min-width: 200px;
+    }
+
+    .recipeCards .recipePreview {
+        height: 200px;
+    }
+    
+    .recipeCards .recipePreview iframe {
+        zoom: 0.5;
+    }
+
+    #cookbookPage.recipeList {
+        flex-direction: column;
+    }
+
+    .recipeList #recipeListHeading {
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .recipeList .cookbookRecipe {
+        padding: 4px 24px;
+    }
+
+    .recipeList .cookbookRecipe h2 {
+        justify-content: center;
+    }
+
+    .recipeList .recipeHeading a {
+        opacity: 1;
+    }
+
+    .recipeList .recipeHeading a.previewing {
+        text-decoration: none;
+    }
+
+    .recipeList .recipeHeading .recipeDots {
+        display: none;
+    }
+
+    #cookbookPage.recipeList #cookbookPageColumnTwo {
+        display: none;
+    }
+
+    #cookbookPage.recipeDetails {
+        flex-direction: column;
+    }
+
+    .recipeDetails #cookbookPageColumnOne {
+        max-width: none;
+        order: 2;
+    }
+    
+    .recipeDetails #cookbookPageColumnTwo {
+        order: 1;
+    }
+
+    .recipeDetails #previewContainer {
+        min-height: 300px;
+        padding: 0px 24px 24px;
+    }
+
+    .recipeDetails #previewContainer h4 {
+        text-align: center;
+    }
+
+    #recipeListPreview {
+        margin-right: 0px;
+    }
+
+    .recipeDetails #cookbookPageColumnOne h4 {
+        margin: 0px 24px 12px;
+        text-align: center;
+    }
+
+    .recipeDetails #htmlPreview, 
+    .recipeDetails #cssPreview, 
+    .recipeDetails #jsPreview {
+        font-size: 11px;
+        margin: 0px 24px 24px;
+    }
+
+    .recipeDetails #recipeListPreview {
+        min-height: auto;
+    }
+
+    #mealPrepFooter #currentPage {
+        font-size: 12px;
+        padding: 0px 12px;
+    }
+}
+
+@media screen and (min-width: 840px) and (max-width: 1200px) {
+    #topHeader h2 {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    #topHeader {
+        flex-direction: column;
+    }
+
+    #topHeader #brand {
+        margin-left: 0px;
+    }
+
+    #topHeader #navLinks > h2:last-child,
+    #topHeader #navLinks .dropdown-menu:last-child,
+    #topHeader #navLinks .dropdown-menu:last-child h2 {
+        margin-right: 0px;
+    }
+
+    #topHeader a {
+        padding: 8px 16px;
+    }
+
+    #topHeader #navLinks i {
+        display: none;
+    }
+
+    .dropdown-menu:hover .dropdown-items {
+        top: 100%;
+        visibility: hidden;
+        opacity: 0;
+        display: none;
+    }
+
+    #meal-prep .dropdown-menu.meal-prep-filter {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #filterOptions {
+        width: 90%;
+    }
+}
+
+@media print {
+    #background,
+    nav,
+    .recipeDetails #cookbookPageColumnTwo {
+        display: none;
+    }
+
+    #mealPrepFooter {
+        position: fixed;
+        top: 80px;
+        bottom: auto;
+        right: -20px;
+        width: 150px;
+        background-color: transparent;
+        color: #1a3159;
+        padding: 4px;
+    }
+
+    #mealPrepFooter button {
+        display: none;
+    }
+
+    #mealPrepFooter #currentPage {
+        padding: 8px;
+        border: 2px dashed grey;
+    }
+
+    .recipeDetails #cookbookPageColumnOne {
+        max-width: 100%;
+    }
+
+    .recipeDetails#cookbookPage {
+        background-color: transparent;
+        border-radius: 0px;
+        margin: 0px;
+    }
+
+    .recipeDetails #cssPreview,
+    .recipeDetails #htmlPreview,
+    .recipeDetails #jsPreview {
+        box-shadow: none;
+        overflow-x: visible;
+        border: 1px solid grey;
+        white-space: wrap;
+    }
+
+    #title h1 {
+        font-size: 36px;
+    }
+}

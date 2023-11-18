@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Movie Showcase (Project)</title>
+        <!-- 
+            The &lt;link&gt; below is responsive for loading the 
+            Font Awesome icon library.  Remember that only
+            "free" icons can be loaded in this way; "pro"
+            icons won't show up at all, so if students have
+            trouble with icons loading, make sure that the 
+            icon itself (and its style) are not "pro".
+        -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <!--
+            This is only a partially completed example of
+            what could be the "movie showcase" option for
+            the Week 1 project, since the completed project
+            would basically just be "rinse and repeat" with 
+            different content for each movie.
+        -->
+        <h1>Friday Night Movie Showcase</h1>
+        <hr>
+        <!--
+            Remember, <img> elements are inline elements,
+            so unless you put a block element or line break
+            between them, they'll line up side-by-side, as below.
+
+            Maintaining a consistent height between them all
+            will create a very clean looking layout (assuming
+            all the images have mostly the same aspect ratio)
+        -->
+        <div>
+            <img
+                src="images/howls_moving_castle.jpg"
+                alt="Howl's Moving Castle"
+                height="300"
+            >
+            <img
+                src="images/mummy_returns.png"
+                alt="The Mummy Returns"
+                height="300"
+            >
+            
+            <img
+                src="images/tangled.png"
+                alt="Tangled"
+                height="300"
+            >
+        </div>
+        <hr>
+        <!--
+            For each individual image showcase, we take advantage
+            of inline elements like <b>, <span>, and <i> to
+            keep content on the same line.
+
+            To add extra horizontal space between elements in the
+            same line, we can be a little hacky (since we haven't
+            learned CSS yet) and use the HTML entity for a 
+            space (&nbsp;) to add some extra horizontal margin.
+
+            Then to separate content vertically, we use block 
+            elements (like <p>) or line break elements (<br>) .
+        -->
+        <h2>Howl's Moving Castle</h2>
+        <img
+            src="images/howls_moving_castle_L.webp"
+            alt="Howl's Moving Castle"
+            width="600"
+        >
+        <br>
+        <br>
+        <b>GENRE&nbsp;</b>
+        <span>Fantasy/Romance</span>
+        &nbsp;&nbsp;
+        <b>RUNTIME&nbsp;</b>
+        <span>2h 14min</span>
+        &nbsp;&nbsp;
+        <b>RATING&nbsp;</b>
+        <span>
+            <!--
+                Below are examples of how to load up icons
+                from the Font Awesome icon library.
+                
+                Again, remember that you can only use "free"
+                icons in this way; "pro" icons (or icon 
+                styles) will not load at all.
+
+                And yes, they are choosing to use the <i>
+                element as if "i" stood for "icon" instead
+                of "italics".  Not the best practice, but
+                a very common one across the internet.
+
+                As long as no one puts any content inside 
+                of the element, it shouldn't really hurt
+                anything, despite not being used as intended.
+            -->
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+        </span>
+        <h4>SYNOPSIS</h4>
+        <p>
+            Sophie (Emily Mortimer) has an uneventful life at 
+            her late father's hat shop, but all that<br>changes 
+            when she runs into the wizard Howl (Christian 
+            Bale), who lives in a magical flying<br>castle. 
+            The possessive Witch of Waste (Lauren Bacall) 
+            takes issue with their encounter and casts<br>a spell 
+            on young Sophie, which ages her prematurely. Now
+            an elderly grandma, Sophie must<br>either learn to 
+            accept to her new form, or find the courage and
+            confidence to break her curse.
+        </p>
+        <br>
+        <hr>
+        <h2>The Mummy Returns</h2>
+        <img
+            src="images/mummy_returns_L.jpg"
+            alt="The Mummy Returns"
+            width="600"
+        >
+        <br>
+        <br>
+        <b>GENRE&nbsp;</b>
+        <span>Action/Adventure/Romance</span>
+        &nbsp;&nbsp;
+        <b>RUNTIME&nbsp;</b>
+        <span>2h 10min</span>
+        &nbsp;&nbsp;
+        <b>RATING&nbsp;</b>
+        <span>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+        </span>
+        <h4>SYNOPSIS</h4>
+        <p>
+            The evil mummy Imhotep returns to wreak havoc as he 
+            resumes his relentless search for<br>power and immortality. 
+            To make matters worse, another ancient evil has been 
+            unleashed,<br>even more dangerous than Imhotep. Only the 
+            heroic Rick O'Connell and his intrepid<br>Egyptologist wife 
+            stand in the way of these terrors as they embark 
+            upon a desperate mission<br>to save the world.
+        </p>
+        <br>
+    </body>
+</html>

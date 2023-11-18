@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.card {
+    flex: 300px;
+    border: 3px solid black;
+    margin: 24px;
+    padding: 24px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.card a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    border: 3px solid black;
+    padding: 12px;
+    margin-top: 36px;
+}
+
+/*
+    First, we'll start out with a relatively
+    simple hover state for the first card.
+
+    They should have learned about the :hover 
+    pseudo-class last week, but doesn't 
+    hurt to review what it is and how it works.
+
+    Same with CSS Transitions.
+
+    For this example, we're just going to
+    add a background-color, and a combination
+    of box-shadow and a translate transform
+    to make it appear like the card is floating
+    off the page when we hover over it.
+*/
+#card1:hover {
+    background-color: lightcyan;
+    box-shadow: 4px 4px 4px #00000033;
+    transform: translateY(-4px);
+}
+
+/*
+    That works, but the problem is that its
+    a very sudden state change; it's either
+    on or off.
+
+    To make it more gradual, we can register
+    those properties we changed in the hover
+    state with the transition property.
+
+    Remind the students that this should 
+    be applied to the card in its normal
+    state; we want it to ALWAYS transition,
+    whether we're hovering over it or not.
+*/
+
+#card1 {
+    transition: 
+        background-color 0.5s,
+        box-shadow 0.5s,
+        transform 0.5s;
+}
+
+/*
+    Remember that in the transition property,
+    you must register each property name that
+    you want to animate between states, AND
+    you must include the duration that you 
+    want that animation to take.
+
+    That wraps up our first card; hopefully
+    that was a good refresher on how the
+    :hover pseudo-class and transition
+    property works.
+
+    Now, onto some more advanced :hover 
+    selectors that we can use.
+*/

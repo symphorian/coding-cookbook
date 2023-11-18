@@ -1,0 +1,32 @@
+/* Drill 5 - Write your code solution below */
+
+/*
+    This is our first more practical drill.
+
+    The goal is to get two chunks of "real"
+    content side-by-side, and by now, students
+    should, hopefully, know how to accomplish
+    that (display: inline-block).
+
+    But there is a catch: this time, the students
+    need to do the extra work themselves of
+    setting the width on the two div elements.
+
+    If they don't, even though they set inline-block,
+    the elements still won't sit side-by-side,
+    because without an explicit width, they take 
+    up ALL the horizontal space they can, 
+    so there's no room for them up on the same line.
+*/
+
+.d5-div {
+    display: inline-block;
+}
+
+#d5-div1 {
+    width: 250px;
+}
+
+#d5-div2 {
+    width: 230px;
+}

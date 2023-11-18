@@ -1,0 +1,63 @@
+#navbar {
+    text-align: center;
+    padding: 24px;
+    background-color: blue;
+}
+
+#navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+p a {
+    color: teal;
+}
+
+p.warning {
+    color: crimson;
+}
+
+p.warning a {
+    color: orange;
+}
+
+/*
+    Now this time, suppose the client
+    wants unordered list text to be green,
+    but for the hyperlinks inside to be different
+    colors based on what they're inside of: 
+        - lime by default
+        - purple if inside a paragraph 
+        - lightblue if inside a div
+
+    (arbitrary? yes. but sometimes clients
+    are like that)
+
+    To turn all the text inside the ul green,
+    that's fairly straightforward.
+*/
+
+ul {
+    color: green;
+}
+
+/*
+    So now the text is green...but the anchors
+    are another story.
+
+    One anchor is already teal, thanks to the 
+    CSS rule from earlier (p a).
+
+    To change the anchors, we'll need to craft
+    a CSS rule specific to the ul
+*/
+
+ul a {
+    color: lime;
+}
+
+/*
+    That went and changed ALL of the anchors
+    inside the ul to lime, but now we also need
+    to meet the other client requirements
+*/

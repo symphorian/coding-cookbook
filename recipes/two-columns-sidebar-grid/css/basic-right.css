@@ -1,0 +1,140 @@
+/* COMMON PAGE LAYOUT SETUP CSS - START *****************/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    /* preferred copy font goes here */
+    font-family: sans-serif; 
+}
+/* COMMON PAGE LAYOUT SETUP CSS - END ********************/
+
+/*
+    To create a two column layout
+    with a right sidebar using grid:
+    
+    Approach 1 
+        Basically just use the same steps as in the
+        previous page for a left sidebar, but change 
+        the order of the sidebar and the main content.
+
+        (in other words, in the HTML, add the main 
+        content container first, and then add the 
+        sidebar container second)
+
+        This approach requires the exact same CSS as before.
+    
+    Approach 2
+        However, you can actually use the same HTML as
+        we used in the previous example, and change the
+        CSS to make the sidebar swap sides.
+
+        It's a bit complex, but like flexbox, there's a
+        way to change the order of elements in the grid,
+        although you can do much more than that.
+
+        Flexbox is a primarily a one-dimensional layout
+        structure, meaning content flows in one direction:
+        either in a row or in a column.
+
+        However, grid is a two-dimensional layout, meaning
+        content can flow vertically AND horizontally...
+        or even in any custom way we choose.
+
+        That's where a new property called grid-template-areas
+        comes into play: with this property, we can assign 
+        grid-areas to elements, telling them how to arrange
+        themselves within the columns we defined in the
+        grid-template-columns property.
+
+        This is the approach we used below, since the first
+        approach didn't require any CSS changes.
+*/
+
+#two-columns {
+    display: grid;
+    /*
+        We have to swap the column widths here, so that the
+        250px is the last column; otherwise, we'll have a 
+        VERY wide sidebar
+    */
+    grid-template-columns: 1fr 250px;
+
+    /* APPROACH 2 */
+    /*
+        grid-template-areas is probably one of the weirdest
+        and most complex CSS properties you'll experience, but
+        it's incredibly useful once you get the hang of it,
+        particularly if you want to create complex grid layouts.
+
+        There are two important steps to remember if you want to
+        use grid-template-areas:
+            #1 - define the grid areas you want in the template
+            #2 - assign the grid areas to the elements in your grid.
+
+        The first step takes place in the grid container 
+        (in our case, the #two-columns element).
+
+        You define grid-template-areas by rows, and in each row,
+        you should only have the number of columns defined by
+        grid-template-columns.
+
+        You have to be careful here, because there's nothing 
+        stopping you from creating a row with more or less columns
+        than the grid-template-columns you set up...so make sure
+        you know your own code!
+
+        You define a row by specifying text values (names) to define
+        grid areas inside of double quotes; spaces separate the 
+        text values.  You can define as many rows with as many
+        double quotes as you want; however, we only need one.
+
+        In our case, we only want to define two grid areas,
+        one for the sidebar, and one for the main content.
+        We can name them whatever we want; in the code below,
+        we've called them sidebar-area and content-area.
+
+        Because we want the sidebar to be on the right this time,
+        we define the sidebar-area to be the second column.
+    */
+    /* APPROACH 2, STEP 1 */
+    grid-template-areas: 
+        "content-area sidebar-area";
+}
+
+#sidebar-content {
+    background-color: lightgreen;
+    /* APPROACH 2, STEP 2 */
+    /*
+        Here is where we assign the grid area we defined above.
+        In this case: sidebar-area.
+        
+        It's important to make sure the area name matches EXACTLY;
+        if we used Sidebar-area, it would not match, and our
+        template areas wouldn't work.
+
+        This code will slot the #sidebar-content element into the
+        second column of the first row (the only row), as we 
+        defined in grid-template-columns above.
+    */  
+    grid-area: sidebar-area;
+}
+
+#main-content {
+    background-color: #37d37b;
+    /* APPROACH 2, STEP 2 */
+    /*
+        Here is where we assign the grid area we defined above.
+        In this case: content-area.
+        
+        Again, make sure the area name matches EXACTLY;
+        if we used content_area, it would not match, and our
+        template areas wouldn't work.
+
+        This code will slot the #main-content element into the
+        first column of the first row (the only row), as we 
+        defined in grid-template-columns above.
+    */  
+    grid-area: content-area;
+}

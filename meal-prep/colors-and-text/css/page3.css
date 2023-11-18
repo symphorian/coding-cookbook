@@ -1,0 +1,46 @@
+#first-paragraph {
+    color: blue;
+}
+
+/*
+    Let's add another CSS Rule and another
+    paragraph, so that we can try to change
+    its color as well.
+
+    This time, let's target the id
+    'second-paragraph', set its color property
+    this time with the hexidecimal color
+    value for red: #FF0000
+
+    This is to show we're not limited to HTML
+    color names (which are fairly limited in
+    the first place).
+
+    Students can pick whatever color they want,
+    it doesn't have to be red.  In fact, you can
+    even ask them for the colors to use in
+    the demo.
+*/
+
+#second-paragraph {
+    color: #FF0000;
+}
+
+/*
+    remind students (over and over again)
+    that ID Selectors must start with the #,
+    followed by the value of the id attribute
+    we want to target.
+
+    It's also worth reminding students that when
+    setting CSS property values, they must
+    include 
+        - the property name
+        - the assignment operator (:) 
+        - the property value
+        - the assignment terminator (;)
+
+    Make sure to add the paragraph element with 
+    the 'second-paragraph' id attribute value in
+    the HTML, if you haven't already.
+*/

@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.card {
+    flex: 300px;
+    border: 3px solid black;
+    margin: 24px;
+    padding: 24px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.card a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    border: 3px solid black;
+    padding: 12px;
+    margin-top: 36px;
+}
+
+#card1:hover {
+    background-color: lightcyan;
+    box-shadow: 4px 4px 4px #00000033;
+    transform: translateY(-4px);
+}
+
+#card1 {
+    transition: 
+        background-color 0.5s,
+        box-shadow 0.5s,
+        transform 0.5s;
+}
+
+#card2 a {
+    transition: 
+        background-color 0.5s,
+        box-shadow 0.5s,
+        transform 0.5s;
+}
+
+#card2:hover a {
+    background-color: aquamarine;
+    box-shadow: 4px 4px 4px #00000033;
+    transform: translateY(-4px);
+}
+
+#card3 .card-content {
+    transition:
+        opacity 0.5s,
+        visibility 0.5s;
+}
+
+#card3:hover .card-content {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#card4 .card-content {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px); 
+    transition:
+        opacity 0.5s,
+        visibility 0.5s,
+        transform 0.5s; 
+}
+
+#card4:hover .card-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px); 
+}
+
+#card5 {
+    position: relative;
+}
+
+#card5 .card-content {
+    position: absolute;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 12px;
+    box-shadow: 4px 4px 4px #00000033;
+    left: 0px;
+    margin: 0px 24px;
+    padding: 24px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: 
+        opacity 0.5s,
+        visibility 0.5s,
+        transform 0.5s;
+
+}
+
+#card5:hover .card-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}
+
+#card6 {
+    position: relative;
+    border: 0px;
+    padding: 0px;
+}
+
+#card6 .card-front,
+#card6 .card-back {
+    border: 3px solid black;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+#card6 .card-back {
+    transform: scaleX(0);
+}
+
+#card6 .card-front {
+    background-image: url("../images/perrito.png");
+    background-size: cover;
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+/* 
+    We basically want to animate the transform
+    property for the front and back faces:
+    the front face should shrink to nothing,
+    and the back face should grow to its 
+    normal size.
+
+    However, if we do both at the same time...
+    it's not going to look like a flip effect 
+    at all
+*/
+
+#card6 .card-front {
+    transition: transform 0.25s;
+}
+
+#card6 .card-back {
+    transition: transform 0.25s;
+}
+
+#card6:hover .card-front {
+    transform: scaleX(0);
+}
+
+#card6:hover .card-back {
+    transform: scaleX(1);
+}
+
+/*
+    It's an interesting effect, but not
+    quite the one we're looking for.
+*/

@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#navbar {
+    background: linear-gradient(to bottom, green, #3e6d3e);
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+#navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 24px;
+}
+
+#navbar img {
+    width: 200px;
+}
+
+#navbar #logo {
+    margin-right: auto;
+}
+
+#navbar .cta-button {
+    background-color: white;
+    color: green;
+    border-radius: 36px;
+    padding: 16px 24px;
+    font-size: 20px;
+    font-weight: bold;
+    min-width: 150px;
+    text-align: center;
+    margin-right: 24px;
+}
+
+/*
+    At the moment, we just have a blank empty
+    page, which is not a very realistic way
+    to view our navbar.
+
+    Let's add some content to our page, so
+    we can view our navbar in a more 
+    realistic context.
+
+    (Go to the HTML and do that)
+
+    Now we'll configure the layout to be a
+    centered Single Column Page Layout,
+    and we'll also artificially lengthen
+    it so we can see the scroll behavior too.
+*/
+#layout {
+    width: 800px;
+    margin: 48px auto;
+    font-size: 24px;
+    height: 200vh;
+}
+
+/*
+    Notice how our navbar scrolls with the 
+    page? That's pretty normal div behavior,
+    so that shouldn't be surprising.
+
+    However, a lot of navbars actually stick
+    to the top of the page as you scroll,
+    so that you can always navigate elsewhere.
+
+    This comes with a trade-off though: that 
+    means you'll always be losing some vertical
+    space on the page to the navbar that could
+    be used to view page content.
+
+    For that reason, navbars that follow the
+    viewer down the page are only recommended
+    if you have a relatively short navbar.
+
+    Next, let's see some options for how we
+    can make our navbars "stick" to the top
+    of the page.
+*/

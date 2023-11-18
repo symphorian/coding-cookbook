@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Music Playlists (Project)</title>
+        <!-- 
+            The &lt;link&gt; below is responsive for loading the 
+            Font Awesome icon library.  Remember that only
+            "free" icons can be loaded in this way; "pro"
+            icons won't show up at all, so if students have
+            trouble with icons loading, make sure that the 
+            icon itself (and its style) are not "pro".
+        -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <!--
+            This is only a partially completed example of
+            what could be the "music playlists" option for
+            the Week 1 project, since the completed project
+            would basically just be "rinse and repeat" with 
+            different content for each playlist.
+        -->
+        <h1>My Workout Playlist</h1>
+        <hr>
+        <h3>Currently Playing:</h3>
+        <img 
+            src="images/ar_tonelico_mio.jpeg"
+            alt="Ar tonelico Hymmnos Concert side 澪"
+            width="450"
+        >
+        <p>
+            <!--
+                Below are examples of how to load up icons
+                from the Font Awesome icon library.
+                
+                Again, remember that you can only use "free"
+                icons in this way; "pro" icons (or icon 
+                styles) will not load at all.
+
+                And yes, they are choosing to use the <i>
+                element as if "i" stood for "icon" instead
+                of "italics".  Not the best practice, but
+                a very common one across the internet.
+
+                As long as no one puts any content inside 
+                of the element, it shouldn't really hurt
+                anything, despite not being used as intended.
+            -->
+            <i class="fa-solid fa-music"></i>
+            &nbsp;
+            <b>METHOD_METAFALICA/.</b>
+            &nbsp;
+            <i>Hymmnos Concert Side 澪</i>
+            &nbsp;
+            <i class="fa-solid fa-music"></i>
+        </p>
+        <hr>
+        <br>
+        <!--
+            For each individual playlist item, we take advantage
+            of inline elements like <b>, <span>, and <i> to
+            keep content on the same line.
+
+            To add extra horizontal space between elements in the
+            same line, we can be a little hacky (since we haven't
+            learned CSS yet) and use the HTML entity for a 
+            space (&nbsp;) to add some extra horizontal margin.
+
+            Then to separate content vertically, we use block 
+            elements (like <p>) or line break elements (<br>) .
+        -->
+        &nbsp;
+        <!--
+            Remember, <img> elements are inline elements,
+            so unless you put a block element or line break
+            between them, they'll line up side-by-side, 
+            with other content, as below.
+
+            Maintaining a consistent height between them all
+            will create a very clean looking layout (assuming
+            all the images have mostly the same aspect ratio)
+        -->
+        <img 
+            src="images/nier_replicant.webp"
+            alt="NieR Replicant"
+            width="40"
+        >
+        &nbsp;
+        <b>Blu-bird</b>
+        &nbsp;
+        <i>NieR Gestalt & Replicant Original Soundtrack</i>
+        &nbsp;
+        <span>2:41</span>
+        <br>
+        <br>
+        &nbsp;
+        <img 
+            src="images/ar_tonelico_homura.jpeg"
+            alt="Ar tonelico Hymmnos Concert side 炎"
+            width="40"
+        >
+        &nbsp;
+        <b>EXEC_DESPEDIA/.</b>
+        &nbsp;
+        <i>Hymmnos Concert Side 炎</i>
+        &nbsp;
+        <span>2:53</span>
+        <br>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <img height="40">
+        <i class="fa-solid fa-play"></i>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <b>METHOD_METAFALICA/.</b>
+        &nbsp;
+        <i>Hymmnos Concert Side 澪</i>
+        &nbsp;
+        <span>4:37</span>
+        <br>
+        <br>
+        &nbsp;
+        <img 
+            src="images/nier_automata.webp"
+            alt="NieR Automata"
+            width="40"
+        >
+        &nbsp;
+        <b>Song of the Ancients / Atonement</b>
+        &nbsp;
+        <i>NieR: Automata Original Soundtrack</i>
+        &nbsp;
+        <span>5:09</span>
+        <br>
+        <br>
+        &nbsp;
+        <img 
+            src="images/ar_nosurge.jpeg"
+            alt="Ar nosurge Genometric Concert"
+            width="40"
+        >
+        &nbsp;
+        <b>Class::EXSPHERE_NOSURGE</b>
+        &nbsp;
+        <i>Ar nosurge Genometric Concert</i>
+        &nbsp;
+        <span>5:09</span>
+        <br>
+    </body>
+</html>

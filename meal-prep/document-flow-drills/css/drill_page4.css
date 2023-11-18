@@ -1,0 +1,33 @@
+/* Drill 4 - Write your code solution below */
+
+/*
+    Same solution as Drill 5, just showcasing 
+    a different scenario, where each block is
+    given an explicit width value.
+
+    When inline-blocks have an explicit width,
+    they respect that width, and are allowed 
+    to sit side-by-side with other elements 
+    on the same line if they an fit.
+
+    However, again, it's beneficial to show
+    students the difference between inline
+    and inline-block here: inline elements 
+    will NOT respect the widths given them.
+
+    They'll only take up as much space as 
+    they need, and will show that weird
+    overlapping behavior again, since they
+    don't respect the vertical spacing
+    given to them.
+
+    So, most of the time, if we want elements
+    with any sort of styling on them to sit
+    side-by-side, we'll usually use the
+    inline-block display value instead of
+    inline.
+*/
+
+.d4-div {
+    display: inline-block;
+}

@@ -1,0 +1,22 @@
+/* Drill 8 - Write your code solution below */
+
+/*
+    This is our first drill focusing on Flexbox
+    Items (although Containers are still involved)
+
+    First, we need to make the container a flexbox.
+
+    Then, we need to give each block equal sizing.
+    This could possibly be done using width, but
+    since the flex property redistributes size 
+    based on remaining space, using the flex 
+    property on the flexbox items (the boxes)
+    makes things a lot easier.
+*/
+
+#container-8 {
+    display: flex;
+}
+#container-8 .box {
+    flex: 1;
+}

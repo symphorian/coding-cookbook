@@ -1,0 +1,57 @@
+/*
+    To recap from the Box Model PowerPoint,
+    there are three main components in the
+    Box Model (aside from the content): 
+    border, padding, and margin.
+
+    And these components are part of ALL
+    HTML elements.  Every single one
+    has its own Box Model.
+
+    Padding and margin are the spacing 
+    inside and outside of the border,
+    respectively.  However, without a 
+    border actually rendered, it can
+    be difficult to visualize how these
+    different kinds of spacing affect
+    an element.
+
+    So, first things first, we're going
+    to add a border to each of the divs.
+
+    You may have noticed there's no ids
+    or classes on these div elements, so
+    we can use those selectors to target 
+    them.
+
+    That's okay though, because we still
+    have one more selector we can use to
+    target the divs: the HTML Element
+    Selector.
+
+    The HTML Element Selector is possibly
+    the simplest to use: you just add the
+    name of the element you want to target.
+
+    So we'll do that with 'div' below, and
+    add a border.
+*/
+
+div {
+    border: 1px solid black;
+}
+
+/*
+    The three parts of a border are:
+    - border width
+    - border style (or type)
+    - border color
+
+    We typically use the short-hand border
+    property above to set all three.
+
+    However, we can also set a single border
+    side if we want to, with something like:
+
+    border-bottom: 1px solid black;
+*/

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>justify-content Property (Flexbox)</title>
+        <link href="css/justify-content.css" rel="stylesheet" data-seasoning>
+        <link href="css/shared.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="recipe-example">
+            <h4>Basic Code Snippets</h4>
+            <code>justify-content: flex-start;</code>
+            <br>
+            <code>justify-content: center;</code>
+            <br>
+            <code>justify-content: flex-end;</code>
+            <br>
+            <code>justify-content: space-between;</code>
+            <br>
+            <code>justify-content: space-around;</code>
+            <br>
+            <code>justify-content: space-evenly;</code>
+            <br>
+        </div>
+        <h4>Additional Examples</h4>
+        <p class="warning">
+            NOTE: The justify-content property is a 
+            <strong>Flexbox Container Property</strong>.
+            <br>
+            <br>
+            This property will have no effect if applied to
+            an element that is not an activated Flexbox
+            Container (i.e. has 
+            <code><strong>display: flex;</strong></code>
+            applied to it)
+        </p>
+        <p>
+            The justify-content property determines how a Flexbox
+            Container both aligns and spaces the content inside of
+            it.
+        </p>
+        <p>
+            It's important to understand that the justify-content 
+            property works along a flexbox's <strong>main-axis</strong>.
+        </p>
+        <p>
+            This means that the behavior of this property will 
+            change depending on the flex-direction of the Container.
+        </p>
+        <ul>
+            <li>if flex-direction is set to <i>row</i></li>
+            <ul>
+                <li>
+                    justify-content will work along the x-axis
+                    (or horizontal direction)
+                </li>
+            </ul>
+            <li>if flex-direction is set to <i>column</i></li>
+            <ul>
+                <li>
+                    justify-content will work along the y-axis
+                    (or vertical direction)
+                </li>
+            </ul>
+        </ul>
+        
+        <p>
+            The following examples will showcase justify-content
+            as it affects a flexbox with a <i>row</i> flex-direction.
+        </p>
+
+        <h4>justify-content: flex-start;</h4>
+        <div class="flex-container justify-flex-start">
+            <div class="box">A</div>
+            <div class="box wide">B</div>
+            <div class="box">C</div>
+        </div>
+        <h4>justify-content: center;</h4>
+        <div class="flex-container justify-center">
+            <div class="box">A</div>
+            <div class="box wide">B</div>
+            <div class="box">C</div>
+        </div>
+        <h4>justify-content: flex-end;</h4>
+        <div class="flex-container justify-flex-end">
+            <div class="box">A</div>
+            <div class="box wide">B</div>
+            <div class="box">C</div>
+        </div>
+        <h4>justify-content: space-between;</h4>
+        <div class="flex-container justify-space-between">
+            <div class="box">A</div>
+            <div class="box wide">B</div>
+            <div class="box">C</div>
+        </div>
+        <h4>justify-content: space-around;</h4>
+        <div class="flex-container justify-space-around">
+            <div class="box">A</div>
+            <div class="box wide">B</div>
+            <div class="box">C</div>
+        </div>
+        <h4>justify-content: space-evenly;</h4>
+        <div class="flex-container justify-space-evenly">
+            <div class="box">A</div>
+            <div class="box wide">B</div>
+            <div class="box">C</div>
+        </div>
+
+        <div class="resources">
+            <h4>Additional Resources</h4>
+            <a 
+                href="https://www.w3schools.com/cssref/css3_pr_justify-content.php"
+                target="_blank"
+            >
+                w3schools 
+            </a>
+            <br>
+            <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content"
+                target="_blank"
+            >
+                mdn web docs
+            </a>
+        </div>
+    </body>
+</html>
