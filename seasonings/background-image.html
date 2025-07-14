@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>background-image Property</title>
+        <link href="css/background-image.css" rel="stylesheet" data-seasoning>
+        <link href="css/shared.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="recipe-example">
+            <h4>Basic Code Snippets</h4>
+            <code>background-image: url("../images/flamingo.jpg");</code>
+            <br>
+            <code>background-image: url("../images/photos/jared.jpeg");</code>
+            <br>
+            <code>background-image: url("../images/abstract.png");</code>
+        </div>
+        <h4>Additional Examples</h4>
+        <div>
+            <p>
+                The background-image property is used to add an image to the 
+                background of a container.  
+            </p>
+            <p>
+                Below is the image we'll be using for this example. It works 
+                well as a background image because there isn't too much detail 
+                in it that would distract from any content we put on top of it.
+            </p>
+            <h6>An &lt;img&gt; element</h6>
+            <img 
+                src="images/dark-abstract-background.avif" 
+                alt="image to use for background image examples"
+            >
+            <p>
+                Unlike the &lt;img&gt; element (shown above), an image applied 
+                via the background-image property has no size associated with 
+                it at all. It's as if we "paint" the image onto the container's 
+                background (the same background where background-color would go).
+            </p>
+            <p>
+                Because of this, you have to be a 
+                little thoughtful about how you used this property.
+            </p>
+            <p>
+                For example, in the &lt;div&gt; container below, we added a background-image
+                ...but you can't really see much of it at all, because the
+                container it was painted onto is very small; it's only the height 
+                of the text inside it!
+            </p>
+            <h6>Example 1: A basic background-image property example</h6>
+            <div id="example1" class="example">
+                <code>background-image: url("../images/abstractBackground.webp");</code>
+            </div>
+            <p>
+                However, if we stretch out that container a bit with something 
+                like the height property, then we can see much more of the 
+                image that we painted onto it.
+            </p>
+            <h6>
+                Example 2: 
+                A background-image property example with height applied
+            </h6>
+            <div id="example2" class="example">
+                <code>
+                    background-image: url("../images/abstractBackground.webp");
+                    <br>
+                    height: 400px;
+                </code>
+            </div>
+            <p>
+                But, even then, there are still some problems. 
+                For instance, if you look closely, the image we painted onto the 
+                background is repeating itself over and over (a behavior
+                which is sometimes called "tiling").
+            </p>
+            <p>
+                To make our background-image behave a bit better, we usually
+                have to bring in a couple of its sibling properties, like 
+                background-size and background-position.  These properties 
+                are frequently found together in CSS code, and work together to
+                address the sizing and positioning issues that are common 
+                when you ONLY use background-image.
+            </p>
+            
+            <h6>
+                Example 3:
+                A background-image property example with other common background
+                properties applied
+            </h6>
+            <div id="example3" class="example">
+                <code>
+                    background-image: url("../images/abstractBackground.webp");
+                    <br>
+                    background-size: cover;
+                    <br>
+                    background-position: center center;
+                    <br>
+                    height: 400px;
+                </code>
+            </div>
+        </div>
+        <div class="resources">
+            <h4>Additional Resources</h4>
+            <a 
+                href="https://www.w3schools.com/cssref/pr_background-image.php"
+                target="_blank"
+            >
+                w3schools 
+            </a>
+            <br>
+            <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-image"
+                target="_blank"
+            >
+                mdn web docs
+            </a>
+        </div>
+    </body>
+</html>

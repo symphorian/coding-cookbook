@@ -1,0 +1,54 @@
+/*
+    Then add the card layouts into the 
+    HTML.  We'll keep them simple:
+    just a heading and paragraph for each.
+
+    Come back here after adding them in.
+*/
+
+/* 
+    Then, once you're back here, add in the
+    standard page layout setup 
+*/
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*
+    Next, we'll set up our Page Layout.
+    
+    This is an alternate way of setting up a
+    Centered Single Column Page Layout,
+    having it mostly fill the screen until a
+    certain point when it stops growing.
+*/
+#single-column {
+    width: 90vw;
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+/*
+    Then, we're going to add a very simple
+    card content layout style.
+*/
+.card {
+    border: 5px solid #cf9dfc;
+    padding: 36px;
+    text-align: center;
+    margin: 36px 0px;
+}
+
+.card h3 {
+    font-size: 36px;
+    margin: 0px;
+}
+
+.card p {
+    font-size: 24px;
+    margin: 24px 0px 0px;
+}

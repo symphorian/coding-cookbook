@@ -1,0 +1,11 @@
+#section-1 .example-card {
+    box-shadow: 4px 4px 8px #00000088;
+    transition: 
+        transform 0.25s,
+        box-shadow 0.25s;
+}
+
+#section-1 .example-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 8px 8px 16px #00000088;
+}

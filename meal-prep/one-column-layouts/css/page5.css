@@ -17,7 +17,9 @@ body {
 
     So, we're showing this more as an example of how you
     could potentially get a block element right aligned
-    INSIDE of another layout.
+    INSIDE of another layout, because that "auto" magic
+    with margin-left will come in handy later on in the 
+    course.
 
     As for our last single column layout, the centered one,
     it's pretty straightforward, and not too different

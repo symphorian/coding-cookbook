@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#nav {
+    background-color: #fff0cb;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 125px;
+}
+
+#nav a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#flex-sbs {
+    width: 80vw;
+    max-width: 800px;
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.image-container {
+    height: 400px;
+}
+
+#grid-side-by-side {
+    background-color: #fff0cb;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 250px 250px;
+    grid-auto-rows: 150px;
+    justify-content: center;
+    gap: 50px;
+}
+
+/*
+    To create a media query, you need:
+    - the at-rule (@media)
+    - the media type
+    - the media feature(s).
+
+    max-width targets anything at or below that width.
+    min-width targets anything at or above that width.
+
+    They can be used together to create upper and lower
+    bounds for a media query.
+*/
+@media screen and (max-width: 768px) {
+    /*
+        By default, flex-direction is set to 'row', 
+        which gets Flexbox items side by side.
+        
+        The flex-direction property must be changed to 
+        'column' for Flexbox items to stack.
+
+        Alternatively, you can also use flex-wrap: wrap;
+        to allow Flexbox items to stack in a different way.
+
+        Which approach is best will depend on your design
+        and content.
+
+    */
+    #nav, #flex-side-by-side {
+        flex-direction: column;
+    }
+
+    #nav {
+        gap: 25px;
+        align-items: center;
+    }
+
+    #flex-side-by-side {
+        gap: 10px;
+    }
+
+    .image-container {
+        height: 200px;
+        width: 100%;
+    }
+
+    /*
+        To turn a grid into a single column grid, you must
+        change the amount of columns present in your
+        grid-template-columns property to one (1). 
+        
+        The width of that single column value is up to you
+        (but for a mobile breakpoint, you'll probably want
+        to set it to either 100% or 1fr)
+    */
+    #grid-side-by-side {
+        grid-template-columns: 100%;
+    }
+}

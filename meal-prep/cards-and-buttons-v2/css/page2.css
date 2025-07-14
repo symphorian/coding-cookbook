@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#centered-column {
+    width: 90vw;
+    max-width: 800px;
+    margin: 48px auto;
+}
+
+.card {
+    width: 350px;
+    /*
+        Let's give our card a 2px solid off-white 
+        pinkish border with a radius of 5px. 
+        We're aiming for a soft elegant effect here.
+    */
+    border: 2px solid #ffe4da;
+    border-radius: 5px;
+    /*
+        Let's also give it some padding to add more
+        breathing room between the content and the 
+        borders of the box.
+    */
+    padding: 10px;
+    /*
+        Much cleaner! And it actually resembles
+        a card now, after we added the border.
+
+        Next, let's make our card look like it has some 
+        depth to it by using a fun property called
+        box-shadow.  Some of you may have used this on
+        some previous assignments already; if so, 
+        consider this a refresher.
+
+        Box-shadow applies shadows to elements by using 
+        up to 5 values in this order: offset-x, offset-y, 
+        blur-radius, spread-radius, and color.
+
+        The offsets essentially move the shadow around 
+        the box, as if we were moving the light source.
+
+        blur- and spread-radius affect how distinct/blurry
+        and how large the shadow is.
+
+        And color, well, affects the color of the shadow.
+        
+        We'll apply a box-shadow property with only 4 values: 
+            x-offset: -4px
+            y-offset: 4px
+            blur-radius: 12px
+            color: a light greyish-pink color
+    */
+    box-shadow: -4px 4px 12px #ceaaaa;
+
+    /*
+        We're not going to use this in the final product, 
+        but real quick, watch what happens if we add a 
+        value of 'inset' at the start: our shadows will be 
+        inverted to show on the INSIDE of the box, rather 
+        than the outside, which gives the effect that we're 
+        looking down into a hole in the shape of a box.
+        (a darker color shadow and more padding would make 
+        this effect more apparent)
+
+        Neat, huh? But again, we're not going to keep this
+        in the demo, so we'll revert it back.
+    */
+}
+
+.card img {
+    width: 100%;
+}
+
+.card h2 {
+    font-size: 36px;
+    margin-top: 12px;
+}
+
+.card p {
+    font-size: 18px;
+}

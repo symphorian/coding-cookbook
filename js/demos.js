@@ -16,6 +16,12 @@ const mealPrepRecipes = [
         hasLocalProject: true,
     },
     {
+        recipeName: "basic-html-drills",
+        categories: "drills, week1, html",
+        pageCount: 8,
+        hasLocalProject: true,
+    },
+    {
         recipeName: "lists",
         categories: "demo, week1, html",
         pageCount: 10,
@@ -40,9 +46,21 @@ const mealPrepRecipes = [
         hasLocalProject: true,
     },
     {
+        recipeName: "basic-css-drills",
+        categories: "drills, week2, css",
+        pageCount: 15,
+        hasLocalProject: true,
+    },
+    {
         recipeName: "divs-spans-and-flow",
         categories: "demo, week2, css, html",
         pageCount: 9,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "document-flow-drills",
+        categories: "drills, week2, css",
+        pageCount: 8,
         hasLocalProject: true,
     },
     {
@@ -52,9 +70,33 @@ const mealPrepRecipes = [
         hasLocalProject: true,
     },
     {
+        recipeName: "box-model-padding-drills",
+        categories: "drills, week2, css",
+        pageCount: 7,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "box-model-border-drills",
+        categories: "drills, week2, css",
+        pageCount: 9,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "box-model-margin-drills",
+        categories: "drills, week2, css",
+        pageCount: 9,
+        hasLocalProject: true,
+    },
+    {
         recipeName: "combining-selectors",
         categories: "demo, week2, css",
         pageCount: 11,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "containers-selectors-drills",
+        categories: "drills, week2, html, css",
+        pageCount: 7,
         hasLocalProject: true,
     },
     {
@@ -70,9 +112,21 @@ const mealPrepRecipes = [
         hasLocalProject: true,
     },
     {
+        recipeName: "single-column-layouts-drills",
+        categories: "drills, week3, css",
+        pageCount: 7,
+        hasLocalProject: true,
+    },
+    {
         recipeName: "two-column-flex-layouts",
         categories: "demo, week3, css",
         pageCount: 7,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "flexbox-drills",
+        categories: "drills, week3, css",
+        pageCount: 12,
         hasLocalProject: true,
     },
     {
@@ -82,11 +136,17 @@ const mealPrepRecipes = [
         hasLocalProject: true,
     },
     {
-        recipeName: "three-column-grid-layouts",
-        categories: "demo, week3, css",
-        pageCount: 9,
+        recipeName: "grid-drills",
+        categories: "drills, week3, css",
+        pageCount: 8,
         hasLocalProject: true,
     },
+    // {
+    //     recipeName: "three-column-grid-layouts",
+    //     categories: "demo, week3, css",
+    //     pageCount: 9,
+    //     hasLocalProject: true,
+    // },
     {
         recipeName: "two-column-mixed-layouts",
         categories: "demo, week3, css",
@@ -94,15 +154,21 @@ const mealPrepRecipes = [
         hasLocalProject: true,
     },
     {
-        recipeName: "cards-and-buttons",
+        recipeName: "cards-and-buttons-v2",
         categories: "demo, week4, css",
-        pageCount: 11,
+        pageCount: 10,
         hasLocalProject: true,
     },
     {
-        recipeName: "heroes",
+        recipeName: "side-by-side",
         categories: "demo, week4, css",
-        pageCount: 9,
+        pageCount: 7,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "heroes-v2",
+        categories: "demo, week4, css",
+        pageCount: 10,
         hasLocalProject: true,
     },
     {
@@ -118,6 +184,12 @@ const mealPrepRecipes = [
         hasLocalProject: true,
     },
     {
+        recipeName: "media-queries-v4",
+        categories: "demo, week5, css",
+        pageCount: 11,
+        hasLocalProject: true,
+    },
+    {
         recipeName: "dropdown-prep",
         categories: "demo, week5, css",
         pageCount: 16,
@@ -127,12 +199,6 @@ const mealPrepRecipes = [
         recipeName: "dropdown-nav",
         categories: "demo, week5, css",
         pageCount: 10,
-        hasLocalProject: true,
-    },
-    {
-        recipeName: "media-queries",
-        categories: "demo, week5, css",
-        pageCount: 13,
         hasLocalProject: true,
     },
 ];
@@ -146,32 +212,32 @@ const categories = [
         value: "css",
     },
     {
-        label: "Week 1",
+        label: "Demos",
+        value: "demo",
+    },
+    {
+        label: "Drills",
+        value: "drills",
+    },
+    {
+        label: "Session 1",
         value: "week1",
     },
     {
-        label: "Week 2",
+        label: "Session 2",
         value: "week2",
     },
     {
-        label: "Week 3",
+        label: "Session 3",
         value: "week3",
     },
     {
-        label: "Week 4",
+        label: "Session 4",
         value: "week4",
     },
     {
-        label: "Week 5",
+        label: "Session 5",
         value: "week5",
-    },
-    {
-        label: "Week 6",
-        value: "week6",
-    },
-    {
-        label: "Week 8",
-        value: "week8",
     },
 ];
 const ROOT_RECIPE_FOLDER = "meal-prep";

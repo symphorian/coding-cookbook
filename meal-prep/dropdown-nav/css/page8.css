@@ -97,9 +97,23 @@ body {
     they work on wider screens, but also
     on narrow screens, like on phones...
 
-    ...but that's a topic for tomorrow! We're 
-    just bringing it up here so you can think
-    a bit about the issue.
+    ...sound familiar? We need to make our
+    navigation responsive! Remember how to do that?
+
+
+
+
+
+    Since we used Flexbox to create our nav,
+    we can do something as simple as applying a new
+    flex-direction to our navigation.  You'll
+    probably need to make some additional tweaks,
+    but that'll get you most of the way there.
+    
+    However, since we already covered that in a 
+    previous demo, we're going to start wrapping 
+    things up here, and leave it to you to try
+    and make your dropdown navs responsive.
 
     We just have one last bit to add to our
     dropdown menus for this demo today: icons!

@@ -15,16 +15,22 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin-bottom: 100px;
 }
 
 #hero-1 h1 {
-    font-size: 15vw;
-    padding-left: 10vw;
+    font-size: 120px; 
+    padding-left: 100px;
 }
 
-.spacer {
-    height: 50vh;
-}
+/*
+    Similar to last time, before we move onto our
+    third hero, we're going to add some margin to
+    the bottom of it, to give it some "personal 
+    space" from the new hero.
+
+    Stranger danger, and all that.
+*/
 
 #hero-2 {
     background-image: url("../images/lonely-ocean.jpg");
@@ -35,28 +41,29 @@ body {
     flex-direction: column; 
     justify-content: center;
     align-items: flex-end;
+    padding-right: 60px;
+    margin-bottom: 100px; /* new */
 }
 
 
 #hero-2 h2 {
-    font-size: 8vw;
-    margin-bottom: 5vh;
-    margin-right: 5vw;
+    font-size: 72px;
+    margin-bottom: 36px;
 }
 
 #hero-2 h4 {
-    font-size: 3vw;
-    margin: 0px 5vw 0px 0px;
+    font-size: 24px;
+    margin: 0px;
 }
 
 #hero-2 a {
-    font-size: 1.5vw;
+    font-size: 14px;
     display: inline-block;
     background-color: #333333;
     color: white;
     text-decoration: none;
     padding: 24px;
-    margin: 5vh 5vw 10vh 0px;
+    margin-top: 36px;
 }
 
 /*
@@ -139,28 +146,28 @@ body {
 }
 
 /*
-    To keep things simple, we'll reuse the same
-    styles of the headings and buttons, just in
-    hero-3 instead.
+    Then, to save time, we'll use similar styles
+    for our headings and buttons here as we did
+    in the previous hero.
 */
 
 #hero-3 h2 {
-    font-size: 8vw;
-    margin-bottom: 5vh;
-    margin-right: 5vw;
+    font-size: 72px;
+    margin-bottom: 36px;
 }
 
 #hero-3 h4 {
-    font-size: 3vw;
-    margin: 0px 5vw 0px 0px;
+    font-size: 24px;
+    margin: 0px;
 }
 
 #hero-3 a {
-    font-size: 1.5vw;
+    font-size: 14px;
     display: inline-block;
     background-color: #333333;
     color: white;
     text-decoration: none;
     padding: 24px;
-    margin: 5vh 5vw 10vh 0px;
+    margin-top: 36px;
+    margin-right: 24px;
 }

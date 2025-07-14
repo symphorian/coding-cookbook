@@ -1,0 +1,28 @@
+/* background-image example code */
+#example1 {
+    background-image: url("../images/dark-abstract-background.avif");
+}
+
+#example2 {
+    background-image: url("../images/dark-abstract-background.avif");
+    height: 400px;
+}
+
+#example3 {
+    background-image: url("../images/dark-abstract-background.avif");
+    background-size: cover;
+    background-position: center center;
+    height: 400px;
+}
+
+/* unrelated example page styling */
+img {
+    margin-bottom: 64px;
+}
+
+.example {
+    color: white;
+    font-weight: bold;
+    padding: 4px 8px;
+    margin: 12px 0px 64px;
+}

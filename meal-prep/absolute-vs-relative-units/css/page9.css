@@ -23,9 +23,8 @@
 }
 
 /*
-    What do you (and the students) thing would
-    happen if we applied ANOTHER width, to the
-    outer container?
+    What do you think would happen if we applied 
+    ANOTHER width, to the outer container this time?
 
     Let's find out!
 */
@@ -37,7 +36,7 @@
 
 /*
     Now in the inner container is only 50% of 66%,
-    and the paragraph andimage are only half of that.
+    and the paragraph and image are only half of that.
 
     Hopefully this is a good illustration of how
     when using relative units, you have to keep in

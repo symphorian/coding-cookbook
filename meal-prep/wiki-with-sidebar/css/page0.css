@@ -61,10 +61,6 @@ body {
     padding: 8px 0px;
 }
 
-li.indent {
-    margin-left: 24px;
-}
-
 #sidebar-content ul a {
     color: #145ca9;
     text-decoration: none;
@@ -77,20 +73,6 @@ li.indent {
 #main-content {
     flex: 1;
     margin-right: 16px;
-}
-
-#sticky-sidebar {
-    position: sticky;
-    top: 24px;
-}
-
-.note {
-    margin-left: 36px;
-    font-style: italic;
-}
-
-.bold {
-    font-weight: bold;
 }
 
 h3 {
@@ -107,66 +89,4 @@ h4 {
 
 p {
     margin-top: 8px;
-}
-
-/*
-    There isn't a lot going on here aside
-    from the layout, and a few stylistic
-    improvements to elements in the page.
-
-    However, one "fancy" thing we did to 
-    get content and images side-by-side
-    is use a similar two-column sidebar
-    layout that we used on the page...
-    but inside of the main column!
-
-    Feel free to hint or demo that to
-    students.
-
-    The "real" way to do it, to match
-    Wikipedia at least, is to use floats.
-
-    But floats get students into so much
-    trouble, and they often overuse or
-    misuse them, so we're keeping that 
-    concept away from them.
-
-    Learning how to use flexbox to
-    approximate that behavior is good
-    practice for them anyway.
-*/
-
-.inner-two-column {
-    display: flex;
-    align-items: flex-start;
-    margin-top: 8px;
-}
-
-.inner-two-column .image-column {
-    flex: 1;
-    border: 1px solid #BBBBBB;
-    padding: 6px;
-    font-size: 14px;
-    min-width: 150px;
-}
-
-.inner-two-column .image-column img {
-    width: 100%;
-}
-
-.inner-two-column .image-column h4 {
-    margin: 4px 0px;
-}
-
-.inner-two-column .text-column {
-    flex: 2;
-}
-
-.image-column + .text-column,
-.text-column + .image-column {
-    margin-left: 12px;
-}
-
-.center {
-    text-align: center;
 }

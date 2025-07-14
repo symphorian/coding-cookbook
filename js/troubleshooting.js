@@ -4,6 +4,12 @@
 const recipeNames = [];
 const mealPrepRecipes = [
     {
+        recipeName: "wordpress-caching",
+        categories: "wordpress",
+        pageCount: 1,
+        hasLocalProject: false,
+    },
+    {
         recipeName: "endless-push",
         categories: "github",
         pageCount: 1,
@@ -11,6 +17,10 @@ const mealPrepRecipes = [
     },
 ];
 const categories = [
+    {
+        label: "WordPress",
+        value: "wordpress",
+    },
     {
         label: "GitHub",
         value: "github",

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Layouts Cheatsheet - The Coding Cookbook</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="css/cookbook.css" rel="stylesheet">
+        <link href="css/recipeCheatsheet.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    </head>
+    <body>
+        <div id="background"></div>
+        <nav>
+            <header id="topHeader">
+                <h2 id="brand"><a href="./">The Coding Cookbook</a></h2>
+                <div id="quote"></div>
+                <div id="navLinks">
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="ingredients.html">
+                                HTML
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="ingredients.html">Elements</a></h2>
+                            <h2><a href="ingredients-cheatsheet.html">Cheatsheet</a></h2>
+                            <h2><a href="html-checker.html">Dirty Code Report</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="seasonings.html">
+                                CSS
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="seasonings.html">Properties</a></h2>
+                            <h2><a href="seasonings-cheatsheet.html">Cheatsheet</a></h2>
+                            <h2><a href="css-checker.html">Dirty Code Report</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="recipes.html" class="selected">
+                                Layouts
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="recipes.html?category=page-layout">Page Layouts</a></h2>
+                            <h2><a href="recipes.html?category=content-layout">Content Layouts</a></h2>
+                            <h2><a href="recipes.html?category=navigation-layout">Navigation</a></h2>
+                            <h2><a href="recipes.html?category=miscellaneous">Miscellaneous</a></h2>
+                            <h2><a href="recipes-cheatsheet.html" class="selected">Cheatsheet</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="more.html">
+                                More
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="appetizers.html">Tutorials</a></h2>
+                            <h2><a href="demos.html">Coding Demos</a></h2>
+                            <h2><a href="troubleshooting.html">Troubleshooting</a></h2>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </nav>
+        
+        <header id="title" class="">
+            <h1>Layout Cheatsheet</h1>
+            <h3>An Refresher of Layout Implementations</h3>
+        </header>
+        
+        <div class="cookbookPage">
+            <h2>Legend</h2>
+            <div class="legend container">Container</div>
+            <div class="legend item">Item</div>
+            <h2 id="side-by-side">Side by Side Layout Options</h2>
+            <h4>Inline-Block</h4>
+            <div>
+                <div class="item inline-block">
+                    display: inline-block;
+                    <br>
+                    width: 100px;
+                </div>
+                <div class="item inline-block">
+                    display: inline-block;
+                    <br>
+                    width: 100px;
+                </div>
+            </div>
+            <h4>Flexbox - default behavior</h4>
+            <div class="container">
+                <div class="code">display: flex;</div>
+                <div class="flex-container">
+                    <div class="item block">
+                        
+                    </div>
+                    <div class="item block">
+                        
+                    </div>
+                </div>
+            </div>
+            <h4>Flexbox - flex item behavior</h4>
+            <div class="container">
+                <div class="code">display: flex;</div>
+                <div class="flex-container">
+                    <div class="item flex-1">
+                        flex: 1;
+                    </div>
+                    <div class="item flex-2">
+                        flex: 2;
+                    </div>
+                </div>
+            </div>
+            <h4>Grid</h4>
+            <div class="container">
+                <div class="code">
+                    display: grid;
+                    <br>
+                    grid-template-columns: 1fr 1fr;
+                </div>
+                <div class="grid-container">
+                    <div class="item block">
+                        
+                    </div>
+                    <div class="item block">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <h2 id="center-alignment">Center Alignment Options</h2>
+            <h4>Text-Align</h4>
+            <div class="container">
+                <div class="code">
+                    text-align: center;
+                </div>
+                <div class="text-align-center">
+                    <div class="">
+                        Lorem ipsum dolor sit amet.
+                    </div>
+                    <div class="item inline-block block"></div>
+                    <div class="">
+                        Lorem ipsum dolor sit amet.
+                    </div>
+                </div>
+            </div>
+
+            <h4>Flexbox (row) - justify-content (center)</h4>
+            <div class="container">
+                <div class="code">
+                    display: flex;
+                    <br>
+                    justify-content: center;
+                </div>
+                <div class="flex-container justify-content-center">
+                    <div class="item block"></div>
+                </div>
+            </div>
+
+            <h4>Flexbox (column) - align-items (center)</h4>
+            <div class="container">
+                <div class="code">
+                    display: flex;
+                    <br>
+                    flex-direction: column;
+                    <br>
+                    align-items: center;
+                </div>
+                <div class="flex-container flex-column align-items-center">
+                    <div class="">
+                        Lorem ipsum dolor sit amet.
+                    </div>
+                    <div class="item inline-block block"></div>
+                    <div class="">
+                        Lorem ipsum dolor sit amet.
+                    </div>
+                </div>
+            </div>
+
+            <h2 id="centered-single-column">
+                Centered Single Column Layout Options
+            </h2>
+            <h4>Margin Auto</h4>
+            <div class="container">
+                <div class="item column-centered">
+                    <div class="code">
+                        width: 1000px;
+                        <br>
+                        margin: 48px auto;
+                    </div>
+                </div>
+            </div>
+
+            <h4>Grid with Gutters</h4>
+            <div class="container">
+                <div class="code">
+                    display: grid;
+                    <br>
+                    grid-template-columns: 1fr 1000px 1fr;
+                    <br>
+                    grid-template-areas: ". content .";
+                </div>
+                <div class="grid-with-gutters">
+                    <div class="item grid-column">
+                        <div class="code">
+                            grid-area: content;
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Positioning Options</h2>
+            <h4>Apart</h4>
+            <div class="container">
+                <div class="code">
+                    display: flex;
+                    <br>
+                    justify-content: space-between;
+                </div>
+                <div class="flex-container space-between">
+                    <div class="item block">
+                        
+                    </div>
+                    <div class="item block">
+                        
+                    </div>
+                </div>
+            </div>
+            <h4 id="positioning">Custom Positioning (recommended only for large containers like heroes)</h4>
+            <div class="container">
+                <div class="code">
+                    position: relative;
+                </div>
+                <div class="position-relative">
+                    <div class="item block position-absolute left-center">
+                        position: absolute;
+                        <br>
+                        left: 0px;
+                        <br>
+                        top: 25%;
+                    </div>
+                    <div class="item block position-absolute bottom-right">
+                        position: absolute;
+                        <br>
+                        bottom: 0px;
+                        <br>
+                        right: 0px;
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

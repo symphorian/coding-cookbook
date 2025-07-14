@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#centered-column {
+    width: 90vw;
+    max-width: 800px;
+    margin: 48px auto;
+}
+
+.card {
+    width: 350px;
+    border: 2px solid #ffe4da;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: -4px 4px 12px #ceaaaa;
+    background: linear-gradient(
+        -50deg, 
+        #ffdbdb, 
+        #fff7f7, 
+        #ffc9c9
+    );
+}
+
+.card img {
+    width: 100%;
+}
+
+.card h2 {
+    font-size: 36px;
+    margin-top: 12px;
+}
+
+.card p {
+    font-size: 18px;
+}
+
+/*
+    Our card is looking pretty good!
+    Nice and organized, a bit glamorous with
+    the shiny background, and the added
+    box shadow makes it almost pop off
+    the page.
+
+    But we can do better!
+
+    The default anchor styling...is pretty
+    ugly.  Let's change the default styling
+    of the anchor into something that looks
+    more like a button.
+
+    First, we have to target the anchor
+    inside the card.
+*/
+
+.card a {
+    /*
+        We'll begin by stripping the default
+        anchor styling from it.
+    */
+    color: black;
+    text-decoration: none;
+    /*
+        Then we'll change some of the font
+        properties to make it stand out more.
+    */
+    font-size: 20px;
+    font-weight: bold;
+    /*
+        Then we'll give it a background color.
+    */
+    background-color: lightcoral;
+    /*
+        Hmm...that doesn't look very good.
+        That's because anchors are inline
+        elements by default, and inline
+        elements only take up as much space
+        as they need.
+
+        However, if we change the anchor to
+        be an inline-block, we can start
+        resizing and reshaping it, such as
+        by allowing it to take up whole
+        width of the card.
+    */
+    display: inline-block;
+    width: 100%;
+    /*
+        Getting closer! Now let's add some
+        padding inside to cushion the text,
+        and also let's center it.
+    */
+    padding: 10px;
+    text-align: center;
+    /*
+        Look at that! We've transformed our
+        anchor into a much more aesthetically
+        pleasing button!
+
+        But we're not done yet; in your UI/UX
+        class, you designed multiple states
+        for buttons.  One of the most common
+        is the hover state, which is good UX
+        practice in web developent.
+
+        Let's learn how to add a hover state
+        to our button!
+    */
+}

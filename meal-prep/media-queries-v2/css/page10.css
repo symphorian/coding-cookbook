@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.nav {
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+}
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.25rem;
+    padding: 20px 0px;
+    margin-right: 40px;
+}
+.nav a:last-of-type {
+    margin-right: 0px;
+}
+
+.header {
+    width: 90vw;
+    max-width: 800px;
+    margin: 25px auto;
+    display: flex;
+    align-items: center;
+}
+
+.header .image-container {
+    flex: 1;
+    height: 400px;
+}
+.image-container img {
+    height: 100%;
+    border-radius: 25px;
+}
+
+.header .content {
+    flex: 1;
+    margin-left: 50px;
+}
+.content h1 {
+    font-size: 3rem;
+    color: #ffb700;
+    margin: 0px 0px 15px;
+}
+.content p {
+    margin: 0px;
+}
+
+.featured {
+    background-color: #222;
+    color: white;
+    padding: 25px 0px;
+}
+.featured h2 {
+    font-size: 2.25rem;
+    text-align: center;
+}
+
+
+.grid {
+    width: 90vw;
+    max-width: 800px;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 300px;
+    gap: 15px;
+    grid-template-areas:
+        "txt1 img1 img2 img2"   
+        "img3 img3 img4 txt2"
+    ;
+}
+.grid img {
+    height: 100%;
+    border-radius: 25px;
+}
+.grid p {
+    border: 1px solid #ffb700;
+    padding: 20px;
+    margin: 0px;
+    border-radius: 25px;
+}
+#p1 {
+    grid-area: txt1;
+}
+#p2 {
+    grid-area: txt2;
+}
+#img1 {
+    grid-area: img1;
+}
+#img2 {
+    grid-area: img2;
+}
+#img3 {
+    grid-area: img3;
+}
+#img4 {
+    grid-area: img4;
+}
+
+@media screen and (max-width: 768px) and (min-width: 481px) {
+    body {
+        background-color: red;
+    }
+    /*
+        Now, let's make some changes to our featured photos
+        section. Looks like our grid needs to be reduced from
+        4 columns to 2 columns. So, can anyone tell me how I
+        would do that?
+
+        You might have answered with a partially correct answer
+        of reapplying all the styles we had on the previous .grid
+        class above but changing the values for grid-template-columns
+        and grid-template-areas. Now, the reason this answer is
+        partially correct is because while we do need to change
+        the values for our grid-template properties, we do not
+        need to reapply the other properties. 
+        
+        Why? Well, think of the properties we applied above 
+        as the new default properties. The properties above
+        are going to be applied to every screen we have compared
+        to the properties we list in our media queries. It's
+        best to think of our media queries as mini-css files
+        within our main css file that work to add, change, or remove
+        styles that did not exist or already existed in our
+        main css file based on conditionals we give to them.
+        Basically, they're extensions of our main css file created
+        to adjust certain css rules at certain conditions without
+        affecting anywhere outside of those conditions.
+
+        So, what does that mean for how we write CSS Rules in
+        our media query? It means we don't need to add any properties
+        in a css rule that aren't being changed or removed.
+        For example, display: grid; is in the main css file, so,
+        it's going to be applied everywhere. We still want this grid
+        on all screen sizes, however, we just want to adjust the
+        grid setup. So, we'll only need to pull the grid-template
+        properties since those one's are being changed.
+
+        It's also important to note that removing a style in
+        a media query means calling the property and changing
+        it's value to be reflex that. 
+
+        Now, let's change our grid-template-columns to be 2
+        columns of equal fractions. Then, we will redistribute
+        our existing areas in the grid-template-areas so that
+        txt1 and img1 take up a column each in the first row
+        img2 takes up both columns in the second row
+        img3 takes up both columns in the third row
+        and img4 and txt2 take up a column each in the fourth row.
+
+        And that's all we need for this media query!
+    */
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "txt1 img1"
+            "img2 img2"
+            "img3 img3"
+            "img4 txt2"
+        ;
+    }
+}

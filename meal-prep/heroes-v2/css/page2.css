@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+/*
+    To address the cropping issue, we have yet 
+    another background related property we can use:
+    background-position.
+
+    The background-position property lets us
+    "anchor" a part of the image on the screen.
+
+    Common values involve the different sides 
+    of the image, such as 
+        left
+        bottom right
+        top center
+        center left
+    etc), which will ensure the specified side(s)
+    of the image are always in view.
+
+    Try them out and see the different effects
+    as you resize the screen.
+
+    In our case the values 'center center' seem
+    to work best to keep our lizard friend in 
+    view.
+*/
+#hero-1 {
+    background-image: url("../images/lizard.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center center; /* new property */
+}
+
+/*
+    However, it's worth noting that each image
+    needs to be treated differently; there is
+    no code that will work for every single 
+    image out there.
+
+    You also need to be cognizant of the aspect
+    ratios of the images you use for background
+    images.
+
+    Landscape images work well for sites viewed
+    on a desktop monitor, but not so much on 
+    a mobile device.
+
+    On the flip side, portrait oriented images
+    usually look pretty good on a phone, but
+    that same image probably won't work well
+    on desktop.
+
+    So be thoughtful about the image choices
+    you make!
+
+    Picking the wrong image can cause you a
+    big headache as you try to force it to
+    behave in a way that it simply can't do.
+*/

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>background-position Property</title>
+        <link href="css/background-position.css" rel="stylesheet" data-seasoning>
+        <link href="css/shared.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="recipe-example">
+            <h4>Basic Code Snippets</h4>
+            <code>background-position: right;</code>
+            <br>
+            <code>background-size: bottom left;</code>
+            <br>
+            <code>background-size: center center;</code>
+        </div>
+        <h4>Additional Examples</h4>
+        <div>
+            <p>
+                The background-position property sets the position of the 
+                container's background image. The values provided to the 
+                property will "anchor" the image to a particular side, corner,
+                or position within its container.
+            </p>
+            <p>
+                Below is an image we'll be using for a few examples.
+            </p>
+            <h6>An &lt;img&gt; element</h6>
+            <img 
+                src="images/axolotl.avif" 
+                alt="image to use for background image examples"
+            >
+            <p>
+                The background-position property is always used with the 
+                background-image property.  After all, if there is no image 
+                in the background, there is nothing to position!  We're going to 
+                assume the background-image property is set in the following
+                examples, and take a look at some examples for how 
+                background-position can be used.
+            </p>
+            <h5>
+                The Position Keywords 
+                ('top', 'bottom', 'left',  'right', and 'center')
+            </h5>
+            <p>
+                The easiest way to use the background-position property is to 
+                use the position keywords.  Four of these correspond to the 
+                different sides of the Box Model (left, right, top, and bottom)
+                and the last one is 'center'.
+            </p>
+            <p> 
+                These are fairly intuitive to use...when the image is smaller
+                than the container.  Things get more complicated when the image 
+                is larger than its container...but we'll look at that later.
+            </p>
+            <p>
+                However, please keep in mind...THIS PROPERTY IS FOR BACKGROUND
+                IMAGES ONLY! You cannot use it with regular old &lt;img&gt; 
+                elements.  What you see in the examples below is a BACKGROUND 
+                IMAGE being moved around, NOT an &lt;img&gt; element!
+            </p>
+            <h6>Example 1: <code>background-position: left;</code></h6>
+            <div id="example1" class="example">
+                <code>
+                    background-image: url("../images/axolotl.webp");
+                    <br>
+                    background-position: left;
+                    <br>
+                    height: 400px;
+                </code>
+            </div>
+            <h6>Example 2: <code>background-position: right;</code></h6>
+            <div id="example2" class="example">
+                <code>
+                    background-image: url("../images/axolotl.webp");
+                    <br>
+                    background-position: right;
+                    <br>
+                    height: 400px;
+                </code>
+            </div>
+            <h6>Example 3: <code>background-position: top;</code></h6>
+            <div id="example3" class="example">
+                <code>
+                    background-image: url("../images/axolotl.webp");
+                    <br>
+                    background-position: top;
+                    <br>
+                    height: 400px;
+                </code>
+            </div>
+            <h6>Example 4: <code>background-position: bottom;</code></h6>
+            <div id="example4" class="example">
+                <code>
+                    background-image: url("../images/axolotl.webp");
+                    <br>
+                    background-position: bottom;
+                    <br>
+                    height: 400px;
+                </code>
+            </div>
+            <p>
+                But not only can you use the sides individually, you can also 
+                combine them together.  And when you throw the 'center' keyword 
+                into the mix, you have a total of nine different locations you 
+                can anchor your image to.
+            </p>
+            <p>
+                Here are a few more examples:
+            </p>
+            <h6>Example 5: <code>background-position: top right;</code></h6>
+            <div id="example5" class="example">
+                <code>
+                    background-image: url("../images/axolotl.webp");
+                    <br>
+                    background-position: top right;
+                    <br>
+                    height: 400px;
+                </code>
+            </div>
+            <h6>Example 6: <code>background-position: bottom left;</code></h6>
+            <div id="example6" class="example">
+                <code>
+                    background-image: url("../images/axolotl.webp");
+                    <br>
+                    background-position: bottom left;
+                    <br>
+                    height: 400px;
+                </code>
+            </div>
+            <h6>Example 7: <code>background-position: center center;</code></h6>
+            <div id="example7" class="example">
+                <code>
+                    background-image: url("../images/axolotl.webp");
+                    <br>
+                    background-position: center center;
+                    <br>
+                    height: 400px;
+                </code>
+            </div>
+
+            <h5>
+                Positioning Background Images Sized with 'cover'
+            </h5>
+            <p>
+                The background-position property is fairly intuitive with small 
+                images...but what about when the image covers the entire container?
+                What about when some parts of it are cropped off?
+            </p>
+            <p>
+                Then things get a bit more confusing visually, but the background 
+                images actually still behave the same way.  Let's look at the 
+                default behavior of background-position first when 
+                background-size: cover; is applied.
+            </p>
+            <h6>Example 8: background-position and background-size</h6>
+            <div id="example8" class="example">
+                <code>
+                    background-image: url("../images/axolotl.webp");
+                    <br>
+                    background-size: cover;
+                    <br>
+                    height: 400px;
+                </code>
+            </div>
+            <p>
+                In the example above, the image fills the container horizontally,
+                but it can't fit vertically, so something needs to be cropped off.
+                By default, it is anchored to the top left corner, as if 
+                <code>background-position: top left;</code> was applied, so the 
+                bottom of the image gets chopped off.
+            </p>
+            <p>
+                What if we wanted it to be anchored somewhere else? Like the 
+                bottom, or the center?  Well, take a look at the next few 
+                examples, and you'll see we can do exactly that.
+            </p>
+            <h6>
+                Example 9: 
+                <code>background-size: cover;</code> and 
+                <code>background-position: bottom;</code>
+            </h6>
+            <div id="example9" class="example">
+                <code>
+                    background-image: url("../images/axolotl.webp");
+                    <br>
+                    background-size: cover;
+                    <br>
+                    background-position: bottom;
+                    <br>
+                    height: 400px;
+                </code>
+            </div>
+            <h6>
+                Example 10: 
+                <code>background-size: cover;</code> and 
+                <code>background-position: center;</code>
+            </h6>
+            <div id="example10" class="example">
+                <code>
+                    background-image: url("../images/axolotl.webp");
+                    <br>
+                    background-size: cover;
+                    <br>
+                    background-position: center;
+                    <br>
+                    height: 400px;
+                </code>
+            </div>
+            <p>
+                The same would apply if you used the 'left' and 'right' values 
+                as well, but only if the container was taller and thinner than 
+                the image you were using as a background.
+            </p>
+            <p>
+                Sometimes, our container could be different aspect ratios
+                depending on the width of the screen.  In that case, you may
+                need to be clever about your background image choices, or use
+                Media Queries to reset the background-position property based 
+                on the width of the screen.
+            </p>
+        </div>
+        <div class="resources">
+            <h4>Additional Resources</h4>
+            <a 
+                href="https://www.w3schools.com/cssref/pr_background-position.php"
+                target="_blank"
+            >
+                w3schools 
+            </a>
+            <br>
+            <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-position"
+                target="_blank"
+            >
+                mdn web docs
+            </a>
+        </div>
+    </body>
+</html>

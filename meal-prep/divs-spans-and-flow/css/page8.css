@@ -34,4 +34,10 @@
     For simple layouts, inline-block is usually
     the way to go if you have any content that
     you want to have side-by-side.
+
+    Just remember that you also have to set a 
+    width on the inline-block elements;
+    otherwise, they'll just take up as much
+    space as they need, rather than a width
+    you specify.
 */

@@ -1,0 +1,218 @@
+#html {
+    margin-top: 24px;
+    padding: 24px;
+}
+
+section {
+    padding-bottom: 24px;
+}
+
+h3 {
+    margin-bottom: 8px;
+}
+h5 {
+    margin-top: 8px;
+}
+
+.contentContainer {
+    display: flex;
+}
+
+.content {
+    flex: 2;
+}
+
+.legend {
+    flex: 1;
+}
+
+.legend div:first-child {
+    padding-top: 20px;
+}
+
+.code {
+    font-family: Courier New, monospace;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+div.code {
+    background-color: white;
+    box-shadow: inset 0px 0px 8px 4px #00000033;
+    margin-bottom: 24px;
+    margin-right: 36px;
+    margin-top: 12px;
+    padding: 12px;
+    overflow: hidden;
+}
+
+.indent {
+    padding-left: 48px;
+}
+
+.indent1 {
+    padding-left: 2em;
+}
+
+.indent2 {
+    padding-left: 4em;
+}
+
+.openingTag,
+.closingTag,
+.attrName,
+.assnOperator,
+.attrValue,
+.htmlParent,
+.htmlChild,
+.cssPropName,
+.cssAssnOperator,
+.cssPropValue,
+.cssAssnTerminator,
+.cssSelHtml,
+.cssSelId,
+.cssSelClass,
+.cssDecStart,
+.cssDecEnd
+{
+    cursor: crosshair;
+}
+
+.openingTagHighlight {
+    background-color: yellow;
+}
+
+.closingTagHighlight {
+    background-color: gold;
+}
+
+.attrNameHighlight {
+    color: blue;
+    font-weight: bold;
+}
+
+.assnOperatorHighlight {
+    color: limegreen;
+    font-weight: bold;
+}
+
+.attrValueHighlight {
+    color: red;
+    font-weight: bold;
+}
+
+.htmlParentHighlight {
+    text-shadow: 1px 1px 2px purple;
+}
+
+.htmlChildHighlight {
+    text-decoration: underline;
+}
+
+.cssPropNameHighlight {
+    background-color: yellowgreen;
+}
+
+.cssAssnOperatorHighlight {
+    background-color: skyblue;
+}
+
+.cssPropValueHighlight {
+    background-color: lightgreen;
+}
+
+.cssAssnTerminatorHighlight {
+    background-color: aquamarine;
+}
+
+.cssSelHtmlHighlight {
+    background-color: pink;
+}
+
+.cssSelIdHighlight {
+    background-color: deeppink;
+}
+
+.cssSelClassHighlight {
+    background-color: lightcoral;
+}
+
+.cssDecStartHighlight {
+    background-color: cyan;
+}
+
+.cssDecEndHighlight {
+    background-color: darkturquoise;
+}
+
+.cheatsheet-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 24px;
+    margin-bottom: 60px;
+}
+
+.cheatsheet-grid div {
+    padding: 8px 12px;
+}
+
+.cheatsheet-grid div p {
+    margin: 12px 0px;
+}
+
+.cheatsheet-grid div p:first-child {
+    margin-top: 0px;
+}
+
+.cheatsheet-grid div:nth-child(6n+1),
+.cheatsheet-grid div:nth-child(6n+2),
+.cheatsheet-grid div:nth-child(6n+3) {
+    background-color: white;
+}
+
+.cheatsheet-grid div:nth-child(6n+4),
+.cheatsheet-grid div:nth-child(6n+5),
+.cheatsheet-grid div:nth-child(6n+6) {
+    background-color: #e3e5e8;
+}
+
+.cheatsheet-grid h3 {
+    font-size: 18px;
+    margin-bottom: 24px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1225px) {
+
+    .cheatsheet-grid {
+        grid-template-columns: 1fr;
+        margin-left: 0px;
+        margin-bottom: 60px;
+    }
+
+    .cheatsheet-grid div:nth-child(1),
+    .cheatsheet-grid div:nth-child(2),
+    .cheatsheet-grid div:nth-child(3) {
+        display: none;
+    }
+
+    .cheatsheet-grid div:nth-child(6n+2),
+    .cheatsheet-grid div:nth-child(6n+5) {
+        padding-left: 40px;
+    }
+
+    .cheatsheet-grid div {
+        padding: 12px 16px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .cheatsheet-grid div:nth-child(6n+2) .code,
+    .cheatsheet-grid div:nth-child(6n+5) .code {
+        font-size: 16px;
+        line-height: 18px;
+    }
+}

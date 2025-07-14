@@ -76,6 +76,18 @@ const mealPrepRecipes = [
         hasLocalProject: false,
     },
     {
+        recipeName: "anchors-external",
+        categories: "content, navigation, inline",
+        pageCount: 1,
+        hasLocalProject: false,
+    },
+    {
+        recipeName: "anchors-internal",
+        categories: "content, navigation, inline",
+        pageCount: 1,
+        hasLocalProject: false,
+    },
+    {
         recipeName: "divs",
         categories: "containers, block",
         pageCount: 1,

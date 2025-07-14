@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#centered-column {
+    width: 90vw;
+    max-width: 800px;
+    margin: 48px auto;
+}
+
+.card {
+    width: 350px;
+    border: 2px solid #ffe4da;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: -4px 4px 12px #ceaaaa;
+    /*
+        Finally, let's also add a nice, subtle gradient 
+        to it to make it appear as if it has a shiny 
+        texture.
+
+        We're going to be using the background property 
+        and the linear-gradient value function for this.
+        ("value function" is the technical term for a 
+        special type of property value that uses
+        parentheses, as we're about to see)
+
+        The background property is a shorthand CSS 
+        property that can set all sorts of background
+        related properties.
+
+        The linear-gradient is a css value function that 
+        creates an 'image' consisting of a progressive
+        transition between two or more colors along a 
+        straight line. In otherwords, it creates a 
+        linear color gradient. 
+
+        The syntax for linear-gradients looks a little
+        weird: you specify the function name (linear-gradient)
+        followed by open/close parentheses.
+
+        Then inside of the open/close parentheses, you 
+        specify the "inputs" to the function, similar to 
+        how you specify the values of normal CSS Properties.
+
+        The most basic type of linear gradient is two
+        color values separated by a comma.  If you want
+        additional colors, you can add them, as long as
+        you separate them with commas.
+
+        However, you can also specify a direction as the 
+        first input to the linear-gradient function; this 
+        will tell the function in what direction you want
+        the color change to start and where you want it
+        to go. This direction can be in degrees, or using 
+        directional keywords like "to top left" or "to bottom".
+
+        Have some fun and experiment with different 
+        gradient colors and directions!
+
+        In this example, we're going to use degrees to 
+        specify the direction of the gradient, along
+        with three color values (in hex, though any valid
+        CSS color value could work).
+    */
+
+    /* 
+        DEMO NOTE: original line of code below commented out,
+        to show how to clean it up further below
+    */
+    /* background: linear-gradient(-50deg, #ffdbdb, #fff7f7, #ffc9c9); */
+
+    /*
+        By the way, notice how this particular property
+        value can get rather long? This one is not too 
+        bad in terms of code cleanliness, but if we
+        wanted to clean it up, we could move each "input"
+        to a separate line, similar to how we clean up
+        HTML attributes.
+    */
+    background: linear-gradient(
+        -50deg, 
+        #ffdbdb, 
+        #fff7f7, 
+        #ffc9c9
+    );
+    /*
+        See how that makes it a bit easier to read?
+    */
+}
+
+.card img {
+    width: 100%;
+}
+
+.card h2 {
+    font-size: 36px;
+    margin-top: 12px;
+}
+
+.card p {
+    font-size: 18px;
+}

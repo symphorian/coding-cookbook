@@ -1,0 +1,100 @@
+/*
+    Before doing anything else, jump down to the
+    HTML part of the demo and add the code as
+    directed; you'll need an HTML element to 
+    target before you start writing CSS!
+
+    Then, add the standard page layout setup below.
+*/
+
+/*
+    Standard page layout setup
+*/
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+/*
+    Next, we need to learn about background-image.
+
+    This is a CSS property that lets you add an 
+    image to an HTML element's background (duh)
+    instead of a background color or gradient.
+
+    This property uses a weird function syntax
+    similar to linear-gradient(), but this one
+    is called url().
+
+    Similar to the src attribute of an image,
+    we need to provide a file path to the image
+    we want to load.  
+    
+    As a reminder, a file path basically is a
+    set of directions to the computer, telling 
+    it how to get from where the code is
+    to where the file we want to access is.
+
+    HOWEVER, there's one problem: when we 
+    specified the src attribute from index.html,
+    that file was in the root of our project folder.
+    
+    All we had to provide was something like
+    "images/image-to-load.jpg", because the 
+    index.html file had access to the "images"
+    folder.
+
+    But, we're not in index.html anymore;
+    we're writing this code from inside of
+    style.css, which is inside the "css" folder.
+
+    There is no "images" folder inside of the
+    "css" folder, so if we provide a path like
+    "images/image-to-load.jpg", it won't work,
+    because it's looking for a file at
+    "css/images/image-to-load.jpg".
+
+    Instead, we need a way to tell the CSS file
+    to look OUTSIDE of its current folder "css",
+    in order to find the "images" folder.
+
+    That is done by including something really
+    weird-looking in the file path: "../"
+
+    This "dot dot slash" says "go outside of
+    the current folder".
+
+    So our actual file path that we'll provide
+    to url() is "../images/image-to-load.jpg"
+*/
+
+#hero-1 {
+    background-image: url("../images/lizard.jpg");
+    /*
+        However, that still seems like it didn't
+        work. Why?
+
+        Well, it actually did, but we just have an
+        empty div in our HTML right now, which
+        has a height of 0px.
+
+        The background image takes up no space on
+        its own, unlike the <img> element.
+
+        Imagine that we're wallpapering the image
+        onto the background of our div.
+
+        So, to actually see the background, we
+        need to increase the size of our hero div.
+
+        We'll make it a big one: we'll have it 
+        fill up 100% of the view height by using
+        100vh (vh is a unit, short for "view height").
+    */
+    height: 100vh;
+}

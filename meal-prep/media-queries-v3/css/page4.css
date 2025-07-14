@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#nav {
+    background-color: #222222;
+    display: flex;
+    justify-content: center;
+}
+
+#nav a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 20px;
+}
+
+/*
+    Now that we've seen how we can make a navbar
+    more responsive, let's explore how we can
+    make some side-by-side page content more
+    responsive as well.
+
+    Remember the Media & Text layout, both back
+    in WordPress and in the Content Layouts session?
+    It's a popular design choice!
+
+    Let's implement it again, and then we'll
+    see how we can modify it for mobile.
+
+    Hop over to the HTML, and then return here
+    when you're done.
+*/
+
+/*
+    First, we'll set up our 
+    .single-column-layout container, which will
+    hold our Media and Text layout, using our
+    standard Centered Single Column setup.
+*/
+.single-column-layout {
+    width: 90vw;
+    max-width: 800px;
+    margin: 48px auto;
+}
+
+/*
+    Now, we're going to convert that container
+    into a Flexbox, using the .intro class.
+
+    Why not do that in the CSS Rule we just made?
+
+    Because we're going to reuse that later in
+    the demo, and we don't want that one to be 
+    a Flexbox.  We'll also use the 'gap' property
+    to add some space between the Flexbox Items.
+*/
+.intro {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+/*
+    Our content is now side by side...but the 
+    image is still jumbo sized.  Let's address
+    that next.
+
+    We're going to use an approach that makes
+    images VERY adaptable to their containers,
+    with the caveat that the can be cropped.
+
+    We'll also round the corners, because
+    why not?
+*/
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+/*
+    Better, but the image is still pretty large,
+    and overshadowing the text content; let's 
+    address that by making the image-container
+    and the text-container be the same size.
+*/
+.image-container,
+.content-container {
+    flex: 1;
+}
+
+/*
+    Hmm...better, but it's still feeling unbalanced.
+    Let's decrease the height of the image-container.
+*/
+
+.image-container {
+    height: 400px;
+}
+
+/*
+    Let's also increase the size of the heading text.
+
+    And while we're in here, let's give it a slight
+    color accent.
+*/
+.content-container h1 {
+    font-size: 48px;
+    color: #ffb700;
+}
+
+/* 
+    There we go! Still asymmetrical, but not
+    unpleasantly so.
+
+    Now that we have our "default" styling for
+    our Media & Text layout, let's see how
+    we can make it more responsive.
+*/
+
+@media screen and (max-width: 768px) and (min-width: 481px) {
+    body {
+        background-color: skyblue;
+    }
+}
+
+
+
+@media screen and (max-width: 480px) {
+    body {
+        background-color: firebrick;
+    }
+
+    #nav {
+        /* flex-wrap: wrap; */
+
+        flex-direction: column;
+        align-items: center;
+    }
+}

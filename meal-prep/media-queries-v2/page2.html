@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Media Queries - Demo</title>
+        <link href="css/page2.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="nav">
+            <a href="#">Blog</a>
+            <a href="#">Gallery</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+        </div>
+        
+         <div class="header">
+            <div class="image-container">
+                <img src="images/jim.jpg" alt="jim">
+            </div>
+            <div class="content">
+                <h1>Hello, I'm Jim</h1>
+                <p>
+                    I write short, fun articles about the
+                    journeys I take as a photographer.
+                </p>
+            </div>
+         </div>
+
+         <!--
+            Now, let's create another div. We'll give this
+            div a class of featured.
+
+            Then, let's add an h2 that says "Featured Photo",
+            and one more div next/beneath the h2 with a class
+            of "grid". We're going to create a fun grid system
+            that starts at 4 columns but turns into 1 for
+            responsiveness.
+
+            Inside of our div with a class of grid, let's add
+            a paragraph element with an id of "p1" and put
+            "Some of my favorite photos" for it's content.
+
+            After the p element, we'll add 3 image elements,
+            each with an id of img1, img2, and img3 respectively.
+
+            We'll add another paragraph element, this one will
+            have an id of "p2". And finally, we'll add an
+            img element with an id of "img4" after.
+
+            Let's fill in our src and alt attribtues then
+            we'll head into CSS.
+         -->
+         <div class="featured">
+            <h2>Featured Photos</h2>
+            <div class="grid">
+                <p id="p1">Some of my favorite photos</p>
+                <img src="images/photo-1.jpg" alt="photo" id="img1">
+                <img src="images/photo-2.jpg" alt="photo" id="img2">
+                <img src="images/photo-3.jpg" alt="photo" id="img3">
+                <p id="p2">Photography is fun!</p>
+                <img src="images/photo-4.jpg" alt="photo" id="img4">
+            </div>
+         </div>
+    </body>
+</html>

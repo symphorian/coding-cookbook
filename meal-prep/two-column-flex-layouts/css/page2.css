@@ -39,11 +39,13 @@ body {
     align-items Flexbox Container property, which 
     is set to 'stretch' by default.)
 
-    Show the class what happens as you shrink and
-    stretch the preview window: at the moment, 
-    the flexbox basically sizes each column to 
-    take up the minimal amount of space necessary
-    to have them both fit inside it.
+    Try to shrink and stretch the preview window 
+    and see what happens... 
+    
+    At the moment, the flexbox basically sizes 
+    each column to take up the minimal amount of 
+    space necessary to have them both fit 
+    inside it.
 
     We'll change that behavior next.
 */

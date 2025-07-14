@@ -45,7 +45,7 @@ body {
 
 /*
     Stretch and squish the preview window again,
-    and show the class that the sidebar width 
+    and observe that the sidebar width 
     doesn't change now, and instead it's the 
     #main-content column that remains fluid and
     resizes to fill the available space.

@@ -7,7 +7,7 @@
 
     They are supposed to do this one on their own, and
     it will probably be challenging, but with the HTML 
-    provided for them, hopefully not too challenging.
+    tips provided for them, hopefully not too challenging.
 
     However, if students ask how to accomplish something,
     you can reference the code below and share the 
@@ -88,12 +88,12 @@ h4 {
     margin: 9px;
 }
 
-#small-pic,
+#small-pic-container,
 #data-fields {
     display: inline-block;
 }
 
-#small-pic img {
+#small-pic-container img {
     opacity: 0.5;
     width: 90px;
 }

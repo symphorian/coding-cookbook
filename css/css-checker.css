@@ -1,0 +1,8 @@
+#report #reportHeader .nestedOverrideText {
+    display: none;
+}
+
+#report.nestedOverride #reportHeader .nestedOverrideText {
+    display: inline;
+    font-style: italic;
+}

@@ -6,28 +6,40 @@
         <title>Images Demo</title>
     </head>
     <body>
+        <!--
+            Decrease the widths of each image to something small,
+            like 100 (px).
+        -->
         <img 
-            src="https://i.guim.co.uk/img/media/26392d05302e02f7bf4eb143bb84c8097d09144b/446_167_3683_2210/master/3683.jpg?width=1200&quality=85&auto=format&fit=max&s=a52bbe202f57ac0f5ff7f47166906403"
-            width="500"
+            src="images/egypt-kitty.webp" 
+            width="100" 
+            alt="a fancy exotic cat wearing an egyptian outfit"
+        >
+        <img 
+            src="images/anxious-kitty.webp"
+            width="100"
             alt="an adorable, yet concerned looking cat"
         >
-        <br>
-        <img 
-            src="images/egypt-kitty.webp"
-            height="300"
-            alt="a regal queen kitty of Egypt"
-        >
         <!--
-            That should get our image loaded, but we still may 
-            struggle with the size issue. If so, we can adjust
-            it with the width attribute again; OR, we could also
-            use the height attribute for similar effect.
+            Notice how the images sit side by side?
 
-            However, I don't recommend using both width and
-            height together; that could modify the image's
-            aspect ratio, causing it to squash or stretch.
+            That's because images are categorized as a
+            type of element called "inline" elements.
 
-            Also, don't forget to add the alt attribute as well.
+            As their name implies, "inline" element will
+            sit in-line, or side by side, with other "inline"
+            elements, as long as there is enough space.
+
+            If there isn't enough space, they'll wrap to the
+            next line, and that's what happens if we increase
+            the width of the images so that they no longer
+            fit together.
+
+            (Try this out too)
+
+            "inline" elements are part of a broader concept
+            in web dev known as "Document Flow"; we'll learn 
+            more about this concept next week.
         -->
     </body>
 </html>

@@ -30,7 +30,7 @@ const mealPrepRecipes = [
     {
         recipeName: "images",
         categories: "demo, week1",
-        pageCount: 8,
+        pageCount: 9,
         hasLocalProject: true,
     },
     {
@@ -112,12 +112,6 @@ const mealPrepRecipes = [
         hasLocalProject: true,
     },
     {
-        recipeName: "box-model-margin-drills",
-        categories: "drills, week2",
-        pageCount: 9,
-        hasLocalProject: true,
-    },
-    {
         recipeName: "box-model-padding-drills",
         categories: "drills, week2",
         pageCount: 7,
@@ -125,6 +119,12 @@ const mealPrepRecipes = [
     },
     {
         recipeName: "box-model-border-drills",
+        categories: "drills, week2",
+        pageCount: 9,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "box-model-margin-drills",
         categories: "drills, week2",
         pageCount: 9,
         hasLocalProject: true,
@@ -204,7 +204,7 @@ const mealPrepRecipes = [
     {
         recipeName: "wiki-with-sidebar",
         categories: "exercise, week3",
-        pageCount: 1,
+        pageCount: 2,
         hasLocalProject: true,
     },
     {
@@ -226,18 +226,6 @@ const mealPrepRecipes = [
         hasLocalProject: true,
     },
     {
-        recipeName: "three-column-grid-layouts",
-        categories: "demo, week3",
-        pageCount: 9,
-        hasLocalProject: true,
-    },
-    {
-        recipeName: "mebay-product-page",
-        categories: "exercise, week3",
-        pageCount: 1,
-        hasLocalProject: true,
-    },
-    {
         recipeName: "two-column-mixed-layouts",
         categories: "demo, week3",
         pageCount: 10,
@@ -245,14 +233,26 @@ const mealPrepRecipes = [
     },
     {
         recipeName: "metube",
+        categories: "exercise, week3",
+        pageCount: 1,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "mebay-product-page-v2",
         categories: "project, week3",
         pageCount: 1,
         hasLocalProject: true,
     },
     {
-        recipeName: "cards-and-buttons",
+        recipeName: "three-column-grid-layouts",
+        categories: "demo, deprecated",
+        pageCount: 9,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "cards-and-buttons-v2",
         categories: "demo, week4",
-        pageCount: 11,
+        pageCount: 10,
         hasLocalProject: true,
     },
     {
@@ -268,6 +268,12 @@ const mealPrepRecipes = [
         hasLocalProject: true,
     },
     {
+        recipeName: "side-by-side",
+        categories: "demo, week4",
+        pageCount: 7,
+        hasLocalProject: true,
+    },
+    {
         recipeName: "pokemon-cards",
         categories: "exercise, week4",
         pageCount: 1,
@@ -280,9 +286,9 @@ const mealPrepRecipes = [
         hasLocalProject: true,
     },
     {
-        recipeName: "heroes",
+        recipeName: "heroes-v2",
         categories: "demo, week4",
-        pageCount: 9,
+        pageCount: 10,
         hasLocalProject: true,
     },
     {
@@ -300,13 +306,31 @@ const mealPrepRecipes = [
     {
         recipeName: "navbars-basic",
         categories: "demo, week5",
-        pageCount: 12,
+        pageCount: 10,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "media-queries-v4",
+        categories: "demo, week5",
+        pageCount: 11,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "media-queries-exercise",
+        categories: "exercise, week5",
+        pageCount: 1,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "grrm",
+        categories: "exercise, week5",
+        pageCount: 1,
         hasLocalProject: true,
     },
     {
         recipeName: "dropdown-prep",
         categories: "demo, week5",
-        pageCount: 16,
+        pageCount: 11,
         hasLocalProject: true,
     },
     {
@@ -323,24 +347,6 @@ const mealPrepRecipes = [
     },
     {
         recipeName: "adopt-me-plz",
-        categories: "exercise, week5",
-        pageCount: 1,
-        hasLocalProject: true,
-    },
-    {
-        recipeName: "media-queries",
-        categories: "demo, week5",
-        pageCount: 13,
-        hasLocalProject: true,
-    },
-    {
-        recipeName: "media-queries-exercise",
-        categories: "exercise, week5",
-        pageCount: 1,
-        hasLocalProject: true,
-    },
-    {
-        recipeName: "grrm",
         categories: "project, week5",
         pageCount: 1,
         hasLocalProject: true,
@@ -396,32 +402,24 @@ const mealPrepRecipes = [
 ];
 const categories = [
     {
-        label: "Week 1",
+        label: "Session 1",
         value: "week1",
     },
     {
-        label: "Week 2",
+        label: "Session 2",
         value: "week2",
     },
     {
-        label: "Week 3",
+        label: "Session 3",
         value: "week3",
     },
     {
-        label: "Week 4",
+        label: "Session 4",
         value: "week4",
     },
     {
-        label: "Week 5",
+        label: "Session 5",
         value: "week5",
-    },
-    {
-        label: "Week 6",
-        value: "week6",
-    },
-    {
-        label: "Week 8",
-        value: "week8",
     },
     {
         label: "Demos",
@@ -438,6 +436,10 @@ const categories = [
     {
         label: "Projects",
         value: "project",
+    },
+    {
+        label: "Deprecated",
+        value: "deprecated",
     },
 ];
 const ROOT_RECIPE_FOLDER = "meal-prep";

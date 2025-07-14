@@ -12,7 +12,7 @@ body {
     aligned to the left, let's see how to create a 
     right aligned single column layout.
 
-    Students might be tempted to just try and use
+    You might be tempted to just try and use
     text-align: right; but that will only align
     the content inside of our column, while we want
     to move the entire column to the right.
@@ -40,10 +40,10 @@ body {
 }
 
 /*
-    However, students should be aware that this 'auto'-magic
+    However, you should be aware that this 'auto'-magic
     will NOT work on inline or inline-block elements.
 
-    In that case, they can use text-align on the container to
+    In that case, you can use text-align on the container to
     move the inline or inline-block elements around.
 
     But for block elements that have been resized, we can 

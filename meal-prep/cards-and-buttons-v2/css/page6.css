@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#centered-column {
+    width: 90vw;
+    max-width: 800px;
+    margin: 48px auto;
+}
+
+.card {
+    width: 350px;
+    border: 2px solid #ffe4da;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: -4px 4px 12px #ceaaaa;
+    background: linear-gradient(
+        -50deg, 
+        #ffdbdb, 
+        #fff7f7, 
+        #ffc9c9
+    );
+}
+
+.card img {
+    width: 100%;
+}
+
+.card h2 {
+    font-size: 36px;
+    margin-top: 12px;
+}
+
+.card p {
+    font-size: 18px;
+}
+
+
+/*
+    The issue is that our button shifts slightly
+    when we hover over it.
+
+    This happens because we added a 3px border
+    in the hover state, but there was no border
+    in the default state!
+
+    So when we hover over the button, we're
+    actually increasing its height by around 6px,
+    and pushing down the text by 3px or so.
+
+    This is not a very good web design, and
+    comes off as very amateur, so let's fix
+    this issue to make things look more
+    professional.
+*/
+.card a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: lightcoral;
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    /*
+        To do so, we only need to add a
+        border to the default styling of
+        the button.
+    */
+    border: 3px solid lightcoral;
+    /*
+        Much better! And this wouldn't be
+        a bad place to stop: the button 
+        is simple yet elegant, with a 
+        functional hover state.
+
+        ...but we can still do better!
+
+        Right now, the transition to the
+        the hover state is abrupt: the 
+        styling just pops back and forth
+        between non-hover and hover.
+
+        However, there is a fun CSS property
+        that we can use to smoothly 
+        animate between the two states, and
+        that property is called "transition".
+
+        The transition property is a little
+        complex, but not too complex.
+
+        To use the transition property, you must 
+        "register" the CSS properties that you 
+        want to animate, along with a value in 
+        seconds that represents the amount
+        of time you want the transition to take.
+
+        (there are actually other ways to configure 
+        CSS Transitions, but we're going to keep 
+        things simple in here)
+
+        The syntax to use this property is the name 
+        of the property that you want to register 
+        to transition, followed by a space, and then 
+        the value in seconds with the suffix 's', which 
+        represents the 'seconds' unit.
+
+        In our case, we're going to add background-color 
+        as the first property we want to register to 
+        transition, followed by 0.5s (a half a second). 
+        
+        However, we're not limited to only registering 
+        one CSS Property, we can actually register 
+        as many as we want.
+        
+        So, we'll add a comma after 0.5s to indicate 
+        that we want to register another property, 
+        and then add the color property, followed by 
+        0.5s as well, so that our two transitions 
+        are synced.
+    */
+    transition:
+        background-color .5s,
+        color .5s;
+    /*
+        Notice that we went to the next line after 
+        the comma, this isn't required by the computer, 
+        but it tends to make our code easier for humans 
+        to read (so do it!).
+
+        If done properly, this will create a smooth, 
+        animated transition properties that we registered.  
+        We should see the effect once we try to hover over 
+        them again.
+
+        Pretty cool, right?
+    */
+}
+
+.card a:hover {
+    background-color: transparent;
+    /*
+        Also, since we added the border to the 
+        default state, we no longer need it
+        on the hover state.
+
+        It's not hurting anything, but it's 
+        not doing anything either, and usually
+        it's a good idea to remove code
+        that doesn't serve any purpose, so it 
+        doesn't confuse us later.
+    */
+    /* border: 3px solid lightcoral; */
+    color: lightcoral;
+}

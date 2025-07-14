@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#nav {
+    background-color: #222222;
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    /* flex-direction: column; */
+}
+
+#nav a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.single-column-layout {
+    width: 90vw;
+    max-width: 800px;
+    margin: 48px auto;
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.image-container,
+.content-container {
+    flex: 1;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+.image-container {
+    height: 400px;
+}
+
+.content-container h1 {
+    font-size: 48px;
+    color: #ffb700;
+}
+
+/*
+    This demo often has to be split across two
+    different class days, and this is usually
+    where the second half of the demo picks back
+    up again.
+
+    So if you're coming back on the second day,
+    this is likely where you'll be starting!
+*/
+
+/*
+    In our previous two examples, the navbar
+    and the Media & Text layouts, we primarily
+    used Flexbox to make things more responsive.
+
+    In this last example, we're going to use
+    CSS Grid to build a gallery, and show you
+    how we can use CSS Grid to make a site more
+    responsive.
+
+    Before we get into that though, we need to
+    hop back to our HTML once again.  Once 
+    you're done, come back here.
+*/
+
+/*
+    All done? Good!
+
+    Let's start by styling our .featured container.
+    We'll give it a style similar to our navbar,
+    just to mix things up a bit.
+*/
+.featured {
+    background-color: #222222;
+    color: white;
+    padding: 24px 0px;
+}
+
+/*
+    Next, we'll also target that h2 and change its
+    style by increasing its font-size and centering it.
+*/
+.featured h2 {
+    font-size: 36px;
+    text-align: center;
+}
+
+/*
+    We'll also set up our grid images in a similar
+    way to our intro image above, but this time
+    we'll give each image an explicit height, so
+    that things are nice and even in the grid.
+
+    They won't look very good at first, but we're
+    setting them up to look good when they're
+    put into the grid.
+*/
+.grid img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+/*
+    In the next step, we'll set up our grid with a 
+    more customized layout than the default.
+
+    Before that though, note that because we used the 
+    same "single-column-layout" class in the HTML that 
+    we set up before, we don't need to set up another
+    bunch of layout-related CSS Properties for our grid; 
+    it already has the same Centered Single Column
+    style as the section above it.
+
+    Neat, huh?  This is a perfect example of 
+    "working smarter, not harder", reusing code we've 
+    already written so that we don't need to write more.
+
+    On to the next page!
+*/
+
+/* TABLET BREAKPOINT */
+@media screen and (max-width: 740px) and (min-width: 450px) {
+    body {
+        background-color: skyblue;
+    }
+
+    .content-container h1 {
+        font-size: 28px;
+    }
+
+    .intro {
+        gap: 24px;
+    }
+
+    .image-container {
+        height: 300px;
+    }
+}
+
+/* MOBILE BREAKPOINT */
+@media screen and (max-width: 450px) {
+    body {
+        background-color: firebrick;
+    }
+
+    #nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .content-container h1 {
+        margin: 0px;
+        font-size: 28px;
+    }
+
+    .content-container {
+        text-align: center;
+    }
+}
+

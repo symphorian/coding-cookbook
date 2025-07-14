@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Adding a Block in the Block Editor (WordPress) - Appetizers - The Coding Cookbook</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="../css/cookbook.css" rel="stylesheet">
+        <link href="../css/appetizer.css" rel="stylesheet">
+        <link href="../css/lightbox.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="background"></div>
+        <nav>
+            <header id="topHeader">
+                <h2 id="brand"><a href="../">The Coding Cookbook</a></h2>
+                <div id="quote"></div>
+                <div id="navLinks">
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../ingredients.html">
+                                HTML
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../ingredients.html">Elements</a></h2>
+                            <h2><a href="../ingredients-cheatsheet.html">Cheatsheet</a></h2>
+                            <h2><a href="../html-checker.html">Dirty Code Report</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../seasonings.html">
+                                CSS
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../seasonings.html">Properties</a></h2>
+                            <h2><a href="../seasonings-cheatsheet.html">Cheatsheet</a></h2>
+                            <h2><a href="../css-checker.html">Dirty Code Report</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../recipes.html">
+                                Layouts
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../recipes.html?category=page-layout">Page Layouts</a></h2>
+                            <h2><a href="../recipes.html?category=content-layout">Content Layouts</a></h2>
+                            <h2><a href="../recipes.html?category=navigation-layout">Navigation</a></h2>
+                            <h2><a href="../recipes.html?category=miscellaneous">Miscellaneous</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../more.html" class="selected">
+                                More
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../appetizers.html" class="selected">Tutorials</a></h2>
+                            <h2><a href="../demos.html">Coding Demos</a></h2>
+                            <h2><a href="../troubleshooting.html">Troubleshooting</a></h2>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </nav>
+        
+        <header id="title" class="">
+            <h1>Adding a Block in the Block Editor (WordPress)</h1>
+            <h3>The Building Blocks of WordPress</h3>
+        </header>
+        
+        
+        <div class="cookbookPage no-numbers">
+            <h2>The Three Methods of Adding a Block</h2>
+            <ol>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                First off, if you haven't already, 
+                                log in to your WordPress site, and navigate
+                                to the Page or Post you want to add a Block
+                                to, and enter its Block Editor.
+                            </p>
+                            <p class="indent">
+                                Or, create an entirely new Page or Post.
+                            </p>
+                            <p>
+                                There are three main ways to add Blocks in the 
+                                Block Editor:
+                            </p>
+                            <ol>
+                                <li><a href="#slash">The "slash" method</a></li>
+                                <li><a href="#inline">The "inline [+] button" method</a></li>
+                                <li><a href="#header">The "header [+] button" method</a></li>
+                            </ol>
+                            <p>
+                                Each approach has its own pros and cons,
+                                which we'll be going over in the next
+                                sections.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/adding-a-block/01_three-methods.png" 
+                                alt="The three ways to add a Block"
+                            >
+                            <figcaption>
+                                The three ways to add a Block
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        </div>
+        <div class="cookbookPage no-numbers">
+            <div id="slash" class="hiddenAnchorId"></div>
+            <h2>The "slash" Method</h2>
+            <ol>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Let's talk about the first method, which we'll 
+                                call the "slash" method.
+                            </p>
+                            <p>
+                                We're calling it that because, as you can see,
+                                whenever you have an empty Paragraph Block in
+                                the Block Editor, it's placeholder text says 
+                                "Type / to choose a block".
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/adding-a-block/02_justslash.png" 
+                                alt="The 'slash' method of adding a Block"
+                            >
+                            <figcaption>
+                                The "slash" method of adding a Block
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                If you put your cursor into the placeholder text 
+                                and type the "/" (slash) character, it will 
+                                bring up a little popup menu, showing you some 
+                                of the more common Blocks available to use.
+                            </p>
+                            <p>
+                                One of the cons of this approach is that you 
+                                can only see a handful of Blocks at once.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/adding-a-block/02_justslash_defaultmenu.png" 
+                                alt="The default menu, from just typing a slash"
+                            >
+                            <figcaption>
+                                The default menu, from just typing a slash
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                If you keep typing after the slash,
+                                it will customize the results to whatever 
+                                matches most closely to what you typed (or is 
+                                related to what you typed).
+                            </p>
+                            <p>
+                                For example, if you type "/image", you will 
+                                see that several image related Blocks show up 
+                                as options to choose.
+                            </p>
+                            <p>
+                                To add a Block from this list, simply 
+                                click on it.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/adding-a-block/02_justslash_searchmenu.png" 
+                                alt="The search results menu, from typing a search term after the slash"
+                            >
+                            <figcaption>
+                                The search results menu, from typing a search term after the slash
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        </div>
+        <div class="cookbookPage no-numbers">
+            <div id="inline" class="hiddenAnchorId"></div>
+            <h2>The "inline [+] button" Method</h2>
+            <ol>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Let's talk about the next method, which we call 
+                                the "inline [+] button" method.
+                            </p>
+                            <p>
+                                This method is also pretty obviously named: 
+                                wherever you have the opportunity to add a Block 
+                                via the "slash" method, you can also add a Block 
+                                via a square black button with a plus icon [+]
+                                inside of it on the same line.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/adding-a-block/03_justtwo_v2.png" 
+                                alt="The 'inline [+] button' method of adding a Block"
+                            >
+                            <figcaption>
+                                The "inline [+] button" method of adding a Block
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <h2 id="p1_step4" class="invisibleInnerAnchorTarget"></h2>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Clicking on this button will bring up a little 
+                                popup, revealing a small number of Blocks that 
+                                you can select.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/adding-a-block/03_justtwo_popup.png" 
+                                alt="Clicking the inline [+] button"
+                            >
+                            <figcaption>
+                                Clicking the inline [+] button
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Much like with the "slash" method, you can also 
+                                search for other Blocks, this time by using the 
+                                search field at the top of the popup.  
+                            </p>
+                            <p>
+                                However, unlike the "slash" method, you can get 
+                                two types of results in the popup:
+                                <ol class="bigLetters">
+                                    <li>
+                                        Block results, that match your search 
+                                        term as closely as possible
+                                    </li>
+                                    <li>
+                                        Pattern results, related to your 
+                                        search term
+                                    </li>
+                                </ol>
+                            </p>
+                            <p class="indent">
+                                <em>Patterns</em> are pre-built combinations of 
+                                Blocks used to create a certain layout or design.
+                                You can think of them like Block Templates.
+                                Feel free to use them! However, they are more 
+                                complex to use and update.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/adding-a-block/03_justtwo_popup_search.png" 
+                                alt="Searching in the [+] button popup"
+                            >
+                            <figcaption>
+                                Searching in the [+] button popup
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                However, if you don't know what you're looking 
+                                for, you may not know what Block name to even 
+                                search for! 
+                            </p>
+                            <p>
+                                In this scenario, you can click the [Browse All]
+                                button, and you'll open up a side panel that 
+                                contains ALL possible blocks that you can add 
+                                to the Block Editor.
+                            </p>
+                            <p class="indent">
+                                This is actually the same panel that we'll see
+                                in the last approach to adding a Block, the 
+                                "header [+] button", so we'll cover that in more 
+                                detail in the last section.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/adding-a-block/03_justtwo_popup_browseall.png" 
+                                alt="The [Browse All] button in the [+] button popup"
+                            >
+                            <figcaption>
+                                The [Browse All] button in the [+] button popup
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Before we move on to the last method though, 
+                                there's something important to know about how
+                                you use the inline [+] button inside of more complex 
+                                Blocks (in particular, Blocks that are containers 
+                                for other Blocks).
+                            </p>
+                            <p>
+                                The Block we'll use as an example here is a 
+                                Column Block, which can contain any other Block
+                                or group of Blocks.
+                            </p>
+                            <p>
+                                In this case, if you just click your cursor 
+                                inside of any existing text inside the Column 
+                                Block, the [+] button won't show up.
+                            </p>
+                            <p>
+                                You have to click on the empty space below or
+                                around it to select the container Column Block,
+                                and only then will a [+] button show up in the 
+                                bottom right corner.
+                            </p>
+                            <p>
+                                This [+] button will open up the same popup 
+                                that we saw earlier, but the Block(s) you add 
+                                will be inserted inside of the Column Block, 
+                                rather than to the Page or Post itself.
+                            </p>
+                            <p class="indent">
+                                Alternatively, if you have trouble clicking
+                                inside the container, you can also open up the 
+                                List View (1), and then select the Column Block 
+                                you want to add a Block into (2), and then the 
+                                [+] button will show up.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/adding-a-block/03_justtwo_containerbutton.png" 
+                                alt="Selecting the Column Block container before the [+] button will reveal itself"
+                            >
+                            <figcaption>
+                                Selecting the Column Block container before the
+                                [+] button will reveal itself
+                            </figcaption>
+                            <img 
+                                src="images/adding-a-block/03_justtwo_containerbutton_alt.png" 
+                                alt="Alternative way of selecting the Column Block container (via the List View) before the [+] button will reveal itself"
+                            >
+                            <figcaption>
+                                Alternative way of selecting the Column Block 
+                                container (via the List View) before the
+                                [+] button will reveal itself
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        </div>
+        <div class="cookbookPage no-numbers">
+            <div id="header" class="hiddenAnchorId"></div>
+            <h2>The "header [+] button" Method</h2>
+            <ol>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Now we come to the last method to add Blocks to
+                                a Page or Post: the "header [+] button" method.
+                            </p>
+                            <p>
+                                Like it's name implies, this time, the [+] button 
+                                is found in the header, and it's blue rather 
+                                than black.
+                            </p>
+                            <p>
+                                Clicking on this [+] button will open up a 
+                                panel on the left, revealing ALL possible 
+                                Blocks that can be added to the Page or Post.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/adding-a-block/04_justthree_v2.png" 
+                                alt="The 'header [+] button' method of adding a Block"
+                            >
+                            <figcaption>
+                                The "header [+] button" method of adding a Block
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Luckily, the blocks are grouped into different 
+                                categories to make it easier identify and find
+                                them.
+                            </p>
+                            <p>
+                                The categories that appear are slightly
+                                dependent on the Theme that you pick, but some
+                                common categories are:
+                            </p>
+                            <ul>
+                                <li>TEXT</li>
+                                <li>MEDIA</li>
+                                <li>DESIGN (which encompasses layout related Blocks, like Columns)</li>
+                                <li>WIDGETS</li>
+                                <li>THEME</li>
+                                <li>EMBEDS (if you're curious how to get a YouTube video on your site, this is one way to do it!)</li>
+                            </ul>
+                            <p>
+                                Selecting a Block from here will add to the Page 
+                                or Post.  Occasionally, you might find that the 
+                                Block you selected was added in a location you
+                                didn't want; in that case, click and drag it 
+                                in the List View to where you want it to be.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/adding-a-block/04_justthree_blocksmenu.png" 
+                                alt="The Blocks Panel, revealed by clicking the blue [+] button in the header"
+                            >
+                            <figcaption>
+                                The Blocks Panel, revealed by clicking the blue [+] button in the header
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+            
+            <h4>
+                Congrats! Now you know how to add Blocks in the WordPress Block Editor!
+            </h4>
+        </div>
+        <div id="lightboxContainer">
+            <div id="lightboxBackground" class="closer"></div>
+            <img id="lightbox" src="" alt="">
+            <span id="lightboxCloser" class="closer">×</span>
+          </div>
+        <script src="../js/lightbox.js"></script>
+        <script src="../js/hideNav.js"></script>
+    </body>
+</html>

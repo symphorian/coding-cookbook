@@ -2,15 +2,19 @@
 
 /*
     Nothing too fancy here, just making sure
-    they're applying the lessons from the
+    you're applying the lessons from the
     previous Drills in different contexts.
 
-    In this case, we're showing them what
+    In this case, we're showing you what
     happens when you use block element 
     containers to group inline content:
 
     you can essentially separate them onto
     different lines in different containers.
+
+    (This was actually one way of completing
+    the Bulletin Board exerise requirement
+    of having post-its on separate rows.)
 */
 
 .shadowed p {

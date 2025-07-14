@@ -1,0 +1,192 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.nav {
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+}
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.25rem;
+    padding: 20px 0px;
+    margin-right: 40px;
+}
+.nav a:last-of-type {
+    margin-right: 0px;
+}
+
+.header {
+    width: 90vw;
+    max-width: 800px;
+    margin: 25px auto;
+    display: flex;
+    align-items: center;
+}
+
+.header .image-container {
+    flex: 1;
+    height: 400px;
+}
+.image-container img {
+    height: 100%;
+    border-radius: 25px;
+}
+
+.header .content {
+    flex: 1;
+    margin-left: 50px;
+}
+.content h1 {
+    font-size: 3rem;
+    color: #ffb700;
+    margin: 0px 0px 15px;
+}
+.content p {
+    margin: 0px;
+}
+
+.featured {
+    background-color: #222;
+    color: white;
+    padding: 25px 0px;
+}
+.featured h2 {
+    font-size: 2.25rem;
+    text-align: center;
+}
+
+
+.grid {
+    width: 90vw;
+    max-width: 800px;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 300px;
+    gap: 15px;
+    grid-template-areas:
+        "txt1 img1 img2 img2"   
+        "img3 img3 img4 txt2"
+    ;
+}
+.grid img {
+    height: 100%;
+    border-radius: 25px;
+}
+.grid p {
+    border: 1px solid #ffb700;
+    padding: 20px;
+    margin: 0px;
+    border-radius: 25px;
+}
+#p1 {
+    grid-area: txt1;
+}
+#p2 {
+    grid-area: txt2;
+}
+#img1 {
+    grid-area: img1;
+}
+#img2 {
+    grid-area: img2;
+}
+#img3 {
+    grid-area: img3;
+}
+#img4 {
+    grid-area: img4;
+}
+
+@media screen and (max-width: 768px) and (min-width: 481px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "txt1 img1"
+            "img2 img2"
+            "img3 img3"
+            "img4 txt2"
+        ;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /*
+        Let's remove this background color now that we're sure
+        our media query works.
+    */
+    .nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav a {
+        font-size: 1rem;
+        margin: 0px;
+    }
+
+    /* 
+        Looks like our header needs to have it's content stack.
+        We're going to use the same method we used for the .nav
+        earlier on our .header. We'll change the flex-direction
+        to column and align the text to the center.
+    */
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /*
+        Now, our we want our image to come after our text content,
+        so, we can use the order property on the .image-container
+        and the .content classes to reorder them. We'll set
+        the order value to 2 for our image container and then
+        set the order value to 1 for our content.
+
+        It's a small issue but notice that our image-container
+        also is no longer respecting the height we gave it. This
+        is due to the flex: 1; we gave it earlier. We can fix
+        this by changing that flex value to auto. We'll also
+        have to apply a width of 100% to get the image's width
+        back.
+    */
+    .header .image-container {
+        order: 2;
+        flex: auto;
+        width: 100%;
+    }
+    
+    /*
+        Our content margins are also messing up it's alignment.
+        We can fix that by reducing the left margin to 0px and
+        add some bottom margin to get some space between the
+        content and the image.
+    */
+    .header .content {
+        order: 1;
+        margin-left: 0px;
+        margin-bottom: 25px;
+    }
+
+    /*
+        Finally, let's reduce our h1 font size to 2.5rem so
+        it doesn't look so large.
+    */
+    .content h1 {
+        font-size: 2.5rem;
+    }
+    /*
+        That wraps up this section! Let's move on to our
+        last section.
+    */
+}

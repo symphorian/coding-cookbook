@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>External &lt;a&gt; (Anchor) Element</title>
+        <link href="css/anchors.css" rel="stylesheet">
+    </head>
+    <body>
+        <h3>External Hyperlinks</h3>
+        <p>
+            When you click on an external hyperlink, you will be taken off the 
+            current page and navigated to a new page.  This new page may be on 
+            the same website, or a different one entirely.
+        </p>
+        <h4>External Hyperlinks to pages on the same site</h4>
+        <p>
+            If you want to create an external hyperlink that goes to a
+            different page on the same site, you can just provide the anchor's 
+            href attribute with a filepath to the HTML file that you want to 
+            navigate to. (e.g. href="other-page.html")
+        </p>
+        <p>
+            For example, the anchor below links to another Cookbook page about 
+            the audio HTML element, which is in the same folder as this page 
+            about anchors.
+        </p>
+        <p>
+            <a href="audio.html">
+                Click me to visit the Audio Element page in the Cookbook
+            </a>
+        </p>
+        <h5>Hyperlinking to HTML files in the same folder</h5>
+        <p>
+            Note the last phrase in the description above: that the 
+            audio HTML file was in the same folder as this file.  When HTML
+            files that we want to link to are in the same folder, that makes
+            things relatively simple, and the href attribute just needs to be 
+            provided with the file name, like this: href="audio.html"
+        </p>
+        <h5>Hyperlinking to HTML files in a different folder</h5>
+        <p>
+            However, if the page you want to create a hyperlink to is NOT in the 
+            same folder as the HTML file you're working in, then things get a 
+            bit more complicated.  You'll likely have to add a dot-dot-slash 
+            (../) to the front of the file path to tell the file to look outside 
+            of the current folder and then access the necessary file (or folder)
+            name.
+        </p>
+        <p>
+            For example, the anchor below creates a hyperlink to the HTML 
+            Dirty Code Report (a very handy tool for writing clean HTML code!), 
+            but since that HTML file is not in the same folder as this file, 
+            the filepath we provide needs to include "../" to go out of the 
+            current folder in order to navigate to that file: 
+            href="../html-checker.html"
+        </p>
+        <p>
+            <a href="../html-checker.html">
+                Click me to visit the HTML Dirty Code Report in the Cookbook
+            </a>
+        </p>
+        <h4>
+            External Hyperlinks to pages on a different site
+        </h4>
+        <p>
+            If you want to create an external hyperlink that goes to a
+            page on an entirely different site, you can just provide the href 
+            attribute with the URL that you want to go to.
+        </p>
+        <p>
+            However, if you're navigating a user off of your site, it is 
+            generally good practice to open that page in another tab.  
+            You can do so by including a rather strange looking attribute and
+            value pair: target="_blank"
+        </p>
+        <p>
+            The anchor below links to Google's homepage AND opens the page in 
+            a new tab using the target attribute with the "_blank" value.
+        </p>
+        <p>
+            <a href="https://www.google.com" target="_blank">
+                Click me to visit Google's home page
+            </a>
+        </p>
+    </body>
+</html>

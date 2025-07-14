@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Installing a Google Fonts Plugin (WordPress) - Appetizers - The Coding Cookbook</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="../css/cookbook.css" rel="stylesheet">
+        <link href="../css/appetizer.css" rel="stylesheet">
+        <link href="../css/lightbox.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="background"></div>
+        <nav>
+            <header id="topHeader">
+                <h2 id="brand"><a href="../">The Coding Cookbook</a></h2>
+                <div id="quote"></div>
+                <div id="navLinks">
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../ingredients.html">
+                                HTML
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../ingredients.html">Elements</a></h2>
+                            <h2><a href="../ingredients-cheatsheet.html">Cheatsheet</a></h2>
+                            <h2><a href="../html-checker.html">Dirty Code Report</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../seasonings.html">
+                                CSS
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../seasonings.html">Properties</a></h2>
+                            <h2><a href="../seasonings-cheatsheet.html">Cheatsheet</a></h2>
+                            <h2><a href="../css-checker.html">Dirty Code Report</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../recipes.html">
+                                Layouts
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../recipes.html?category=page-layout">Page Layouts</a></h2>
+                            <h2><a href="../recipes.html?category=content-layout">Content Layouts</a></h2>
+                            <h2><a href="../recipes.html?category=navigation-layout">Navigation</a></h2>
+                            <h2><a href="../recipes.html?category=miscellaneous">Miscellaneous</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../more.html" class="selected">
+                                More
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../appetizers.html" class="selected">Tutorials</a></h2>
+                            <h2><a href="../demos.html">Coding Demos</a></h2>
+                            <h2><a href="../troubleshooting.html">Troubleshooting</a></h2>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </nav>
+        
+        <header id="title" class="">
+            <h1>Installing a Google Fonts Plugin (WordPress)</h1>
+            <h3>Getting the free fonts you need onto your WordPress site</h3>
+        </header>
+        
+        
+        <div class="cookbookPage">
+            <ol>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                One reminder before we get started: there's
+                                nothing wrong with using Plugins on your 
+                                WordPress site; they're one of the features 
+                                that makes WordPress even more customizable!
+                            </p>
+                            <p>
+                                BUT, not all plugins are well-written or
+                                well-maintained, and because of that, some may 
+                                not do what you expect, or even worse, they could 
+                                modify your site destructively (meaning that 
+                                even after you deactivate/delete the Plugin, 
+                                there are still side effects).
+                            </p>
+                            <p>
+                                So, if you do want to dabble in Plugins, we just 
+                                urge you to be cautious, and make sure to check 
+                                out the reviews and documentation before
+                                installing them, much like you should be careful 
+                                about downloading anything off the internet.
+                            </p>
+                            <p>
+                               Now, with that out of the way, let's introduce
+                               you to a safe and useful Plugin we recommend!
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                First, login to WordPress and navigate to your 
+                                Dashboard.
+                            </p>
+                            <p>
+                                From there, click on the Plugins link in the 
+                                left sidenav.
+                            </p>
+                            <p>
+                                You'll be taken to the Plugins view, from which 
+                                you can see all currently installed Plugins on 
+                                your site.
+                            </p>
+                            <p class="indent">
+                                There are a couple installed by default that 
+                                you can ignore.
+                            </p>
+                            <p>
+                                Click on the [Add New Plugin] button at the top 
+                                of the screen to continue.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/installing-google-fonts-plugin/01_plugins-view.png" 
+                                alt="The Plugins view"
+                            >
+                            <figcaption>
+                                The Plugins view
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                This will bring you to the Plugins "marketplace",
+                                where you can search for and install new Plugins 
+                                to use on WordPress.
+                            </p>
+                            <p class="indent">
+                                It is structured very similar to how you would 
+                                search for and install new Themes.
+                            </p>
+                            <p>
+                                Click into the "Search Plugins" text box at the 
+                                top right, and type "Google Fonts".
+                            </p>
+                            <p>
+                                The view will automatically begin searching 
+                                once you finish typing.
+                            </p>    
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/installing-google-fonts-plugin/02_plugins-view_add-new.png" 
+                                alt="The Add Plugins view"
+                            >
+                            <figcaption>
+                                The Add Plugins view
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <h2 id="p1_step4" class="invisibleInnerAnchorTarget"></h2>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After typing "Google Fonts", some search results 
+                                should come up.
+                            </p>
+                            <p>
+                                The one we're looking for should be the first 
+                                result that pops up in the top left (assuming 
+                                you spelled "Google Fonts" correctly).
+                            </p>
+                            <p>
+                                The Plugin we want to use is called 
+                                <b>
+                                    "Fonts Plugin | Use Google Fonts, 
+                                    Adobe Fonts or Upload Fonts".
+                                </b>
+                                ...a bit wordy, right?
+                            </p>
+                            <p>
+                                Once you've found it, click the [Install Now]
+                                button.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/installing-google-fonts-plugin/03_plugins-view_fonts-plugin.png" 
+                                alt="Installing the correct Plugin"
+                            >
+                            <figcaption>
+                                Installing the correct Plugin
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After the installation is successful, the button 
+                                will change into an [Activate] button.
+                            </p>
+                            <p>
+                                Go ahead and click that next.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/installing-google-fonts-plugin/04_plugins-view_fonts-plugin_activate.png" 
+                                alt="Activating the Plugin"
+                            >
+                            <figcaption>
+                                Activating the Plugin
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After activating the Plugin, you'll be brought 
+                                to a screen like this one, where they try to
+                                get your email address for a "Quickstart Guide".
+                            </p>
+                            <p>
+                                This page can be completely ignored; the Cookbook 
+                                page you're on right now is your quickstart guide.
+                            </p>
+                            <p>
+                                Now that the Plugin is installed and activated,
+                                navigate to the Customize menu for your site.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/installing-google-fonts-plugin/05_plugins-view_fonts-plugin_success.png" 
+                                alt="Ignoring the Quickstart Guide"
+                            >
+                            <figcaption>
+                                Ignoring the Quickstart Guide
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Back in your Customize Menu, you should see a 
+                                new menu item called "Fonts Plugin", with the 
+                                same little icon next to it associated with the 
+                                Plugin.
+                            </p>
+                            <p>
+                                Go ahead and click on it.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/installing-google-fonts-plugin/06_customize_fontsplugin.png" 
+                                alt="The Fonts Plugin in the Customize Menu"
+                            >
+                            <figcaption>
+                                The Fonts Plugin in the Customize Menu
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Now you'll find yourself looking at some new 
+                                menu items inside of the Fonts Plugin.
+                            </p>
+                            <p>
+                                The items you'll most likely find yourself 
+                                configuring will be the "Basic Settings" and 
+                                maybe the "Advanced Settings", if necessary.
+                            </p>
+                            <p>
+                                Go ahead and click on "Basic Settings".
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/installing-google-fonts-plugin/07_customize_fontsplugin_basic.png" 
+                                alt="Inside the Fonts Plugin menu"
+                            >
+                            <figcaption>
+                                Inside the Fonts Plugin menu
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Inside Basic Settings, you'll probably want to 
+                                be setting the fonts for "Base Typography" and 
+                                "Headings Typography".
+                            </p>
+                            <p>
+                                The former changes the default font family for 
+                                the whole site, and the latter changes the font 
+                                family used for headings (i.e. Heading Blocks)
+                                on the site.
+                            </p>
+                            <p>
+                                Go ahead and click on the dropdown under 
+                                "Base Typography".
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/installing-google-fonts-plugin/08_customize_fontsplugin_basic_settings.png" 
+                                alt="Inside the Fonts Plugin menu's Basic Settings"
+                            >
+                            <figcaption>
+                                Inside the Fonts Plugin menu's Basic Settings
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After clicking on the dropdown, a search bar 
+                                will appear, with a long list of fonts underneath 
+                                it.
+                            </p>
+                            <p>
+                                You could scroll down through all of them to
+                                find what you're looking for, but it's probably 
+                                a lot easier to search for the name.
+                            </p>
+                            <p>
+                                Once you find the font family you're looking for,
+                                just select it, and you should see the new font 
+                                family applied to all of the basic non-heading 
+                                text on the site!
+                            </p>
+                            <p>
+                                Go ahead and do the same for Heading Typography,
+                                assuming you need to, and all headings on the 
+                                site will be updated to use that font family.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/installing-google-fonts-plugin/09_customize_fontsplugin_basic_search.png" 
+                                alt="Picking Font Families under Basic Settings"
+                            >
+                            <figcaption>
+                                Picking Font Families under Basic Settings
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                If you're happy with those results, then you can 
+                                stop right here.
+                            </p>
+                            <p class="indent">
+                                NOTE: Just make sure to click the [Publish] button at 
+                                the top of the screen before you leave the 
+                                Customize menu; otherwise, none of your changes 
+                                will be saved!
+                            </p>
+                            <p>
+                                ...but, if you find that you want a bit more 
+                                control over certain things on the site (for
+                                example, maybe you only want certain headings,
+                                like H1's and H2's, to have a certain font),
+                                then keep reading.
+                            </p>
+                            <p>
+                                Click on the back arrow [<] a couple of times to 
+                                get back to where you can select the "Advanced 
+                                Settings", and click on that.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/installing-google-fonts-plugin/10_customize_fontsplugin_adv.png" 
+                                alt="Back to the Advanced Settings"
+                            >
+                            <figcaption>
+                                Back to the Advanced Settings
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                There are quite a few options in the Advanced 
+                                Settings menu.
+                            </p>
+                            <p>
+                                You can explore the others if you like, but for 
+                                the scenario we previously mentioned, we'll be 
+                                heading into the "Content" section.
+                            </p>
+                            <p>
+                                Go ahead and click on "Content".
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/installing-google-fonts-plugin/11_customize_fontsplugin_adv_settings.png" 
+                                alt="Inside the Fonts Plugin menu's Advanced Settings"
+                            >
+                            <figcaption>
+                                Inside the Fonts Plugin menu's Advanced Settings
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                There are EVEN MORE options as we go deeper 
+                                in the Advanced Settings menu.
+                            </p>
+                            <p>
+                                As you can see, from here, we can configure the 
+                                font families for individual headings.  So if we 
+                                want H1's and H2's to have a different font 
+                                family compared to the other headings, this is 
+                                where we can configure it.
+                            </p>
+                            <p>
+                                Simply pick the font from the appropriate 
+                                dropdown menu, and you should be good to go.
+                            </p>
+                            <p class="indent">
+                                NOTE: again, just make sure to click the [Publish] button at 
+                                the top of the screen before you leave the 
+                                Customize menu; otherwise, none of your changes 
+                                will be saved!
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/installing-google-fonts-plugin/12_customize_fontsplugin_adv_settings_h1-h6.png" 
+                                alt="Inside the Fonts Plugin menu's Advanced Settings"
+                            >
+                            <figcaption>
+                                Inside the Fonts Plugin menu's Advanced Settings
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+            <h4>
+                Congrats! You've learned how to use a Google Fonts Plugin!
+            </h4>
+        </div>
+        <div id="lightboxContainer">
+            <div id="lightboxBackground" class="closer"></div>
+            <img id="lightbox" src="" alt="">
+            <span id="lightboxCloser" class="closer">×</span>
+          </div>
+        <script src="../js/lightbox.js"></script>
+        <script src="../js/hideNav.js"></script>
+    </body>
+</html>

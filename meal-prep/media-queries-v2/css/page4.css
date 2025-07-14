@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.nav {
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+}
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.25rem;
+    padding: 20px 0px;
+    margin-right: 40px;
+}
+.nav a:last-of-type {
+    margin-right: 0px;
+}
+
+/*
+    Let's target our header div and turn it into a centered single
+    column by applying a width of 90vw, a max-width of 800px,
+    and a margin with 25px on the top and bottom and auto for
+    the left and right. The width will let it grow and shrink
+    responsively while the max-width will keep it from growing
+    too large. The margin is going to center it with on the
+    left and right while applying 25px of outer spacing on 
+    the top and bottom of it.
+
+    Now, we set up our header html so that we would have an
+    image on the left with text content to the right of it.
+    A classic example of side by side content layout. 
+    
+    So, who can tell me how we can get this content side by side?
+
+    We're going to be using our friend display: flex; again.
+    We'll also add an align-items: center; this time, so that
+    we can center our content vertically. 
+    
+    Can anyone tell me why align-items is centering our
+    content vertically?
+*/
+.header {
+    width: 90vw;
+    max-width: 800px;
+    margin: 25px auto;
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+/*
+    Now that we have one complete card,
+    let's make some more!
+
+    Go into the HTML, duplicate your 
+    original card three times so that 
+    you have a total of four, and then 
+    come back here.
+*/
+
+/*
+    Notice how ALL your card styles 
+    were applied to the duplicated cards
+    without writing a single extra line 
+    of CSS?
+
+    That's the power of classes in HTML
+    and CSS: you can share the same style
+    across multiple elements.
+
+    ...but our layout looks pretty ugly.
+
+    Our cards are all stacked on top of each
+    other, because even though we set widths
+    on them, they're still block elements.
+
+    We COULD change them to be inline-blocks
+    to get them side by side, but there is a
+    cleaner, more FLEXible way...Flexbox!
+*/
+
+#centered-column {
+    width: 90vw;
+    max-width: 800px;
+    margin: 48px auto;
+    /*
+        Let's activate flexbox on our column so
+        that everything inside of it goes side
+        by side.
+    */
+    display: flex; 
+    /*
+        Well, that got them side-by-side, but 
+        they're all squished now.
+
+        That's to be expected, because that's 
+        what Flexbox is good at: getting everything
+        inside of it side by side, no matter what.
+
+        Let's allow the cards to wrap, so that
+        they're closer to our intended size.
+    */
+    flex-wrap: wrap;
+    /*
+        Looking better!  Let's also add some 
+        breathing room between the cards.
+
+        We could just apply margin to the cards,
+        but there's actually a special Flexbox
+        property we could use called "gap".
+
+        The gap property adds spacing between
+        all of its children, so it's a very 
+        convenient property for situations 
+        like these.
+    */
+    gap: 36px;
+    /*
+        Very nice!
+
+        One last thing: it may not be immediately
+        apparent, but our cards are not centered
+        within the column.
+
+        We can use another Flexbox property to
+        take care of that; can you remember which
+        one we can use for that?
+
+
+
+
+        ...since our Flexbox children are in a row
+        (that wraps), we can use justify-content!
+    */
+    justify-content: center;
+}
+
+/*
+    Beautiful! That's a much nicer looking layout
+    than we started with, right?
+
+    There are just a few small stylistic issues
+    remaining, that if we address them, will get 
+    things really clean and professional looking.
+
+    Can you spot them? (some may depend on the
+    content and images you have in your HTML)
+*/
+
+.card {
+    width: 350px;
+    border: 2px solid #ffe4da;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: -4px 4px 12px #ceaaaa;
+    background: linear-gradient(
+        -50deg, 
+        #ffdbdb, 
+        #fff7f7, 
+        #ffc9c9
+    );
+}
+
+.card img {
+    width: 100%;
+}
+
+.card h2 {
+    font-size: 36px;
+    margin-top: 12px;
+}
+
+.card p {
+    font-size: 18px;
+}
+
+.card a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: lightcoral;
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border: 3px solid lightcoral;
+    transition:
+        background-color .5s,
+        color .5s;
+}
+
+.card a:hover {
+    background-color: transparent;
+    color: lightcoral;
+}

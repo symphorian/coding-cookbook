@@ -3,9 +3,9 @@
 /*
     Similar challenge as the first drill, just
     now there's more options to choose from.
-    They could write two separate CSS rules,
+    You could write two separate CSS rules,
     and that would be fine, but this is a 
-    good chance to show them how they can
+    good chance to learn how you can
     combine selectors to "share" a CSS rule
     across multiple elements.
 */
@@ -16,10 +16,10 @@
 }
 
 /* 
-    The above code is exactly the same as the
-    code below, just more compact and less
-    repetitious (which is something to avoid
-    whevever possible in coding)
+    The above code has exactly the same effect 
+    as the code below; it's just more compact 
+    and less repetitious (which is something to 
+    avoid whevever possible in coding)
 */
 
 #d2-s1 {

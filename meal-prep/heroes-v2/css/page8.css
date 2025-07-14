@@ -1,0 +1,201 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#hero-1 {
+    background-image: url("../images/lizard.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+#hero-1 h1 {
+    font-size: 120px; 
+    position: absolute;
+    left: 20%;
+}
+
+#hero-2 {
+    background-image: url("../images/lonely-ocean.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: flex-end;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+#hero-2 h2 {
+    font-size: 72px;
+    position: absolute;
+    right: 20%;
+    bottom: 50%;
+}
+
+#hero-2 h4 {
+    font-size: 24px;
+    position: absolute;
+    right: 20%;
+    bottom: 47%;
+}
+
+#hero-2 a {
+    font-size: 14px;
+    display: inline-block;
+    background-color: #333333;
+    color: white;
+    text-decoration: none;
+    padding: 24px;
+    position: absolute;
+    right: 20%;
+    bottom: 41%;
+}
+
+/*
+    Once more, we'll add some margin to the bottom
+    of our latest hero, before introducing our
+    fourth hero.
+*/
+
+#hero-3 {
+    background-image: url("../images/orange-wildflowers.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    margin-bottom: 100px; /* new */
+}
+
+#hero-3 .hero-content {
+    position: absolute;
+    top: 10%;
+    left: 15%;
+}
+
+#hero-3 h2 {
+    font-size: 72px;
+    margin-bottom: 36px;
+}
+
+#hero-3 h4 {
+    font-size: 24px;
+    margin: 0px;
+}
+
+#hero-3 a {
+    font-size: 14px;
+    display: inline-block;
+    background-color: #333333;
+    color: white;
+    text-decoration: none;
+    padding: 24px;
+    margin-top: 36px;
+    margin-right: 24px;
+}
+
+/*
+    We'll build one more hero to wrap up the demo.
+
+    We've seen that there are difficulties with
+    positioning text content relative to the focus
+    of the background hero image, regardless of
+    the approach we use to position it.
+
+    However, if we have a hero image that doesn't 
+    have a primary focus point (or at least,
+    not one in the center), we can center our
+    hero content, which simplifies a lot of the
+    challenges we encountered earlier.
+
+    So for our last hero, we're going to use a
+    simpler hero image, and use flexbox once 
+    again, this time to center our content
+    in the middle of the hero.
+
+    Flexbox gets a little difficult if you're
+    trying to position the elements inside of it, 
+    but if you just want to center something 
+    (both horizontally and vertically),
+    then there's nothing simpler than flexbox.
+
+    To illustrate this, we're going back to
+    the HTML one last time, and we're going
+    to copy the same strucure as the previous
+    one, just with different content.
+
+    Come back here when you've added the last
+    hero in the HTML.
+*/
+
+/*
+    Now, we'll set up the background pretty
+    much the same as last time, but we'll
+    also use flexbox again.  This time,
+    we'll center our .hero-content both
+    horizontally and vertically.
+*/  
+#hero-4 {
+    background-image: url("../images/stars-on-velvet.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+
+    /* these properties are key to centering hero-content */
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+/*
+    Now that our content is in the center
+    and all in one container, it's a lot
+    easier to style it.
+*/
+#hero-4 .hero-content {
+    text-align: center;
+    color: white;
+    padding-top: 100px; /* this will push it down a little */
+}
+
+/*
+    We'll use similar content styles again,
+    in the interest of time.
+*/
+
+#hero-4 h2 {
+    font-size: 72px;
+    margin-bottom: 36px;
+}
+
+#hero-4 h4 {
+    font-size: 24px;
+    margin: 0px;
+}
+
+/*
+    But here, we will reverse the colors for the buttons.
+*/
+#hero-4 a {
+    font-size: 14px;
+    display: inline-block;
+    background-color: white;
+    color: #333333;
+    text-decoration: none;
+    padding: 24px;
+    margin-top: 36px;
+    margin-right: 12px;
+    margin-left: 12px;
+}

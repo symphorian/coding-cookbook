@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#centered-column {
+    width: 90vw;
+    max-width: 800px;
+    margin: 48px auto;
+}
+
+/*
+    Now we're going to start styling our
+    card container.
+
+    However, depending on your chosen image,
+    you might have an enormous image overflowing
+    off the edge of your screen.
+
+    So let's address that first.
+
+    We're going to style our image so that it
+    sizes itself based on the card container,
+    not its default width.
+
+    To make that happen, we first need to set
+    a width on our card; we're going to use
+    an absolute width of 350px this time.
+*/
+
+.card {
+    width: 350px;
+}
+
+/*
+    That didn't change anything yet, because
+    we haven't done anything with the image.
+
+    Now we're going to tell the image to grow
+    to fill its container by using a relative
+    unit of 100%.
+*/
+
+.card img {
+    width: 100%;
+}
+
+/*
+    Much better!
+
+    Now let's also restyle the text a bit. 
+    There's nothing wrong with it, but we're
+    designers after all, so let's change things
+    up to make it stand out a bit more.
+*/
+
+.card h2 {
+    font-size: 36px;
+    margin-top: 12px; /* brings the text closer to the image */
+}
+
+.card p {
+    font-size: 18px;
+}
+
+/*
+    There we go! The text pops just a bit more now.
+
+    Next, we're going to style the card itself,
+    aside from just the width.
+*/

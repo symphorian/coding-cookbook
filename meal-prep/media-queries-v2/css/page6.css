@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.nav {
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+}
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.25rem;
+    padding: 20px 0px;
+    margin-right: 40px;
+}
+.nav a:last-of-type {
+    margin-right: 0px;
+}
+
+.header {
+    width: 90vw;
+    max-width: 800px;
+    margin: 25px auto;
+    display: flex;
+    align-items: center;
+}
+
+.header .image-container {
+    flex: 1;
+    height: 400px;
+}
+.image-container img {
+    height: 100%;
+    border-radius: 25px;
+}
+
+.header .content {
+    flex: 1;
+    margin-left: 50px;
+}
+.content h1 {
+    font-size: 3rem;
+    color: #ffb700;
+    margin: 0px 0px 15px;
+}
+.content p {
+    margin: 0px;
+}
+
+/*
+    Now, let's style our featured photos section. We'll start
+    off targetting our .featured class and giving it a dark
+    background color and a light text color. We'll also give
+    it 25px of padding on the top and bottom and 0px of padding
+    on the left and right.
+*/
+.featured {
+    background-color: #222;
+    color: white;
+    padding: 25px 0px;
+}
+
+/*
+    We can target the featured h2 and give it a font size
+    of 2.25rem. We'll also give it a text-align of center.
+*/
+.featured h2 {
+    font-size: 2.25rem;
+    text-align: center;
+}
+
+/*
+    Before we setup our grid, let's target .grid and give it
+    a centered single column layout. We'll use the same
+    width, max-width, and margin property and value pairs
+    from the .header class.
+*/
+.grid {
+    width: 90vw;
+    max-width: 800px;
+    margin: 0px auto;
+}

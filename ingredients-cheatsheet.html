@@ -8,150 +8,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link href="css/cookbook.css" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-        <style>
-            #html {
-                margin-top: 24px;
-                padding: 24px;
-            }
-    
-            section {
-                padding-bottom: 24px;
-            }
-    
-            h3 {
-                margin-bottom: 8px;
-            }
-            h5 {
-                margin-top: 8px;
-            }
-    
-            .contentContainer {
-                display: flex;
-            }
-    
-            .content {
-                flex: 2;
-            }
-    
-            .legend {
-                flex: 1;
-            }
-    
-            .legend div:first-child {
-                padding-top: 20px;
-            }
-    
-            .code {
-                font-family: Courier New, monospace;
-                font-size: 18px;
-                line-height: 24px;
-            }
-
-            div.code {
-                background-color: white;
-                box-shadow: inset 0px 0px 8px 4px #00000033;
-                margin-bottom: 24px;
-                margin-right: 36px;
-                margin-top: 12px;
-                padding: 12px;
-                overflow: hidden;
-            }
-    
-            .indent1 {
-                padding-left: 2em;
-            }
-    
-            .indent2 {
-                padding-left: 4em;
-            }
-    
-            .openingTag,
-            .closingTag,
-            .attrName,
-            .assnOperator,
-            .attrValue,
-            .htmlParent,
-            .htmlChild,
-            .cssPropName,
-            .cssAssnOperator,
-            .cssPropValue,
-            .cssAssnTerminator,
-            .cssSelHtml,
-            .cssSelId,
-            .cssSelClass,
-            .cssDecStart,
-            .cssDecEnd
-            {
-                cursor: crosshair;
-            }
-    
-            .openingTagHighlight {
-                background-color: yellow;
-            }
-    
-            .closingTagHighlight {
-                background-color: gold;
-            }
-    
-            .attrNameHighlight {
-                color: blue;
-                font-weight: bold;
-            }
-    
-            .assnOperatorHighlight {
-                color: limegreen;
-                font-weight: bold;
-            }
-    
-            .attrValueHighlight {
-                color: red;
-                font-weight: bold;
-            }
-    
-            .htmlParentHighlight {
-                text-shadow: 1px 1px 2px purple;
-            }
-    
-            .htmlChildHighlight {
-                text-decoration: underline;
-            }
-    
-            .cssPropNameHighlight {
-                background-color: yellowgreen;
-            }
-    
-            .cssAssnOperatorHighlight {
-                background-color: skyblue;
-            }
-    
-            .cssPropValueHighlight {
-                background-color: lightgreen;
-            }
-    
-            .cssAssnTerminatorHighlight {
-                background-color: aquamarine;
-            }
-    
-            .cssSelHtmlHighlight {
-                background-color: pink;
-            }
-    
-            .cssSelIdHighlight {
-                background-color: deeppink;
-            }
-    
-            .cssSelClassHighlight {
-                background-color: lightcoral;
-            }
-    
-            .cssDecStartHighlight {
-                background-color: cyan;
-            }
-    
-            .cssDecEndHighlight {
-                background-color: darkturquoise;
-            }
-        </style>
+        <link href="css/html-cheatsheet.css" rel="stylesheet">
     </head>
     <body>
         <div id="background"></div>
@@ -162,14 +19,15 @@
                 <div id="navLinks">
                     <div class="dropdown-menu">
                         <h2 class="dropdown-trigger">
-                            <a href="ingredients.html">
+                            <a href="ingredients.html" class="selected">
                                 HTML
                                 <i class="fa-solid fa-chevron-down"></i>
                             </a>
                         </h2>
                         <div class="dropdown-items">
                             <h2><a href="ingredients.html">Elements</a></h2>
-                            <h2><a href="ingredients-cheatsheet.html">Cheatsheet</a></h2>
+                            <h2><a href="ingredients-cheatsheet.html" class="selected">Cheatsheet</a></h2>
+                            <h2><a href="html-checker.html">Dirty Code Report</a></h2>
                         </div>
                     </div>
                     <div class="dropdown-menu">
@@ -182,6 +40,7 @@
                         <div class="dropdown-items">
                             <h2><a href="seasonings.html">Properties</a></h2>
                             <h2><a href="seasonings-cheatsheet.html">Cheatsheet</a></h2>
+                            <h2><a href="css-checker.html">Dirty Code Report</a></h2>
                         </div>
                     </div>
                     <div class="dropdown-menu">
@@ -196,6 +55,7 @@
                             <h2><a href="recipes.html?category=content-layout">Content Layouts</a></h2>
                             <h2><a href="recipes.html?category=navigation-layout">Navigation</a></h2>
                             <h2><a href="recipes.html?category=miscellaneous">Miscellaneous</a></h2>
+                            <h2><a href="recipes-cheatsheet.html">Cheatsheet</a></h2>
                         </div>
                     </div>
                     <div class="dropdown-menu">
@@ -206,8 +66,8 @@
                             </a>
                         </h2>
                         <div class="dropdown-items">
-                            <h2><a href="demos.html">Class Demos</a></h2>
                             <h2><a href="appetizers.html">Tutorials</a></h2>
+                            <h2><a href="demos.html">Coding Demos</a></h2>
                             <h2><a href="troubleshooting.html">Troubleshooting</a></h2>
                         </div>
                     </div>
@@ -298,16 +158,208 @@
                 </div>
                 <div class="contentContainer">
                     <div class="content">
+                        <h3 id="html3">Regular Elements</h3>
+                        <p>Regular HTML elements that should <em>ALWAYS</em> have both an opening and a closing tag.</p>
+                        <p>Here are some common regular elements you will encounter in our class.</p>
+
+                        <div class="cheatsheet-grid">
+                            <div><h3>Element Tag / Name</h3></div>
+                            <div><h3>Example Code Snippets</h3></div>
+                            <div><h3>Notes</h3></div>
+
+                            <div class="bold"><span class="code">&lt;h1&gt;</span> Heading 1 Element</div>
+                            <div><span class="code">&lt;h1&gt;Heading Level 1&lt;/h1&gt;</span></div>
+                            <div>
+                                <p>The largest heading, typically used as page headings.</p>
+                                <p>NEVER include more than one h1 element on a page.</p>
+                            </div>
+
+                            <div class="bold"><span class="code">&lt;h2&gt;</span> Heading 2 Element</div>
+                            <div><span class="code">&lt;h2&gt;Heading Level 2&lt;/h2&gt;</span></div>
+                            <div>Used for section headings</div>
+
+                            <div class="bold"><span class="code">&lt;h3&gt;</span> Heading 3 Element</div>
+                            <div><span class="code">&lt;h3&gt;Heading Level 3&lt;/h3&gt;</span></div>
+                            <div>Used for sub-section headings</div>
+
+                            <div class="bold"><span class="code">&lt;h4&gt;</span> Heading 4 Element</div>
+                            <div><span class="code">&lt;h4&gt;Heading Level 4&lt;/h4&gt;</span></div>
+                            <div>Used for sub-sub-section headings</div>
+
+                            <div class="bold"><span class="code">&lt;h5&gt;</span> Heading 5 Element</div>
+                            <div><span class="code">&lt;h5&gt;Heading Level 5&lt;/h5&gt;</span></div>
+                            <div>Used for sub-sub-sub-section headings</div>
+
+                            <div class="bold"><span class="code">&lt;h6&gt;</span> Heading 6 Element</div>
+                            <div><span class="code">&lt;h6&gt;Heading Level 6&lt;/h6&gt;</span></div>
+                            <div>
+                                <p>The smallest heading</p>
+                            </div>
+
+                            <div class="bold"><span class="code">&lt;p&gt;</span> Paragraph Element</div>
+                            <div><span class="code">&lt;p&gt;This is a paragraph&lt;/p&gt;</span></div>
+                            <div>Used as containers for text content and text-styling elements</div>
+
+                            <div class="bold"><span class="code">&lt;b&gt;</span> Bold Element</div>
+                            <div><span class="code">&lt;b&gt;Bold Text&lt;/b&gt;</span></div>
+                            <div>Used to <b>bold</b> text when CSS is not available</div>
+
+                            <div class="bold"><span class="code">&lt;i&gt;</span> Italics Element</div>
+                            <div><span class="code">&lt;i&gt;Italicized Text&lt;/i&gt;</span></div>
+                            <div>Used to <i>italicize</i> text when CSS is not available</div>
+
+                            <div class="bold"><span class="code">&lt;sup&gt;</span> Superscript Element</div>
+                            <div><span class="code">&lt;sup&gt;Superscripted Text&lt;/sup&gt;</span></div>
+                            <div>Used for superscripted text, like a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup></div>
+
+                            <div class="bold"><span class="code">&lt;sub&gt;</span> Subscript Element</div>
+                            <div><span class="code">&lt;sub&gt;Subscripted Text&lt;/sub&gt;</span></div>
+                            <div>Used for subscripted text, like H<sub>2</sub>O</div>
+
+                            <div class="bold"><span class="code">&lt;ol&gt;</span> Ordered List Element</div>
+                            <div>
+                                <span class="code">&lt;ol&gt;</span>
+                                <br>
+                                <span class="code indent">&lt;li&gt;The Best&lt;/li&gt;</span>
+                                <br>
+                                <span class="code indent">&lt;li&gt;Second Best&lt;/li&gt;</span>
+                                <br>
+                                <span class="code indent">&lt;li&gt;The Worst&lt;/li&gt;</span>
+                                <br>
+                                <span class="code">&lt;/ol&gt;</span>
+                            </div>
+                            <div>Used to create lists where order matters, like rankings or instructions</div>
+
+                            <div class="bold"><span class="code">&lt;ul&gt;</span> Unordered List Element</div>
+                            <div>
+                                <span class="code">&lt;ul&gt;</span>
+                                <br>
+                                <span class="code indent">&lt;li&gt;Eggs&lt;/li&gt;</span>
+                                <br>
+                                <span class="code indent">&lt;li&gt;Milk&lt;/li&gt;</span>
+                                <br>
+                                <span class="code indent">&lt;li&gt;Sugar&lt;/li&gt;</span>
+                                <br>
+                                <span class="code">&lt;/ul&gt;</span>
+                            </div>
+                            <div>Used to create lists where order doesn't matter, like grocery lists or product features</div>
+
+                            <div class="bold"><span class="code">&lt;a&gt;</span> Anchor Element</div>
+                            <div>
+                                <p><span class="code">&lt;a href="#"&gt;Dummy anchor&lt;/a&gt;</span></p>
+                                <p><span class="code">&lt;a href="#id-name"&gt;<br><span class="indent">Internal anchor</span><br>&lt;/a&gt;</span></p>
+                                <p><span class="code">&lt;a href="different-page.html"&gt;<br><span class="indent">External anchor</span><br>&lt;/a&gt;</span></p>
+                            </div>
+                            <div>
+                                <p>More commonly known as links or hyperlinks.</p>
+                                <p>"Dummy" anchors are styled as links, but only navigate back to the top of the page.</p>
+                                <p>Internal anchors jump to an id elsewhere on the same page.</p>
+                                <p>External anchors navigate you to a different page.</p>
+                            </div>
+
+                            <div class="bold"><span class="code">&lt;div&gt;</span> Content Division Element</div>
+                            <div>
+                                <span class="code">&lt;div&gt;</span>
+                                <br>
+                                <span class="code indent">&lt;h1&gt;Divs are good containers&lt;/h1&gt;</span>
+                                <br>
+                                <span class="code indent">&lt;p&gt;for other elements&lt;/p&gt;</span>
+                                <br>
+                                <span class="code indent">&lt;div&gt;of all sorts&lt;/div&gt;</span>
+                                <br>
+                                <span class="code">&lt;/div&gt;</span>
+                            </div>
+                            <div>
+                                <p>The div element is the most basic "block" element, with no extra styling.</p>
+                                <p>Div elements are often used as containers.</p>
+                                <p>It is common to find div elements inside of other div elements, usually for more complex layouts.</p>
+                            </div>
+                            
+                            <div class="bold"><span class="code">&lt;span&gt;</span> Content Span Element</div>
+                            <div>
+                                <span class="code">&lt;p&gt;</span>
+                                <br>
+                                <span class="code indent">&lt;span&gt;Highlight this text&lt;/span&gt;</span>
+                                <br>
+                                <span class="code indent">but not this text</span>
+                                <br>
+                                <span class="code">&lt;/p&gt;</span>
+                            </div>
+                            <div>
+                                <p>The span element is the most basic "inline" element, with no extra styling.</p>
+                                <p>Span elements are often used to target text inside paragraphs or headings for very specific styling with CSS.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contentContainer">
+                    <div class="content">
                         <h3 id="html3">Void Elements</h3>
-                        <p>Remember that void elements are HTML elements that should <em>NOT</em> have a closing tag. Every other HTML tag <em>SHOULD</em> have a closing tag.</p>
+                        <p>Void elements are HTML elements that should <em>NEVER</em> have a closing tag, unlike the regular HTML elements above.</p>
                         <p>Here are some common void elements you will encounter in our class.</p>
-                        <div>
-                            <h4><span class="code">&lt;head&gt;</span> Elements</h4>
-                            <div class="indent1"><span class="code">&lt;link&gt;</span> - Link (to external resources)</div>
-                            <h4><span class="code">&lt;body&gt;</span> Elements</h4>
-                            <div class="indent1"><span class="code">&lt;br&gt;</span> - Line Break</div>
-                            <div class="indent1"><span class="code">&lt;hr&gt;</span> - Horizontal Rule</div>
-                            <div class="indent1"><span class="code">&lt;img&gt;</span> - Image</div>
+                        <div class="cheatsheet-grid">
+                            <div><h3>Element Tag / Name</h3></div>
+                            <div><h3>Example Code Snippets</h3></div>
+                            <div><h3>Notes</h3></div>
+
+                            <div class="bold"><span class="code">&lt;img&gt;</span> Image Element</div>
+                            <div>
+                                <span class="code">&lt;img</span>
+                                <br>
+                                <span class="code indent">src="images/doggo.jpg"</span>
+                                <br>
+                                <span class="code indent">alt="my adorable dog"</span>
+                                <br>
+                                <span class="code">&gt;</span>
+                            </div>
+                            <div>
+                                <p>Adds the image specified by the src attribute.</p>
+                                <p>The alt attribute is a short description of the image, which is required for good web accessibility.</p>
+                                <p>Remember that images almost always need to be resized.</p>
+                            </div>
+
+                            <div class="bold"><span class="code">&lt;br&gt;</span> Line Break Element</div>
+                            <div>
+                                <span class="code">Here is text that I want</span>
+                                <br>
+                                <span class="code">&lt;br&gt;</span>
+                                <br>
+                                <span class="code">separated by a line break</span>
+                            </div>
+                            <div>
+                                <p>br elements force a line break immediately after where they are used.</p>
+                                <p>Generally speaking, do NOT use line breaks for spacing; that is what margin and padding are for in CSS.</p>
+                            </div>
+
+                            <div class="bold"><span class="code">&lt;hr&gt;</span> Horizontal Rule Element</div>
+                            <div>
+                                <span class="code">&lt;h2&gt;Section Heading&lt;/h2&gt;</span>
+                                <br>
+                                <span class="code">&lt;hr&gt;</span>
+                                <br>
+                                <span class="code">&lt;p&gt;Section content&lt;/p&gt;</span>
+                            </div>
+                            <div>
+                                <p>hr elements create a line across the page where they are used.</p>
+                                <p>They are often used together with headings to create section headers.</p>
+                                <p>Occassionally, they are also used to separate sections on a page.</p>
+                            </div>
+
+                            <div class="bold"><span class="code">&lt;link&gt;</span> Link Element</div>
+                            <div>
+                                <span class="code">&lt;link</span>
+                                <br>
+                                <span class="code indent">href="css/style.css"</span>
+                                <br>
+                                <span class="code indent">rel="stylesheet"</span>
+                                <br>
+                                <span class="code">&gt;</span>
+                            </div>
+                            <div>
+                                <p>The link element is most frequently used to connect CSS to an HTML page</p>
+                                <p>Not the same thing as an anchor, which is also often called a "link"</p>
+                                <p>Should ONLY be added in the &lt;head&gt; element of an HTML document</p>
+                            </div>
                         </div>
                     </div>
                 </div>

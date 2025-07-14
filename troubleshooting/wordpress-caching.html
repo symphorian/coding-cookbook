@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pantheon WordPress Sites - Caching Issues</title>
+        <link href="../css/appetizer.css" rel="stylesheet">
+        <link href="../css/lightbox.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="cookbookPage troubleshooting">
+            <h2>My WordPress site doesn't show up correctly for other people!</h2>
+            <br>
+            <p>
+                For some students, when you share (or submit) your WordPress 
+                site Pages or Posts, your most recent updates don't seem to
+                show up for other people.
+            </p>
+            <p>
+                This is a relatively common issue in Pantheon, and it is caused 
+                by the web server hosting your site caching old version of the 
+                pages/posts you create.  Luckily, there are 
+                two relatively simple ways to fix it!
+            </p>
+            <p>
+                Follow the instructions below if your instructor or other people
+                can't see the beautiful updates you recently made to your site.
+            </p>
+        </div>
+        <div class="cookbookPage troubleshooting">
+            <h2>Option 1: Clearing the Site Caches in Pantheon</h2>
+            <ol>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                First, log into <a href="https://pantheon.io/" target="_blank">Pantheon.io</a>.
+                            </p>
+                            <p class="indent">
+                                After logging in, navigate to the Sites tab in the 
+                                navigation sidebar, and open up the Site Dashboard 
+                                for the site that is behaving badly.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/wpcache_01_sitelogin_v2.png" 
+                                alt="Log in, navigate to the Sites tab, and click on the site you want to fix"
+                            >
+                            <figcaption>
+                                Log in, navigate to the Sites tab, and 
+                                click on the site you want to fix
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Now you should be on your Pantheon Site Dashboard 
+                                (different from your WordPress Site Dashboard).
+                            </p>
+                            <p>
+                                Locate the button at the far right that says 
+                                "Clear Caches".
+                            </p>
+                            <p>
+                                Click the button.
+                            </p>
+                            <p>
+                                After a couple of seconds, the web server cache 
+                                on your site should be reset, and your site 
+                                should now be viewable in all its glory!
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/wpcache_02_clearcachebutton_v2.png" 
+                                alt="Location of the 'Clear Caches' button"
+                            >
+                            <figcaption>
+                                Location of the "Clear Caches" button
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        </div>
+        <div class="cookbookPage troubleshooting">
+            <h2>Option 2: Clearing a Page Cache via URL</h2>
+            <ol>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Access the live version of the WordPress Page or 
+                                Post that you want to fix.
+                            </p>
+                            <p>
+                                Go up and find the URL for the site webpage in 
+                                the URL bar of your browser (ideally Chrome).
+                            </p>
+                            <p>
+                                We are going to modify it in the next step.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/wpcache_03_url.png" 
+                                alt="The unmodified URL of the page we want to fix"
+                            >
+                            <figcaption>
+                                The unmodified URL of the page we want to fix
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+
+                            <p>
+                                Add the following text to the end of the URL
+                            </p>
+                            <p class="indent">
+                                ?nocache
+                            </p>
+                            <p>
+                                Then hit Enter/Return in the browser's URL bar 
+                                to refresh the page, and force it to clear the 
+                                cache, so you can see the updated page in all 
+                                its glory!
+
+                            </p>
+                            <p class="indent">
+                                However, be aware that this method clears 
+                                the cache for THIS PAGE ONLY.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/wpcache_03_url_nocache.png" 
+                                alt="Adding ?nocache to the end of the URL"
+                            >
+                            <figcaption>
+                                Adding ?nocache to the end of the URL
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+            <h4>
+                Congrats! You should have been able to clear the caches for your 
+                site so you can share your updates with the world (and your instructor)!
+            </h4>
+        </div>
+        
+        <div id="lightboxContainer">
+            <div id="lightboxBackground" class="closer"></div>
+            <img id="lightbox" src="" alt="">
+            <span id="lightboxCloser" class="closer">×</span>
+          </div>
+        <script src="../js/lightbox.js"></script>
+    </body>
+</html>

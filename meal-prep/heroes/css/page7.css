@@ -15,15 +15,12 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin-bottom: 100px;
 }
 
 #hero-1 h1 {
-    font-size: 15vw;
-    padding-left: 10vw;
-}
-
-.spacer {
-    height: 50vh;
+    font-size: 120px; 
+    padding-left: 100px;
 }
 
 #hero-2 {
@@ -35,29 +32,35 @@ body {
     flex-direction: column; 
     justify-content: center; 
     align-items: flex-end;
+    padding-right: 60px;
+    margin-bottom: 100px;
 }
 
-
 #hero-2 h2 {
-    font-size: 8vw;
-    margin-bottom: 5vh;
-    margin-right: 5vw;
+    font-size: 72px;
+    margin-bottom: 36px;
 }
 
 #hero-2 h4 {
-    font-size: 3vw;
-    margin: 0px 5vw 0px 0px;
+    font-size: 24px;
+    margin: 0px;
 }
 
 #hero-2 a {
-    font-size: 1.5vw;
+    font-size: 14px;
     display: inline-block;
     background-color: #333333;
     color: white;
     text-decoration: none;
     padding: 24px;
-    margin: 5vh 5vw 10vh 0px;
+    margin-top: 36px;
 }
+
+/*
+    Once more, we'll add some margin to the bottom
+    of our latest hero, before introducing our
+    fourth hero.
+*/
 
 #hero-3 {
     background-image: url("../images/orange-wildflowers.jpg");
@@ -65,8 +68,8 @@ body {
     background-size: cover;
     background-position: center center;
     position: relative;
+    margin-bottom: 100px; /* new */
 }
-
 
 #hero-3 .hero-content {
     position: absolute;
@@ -75,24 +78,24 @@ body {
 }
 
 #hero-3 h2 {
-    font-size: 8vw;
-    margin-bottom: 5vh;
-    margin-right: 5vw;
+    font-size: 72px;
+    margin-bottom: 36px;
 }
 
 #hero-3 h4 {
-    font-size: 3vw;
-    margin: 0px 5vw 0px 0px;
+    font-size: 24px;
+    margin: 0px;
 }
 
 #hero-3 a {
-    font-size: 1.5vw;
+    font-size: 14px;
     display: inline-block;
     background-color: #333333;
     color: white;
     text-decoration: none;
     padding: 24px;
-    margin: 5vh 5vw 10vh 0px;
+    margin-top: 36px;
+    margin-right: 24px;
 }
 
 /*
@@ -156,7 +159,7 @@ body {
 #hero-4 .hero-content {
     text-align: center;
     color: white;
-    padding-top: 20vh; /* this will push it down a little */
+    padding-top: 100px; /* this will push it down a little */
 }
 
 /*
@@ -165,25 +168,26 @@ body {
 */
 
 #hero-4 h2 {
-    font-size: 8vw;
-    margin-bottom: 5vh;
-    margin-right: 5vw;
+    font-size: 72px;
+    margin-bottom: 36px;
 }
 
 #hero-4 h4 {
-    font-size: 3vw;
-    margin: 0px 5vw 0px 0px;
+    font-size: 24px;
+    margin: 0px;
 }
 
 /*
     Here, we will reverse the colors for the buttons.
 */
 #hero-4 a {
-    font-size: 1.5vw;
+    font-size: 14px;
     display: inline-block;
     background-color: white;
     color: #333333;
     text-decoration: none;
     padding: 24px;
-    margin: 5vh 5vw 10vh 0px;
+    margin-top: 36px;
+    margin-right: 12px;
+    margin-left: 12px;
 }

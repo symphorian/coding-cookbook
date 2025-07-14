@@ -49,7 +49,10 @@ body {
     something we always need to do before we can
     use position: absolute (correctly).
 
-    Anyone remember? (pause for students to answer)
+    Do you remember what that is?
+
+
+    
 
     We need to use position: relative; on the 
     container of whatever we want to position

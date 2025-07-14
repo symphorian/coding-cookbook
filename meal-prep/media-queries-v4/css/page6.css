@@ -1,0 +1,194 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#nav {
+    background-color: #222222;
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    /* flex-direction: column; */
+}
+
+#nav a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.single-column-layout {
+    width: 90vw;
+    max-width: 800px;
+    margin: 48px auto;
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.image-container,
+.content-container {
+    flex: 1;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+.image-container {
+    height: 400px;
+}
+
+.content-container h1 {
+    font-size: 48px;
+    color: #ffb700;
+}
+
+/* TABLET BREAKPOINT */
+@media screen and (max-width: 740px) and (min-width: 450px) {
+    body {
+        background-color: skyblue;
+    }
+
+    .content-container h1 {
+        font-size: 28px;
+    }
+
+    .intro {
+        gap: 24px;
+    }
+
+    .image-container {
+        height: 300px;
+    }
+}
+
+/*
+    Our Mobile Breakpoint appeared to reset back
+    to the default styling for our intro section...
+
+    And that's exactly what happened! We never 
+    wrote any code in the Mobile Breakpoint for 
+    our intro section, and since our Media Queries
+    don't overlap, we need to write new code to
+    fix the intro section in the Mobile Breakpoint.
+
+    However, when things get that narrow, we can 
+    only shrink the font size so much before things 
+    start getting unreadable.
+
+    So in addition to changing the font-size and
+    spacing like we did in the Tablet Breakpoint, 
+    we're also going to stack the Media & Text 
+    content, in the exact same way we stacked 
+    our navbar!
+*/
+
+/* MOBILE BREAKPOINT */
+@media screen and (max-width: 450px) {
+    body {
+        background-color: firebrick;
+    }
+
+    #nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /*
+        Again, the .intro already has Flexbox
+        activated from our 'default' code up above,
+        so we only need to write the additional
+        properties we need to stack the content:
+        flex-direction in this case.
+    */
+    .intro {
+        flex-direction: column;
+        /*
+            Shrink the screen down to the Mobile
+            Breakpoint, and you'll see that our
+            image and text should be stacked on
+            top of each other! Much nicer!
+
+            But also notice that there is a pretty 
+            large chunk of space between the image
+            and the text.
+
+            That is in part due to the heading's 
+            margin, but also due to the gap property
+            we set on the Flexbox.  So let's shrink
+            that down a bit to decrease the space.
+            (We'll deal with the heading next.)
+        */
+        gap: 24px;
+    }
+
+    /*
+        Next we'll target the heading, and adjust
+        its font-size and margin.
+    */
+    .content-container h1 {
+        margin: 0px;
+        font-size: 28px;
+    }
+
+    /*
+        Even better!
+
+        One last thing we'll address is the fact that
+        the content is left aligned.  
+        
+        That's not necesssarily a problem, but when
+        we have short chunks of content in a relatively
+        narrow space, it tends to look better if we
+        make it center aligned.
+
+        And we can do that with a plain old 
+        text-align property.
+    */
+    .content-container {
+        text-align: center;
+    }
+}
+
+/*
+    Not bad! Now we have a pretty responsive
+    Media & Text layout, that adapts to
+    desktop, tablet, and mobile breakpoints, 
+    just by changing some text sizing, spacing, 
+    and Flexbox properties in the media queries.
+
+    There are always things that we can tweak
+    further to make even MORE responsive:
+    for instance, the spacing between the nav
+    links could probably be a bit smaller, and
+    the image is rather tall on mobile; we might 
+    want to shrink that down a bit.
+
+    However, in order to keep moving forward,
+    we'll leave those changes to you if you want
+    to challenge yourself.
+*/
+
+/*
+    If you're following along in class, this 
+    is probably where your instructor will pause
+    for the day, as this is a good midway stopping
+    point in the demo.
+
+    We'll pick this up again tomorrow on the next 
+    page, where we'll look at how to use Media 
+    Queries to make a gallery layout using CSS Grid 
+    more responsive.
+*/

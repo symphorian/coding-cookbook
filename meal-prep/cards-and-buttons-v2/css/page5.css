@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#centered-column {
+    width: 90vw;
+    max-width: 800px;
+    margin: 48px auto;
+}
+
+.card {
+    width: 350px;
+    border: 2px solid #ffe4da;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: -4px 4px 12px #ceaaaa;
+    background: linear-gradient(
+        -50deg, 
+        #ffdbdb, 
+        #fff7f7, 
+        #ffc9c9
+    );
+}
+
+.card img {
+    width: 100%;
+}
+
+.card h2 {
+    font-size: 36px;
+    margin-top: 12px;
+}
+
+.card p {
+    font-size: 18px;
+}
+
+.card a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: lightcoral;
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+/*
+    To add a hover state, we have to use something
+    called a "psuedo-class".  A pseudo-class is a
+    special type of selector that typically targets
+    an HTML element when it is in a specific state,
+    such as when it is being hovered over.
+
+    The hover pseudo-class looks like this:
+
+    :hover 
+
+    (a colon followed by the word hover)
+
+    You use it by adding it to the end of whatever
+    you want to target the hover state of.
+
+    To target our card button in its hover state,
+    we would create a CSS rule like this: 
+*/
+.card a:hover {
+    /*
+        As for the hover styling of our button,
+        let's invert the styling, so that the 
+        background disappears and only the border 
+        is left.
+    */
+    background-color: transparent;
+    border: 3px solid lightcoral;
+    /*
+        And let's also make the text color match
+        the border color as well.
+    */
+    color: lightcoral;
+}
+
+/* 
+    Lovely! 
+    
+    ...but there is a small problem with our 
+    hover state.
+
+    Do you see it?
+*/

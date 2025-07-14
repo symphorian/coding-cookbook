@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" alt="and lots of other stuff">
+        <title>CSS Dirty Code Report (Work In Progress)</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="css/cookbook.css" rel="stylesheet">
+        <link href="css/html-checker.css" rel="stylesheet">
+        <link href="css/css-checker.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="background"></div>
+        <nav>
+            <header id="topHeader">
+                <h2 id="brand"><a href="./">The Coding Cookbook</a></h2>
+                <div id="quote"></div>
+                <div id="navLinks">
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="ingredients.html">
+                                HTML
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="ingredients.html">Elements</a></h2>
+                            <h2><a href="ingredients-cheatsheet.html">Cheatsheet</a></h2>
+                            <h2><a href="html-checker.html">Dirty Code Report</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="seasonings.html" class="selected">
+                                CSS
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="seasonings.html">Properties</a></h2>
+                            <h2><a href="seasonings-cheatsheet.html">Cheatsheet</a></h2>
+                            <h2><a href="css-checker.html" class="selected">Dirty Code Report</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="recipes.html">
+                                Layouts
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="recipes.html?category=page-layout">Page Layouts</a></h2>
+                            <h2><a href="recipes.html?category=content-layout">Content Layouts</a></h2>
+                            <h2><a href="recipes.html?category=navigation-layout">Navigation</a></h2>
+                            <h2><a href="recipes.html?category=miscellaneous">Miscellaneous</a></h2>
+                            <h2><a href="recipes-cheatsheet.html">Cheatsheet</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="more.html">
+                                More
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="appetizers.html">Tutorials</a></h2>
+                            <h2><a href="demos.html">Coding Demos</a></h2>
+                            <h2><a href="troubleshooting.html">Troubleshooting</a></h2>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </nav>
+        
+        <header id="title">
+            <h1>CSS Dirty Code Report (Beta)</h1>
+            <h3>Submit your code below to get your "Dirty Code Report Card"!</h3>
+        </header>
+
+        <div id="inputContainer">
+            <form onsubmit="event.preventDefault();">
+                <div id="textInputContainer"> 
+                    <h3>Raw CSS Input</h3>
+                    <textarea 
+                        id="css-input" 
+                        placeholder="Paste your CSS here..."
+                    ></textarea>
+                </div>
+                <div id="orContainer">OR</div>
+                <div id="urlInputContainer">
+                    <h3>URL Input</h3>
+                    <input 
+                        id="urlInput" 
+                        value=""
+                        placeholder="Paste the URL to your GitHub Pages site here..."
+                    >
+                </div>
+                <div id="buttonContainer">
+                    <button id="clear" type="reset">CLEAR</button>
+                    <button id="submit">SUBMIT</button>
+                </div>
+            </form>
+            
+        </div>
+        <div id="report" class="hide">
+            <h2 id="reportHeader">Report Card <span class="nestedOverrideText">| CSS Nesting Override Activated: Nested CSS Rules are now "clean"</span></h2>
+            <div id="innerReportContainer">
+                <h4>Statistics and Score</h4>
+                <div id="overall">
+                    <div id="lineStats">
+                        <h3>Lines of incorrect indentation: <span id="badIndentationCount"></span></h3>
+                        <h3>Lines of overall dirty code: <span id="dirtyCodeCount"></span></h3>
+                    </div>
+                    <h2><span id="dirtyPercent"></span>% DIRTY</h2>
+                </div>
+
+                <h4 id="cleanupHelperHeading">Interactive Cleanup Helper</h4>
+                <div id="helperContainer">
+                    <p>
+                        The code below labeled "Raw Code Input" is the raw, 
+                        unedited code you submitted to this tool;
+                        the code below labeled "Cleaned Code" is same code, 
+                        but processed to 
+                        fix your indentation issues. However, certain dirty code 
+                        issues (particularly logic errors) may prevent this tool 
+                        from correctly fixing your indentation, such as 
+                        missing curly brackets.
+                    </p>
+                    <p>
+                        Hover over a line or line number with an error, and the
+                        particular issues associated with that line will show up
+                        in a tool tip. Hovering over a line with the opening or 
+                        closing curly bracket of an CSS Rule or Media Query
+                        will cause the lines of both its opening and closing 
+                        curly brackets to be highlighted.
+                    </p>
+                    <p>
+                        We recommend addressing the issues one at a time 
+                        from top to bottom.
+                        Sometimes, addressing an issue earlier on in your code
+                        can fix issues lower down.
+                    </p>
+                    
+                    <div id="legendOuterContainer">
+                        <h6>Legend</h6>
+                        <div id="legendContainer">
+                            <div>
+                                <span class="block red"></span>
+                                <div>Dirty Code On or Near Line #</div>
+                            </div>
+                            <div>
+                                <span class="block lightblue"></span>
+                                <div>(On Hover) Clean Line</div>
+                            </div>
+                            <div>
+                                <span class="block purple"></span>
+                                <div>(On Hover) Matching Opening/Closing Brackets</div>
+                            </div>
+                            <div>
+                                <span class="block pink"></span>
+                                <div>(On Hover) Dirty Line</div>
+                            </div>
+                            <div>
+                                <span class="block lightgreen"></span>
+                                <div>Good Indent Spaces</div>
+                            </div>
+                            <div>
+                                <span class="block lightred"></span>
+                                <div>Bad Indent Spaces (Outdent Them)</div>
+                            </div>
+                            <div>
+                                <span class="block orange"></span>
+                                <div> Bad Indent Spaces (Indent Them)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="layout">
+                    <div>
+                        <h5>Raw Code Input</h5>
+                        <div id="rawInput" class="code"></DIV>
+                    </div>
+                    <div>
+                        <h5>Cleaned Code (Indentation Cleanup Only)</h5>
+                        <div id="cleanedInput" class="code"></div>
+                    </div>
+                </div>
+
+                <div id="issuesListContainer">
+                    <h4>Issues List</h4>
+                    <p>
+                        Below are the clean code issues this tool was able to detect in 
+                        your code.  However, note that this tool is best at detecting 
+                        syntax issues (i.e. issues with the grammar of a programming 
+                        language) and suggesting how to fix them. Logic errors, on the 
+                        other hand, are harder for it to target specifically.
+                    </p>
+                    <p>
+                        NOTE: If you have discovered the relatively new method of 
+                        writing CSS Rules referred to as "CSS Nesting", you will
+                        find that the CSS Dirty Code Report considers this approach as 
+                        "dirty" code, since it is more advanced and also not 
+                        what we teach in this curriculum.  However, if you have 
+                        spoken with your instructor and they feel you are ready 
+                        to use CSS Nesting, add the following text to the end 
+                        of the URL for this page and refresh it to enable an 
+                        manual override which allows for CSS Nesting: 
+                        ?allowCSSNesting
+                    </p>
+                    <div id="issuesList"></div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/css-checker.js"></script>
+    </body>
+</html>

@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+/*
+    The 'position' property is one that, as you might
+    guess, allows us to change the position of elements
+    within our layout.  However, depending on the value
+    that we provide to position, it can behave very 
+    differently.
+
+    The approach we're going to learn about in this
+    demo is how to position elements "absolutely",
+    almost like how you would position something 
+    within Photoshop or Illustrator (just with
+    code, rather than the mouse).
+
+    However, as we'll see, you don't actually want
+    to position things in EXACTLY the same way
+    as you would in Photoshop or Illustrator, 
+    because unlike static images, web pages can
+    change their size, and we need to position things
+    carefully, taking that into consideration.
+
+    To position things "absolutely", we need to start
+    by targeting the container of the thing we want to
+    move around, and give it the position value of 
+    'relative'.
+
+    This is essential, because without setting that
+    value on the container, we will be positioning
+    our element relative to the page, which is usually
+    NOT what we want.
+*/
+#hero-1 {
+    background-image: url("../images/lizard.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;  /* new property*/
+}
+
+/*
+    Applying position: relative; to the container
+    won't visibly change anything, but it will 
+    affect what we do next.
+
+    Now, go in and apply position: absolute; to 
+    the h1.
+*/
+
+#hero-1 h1 {
+    font-size: 120px; 
+    /* we removed padding in the previous page */
+    /* padding-left: 100px; */
+
+    position: absolute; /* new property */
+
+    /*
+        Again, this won't change anything (yet).
+
+        That's because setting something to 
+        position: absolute; affects how it 
+        interacts with the elements around it.
+        It more or less turns the absolutely
+        positioned element into a ghost, that
+        all elements ignore and can pass through.
+
+        But in this case, there are no elements 
+        around our H1, so we still don't see any
+        visible change.
+
+        So why did we do that in the first place?
+
+        Because position is another property that
+        is usually used with other properties:
+        in our case, the 'left', 'right', 'top',
+        and 'bottom' properties.
+
+        Watch what happens when we apply the left
+        property below.
+    */
+    left: 20%;
+
+    /*
+        Our text gets positioned 20% of the total
+        width of its container away from the left
+        edge of the container.
+
+        Our flexbox properties gave it a default 
+        starting point, but with the left property,
+        we're overriding that horizontal starting
+        point with our own relative value instead.
+
+        This makes the text position adapt to the 
+        size of the page rather nicely.
+
+        We can actually use pixel values with 
+        left as well.
+
+        (Try some out on the left property)
+
+        But as you can, this gets us back into the
+        same trouble we have with padding/margin
+        with too high of a value: it doesn't actually
+        help us when the page grows, because it
+        doesn't adapt to the screen width, and 
+        that is especially important for something
+        like a hero, that can change based on the 
+        screen width.
+
+        (Revert the left value back to 20%)
+
+        We're going to see some other ways that 
+        we can use position: absolute in heroes 
+        with other layouts soon, so let's move
+        on and see what we can do in another 
+        hero!
+    */
+}

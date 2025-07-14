@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#nav {
+    background-color: #222222;
+    display: flex;
+    justify-content: center;
+}
+
+#nav a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.single-column-layout {
+    width: 90vw;
+    max-width: 800px;
+    margin: 48px auto;
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+.image-container,
+.content-container {
+    flex: 1;
+}
+
+.image-container {
+    height: 400px;
+}
+
+.content-container h1 {
+    font-size: 48px;
+    color: #ffb700;
+}
+
+/*
+    As we shrink our screen preview, once we pop into
+    the tablet breakpoint, the "Hello, I'm Jim" text
+    starts to wrap, which doesn't look as nice.
+
+    One of the things we frequently have to do on
+    responsive web pages is adjust the font sizes 
+    and spacing between elements as our breakpoints
+    get smaller.
+
+    Let's decrease the font-size on tablet.
+*/
+
+@media screen and (max-width: 768px) and (min-width: 481px) {
+    body {
+        background-color: skyblue;
+    }
+
+    .content-container h1 {
+        font-size: 32px;
+    }
+
+    /*
+        That works for most of the tablet breakpoint,
+        but not all of it as we get smaller.
+
+        Part of the problem is the spacing between the 
+        image and the text; if we decrease that gap,
+        more text should fit without wraping.
+    */
+    .intro {
+        gap: 24px;
+    }
+
+    /*
+        Better still! The only thing that stands out
+        to me now from a design perspective is that
+        the image is starting to unbalance the text 
+        again, so let's shrink its container a bit more.
+    */
+    .image-container {
+        height: 300px;
+    }
+}
+
+/*
+    Looking good! How about mobile
+    (i.e. when the background turns red)?
+
+    ...not so much.
+
+    When things get that narrow, we can only shrink 
+    the font size so much before things start
+    getting unreadable.
+
+    So instead, let's stack the Media & Text content
+    in the exact same way we stacked our navbar!
+*/
+
+
+@media screen and (max-width: 480px) {
+    body {
+        background-color: firebrick;
+    }
+
+    #nav {
+        /* flex-wrap: wrap; */
+
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /*
+        Again, the .intro already has Flexbox
+        activated from our 'default' code up above,
+        so we only need to write the additional
+        properties we need.
+    */
+    .intro {
+        flex-direction: column;
+        /*
+            DEMO NOTE: this code is added later.
+        */
+        /* gap: 24px; */
+    }
+
+    /*
+        Not bad! But there are still some things we
+        could improve.
+
+        The spacing between the image and text is
+        rather large, and when we have short bits
+        of content like this on a narrow phone screen,
+        it often looks better centered, rather than
+        left-aligned.
+
+        So let's address those issues! The spacing
+        is partly due to the gap property, so we
+        can go back up to the .intro CSS rule we 
+        just created and add that there.
+
+        Then we can also decrease the margin on the
+        h1 inside the .content-container.
+    */
+    .content-container h1 {
+        margin: 0px;
+        font-size: 32px
+    }
+
+    /* 
+        And lastly, we can use a plain ol'
+        text-align property to center the text 
+        content.
+    */
+    .content-container {
+        text-align: center;
+    }
+}
+
+/*
+    Not bad! Now we have a pretty responsive
+    Media & Text layout, that adapts to
+    desktop, tablet, and mobile, just by
+    changing some text, spacing, and Flexbox
+    properties in the media queries.
+
+    There are always things that we can tweak
+    further to make even MORE responsive:
+    for instance, the image is rather tall
+    on mobile; we might want to shrink that
+    down a bit.
+
+    However, in the interest of time, we're going 
+    to continue on with one more responsive example.
+*/

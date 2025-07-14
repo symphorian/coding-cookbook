@@ -4,28 +4,22 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>&lt;video&gt; (Video) Element</title>
+        <link href="css/videos.css" rel="stylesheet">
     </head>
     <body>
-        <h3 class="alert">
-            Note that these examples will not load in the Visual Studio Code preview!
-            <br>
-            You will need to view them in a browser to interact with them.
-        </h3>
-
         <h2>Here is an video example with a <code>src</code> in the opening tag</h2>
-        <video controls src="video/BigBuckBunny.ogg">
+        <video controls src="video/HeroVideo_Walk.mp4">
             Sorry, your browser doesn't support the &lt;video&gt; tag
         </video>
 
-        <h2>Here is an video example with multiple &lt;source&gt; children</h2>
+        <h2>Here is an video example with a &lt;source&gt; child</h2>
         <video controls>
-            <source src="video/BigBuckBunny.ogg" type="video/ogg">
-            <source src="video/BigBuckBunny.mp4" type="video/mp4">
+            <source src="video/HeroVideo_Walk.mp4" type="video/mp4">
             Sorry, your browser doesn't support the &lt;video&gt; tag
         </video>
 
         <h2>Here is an video example that loops</h2>
-        <video controls loop src="video/BigBuckBunny.ogg">
+        <video controls loop src="video/HeroVideo_Walk.mp4">
             Sorry, your browser doesn't support the &lt;video&gt; tag
         </video>
 
@@ -34,25 +28,25 @@
             (Don't enable autoplay without muting audio! It is very bad practice to
             play sounds without the user's action or consent.)
         </h3>
-        <video controls autoplay muted src="video/BigBuckBunny.ogg">
+        <video controls autoplay muted src="video/HeroVideo_Walk.mp4">
             Sorry, your browser doesn't support the &lt;video&gt; tag
         </video>
 
         <h2>Here is an video example with a "poster" image before playback</h2>
         <video
             controls
-            src="video/BigBuckBunny.ogg"
-            poster="images/bbb-splash.png"
+            src="video/HeroVideo_Walk.mp4"
+            poster="images/road.jpg"
         >
             Sorry, your browser doesn't support the &lt;video&gt; tag
         </video>
 
         <h2>Here is an video example with a "poster" that has been resized with CSS</h2>
         <video
-            class="smallVideo"
+            class="small-video"
             controls
-            src="video/BigBuckBunny.ogg"
-            poster="images/bbb-splash.png"
+            src="video/HeroVideo_Walk.mp4"
+            poster="images/road.jpg"
         >
             Sorry, your browser doesn't support the &lt;video&gt; tag
         </video>
@@ -61,10 +55,8 @@
             If you don't set the <code>controls</code> attribute, the &lt;video&gt;
             tag will load, but you can't control it without Javascript.
         </h2>
-        <video src="video/BigBuckBunny.ogg">
+        <video src="video/HeroVideo_Walk.mp4">
             Sorry, your browser doesn't support the &lt;video&gt; tag
         </video>
-
-        <p>(c) copyright 2008, Blender Foundation / www.bigbuckbunny.org</p>
     </body>
 </html>

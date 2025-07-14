@@ -3,12 +3,13 @@
 /*
     Now we have a slight difficulty spike.
 
-    They'll need to MODIFY, rather than ADD
+    You'll need to MODIFY, rather than ADD
     margin on the headings in the drill. In
     fact, most of the margin modifications
-    will be REMOVING margin from the headings.
+    will be RESETTING margin from the headings,
+    reducing it compared to its default state.
 
-    Also, they'll get some practice with 
+    Also, you'll get some practice with 
     text-align.
 */
 

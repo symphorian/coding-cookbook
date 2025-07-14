@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#centered-column {
+    width: 90vw;
+    max-width: 800px;
+    margin: 48px auto;
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 36px;
+    justify-content: center;
+}
+
+.card {
+    width: 350px;
+    border: 2px solid #ffe4da;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: -4px 4px 12px #ceaaaa;
+    background: linear-gradient(
+        -50deg, 
+        #ffdbdb, 
+        #fff7f7, 
+        #ffc9c9
+    );
+}
+
+/*
+    One issue is that depending on the height
+    of the content inside the cards (particularly
+    the text and images), the content within
+    the cards might not be aligned very well.
+
+    Since we have identical placeholder content
+    in our cards, this isn't too apparent yet.
+
+    However, in my example, one of the images is 
+    slightly taller than the others, which affects 
+    the height of the entire row.
+
+    Let's make the issue even more apparent.
+
+    Go back into the HTML, and triple the length
+    of one of the lorem ipsums.
+
+    Return here when you're done.
+*/
+
+/*
+    Let's address the image issue first.
+
+    Since the images have different heights,
+    their edges don't align very well.
+
+    Sometimes this might be okay, but in our
+    case, it doesn't look very aesthetically
+    pleasing.
+
+    To address this, we're going to break one 
+    of the guidelines we gave you before.
+*/
+
+.card img {
+    width: 100%;
+    /*
+        We're going to add a height to our image,
+        in addition to the width.
+    */
+    height: 150px;
+    /*
+        This causes a distortion of the image.
+        However, we can use a new property 
+        called "object-fit" to tell the image
+        to crop itself, rather than stretch.
+
+        This is done by giving it a value of
+        "cover".
+    */
+    object-fit: cover;
+    /*
+        Now the images fit the dimensions
+        that we provided, AND the image is
+        cropped rather than distorted!
+
+        This approach depends a lot on the 
+        images being used, and the design
+        we put them into; it's not a 
+        solution to all image problems.
+
+        However, it does help us in this case.
+    */
+}
+
+.card h2 {
+    font-size: 36px;
+    margin-top: 12px;
+}
+
+.card p {
+    font-size: 18px;
+}
+
+.card a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: lightcoral;
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border: 3px solid lightcoral;
+    transition:
+        background-color .5s,
+        color .5s;
+}
+
+.card a:hover {
+    background-color: transparent;
+    color: lightcoral;
+}

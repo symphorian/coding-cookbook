@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.nav {
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+}
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.25rem;
+    padding: 20px 0px;
+    margin-right: 40px;
+}
+.nav a:last-of-type {
+    margin-right: 0px;
+}
+
+.header {
+    width: 90vw;
+    max-width: 800px;
+    margin: 25px auto;
+    display: flex;
+    align-items: center;
+}
+
+.header .image-container {
+    flex: 1;
+    height: 400px;
+}
+.image-container img {
+    height: 100%;
+    border-radius: 25px;
+}
+
+.header .content {
+    flex: 1;
+    margin-left: 50px;
+}
+.content h1 {
+    font-size: 3rem;
+    color: #ffb700;
+    margin: 0px 0px 15px;
+}
+.content p {
+    margin: 0px;
+}
+
+.featured {
+    background-color: #222;
+    color: white;
+    padding: 25px 0px;
+}
+.featured h2 {
+    font-size: 2.25rem;
+    text-align: center;
+}
+
+
+.grid {
+    width: 90vw;
+    max-width: 800px;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /*
+        Let's come back here and add a grid-auto-rows property.
+        This is going to allow us to set the height of the rows
+        that are automatically generated. We'll set it to
+        300px.
+
+        Let's also throw in a gap of 15px to get some spacing
+        between our rows and columns.
+    */
+    grid-auto-rows: 300px;
+    gap: 15px;
+    grid-template-areas:
+        "txt1 img1 img2 img2"   
+        "img3 img3 img4 txt2"
+    ;
+}
+
+/*
+    First, let's target our grid img elements and give them
+    a height of 100%. Perfect, now our images are scaling
+    the full height of their rows. We'll also add a border-radius
+    of 25px to keep our design consistent.
+    
+    However, notive that the rows don't appear to be of 
+    equal height. So, let's fix that above.
+*/
+.grid img {
+    height: 100%;
+    border-radius: 25px;
+}
+
+/*
+    Let's also get some design in for our paragraphs so they
+    don't look so boring. We'll give it a border of 1px solid
+    with the same color we used for our h1 earlier.
+
+    We'll add 20px of padding all around to get it off those
+    edges and remove it's margins with margin: 0px; Let's
+    finish it off with a border-radius of 25px.
+*/
+.grid p {
+    border: 1px solid #ffb700;
+    padding: 20px;
+    margin: 0px;
+    border-radius: 25px;
+}
+
+/*
+    Now, let's target each of our grid item's by their id and
+    assign them to their appropriate grid area. Notice how
+    our grid areas don't need to match the selector, but need
+    to match the assignment names in the grid-template-areas
+    value.
+*/
+#p1 {
+    grid-area: txt1;
+}
+#p2 {
+    grid-area: txt2;
+}
+#img1 {
+    grid-area: img1;
+}
+#img2 {
+    grid-area: img2;
+}
+#img3 {
+    grid-area: img3;
+}
+#img4 {
+    grid-area: img4;
+}
+
+/*
+    Tada! Now, we're done with our desktop design. Try shrinking
+    your preview screen or live server window. Notice how
+    our webpage could definitely use some adjustment once
+    the screen starts to get smaller.
+
+    Let's go ahead and make those adjustments using what
+    we've learned today with media queries and responsive
+    web design.
+*/

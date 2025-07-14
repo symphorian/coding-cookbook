@@ -9,41 +9,65 @@
     </head>
     <body>
         <p>
-            An image element requires the source (src) attribute in order to display anything.
-            Including the alternate (alt) attribute, which provides an alternate textual description
+            An image (img) element requires the source (src) attribute in 
+            order to display anything. Including the alternate (alt) 
+            attribute, which provides an alternate textual description
             of the image, is also good practice.
         </p>
         <p>
             Image elements are inline elements, 
 
-            <img src="images/cookbook.jpg" alt="ugly stained cookbook page">
+            <img src="images/cookbook.jpg" alt="cookbook page" class="small">
             
-            meaning they will appear "in line" with any text before and after it, 
-            unless you alter their display properties or use line breaks.
+            meaning they will appear "in line" with any text before 
+            and after it, unless you alter their display properties or 
+            use line breaks.
         </p>
         <p>
-            Images will also display at whatever their natural size is, so unless you've
-            edited an image to be the exact size you want, you'll probably need to apply
-            some CSS to resize your images.
+            Note that image element code can be written on one line, 
+            but you can also be split their attributes across multiple
+            lines if the code is too long on one line, like below.
+        </p>
+        <img
+            src="images/vintage-red-plaid-bhg-cookbook.webp"
+            alt="old Better Homes and Gardens cookbook"
+            class="small"
+        >
+        <p>
+            By default, an image will display at whatever its natural 
+            size is, which is usually larger than you want, as is the
+            case with the image below.
+        </p>
+        <img 
+            src="images/cookbook-new.jpg"
+            alt="new Better Homes and Gardens cookbook"
+        >
+        <p>
+            To address this issue, we can either use CSS to resize
+            an image (as was done with the first two images on 
+            this page) or we can use the width or height attributes,
+            as was used on the image below.
+        </p>
+        <img 
+            src="images/cookbook-new.jpg"
+            alt="new Better Homes and Gardens cookbook"
+            width="500"
+        >
+        <p>
+            The width and height attributes accept a number value,
+            which represents the width or height in pixels. 
         </p>
         <p>
-            The image above is a "local" image, meaning its source comes from the same site 
-            as the web page its loaded on, while the image below is a "web" image, meaning 
-            its source comes from somewhere else on the internet.  Using "web" images is 
-            little less work, but since you have no control over the image, it is not 
-            recommended to use this approach; the example below is just there to show you 
-            that you can.
+            WARNING! Be careful not to use both width AND height 
+            at the same time, as this will likely distort the image
+            rather than resize it, as in the example below.
         </p>
         
-        <img
-            src="https://www.bhg.com/thmb/c6LftxodTnftZ6NSeyT0DJDmkYg=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Vintage-Red-Plaid-BHG-Cookbook1-172a15c3b79643cca80a0cb26e90c1cf.jpg"
-            alt="old Better Homes and Gardens cookbook"
+        <img 
+            src="images/cookbook-new.jpg"
+            alt="new Better Homes and Gardens cookbook"
+            width="100"
+            height="300"
         >
-
-        <p>
-            Note that image element code can be written on one line, but if it gets so long 
-            that it goes offscreen in your text editor, it is better practice to separate 
-            the element's attributes on separate lines.
-        </p>
     </body>
 </html>

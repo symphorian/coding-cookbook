@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#nav {
+    background-color: #222222;
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    /* flex-direction: column; */
+}
+
+#nav a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.single-column-layout {
+    width: 90vw;
+    max-width: 800px;
+    margin: 48px auto;
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.image-container,
+.content-container {
+    flex: 1;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+.image-container {
+    height: 400px;
+}
+
+.content-container h1 {
+    font-size: 48px;
+    color: #ffb700;
+}
+
+/* 
+    To address these new design issues that occur
+    at a wider width than our original Media 
+    Query, we need to create a new one.
+
+    Since the design of our side by side content 
+    starts to break around 740px, that's what
+    we're going to set our new Media Query to,
+    using the max-width Media Feature again.
+
+    However, if we ONLY use max-width, our new 
+    Media Query will overlap with our Mobile 
+    Breakpoint (since 450px is also less than 
+    740px).  This would mean that the code in
+    our new Media Query would also affect (or
+    be affected by) the code in the mobile one.
+    
+    This isn't necessarily a bad thing, and 
+    clever developers often take advantage of
+    that so that they can write less code.
+
+    However, we're going to take a more cautious,
+    more explicit approach, and set our new 
+    Media Query to style the page under 740px
+    and STOP at 450px. That way, we have no 
+    overlap across our Media Queries, and they
+    should remain completely independent.
+
+    (And because of that, it doesn't matter which
+    order we write our Media Queries in. However,
+    because the widths this new Media Query is
+    targeting is in between the default "desktop"
+    width and the more narrow Mobile Breakpoint,
+    it makes sense to add it in between our default
+    code and our Mobile Breakpoint, so that's
+    where we're going to put it.)
+
+    To do that, we're going to use TWO Media
+    Features: max-width AND min-width, which
+    will basically set the upper and lower
+    bounds of our Media Query.
+
+    The range that we're going to use, between
+    740px and 450px, might be a good range to
+    describe tablet devices, so we'll label this
+    one as the "TABLET BREAKPOINT".
+*/
+
+/* TABLET BREAKPOINT */
+@media screen and (max-width: 740px) and (min-width: 450px) {
+    /*
+        We'll start off with a similar debugging
+        CSS rule as we did with the Mobile
+        Breakpoint, just with a different color.
+    */
+    body {
+        background-color: skyblue;
+    }
+
+    /*
+        Now you should see two colors as you adjust
+        the screen width: blue for when you enter the
+        Tablet Breakpoint, and red for when you enter
+        the Mobile Breakpoint.
+
+        With that helpful CSS Rule set up, let's
+        start fixing up our side by side content.
+
+        Remember the two approaches to make content
+        more responsive on a web page: 
+        - shrink font sizes and spacing
+        - stack horizontal/side-by-side content
+
+        We'll be using both approaches as we make
+        this section of the page more responsive,
+        but for the Tablet Breakpoint, we only
+        really need the first approach.
+
+        We'll start by shrinking the font-size of 
+        the heading.
+    */
+    .content-container h1 {
+        font-size: 28px;
+    }
+
+    /*
+        That works for most of the tablet breakpoint,
+        but not all of it as we get smaller.
+
+        Part of the problem is the spacing between the 
+        image and the text; if we decrease that gap,
+        more text should fit without wrapping.
+    */
+    .intro {
+        gap: 24px;
+    }
+
+    /*
+        Better still! The only thing that stands out
+        now from a design perspective is that the 
+        image is starting to unbalance the text 
+        again by getting too tall, so let's shrink 
+        its container a bit more.
+    */
+    .image-container {
+        height: 300px;
+    }
+
+    /*
+        There we go! Pretty good for our Tablet
+        Breakpoint!  But what about the Mobile
+        Breakpoint?  
+        
+        ...not so much.  What happened to our
+        intro section in the Mobile Breakpoint?
+    */
+}
+
+/* MOBILE BREAKPOINT */
+@media screen and (max-width: 450px) {
+    body {
+        background-color: firebrick;
+    }
+
+    #nav {
+        flex-direction: column;
+        align-items: center;
+    }
+}

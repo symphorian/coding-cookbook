@@ -1,0 +1,191 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.nav {
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+}
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.25rem;
+    padding: 20px 0px;
+    margin-right: 40px;
+}
+.nav a:last-of-type {
+    margin-right: 0px;
+}
+
+.header {
+    width: 90vw;
+    max-width: 800px;
+    margin: 25px auto;
+    display: flex;
+    align-items: center;
+}
+
+.header .image-container {
+    flex: 1;
+    height: 400px;
+}
+.image-container img {
+    height: 100%;
+    border-radius: 25px;
+}
+
+.header .content {
+    flex: 1;
+    margin-left: 50px;
+}
+.content h1 {
+    font-size: 3rem;
+    color: #ffb700;
+    margin: 0px 0px 15px;
+}
+.content p {
+    margin: 0px;
+}
+
+.featured {
+    background-color: #222;
+    color: white;
+    padding: 25px 0px;
+}
+.featured h2 {
+    font-size: 2.25rem;
+    text-align: center;
+}
+
+
+.grid {
+    width: 90vw;
+    max-width: 800px;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 300px;
+    gap: 15px;
+    grid-template-areas:
+        "txt1 img1 img2 img2"   
+        "img3 img3 img4 txt2"
+    ;
+}
+.grid img {
+    height: 100%;
+    border-radius: 25px;
+}
+.grid p {
+    border: 1px solid #ffb700;
+    padding: 20px;
+    margin: 0px;
+    border-radius: 25px;
+}
+#p1 {
+    grid-area: txt1;
+}
+#p2 {
+    grid-area: txt2;
+}
+#img1 {
+    grid-area: img1;
+}
+#img2 {
+    grid-area: img2;
+}
+#img3 {
+    grid-area: img3;
+}
+#img4 {
+    grid-area: img4;
+}
+
+@media screen and (max-width: 768px) and (min-width: 481px) {
+    /*
+        Let's remove the background color from our tablet
+        media query.
+    */
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "txt1 img1"
+            "img2 img2"
+            "img3 img3"
+            "img4 txt2"
+        ;
+    }
+}
+
+/*
+    Now, let's create a media query for smaller mobile devices.
+    We'll say a good breakpoint is 480px and smaller. Can anyone
+    tell me how we'd create a media query based off that condition?
+
+    Yup! We're going to add a @media screen and (max-width: 480px).
+    We don't need a minimum width for this media query. Let's
+    also add in our body background-color to make sure it's working.
+
+    Contrary to the tablet width, we seem to need changes on
+    every area for this media query. So, let's get into the
+    navigation first.
+
+    Now, we're not going to be creating a hamburger navigation
+    since that would require some extra coding knowledge you
+    don't have yet. No worries though because there is a way
+    we can get our navigation to look good as the screen gets
+    smaller that involves flexbox, which we already applied
+    to our navigation earlier.
+*/
+@media screen and (max-width: 480px) {
+    body {
+        background-color: red;
+    }
+    /*
+        First, we'll have to target our .nav again. Now, do
+        we need to reapply flexbox here?
+
+        If you said no, then you are correct. Remember what
+        we said earlier how only the properties being changed
+        must be added inside of the media query.
+
+        Now, the way we can make our navigation look good on
+        smaller screens is to have it stack which is relatively
+        easy to do with flexbox. Does anyone remember the
+        property value pair that changes a the flow of flexbox
+        items to stack?
+
+        Yup! It's going to be flex-direction: column;. Now 
+        our nav items are stacking, however, they look a bit
+        odd on the left here, so, let's add an additional
+        property for text-align and make it centered.
+    */
+    .nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    /*
+        Our anchor elements themselves could use some tweaking.
+        For example, they're a bit too large, so let's lower
+        their font-size.
+
+        Also, notice how they are jagged. Does anyone know
+        why that is? It's due to the margin we applied earlier.
+        So, let's go ahead and remove it by applying margin: 0px;.
+
+        I think our nav is looking pretty cool. Let's move on
+        to the next section.
+    */
+    .nav a {
+        font-size: 1rem;
+        margin: 0px;
+    }
+}

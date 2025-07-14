@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+/* 
+    This demo is all about Media Queries.
+
+    Remember that Media Queries allow us to 
+    alter page styles when specific conditions
+    are met; most frequently, these conditions
+    have to do with the page width.
+
+    But, in order for a media query to have any
+    effect, we first need to have content on 
+    the page for them to actually target!
+
+    So we're going to start off with a very
+    basic example of how media queries can
+    change a navbar.  By the end of this demo,
+    we'll have something resembling a simple,
+    yet responsive, portfolio site for a 
+    photographer.
+
+    Since we just learned how to create 
+    navbars, we'll start with a simple
+    variation of one of those.
+
+    Hop over to the HTML, and then come
+    back here when you're done.
+*/
+
+/*
+    To start, we'll add some basic styling
+    for our nav. We'll just give it a
+    dark background and activate flexbox
+    to center the anchors inside.
+*/
+
+#nav {
+    background-color: #222222;
+    display: flex;
+    justify-content: center;
+}
+
+/*
+    We'll wrap up our default styling by
+    targeting the anchors inside the nav.
+
+    We'll change their color and font size,
+    remove the underlines, and give them 
+    some padding.
+*/
+
+#nav a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 20px;
+}
+
+/* 
+    Simple, yet effective! But what happens
+    to our navbar when we shrink the screen 
+    size down to around 400px (or lower)?
+
+    Open up your HTML in Chrome and use the 
+    Inspect option and the Developer Tools 
+    to find out!
+*/

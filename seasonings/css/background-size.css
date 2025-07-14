@@ -1,0 +1,57 @@
+/* background-size example code */
+#example1 {
+    background-image: url("../images/axolotl.avif");
+    background-size: cover;
+    height: 400px;
+}
+
+#example2 {
+    background-image: url("../images/axolotl.avif");
+    background-size: cover;
+    background-position: center center;
+    height: 400px;
+}
+
+#example3 {
+    background-image: url("../images/axolotl.avif");
+    background-size: contain;
+    height: 400px;
+}
+
+#example4 {
+    background-image: url("../images/axolotl.avif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: grey;
+    height: 400px;
+}
+
+#example5 {
+    background-image: url("../images/paws.avif");
+    background-size: 250px;
+    height: 400px;
+}
+
+/* unrelated example page styling */
+img {
+    width: 400px;
+    margin-bottom: 64px;
+}
+
+.example {
+    color: white;
+    text-shadow: 2px 2px black;
+    font-weight: bold;
+    padding: 4px 8px;
+    margin: 12px 0px 64px;
+}
+
+#example5.example {
+    color: black;
+    text-shadow: 2px 2px 2px white;
+}
+
+h5 {
+    font-size: 18px;
+    margin-top: 48px;
+}

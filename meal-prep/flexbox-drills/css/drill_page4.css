@@ -3,7 +3,7 @@
 /*
     Now we're moving on to alignment, which is
     probably the trickiest part of flexbox for
-    students (after identifying container/items).
+    beginners (after identifying container/items).
 
     The instructions say that the container is 
     already a flexbox with a direction of column,
@@ -35,7 +35,7 @@
         - justify-content affects vertical alignment
         - align-items affects horizontal alignment
 
-    It might be helpful to bring up the powerpoint
+    It might be helpful to go back to the powerpoint
     graphic displaying how the different axes
     change based on flex direction.
 
@@ -48,9 +48,9 @@
                 align-items, which affects the
                 cross-axis!
 
-    (Honestly, this is a bit of a hard one for their
+    (Honestly, this is a bit of a hard one for your
     first day with flexbox; but hopefully it makes
-    them realize this stuff is important to learn)
+    you realize this stuff is important to learn!)
 
     And then to align the content inside those items,
     that's easy (although perhaps hard to remember, 

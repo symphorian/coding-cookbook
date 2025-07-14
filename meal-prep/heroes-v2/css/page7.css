@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#hero-1 {
+    background-image: url("../images/lizard.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+#hero-1 h1 {
+    font-size: 120px; 
+    position: absolute;
+    left: 20%;
+}
+
+/*
+    Similar to last time, before we move onto our
+    third hero, we're going to add some margin to
+    the bottom of it, to give it some "personal 
+    space" from the new hero.
+
+    Stranger danger, and all that.
+*/
+
+#hero-2 {
+    background-image: url("../images/lonely-ocean.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    margin-bottom: 100px; /* new */
+}
+
+
+#hero-2 h2 {
+    font-size: 72px;
+    position: absolute;
+    right: 20%;
+    bottom: 50%;
+}
+
+#hero-2 h4 {
+    font-size: 24px;
+    position: absolute;
+    right: 20%;
+    bottom: 47%;
+}
+
+#hero-2 a {
+    font-size: 14px;
+    display: inline-block;
+    background-color: #333333;
+    color: white;
+    text-decoration: none;
+    padding: 24px;
+    position: absolute;
+    right: 20%;
+    bottom: 41%;
+}
+
+/*
+    Flexbox started getting a bit complicated to
+    work with last time; let's see how we can use
+    an alternative approach instead.
+
+    Jump over to the HTML and add a new hero
+    with more complex content.
+*/
+
+/*
+    First, we'll style the hero (no flex this time)
+*/
+
+#hero-3 {
+    background-image: url("../images/orange-wildflowers.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    /*
+        Next, we'll add position: relative; once again,
+        because we're still going to be positioning
+        our hero content absolutely.
+    */
+    position: relative;
+}
+
+/*
+    But this time, we're going to move the entire
+    'hero-content' container around, rather than
+    each chunk of text individually.
+
+    This allows us to take advantage of the same
+    document flow and box model properties as we
+    have been using prior to this demo INSIDE the
+    container, while we use absolute positioning
+    to move the container around.
+
+    We're going to set position: absolute; again,
+    but this time, we'll be using the 'top' and 
+    'left' properties to move things around.
+*/
+#hero-3 .hero-content {
+    position: absolute;
+    top: 10%;
+    left: 15%;
+}
+
+/*
+    Then, we can style our text content inside
+    the hero-content.
+
+    But now, since our content won't behave like
+    ghosts with each other, we have to be a bit 
+    more picky about our margin values, since
+    document flow and the box model are back in
+    play with each other.
+*/
+
+#hero-3 h2 {
+    font-size: 72px;
+    margin-bottom: 36px;
+}
+
+#hero-3 h4 {
+    font-size: 24px;
+    margin: 0px;
+}
+
+#hero-3 a {
+    font-size: 14px;
+    display: inline-block;
+    background-color: #333333;
+    color: white;
+    text-decoration: none;
+    padding: 24px;
+    margin-top: 36px;
+    margin-right: 24px;
+}
+
+/*
+    Try moving the hero-content around again
+    with some different top and left values.
+
+    See how the entire hero-content container
+    moves as we adjust the values? Handy, right?
+
+    This is probably one of the best ways to
+    position hero content if you have more
+    complex content, and you can't rely on
+    just the flexbox alignment properties
+    (justify-content and align-items).
+
+    Speaking of which, let's wrap things up
+    with an example that shows that the type
+    of background image we choose can really
+    simplify how we position our hero content.
+*/

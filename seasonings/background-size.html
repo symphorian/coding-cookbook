@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>background-size Property</title>
+        <link href="css/background-size.css" rel="stylesheet" data-seasoning>
+        <link href="css/shared.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="recipe-example">
+            <h4>Basic Code Snippets</h4>
+            <code>background-size: cover;</code>
+            <br>
+            <code>background-size: contain;</code>
+            <br>
+            <code>background-size: 30%;</code>
+        </div>
+        <h4>Additional Examples</h4>
+        <div>
+            <p>
+                The background-size property sets the size of the container's 
+                background image. The image can be left to its natural size, 
+                stretched, or constrained to fit the available space.
+            </p>
+            <p>
+                Below is an image we'll be using for a few examples.
+            </p>
+            <h6>An &lt;img&gt; element</h6>
+            <img 
+                src="images/axolotl.avif" 
+                alt="image to use for background image examples"
+            >
+            <p>
+                The background-size property is always used with the 
+                background-image property.  After all, if there is no image 
+                in the background, there is nothing to size!  We're going to 
+                assume the background-image property is set in the following
+                examples, and take a look at some common values used with 
+                background-size.
+            </p>
+            <h5>The 'cover' keyword</h5>
+            <p>
+                The most common value used with background-size (at least in 
+                this course) is the 'cover' value.  This special keyword tell 
+                the background image to literally "cover" the entirety of the 
+                container's background, even if that means cropping out parts 
+                of the image if its aspect ratio doesn't match that of the 
+                container. 
+            </p>
+            <h6>Example 1: The background-size property used with 'cover'</h6>
+            <div id="example1" class="example">
+                <code>
+                    background-image: url("../images/axolotl.webp");
+                    <br>
+                    background-size: cover;
+                    <br>
+                    height: 400px;
+                </code>
+            </div>
+            <p>
+                However, as you can see, sometimes that is less than ideal.
+                Our cute little axolotl in the example above has almost been 
+                cropped out of the container!
+            </p>
+            <p>
+                To fix this, we often use a related property called 
+                background-position to adjust what part of the image should 
+                be anchored in view.  Most commonly, we just center the image 
+                horizontally and vertically, as in the example below.
+            </p>
+            <h6>
+                Example 2: 
+                The background-size property used with 'cover' and the 
+                background-position property.
+            </h6>
+            <div id="example2" class="example">
+                <code>
+                    background-image: url("../images/axolotl.webp");
+                    <br>
+                    background-size: cover;
+                    <br>
+                    background-position: center center;
+                    <br>
+                    height: 400px;
+                </code>
+            </div>
+            <p>
+                In this case, you can see that the image is still cropped, but 
+                it is the edges of the images that are cropped, not just the 
+                bottom of the image.
+            </p>
+            <h5>The 'contain' keyword</h5>
+            <p>
+                The 'contain' value is essentially the opposite of 'cover'. 
+                Rather than making sure that the container is "covered" by the
+                image, the 'contain' keyword says to make sure that the image 
+                is displayed in its entirety with no cropping at least once
+                within the container, even if that means parts of container are 
+                left empty or the image starts repeating.
+            </p>
+            
+            <h6>
+                Example 3:
+                The background-size property used with 'contain' 
+            </h6>
+            <div id="example3" class="example">
+                <code>
+                    background-image: url("../images/axolotl.webp");
+                    <br>
+                    background-size: contain;
+                    <br>
+                    height: 400px;
+                </code>
+            </div>
+            <p>
+                You can see that by default, when 'contain' is used, the image 
+                starts repeating or "tiling" to fill the rest of the container.
+            </p>
+            <p>
+                If we don't want that behavior, we can add in another property 
+                called background-repeat and set it to 'no-repeat' to turn off
+                the tiling behavior.
+            </p>
+
+            <h6>
+                Example 4:
+                The background-size property used with 'contain', with 
+                background-repeat and background-color
+            </h6>
+            <div id="example4" class="example">
+                <code>
+                    background-image: url("../images/axolotl.webp");
+                    <br>
+                    background-size: contain;
+                    <br>
+                    background-repeat: no-repeat;
+                    <br>
+                    background-color: grey;
+                    <br>
+                    height: 400px;
+                </code>
+            </div>
+            <p>
+                With the repeating (or "tiling") behavior turned off, the rest 
+                of the container not painted by the image is left empty.  The 
+                blank space can be filled by the background-color property if 
+                one is provided.
+            </p>
+
+            <h5>Using width values</h5>
+            <p>
+                Though less common, you can also provide background-size 
+                with regular old width values, using either pixels or
+                percentages.
+            </p>
+            <p>
+                Width values are useful for when you have a background image 
+                that you WANT repeated, and want it to render at a specific
+                size.
+            </p>
+            <p>
+                For example, suppose we use the image below as a 
+                background-image:
+            </p>
+            <h6>An &lt;img&gt; element of a pawprint pattern</h6>
+            <img 
+                src="images/paws.avif"
+                alt="pawprint background"
+            >
+            <p>
+                The image above is designed to be repeated in a background, and 
+                if we use a width value in background-size, we can scale the
+                image however we want, and it will repeat seamlessly across the 
+                background, so that you can't even tell where the actual image 
+                begins and ends.
+                (...however, make sure that you provide good contrast for any
+                text placed on top of a background like this one!)
+            </p>
+            <h6>
+                Example 5:
+                The background-size property used with a width value
+            </h6>
+            <div id="example5" class="example">
+                <code>
+                    background-image: url("../images/axolotl.webp");
+                    <br>
+                    background-size: 250px;
+                    <br>
+                    height: 400px;
+                </code>
+            </div>
+        </div>
+        <div class="resources">
+            <h4>Additional Resources</h4>
+            <a 
+                href="https://www.w3schools.com/cssref/css3_pr_background-size.php"
+                target="_blank"
+            >
+                w3schools 
+            </a>
+            <br>
+            <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-size"
+                target="_blank"
+            >
+                mdn web docs
+            </a>
+        </div>
+    </body>
+</html>

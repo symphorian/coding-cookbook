@@ -18,12 +18,13 @@ body {
     the #main-content.
 
     I'd recommend doing that briefly, just to 
-    show how simple it is, and then change it
+    see how simple it is, and then change it
     back the way it was.
 
-    However, we can also use an exclusively CSS
-    solution, by using the order property,
-    which is another Flexbox Item property.
+    However, we can also take advantage of 
+    an exclusively CSS solution, by using the 
+    order property, which is another Flexbox 
+    Item property.
 
     The order property works by assigning
     numbers to Flexbox Items, and then they

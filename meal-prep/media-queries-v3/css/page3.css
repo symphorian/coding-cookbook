@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#nav {
+    background-color: #222222;
+    display: flex;
+    justify-content: center;
+}
+
+#nav a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 20px;
+}
+
+@media screen and (max-width: 768px) and (min-width: 481px) {
+    body {
+        background-color: skyblue;
+    }
+}
+
+/* 
+    Our nav just BARELY fits when the 
+    background shifts to red, and when it gets
+    even smaller, the nav item text starts to 
+    wrap, and then overflow.  That's not good!
+
+    We need a way to keep all of the nav items
+    on the screen, without having them overflow.
+
+    How can we make this happen?
+    
+    With Flexbox Properties! With Flexbox, we
+    actually have a couple different options
+    when it comes to side-by-side content: 
+    we can either allow the Flexbox Items
+    to wrap, or we can convert the Flexbox
+    from a row to a column.
+*/
+
+@media screen and (max-width: 480px) {
+    body {
+        background-color: firebrick;
+    }
+
+    /*
+        Note that since we already activated
+        Flexbox for our #nav up above, we
+        don't need to do it again down here.
+
+        First let's try allowing the Flexbox
+        Items to wrap.
+    */
+    #nav {
+        /*
+            DEMO NOTE: show the line below, 
+            and then comment it out to show
+            the following step of the demo.
+        */
+        /* flex-wrap: wrap; */
+
+        /*
+            Allowing the Flexbox Items to wrap
+            actually doesn't look that bad for
+            this example, but in other cases,
+            it won't look so nice, so let's take
+            a look at our other option: changing
+            the Flexbox direction from a row
+            to a column.
+        */
+        flex-direction: column;
+
+        /*
+            That gets our content in a column...
+            but it doesn't look very good left
+            aligned like that.
+
+            Do you remember the Flexbox Container
+            Property that would allow us to align
+            our content horizontally while it's in 
+            a column?
+
+            That's right, align-items to the rescue!
+        */
+        align-items: center;
+    }
+}
+
+/*
+    That turns out rather nicely as well: a little
+    neater looking that just letting the Flexbox
+    children wrap.
+
+    However, there are other tradeoffs: those 
+    nav items stacked on top of each other take
+    up a good amount of space on the screen,
+    and that will be even more apparent on a 
+    mobile device.
+
+    So keep these two options in mind, along with
+    the pros and cons, realizing that there is no
+    "one size fits all" solution; depending on
+    your UI designs and implementations, you'll
+    have to be a little discerning to figure out
+    which approach is ideal.
+*/

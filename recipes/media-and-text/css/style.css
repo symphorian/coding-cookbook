@@ -8,6 +8,12 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/*
+    This is an alternate way of setting up a
+    Centered Single Column Page Layout,
+    focusing on the upper and lower limits
+    that the width should grow or shrink to.
+*/
 .single-column {
     min-width: 600px;
     max-width: 1200px;
@@ -23,6 +29,17 @@ body {
 
 /*
     Media and text side-by-side implementation **************
+*/
+
+/*
+    As always, applying Flexbox to the container 
+    of the elements we want side by side is 
+    usually the way to go.
+
+    Remember that for a Flexbox row, the
+    align-items property can be used to 
+    align content vertically, in this case,
+    in the center of the container.
 */
 .side-by-side {
     display: flex;
@@ -46,6 +63,13 @@ body {
     padding: 36px;
 }
 
+/*
+    This code tells the image to stretch
+    to fill the container we set up
+    above; this means that the image
+    will be as flexible as the Flexbox
+    item it is inside of.
+*/
 .side-by-side .image-container img {
     width: 100%;
 }
@@ -54,7 +78,7 @@ body {
     font-size: 48px;
 }
 
-/* fake button */
+/* fake button styling */
 .side-by-side .text-container a {
     font-size: 28px;
     font-weight: bold;

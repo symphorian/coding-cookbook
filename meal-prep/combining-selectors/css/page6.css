@@ -19,14 +19,13 @@ p a {
     paragraphs, that affects the color
     of both regular text and links.
 
-    Well, we COULD just use a normal
+    We might be tempte to just use a normal
     Class Selector for that.
 
     But, note that the client wanted that
     warning style JUST for paragraphs;
     we might have different warning styles
-    if that class was applied to other
-    elements.
+    for the anchor with the "warning" class.
 
     So, to be more specific we're going 
     to have to use the other way of

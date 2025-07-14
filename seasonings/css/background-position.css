@@ -1,0 +1,89 @@
+/* background-position example code */
+#example1 {
+    background-image: url("../images/axolotl.avif");
+    background-position: left;
+    height: 400px;
+}
+
+#example2 {
+    background-image: url("../images/axolotl.avif");
+    background-position: right;
+    height: 400px;
+}
+
+#example3 {
+    background-image: url("../images/axolotl.avif");
+    background-position: top;
+    height: 400px;
+}
+
+#example4 {
+    background-image: url("../images/axolotl.avif");
+    background-position: bottom;
+    height: 400px;
+}
+
+#example5 {
+    background-image: url("../images/axolotl.avif");
+    background-position: top right;
+    height: 400px;
+}
+
+#example6 {
+    background-image: url("../images/axolotl.avif");
+    background-position: bottom left;
+    height: 400px;
+}
+
+#example7 {
+    background-image: url("../images/axolotl.avif");
+    background-position: center center;
+    height: 400px;
+}
+
+#example8 {
+    background-image: url("../images/axolotl.avif");
+    background-size: cover;
+    height: 400px;
+}
+
+#example9 {
+    background-image: url("../images/axolotl.avif");
+    background-size: cover;
+    background-position: bottom;
+    height: 400px;
+}
+
+#example10 {
+    background-image: url("../images/axolotl.avif");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+}
+
+/* unrelated example page styling */
+img {
+    width: 400px;
+    margin-bottom: 64px;
+}
+
+.example {
+    background-color: #555555;
+    background-repeat: no-repeat;
+    background-size: 200px;
+    color: white;
+    text-shadow: 2px 2px black;
+    font-weight: bold;
+    padding: 4px 8px;
+    margin: 12px 0px 64px;
+}
+
+h5 {
+    font-size: 18px;
+    margin-top: 48px;
+}
+
+h6 code {
+    font-size: 18px;
+    margin: 12px;
+}

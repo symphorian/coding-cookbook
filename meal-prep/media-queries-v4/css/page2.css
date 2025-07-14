@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#nav {
+    background-color: #222222;
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    /* flex-direction: column; */
+}
+
+#nav a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 20px;
+}
+
+/*
+    We really only want to change things when 
+    content in the nav starts looking bad (which
+    is somewhere around 450px and below).
+
+    How can we make that happen?
+
+    With Media Queries! Now we finally get to
+    see why media queries are so useful (and
+    essential) to modern, responsive web design.
+
+    We'll begin by constructing the media query
+    itself.
+
+    Remember the three main parts of a media
+    query:
+    - the at-rule (@media)
+    - the Media Type (screen or print)
+    - the Media Features (e.g. max-width)
+
+    We'll create a media query that targets
+    the page when the screen width is 
+    450px or less, which is where our nav
+    starts breaking.
+*/
+
+@media screen and (max-width: 450px) {
+    /*
+        Now that we've constructed our media
+        query, inside of it, we can start
+        creating CSS rules.
+
+        Media Queries are almost like their
+        own mini CSS files that only apply when
+        the Media Query conditions are met.
+        Because of that, you need to write
+        complete CSS Rules inside of the Media
+        Query curly braces.
+
+        But before we start fixing our nav, we're
+        instead going to start out with a little
+        trick that will help us tell more visually 
+        when we're "inside" the conditions of
+        our Media Query: we're going to target the 
+        body element of the page, and change its
+        background-color.
+    */
+
+    body {
+        background-color: firebrick;
+    }
+
+    /*
+        After adding the code above, try shrinking
+        the screen.  When it gets below the max-width
+        of 450px that we set up in our Media Query,
+        the CSS rules inside of it will be applied,
+        changing the background-color to red.
+
+        This is a very handy debugging trick for new
+        web developers, to help them identify when
+        the code in their Media Query should be 
+        changing things.
+
+        In our case, whenever the screen turns red,
+        any other code we wrote in our Media Query 
+        should also be applied.
+
+        (We wouldn't keep this in our code forever,
+        only when we need it.  So we'll have to 
+        make sure we remove it when we're done 
+        with our demo.)
+    */
+}

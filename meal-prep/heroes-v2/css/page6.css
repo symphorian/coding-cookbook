@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#hero-1 {
+    background-image: url("../images/lizard.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+#hero-1 h1 {
+    font-size: 120px; 
+    position: absolute;
+    left: 20%;
+}
+
+/*
+    If we want our flexbox content to be stacked in 
+    a column like "normal" HTML content, then we need
+    to change the direction of our flexbox.
+
+    (Remember how to do that?)
+
+    However, changing the flex-direction also means
+    that our main-axis and cross-axis change.
+    Which means that justify-content and align-items
+    no longer align in the same directions either.
+
+    So, we need to make a couple more changes to
+    our flexbox properties, as well as adding one 
+    other property.
+*/
+#hero-2 {
+    background-image: url("../images/lonely-ocean.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+
+    /* 
+        Here's what we're changing with regards 
+        to flexbox:
+
+    */
+    flex-direction: column; /* new */
+    justify-content: center; /* changed so it's now vertically centered */
+    align-items: flex-end; /* changed so it's now horizontally right */
+
+    /*
+        That's better, but once again, we have a problem: 
+        our text is all the way up against the edge of the 
+        page, and we need to move it in a way that adapts
+        as the hero changes.
+
+        The solution? The position property once again!
+
+        As before, we start by giving the container
+        position: relative;
+    */
+    position: relative; /* new */
+}
+
+/*
+    With that out of the way, now we can style
+    our text elements (including some
+    fake button styling for our CTA) AND position
+    them as well.
+
+    We'll style them first, so we get an idea of
+    what they look like, and THEN we'll position
+    them based on that using position: absolute; 
+    
+    However, this time, it won't be as simple.
+    Remember, absolutely positioned elements
+    behave almost like ghosts, ignored by all
+    other elements...including other absolutely
+    positioned elements. 
+
+    Which means we'll actually need to position
+    them away from each other, using two side
+    properties this time.
+*/
+
+#hero-2 h2 {
+    font-size: 72px;
+
+    /* add this after styling the other text */
+    position: absolute;
+    right: 20%;
+    bottom: 50%;
+}
+
+#hero-2 h4 {
+    font-size: 24px;
+
+    /* add this after styling the other text */
+    position: absolute;
+    right: 20%;
+    bottom: 47%;
+}
+
+#hero-2 a {
+    font-size: 14px;
+    display: inline-block;
+    background-color: #333333;
+    color: white;
+    text-decoration: none;
+    padding: 24px;
+
+    /* add this after styling the other text */
+    position: absolute;
+    right: 20%;
+    bottom: 41%;
+}
+
+/* 
+    As you can see, the positioning is a bit
+    trickier.  If you grow and shrink the screen
+    vertically, you'll see that if the screen
+    gets too small, the text can start to 
+    overlap, but if we set things too far apart,
+    it won't look as good on larger screens.
+
+    So, while this is a viable way for positioning
+    text separately and individually apart from 
+    each other, in practice, we often don't want
+    to do it this way.
+
+    Let's check out a better way of doing something 
+    similar in the next hero!
+    
+    (By the way, as an aside, we could have used 
+    the 'top' property here instead of 'bottom',
+    and things wouldn't have changed much, aside
+    from the fact that we'd need to base our 
+    positioning relative to the top instead.)
+*/

@@ -8,29 +8,32 @@ body {
 }
 
 /*
-    Student often only look at the preview panel inside of
-    Visual Studio Code when testing, but that panel is 
-    usually much narrower than an actual browser window.
+    You may be used to only looking at the preview 
+    panel inside of Visual Studio Code when 
+    testing, but that panel is usually much 
+    narrower than an actual browser window.
 
-    So starting today, encourage students to start previewing
-    their code using the "Open with Live Server" option
-    instead of "Show Preview".
+    So starting today, we want you to start 
+    previewing your code using the "Open with Live 
+    Server" option in addition to "Show Preview",
+    ESPECIALLY now that we're getting into
+    Page Layouts.
 
-    "Open with Live Server" will open up their HTML in
+    "Open with Live Server" will open up your HTML in
     a web browser, which will allow them to preview it
     in a more natural setting, and they can also use
     the Chrome Developer Tools to inspect it as well.
 
     This will require a bit of window switching, so it
     may feel a little annoying or inconvenient,
-    especially for students with only one monitor,
+    especially if you only have one monitor,
     but the pros outweigh the cons when it comes to
-    previewing and testing their code.
+    previewing and testing your code.
 
-    This is a also a good time to remind them that we 
+    This is a also a good time to remind you that we 
     expect them to use Google Chrome for development in
     this course; if the "Open with Live Server" option
-    opens their code in Safari, they can still copy the
+    opens your code in Safari, they can still copy the
     URL from the browser to open it up in Chrome instead.
 */
 

@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.nav {
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+}
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.25rem;
+    padding: 20px 0px;
+    margin-right: 40px;
+}
+.nav a:last-of-type {
+    margin-right: 0px;
+}
+
+.header {
+    width: 90vw;
+    max-width: 800px;
+    margin: 25px auto;
+    display: flex;
+    align-items: center;
+}
+
+.header .image-container {
+    flex: 1;
+    height: 400px;
+}
+.image-container img {
+    height: 100%;
+    border-radius: 25px;
+}
+
+.header .content {
+    flex: 1;
+    margin-left: 50px;
+}
+.content h1 {
+    font-size: 3rem;
+    color: #ffb700;
+    margin: 0px 0px 15px;
+}
+.content p {
+    margin: 0px;
+}
+
+.featured {
+    background-color: #222;
+    color: white;
+    padding: 25px 0px;
+}
+.featured h2 {
+    font-size: 2.25rem;
+    text-align: center;
+}
+
+
+.grid {
+    width: 90vw;
+    max-width: 800px;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 300px;
+    gap: 15px;
+    grid-template-areas:
+        "txt1 img1 img2 img2"   
+        "img3 img3 img4 txt2"
+    ;
+}
+.grid img {
+    height: 100%;
+    border-radius: 25px;
+}
+.grid p {
+    border: 1px solid #ffb700;
+    padding: 20px;
+    margin: 0px;
+    border-radius: 25px;
+}
+#p1 {
+    grid-area: txt1;
+}
+#p2 {
+    grid-area: txt2;
+}
+#img1 {
+    grid-area: img1;
+}
+#img2 {
+    grid-area: img2;
+}
+#img3 {
+    grid-area: img3;
+}
+#img4 {
+    grid-area: img4;
+}
+
+/*
+    Now, let's shrink our screens to about 768px. While our
+    header area looks pretty decent, our featured photos
+    area could use adjustments to it's grid once it reaches
+    that size and smaller.
+
+    Who can remember how to write a media query?
+
+    Yup, we'll need to start with the at-rule followed by
+    media screen and (max-width: 768px). We also would like
+    to avoid these styles getting applied to screens after
+    481px, so, how would we add an additional condition?
+
+    Yup, we'd just write "and" followed by another condition.
+    This time, we'll use min-width: 481px;. Now we have a
+    media query geared towards most tablet devices.
+
+    But, how can we be sure that our media query works? Pretty
+    simple actually. If we target the body and change it's 
+    background color in the media query, once we shrink or 
+    grow our screen that color should show or disappear. This
+    is a neat trick to make sure your media queries are working.
+*/
+
+@media screen and (max-width: 768px) and (min-width: 481px) {
+    body {
+        background-color: red;
+    }
+}

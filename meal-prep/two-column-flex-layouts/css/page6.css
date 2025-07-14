@@ -78,7 +78,7 @@ body {
 /*
     It's still rather simple looking, but it's
     a lot cleaner and more organized than before.
-    Remind them that minimalism is a popular
+    Remember that minimalism is a popular
     design trend; looking simple and clean is
     often preferred to fancy and messy.
 
@@ -86,8 +86,15 @@ body {
     flush up against our sidebar, which doesn't
     look too good; it needs some breathing room.
 
-    Ask students which property they think we could 
-    apply to add some extra space in there
+    Do you remember which property we could 
+    apply to add some extra space in there?
+
+
+
+
+
+
+
     (margin and padding are both acceptable here
     for this case, but if we ever wanted to add a 
     background color to the main-content, we'd have
@@ -102,7 +109,7 @@ body {
 /*
     And that pretty much wraps up the demo!
 
-    Remind students that all the CSS properties we
+    Remember that all the CSS properties we
     used today have their own pages in the Coding
     Cookbook, which have more in-depth examples
     and resources for them (which they should use!)

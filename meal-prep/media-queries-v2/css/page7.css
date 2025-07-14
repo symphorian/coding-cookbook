@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.nav {
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+}
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.25rem;
+    padding: 20px 0px;
+    margin-right: 40px;
+}
+.nav a:last-of-type {
+    margin-right: 0px;
+}
+
+.header {
+    width: 90vw;
+    max-width: 800px;
+    margin: 25px auto;
+    display: flex;
+    align-items: center;
+}
+
+.header .image-container {
+    flex: 1;
+    height: 400px;
+}
+.image-container img {
+    height: 100%;
+    border-radius: 25px;
+}
+
+.header .content {
+    flex: 1;
+    margin-left: 50px;
+}
+.content h1 {
+    font-size: 3rem;
+    color: #ffb700;
+    margin: 0px 0px 15px;
+}
+.content p {
+    margin: 0px;
+}
+
+.featured {
+    background-color: #222;
+    color: white;
+    padding: 25px 0px;
+}
+.featured h2 {
+    font-size: 2.25rem;
+    text-align: center;
+}
+
+
+.grid {
+    width: 90vw;
+    max-width: 800px;
+    margin: 0px auto;
+    /* 
+        Now, let's make our fun grid! Who can tell me how
+        we can create a basic 4 column grid with equal columns?
+
+        Yup! We're going to start with display: grid; followed
+        by grid-template-column: 1fr 1fr 1fr 1fr;.
+
+        However, we want our second image to span the last
+        two columns of the first row and then we want our
+        third image to span the first two columns of
+        the second row. Rememeber, our rows are going to
+        auto-generate due to how we've setup our grid. So,
+        who can tell me how we'd acheive our goal?
+    */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /*
+        If you answered with grid-template-areas, you are correct!
+        We're going to create two rows of double quotes in our
+        grid-template-areas.
+
+        The first row should have our txt1, img1, img2, and img2.
+
+        The second row should be our img3, img3, img4, and txt2.
+
+        Take note of how img2 and img3 appear in twice in two
+        different columns. This is because we're telling our
+        second image and second paragraph to span 2 columns
+        within their respective row.
+
+        However, we're not going to see that in action until
+        we apply them to their grid area.
+
+        We also have an additional issue. Notice how our images
+        do not span the full height of their column. This is
+        because we've yet to establish a height for our auto
+        generated rows and have not told the images to span
+        100% of their row's height. Let's fix these issues next.
+    */
+    grid-template-areas:
+        "txt1 img1 img2 img2"   
+        "img3 img3 img4 txt2"
+    ;
+}

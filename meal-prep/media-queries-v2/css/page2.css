@@ -1,0 +1,46 @@
+/* 
+    We'll start off with our usual page layout setup:
+*/
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+/* 
+    Let's add an image reset here. We'll give it a width
+    of 100% and an object-fit of cover.
+    
+    Our images are naturally going to come in scaled to their
+    actual width and height. We don't necessarily want that due
+    to how huge they are. By adding this CSS Rule, which is
+    dubbed a reset, we are telling our images to scale to
+    100% of the container they're held within. Object-fit: cover
+    is going to allow our images to scale proportionately
+    within their container.
+*/
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/*
+    Let's target our navigation system first.
+
+    Let's start by giving it a dark background color.
+    
+    We want our navigation elements to be in the center. What
+    two properties do we need to achieve that?
+
+    If you answered display: flex; and justify-content: center;,
+    then you'd be correct! Remember, both display: flex;
+    and justify-content: center; are parent/container properties
+    which means they won't work when applied to the child/nested element.
+*/
+.nav {
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+}

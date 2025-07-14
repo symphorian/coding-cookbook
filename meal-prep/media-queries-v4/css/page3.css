@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#nav {
+    background-color: #222222;
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    /* flex-direction: column; */
+}
+
+#nav a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 20px;
+}
+
+/*
+    As a small side note, the point at which the page 
+    shifts from its default styling into the styling 
+    of our Media Query is often called a "breakpoint".
+
+    "Breakpoint" and "Media Query" are often used
+    interchangeably, but they are subtly different.
+
+    "Breakpoint" is more of a design term, and "Media
+    Query" is more of a technical coding term.
+
+    For example, because this media query targets 
+    screens that are rather narrow, it's a lot easier
+    to refer to it as the "Mobile Breakpoint" rather 
+    than "the media query that targets screen widths 
+    with a max width of 450px".
+
+    So, to keep things easier to reference, we're going 
+    to add a short comment above the media query to
+    sort of label it (which will be helpful later, since
+    we'll be adding an additional media query).
+*/
+
+/* MOBILE BREAKPOINT */
+@media screen and (max-width: 450px) {
+    body {
+        background-color: firebrick;
+    }
+
+    /*
+        Now that we have our handy little debugging
+        code in our Media Query, let's continue and 
+        actually fix up our nav now.  
+        
+        We could use either flex-wrap or flex-direction;
+        we're going to use flex-direction for this demo.
+
+        Remember that we need to write complete CSS
+        Rules INSIDE of the Media Query's curly braces.
+    */
+
+    #nav {
+        /*
+            The CSS Rule we're writing here is targeting
+            the same thing as our CSS rule outside of the
+            Media Query, meaning that any code we write 
+            is modifying (or adding) to the original 
+            CSS Rule.
+
+            Because of that, we don't need to activate
+            Flexbox again, since it's already active
+            on the nav.  We just need to write code for
+            what we want to change: flex-direction.
+        */
+        flex-direction: column;
+
+        /*
+            Now try adjusting the screen width again.
+            You should see that our nav only changes into
+            a column when the screen turns red, which
+            only happens when we're under the max-width 
+            we set in our Media Feature of 450px.
+
+            Neat, huh?
+
+            The alignment could still be improved though,
+            so let's adjust that as well, while we're in
+            here.
+
+            Do you remember how to horizontally center
+            Flexbox Items that are in a column?
+
+            It's probably the opposite of what you think;
+            instead of justify-content, we have to use
+            align-items, because the main- and cross-axes
+            of the Flexbox have switched.
+        */
+        align-items: center;
+
+        /*
+            There we go! Much nicer looking! And our nav
+            is only put into a column when the screen
+            width is less than 450px, but above that,
+            it goes back to being in a row.
+
+            That is the power of Media Queries: we can
+            now write CSS that makes our page look one
+            way at a certain screen width, but look
+            completely different at another screen width,
+            which allows us to fix design issues that 
+            occur when things get too squished or skinny.
+        */
+    }
+}

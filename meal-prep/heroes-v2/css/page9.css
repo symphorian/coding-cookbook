@@ -1,0 +1,194 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#hero-1 {
+    background-image: url("../images/lizard.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+#hero-1 h1 {
+    font-size: 120px; 
+    position: absolute;
+    left: 20%;
+}
+
+#hero-2 {
+    background-image: url("../images/lonely-ocean.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: flex-end;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+#hero-2 h2 {
+    font-size: 72px;
+    position: absolute;
+    right: 20%;
+    bottom: 50%;
+}
+
+#hero-2 h4 {
+    font-size: 24px;
+    position: absolute;
+    right: 20%;
+    bottom: 47%;
+}
+
+#hero-2 a {
+    font-size: 14px;
+    display: inline-block;
+    background-color: #333333;
+    color: white;
+    text-decoration: none;
+    padding: 24px;
+    position: absolute;
+    right: 20%;
+    bottom: 41%;
+}
+
+#hero-3 {
+    background-image: url("../images/orange-wildflowers.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+#hero-3 .hero-content {
+    position: absolute;
+    top: 10%;
+    left: 15%;
+}
+
+#hero-3 h2 {
+    font-size: 72px;
+    margin-bottom: 36px;
+}
+
+#hero-3 h4 {
+    font-size: 24px;
+    margin: 0px;
+}
+
+#hero-3 a {
+    font-size: 14px;
+    display: inline-block;
+    background-color: #333333;
+    color: white;
+    text-decoration: none;
+    padding: 24px;
+    margin-top: 36px;
+    margin-right: 24px;
+}
+
+#hero-4 {
+    background-image: url("../images/stars-on-velvet.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero-4 .hero-content {
+    text-align: center;
+    color: white;
+    padding-top: 100px;
+}
+
+#hero-4 h2 {
+    font-size: 72px;
+    margin-bottom: 36px;
+}
+
+#hero-4 h4 {
+    font-size: 24px;
+    margin: 0px;
+}
+
+#hero-4 a {
+    font-size: 14px;
+    display: inline-block;
+    background-color: white;
+    color: #333333;
+    text-decoration: none;
+    padding: 24px;
+    margin-top: 36px;
+    margin-right: 12px;
+    margin-left: 12px;
+}
+
+/*
+    We have one last little trick regarding
+    backgrounds to show you.
+
+    Go back into the HTML, and add some code in
+    between each of the heroes.  Then come 
+    back here.
+
+    ...
+
+    Now that you're back, we're going to give those
+    new "parallax-banner" elements some styling that
+    will make them similar to heroes, but more narrow,
+    so they're more banner than hero.
+    
+    We're also going to give them a background-image,
+    just like we did with the heroes,
+    but we're also going to use a neat property
+    called background-attachment, and give it 
+    a value of fixed.
+*/
+
+.parallax-banner {
+    height: 50vh;
+    margin: 100px 0px;
+    background-image: url("../images/emerald-seas.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*
+    Watch what happens when we scroll up and 
+    down the page now...
+
+    The background for all our spacers becomes
+    "fixed", as in stuck and unmovable. This
+    has the effect of making it appear our heroes
+    are floating over the background image used
+    in the spacers.
+
+    This is commonly known as a "parallax" effect
+    in web design, and is a popular style to 
+    incorporate into heroes as well as other forms
+    of content.
+
+    You can also put text, buttons, really any HTML
+    element inside of those parallax banners,
+    just like heroes!  Just be careful: you'll
+    need to make sure any text you put in there 
+    has good contrast with ALL of the fixed background,
+    since the text could be covering ANY of it.
+
+    That wraps up this demo!
+*/

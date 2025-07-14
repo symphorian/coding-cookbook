@@ -2,6 +2,10 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.bold {
+    font-weight: bold;
+}
+
 .cookbookPage {
     position: relative;
 }
@@ -18,6 +22,11 @@ body {
     margin-top: 0px;
 }
 
+.cookbookPage.no-numbers h2 {
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+
 .cookbookPage.troubleshooting h2 {
     margin-top: 60px;
     margin-bottom: 36px;
@@ -32,6 +41,11 @@ body {
     font-size: 12px;
     letter-spacing: 1px;
     margin-bottom: 0px;
+}
+
+.hiddenAnchorId {
+    position: absolute;
+    top: -50px;
 }
 
 .cookbookPage > p,
@@ -75,11 +89,23 @@ body {
     display: block;
 }
 
-.cookbookPage ol > li {
+.cookbookPage > ol > li {
     border-bottom: 3px solid #ff7050;
     margin-bottom: 36px;
     padding-bottom: 36px;
     margin-right: 40px;
+}
+
+.cookbookPage.no-numbers > ol > li:last-child {
+    border-bottom: 0;
+}
+
+.cookbookPage.no-numbers > ol > li {
+    list-style-type: none;
+}
+
+.cookbookPage ol.bigLetters > li {
+    list-style-type: upper-alpha;
 }
 
 .sideBySide {
@@ -135,7 +161,7 @@ p.indent {
         padding-left: 12px;
     }
 
-    .cookbookPage ol > li {
+    .cookbookPage > ol > li {
         list-style-type: none;
         padding-bottom: 12px;
         margin-bottom: 12px;

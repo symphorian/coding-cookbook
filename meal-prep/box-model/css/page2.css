@@ -54,4 +54,15 @@ div {
     side if we want to, with something like:
 
     border-bottom: 1px solid black;
+
+    We can ALSO set each part of a border
+    individually, like below:
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+
+    Which approach you should take when 
+    creating borders often depends on what 
+    you're trying to accomplish.
 */

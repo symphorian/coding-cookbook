@@ -8,6 +8,10 @@ body {
     font-family: sans-serif; 
 }
 
+#two-columns-basic {
+    display: flex;
+}
+
 #two-columns {
     display: flex;
     width: 80%;
@@ -56,6 +60,11 @@ li.indent {
 
 #main-content {
     flex: 1;
+    margin-right: 16px;
+}
+
+#main-content-basic {
+    width: 650px;
     margin-right: 16px;
 }
 

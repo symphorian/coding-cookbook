@@ -1,0 +1,52 @@
+/* 
+    Today's demo is all about Media Queries.
+
+    Remember that Media Queries allow us to 
+    alter page styles when specific conditions
+    are met; most frequently, these conditions
+    have to do with the page width.
+
+    So we're going to start off with a very
+    basic example of how media queries can
+    change a page.
+
+    We begin by constructing the media query
+    itself.
+
+    Remember the three main parts of a media
+    query:
+    - the at-rule (@media)
+    - the Media Type (screen or print)
+    - the Media Features (e.g. max-width)
+
+    We'll create a media query that targets
+    the page when the screen width is 
+    480px or less.
+*/
+
+@media screen and (max-width: 480px) {
+    /*
+        Now that we've constructed our media
+        query, inside of it, we can start
+        creating CSS rules.
+
+        We'll start with a very basic one that
+        changes the page background.
+
+        You'll probably be tempted to immediately
+        start writing "background-color...",
+        but Media Queries are almost like their
+        own mini CSS files: you need to write
+        complete CSS Rules inside, even though
+        we're inside a set of curly braces.
+    */
+    body {
+        background-color: firebrick;
+    }
+}
+
+/*
+    Now, when you shrink the preview window down
+    below 480px in width, the background color 
+    should turn red; neat, right?
+*/

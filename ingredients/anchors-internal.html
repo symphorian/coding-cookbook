@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Internal &lt;a&gt; (Anchor) Element</title>
+        <link href="css/anchors.css" rel="stylesheet">
+    </head>
+    <body>
+        <h3 id="intenral">Internal Hyperlinks</h3>
+        <p>
+            When you click on an internal hyperlink, you will stay on the 
+            current page, but will be navigated to a particular HTML element 
+            on a different part of the page.  This type of anchor is often 
+            used for something like a Table of Contents, that enables a website 
+            visit to jump down to the part of the page they care about.
+        </p>
+        <p>
+            If you want to use anchor elements to create an internal hyperlink, 
+            you'll need to do two things:
+        </p>
+        <ol>
+            <li>
+                On the element you want to link to, set up an id attribute.
+                (For example: id="where-i-want-to-jump-to")
+            </li>
+            <li>
+                On the anchor you want to link from, grab the id attribute 
+                value you just set up, set that in the anchor's href 
+                attribute, and put a # in front of it.
+                (For example: href="#where-i-want-to-jump-to")
+            </li>
+        </ol>
+        <p>
+            Lower down on this page are three "sections" that we've created, 
+            each with their own id attribute values of "section1", "section2", and 
+            "section3".  We'll use those id values in our example below.
+        </p>
+        <ul>
+            <li>
+                <a href="#section1">Go to Section 1</a>
+            </li>
+            <li>
+                <a href="#section2">Go to Section 2</a>
+            </li>
+            <li>
+                <a href="#section3">Go to Section 3</a>
+            </li>
+        </ul>
+        
+        <p>
+            Notice in the code that the three anchors above have their hrefs 
+            set to "#section1", "#section2", and "#section3" respectively.
+            The hashtag/pound symbol (#) in front of the id values is REQUIRED;
+            without that, the code will be interpreted as an <i>external</i>
+            hyperlink, and probably won't work.
+        </p>
+        <p>
+            And the three h3 headings further down have matching id attribute 
+            values of "section1", "section2", and "section3". 
+            Try clicking on the anchors and see how they jump you down to
+            the headings with the matching ids.
+        </p>
+        <h4>Structuring a Table of Contents</h4>
+        <p>
+            As a side note, if you have several anchors in a row, in something 
+            like a Table of Contents or some form of navigation, we usually 
+            don't want them all lined up in a row, as they would naturally,
+            since they're inline elements.
+            Instead, we probably want them separated in an orderly way,
+            likely on separate lines.
+        </p>
+            Because of this, we often put anchor elements inside of other 
+            elements for better spacing and layouts, such as the Unordered List 
+            element and List Item elements we used in the example above.
+        </p>
+
+        <h3 id="section1">Section 1</h3>
+        <p class="extraSpace"></p>
+        <h3 id="section2">Section 2</h3>
+        <p class="extraSpace"></p>
+        <h3 id="section3">Section 3</h3>
+        <p class="extraSpace"></p>
+    </body>
+</html>

@@ -3,7 +3,7 @@
 /*
     This last drill is a little challenging.
 
-    The goal is to show them how padding
+    The goal is to show you how padding
     on child elements can be used to "puff up"
     the container element.
 
@@ -11,9 +11,9 @@
     elements don't respect vertical spacing
     (padding in this case).
 
-    So they'll need to convert the spans into
+    So you'll need to convert the spans into
     inline-block elements before their padding
-    will behave the way they need it to.
+    will behave the way you need it to.
 */
 
 #d5-container-1 {

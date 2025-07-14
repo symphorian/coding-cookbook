@@ -1,24 +1,16 @@
 /*
-    Now let's try out a text-align and
-    text-decoration.
+    Now let's try out a few more text-related 
+    properties: text-align, text-decoration,
+    and font-family.
 
     The text-align property is used to change
     the alignment of text and other inline
     content within an element to either left, 
     center, or right aligned (left is the default).
 
-    The text-decoration property is responsible
-    for adding lines to your text.  You can
-    underline the text, "overline" the text,
-    or even add a strikethrough.  The values
-    you'd use for each of those would be 
-    'underline', 'overline', and 'line-through'
-    respectively.  You can also remove existing
-    text-decorations with the value 'none'.
-
     Add a text-align property to the first 
-    paragraph, and a text-decoration to the
-    second. 
+    paragraph, and try out the different
+    alignment options (left, center, or right). 
 
     (and yes, it is annoying that some text/font
     related properties start with "font-",
@@ -33,6 +25,21 @@
     text-align: right;
 }
 
+/*
+    The text-decoration property is responsible
+    for adding lines to your text.  You can
+    underline the text, "overline" the text,
+    or even add a strikethrough.  The values
+    you'd use for each of those would be 
+    'underline', 'overline', and 'line-through'
+    respectively.  You can also remove existing
+    text-decorations with the value 'none'.
+
+    Add a text-decoration property to the second 
+    paragraph, and try out the different values
+    listed above.
+*/
+
 #second-paragraph {
     color: #FF0000;
     background-color: lightpink;
@@ -40,7 +47,48 @@
     text-decoration: underline;
 }
 
+/*
+    The font-family property is responsible for
+    changing the font itself that is associated
+    with an HTML element.
+
+    There are five default fallback values for
+    the font-family property.  They are: 
+        - serif (better for print, not screens)
+        - sans-serif (best option for screens)
+        - monospace
+        - cursive
+        - fantasy
+
+    Those values are guaranteed to work in any
+    browser, although depending on the browser and
+    operating system, they may not look the same.
+    
+    Try them out in the bold paragraph!
+*/
+
 #bold-paragraph {
     font-weight: bold;
     background-color: #228b22;
+    font-family: cursive;
 }
+
+/*
+    More commonly, font-family values will be
+    strung together, forming a chain of fallbacks,
+    as below:
+
+    Verdana, Geneva, Tahoma, sans-serif;
+
+    The reason why? Because not all operating 
+    systems or computers will necessarily have the
+    font families that you want to use.
+
+    So we can specify fallbacks, so that if the 
+    browser can't find the first value you specify,
+    it moves on to the next, until it reaches the 
+    last value.
+    
+    The last value in a chain of font-family values
+    should always be one of the five default values.
+*/

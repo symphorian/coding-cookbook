@@ -12,11 +12,11 @@
     the default link styling doesn't fit
     into more custom website designs.
 
-    Tell them that in order to change anchor
-    styles, they need to be very specific 
-    with their CSS selectors, making sure
-    to target the anchors directly, like
-    we're doing below with id selectors.
+    In order to change anchor styles, you 
+    need to be very specific with your CSS 
+    selectors, making sure to target the 
+    anchors directly, like we're doing below 
+    with id selectors.
 */
 
 #d10-a1,

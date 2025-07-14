@@ -1,0 +1,204 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#nav {
+    background-color: #222222;
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    /* flex-direction: column; */
+}
+
+#nav a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 20px;
+}
+
+/*
+    Now that we've seen how we can make a navbar
+    more responsive, let's explore how we can
+    make some side-by-side page content more
+    responsive as well.
+
+    Remember the Media & Text layout, both back
+    in WordPress and in the Content Layouts session?
+    It's a popular design choice!
+
+    Let's implement it again, and then we'll
+    see how we can modify it for mobile.
+
+    Hop over to the HTML, and then return here
+    when you're done.
+*/
+
+/*
+    The first thing we're going to do is modify
+    the size of that image.  
+    
+    This isn't the order we'd normally style 
+    things in, but that image is VERY large,
+    and will obscure many of the design changes
+    we make to the layout of the content, so
+    we're going to temporarily shrink it down.
+*/
+
+/* 
+    DEMO NOTE: write the CSS Rule below
+    (uncommented) when you read this, but we'll
+    be removing it by the time we get to the 
+    bottom of this page of the demo.
+*/
+/* .image-container img {
+    width: 200px;
+} */
+
+/*
+    Note that we are starting a new CSS rule
+    ABOVE our Media Query.  This is very 
+    important: you should NEVER have any 
+    CSS underneath your Media Queries.
+
+    The code ABOVE your Media Queries functions
+    as the "default" styling for the page.
+
+    The Media Queries below then modify that
+    default styling.
+
+    If you start writing code underneath your
+    Media Queries, then you could be potentially
+    modifying your Media Query code as well,
+    which can make things VERY confusing
+    and hard to debug when things go wrong.
+
+    So just make sure you never add CSS code
+    underneath a Media Query, and you should
+    be safe!
+
+    Next, we'll set up our .single-column-layout 
+    container, which will hold our Media and 
+    Text layout, using our standard Centered 
+    Single Column setup.
+*/
+.single-column-layout {
+    width: 90vw;
+    max-width: 800px;
+    margin: 48px auto;
+}
+
+/*
+    Now, we're going to convert that same 
+    container into a Flexbox, using the .intro class.
+
+    Why not do that in the CSS Rule we just made?
+
+    Because we're going to reuse that class later in
+    the demo for another container, and we don't want 
+    that one to be a Flexbox.  
+    
+    We'll also use the 'gap' property to add some space 
+    between the Flexbox Items.
+*/
+.intro {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+/*
+    Now our content is side by side, but for the 
+    layout we're going for, we want the content to be
+    more balanced, so we're going to resize the Flexbox
+    Items to each have the same size, using the 
+    flex property.
+*/
+.image-container,
+.content-container {
+    flex: 1;
+}
+
+/* 
+    Now that we have the image-container and 
+    content-container equally sized, let's start
+    properly focusing on the image.
+
+    Right now, the image is fixed at 200px wide,
+    and depending on your screen size, there is 
+    probably a good chunk of white space to the 
+    side of it.
+
+    Let's modify our image to grow to fill its
+    container.  To do that, delete the CSS Rule
+    we wrote above targeting the image (or, just
+    move it down here), and then add the following
+    CSS properties to allow it to fill its container,
+    crop any distortions, and round the corners.
+*/
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+/*
+    Much nicer looking! ...but now the image is a bit
+    large again compared to the text.
+
+    To balance things out, we're going to shrink the 
+    height of the container (and since the image is
+    now coded to adapt to its container, it will
+    shrink as well).
+*/
+.image-container {
+    height: 400px;
+}
+
+/*
+    Now let's also increase the size of the heading
+    text, to further balance out our side by side
+    content.
+
+    And while we're in here, let's give it a slight
+    color accent, just to make things more interesting.
+*/
+.content-container h1 {
+    font-size: 48px;
+    color: #ffb700;
+}
+
+/* 
+    There we go! Still asymmetrical, but not
+    unpleasantly so.
+
+    That design looks decent on wider screens...but
+    once again, the design starts to break on smaller
+    screens.
+
+    The heading starts to wrap under 740px, and as it
+    shrinks closer to the point where our nav started
+    to break before, both the image and text containers 
+    get more and more squished..
+
+    How can we address those issues? Media Queries to
+    the rescue once again!
+*/
+
+/* MOBILE BREAKPOINT */
+@media screen and (max-width: 450px) {
+    body {
+        background-color: firebrick;
+    }
+
+    #nav {
+        flex-direction: column;
+        align-items: center;
+    }
+}

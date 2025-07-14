@@ -85,7 +85,7 @@ body {
 
     .dropdown-menu a:hover { }
 
-    won't work. (write the code to show this)  
+    won't work. (Try it out and see!)  
     
     Why doesn't it work?
 
@@ -112,18 +112,18 @@ body {
     specific in order to override the general
     style we specified earlier.
 
-    We can do that by sort of combining the
+    We can do that by combining the
     two selectors together.
 */
 #navbar .dropdown-menu a:hover {
     /*
-        Also note that we can't just use
-        background-color here, because we used
-        background with linear-gradient for the
-        other hover state.
+        Also note that we can't just use the
+        background-color property here, because we 
+        used the background property with linear-gradient 
+        for the other hover state.
 
         So we have to use the same property
-        (the background shorthand) in order to
+        (the background property) in order to
         override the other hover style.
     */
     background: slateblue;
@@ -133,7 +133,4 @@ body {
     With that, we pretty much have our dropdown
     menu appearing as we'd like it to when it
     actually is visible.
-
-    Now we need to add the code to conceal it 
-    until we hover over the trigger item.
 */

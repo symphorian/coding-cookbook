@@ -129,12 +129,12 @@ const mealPrepRecipes = [
         pageCount: 4,
         hasLocalProject: true,
     },
-    {
-        recipeName: "gallery-masonry-vertical-flex",
-        categories: "content-layout, gallery, flex",
-        pageCount: 4,
-        hasLocalProject: true,
-    },
+    // {
+    //     recipeName: "gallery-masonry-vertical-flex",
+    //     categories: "content-layout, gallery, flex",
+    //     pageCount: 4,
+    //     hasLocalProject: true,
+    // },
     {
         recipeName: "gallery-masonry-vertical-columns",
         categories: "content-layout, gallery",
@@ -217,6 +217,12 @@ const mealPrepRecipes = [
         recipeName: "dropdown-nav",
         categories: "navigation-layout, navbar, dropdown",
         pageCount: 1,
+        hasLocalProject: true,
+    },
+    {
+        recipeName: "side-by-side-responsive",
+        categories: "miscellaneous",
+        pageCount: 2,
         hasLocalProject: true,
     },
     {

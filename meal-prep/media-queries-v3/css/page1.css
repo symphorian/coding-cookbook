@@ -1,0 +1,82 @@
+/* 
+    Our first Media Query is actually a 
+    pretty good one for targeting mobile
+    devices; it may not cover ALL possible
+    phone screens, but it should cover most.
+
+    For that reason, sometimes Media Queries
+    are referred to as "breakpoints"; for
+    our Media Query below, we might refer to
+    it as our "mobile breakpoint", because
+    as soon as we sink below 480px in width,
+    we "break" into the mobile design.
+
+    ("Media Queries" are more of a technical 
+    term, while "breakpoints" are more of a 
+    design term.)
+
+    However, it's not uncommon to have more than 
+    one breakpoint; most websites will definitely
+    have a mobile breakpoint, but some will also
+    have a tablet breakpoint.
+
+    So let's create another Media Query to target
+    somewhere between a mobile width and what
+    we consider a desktop width.
+
+    I'm going to put this new Media Query ABOVE
+    my mobile breakpoint, because most of the 
+    time we'll organize our CSS code like this:
+
+    Desktop CSS
+    Tablet CSS
+    Mobile CSS
+
+    (it's just a nice, logical way to organize
+    our code, with some safety benefits we'll 
+    address later)
+
+    And this time, we're going to be combining
+    two media features in our new tablet breakpoint.
+
+    (Tablet devices are also very diverse in their
+    screen resolution, but 768px is not a common
+    boundary to use as a tablet breakpoint)
+*/
+
+@media screen and (max-width: 768px) and (min-width: 481px) {
+    /*
+        We'll target the body again, but this
+        time give it a different color, to
+        differentiate between when we're hitting
+        different breakpoints.
+    */
+    body {
+        background-color: skyblue;
+    }
+}
+
+/*
+    And with that, now you can see very clearly
+    that we actually have 3 different breakpoints
+    set up: 
+    - on desktop, the background is white
+    - on tablet, the backgroud is blue
+    - on mobile, the background is red
+
+    Now, in reality, you probably won't be changing 
+    background colors like this on an actual site.
+
+    However, this is a great debugging strategy.
+    If your Media Query code doesn't seem to be
+    working, and you're not sure whether you're
+    in a breakpoint or not, changing the background
+    color is a big, obvious way to signal when
+    you've moved into another design breakpoint.
+*/
+
+@media screen and (max-width: 480px) {
+    body {
+        background-color: firebrick;
+    }
+}

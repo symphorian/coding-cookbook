@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#single-column {
+    width: 90vw;
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+#card-container {
+    display: flex;
+    gap: 36px;
+}
+
+.card {
+    border: 5px solid #cf9dfc;
+    padding: 36px;
+    text-align: center;
+    margin: 36px 0px;
+}
+
+.card h3 {
+    font-size: 36px;
+    margin: 0px;
+}
+
+.card p {
+    font-size: 24px;
+    margin: 24px 0px 0px;
+}
+
+#side-by-side-container {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+/*
+    It turns out it's not so simple, because flexbox
+    takes any children/items inside of it and puts 
+    them side by side.
+
+    So we actually shouldn't be surprised by the behavior
+    of the new paragraph we added in there.
+
+    What we actually wanted was for the heading and the
+    paragraph to be treated as a group, or a unit.
+
+    And to make that happen, we need to wrap both of them
+    in a new container, much like we did earlier with
+    the image element.
+
+    So let's go back into the HTML, and then come back
+    here once you finish.
+*/
+
+/*
+    Now that you have that "text-container" in there
+    things are starting to look better already; we now
+    have the h2 and p element stacked on top of each other,
+    like we wanted.
+
+    However, because that h2 is inside of this new container,
+    it is no longer considered a flex item.  Instead,
+    the "text-container" is the new flex item.
+
+    So we need to update our selectors below once again,
+    from
+        #side-by-side-container h2
+    to
+        #side-by-side-container .text-container
+*/
+#side-by-side-container .image-container,
+#side-by-side-container .text-container {
+    flex: 1;
+}
+
+#side-by-side-container .image-container img {
+    width: 100%;
+}
+
+/*
+    Now that's much better.  We could still tweak things
+    a bit further to clean things up and better balance the
+    content.
+
+    For example, we could reduce the bottom margin
+    in the h2 element
+*/
+#side-by-side-container h2 {
+    font-size: 60px;
+    margin-bottom: 12px; /* new */
+}
+
+/*
+    And we could also target the paragraph and increase
+    its font-size as well.
+*/
+
+#side-by-side-container p {
+    font-size: 36px;
+}
+
+/*
+    There! Things are looking a bit more balanced now.
+
+    And we could actually keep refining our page as a
+    whole, since our two content layouts (the cards and
+    the media & text) are rather close together.
+
+    But this demo is only focusing on these side by side
+    content layouts, so we'll wrap things up here for today.
+*/

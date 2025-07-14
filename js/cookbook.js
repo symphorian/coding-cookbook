@@ -43,6 +43,11 @@ const CATEGORY_PARAM = "category";
 const SORT_DEFAULT = "";
 const SORT_ALPHA_ASC = "alpha-asc";
 const SORT_ALPHA_DESC = "alpha-desc";
+const RECIPES_CATEGORY_PAGE_LAYOUT = "page-layout";
+const RECIPES_CATEGORY_CONTENT_LAYOUT = "content-layout";
+const RECIPES_CATEGORY_NAVIGATION_LAYOUT = "navigation-layout";
+const RECIPES_CATEGORY_MISCELLANEOUS = "miscellaneous";
+
 
 /***********************************************************************
  * Page elements
@@ -90,6 +95,7 @@ let altTitle = "";
 
 let filterCategory = "";
 setFilterCategoryFromURL();
+updateNavLinksFromFilterCategory();
 let filteredMealPrepRecipes = getFilteredMealPrepRecipes();
 let newFilterCategory = "";
 
@@ -546,6 +552,7 @@ function applySortFilterChanges() {
 
     if (hasFilterChange) {
         reloadRecipeCards();
+        updateNavLinksFromFilterCategory();
         setTitleBasedOnCurrentFilter();
         setPageView(pageMode, "", "", true);
     }
@@ -1119,6 +1126,49 @@ function setFilterCategoryFromURL() {
         if (params.get(CATEGORY_PARAM) !== null) {
             filterCategory = params.get(CATEGORY_PARAM);
         }
+    }
+}
+
+function updateNavLinksFromFilterCategory() {
+    const pageLayoutsNavLink = document.getElementById(RECIPES_CATEGORY_PAGE_LAYOUT);
+    const contentLayoutsNavLink = document.getElementById(RECIPES_CATEGORY_CONTENT_LAYOUT);
+    const navigationLayoutsNavLink = document.getElementById(RECIPES_CATEGORY_NAVIGATION_LAYOUT);
+    const miscellaneousNavLink = document.getElementById(RECIPES_CATEGORY_MISCELLANEOUS);
+
+    let selectedNavLink = null;
+    switch(filterCategory) {
+        case RECIPES_CATEGORY_PAGE_LAYOUT:
+            selectedNavLink = pageLayoutsNavLink;
+            break;
+        
+        case RECIPES_CATEGORY_CONTENT_LAYOUT:
+            selectedNavLink = contentLayoutsNavLink;
+            break;
+        
+        case RECIPES_CATEGORY_NAVIGATION_LAYOUT:
+            selectedNavLink = navigationLayoutsNavLink;
+            break;
+        
+        case RECIPES_CATEGORY_MISCELLANEOUS:
+            selectedNavLink = miscellaneousNavLink;
+            break;
+    }
+
+    if (pageLayoutsNavLink) {
+        pageLayoutsNavLink.classList.remove(SELECTED_CLASS);
+    }
+    if (contentLayoutsNavLink) {
+        contentLayoutsNavLink.classList.remove(SELECTED_CLASS);
+    }
+    if (navigationLayoutsNavLink) {
+        navigationLayoutsNavLink.classList.remove(SELECTED_CLASS);
+    }
+    if (miscellaneousNavLink) {
+        miscellaneousNavLink.classList.remove(SELECTED_CLASS);
+    }
+
+    if (selectedNavLink != null) {
+        selectedNavLink.classList.add(SELECTED_CLASS);
     }
 }
 

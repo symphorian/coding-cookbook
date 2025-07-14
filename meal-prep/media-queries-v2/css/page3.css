@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.nav {
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+}
+
+/*
+    Now, let's target our anchor elements. Anyone remember
+    how we can target the anchor elements that only reside
+    within a div that has a class of nav?
+
+    Let's give it a color of white, a text-decoration of 
+    none, a font-size of 1.25rem top and bottom padding of
+    20px and left and right margin of 10px.
+*/
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.25rem;
+    padding: 20px 0px;
+    margin-right: 40px;
+}
+/* 
+    We'll also target what's called a psuedo-class by
+    typing .nav a and attaching :last-of-type at the end
+    of the a with no spaces. The last-of-type psuedo-class
+    targets the last element of it's type in a group of 
+    siblings, in this case, it's targeting the last anchor
+    element in a group of anchor elements.
+
+    We need this css rule to prevent the last anchor element
+    from having margin on the right of it to avoid having
+    our elements not fully centered. We would have to do
+    something similar with margin-left, however, we'd be
+    calling the :first-of-type rather than the last.
+*/
+.nav a:last-of-type {
+    margin-right: 0px;
+}

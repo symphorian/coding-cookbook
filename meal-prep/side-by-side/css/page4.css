@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#single-column {
+    width: 90vw;
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+#card-container {
+    display: flex;
+    gap: 36px;
+}
+
+.card {
+    border: 5px solid #cf9dfc;
+    padding: 36px;
+    text-align: center;
+    margin: 36px 0px;
+}
+
+.card h3 {
+    font-size: 36px;
+    margin: 0px;
+}
+
+.card p {
+    font-size: 24px;
+    margin: 24px 0px 0px;
+}
+
+#side-by-side-container {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+/*
+    Go back to the HTML, and wrap the img element
+    in a new "image-container" div.
+
+    Once you've done that, update the selector below
+    to go from 
+        #side-by-side-container img
+    to
+        #side-by-side-container .image-container
+*/
+
+#side-by-side-container .image-container,
+#side-by-side-container h2 {
+    flex: 1;
+}
+
+/*
+    That still didn't change anything, but watch 
+    what happens when we add a width of 100% to our
+    image element...   
+*/
+#side-by-side-container .image-container img {
+    width: 100%;
+}
+
+/*
+    Holy cow! Look how much better that looks!
+
+    Now we can finally adjust the text size as well.
+*/
+
+#side-by-side-container h2 {
+    font-size: 60px;
+}
+
+/*
+    And with that, we have a very basic side by side
+    layout with an image and text!
+
+    You might even call it a "Media & Text" layout...
+
+    Ring any bells from WordPress?
+*/

@@ -27,6 +27,7 @@
                         <div class="dropdown-items">
                             <h2><a href="../ingredients.html">Elements</a></h2>
                             <h2><a href="../ingredients-cheatsheet.html">Cheatsheet</a></h2>
+                            <h2><a href="../html-checker.html">Dirty Code Report</a></h2>
                         </div>
                     </div>
                     <div class="dropdown-menu">
@@ -39,6 +40,7 @@
                         <div class="dropdown-items">
                             <h2><a href="../seasonings.html">Properties</a></h2>
                             <h2><a href="../seasonings-cheatsheet.html">Cheatsheet</a></h2>
+                            <h2><a href="../css-checker.html">Dirty Code Report</a></h2>
                         </div>
                     </div>
                     <div class="dropdown-menu">
@@ -57,14 +59,14 @@
                     </div>
                     <div class="dropdown-menu">
                         <h2 class="dropdown-trigger">
-                            <a href="../more.html">
+                            <a href="../more.html" class="selected">
                                 More
                                 <i class="fa-solid fa-chevron-down"></i>
                             </a>
                         </h2>
                         <div class="dropdown-items">
-                            <h2><a href="../demos.html">Class Demos</a></h2>
-                            <h2><a href="../appetizers.html">Tutorials</a></h2>
+                            <h2><a href="../appetizers.html" class="selected">Tutorials</a></h2>
+                            <h2><a href="../demos.html">Coding Demos</a></h2>
                             <h2><a href="../troubleshooting.html">Troubleshooting</a></h2>
                         </div>
                     </div>
@@ -99,7 +101,7 @@
                                 you first need to find someone/something to host it 
                                 for you.
                             </p>
-                            <p>
+                            <!-- <p>
                                 For most of the course, GitHub Pages has been 
                                 our hosting provider, creating a web site for us
                                 from all the HTML and CSS we've written.
@@ -108,14 +110,16 @@
                                 However, GitHub Pages cannot host something as 
                                 dynamic and complex as a CMS, so we need to use 
                                 an altenate hosting provider.
-                            </p>
+                            </p> -->
+                            
                             <p>
-                                The hosting provider we're going to be using is 
+                                The hosting provider we're going to be using
+                                for this first week of CMS is 
                                 called <b>Pantheon</b>.
                             </p>
                             <p>
                                 Visit the following link and click the big 
-                                yellow "Start Free" button on that page:
+                                yellow "Get Started" button on that page:
                             </p>
                             <p>
                                 <a
@@ -130,7 +134,7 @@
                         </div>
                         <div class="imageContainer">
                             <img 
-                                src="images/pantheon-wordpress-setup/01_pantheon_homepage.png" 
+                                src="images/pantheon-wordpress-setup/01_pantheon_homepage_v2.png" 
                                 alt="Click the Start Free button on the Pantheon Home page"
                             >
                             <figcaption>
@@ -144,79 +148,29 @@
                     <div class="sideBySide">
                         <div class="textContainer">
                             <p>
-                                On the next page, we'll be filling out some 
+                                On the next page(s), fill out the required 
                                 information to create your Pantheon account.
                             </p>
                             <p>
-                                You have two different options for how to sign 
-                                up:
-                                <ul>
-                                    <li>
-                                        Method #1 - Filling out the data fields 
-                                        manually 
-                                        <ul>
-                                            <li>
-                                                If choosing this approach, just 
-                                                enter "FIRST" for the 
-                                                <b>Company Name</b> field
-                                                (it doesn't really matter)
-                                            </li>
-                                            <li>
-                                                And use your personal email 
-                                                address for the <b>Work Email</b>
-                                                field
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        Method #2 - Using your Google account 
-                                        to auto-populate the data.
-                                    </li>
-                                </ul>
+                                You can sign up with your Google account,
+                                or an email address. Choose whichever method you're most 
+                                comfortable with.
+                            </p>
+                            <p class="indent">
+                                If you choose to sign up with an email address,
+                                you will be required to verify that email 
+                                address, so be sure to pick an email address
+                                with an Inbox you have access to.
                             </p>
                         </div>
                         <div class="imageContainer">
                             <img 
-                                src="images/pantheon-wordpress-setup/02_pantheon_signup.png" 
+                                src="images/pantheon-wordpress-setup/02_pantheon_signup_v3.png" 
                                 alt="Fill out the required data fields to create your account, or use Google to sign up"
                             >
                             <figcaption>
                                 Fill out the required data fields to create 
                                 your account, or use Google to sign up
-                            </figcaption>
-                        </div>
-                    </div>
-                    <div class="sideBySide">
-                        <div class="textContainer">
-                            <p>
-                                Sometimes Pantheon glitches out if you choose 
-                                Method #1 to sign up.  (It's not because of 
-                                anything you did wrong.)
-                            </p>
-                            <p>
-                                If this happens, you'll be brought to a
-                                different page to fill out an alternate 
-                                "backup" form.
-                            </p>
-                            <p>
-                                If you go with Method #1 again, fill out 
-                                the data fields once more, and click the 
-                                yellow "Create Account" button, it should 
-                                work this time.
-                            </p>
-                            <p>
-                                Alternatively, you could also change your mind 
-                                and use your Google account to sign up as well.
-                            </p>
-                        </div>
-                        <div class="imageContainer">
-                            <img 
-                                src="images/pantheon-wordpress-setup/02_pantheon_signup_2ndattempt.png" 
-                                alt="This is the 'backup' form for if something goes wrong on the first sign up page"
-                            >
-                            <figcaption>
-                                This is the 'backup' form for if something 
-                                goes wrong on the first sign up page
                             </figcaption>
                         </div>
                     </div>
@@ -226,13 +180,18 @@
                         <div class="textContainer">
                             <p>
                                 Once you've successfully created your account,
-                                you'll be asked to log in using the credentials
+                                you'll need to verify your email address before 
+                                you can log in with the credentials
                                 you just entered.
+                            </p>
+                            <p>
+                                After verifying your email address, go ahead
+                                and log in.
                             </p>
                         </div>
                         <div class="imageContainer">
                             <img 
-                                src="images/pantheon-wordpress-setup/03_pantheon_login.png" 
+                                src="images/pantheon-wordpress-setup/03_pantheon_login_v2.png" 
                                 alt="Log in page for your newly created Pantheon account"
                             >
                             <figcaption>
@@ -243,18 +202,86 @@
                     </div>
                 </li>
                 <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After logging in, you'll be asked to fill out a
+                                bit more information to finish creating your 
+                                account.
+                            </p>
+                            <p class="indent">
+                                NOTE: Pantheon changes their account creation flow 
+                                a couple times a year, so what you see as you 
+                                sign up may look a little different than the 
+                                screenshot.  That's okay, just fill out the 
+                                required fields that it needs from you.
+                            </p>
+                            <p>
+                                Fill out the required fields, and click the 
+                                [Continue] button.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/pantheon-wordpress-setup/03_5_pantheon_registration.png" 
+                                alt="Completing your Pantheon Account registration"
+                            >
+                            <figcaption>
+                                Completing your Pantheon Account registration
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After creating your account, you may be asked to 
+                                fill out more information related to 
+                                customization options in a new popup that 
+                                appears.
+                            </p>
+                            <p>
+                                These are optional, and we recommend just
+                                clicking the X in the upper right corner to
+                                close the popup.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/pantheon-wordpress-setup/03_6_customization.png" 
+                                alt="The customization options popup"
+                            >
+                            <figcaption>
+                                The customization options popup
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
                     <h2 id="p1_step4" class="invisibleInnerAnchorTarget"></h2>
                     <div class="sideBySide">
                         <div class="textContainer">
                             <p>
                                 After logging in, you'll be brought to your 
-                                Pantheon Home page, which should resemble the 
-                                screenshot to the right.
+                                Pantheon Home page, which should somewhat 
+                                resemble the screenshot to the right.
+                            </p>
+                            <p class="indent">
+                                NOTE: However, as we've said before, Pantheon 
+                                changes up their account creation flow
+                                periodically, so you may end up on a slightly 
+                                different view after creating your account.
+                            </p>
+                            <p class="indent">
+                                If that is the case, just click on the "Home"
+                                tab in the left sidenav, and that should bring 
+                                you to where you need to be.
                             </p>
                         </div>
                         <div class="imageContainer">
                             <img 
-                                src="images/pantheon-wordpress-setup/04_pantheon_createbutton.png" 
+                                src="images/pantheon-wordpress-setup/04_pantheon_createbutton_alt_v3.png" 
                                 alt="Your Pantheon Home page"
                             >
                             <figcaption>
@@ -282,22 +309,26 @@
                                 Now that you have your Pantheon account setup, 
                                 we can create a Pantheon site.
                             </p>
-                            <p>
+                            <!-- <p>
                                 This is similar to how we setup GitHub Pages,
                                 but whereas GitHub only lets us have one
                                 website, Pantheon allows us to set up two 
                                 websites for free.
-                            </p>
+                            </p> -->
                             <p>
                                 Creating a Pantheon site is kind of like 
                                 securing the land to build a house; once we 
                                 create our Pantheon site, we can begin building
                                 (installing) our house (WordPress).
                             </p>
+                            <p>
+                                Click the [Create New Site] button to get
+                                started.
+                            </p>
                         </div>
                         <div class="imageContainer">
                             <img 
-                                src="images/pantheon-wordpress-setup/04_pantheon_createbutton.png" 
+                                src="images/pantheon-wordpress-setup/04_pantheon_createbutton_v2.png" 
                                 alt="Clicking the Create New Site button on your Pantheon Home page" 
                             >
                             <figcaption>Clicking the Create New Site button on your Pantheon Home page</figcaption>
@@ -311,8 +342,8 @@
                                 the navigation on the left.
                             </p>
                             <p>
-                                There, you will find a similar yellow button 
-                                that says "Create a Free Site".
+                                There, you will find a similar button 
+                                that says [Create a Free Site].
                             </p>
                             <p>
                                 This will take you into the same workflow as 
@@ -321,7 +352,7 @@
                         </div>
                         <div class="imageContainer">
                             <img 
-                                src="images/pantheon-wordpress-setup/04_pantheon_createbutton_alt.png" 
+                                src="images/pantheon-wordpress-setup/04_pantheon_createbutton_alt_v2.png" 
                                 alt="Alternate way of creating a new site via the Sites page" 
                             >
                             <figcaption>Alternate way of creating a new site via the Sites page</figcaption>
@@ -339,7 +370,7 @@
                         </div>
                         <div class="imageContainer">
                             <img 
-                                src="images/pantheon-wordpress-setup/05_pantheon_createsite.png" 
+                                src="images/pantheon-wordpress-setup/05_pantheon_createsite_v2.png" 
                                 alt="Selecting the WordPress option on the 'Create a Site' page" 
                             >
                             <figcaption>
@@ -368,14 +399,14 @@
                                 assignment and name the site as required.
                             </p>
                             <p class="indent">
-                                Typically this will follow the format of<br> 
+                                For our course, this will follow the format of<br> 
                                 <i>firstname-lastname-[sitetype]</i><br>
                             </p>
                             <p>
                                 Leave the Site Region as "United States".
                             </p>
                             <p>
-                                Then click the yellow "Continue" button.
+                                Then click the yellow [Continue] button.
                             </p>
                         </div>
                         <div class="imageContainer">
@@ -407,7 +438,7 @@
                         </div>
                         <div class="imageContainer">
                             <img 
-                                src="images/pantheon-wordpress-setup/07_pantheon_createsite_inprogress.png" 
+                                src="images/pantheon-wordpress-setup/07_pantheon_createsite_inprogress_v2.png" 
                                 alt="Waiting for Pantheon to build your site" 
                             >
                             <figcaption>
@@ -424,13 +455,13 @@
                                 and turn green when the process is complete.
                             </p>
                             <p>
-                                Click the yellow "Visit your Pantheon 
-                                Site Dashboard" button.
+                                Click the yellow [Visit your Pantheon 
+                                Site Dashboard] button.
                             </p>
                         </div>
                         <div class="imageContainer">
                             <img 
-                                src="images/pantheon-wordpress-setup/08_pantheon_createsite_complete.png" 
+                                src="images/pantheon-wordpress-setup/08_pantheon_createsite_complete_v2.png" 
                                 alt="Pantheon finished creating your site" 
                             >
                             <figcaption>
@@ -458,19 +489,26 @@
                                 WordPress site.
                             </p>
                             <p>
-                                ...however, there's really only two buttons 
-                                you need to worry about in this course 
-                                (found right beneath the 'Dev' tab, which is 
-                                right beneath your site name):
+                                This page looks pretty busy, but there's really 
+                                only two buttons 
+                                you need to worry about in this course:
                                 <ul>
-                                    <li>Visit Development Site</li>
                                     <li>Site Admin</li>
+                                    <li>Clear Caches</li>
                                 </ul>
+                            </p>
+                            <p>
+                                The [Site Admin] button is important for 
+                                <em>working</em> on assignments.
+                            </p>
+                            <p>
+                                The [Clear Caches] button is important for 
+                                <em>submitting</em> assignments.
                             </p>
                         </div>
                         <div class="imageContainer">
                             <img
-                                src="images/pantheon-wordpress-setup/09_pantheon_site_dashboard.png"
+                                src="images/pantheon-wordpress-setup/09_pantheon_site_dashboard_v2.png"
                                 alt="The Dashboard of your Pantheon Site"
                             />
                             <figcaption>
@@ -495,11 +533,12 @@
                     <div class="sideBySide">
                         <div class="textContainer">
                             <p>
-                                If you haven't already, navigate to your 
+                                By now, you should be on your 
                                 <b>Pantheon Site</b> Dashboard.
                             </p>
                             <p class="indent">
-                                This can be found by clicking on the Sites tab 
+                                If you aren't,
+                                this can be found by clicking on the Sites tab 
                                 in the far left navigation bar, and then 
                                 clicking on the site name you want to access 
                                 the dashboard for.
@@ -507,13 +546,13 @@
                             <p>
                                 Once on the <b>Pantheon Site</b> Dashboard for 
                                 the site you want to work with, click on the 
-                                "Site Admin" button underneath the Dev tab,
+                                [Site Admin] button underneath the Dev tab,
                                 underneath the name of your site.
                             </p>
                         </div>
                         <div class="imageContainer">
                             <img
-                                src="images/pantheon-wordpress-setup/09_pantheon_site_dashboard.png"
+                                src="images/pantheon-wordpress-setup/09_pantheon_site_dashboard_v2_justsiteadmin.png"
                                 alt="Clicking on the Site Admin button"
                             />
                             <figcaption>
@@ -543,7 +582,7 @@
                             </p>
                             <p>
                                 Leave the language as "English (United States)",
-                                and click the blue "Continue" button.
+                                and click the blue [Continue] button.
                             </p>
                         </div>
                         <div class="imageContainer">
@@ -585,9 +624,13 @@
                                 password when you set up a second WordPress site.
                             </p>   
                             <p>
-                                Aside from the <b>Username</b> and <b>Password</b>, 
-                                fill out the <b>Site Title</b> based on the 
+                                As for the <b>Site Title</b>, 
+                                fill out the text field based on the 
                                 instructions in your assignment.
+                            </p>
+                            <p class="indent">
+                                If you've forgotten what to fill out here,
+                                go back to the assignment!
                             </p>
                             <p>
                                 <b>Your Email</b> is not actually used for 
@@ -599,7 +642,7 @@
                                 checkbox unchecked.
                             </p>
                             <p>
-                                Finally, click the "Install Wordpress" button
+                                Finally, click the [Install Wordpress] button
                                 when you're done.
                             </p>
                         </div>
@@ -623,7 +666,7 @@
                                 chosen Username.
                             </p>
                             <p>
-                                Click the "Log In" to log into WordPress 
+                                Click the "Log In" link to log into WordPress 
                                 with the credentials you just specified.
                             </p>
                         </div>
@@ -702,13 +745,14 @@
                                 This is actually your WordPress site, but
                                 at the moment, there's still a lot of placeholder
                                 content, such as "Mindblown: a blog about 
-                                philosophy".
+                                philosophy" in the screenshot to the right; 
+                                this content is set using the default
+                                WordPress Theme, which changes every year.
                             </p>
                             <p class="indent">
-                                Don't worry, we're not going to be writing 
-                                anything related to philosophy in this class 
-                                (unless you choose to!).
-                                We'll change the placeholder content later.
+                                Don't worry, as you'll see soon, we can
+                                customize all of this! For now, just ignore 
+                                the default Theme content.
                             </p>
                             <p>
                                 Notice how the home icon in the top left 
@@ -738,7 +782,7 @@
                         </div>
                         <div class="imageContainer">
                             <img 
-                                src="images/pantheon-wordpress-setup/14_wordpress_livesite.png" 
+                                src="images/pantheon-wordpress-setup/14_wordpress_livesite_v2.png" 
                                 alt="The live version of your WordPress site"
                             >
                             <figcaption>

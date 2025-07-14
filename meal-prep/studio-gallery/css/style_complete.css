@@ -70,7 +70,16 @@
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    margin-top: 4px;
+    /*
+        The CSS Property below addresses that peculiar
+        styling bug where images can have a gap or 
+        more spacing beneath them that we didn't give 
+        them.
+
+        By setting display: block; we get rid of this
+        unwanted extra space below it.
+    */
+    display: block;
 }
 
 .frame-4 h2 {

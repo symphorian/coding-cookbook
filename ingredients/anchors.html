@@ -11,73 +11,40 @@
         <p>
             The anchor element (also known as a link or hyperlink) can be used 
             to navigate the user to a different location on the current page,
-            or to a different page entirely, as in the example below.
-        </p>
-        <p>
-            <a href="https://www.google.com" target="_blank">
-                Click me to visit Google's home page
-            </a>
-        </p>
-        <p>
-            To use anchor elements, you will need to provide a hyperlink 
-            reference (href) attribute.  If you want to link to a different 
-            page, you can just provide the URL you want to link to (although,
-            if you're navigating a user off of your site, it is generally 
-            good practice to open that page in another tab.  You can do so 
-            by including this attribute name and value: target="_blank")
+            or to a different page entirely.
         </p>
         <p>
             By default, anchor elements are inline elements, meaning they will
             appear "in line" with other text around them.  So if we add three 
             anchor elements right here:
-            <a href="#section1">Go to Section 1</a>
-            <a href="#section2">Go to Section 2</a>
-            <a href="#section3">Go to Section 3</a>
-            They will all line up right next to each other.
+            <a href="anchors-external.html">External Hyperlinks</a>
+            <a href="anchors-internal.html">Internal Hyperlinks</a>
+            <a href="#">Dummy Anchor</a>
+            They will all line up right next to each other, even though if you 
+            look in the code, you'll see they're on separate lines.
         </p>
         <p>
-            That usually isn't what we want, so we often put anchor elements
-            inside of other elements for better spacing and layouts. For 
-            instance, an unordered list:
+            To use anchor elements, you will need to provide a hyperlink 
+            reference, or 'href', attribute.  Depending on what you provide to 
+            the href attribute, you can create either an 
+            <b>external hyperlink</b> or an <b>internal link</b>.
+            Because these concepts can get rather complex, we have split them 
+            up into their own Cookbook pages.
         </p>
-        <ul>
-            <li>
-                <a href="#section1">Go to Section 1</a>
-            </li>
-            <li>
-                <a href="#section2">Go to Section 2</a>
-            </li>
-            <li>
-                <a href="#section3">Go to Section 3</a>
-            </li>
-        </ul>
         <p>
-            If you want to use anchor elements to link to another part of 
-            the page, you'll need to do two things:
+            To learn more, visit the links below (which are external hyperlinks
+            to a different page on the same site):
         </p>
-        <ol>
-            <li>
-                On the element you want to link to, set up an id attribute 
-            </li>
-            <li>
-                On the anchor you want to link from, grab the id attribute 
-                value of the element you want to link to, and set that in 
-                the anchor's href attribute, and put a # in front of it.
-            </li>
-        </ol>
         <p>
-            For example the three anchors above have their hrefs set to 
-            "#section1", "#section2", and "#section3" respectively.
-            And the three headings below have matching id attribute 
-            values of "section1", "section2", and "section3". Try 
-            clicking on the anchors and see how they jump you down to
-            the headings with the matching ids.
+            <a href="anchors-external.html">
+                Click me to visit the External Hyperlinks Pages
+            </a>
         </p>
-        <h3 id="section1">Section 1</h3>
-        <p class="extraSpace"></p>
-        <h3 id="section2">Section 2</h3>
-        <p class="extraSpace"></p>
-        <h3 id="section3">Section 3</h3>
-        <p class="extraSpace"></p>
+        
+        <p>
+            <a href="anchors-internal.html">
+                Click me to visit the Internal Hyperlinks Pages
+            </a>
+        </p>
     </body>
 </html>

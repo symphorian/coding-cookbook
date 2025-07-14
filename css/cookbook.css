@@ -139,6 +139,11 @@ nav {
     color: #1a3159;
 }
 
+#topHeader a.selected,
+#topHeader #navLinks .dropdown-items a.selected {
+    background-color: #546a90;
+}
+
 /*****************************************************
   BOTTOM HEADERS AND BUTTONS
 *****************************************************/
@@ -365,7 +370,7 @@ body.noComments .cookbookButtons #commentsButton #hideCommentsLabel {
 .cookbookPage,
 #cookbookPage.recipeCards {
     display: block;
-    background-color: #FFFFFFDD;
+    background-color: #FFFFFFEE;
     border-radius: 45px;
     margin: 36px;
     padding: 24px;
@@ -475,7 +480,7 @@ body.noComments .cookbookButtons #commentsButton #hideCommentsLabel {
 *****************************************************/
 
 #cookbookPage.recipeList {
-    background-color: #FFFFFFDD;
+    background-color: #FFFFFFEE;
     border-radius: 45px;
     display: flex;
     min-height: 500px;
@@ -554,7 +559,7 @@ body.noComments .cookbookButtons #commentsButton #hideCommentsLabel {
 **********************************************************/
 
 #cookbookPage.recipeDetails {
-    background-color: #FFFFFFDD;
+    background-color: #FFFFFFEE;
     border-radius: 45px;
     display: flex;
     min-height: 500px;
@@ -791,7 +796,8 @@ body.noComments #cssPreview .cssBlock .terminator::after {
 #cookbookPage.fadeIn,
 #viewButtons.fadeIn,
 #detailsButtons.fadeIn,
-#title.fadeIn {
+#title.fadeIn,
+div.fadeIn {
     animation: fadeIn 0.3s;
     animation-fill-mode: forwards;
 }

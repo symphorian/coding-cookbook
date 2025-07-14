@@ -1,0 +1,212 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.nav {
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+}
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.25rem;
+    padding: 20px 0px;
+    margin-right: 40px;
+}
+.nav a:last-of-type {
+    margin-right: 0px;
+}
+
+.header {
+    width: 90vw;
+    max-width: 800px;
+    margin: 25px auto;
+    display: flex;
+    align-items: center;
+}
+
+.header .image-container {
+    flex: 1;
+    height: 400px;
+}
+.image-container img {
+    height: 100%;
+    border-radius: 25px;
+}
+
+.header .content {
+    flex: 1;
+    margin-left: 50px;
+}
+.content h1 {
+    font-size: 3rem;
+    color: #ffb700;
+    margin: 0px 0px 15px;
+}
+.content p {
+    margin: 0px;
+}
+
+.featured {
+    background-color: #222;
+    color: white;
+    padding: 25px 0px;
+}
+.featured h2 {
+    font-size: 2.25rem;
+    text-align: center;
+}
+
+
+.grid {
+    width: 90vw;
+    max-width: 800px;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 300px;
+    gap: 15px;
+    grid-template-areas:
+        "txt1 img1 img2 img2"   
+        "img3 img3 img4 txt2"
+    ;
+}
+.grid img {
+    height: 100%;
+    border-radius: 25px;
+}
+.grid p {
+    border: 1px solid #ffb700;
+    padding: 20px;
+    margin: 0px;
+    border-radius: 25px;
+}
+#p1 {
+    grid-area: txt1;
+}
+#p2 {
+    grid-area: txt2;
+}
+#img1 {
+    grid-area: img1;
+}
+#img2 {
+    grid-area: img2;
+}
+#img3 {
+    grid-area: img3;
+}
+#img4 {
+    grid-area: img4;
+}
+
+@media screen and (max-width: 768px) and (min-width: 481px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "txt1 img1"
+            "img2 img2"
+            "img3 img3"
+            "img4 txt2"
+        ;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav a {
+        font-size: 1rem;
+        margin: 0px;
+    }
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .header .image-container {
+        order: 2;
+        flex: auto;
+        width: 100%;
+    }
+    .header .content {
+        order: 1;
+        margin-left: 0px;
+        margin-bottom: 25px;
+    }
+    .content h1 {
+        font-size: 2.5rem;
+    }
+
+    /*
+        We're going to start working on our featured photos
+        section Let's start with a simple font size change!
+        Who can tell me how we'd change the font for the h2?
+
+        Yup! we can just call .featured h2 and change the
+        font-size: 1.75rem;
+    */
+    .featured h2 {
+        font-size: 1.75rem;
+    }
+
+    /*
+        Now, we're going to rearrange our grid one more. This
+        time, we're aiming for a single column grid. Can anyone
+        remember how we should go about changing this?
+
+        We're going to change our grid-template-columns to 1fr.
+
+        Then, we can go ahead and restructure our grid-template-areas
+        to be single column.
+
+        We'll have txt1 in row 1
+        img1 in row 2
+        img2 in row 3
+        img3 in row 4
+        img4 in row 5
+        and txt2 in row 6.
+
+        Now our grid is a single column.
+    */
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "txt1"
+            "img1"
+            "img2"
+            "img3"
+            "img4"
+            "txt2"
+        ;
+    }
+
+    /*
+        For some extra design tweaks, lets center our
+        paragraph content vertically and horizontally.
+
+        We can do that by targetting our .grid p and giving
+        it a display of flex and applying a center value
+        to justify-content and align-items.
+    */
+    .grid p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+/*
+    And that will conclude our demo on media queries! Any
+    questions?
+*/

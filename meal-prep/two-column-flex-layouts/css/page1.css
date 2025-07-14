@@ -16,14 +16,14 @@ body {
     functionality on our #two-columns container.
 
     You should have gone through the Flexbox 
-    powerpoint by now, but still call out the 
+    powerpoint by now, but still recall the 
     important differences between Flexbox 
     Container and Flexbox Item properties
-    as much as you can (they will CONSTANTLY
-    be mixing these properties up, most likely).
+    as much as you can (it is very easy for
+    new developers to mix these up).
 
     Activating a Flexbox with display is 
-    something that should only go on the 
+    something that should only be done on the 
     Container, not on any Items inside the
     container (unless we have any flexboxes
     inside of flexboxes going on).

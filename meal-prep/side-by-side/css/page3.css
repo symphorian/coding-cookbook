@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#single-column {
+    width: 90vw;
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+#card-container {
+    display: flex;
+    gap: 36px;
+}
+
+.card {
+    border: 5px solid #cf9dfc;
+    padding: 36px;
+    text-align: center;
+    margin: 36px 0px;
+}
+
+.card h3 {
+    font-size: 36px;
+    margin: 0px;
+}
+
+.card p {
+    font-size: 24px;
+    margin: 24px 0px 0px;
+}
+
+/*
+    Now, let's try out another side by side layout:
+    a more generic one with an image and text side
+    by side, that nonetheless is a VERY common layout
+    across the web.
+
+    We're going to go back to the HTML, and continue
+    using the single-column page layout we created,
+    but add a new content layout container inside.
+
+    Come back here when you're done with the HTML.
+*/
+
+/*
+    As usual, when we add an image, it is jumbo-sized,
+    so we definitely need to resize it soon.
+
+    But let's focus on the "side-by-side-container"
+    first.  How do we get the image and text to actually
+    be side by side?
+
+    Again, flexbox makes this very simple!
+
+    Target the "side-by-side-container", and activate 
+    flexbox on it, along with the gap property once again,
+    just like we did before. But let's also add align-items
+    so that we can get the text vertically centered 
+    next to the image too.
+*/
+#side-by-side-container {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+/*
+    Now, we have the image and text side by side!
+
+    ...but it still looks terrible.  We need to start
+    balancing things out, decreasing the size of the 
+    image, and increasing the size of the text.
+
+    For the balance and sizing of the image, we could
+    use the flex property on the two flexbox items.
+*/
+
+#side-by-side-container img,
+#side-by-side-container h2 {
+    flex: 1;
+}
+
+/*
+    ...but it doesn't look like that worked.
+
+    Why?
+
+    Both the img and the h2 have the same flex value,
+    so shouldn't they be the same size?
+
+    Yes, but remember that flexbox is "flexible" when
+    it comes to sizes.  It will try its best to size
+    things as we tell it, but if there isn't enough
+    space, then it won't be able to.
+
+    Unfortunately, that img element's natural size is
+    still quite large, so the flex property won't
+    work on it directly.
+
+    BUT! There is a way for us to have the image become
+    more "flexible", and interact a bit better with the
+    flexbox container.
+
+    However, to do so, we need to restructure our HTML.
+    
+*/

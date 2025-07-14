@@ -7,6 +7,19 @@ body {
     font-family: sans-serif;
 }
 
+/*
+    Before we move on and create a new hero,
+    let's add some spacing below our first hero,
+    so we don't have our heroes right up against
+    each other.
+
+    Normally, we don't have multiple heroes on the 
+    same page anyway, but it is still a good idea
+    to add spacing below a hero, because we don't
+    want our page content to be smashed up against 
+    it either.
+*/
+
 #hero-1 {
     background-image: url("../images/lizard.jpg");
     height: 100vh;
@@ -15,11 +28,12 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin-bottom: 100px; /* new */
 }
 
 #hero-1 h1 {
-    font-size: 15vw;
-    padding-left: 10vw;
+    font-size: 120px; 
+    padding-left: 100px;
 }
 
 /*
@@ -30,19 +44,7 @@ body {
 */
 
 /*
-    First, we'll style our spacer, basically just
-    giving it a height and nothing else.
-
-    This class's only purpose is to add empty space
-    between our two heroes, just so we can keep
-    them visually separate in the demo.
-*/
-.spacer {
-    height: 50vh;
-}
-
-/*
-    After that, we'll create another hero, 
+    Now we'll start styling another hero, 
     starting with the background properties.
 
     We'll use an image with the focus on the

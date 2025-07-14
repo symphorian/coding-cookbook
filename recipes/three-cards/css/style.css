@@ -7,7 +7,12 @@ body {
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
 }
-
+/*
+    This is an alternate way of setting up a
+    Centered Single Column Page Layout,
+    focusing on the upper and lower limits
+    that the width should grow or shrink to.
+*/
 .single-column {
     min-width: 600px;
     max-width: 1200px;

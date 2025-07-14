@@ -15,15 +15,12 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin-bottom: 100px;
 }
 
 #hero-1 h1 {
-    font-size: 15vw;
-    padding-left: 10vw;
-}
-
-.spacer {
-    height: 50vh;
+    font-size: 120px; 
+    padding-left: 100px;
 }
 
 /*
@@ -39,7 +36,8 @@ body {
     no longer align in the same directions either.
 
     So, we need to make a couple more changes to
-    our flexbox properties.
+    our flexbox properties, as well as adding one 
+    other property.
 */
 #hero-2 {
     background-image: url("../images/lonely-ocean.jpg");
@@ -47,39 +45,60 @@ body {
     background-size: cover;
     background-position: center center;
     display: flex;
+
+    /* 
+        Here's what we're changing with regards 
+        to flexbox:
+
+    */
     flex-direction: column; /* new */
     justify-content: center; /* changed so it's now vertically centered */
     align-items: flex-end; /* changed so it's now horizontally right */
+
+    /*
+        And here's one other thing we're changing:
+        adding padding.
+
+        We could add padding or margin to each text
+        element individually, but that's working
+        harder, rather than smarter!
+    */
+    padding-right: 60px;
 }
 
 /*
     With that out of the way, now we can style
     our text elements (along with adding in some
     fake button styling for our CTA).
-
-    These margin and padding value are somewhat
-    arbitrary, so feel free to try out different 
-    ones, but remember that we want to keep the 
-    text away from the focus of the image.
 */
 
 #hero-2 h2 {
-    font-size: 8vw;
-    margin-bottom: 5vh;
-    margin-right: 5vw;
+    font-size: 72px;
+    margin-bottom: 36px;
 }
 
 #hero-2 h4 {
-    font-size: 3vw;
-    margin: 0px 5vw 0px 0px;
+    font-size: 24px;
+    margin: 0px;
 }
 
 #hero-2 a {
-    font-size: 1.5vw;
+    font-size: 14px;
     display: inline-block;
     background-color: #333333;
     color: white;
     text-decoration: none;
     padding: 24px;
-    margin: 5vh 5vw 10vh 0px;
+    margin-top: 36px;
 }
+
+/* 
+    While we positioned out hero content in a
+    different way, we still run into the same
+    problem with our padding and margin: 
+
+    we can't position our content well without
+    going over 100px...
+
+    ...which must mean there is still a better way!
+*/

@@ -1,0 +1,366 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+#report,
+#inputContainer {
+    background-color: #FFFFFFEE;
+    margin: 48px;
+    border: 5px solid #1a3159;
+    border-radius: 45px;
+}
+
+#inputContainer form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 24px 48px;
+    gap: 24px 60px;
+}
+
+#inputContainer h2 {
+    flex: 1;
+}
+
+#inputContainer form #textInputContainer {
+    flex: 1;
+}
+#inputContainer form #orContainer {
+    font-size: 48px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+#inputContainer form #urlInputContainer {
+    flex: 1;
+}
+#inputContainer form #buttonContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 48px;  
+}
+
+#inputContainer textarea {
+    min-height: 60px;
+}
+
+#inputContainer textarea,
+#inputContainer input {
+    min-width: 100%;
+}
+
+#inputContainer input,
+#inputContainer textarea {
+    border: 3px solid #ff7050;
+    outline: 0px;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+#inputContainer button {
+    background-color: #ff7050;
+    border: 3px solid #ff7050;
+    border-radius: 16px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 6px 12px;
+    margin-top: 12px;
+    min-width: 200px;
+    transition: transform 0.25s;
+}
+
+
+#inputContainer button:hover {
+    transform: scale(1.05);
+}
+
+#inputContainer button#clear {
+    background-color: white;
+    color: #ff7050;
+}
+
+#inputContainer .buttonContainer {
+    display: flex;
+    gap: 24px;
+}
+
+#inputContainer .buttonContainer button {
+    flex: 1;
+    min-width: auto;
+}
+
+#report {
+    opacity: 0;
+}
+
+#report #reportHeader {
+    background-color: #1a3159;
+    color: white;
+    text-align: center;
+    padding: 24px;
+    margin: 0px;
+    border-radius: 32px 32px 0px 0px;
+}
+
+#report #innerReportContainer {
+    padding: 24px 48px;
+}
+
+#report #overall {
+    display: flex;
+    align-items: center;
+}
+
+#report #overall,
+h4,
+#issuesListContainer p,
+#issuesListContainer #issuesList,
+#helperContainer {
+    padding: 0px 24px;
+}
+
+p:last-of-type {
+    margin-bottom: 36px;
+}
+
+h4 {
+    
+}
+
+h6 {
+    font-size: 12px;
+    margin-top: 0px;
+}
+
+#overall #lineStats {
+    flex: 1;
+}
+
+#overall h2 {
+    font-size: 36px;
+}
+
+#overall #dirtyPercent {
+    font-size: 72px;
+}
+
+#overall,
+#issuesList,
+#legendOuterContainer {
+    background-color: white;
+    border: 3px solid #ff7050;
+    border-radius: 12px;
+    box-shadow: 4px 4px 4px #00000033;
+    margin: 0px 24px;
+}
+
+#legendOuterContainer {
+    padding: 24px;
+    margin: 0px;
+}
+
+#issuesList .issue {
+    margin: 24px 0px;
+}
+
+#issuesListContainer,
+#cleanupHelperHeading {
+    padding-top: 36px;
+}
+
+#legendContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 12px;
+}
+
+#legendContainer > div {
+    width: 290px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#legendContainer .block {
+    display: inline-block;
+    border: 3px solid black;
+    width: 25px;
+    height: 25px;
+}
+
+#legendContainer > div div {
+    flex: 1;
+}
+
+#layout {
+    display: flex;
+    gap: 24px;
+}
+
+#layout > div {
+    flex: 1;
+    overflow-x: scroll;
+    padding: 24px;
+}
+
+#rawInput,
+#cleanedInput {
+    font-family: monospace;
+}
+
+.line {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    
+}
+
+.lineNumber,
+.lineContent {
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.line:hover,
+.lineContent:hover,
+.lightblue {
+    background-color: aliceblue;
+}
+
+.line.dirty:hover,
+.line.dirty .lineContent:hover,
+.pink {
+    background-color: #fff0f1;
+    cursor: help;
+}
+
+.lineNumber {
+    width: 100%;
+    background-color: #CCCCCC;
+}
+
+.line.dirty .lineNumber,
+.red {
+    background-color: red;
+}
+
+.lineContent {
+    background-color: white;
+    white-space: nowrap;
+}
+
+.goodIndent,
+.lightgreen {
+    background-color: lightgreen;
+}
+
+.fixIndent,
+.orange {
+    background-color: orange;
+}
+
+.badIndent,
+.lightred {
+    background-color: lightcoral;
+}
+
+.line.areMarried,
+.line.areMarried .lineContent,
+.purple {
+    background-color: rgb(254, 218, 254);
+}
+
+@media screen and (max-width: 1400px) {
+    #layout {
+        flex-direction: column;
+    }
+
+    #overall {
+        gap: 36px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #inputContainer form {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #inputContainer form #orContainer {
+        align-self: center;
+        font-size: 36px;
+    }
+
+    #inputContainer button {
+        flex: 1;
+    }
+
+    #overall {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 0px;
+    }
+
+    #overall h2 {
+        margin-bottom: 0px;
+    }
+
+    #layout > div {
+        padding: 0px;
+    }
+
+    #legendOuterContainer h6 {
+        margin-bottom: 16px;
+    }
+
+    #report #innerReportContainer {
+        padding: 24px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #inputContainer,
+    #report {
+        margin: 24px;
+    }
+
+    #inputContainer form {
+        padding: 24px;
+    }
+
+    #inputContainer button {
+        min-width: auto;
+    }
+
+    #overall h2 {
+        font-size: 24px;
+    }
+
+    #overall #dirtyPercent {
+        font-size: 36px;
+    }
+
+    #report #overall,
+    h4,
+    #issuesListContainer p,
+    #helperContainer {
+        padding: 0px;
+    }
+
+    #overall, 
+    #issuesList, 
+    #legendOuterContainer {
+        margin: 0px;
+    }
+}

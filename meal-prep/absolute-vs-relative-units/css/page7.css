@@ -56,14 +56,16 @@
 }
 
 /*
-    If any students ask why width: 50%; doesn't work,
-    it's because that 50% currently doesnt' include
-    any margin or padding, which together would add
-    up to more than 100%, so the paragraph and image
-    would be forced to different lines.
+    (If you are wondering why width: 50%; doesn't work,
+    it's because that 50% currently only includes the 
+    "content" part of the Box Model, which doesn't 
+    include any border or padding; all that together 
+    would add up to more than 100%, so the paragraph 
+    and image would be forced to wrap. 
+    We will show you a way to address this later.)
 
     Now, as before, stretch and squish the preview 
-    window, and notices how the paragraph and image
+    window, and notice how the paragraph and image
     (and the containers themselves) flex to fill the
     window, since we gave them a relative width.
 */

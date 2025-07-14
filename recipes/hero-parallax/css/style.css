@@ -13,25 +13,35 @@ body {
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-    display: flex;
-    justify-content: flex-end;
+    position: relative;
+    margin-bottom: 100px;
 }
 
 #hero-5 .hero-content {
     text-align: right;
-    color: rgb(2, 2, 2);
-    padding: 5vh 8vw;
+    position: absolute;
+    top: 5%;
+    right: 10%;
 }
 
 #hero-5 h2 {
-    font-size: 6vw;
-    margin-bottom: 3vh;
+    font-size: 120px;
+    margin-bottom: 60px;
 }
 
 #hero-5 h4 {
-    font-size: 3vw;
+    font-size: 48px;
 }
 
-.spacer {
+/* filler section, unrelated to the hero styling */
+#main {
     height: 100vh;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+p {
+    font-size: 20px;
 }

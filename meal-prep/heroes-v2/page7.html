@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Heroes (Demo)</title>
+        <link href="css/page7.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="hero-1">
+            <h1>Sup?</h1>
+        </div>
+
+        <div id="hero-2">
+            <h2>Feeling lost?</h2>
+            <h4>Don't worry, so are we</h4>
+            <a href="#">REQUEST ASSISTANCE</a>
+        </div>
+
+        <!--
+            Add a new hero with a more complex layout.
+
+            (normally, we might just start with 
+            the h2, h4, and div w/ anchors but...)
+
+            Flexbox is nice when we want everything
+            going in the same direction, but if we 
+            introduce more complex content, oftentimes
+            it is easier to just group the whole
+            thing together and move/style everything
+            as a group ("hero-content")
+
+            (...so instead, we'll wrap the h2, h4, etc. 
+            in the hero-content div container. This will
+            help us later on.)
+        -->
+        <div id="hero-3">
+            <div class="hero-content">
+                <h2>Relax</h2>
+                <h4>Take a deep breath</h4>
+                <div>
+                    <a href="#">BREATHE IN</a>
+                    <a href="#">BREATHE OUT</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -4,15 +4,21 @@
     The CSS is pretty straightforward once you
     have the containers set up correctly.
 
-    However, students often have trouble
-    understanding the concept of putting two
-    selectors together.
+    However, you will likely need to review the
+    different ways of combining selectors
+    together.
 
-    Try to emphasize as much as possible that
-    when you have two selectors separated
-    by a space, your telling the CSS to 
-    target what's on the right ONLY when it
+    Remember that when you have two selectors 
+    separated by a space, you're telling the CSS 
+    to target what's on the right ONLY when it
     is found inside of what's on the left.
+
+    In the solution below, we are telling CSS to
+        "target any Paragraph Elements inside of 
+        an element with the 'orange' class",
+    which is rather backwards from how we actually
+    write it in CSS.
+
 */
 
 .orange p {

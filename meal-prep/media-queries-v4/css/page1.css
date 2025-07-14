@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+/* 
+    Our nav just BARELY fits when the screen is
+    400px wide, and the nav item text starts to 
+    wrap.  If we shrink the screen further, the
+    nav items start to overflow off the edge of
+    the page.  That's not good!
+
+    We need a way to keep all of the nav items
+    on the screen, without having them overflow.
+
+    How can we make this happen?
+
+    One of the methods from the Responsiveness
+    powerpoint should hopefully come to mind: 
+    if your page needs to be more responsive,
+    take side-by-side content and stack it!
+
+    And how can we stack the content in our nav?
+    
+    With Flexbox Properties! With Flexbox, we
+    actually have a couple different options
+    when it comes to side-by-side content: 
+    we can either allow the Flexbox Items
+    to wrap, or we can convert the Flexbox
+    from a row to a column.
+*/
+
+#nav {
+    background-color: #222222;
+    display: flex;
+    justify-content: center;
+    /* 
+        DEMO NOTE: We're going to try out the 
+        commented properties below and uncomment 
+        them one at a time, but just realize 
+        we'll be removing (or commenting them out) 
+        again shortly after. 
+
+        We'll start with flex-wrap.
+    */
+
+    /* flex-wrap: wrap; */
+
+    /*
+        Try shrinking the screen and see how 
+        our nav behaves. Allowing the Flexbox 
+        Items to wrap actually doesn't look that 
+        bad, although depending on the screen
+        width, it can look a little unbalanced.  
+        
+        So let's comment out flex-wrap and take a 
+        look at our other option: changing the 
+        Flexbox direction from a row to a column.
+    */
+    
+    /* flex-direction: column; */
+
+    /*
+        That gets our content in a column, which
+        definitely fits much better, even at very
+        small screen widths. However, it also
+        makes the nav MUCH taller, taking up a lot
+        more screen real estate, especially on a 
+        mobile device.
+
+        So, regardless of the approach you take,
+        either wrapping or stacking in a column,
+        there's always going to be trade-offs,
+        and you'll have to evaluate which approach
+        works better for the content you're
+        working with.
+        
+        There's some other design issues we could
+        address (like the alignment), but there's a 
+        bigger problem: if we modify the CSS here, 
+        that affects the whole page at ALL widths. 
+        
+        Try it out: expand your screen width, and
+        you'll see that the nav is ALWAYS in a column.  
+        That looks even worse at wider page widths.
+
+        So, comment out flex-direction, and let's
+        see how we can address this bigger issue.
+    */
+}
+
+#nav a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 20px;
+}

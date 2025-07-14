@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+/*
+    Now let's actually put some content into our
+    hero.  Go into the HTML and add a single H1,
+    then come back here.
+
+    There are just as many ways to arrange content
+    inside of a hero as there are to arrange
+    content on a page; a hero is ultimately just
+    another HTML container, that's all.
+
+    Oftentimes, we'll want our content to be
+    vertically centered inside of the hero,
+    and aligned to the left, center, or right.
+
+    Flexbox makes all that a snap, so let's try
+    that out for this hero.
+
+    Do you remember how to activate Flexbox,
+    and which Flexbox properties we can used to
+    align content horizontally and vertically?
+*/
+#hero-1 {
+    background-image: url("../images/lizard.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+
+    /* new properties */
+    display: flex;
+    justify-content: flex-start; /* i.e. left alignment for rows */
+    align-items: center;
+}
+
+/*
+    That worked, but we'll want to change up our
+    H1 styles a bit to make it more impactful
+    and better spaced.
+
+    Let's make it bigger, and give it some padding.
+*/
+
+#hero-1 h1 {
+    font-size: 120px; 
+
+    /* 
+        DEMO NOTE: Add the padding below initially,
+        but then remove it, because of the design
+        problems described below.
+    */
+    padding-left: 100px;
+
+    /*
+        This works fairly well on small to medium sized 
+        screens, but once we start widening the screen,
+        that padding feels a bit lacking.  Ideally,
+        we'd like to see the text more centered in the
+        negative space to the left of the lizard.
+
+        You might be tempted to increase the padding
+        further, but there are some very good reasons
+        NOT to do so.
+
+        First off, anytime you find yourself providing
+        margin/padding values over 100px, there's a
+        good chance there's a better way of doing
+        what you're trying to do; most likely,
+        you're not adding "bubble-wrap" or "personal
+        space", you're actually trying to position
+        something, and there are different tools 
+        for that (which we'll learn today).
+
+        Second, even if we did pick a value like 250px,
+        (try it out with padding-left temporarily)
+        watch what happens when shrink the screen...
+
+        The text doesn't adapt to the shrinking screen,
+        and either starts to overlap with the focus
+        of the image (our lizard friend), or get pushed
+        off the edges of the screen.
+
+        (remove the padding entirely)
+
+        So, if we can't use padding, what other option
+        do we have?
+
+        A new property called 'position'! Move on to
+        the next page to learn more!
+    */
+}

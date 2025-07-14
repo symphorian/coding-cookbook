@@ -1,0 +1,88 @@
+/*
+    In this demo, we're going to show how we can 
+    create a card layout, which is simply a way of
+    grouping content together in a small presentable
+    package.
+
+    Typically, a card will have at a bare minimum
+    text content, but oftentimes you'll see an image
+    and a button in there as well.
+
+    We're going to build a set of cards that include
+    images, a heading, copy text, and a call-to-action
+    (CTA) button.
+
+    We'll take a brief detour in the middle of the demo
+    to show you how to style an anchor element and
+    transform it into a more traditional button,
+    and then we'll wrap up our card styling.
+*/
+
+/*
+    First, let's jump to our HTML and get our main
+    column set up to hold our card content.
+
+    Come back here when you're done.
+*/
+
+/*
+    Let's start our CSS by using our normal page layout 
+    setup code, first by changing our box-sizing to a 
+    more common method of sizing.
+    
+    As a reminder, the asterisk (*) selector is the 
+    universal selector (also known as the wildcard
+    selector), which will select ALL elements in the html.
+
+    Then we'll strip the margin off of the body element 
+    so that the page content can be flush against the
+    edges of the page, and also set a default copy text 
+    font family.
+*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+/*
+    Now let's target our centered-column element 
+    and turn it into a Centered Single Column Layout.  
+    However, we'll add a bit of a twist this time 
+    by making it more responsive.
+
+    Do you remember what responsive means?
+
+    It means it adapts to the size of the page, so 
+    that it can look good (in theory) no matter 
+    whether it's viewed on a desktop or a phone screen.
+
+    To do that, we'll give it a relative width,
+    using the "view width" units, or "vw".
+    90vw mean "90% of the view width".  This 
+    means our column width will adapt to the screen.
+
+    However, for wider screens, that may be a bit
+    TOO wide; recall that one of the reasons we'd use
+    a single column layout is to keep our content 
+    grouped together.
+
+    So we'll also use a new property called "max-width".
+    The max-width property applies an upper limit
+    to the width of our layout, so that it can't 
+    grow indefinitely.
+
+    Then we'll wrap up our layout with our usual
+    "auto" margin magic: remember that applying
+    auto to the left/right sides of an element
+    with an explicit width will center it.
+*/
+#centered-column {
+    width: 90vw;
+    max-width: 800px;
+    margin: 48px auto;
+}
+

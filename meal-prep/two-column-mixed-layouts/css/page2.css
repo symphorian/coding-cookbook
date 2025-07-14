@@ -28,9 +28,10 @@ body {
 }
 
 /*
-    Might want to pause here and ask students
-    if they can explain what grid-template-areas
-    is doing here.
+    Can you tell what grid-template-areas is
+    doing above?  
+    
+    (If not, you'll find out soon.)
 
     Next, we'll hook up the grid areas in our
     grid items below.
@@ -52,7 +53,7 @@ body {
 }
 
 /*
-    Remind students that the grid-area names
+    Remember that the grid-area names
     don't have to match up with the id/class
     selector names, but it definitely makes
     it easier to understand if we plan things

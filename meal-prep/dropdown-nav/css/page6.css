@@ -37,17 +37,30 @@ body {
 }
 
 /*
-    (might be worth asking students which
-    element/class it is that we want to hide)
+    Now we need to add the code to conceal it 
+    until we hover over the trigger item.
+
+    Any idea which element/class it is that we 
+    want to target in order to hide the dropdown?
+
+
+
+
+
 
     The element that we need to hide is the 
     div with the .dropdown-menu class.
 
-    We covered a couple different ways in the
-    showing/hiding content demo.
+    We covered a couple different ways to hide
+    an element in the showing/hiding content demo.
 
-    (ask if they remember the properties/values
-    we can use to hide something)
+    Do you remember which properties we could use
+    to do that?
+
+
+
+
+    
 
     display: none; is an option, but the 
     problem with that one is that it's not

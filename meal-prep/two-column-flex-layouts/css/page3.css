@@ -20,25 +20,26 @@ body {
     we're going to use a Flexbox Item Property next.
 
     This property won't do anything if you apply it
-    to the container, so definitely call that out to 
-    the students.
+    to the container, so definitely pay attention
+    to what you're targeting.
 
-    It might also be worth reminding them how to 
+    It might also be worth a refresher on how to 
     identify Flexbox Containers and Flexbox Items:
     
-    Flexbox Containers are the elements with 
+    - Flexbox Containers are the elements with 
         display: flex; 
     on them (in our case, #two-columns).
     
-    The Flebox Items are the elements directly inside
+    - The Flexbox Items are the elements directly inside
     the Container (direct children, not grandchildren).
     One way they can be easily determined is by 
-    looking at the elements one level of indentation
+    looking at the elements one indentation level
     to the right of the Container (assuming we have 
-    clean code, another incentive to write clean code!).
+    clean code...another incentive to write clean code!).
 
-    Anyway, we're going to apply the Flex Item property
-    called 'flex' to our Flex Items below.
+    Anyway, getting back on track, we're going to apply 
+    the Flex Item property called 'flex' to our Flex 
+    Items below.
 
     This is a property that will probably be easily
     confused with 'display: flex;', but the 'flex'
@@ -64,7 +65,7 @@ body {
     using it will be sized relative to the flex 
     property values of other Flexbox Items.
 
-    Show the class how different values affect the
+    Experiment and see how different values affect the
     flex property, such as giving both columns flex 
     values of 5, and then 10, to show that the value
     doesn't actually matter if all Flexbox Items 
@@ -75,20 +76,21 @@ body {
     1 and 2 are used, the column with 2 will have 2/3
     of the container width, while the 1 will have 1/3.
 
-    Try out other values as well, so show that greater
+    Try out other values as well, and see that greater
     values will result in greater widths relative to
     the smaller values.
 
     Then change them back to 1 and 1.
 
     This is essentially our Two Column layout with
-    Equal Sizes...just a rather boring one.
+    Equal Sizes (from the PowerPoint today...just a 
+    rather boring one.)
 
     Bring up the Layouts page in the Coding Cookbook
-    for this layout as a reference, and show them 
-    some of the latter examples in there. They are
+    for this layout as a reference, and check out 
+    some of the latter examples in there. You are
     free to use the code in there as a starting 
-    point, if they ever want to use a layout like that.
+    point, if you ever want to use a layout like that.
 
     https://first-gdwd.github.io/cookbook/recipes.html#two-columns-equal-flex?p=2
 */

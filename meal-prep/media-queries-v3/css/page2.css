@@ -1,0 +1,98 @@
+/* 
+    Now that we have our tablet and mobile
+    breakpoints set up, let's jump into some
+    more practical ways that we can use
+    Media Queries to make our webpage more
+    responsive.
+
+    By the end of this demo, we'll have
+    something resembling a simple portfolio
+    site for a photographer.
+
+    Since we just learned how to create 
+    navbars, we'll start with a simple
+    variation of one of those.
+
+    Hop over to the HTML, and then come
+    back here when you're done.
+*/
+
+/*
+    First, we're start out with our usual
+    page layout setup.
+*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+/*
+    Note that we're putting our CSS above
+    our media queries.
+
+    Your media queries should ALWAYS be
+    at the bottom of your CSS file, at
+    least in this class.
+
+    That's because the "desktop" CSS
+    that we write is going to be treated
+    as our default CSS, and the media
+    queries are going to be modifications
+    on top of that.
+
+    If we had our media queries first,
+    or in the middle of our code, we'd
+    have all sorts of chaos with CSS
+    rules overwriting each other when
+    we don't want them to; it'd be a
+    real mess, so don't do it!
+
+    Next, we'll style the "default" styling
+    for our nav. We'll just give it a
+    dark background and activate flexbox
+    to center the anchors inside.
+*/
+
+#nav {
+    background-color: #222222;
+    display: flex;
+    justify-content: center;
+}
+
+/*
+    We'll wrap up our default styling by
+    targeting the anchors inside the nav.
+
+    We'll change their color and font size,
+    remove the underlines, and give them 
+    some padding.
+*/
+
+#nav a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 20px;
+}
+
+/* 
+    Simple, yet effective! But what happens
+    to our navbar in the mobile breakpoint
+    (i.e. when the background turns red)?
+*/
+
+@media screen and (max-width: 768px) and (min-width: 481px) {
+    body {
+        background-color: skyblue;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        background-color: firebrick;
+    }
+}

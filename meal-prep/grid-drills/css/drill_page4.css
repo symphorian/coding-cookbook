@@ -1,20 +1,20 @@
 /* Drill 4 - Write your code solution below */
 
 /*
-    NOTE: Students should not be reorganizing
+    NOTE: You should not be reorganizing
     or modifying the HTML for this one; that
     would be consider cheating :-P
 
-    If students set up grid-template-areas
+    If you set up grid-template-areas
     correctly in the last drill, then this one
     should be a piece of cake.
 
-    They just need to apply the same styles to
+    You just need to apply the same styles to
     the different selectors, and swap the 
     ordering of the area names in 
     grid-template-areas.
 
-    If not, they'll need to make sure they have
+    If not, you'll need to make sure you have
     the area names mapped out correctly in 
     grid-template-areas, and then assigned
     correctly in the grid items using grid-area.
@@ -30,7 +30,7 @@
 
     ...but it definitely helps human readability
     to give the areas names that make sense for
-    what they represent.  So encourage students
+    what they represent.  So we encourage you
     to use meaningful area names.
 */
 

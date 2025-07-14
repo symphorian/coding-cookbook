@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Deleting a Pantheon Site - Appetizers - The Coding Cookbook</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="../css/cookbook.css" rel="stylesheet">
+        <link href="../css/appetizer.css" rel="stylesheet">
+        <link href="../css/lightbox.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="background"></div>
+        <nav>
+            <header id="topHeader">
+                <h2 id="brand"><a href="../">The Coding Cookbook</a></h2>
+                <div id="quote"></div>
+                <div id="navLinks">
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../ingredients.html">
+                                HTML
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../ingredients.html">Elements</a></h2>
+                            <h2><a href="../ingredients-cheatsheet.html">Cheatsheet</a></h2>
+                            <h2><a href="../html-checker.html">Dirty Code Report</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../seasonings.html">
+                                CSS
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../seasonings.html">Properties</a></h2>
+                            <h2><a href="../seasonings-cheatsheet.html">Cheatsheet</a></h2>
+                            <h2><a href="../css-checker.html">Dirty Code Report</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../recipes.html">
+                                Layouts
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../recipes.html?category=page-layout">Page Layouts</a></h2>
+                            <h2><a href="../recipes.html?category=content-layout">Content Layouts</a></h2>
+                            <h2><a href="../recipes.html?category=navigation-layout">Navigation</a></h2>
+                            <h2><a href="../recipes.html?category=miscellaneous">Miscellaneous</a></h2>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <h2 class="dropdown-trigger">
+                            <a href="../more.html" class="selected">
+                                More
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                        </h2>
+                        <div class="dropdown-items">
+                            <h2><a href="../appetizers.html" class="selected">Tutorials</a></h2>
+                            <h2><a href="../demos.html">Coding Demos</a></h2>
+                            <h2><a href="../troubleshooting.html">Troubleshooting</a></h2>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </nav>
+        
+        <header id="title" class="">
+            <h1>Deleting a Pantheon Site</h1>
+            <h3>Sometimes, you just want to start again from a clean slate</h3>
+        </header>
+        
+        
+        <div class="cookbookPage">
+            <ol>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                First off, make sure you're VERY sure you want
+                                to delete your site.  This process can't be
+                                reversed once you kick it off.
+                            </p>
+                            <p>
+                                You're really sure you want to delete your site?
+                                Okay, then let's continue.
+                            </p>
+                            <p>
+                                If you haven't already, 
+                                log in to your Pantheon account, and navigate
+                                to the Sites tab in the left navbar.
+                            </p>
+                            <p>
+                               From here, click on the name of the Pantheon 
+                               site that you want to delete.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/deleting-a-pantheon-site/01_sitelogin.png" 
+                                alt="Accessing the Pantheon Site Dashboard to delete"
+                            >
+                            <figcaption>
+                                Accessing the Pantheon Site Dashboard to delete
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                This will take you to the Pantheon Site Dashboard
+                                for that site.
+                            </p>
+                            <p>
+                                To begin the process of deleting your site,
+                                click the Settings cogwheel icon in the
+                                top-right of the screen.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/deleting-a-pantheon-site/02_deletesite_settings.png" 
+                                alt="Accessing the Pantheon Site Dashboard's Settings"
+                            >
+                            <figcaption>
+                                Accessing the Pantheon Site Dashboard's Settings
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                This will open up the Settings popup.
+                            </p>
+                            <p>
+                                From here, click on the tab labeled
+                                "Delete site".
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/deleting-a-pantheon-site/03_deletesite_popup.png" 
+                                alt="Navigating to the 'Delete Site' tab in Settings"
+                            >
+                            <figcaption>
+                                Navigating to the 'Delete Site' tab in Settings
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <h2 id="p1_step4" class="invisibleInnerAnchorTarget"></h2>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                When you navgiate to the "Delete site" tab,
+                                click the big red [Delete Site] button.
+                            </p>
+                        
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/deleting-a-pantheon-site/04_deletesite_popup_button.png" 
+                                alt="Clicking the [Delete Site] button"
+                            >
+                            <figcaption>
+                                Clicking the [Delete Site] button
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                You might think that clicking [Delete Site] 
+                                would delete your site...but no.
+                            </p>
+                            <p>
+                                They have an additional safeguard in place to 
+                                prevent accidental deletion of your site:
+                                you need to manually type out the name of the 
+                                site you want to delete.
+                            </p>
+                            <p>
+                                They want to be REALLY sure that you actually 
+                                want to delete your site.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/deleting-a-pantheon-site/05_deletesite_popup2.png" 
+                                alt="Typing out the name of your site to confirm deletion"
+                            >
+                            <figcaption>
+                                Typing out the name of your site to confirm deletion
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Once you've typed out the name of your Pantheon 
+                                site EXACTLY, the [Delete This Site] button 
+                                will become enabled.
+                            </p>
+                            <p>
+                                Click that button to truly kick off the process
+                                of deleting your Pantheon site.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/deleting-a-pantheon-site/06_deletesite_popup2_button.png" 
+                                alt="Clicking the [Delete This Site] button"
+                            >
+                            <figcaption>
+                                Clicking the [Delete This Site] button
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                After clicking the [Delete This Site] button,
+                                the popup will close, and you'll be returned to 
+                                the Pantheon Site Dashboard.
+                            </p>
+                            <p>
+                                For a few moments, it won't look like anything
+                                is happening, but behind the scenes, a script 
+                                is running on the web server to start deleting 
+                                your site.
+                            </p>
+                            <p>
+                                After a few seconds pass, you'll see a little 
+                                spinning/loading icon next to the Workflows 
+                                link towards the top of the screen.  That
+                                indicates that the deletion process is running.
+                            </p>
+                            <p>
+                                Just wait a little longer, and the deletion 
+                                process will soon be complete.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/deleting-a-pantheon-site/07_deletesite_workflowrunning.png" 
+                                alt="Waiting for the deletion process to run"
+                            >
+                            <figcaption>
+                                Waiting for the deletion process to run
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Eventually, you'll be brought back to the Sites 
+                                tab of your Pantheon account.
+                            </p>
+                            <p>
+                                You should see that the site you wanted to 
+                                delete is no longer in the Sites list.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/deleting-a-pantheon-site/08_deletesite_done.png" 
+                                alt="The deleted site is gone from the Sites list"
+                            >
+                            <figcaption>
+                                The deleted site is gone from the Sites list
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+            <h4>
+                Congrats! You've successfully deleted your Pantheon site!
+            </h4>
+        </div>
+        <div id="lightboxContainer">
+            <div id="lightboxBackground" class="closer"></div>
+            <img id="lightbox" src="" alt="">
+            <span id="lightboxCloser" class="closer">×</span>
+          </div>
+        <script src="../js/lightbox.js"></script>
+        <script src="../js/hideNav.js"></script>
+    </body>
+</html>

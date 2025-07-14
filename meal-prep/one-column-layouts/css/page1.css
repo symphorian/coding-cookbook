@@ -1,18 +1,18 @@
 /*
-    First off, demo some important properties that
-    students will likely want to set up for EVERY
-    page layout going forward.
+    First off, we're going to demo some important 
+    properties that you will want to 
+    set up for EVERY page layout going forward.
 */
 
 /*
-    The asterisk (*) here is referred to as the
+    The asterisk (*) below is referred to as the
     "wildcard" selector; it quite literally targets
     EVERY element on the page.
 
-    The box-sizing: border-box; statement changes the
+    The box-sizing: border-box; property changes the
     way that elements determine their sizes on the page.
     We've touched on this property before in previous 
-    drills/demos, but a refresher won't hurt anyone.
+    drills/demos, but a refresher won't hurt.
 
     The default is set to 'content-box', which means when
     we set a width of 500px on something, only the content
@@ -49,9 +49,10 @@
     margin will make that possible.
 
     Second, we rarely want to stick with the default
-    serif font, since sans-serif fonts are usually preferable 
-    for screens; even the basic sans-serif is better than
-    serif.
+    serif font, since sans-serif fonts are usually 
+    preferable for screens (especially at lower resolutions
+    or smaller font sizes); even the default sans-serif 
+    font-family is better than serif.
 
     Changing the font-family on the body will affect almost 
     all text content inside of the body, so this is a good

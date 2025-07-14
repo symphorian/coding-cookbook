@@ -6,7 +6,7 @@
     That's why we added hover states to our links;
     users may be trained to realize that when the 
     cursor turning into a pointer, you can click on
-    something, but not everyone is internet-proficient
+    something, but not everyone is internet-proficient,
     so any little visual cues you add can help.
 
     The same goes for parts of the navbar that behave
@@ -17,6 +17,8 @@
     part of the Coding Cookbook if you need a refresher),
     and add them at the end of our hyperlinks that
     have a dropdown menu.
+
+    See you back in the HTML!
 */
 
 * {

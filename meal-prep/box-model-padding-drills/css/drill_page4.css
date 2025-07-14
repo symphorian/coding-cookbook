@@ -3,7 +3,7 @@
 /*
     The trick with this one is to remember that
     padding is additive.  There are multiple
-    solutions to this one, but if they try
+    solutions to this one, but if you try
     to add padding to multiple containers
     and their padded sides meet, there's 
     likely going to be too much space in between

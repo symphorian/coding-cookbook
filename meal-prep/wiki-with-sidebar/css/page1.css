@@ -1,0 +1,168 @@
+/*
+    This is an example of what could be 
+    considered an "above and beyond"
+    submission for the assignment.
+
+    Much of this example is still based on
+    (even pulled from) the final
+    "Two Columns - Sidebar (flex)"
+    Layout example in the Coding Cookbook.
+
+    But this time, we take advantage of 
+    Flexbox as CONTENT Layouts in addition
+    to the Page Layout, while also adding
+    more realistic content.
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+
+    font-family: sans-serif; 
+}
+
+#two-columns {
+    display: flex;
+    width: 80%;
+    min-width: 600px;
+    max-width: 1000px;
+    margin: 48px auto;
+}
+
+#sidebar-content {
+    width: 250px;
+    margin-top: 24px;
+    margin-right: 36px;
+    padding: 0px 12px;
+}
+
+#sidebar-content h2 {
+    background-color: #33a6cf;
+    color: white;
+    padding: 8px 16px;
+    margin: 0px;
+}
+
+#sidebar-content ul {
+    border: 1px solid #DDDDDD;
+    margin: 0px;
+    padding: 16px;
+    list-style-type: none;
+}
+
+#sidebar-content ul li {
+    padding: 8px 0px;
+}
+
+li.indent {
+    margin-left: 24px;
+}
+
+#sidebar-content ul a {
+    color: #145ca9;
+    text-decoration: none;
+}
+
+#sidebar-content ul a:hover {
+    text-decoration: underline;
+}
+
+#main-content {
+    flex: 1;
+    margin-right: 16px;
+}
+
+#sticky-sidebar {
+    position: sticky;
+    top: 24px;
+}
+
+.note {
+    margin-left: 36px;
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: normal;
+    border-bottom: 1px solid #BBBBBB;
+    padding-bottom: 2px;
+    margin-bottom: 0px;
+}
+
+h4 {
+    margin-bottom: 0px;
+}
+
+p {
+    margin-top: 8px;
+}
+
+/*
+    There isn't a lot going on here aside
+    from the layout, and a few stylistic
+    improvements to elements in the page.
+
+    However, one "fancy" thing we did to 
+    get content and images side-by-side
+    is use a similar two-column sidebar
+    layout that we used on the page...
+    but inside of the main column!
+
+    Feel free to hint or demo that to
+    students.
+
+    The "real" way to do it, to match
+    Wikipedia at least, is to use floats.
+
+    But floats get students into so much
+    trouble, and they often overuse or
+    misuse them, so we're keeping that 
+    concept away from them.
+
+    Learning how to use flexbox to
+    approximate that behavior is good
+    practice for them anyway.
+*/
+
+.inner-two-column {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 8px;
+}
+
+.inner-two-column .image-column {
+    flex: 1;
+    border: 1px solid #BBBBBB;
+    padding: 6px;
+    font-size: 14px;
+    min-width: 150px;
+}
+
+.inner-two-column .image-column img {
+    width: 100%;
+}
+
+.inner-two-column .image-column h4 {
+    margin: 4px 0px;
+}
+
+.inner-two-column .text-column {
+    flex: 2;
+}
+
+.image-column + .text-column,
+.text-column + .image-column {
+    margin-left: 12px;
+}
+
+.center {
+    text-align: center;
+}

@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.nav {
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+}
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.25rem;
+    padding: 20px 0px;
+    margin-right: 40px;
+}
+.nav a:last-of-type {
+    margin-right: 0px;
+}
+
+.header {
+    width: 90vw;
+    max-width: 800px;
+    margin: 25px auto;
+    display: flex;
+    align-items: center;
+}
+
+/* 
+    Now, let's fix up our spacing a bit. We'll target
+    our .image-container and give it a flex of 1 and a
+    height of 400px. We're using flex: 1; to allow it
+    to take up equal or the remaining space within it's
+    flex container. However, notice how it appears that
+    our height isn't doing anything. This is due to what
+    we talked about earlier with the image's default sizing.
+    Let's fix that.
+*/
+.header .image-container {
+    flex: 1;
+    height: 400px;
+}
+
+/*
+    We'll target the img element inside of the image-container
+    class and give it a height of 100% so that it scales to
+    be 100% of it's parent's/container's height. We've already
+    applied object-fit earlier, so, we shouldn't run into any
+    issues with stretching or pinching.
+
+    Let's also add a border-radius of 25px to add some design
+    aesthetic to it.
+*/
+.image-container img {
+    height: 100%;
+    border-radius: 25px;
+}
+
+/* 
+    Now, we'll target our .content and give it a flex of 1
+    as well. You'll notice that the image-container and
+    content divs now take up a equal amount of spacing.
+
+    Let's also give it a margin-left of 50px to get some
+    better spacing going on here.
+*/
+.header .content {
+    flex: 1;
+    margin-left: 50px;
+}
+
+/* 
+    We can target the h1 and give it a font-size of 3rem.
+    Rem is a unit that is relative to the end users system
+    font size. It is a great unit for working with
+    accessibility. Let's also add a color and give 0px of
+    margin on the top, left, and right. We'll add 15px of
+    margin on the bottom.
+
+    Let's also target our paragraph element and give it
+    0px of margin all around.
+*/
+.content h1 {
+    font-size: 3rem;
+    color: #ffb700;
+    margin: 0px 0px 15px;
+}
+.content p {
+    margin: 0px;
+}

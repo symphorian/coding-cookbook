@@ -1,0 +1,218 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#nav {
+    background-color: #222222;
+    display: flex;
+    justify-content: center;
+}
+
+#nav a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.single-column-layout {
+    width: 90vw;
+    max-width: 800px;
+    margin: 48px auto;
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+.image-container,
+.content-container {
+    flex: 1;
+}
+
+.image-container {
+    height: 400px;
+}
+
+.content-container h1 {
+    font-size: 48px;
+    color: #ffb700;
+}
+
+.featured {
+    background-color: #222222;
+    color: white;
+    padding: 24px 0px;
+}
+
+.featured h2 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.grid img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 16px;
+    grid-template-areas:
+        "txt1 img1 img2 img2"
+        "img3 img3 img4 txt2";
+}
+
+#p1 {
+    grid-area: txt1;
+}
+#p2 {
+    grid-area: txt2;
+}
+#img1 {
+    grid-area: img1;
+}
+#img2 {
+    grid-area: img2;
+}
+#img3 {
+    grid-area: img3;
+}
+#img4 {
+    grid-area: img4;
+}
+
+.grid p {
+    border: 2px solid #ffb700;
+    border-radius: 24px;
+    margin: 0px;
+    padding: 20px;
+}
+
+/*
+    That pretty much wraps things up!
+
+    We now know how to convert a navbar, a Media
+    & Text layout, and a grid layout to be more
+    responsive, most of the time by taking
+    advantage of functionality offered by Flexbox
+    and CSS Grid.
+
+    For Flexbox, most of the time you can simply
+    change the flex-direction from 'row' to 'column',
+    or set flex-wrap to wrap; which approach is
+    better will often depend on your design and content.
+
+    For CSS Grid, you can reduce the number of columns,
+    and if you're using grid-areas, you can redistribute
+    those areas into the smaller columns.
+
+    And of course, decreasing font sizes and spacing
+    often helps to make a page more responsive as well.
+
+    Before we leave this demo though, there's one thing
+    we left in that we should probably take out: the
+    blue and red background in our media queries!
+
+    They were handy for visually telling us when we 
+    moved into different breakpoints, but we probably
+    don't want them on our actual completed site.
+*/
+
+@media screen and (max-width: 768px) and (min-width: 481px) {
+    /*
+        We can either delete this CSS rule, or just
+        comment it out, in case we want to use it again
+        for debugging this page in the future.
+    */
+    /* body {
+        background-color: skyblue;
+    } */
+
+    .content-container h1 {
+        font-size: 32px;
+    }
+
+    .intro {
+        gap: 24px;
+    }
+
+    .image-container {
+        height: 300px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "txt1 img1"
+            "img2 img2"
+            "img3 img3"
+            "img4 txt2";
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /*
+        Same for this CSS rule as in the 
+        tablet breakpoint.  And with that,
+        we're finally done with the demo!
+    */
+    /* body {
+        background-color: firebrick;
+    } */
+
+    #nav {
+        /* flex-wrap: wrap; */
+
+        flex-direction: column;
+        align-items: center;
+    }
+    .intro {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .content-container h1 {
+        margin: 0px;
+        font-size: 32px
+    }
+
+    .content-container {
+        text-align: center;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "txt1"
+            "img1"
+            "img2"
+            "img3"
+            "img4"
+            "txt2";
+    }
+
+    .grid p {
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -27,6 +27,7 @@
                         <div class="dropdown-items">
                             <h2><a href="../ingredients.html">Elements</a></h2>
                             <h2><a href="../ingredients-cheatsheet.html">Cheatsheet</a></h2>
+                            <h2><a href="../html-checker.html">Dirty Code Report</a></h2>
                         </div>
                     </div>
                     <div class="dropdown-menu">
@@ -39,6 +40,7 @@
                         <div class="dropdown-items">
                             <h2><a href="../seasonings.html">Properties</a></h2>
                             <h2><a href="../seasonings-cheatsheet.html">Cheatsheet</a></h2>
+                            <h2><a href="../css-checker.html">Dirty Code Report</a></h2>
                         </div>
                     </div>
                     <div class="dropdown-menu">
@@ -57,14 +59,14 @@
                     </div>
                     <div class="dropdown-menu">
                         <h2 class="dropdown-trigger">
-                            <a href="../more.html">
+                            <a href="../more.html" class="selected">
                                 More
                                 <i class="fa-solid fa-chevron-down"></i>
                             </a>
                         </h2>
                         <div class="dropdown-items">
-                            <h2><a href="../demos.html">Class Demos</a></h2>
-                            <h2><a href="../appetizers.html">Tutorials</a></h2>
+                            <h2><a href="../appetizers.html" class="selected">Tutorials</a></h2>
+                            <h2><a href="../demos.html">Coding Demos</a></h2>
                             <h2><a href="../troubleshooting.html">Troubleshooting</a></h2>
                         </div>
                     </div>
@@ -148,10 +150,15 @@
                     <div class="sideBySide">
                         <div class="textContainer">
                             <p>
-                                Once your software downloads, 
+                                If you're on a Mac, once your software downloads, 
                                 unzip and drag it to your
-                                Applications folder, making it 
-                                easier to find in your launchpad.
+                                Applications folder.
+                            </p>
+                            <p class="indent">
+                                This will make it 
+                                easier to find in your Launchpad, and will also
+                                set it up properly to interact with the other
+                                application we'll be installing later.
                             </p>
                         </div>
                         <div class="imageContainer">
@@ -173,7 +180,16 @@
                             <p>
                                 Go ahead and open up Visual Studio Code 
                                 once you have it installed.
-                                It should resemble the screenshot on the right.
+                            </p>
+                            <p class="indent">
+                                If you are prompted in the installation process 
+                                to check any boxes before installing, just leave
+                                the default settings and continue with the 
+                                installation.
+                            </p>
+                            <br>
+                            <p>
+                                It should (somewhat) resemble the screenshot on the right.
                             </p>
                             <p class="indent">
                                 It may not look EXACTLY the same, and that's
@@ -181,9 +197,10 @@
                                 itself.
                             </p>
                             <p class="indent">
-                                You'll also probably see a Welcome tab when 
+                                You'll also probably see a Welcome tab and/or
+                                some personalization options when 
                                 you first open Visual Studio Code. You can 
-                                safely close that tab, or skip the 
+                                safely close that tab and skip the 
                                 Personalization options it has you select.
                             </p>
                             <p class="indent">
@@ -214,7 +231,7 @@
                                 Now that we have installed the main 
                                 code editor we will be utilizing
                                 throughout class, now we're going to 
-                                install a few extensions that we
+                                install an extension that we
                                 will need for viewing the live renders 
                                 of our code.
                             </p>
@@ -253,7 +270,7 @@
                             <p>
                                 This extension will allow you 
                                 to preview your HTML/CSS/Javascript
-                                code within Visual Studio.
+                                code within Visual Studio AND your browser.
                             </p>
                         </div>
                         <div class="imageContainer">
@@ -266,32 +283,60 @@
                             </figcaption>
                         </div>
                     </div>
+                    
+                </li>
+                <li>
                     <div class="sideBySide">
                         <div class="textContainer">
                             <p>
-                                In the Extensions tab, click in the 
-                                search bar at the top. Then in the
-                                search bar, type "live server". 
+                                Next, we're going to configure a few Settings 
+                                to help you write cleaner code and prevent
+                                some common bugs down the line.
                             </p>
                             <p>
-                                The extension Live Server by Ritwick
-                                Dey should be one of the first in 
-                                the list. Click the Install button
-                                to install the extension
+                                Go to the Settings tab. (It's in slightly 
+                                different places in Mac vs PC.)
+                            </p>
+                            <p class="indent">
+                                For Mac users, it's under Code -> Preferences ->
+                                Settings.
+                            </p>
+                            <p class="indent">
+                                For PC users, it's under File -> Preferences ->
+                                Settings.
                             </p>
                             <p>
-                                This extension will allow you to 
-                                preview your HTML/CSS/Javascript
-                                code live in a web browser like Google Chrome.
+                                Once you're in the Settings tab, search for 
+                                "auto closing tags".
+                            </p>
+                            <p>
+                                In the setting for "HTML: Auto Closing Tags",
+                                uncheck the box beneath it.
+                            </p>
+                            <p>
+                                That's one setting down.  
+                            </p>
+                            <br><br>
+                            <p>
+                                Next, jump over to
+                                another small tutorial that's a bit more 
+                                complex, so it has its own page.
+                                <br><br>
+                                <a href="adding-a-code-ruler.html" target="_blank">
+                                    Adding a Code Ruler
+                                </a>
+                                <br><br>
+                                Return here once you have that set up.
                             </p>
                         </div>
                         <div class="imageContainer">
                             <img 
-                                src="images/web-dev-startup/liveserver.png" 
-                                alt="A screenshot of the Live Server extension" 
-                            />
+                                src="images/web-dev-startup/autoclosingtags.png" 
+                                alt="Screenshot of the Settings tab, when turning off the 'HTML: Auto Closing Tags' setting"
+                            >
                             <figcaption>
-                                A screenshot of the Live Server extension
+                                Screenshot of the Settings tab, when turning off
+                                the "HTML: Auto Closing Tags" setting
                             </figcaption>
                         </div>
                     </div>
@@ -326,10 +371,14 @@
                                 </a>
                                 and click the Sign up button in the top right.
                             </p>
+                            <p>
+                                Or, fill out your email address and click the 
+                                green Sign up for GitHub.
+                            </p>
                         </div>
                         <div class="imageContainer">
                             <img 
-                                src="images/web-dev-startup/githubhomepage_withCircle.png" 
+                                src="images/web-dev-startup/GitHub_new_homepage.png" 
                                 alt="The home page of GitHub" 
                             >
                             <figcaption>The home page of GitHub</figcaption>
@@ -340,8 +389,8 @@
                     <div class="sideBySide">
                         <div class="textContainer">
                             <p>
-                                On the next page, enter the email address you 
-                                want to associate with your GitHub account.
+                                On the next page, fill out the information you
+                                need to create your GitHub account.
                             </p>
                             <p class="indent">
                                 You can change your associated email later if 
@@ -353,7 +402,7 @@
                         </div>
                         <div class="imageContainer">
                             <img 
-                                src="images/web-dev-startup/02_email.png"
+                                src="images/web-dev-startup/Github_new_login.png"
                                 alt="Entering email during GitHub account setup" 
                             >
                             <figcaption>
@@ -366,139 +415,7 @@
                     <div class="sideBySide">
                         <div class="textContainer">
                             <p>
-                                The page will update and prompt you to submit
-                                a password for your account; go ahead and do so.
-                            </p>
-                            <p>
-                                Then click the Continue button.
-                            </p>
-                        </div>
-                        <div class="imageContainer">
-                            <img 
-                                src="images/web-dev-startup/03_password.png"
-                                alt="Entering password during GitHub account setup" 
-                            >
-                            <figcaption>
-                                Entering password during GitHub account setup
-                            </figcaption>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="sideBySide">
-                        <div class="textContainer">
-                            <p>
-                                The page will update again and prompt you to 
-                                submit a username for your account; go ahead 
-                                and do so.
-                            </p>
-                            <p>
-                                <strong>
-                                    NOTE: Your username will be publicly 
-                                    viewable, and will also be
-                                    included in the URL for your website, 
-                                    so make sure to pick something
-                                    you're comfortable sharing with the world!
-                                </strong>
-                            </p>
-                            <p>
-                                Then click the Continue button.
-                            </p>
-                        </div>
-                        <div class="imageContainer">
-                            <img 
-                                src="images/web-dev-startup/04_username.png"
-                                alt="Entering username during GitHub account setup" 
-                            >
-                            <figcaption>
-                                Entering username during GitHub account setup
-                            </figcaption>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="sideBySide">
-                        <div class="textContainer">
-                            <p>
-                                The page will update again and ask if you want 
-                                to receive product updates related to GitHub.
-                            </p>
-                            <p>
-                                We recommend typing "n" to decline, but if you 
-                                are interested in getting emails from GitHub,
-                                feel free to type "y".
-                            </p>
-                            <p>
-                                Then click the Continue button.
-                            </p>
-                        </div>
-                        <div class="imageContainer">
-                            <img 
-                                src="images/web-dev-startup/05_productupdates.png"
-                                alt="Entering your product update response during GitHub account setup" 
-                            >
-                            <figcaption>
-                                Entering your product update response 
-                                during GitHub account setup
-                            </figcaption>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="sideBySide">
-                        <div class="textContainer">
-                            <p>
-                                The page will update AGAIN and prompt you to 
-                                prove that you're a human and not a robot, by 
-                                having you complete a little puzzle.
-                            </p>
-                            <p class="indent">
-                                You have a choice of completing a visual puzzle,
-                                or an audio puzzle.
-                            </p>
-                            <p>
-                                Complete the puzzle to continue.
-                            </p>
-                        </div>
-                        <div class="imageContainer">
-                            <img 
-                                src="images/web-dev-startup/06_verify.png"
-                                alt="Proving your a human to GitHub" 
-                            >
-                            <figcaption>
-                                Proving your a human to GitHub
-                            </figcaption>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="sideBySide">
-                        <div class="textContainer">
-                            <p>
-                                After completing the puzzle, a button will 
-                                appear at the bottom, which will allow you to
-                                finally create your account.
-                            </p>
-                            <p>
-                                Click the "Create account" button to continue.
-                            </p>
-                        </div>
-                        <div class="imageContainer">
-                            <img 
-                                src="images/web-dev-startup/07_create.png"
-                                alt="Clicking the Create Account button" 
-                            >
-                            <figcaption>
-                                Clicking the Create Account button
-                            </figcaption>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="sideBySide">
-                        <div class="textContainer">
-                            <p>
-                                After clicking the Create Account button, 
+                                After creating your account, 
                                 GitHub will send an email to the address you 
                                 specified with a "launch code". You'll need 
                                 to go into your email to retrieve it.
@@ -516,13 +433,6 @@
                             <figcaption>
                                 The email from GitHub with your "launch code"
                             </figcaption>
-                            <img 
-                                src="images/web-dev-startup/08_launch.png"
-                                alt="Clicking the Create Account button" 
-                            >
-                            <figcaption>
-                                Where to input the "launch code" on GitHub
-                            </figcaption>
                         </div>
                     </div>
                 </li>
@@ -530,8 +440,9 @@
                     <div class="sideBySide">
                         <div class="textContainer">
                             <p>
-                                Then you'll be brought to a page to 
-                                personalize your GitHub account.
+                                You may be brought to a page to customize your 
+                                account (which probably looks different from the 
+                                screenshot to the right).
                             </p>
                             <p>
                                 This can be skipped entirely by clicking 
@@ -539,8 +450,7 @@
                                 (which we encourage you to do).
                             </p>
                             <p>
-                                Then you'll get a fun "launch" animation, 
-                                before being brought to your Dashboard.
+                                Then you'll be brought to your Dashboard.
                             </p>
                         </div>
                         <div class="imageContainer">
@@ -799,6 +709,32 @@
                                 GitHub Desktop download site
                             </figcaption>
                         </div>
+                    </div>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                If you're on a Mac, once your software downloads, 
+                                unzip and drag it to your
+                                Applications folder.
+                            </p>
+                            <p class="indent">
+                                This will make it 
+                                easier to find in your Launchpad, and will also
+                                set it up properly to interact with the other
+                                application we'll be installing later.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/vscodeapp.png" 
+                                alt="Move GitHub Desktop from Downloads to Applications"
+                            >
+                            <figcaption>
+                                Move GitHub Desktop from Downloads 
+                                to Applications
+                            </figcaption>
+                        </div>
+                        
                     </div>
                     <div class="sideBySide">
                         <div class="textContainer">
@@ -1191,7 +1127,35 @@
                                 Click "Open in Visual Studio" in 
                                 the middle section to do exactly 
                                 what the button says: open up your 
-                                repository in Visual Studio Code
+                                repository in Visual Studio Code.
+                            </p>
+                            
+                            <p class="indent">
+                                Occasionally, the shortcut 
+                                "Open in Visual Studio Code" 
+                                button in Github Desktop doesn't 
+                                work (usually due to personal 
+                                computer configurations).
+                            </p>
+                            <p class="indent">
+                                If that occurs, don't panic; 
+                                you'll just have to open up 
+                                your repository manually.
+                            </p>
+                            <p class="indent">
+                                Open Visual Studio Code yourself, and then go
+                                to the top menu and select File -> Open Folder.
+                            </p>
+                            <p class="indent">
+                                Then navigate to 
+                                <br>
+                                Documents -> Github -> 
+                                your repository folder
+                                <br>
+                                and select that folder to open.
+                            </p>
+                            <p class="indent">
+                                That should get you back on track!
                             </p>
                         </div>
                         <div class="imageContainer">
@@ -1222,31 +1186,15 @@
                                 two documents at the top left 
                                 of the application)
                             </p>
-                            <p>
-                                Occasionally, the shortcut button 
-                                in Github Desktop doesn't 
-                                work (usually due to personal 
-                                computer configurations).
-                            </p>
-                            <p>
-                                If that occurs, don't panic; 
-                                you'll just have to open up 
-                                your repository manually by 
-                                going to the top menu and 
-                                selecting <br> File -> Open Folder.
-                            </p>
-                            <p>
-                                Then navigate to 
-                                <br>
-                                Documents -> Github -> 
-                                your repository folder
-                                <br>
-                                and select that folder to open.
+                            <p class="indent">
+                                If you still don't see your repository name,
+                                follow the indented instructions in the previous
+                                step.  That should get you back on track!
                             </p>
                         </div>
                         <div class="imageContainer">
                             <img 
-                                src="images/web-dev-startup/repoinVScode.png" 
+                                src="images/web-dev-startup/repoinVScode_v2.png" 
                                 alt="Your repository loaded in Visual Studio Code"
                             >
                             <figcaption>
@@ -1279,15 +1227,31 @@
                                 in the Code Skeleton.
                             </p>
                             <p>
-                                In Visual Studio Code, 
-                                right-click your code repository
-                                and select "New folder..."
+                                In Visual Studio Code, make sure you
+                                have the Explorer tab open.
+                            </p>
+                            <p class="indent">
+                                If not, click the icon that looks like two 
+                                documents on top of each other.
                             </p>
                             <p>
-                                Then name the new folder "code-skeleton"
+                                Then, click the "New Folder..." icon that will 
+                                appear when you hover over the Explorer panel.
+                            </p>
+                            <p>
+                                Name the new folder "code-skeleton", and you'll
+                                see a folder within your repository named 
+                                "code-skeleton".
                             </p>
                         </div>
                         <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/codeSkeleton_0.png" 
+                                alt="Opening the Explorer panel and creating a new folder" 
+                            >
+                            <figcaption>
+                                Opening the Explorer panel and creating a new folder
+                            </figcaption>
                             <img 
                                 src="images/web-dev-startup/codeSkeleton_1.png" 
                                 alt="After creating the code-skeleton folder" 
@@ -1348,13 +1312,14 @@
                             <p>
                                 To do so, right-click your 
                                 new "code-skeleton" folder
-                                and select "New folder..." again
+                                and select "New folder..." again.
                             </p>
                             <p>
                                 <strong>
                                     Make sure you right-click 
-                                    the "code-skeleton" folder
-                                    and not the "css" folder! 
+                                    the actual text "code-skeleton"
+                                    and not "css" or the empty space to the 
+                                    right! 
                                     <br><br>
                                     If you don't, you may
                                     accidentally create the 
@@ -1364,12 +1329,11 @@
                                 </strong>
                             </p>
                             <p>
-                                Name the new folder "images"
+                                Name the new folder "images".
                             </p>
                             <p>
                                 Your Code Skeleton should 
                                 resemble the image on the right.
-                                Now we just need to create the HTML file!
                             </p>
                         </div>
                         <div class="imageContainer">
@@ -1387,16 +1351,16 @@
                     <div class="sideBySide">
                         <div class="textContainer">
                             <p>
-                                Finally, you're going to 
+                                Next, you're going to 
                                 create your first HTML file!
                             </p>
                             <p>
-                                Right-click your new "code-skeleton" 
-                                folder one last time
-                                and select "New file..." this time
+                                Right-click your "code-skeleton" 
+                                folder once again, but select "New file..." 
+                                this time.
                             </p>
                             <p>
-                                Name the new file "index.html"
+                                Name the new file "index.html".
                             </p>
                             <p>
                                 After creating the file, 
@@ -1407,7 +1371,7 @@
                                 However, we're not going to stop 
                                 there; we're also going 
                                 to have you "write" some code 
-                                in there before we wrap up!
+                                in there!
                             </p>
                         </div>
                         <div class="imageContainer">
@@ -1428,7 +1392,11 @@
                                 In truth, we're just going to 
                                 have you autogenerate an
                                 HTML template, so you won't 
-                                truly be "writing" any code.
+                                really be "writing" much code.
+                            </p>
+                            <p class="indent">
+                                Don't worry, we don't expect you to know 
+                                ANYTHING about what this code is doing (yet!).   
                             </p>
                             <p>
                                 In your new index.html file, 
@@ -1471,7 +1439,7 @@
                         </div>
                         <div class="imageContainer">
                             <img 
-                                src="images/web-dev-startup/htmltemplate_1.png" 
+                                src="images/web-dev-startup/htmltemplate_1_v2.png" 
                                 alt="The autogenerated HTML5 code template" 
                             >
                             <figcaption>
@@ -1485,8 +1453,14 @@
                         <div class="textContainer">
                             <p>
                                 To get started, click and 
-                                drag to select all the code from
-                                line 3 to line 11.
+                                drag to select everything between (and including)
+                                the &lt;head&gt; and &lt;/body&gt; tags, as shown
+                                in the image to the right.
+                            </p>
+                            <p class="indent bold">
+                                It's okay if the line numbers of the selected 
+                                code differ on your screen compared to the 
+                                image.
                             </p>
                             <p>
                                 After selecting the appropriate 
@@ -1496,16 +1470,24 @@
                             <p>
                                 This will cause all those lines 
                                 we selected to be indented 
-                                one level to the right.
+                                one level to the right, as in the second
+                                screenshot to the right.
                             </p>
                         </div>
                         <div class="imageContainer">
                             <img 
-                                src="images/web-dev-startup/htmltemplate_2.png" 
+                                src="images/web-dev-startup/htmltemplate_2_v2.png" 
                                 alt="Fixing the autogenerated HTML5 code template" 
                             >
                             <figcaption>
                                 Fixing the autogenerated HTML5 code template 
+                            </figcaption>
+                            <img 
+                                src="images/web-dev-startup/htmltemplate_2_v2_p2.png" 
+                                alt="The fixed indentation of the HTML5 code template" 
+                            >
+                            <figcaption>
+                                The fixed indentation of the HTML5 code template
                             </figcaption>
                         </div>
                     </div>
@@ -1514,8 +1496,50 @@
                     <div class="sideBySide">
                         <div class="textContainer">
                             <p>
-                                We're almost done. Notice the 
-                                little circle to the right 
+                                Now, you're actually going to have to write some
+                                code.
+                            </p>
+                            <p>
+                                Put your cursor at the end of the line with 
+
+                                &lt;title&gt;Document&lt;/title&gt;
+
+                                in it (it's probably around line 6).
+                            </p>
+                            <p>
+                                Then hit 
+                                RETURN (or ENTER for PCs) to start a new line.
+                            </p>
+                            <p>
+                                On this new line, add the following line of
+                                code (feel free to copy/paste it from here 
+                                into your code file): 
+                            </p>
+                            <p>
+                                <code>&lt;link href="css/style.css" rel="stylesheet"&gt;</code>
+                            </p>
+                            <p>
+                                When you're done, your code should look like the 
+                                image to the right.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/htmltemplate_2_5_v2.png" 
+                                alt="Adding in the link element" 
+                            >
+                            <figcaption>
+                                Adding in the link element
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                We're almost done with your HTML file. 
+                                Notice the little circle to the right 
                                 of the file name in the 
                                 top tab of the screenshot? 
                                 That means the file is not saved.
@@ -1539,12 +1563,105 @@
                         </div>
                         <div class="imageContainer">
                             <img 
-                                src="images/web-dev-startup/htmltemplate_3.png" 
+                                src="images/web-dev-startup/htmltemplate_3_v4.png" 
                                 alt="The corrected autogenerated HTML5 code template, unsaved" 
                             >
                             <figcaption>
                                 The corrected autogenerated HTML5 
                                 code template, unsaved
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                We've almost finished your Code Skeleton. 
+                                Next, we're going to add in a CSS file.
+                            </p>
+                            <p>
+                                Right-click on the "css" folder, and select 
+                                the "New File..." option. 
+                            </p>
+                            <p>
+                                Name the new file "style.css" this time.
+                            </p>
+                            <p>
+                                When done correctly, your Explorer should 
+                                resemble the screenshot at the right.
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/codeSkeleton_5.png" 
+                                alt="Adding style.css into the css folder" 
+                            >
+                            <figcaption>
+                                Adding style.css into the css folder
+                            </figcaption>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sideBySide">
+                        <div class="textContainer">
+                            <p>
+                                Now, double click style.css to open it up 
+                                if it isn't open already.  We're going to have 
+                                you write (well, copy) some CSS.
+                            </p>
+                            <p class="indent">
+                                Unless you have previous experience coding, you 
+                                probably won't have a clue what any of this 
+                                means.
+                            </p>
+                            <p class="indent">
+                                That's okay! We don't expect you to!
+                                This is just setting you up for success later 
+                                on when we make our way to CSS.
+                            </p>
+                            <p>
+                                Add the following code into the file (again, 
+                                feel free to copy/paste it directly from here):
+                            </p>
+                            <p>
+                                <code>
+                                    * {
+                                    <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;box-sizing: border-box;
+                                    <br>
+                                    }
+                                    <br>
+                                    <br>
+                                    body {
+                                    <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;margin: 0px;
+                                    <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;font-family: sans-serif; 
+                                    <br>
+                                    }
+                                </code>
+                            </p>
+                            <p>
+                                When complete, your code should look like the 
+                                screenshot to the right.
+                            </p>
+                            <p>
+                                Make sure to save your style.css file as well.
+                            </p>
+                            <p>
+                                Once you do, you're done setting up your 
+                                Code Skeleton!
+                            </p>
+                        </div>
+                        <div class="imageContainer">
+                            <img 
+                                src="images/web-dev-startup/csstemplate_1.png" 
+                                alt="Adding style.css into the css folder" 
+                            >
+                            <figcaption>
+                                Adding style.css into the css folder
                             </figcaption>
                         </div>
                     </div>
@@ -1566,15 +1683,19 @@
                     <div class="sideBySide">
                         <div class="textContainer">
                             <p>
-                                Now, jump back to Github Desktop. 
-                                In the app, you should see the 
-                                changes to your code-skeleton folder; 
-                                in this case, only the 
-                                index.html file.
+                                Now, jump back to Github Desktop 
+                                (the app, not the site). 
+                                
                             </p>
                             <p>
-                                (You might wonder why the 'images' and 
-                                'css' folders aren't in there. 
+                                In the app, you should see the 
+                                changes to your code-skeleton folder; 
+                                in this case, the style.css and
+                                index.html files.
+                            </p>
+                            <p>
+                                (You might wonder why the 'images'
+                                folder isn't in there. 
                                 Well, GitHub desktop only tracks 
                                 changes to files; folders are more 
                                 or less invisible to it, until a 
@@ -1583,7 +1704,7 @@
                         </div>
                         <div class="imageContainer">
                             <img 
-                                src="images/web-dev-startup/indexhtml.png" 
+                                src="images/web-dev-startup/indexhtml_v2.png" 
                                 alt="GitHub Desktop when changes are ready for commit" 
                             >
                             <figcaption>
@@ -1609,9 +1730,15 @@
                                 </strong> 
                             </p>
                             <p>
-                                Add a commit Summary (required) 
-                                and Description (optional) in the 
+                                Add a commit Summary in the 
                                 textboxes in the bottom left of the app. 
+                            </p>
+                            <p class="indent">
+                                A commit summary is basically just a note 
+                                to yourself about what code you're saving.
+                                Something like the name of the assignment 
+                                or project, like "code skeleton setup", 
+                                will work just fine.
                             </p>
                             <p>
                                 Then click the [Commit to 
@@ -1621,7 +1748,7 @@
                         </div>
                         <div class="imageContainer">
                             <img 
-                                src="images/web-dev-startup/commit.png" 
+                                src="images/web-dev-startup/indexhtml_pt2.png" 
                                 alt="GitHub Desktop's commit section"
                             >
                             <figcaption>
@@ -1740,25 +1867,10 @@
                             <p>
                                 Scroll down to the bottom of the 
                                 right sidebar and click on 
-                                "github-pages" under "Environments".
-                            </p>
-                            <p>
-                                <strong>
-                                    NOTE: Github recently updated their UI,
-                                    and you may see "Deployments" instead of
-                                    "Environments"; if so, click "Deployments"
-                                    instead for this step.
-                                </strong>
+                                "github-pages" under "Deployments".
                             </p>
                         </div>
                         <div class="imageContainer">
-                            <img 
-                                src="images/web-dev-startup/environments.png" 
-                                alt="The Environments section in github.com" 
-                            >
-                            <figcaption>
-                                The Environments section in github.com
-                            </figcaption>
                             <img 
                                 src="images/web-dev-startup/deployments.png" 
                                 alt="The Deployments section in github.com" 
@@ -1774,42 +1886,37 @@
                         <div class="textContainer">
                             <p>
                                 From there you will find the 
-                                deployment page. Click on the 
-                                "View deployment" button, and 
-                                it will open your homepage
+                                deployment page. There are many options you can
+                                use to view the current deployment, circled
+                                in the screenshot to the right.
+                            </p>
+                            <p>
+                                <strong>
+                                    If the icon next to the top deployment is not
+                                    green, then you may have to wait longer.
+                                    <br><br>
+                                    If it is an orange spinning circle, your 
+                                    changes are still being deployed.
+                                    <br><br>
+                                    If it's red, then something went wrong in GitHub;
+                                    you can most likely fix it by committing and pushing again.
+                                </strong>
+                            </p>
+                            <p>
+                                Clicking on any of the circled options will 
+                                take you to your homepage
                                 (which still just displays 
                                 the name of your repository, 
                                 from your README.md file). 
                             </p>
-                            <p>
-                                <strong>
-                                    NOTE: Again, Github recently updated their UI,
-                                    so you may see a different view than the 
-                                    first screenshot.
-                                    <br><br>
-                                    If so, refer to the second
-                                    screenshot, and click the "pop-out"
-                                    icon at the far right of the most recent 
-                                    deployment.
-                                </strong>
-                            </p>
                         </div>
                         <div class="imageContainer">
                             <img 
-                                src="images/web-dev-startup/deploymentpage2.png" 
+                                src="images/web-dev-startup/deploymentpage_new_v2.png" 
                                 alt="The Deployments page in github.com, where you can access your homepage" 
                             >
                             <figcaption>
                                 The Deployments page in github.com, 
-                                where you can access your homepage<br>via the 
-                                "View Deployment" button
-                            </figcaption>
-                            <img 
-                                src="images/web-dev-startup/deploymentpage_new.png" 
-                                alt="The (new) Deployments page in github.com, where you can access your homepage" 
-                            >
-                            <figcaption>
-                                The (new) Deployments page in github.com, 
                                 where you can access your homepage<br>via the 
                                 "popout" icon at the far right of the most 
                                 recent deployment 

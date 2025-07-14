@@ -1,0 +1,273 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#nav {
+    background-color: #222222;
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    /* flex-direction: column; */
+}
+
+#nav a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.single-column-layout {
+    width: 90vw;
+    max-width: 800px;
+    margin: 48px auto;
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.image-container,
+.content-container {
+    flex: 1;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+.image-container {
+    height: 400px;
+}
+
+.content-container h1 {
+    font-size: 48px;
+    color: #ffb700;
+}
+
+.featured {
+    background-color: #222222;
+    color: white;
+    padding: 24px 0px;
+}
+
+.featured h2 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.grid img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 16px;
+    grid-template-areas:
+        "txt1 img1 img2 img2"
+        "img3 img3 img4 txt2";
+}
+
+#p1 {
+    grid-area: txt1;
+}
+
+#p2 {
+    grid-area: txt2;
+}
+
+#img1 {
+    grid-area: img1;
+}
+
+#img2 {
+    grid-area: img2;
+}
+
+#img3 {
+    grid-area: img3;
+}
+
+#img4 {
+    grid-area: img4;
+}
+
+.grid p {
+    border: 2px solid #ffb700;
+    border-radius: 24px;
+    margin: 0px;
+    padding: 20px;
+}
+
+/*
+    First, we're going to work in the Tablet Breakpoint.
+
+    For the this breakpoint, we're going to break things 
+    up into a two column grid instead of four.
+
+    This is easier than you might think; there are
+    really only two changes we need to make: 
+    - changing the number of columns in the grid
+    - updating the grid-template-areas to accommodate
+      the new number of columns.
+*/
+
+/* TABLET BREAKPOINT */
+@media screen and (max-width: 740px) and (min-width: 450px) {
+    body {
+        background-color: skyblue;
+    }
+
+    .content-container h1 {
+        font-size: 28px;
+    }
+
+    .intro {
+        gap: 24px;
+    }
+
+    .image-container {
+        height: 300px;
+    }
+
+    /*
+        First, we just need to update grid-template-columns 
+        to have two columns instead of four.
+    */
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        /*
+            That didn't change too much though, because
+            our grid-template-areas is still set up
+            expecting four columns.
+
+            So now we need to update that property with
+            our new grid template in mind.
+
+            We're basically going to move every two
+            cells into their own row (including the
+            cells where images span two columns).
+        */
+        grid-template-areas: 
+            "txt1 img1"
+            "img2 img2"
+            "img3 img3"
+            "img4 txt2";
+    }
+}
+
+/*
+    Now check out both the desktop and the tablet
+    breakpoints...much better! And we just had to
+    modify two properties to do it!
+
+    But the Mobile Breakpoint still looks pretty bad.
+
+    To fix this one, we're going to do something 
+    similar to what we just did with the tablet breakpoint, 
+    but instead of two columns, we're just going to have 
+    a single column of grid content.
+*/
+
+/* MOBILE BREAKPOINT */
+@media screen and (max-width: 450px) {
+    body {
+        background-color: firebrick;
+    }
+
+    #nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .content-container h1 {
+        margin: 0px;
+        font-size: 28px;
+    }
+
+    .content-container {
+        text-align: center;
+    }
+
+    /*
+        Once again, first we'll adjust 
+        grid-template-columns to only have one column.
+    */
+    .grid {
+        grid-template-columns: 1fr;
+        /*
+            Then we'll adjust grid-template-areas
+            to adapt to that one column structure.
+
+            (Note that we're not duplicating the areas
+            for img2 and img3 this time. Since all of
+            our grid images have the same height and
+            there's only one column, having an image 
+            span two rows wouldn't have any visible 
+            change to the layout.)
+        */
+        grid-template-areas: 
+            "txt1"
+            "img1"
+            "img2"
+            "img3"
+            "img4"
+            "txt2";
+    }
+
+    /*
+        Now we have one column of images and text
+        on the mobile breakpoint!
+
+        But notice that our text boxes are quite
+        small now; that's because before, they
+        were stretching to be the same height
+        as the images in the same row.
+
+        Now that they're on their own rows, they
+        have nothing to stretch them out.
+
+        So let's adjust their heights so
+        they match the images as well.
+    */
+    .grid p {
+        height: 300px;
+        /*
+            ...that looks a bit awkward/boring,
+            doesn't it?
+
+            So let's at least center the text
+            content in the middle of the box
+            by using Flexbox.
+
+            Remember how to do that?
+        */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*
+        Looking good!
+    */
+}
+
